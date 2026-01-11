@@ -12,15 +12,26 @@ const docSections = [
     title: "Learning Methodology",
     items: [
       { title: "Visualizers", href: "/docs/learning/visualizers" },
-      { title: "Rhombus Method", href: "#" }, // Placeholder
     ]
   },
   {
     title: "Languages",
     items: [
-      { title: "Python", href: "#" },
-      { title: "Java", href: "#" },
-      { title: "Go", href: "#" },
+      { title: "Python", href: "/docs/languages/python" },
+      { title: "Java", href: "/docs/languages/java" },
+    ]
+  },
+  {
+    title: "Profile & Stats",
+    items: [
+      { title: "Stats Explained", href: "/docs/profile/stats-explained" },
+      { title: "Achievements", href: "/docs/profile/achievements" },
+    ]
+  },
+  {
+    title: "API Reference",
+    items: [
+      { title: "Course Format", href: "/docs/api/course-format" },
     ]
   }
 ];
