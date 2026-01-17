@@ -7,6 +7,29 @@ import path from 'path';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 
+const docsDirectory = path.join(process.cwd(), 'content/docs');
+
+function getAllDocSlugs(dir: string, basePath: string[] = []): string[][] {
+  const slugs: string[][] = [];
+  if (!fs.existsSync(dir)) return slugs;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      slugs.push(...getAllDocSlugs(path.join(dir, entry.name), [...basePath, entry.name]));
+    } else if (entry.name.endsWith('.mdx')) {
+      const slug = entry.name.replace(/\.mdx$/, '');
+      slugs.push([...basePath, slug]);
+    }
+  }
+  return slugs;
+}
+
+export function generateStaticParams() {
+  const slugs = getAllDocSlugs(docsDirectory);
+  return slugs.map((slug) => ({ slug }));
+}
+
 export default async function DocPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
   const slugPath = slug.join('/');
@@ -27,15 +50,15 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
         <DocsSidebar />
 
         <article className="flex-1 min-w-0">
-           <header className="mb-8 border-b border-gray-100 pb-8">
-              <p className="text-sm font-semibold text-brand-primary mb-2">{data.section}</p>
-              <h1 className="text-3xl font-black text-gray-900 mb-4">{data.title}</h1>
-              <p className="text-xl text-gray-600">{data.description}</p>
-           </header>
+          <header className="mb-8 border-b border-gray-100 pb-8">
+            <p className="text-sm font-semibold text-brand-primary mb-2">{data.section}</p>
+            <h1 className="text-3xl font-black text-gray-900 mb-4">{data.title}</h1>
+            <p className="text-xl text-gray-600">{data.description}</p>
+          </header>
 
-           <div className="prose prose-indigo max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-             <MDXRemote source={content} />
-           </div>
+          <div className="prose prose-indigo max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <MDXRemote source={content} />
+          </div>
         </article>
 
       </div>

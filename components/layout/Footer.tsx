@@ -25,10 +25,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-3">Resources</h4>
             <ul className="text-sm space-y-2">
-              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
+              <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
               <li><Link href="/docs" className="hover:text-white">Docs</Link></li>
-              <li><Link href="#" className="hover:text-white">Support</Link></li>
+              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -45,10 +45,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2025 Shivam App Studio</p>
+          <p>© 2026 Shivam App Studio</p>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-white">Privacy</Link>
-            <Link href="#" className="hover:text-white">Terms</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <Link href="/refund" className="hover:text-white">Refund</Link>
           </div>
         </div>
       </div>
