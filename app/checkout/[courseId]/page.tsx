@@ -16,7 +16,6 @@ export function generateStaticParams() {
     }));
 }
 
-export default async function CheckoutPage({ params }: { params: Promise<{ courseId: string }> }) {
-    const { courseId } = await params;
-    return <CheckoutClient courseId={courseId} />;
+export default function CheckoutPage({ params }: { params: { courseId: string } }) {
+    return <CheckoutClient courseId={params.courseId} />;
 }

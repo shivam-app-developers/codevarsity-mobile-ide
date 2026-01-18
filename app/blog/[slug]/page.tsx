@@ -1,4 +1,3 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { getPostBySlug, getAllPosts } from '@/lib/mdx';
@@ -12,9 +11,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -57,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </header>
 
         <div className="prose prose-lg prose-indigo mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <MDXRemote source={post.content} />
+          <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }} />
         </div>
 
       </article>

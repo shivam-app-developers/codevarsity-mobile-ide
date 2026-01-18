@@ -1,4 +1,3 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DocsSidebar from '@/components/docs/DocsSidebar';
@@ -30,9 +29,8 @@ export function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export default async function DocPage({ params }: { params: Promise<{ slug: string[] }> }) {
-  const { slug } = await params;
-  const slugPath = slug.join('/');
+export default function DocPage({ params }: { params: { slug: string[] } }) {
+  const slugPath = params.slug.join('/');
   const fullPath = path.join(process.cwd(), 'content/docs', `${slugPath}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
@@ -57,7 +55,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
           </header>
 
           <div className="prose prose-indigo max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <MDXRemote source={content} />
+            <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br/>') }} />
           </div>
         </article>
 
