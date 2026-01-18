@@ -1,6 +1,15 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Refund Policy',
+  description: '7-day money-back guarantee on courses and 48-hour refund window on subscriptions. Simple, transparent refund policy.',
+  path: '/refund',
+  type: 'website',
+});
 
 export default function RefundPage() {
     return (

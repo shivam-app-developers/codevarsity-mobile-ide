@@ -1,6 +1,15 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Documentation',
+  description: 'Complete guide to CoderKit. Learn installation, features, visualizers, profile system, and API documentation.',
+  path: '/docs',
+  type: 'website',
+});
 
 export default function DocsIndexPage() {
   return (
@@ -22,20 +31,12 @@ export default function DocsIndexPage() {
              <p className="text-gray-600 text-sm">Installation guides for Android and setting up your environment.</p>
           </Link>
 
-          <Link href="/docs/learning/visualizers" className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
-             <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-xl">
-               <i className="fa-solid fa-eye"></i>
-             </div>
-             <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition">Visualizers</h2>
-             <p className="text-gray-600 text-sm">How to use our 20+ interactive learning tools.</p>
-          </Link>
-
-          <Link href="#" className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <Link href="/docs/getting-started/first-program" className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
              <div className="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4 text-xl">
                <i className="fa-solid fa-code"></i>
              </div>
-             <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition">Reference</h2>
-             <p className="text-gray-600 text-sm">API docs, keyboard shortcuts, and supported libraries.</p>
+             <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition">Your First Program</h2>
+             <p className="text-gray-600 text-sm">Write and run your first program in minutes.</p>
           </Link>
         </div>
 

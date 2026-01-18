@@ -13,12 +13,35 @@ export default function ContactPage() {
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // In production, send to backend API
-        console.log('Contact form submitted:', formData);
-        setSubmitted(true);
+        setLoading(true);
+        setError(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || 'Failed to submit form');
+            }
+
+            setSubmitted(true);
+            setFormData({ name: '', email: '', subject: '', message: '' });
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'An error occurred. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -95,10 +118,22 @@ export default function ContactPage() {
                                     <i className="fa-solid fa-check text-2xl text-green-600"></i>
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                                <p className="text-gray-600">We&apos;ll get back to you within 24 hours.</p>
+                                <p className="text-gray-600 mb-6">We&apos;ll get back to you within 24 hours.</p>
+                                <button
+                                    onClick={() => setSubmitted(false)}
+                                    className="text-brand-primary hover:underline font-medium"
+                                >
+                                    Send another message
+                                </button>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-5">
+                                {error && (
+                                    <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
+                                        {error}
+                                    </div>
+                                )}
+
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
                                     <input
@@ -108,6 +143,7 @@ export default function ContactPage() {
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent"
                                         placeholder="Your name"
+                                        disabled={loading}
                                     />
                                 </div>
 
@@ -120,6 +156,7 @@ export default function ContactPage() {
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent"
                                         placeholder="you@example.com"
+                                        disabled={loading}
                                     />
                                 </div>
 
@@ -130,6 +167,7 @@ export default function ContactPage() {
                                         value={formData.subject}
                                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent"
+                                        disabled={loading}
                                     >
                                         <option value="">Select a topic</option>
                                         <option value="general">General Inquiry</option>
@@ -149,14 +187,23 @@ export default function ContactPage() {
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent resize-none"
                                         placeholder="How can we help you?"
+                                        disabled={loading}
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full py-4 gradient-bg text-white rounded-xl font-bold hover:opacity-90 transition"
+                                    disabled={loading}
+                                    className="w-full py-4 gradient-bg text-white rounded-xl font-bold hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
-                                    Send Message
+                                    {loading ? (
+                                        <>
+                                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                                            Sending...
+                                        </>
+                                    ) : (
+                                        'Send Message'
+                                    )}
                                 </button>
                             </form>
                         )}

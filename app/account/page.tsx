@@ -7,6 +7,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { useAuth } from '@/contexts/AuthContext';
 import { getUserPurchases, hasActiveSubscription, Purchases } from '@/lib/purchases';
+import { getUserStats } from '@/lib/userStats';
+import { UserStatsSummary } from '@/types/userStats';
 import coursesMetadata from '@/codelab_docs/courses_metadata.json';
 
 interface Course {
@@ -21,6 +23,7 @@ export default function AccountPage() {
     const router = useRouter();
     const { user, loading: authLoading } = useAuth();
     const [purchases, setPurchases] = useState<Purchases | null>(null);
+    const [stats, setStats] = useState<UserStatsSummary | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -30,8 +33,12 @@ export default function AccountPage() {
         }
 
         if (user) {
-            getUserPurchases(user.uid).then((data) => {
-                setPurchases(data);
+            Promise.all([
+                getUserPurchases(user.uid),
+                getUserStats(user.uid)
+            ]).then(([purchaseData, statsData]) => {
+                setPurchases(purchaseData);
+                setStats(statsData);
                 setLoading(false);
             });
         }
@@ -88,6 +95,31 @@ export default function AccountPage() {
                         </Link>
                     </div>
                 </div>
+
+                {/* Stats Section */}
+                {stats && (
+                    <div className="mb-8">
+                        <h2 className="text-lg font-bold text-gray-900 mb-4">Your Learning Progress</h2>
+                        <div className="grid md:grid-cols-4 gap-4">
+                            <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                                <div className="text-gray-500 text-xs mb-1">Courses</div>
+                                <div className="text-2xl font-bold text-brand-primary">{stats.coursesCompleted}</div>
+                            </div>
+                            <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                                <div className="text-gray-500 text-xs mb-1">Total XP</div>
+                                <div className="text-2xl font-bold text-brand-secondary">{stats.xp.toLocaleString()}</div>
+                            </div>
+                            <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                                <div className="text-gray-500 text-xs mb-1">Lines Typed</div>
+                                <div className="text-2xl font-bold text-brand-accent">{stats.linesTyped.toLocaleString()}</div>
+                            </div>
+                            <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                                <div className="text-gray-500 text-xs mb-1">Current Streak</div>
+                                <div className="text-2xl font-bold text-orange-500">{stats.currentStreak} 🔥</div>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* Subscription Status */}
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">

@@ -1,5 +1,14 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Understanding Your Stats',
+  description: 'Learn what your CoderKit profile stats mean. Verified coding metrics for Learning, Problem Solving, Building, and Consistency.',
+  path: '/stats-explained',
+  type: 'website',
+});
 
 export default function StatsExplainedPage() {
   return (

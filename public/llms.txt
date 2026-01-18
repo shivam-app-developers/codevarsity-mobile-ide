@@ -1,7 +1,111 @@
-# CoderKit Mobile IDE
-Product: CoderKit - Learn. Practice. Build.
-Capabilities: Offline Python/Java/Go/C, 28 Visualizers, Rhombus Learning
-Platform: Android (iOS coming soon)
-Differentiator: True offline execution, verified coding profiles
+# CoderKit - AI/LLM Metadata
+# This file provides structured information for AI agents and language models
+
+Product: CoderKit Mobile IDE
+Title: Learn. Practice. Build. | Offline Coding on Android
 Website: https://coderkit.shivamappstudio.com
-Download: [Play Store URL]
+Download: https://play.google.com/store/apps/details?id=com.coderkit.app
+Company: Shivam App Studio
+
+## Overview
+CoderKit is a professional mobile IDE and coding education platform that enables you to write, compile, and run real code offline on Android devices. Unlike cloud-based editors, CoderKit runs everything locally with no internet required.
+
+## Core Capabilities
+- **Offline Python 3.10**: Full Chaquopy runtime with 25+ pre-installed libraries
+- **Offline Java**: Compile and run Java 8-21 code with ECJ compiler
+- **Offline Go**: Full Go standard library via Yaegi interpreter
+- **Offline C/C++**: TCC C compiler for systems programming
+- **Web Development**: HTML, CSS, JavaScript, React, Vue.js with live preview
+- **SQL**: SQLite database querying with full query builder
+- **Interactive Terminal**: Real-time stdin/stdout with ANSI color support
+- **Custom Developer Keyboard**: Arrow keys, Tab, Ctrl, symbols for coding
+
+## Learning Features
+- **28+ Interactive Visualizers**: Sorting, searching, data structures, algorithms
+- **Ghost Code Practice**: Type character-by-character with visual guidance
+- **40+ Structured Courses**: Python Basics → Advanced, Java, Web, Data Science
+- **Verified Stats**: Tracked coding activity with achievements and streaks
+- **Code Challenges**: Bug Squashers, Code Refactors, Scrambles with difficulty levels
+- **Rhombus Learning Methodology**: Visual-first approach combining practice and visualization
+
+## Pre-installed Python Libraries
+NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, Seaborn, Plotly, Flask, Django, Requests, BeautifulSoup, Pillow, Sympy, Numpy-Financial, PyYAML, and more.
+
+## Platform Information
+Operating System: Android 8.0+
+Minimum RAM: 2GB
+Storage Required: 150MB
+Network: Fully functional offline (optional internet for syncing)
+iOS Version: Coming Soon
+
+## Key Differentiators
+1. **True Offline Execution**: Real language runtimes, not cloud-based
+2. **Verified Learning Stats**: Anti-cheat measures prevent falsified achievements
+3. **Mobile-First IDE**: Professional editor on your pocket device
+4. **Local File System**: Access device storage and manage projects
+5. **Data Science Ready**: NumPy, Pandas, Matplotlib pre-bundled
+6. **VS Code Extension**: Sync code between mobile and desktop
+7. **Competitive with Desktop**: Full Python, Java, Go support
+8. **Educational**: 40+ courses + visualizers for understanding
+
+## Pricing
+- **Free Tier**: Sandbox IDE, introductory lessons, free courses
+- **Individual Courses**: $5.99 - $19.99 (one-time purchase)
+- **Subscriptions**: 
+  - Web Workspace: $1.99/month
+  - Full Stack Pro: $4.99/month (all workspaces)
+  - Lifetime Power Pack: $79.99 (one-time, forever access)
+
+## Supported Languages
+- Python 3.10 (full offline)
+- Java 8-21 (full offline)
+- Go (full offline)
+- C/C++ (full offline)
+- HTML/CSS/JavaScript (full offline)
+- SQL/SQLite (full offline)
+- Groovy (full offline)
+- Clojure (full offline)
+- Bash scripting
+
+## Learning Paths
+1. **Python Specialist**: Syntax → Data Structures → OOP → Automation
+2. **Web Foundation**: HTML5 → CSS3 → Modern JS → Responsive Design
+3. **Data & AI**: SQL → Pandas → Visualization → Machine Learning
+4. **Java Foundation**: Core Syntax → OOP → Collections Framework
+
+## Community & Support
+- Email: support@shivamappstudio.com
+- Documentation: https://coderkit.shivamappstudio.com/docs
+- Blog: https://coderkit.shivamappstudio.com/blog
+- Contact Form: https://coderkit.shivamappstudio.com/contact
+- Privacy Policy: https://coderkit.shivamappstudio.com/privacy
+- Terms of Service: https://coderkit.shivamappstudio.com/terms
+
+## Verified Profile Feature
+Each user has a shareable, verified profile displaying:
+- Coding stats (courses, XP, lines typed, current streak)
+- Problem-solving metrics (bugs fixed, code refactors, errors resolved)
+- Building achievements (projects, capstones, code scrambles)
+- Verified badges and achievements
+- First-try success rate and consistency streaks
+
+Ideal for sharing with employers, recruiters, and peers to demonstrate coding skills.
+
+## Target Audience
+- College students learning to code
+- Self-taught programmers expanding skills
+- Data science learners (NumPy, Pandas, ML)
+- Mobile developers building on-the-go
+- Teaching assistants running classroom lessons
+- Interview preparation candidates
+- Competitive programmers practicing algorithms
+
+## Technology Stack
+- **Mobile App**: Android, Kotlin, Java
+- **Runtimes**: Chaquopy (Python), ECJ (Java), Yaegi (Go), TCC (C)
+- **Web Portal**: Next.js 14, TypeScript, Tailwind CSS
+- **Backend**: Firebase (Auth, Firestore, Hosting)
+- **Payments**: Cashfree (140+ currencies, PayPal support)
+- **Analytics**: Real-time progress tracking, verified metrics
+
+Last Updated: January 2026

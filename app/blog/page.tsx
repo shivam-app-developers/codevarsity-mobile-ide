@@ -2,6 +2,15 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { getAllPosts } from '@/lib/mdx';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Blog',
+  description: 'Insights on coding education, mobile development, visual learning, and programming best practices.',
+  path: '/blog',
+  type: 'website',
+});
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();

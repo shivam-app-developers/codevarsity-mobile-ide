@@ -2,6 +2,15 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 import JsonLd from '@/components/seo/JsonLd';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'FAQ',
+  description: 'Frequently asked questions about CoderKit, pricing, features, and learning methodology.',
+  path: '/faq',
+  type: 'website',
+});
 
 const faqs = [
     // General

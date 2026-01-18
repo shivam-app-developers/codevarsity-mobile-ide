@@ -4,17 +4,23 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { signOut } from '@/lib/auth';
+import { SearchBox } from '@/components/search/SearchBox';
 
 export default function Navbar() {
   const { user, loading } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
+      }
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -24,7 +30,17 @@ export default function Navbar() {
   const handleSignOut = async () => {
     await signOut();
     setDropdownOpen(false);
+    setMobileMenuOpen(false);
   };
+
+  const navLinks = [
+    { label: 'Courses', href: '#courses' },
+    { label: 'Visualizers', href: '#visualizers' },
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'Docs', href: '/docs' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'FAQ', href: '/faq' },
+  ];
 
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur border-b border-gray-100">
@@ -36,16 +52,34 @@ export default function Navbar() {
           <span className="font-bold text-lg text-gray-900">CoderKit</span>
         </Link>
 
-        <div className="hidden md:flex space-x-6 text-sm font-medium">
-          <a href="#courses" className="text-gray-600 hover:text-brand-primary">Courses</a>
-          <a href="#visualizers" className="text-gray-600 hover:text-brand-primary">Visualizers</a>
-          <Link href="/pricing" className="text-gray-600 hover:text-brand-primary">Pricing</Link>
-          <Link href="/docs" className="text-gray-600 hover:text-brand-primary">Docs</Link>
-          <Link href="/blog" className="text-gray-600 hover:text-brand-primary">Blog</Link>
-          <Link href="/faq" className="text-gray-600 hover:text-brand-primary">FAQ</Link>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6 text-sm font-medium flex-1 justify-center">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-gray-600 hover:text-brand-primary transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
-        <div className="flex items-center gap-3">
+        {/* Search Box (Desktop) */}
+        <div className="hidden lg:flex mx-6 flex-shrink-0">
+          <SearchBox />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition"
+          aria-label="Toggle mobile menu"
+        >
+          <i className={`fa-solid ${mobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-gray-700`}></i>
+        </button>
+
+        <div className="hidden md:flex items-center gap-3">
           {loading ? (
             <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse"></div>
           ) : user ? (
@@ -124,6 +158,71 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div ref={mobileMenuRef} className="md:hidden bg-white border-b border-gray-100 py-4 px-4 space-y-3">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-lg transition"
+            >
+              {link.label}
+            </a>
+          ))}
+          
+          <div className="border-t border-gray-100 pt-3 mt-3">
+            {loading ? (
+              <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse mx-4 mb-2"></div>
+            ) : user ? (
+              <>
+                <div className="px-4 py-2 mb-2">
+                  <p className="text-sm font-medium text-gray-900">{user.displayName || 'User'}</p>
+                  <p className="text-xs text-gray-500">{user.email}</p>
+                </div>
+                <Link
+                  href="/account"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg"
+                >
+                  <i className="fa-solid fa-book w-4 mr-2"></i>My Courses
+                </Link>
+                <Link
+                  href={`/profile/${btoa(user.uid)}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg"
+                >
+                  <i className="fa-solid fa-chart-simple w-4 mr-2"></i>Profile Stats
+                </Link>
+                <button
+                  onClick={handleSignOut}
+                  className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg"
+                >
+                  <i className="fa-solid fa-right-from-bracket w-4 mr-2"></i>Sign Out
+                </button>
+              </>
+            ) : (
+              <Link
+                href="/auth"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-2 text-sm font-medium text-brand-primary hover:bg-gray-50 rounded-lg"
+              >
+                Sign In
+              </Link>
+            )}
+          </div>
+
+          <Link
+            href="#"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-4 py-2 gradient-bg text-white rounded-lg text-sm font-medium text-center hover:opacity-90"
+          >
+            Get App
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }

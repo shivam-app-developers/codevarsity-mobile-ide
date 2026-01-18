@@ -1,11 +1,14 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const docSections = [
   {
     title: "Getting Started",
     items: [
       { title: "Installation", href: "/docs/getting-started/installation" },
-      { title: "First Program", href: "#" }, // Placeholder
+      { title: "Your First Program", href: "/docs/getting-started/first-program" },
     ]
   },
   {
@@ -37,8 +40,7 @@ const docSections = [
 ];
 
 export default function DocsSidebar() {
-  // Client component to highlight active link would use usePathname
-  // For simplicity in this server component plan, we render static links
+  const pathname = usePathname();
 
   return (
     <nav className="w-64 flex-shrink-0 border-r border-gray-100 pr-8 hidden lg:block h-[calc(100vh-8rem)] sticky top-28 overflow-y-auto">
@@ -46,16 +48,23 @@ export default function DocsSidebar() {
         <div key={idx} className="mb-8">
           <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider">{section.title}</h3>
           <ul className="space-y-2">
-            {section.items.map((item, i) => (
-              <li key={i}>
-                <Link
-                  href={item.href}
-                  className="block text-gray-600 hover:text-brand-primary text-sm py-1 border-l-2 border-transparent hover:border-brand-primary pl-3 transition"
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
+            {section.items.map((item, i) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+              return (
+                <li key={i}>
+                  <Link
+                    href={item.href}
+                    className={`block text-sm py-1 border-l-2 pl-3 transition ${
+                      isActive
+                        ? 'border-brand-primary text-brand-primary font-medium'
+                        : 'border-transparent text-gray-600 hover:text-brand-primary hover:border-brand-primary'
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       ))}

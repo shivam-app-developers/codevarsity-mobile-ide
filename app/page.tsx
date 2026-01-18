@@ -12,6 +12,15 @@ import BlogRow from '@/components/landing/BlogRow';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/mdx';
 import JsonLd from '@/components/seo/JsonLd';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Learn to Code Offline',
+  description: 'Python, Java, Go, C - Master coding with visual learning and 28+ interactive visualizers. Fully offline on Android.',
+  path: '/',
+  type: 'website',
+});
 
 export default function Home() {
   const faqSchema = {

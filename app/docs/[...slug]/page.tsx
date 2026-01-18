@@ -5,6 +5,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import Link from 'next/link';
 
 const docsDirectory = path.join(process.cwd(), 'content/docs');
 
@@ -49,13 +51,20 @@ export default function DocPage({ params }: { params: { slug: string[] } }) {
 
         <article className="flex-1 min-w-0">
           <header className="mb-8 border-b border-gray-100 pb-8">
-            <p className="text-sm font-semibold text-brand-primary mb-2">{data.section}</p>
-            <h1 className="text-3xl font-black text-gray-900 mb-4">{data.title}</h1>
-            <p className="text-xl text-gray-600">{data.description}</p>
+            <p className="text-sm font-semibold text-brand-primary mb-2">{(data as any).section || 'Documentation'}</p>
+            <h1 className="text-3xl font-black text-gray-900 mb-4">{(data as any).title}</h1>
+            <p className="text-xl text-gray-600">{(data as any).description}</p>
           </header>
 
           <div className="prose prose-indigo max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br/>') }} />
+            <MDXRemote source={content} />
+          </div>
+
+          {/* Prev / Next Navigation */}
+          <div className="mt-12 pt-8 border-t border-gray-200 flex gap-4">
+            <Link href="/docs" className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-lg transition">
+              ← Back to Docs
+            </Link>
           </div>
         </article>
 

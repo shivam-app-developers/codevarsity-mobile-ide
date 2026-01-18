@@ -3,6 +3,15 @@ import Footer from '@/components/layout/Footer';
 import { CheckoutButton } from '@/components/payment/CheckoutButton';
 import coursesMetadata from '@/codelab_docs/courses_metadata.json';
 import JsonLd from '@/components/seo/JsonLd';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Pricing Plans',
+  description: 'Flexible pricing for every learner. Free, course bundles, and lifetime subscriptions. Start learning Python, Java, and more today.',
+  path: '/pricing',
+  type: 'website',
+});
 
 // Simplify type for this demo, usually defined in a types file
 interface Course {

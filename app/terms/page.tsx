@@ -1,6 +1,15 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Terms of Service',
+  description: 'CoderKit Terms of Service. Read our terms for using the platform, purchases, intellectual property, and user responsibilities.',
+  path: '/terms',
+  type: 'website',
+});
 
 export default function TermsPage() {
     return (

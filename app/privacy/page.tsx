@@ -1,6 +1,15 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Privacy Policy',
+  description: 'How we collect, use, and protect your data on CoderKit. Learn about our privacy practices and your rights.',
+  path: '/privacy',
+  type: 'website',
+});
 
 export default function PrivacyPage() {
     return (

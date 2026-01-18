@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Users collection - profile and purchase data
+    match /users/{userId} {
+      // Users can read/write their own document
+      allow read, write: if isOwner(userId);
+      
+      // Profile stats subcollection
+      match /profile/{document=**} {
+        // Anyone can read public stats
+        allow read: if true;
+        // Only owner can write
+        allow write: if isOwner(userId);
+      }
+    }
+
+    // Contact submissions - write-only from frontend
+    match /contact_submissions/{docId} {
+      // Anyone can submit (public form)
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'subject', 'message']);
+      // Admins only can read/update
+      allow read, update: if false; // Will be managed by admin dashboard later
+      // Never allow delete
+      allow delete: if false;
+    }
+
+    // Purchases collection
+    match /purchases/{docId} {
+      // Users can read their own purchases
+      allow read: if request.auth.uid == resource.data.userId;
+      // Only backend can write (from payment webhook)
+      allow write: if false; // Handled via Cloud Functions
+    }
+
+    // Blog and docs are public
+    match /{document=**} {
+      allow read: if true;
+    }
+
+    // Deny all other operations
+    match /{document=**} {
+      allow write: if false;
+    }
+  }
+}
