@@ -1,4 +1,11 @@
-# Build Your First Game on Your Phone: Tic-Tac-Toe in Python
+---
+title: Building Your First Game
+date: '2026-01-03'
+author: CoderKit Team
+category: Blog
+excerpt: Create games using web technologies
+---
+
 
 **Posted:** January 2026 | **Reading time:** 12 minutes | **Platform:** CoderKit Mobile IDE
 
@@ -13,8 +20,6 @@ By Friday, you'll have a game your friends can play. You'll understand game logi
 Let's build it—**on your phone with CoderKit.**
 
 **[Download CoderKit Free →](https://coderkit.app/download)** Start building in minutes, no setup required.
-
----
 
 ## What You'll Learn
 
@@ -31,8 +36,6 @@ By the end of this tutorial, you'll understand:
 **Difficulty:** Beginner-friendly
 
 **Prerequisites:** Variables, loops, functions, basic if/else
-
----
 
 ## The Game Plan
 
@@ -57,8 +60,6 @@ A playable Tic-Tac-Toe game where you play against the computer.
 
 **Total lines of code:** ~150 lines (very manageable)
 
----
-
 ## Project Structure
 
 ```
@@ -73,8 +74,6 @@ tic_tac_toe.py
 ```
 
 We'll build each section step-by-step.
-
----
 
 ## Step 1: Set Up the Board (Monday)
 
@@ -112,8 +111,6 @@ print(board)  # Output: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 **Concept:** A list represents the game board. Each position (0-8) is a square.
 
----
-
 ## Step 2: Display the Board (Monday)
 
 **What we're doing:** Show the board visually to the player.
@@ -142,8 +139,6 @@ display_board(board)
 ```
 
 **Concept:** Functions organize code. `display_board()` is responsible for one thing: showing the board.
-
----
 
 ## Step 3: Handle Player Input (Tuesday)
 
@@ -182,8 +177,6 @@ display_board(board)
 - `try/except` (handle wrong input type)
 - Input validation (check range, check if square empty)
 - List modification (`board[move] = 'X'`)
-
----
 
 ## Step 4: Implement Computer AI (Tuesday-Wednesday)
 
@@ -240,8 +233,6 @@ display_board(board)
 - List comprehension (`[i for i in corners if board[i] == ' ']`)
 - Strategy logic (win > block > center > corner > random)
 
----
-
 ## Step 5: Check for Winner (Wednesday)
 
 **What we're doing:** Detect when someone wins.
@@ -285,8 +276,6 @@ print(check_winner(board))  # Output: X
 - Data structure (list of lists for win conditions)
 - Logic (check all possibilities)
 
----
-
 ## Step 6: Check for Tie (Wednesday)
 
 **What we're doing:** Detect when board is full (no winner).
@@ -305,8 +294,6 @@ print(is_board_full(board))  # True
 ```
 
 **Concept:** Simple check using `in` operator.
-
----
 
 ## Step 7: Game Loop (Thursday)
 
@@ -365,8 +352,6 @@ if __name__ == "__main__":
 - Alternating turns (player → computer → player)
 - Win condition checking
 - Flow control (break when game ends)
-
----
 
 ## Complete Code (Copy This Into CoderKit)
 
@@ -497,8 +482,6 @@ def play_game():
 play_game()
 ```
 
----
-
 ## Step-by-Step Implementation Plan
 
 **Ready? [Open CoderKit now](https://coderkit.app/download) to start coding.**
@@ -528,8 +511,6 @@ play_game()
 - Share with friends
 - Celebrate! 🎉
 
----
-
 ## Testing Checklist
 
 As you build, test each part:
@@ -545,8 +526,6 @@ As you build, test each part:
 - ✅ Game ends properly
 
 If any test fails, debug before moving on.
-
----
 
 ## Extensions (If You Finish Early)
 
@@ -580,8 +559,6 @@ def get_computer_move_easy(board):
 # Let two humans play instead of AI
 ```
 
----
-
 ## Concepts You Just Learned
 
 **Beginner:**
@@ -601,8 +578,6 @@ def get_computer_move_easy(board):
 - Win detection algorithm
 - Simple AI strategy
 
----
-
 ## Celebrate Your Achievement
 
 You just built a **complete, playable game**—on your phone.
@@ -620,8 +595,6 @@ Share it:
 
 **This is portfolio-worthy.** Seriously.
 
----
-
 ## What's Next?
 
 After this game, you're ready for:
@@ -633,8 +606,6 @@ After this game, you're ready for:
 
 Pick whichever excites you. You have the skills.
 
----
-
 ## The Secret
 
 The gap between "learning programming" and "being a programmer" is **building something real**.
@@ -645,13 +616,9 @@ You'll look back on this project and remember the moment you went from student t
 
 **Let's go build it.**
 
----
-
 **[Download CoderKit Free - Start Building →](https://coderkit.app/download)**
 
 *Your first game is 5 hours away. No laptop needed. Just your phone.*
-
----
 
 **Share your game:** Built your Tic-Tac-Toe game in CoderKit? Tag us [@coderkit](https://twitter.com/coderkit) with your screenshots!
 
