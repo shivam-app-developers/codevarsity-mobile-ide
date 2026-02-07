@@ -304,7 +304,7 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 
 - ✅ **30-day money-back guarantee** on courses
 - ✅ **7-day refund** on subscriptions (during trial)
-- Email <support@CodeVarsity.app> to request refund
+- Email [support@CodeVarsity.app](mailto:support@CodeVarsity.app) to request refund
 
 ### Q: Do prices vary by country?
 
