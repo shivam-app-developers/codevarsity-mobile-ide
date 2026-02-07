@@ -34,11 +34,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: 'Courses', href: '#courses' },
-    { label: 'Visualizers', href: '#visualizers' },
+    { label: 'Courses', href: '/#courses' },
+    { label: 'Visualizers', href: '/#visualizers' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Product', href: '/product' },
-    { label: 'Guides', href: '/guides' },
     { label: 'Docs', href: '/docs' },
     { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '/faq' },

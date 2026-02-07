@@ -9,7 +9,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 
 // Define the documentation folders
-const docsFolders = ['user-guides', 'product', 'marketing'];
+const docsFolders = ['user-guides', 'product'];
 
 function getAllDocSlugs(): { slug: string[]; folder: string }[] {
   const slugs: { slug: string[]; folder: string }[] = [];

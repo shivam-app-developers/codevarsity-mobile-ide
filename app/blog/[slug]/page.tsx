@@ -18,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
-  
+
   if (!post) {
     return createMetadata({ title: 'Not Found' });
   }
@@ -67,11 +67,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight">{post.frontmatter.title}</h1>
           <div className="flex items-center justify-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center text-white font-bold text-sm">
-              {post.frontmatter.author.charAt(0)}
+              {post.frontmatter.author ? post.frontmatter.author.charAt(0) : 'C'}
             </div>
             <div className="text-left">
-              <p className="text-sm font-bold text-gray-900">{post.frontmatter.author}</p>
-              <p className="text-xs text-gray-500">{new Date(post.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p className="text-sm font-bold text-gray-900">{post.frontmatter.author || 'CodeVarsity Team'}</p>
+              <p className="text-xs text-gray-500">{post.frontmatter.date ? new Date(post.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Recently'}</p>
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-200 flex justify-center">

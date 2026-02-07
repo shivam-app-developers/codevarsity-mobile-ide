@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com';
+const baseUrl = 'https://codevarsity.shivamappstudio.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -118,7 +118,7 @@ function getBlogPosts(): { slug: string; date: string }[] {
 }
 
 function getDocPages(): string[] {
-  const docsFolders = ['user-guides', 'product', 'marketing'];
+  const docsFolders = ['user-guides', 'product'];
   const pages: string[] = [];
 
   for (const folder of docsFolders) {
