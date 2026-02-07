@@ -259,7 +259,7 @@ Fix: Did you forget to define 'result'?
 - Infinite loops? This is your rescue button
 
 **Timeout:**
-- Code running too long? (>60 seconds by default)
+- Code running too long? (&gt;60 seconds by default)
 - Automatic timeout to save battery
 - Adjust in Settings → Execution Timeout
 

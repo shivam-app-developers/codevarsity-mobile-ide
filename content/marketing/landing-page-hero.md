@@ -188,7 +188,7 @@ Run each for 2 weeks, measure: CTR, signup rate, quality of signups.
 2. **Form:** No form on hero. Direct download link (reduces friction)
 3. **Video:** Auto-play muted, fast-paced (keep attention)
 4. **Mobile:** Stack content vertically (not side-by-side)
-5. **Loading:** Fast hero load (<2s)
+5. **Loading:** Fast hero load (&lt;2s)
 6. **Clarity:** No ambiguity. What happens when I click? "Download free app."
 
 ---
