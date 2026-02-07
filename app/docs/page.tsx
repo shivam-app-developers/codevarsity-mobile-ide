@@ -6,7 +6,7 @@ import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
   title: 'Documentation',
-  description: 'Complete guide to CoderKit. Learn installation, features, visualizers, profile system, and API documentation.',
+  description: 'Complete guide to CodeVarsity. Learn installation, features, visualizers, profile system, and API documentation.',
   path: '/docs',
   type: 'website',
 });
@@ -19,7 +19,7 @@ export default function DocsIndexPage() {
 
         <div className="text-center mb-16">
           <h1 className="text-4xl font-black text-gray-900 mb-4">Documentation</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to know about CoderKit, from installation to advanced visualizers.</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to know about CodeVarsity, from installation to advanced visualizers.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -45,3 +45,4 @@ export default function DocsIndexPage() {
     </div>
   );
 }
+

@@ -75,7 +75,7 @@ Instead, you **spiral**: Each layer visits *all* concepts, but at increasing dep
 **Time:** 30 minutes
 
 **Activities:**
-- Watch a CoderKit user story
+- Watch a CodeVarsity user story
 - See 5-minute game demo
 - Understand job market
 - Feel inspired to continue
@@ -259,7 +259,7 @@ The shape of learning is a rhombus: wide at top, narrow at bottom.
 
 ---
 
-## Example: 8-Week Python Course on CoderKit
+## Example: 8-Week Python Course on CodeVarsity
 
 ### **Week 1-2:**
 - Layer 2 + 3: Build number guessing game (motivation + syntax)
@@ -300,7 +300,7 @@ The shape of learning is a rhombus: wide at top, narrow at bottom.
 
 ---
 
-## How CoderKit Implements Rhombus
+## How CodeVarsity Implements Rhombus
 
 ### **Curriculum Structure**
 - Courses are 7-8 weeks (1 spiral)
@@ -355,7 +355,7 @@ Rhombus isn't invented in a vacuum. It combines:
 
 ## Try It Yourself
 
-If you're considering CoderKit:
+If you're considering CodeVarsity:
 
 Notice how:
 1. Week 1: You build something (motivation!)
@@ -380,8 +380,9 @@ That circular flow? It's how humans actually learn.
 
 **Does your learning style match the spiral?** Comment below with what learning method works for you.
 
-**[Start learning with Rhombus →](https://coderkit.app/download)**
+**[Start learning with Rhombus →](https://CodeVarsity.app/download)**
 
 ---
 
 *Next week: Java on mobile. Enterprise language, touch interface, and why mobile Java is actually possible now.*
+

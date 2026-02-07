@@ -21,17 +21,17 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     if (!params.id || params.id.length < 5) {
       throw new Error('Invalid ID');
     }
-    
+
     const userId = atob(params.id);
     const stats = await Promise.race([
       getUserStats(userId),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 2000))
     ]) as any;
-    
-    const profileName = stats?.displayName || 'CoderKit Profile';
-    
+
+    const profileName = stats?.displayName || 'CodeVarsity Profile';
+
     return createMetadata({
-      title: `${profileName}'s Profile`,
+      title: `${profileName}'s Profile | CodeVarsity`,
       description: `Verified coding profile. ${stats?.coursesCompleted || 0} courses completed, ${stats?.linesTyped || 0} lines typed.`,
       path: `/profile/${params.id}`,
       type: 'profile',
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     // Return default metadata if Firebase is unavailable (e.g., during build)
     return createMetadata({
       title: 'Verified Coding Profile',
-      description: 'View verified CoderKit coding profile with stats and achievements.',
+      description: 'View verified CodeVarsity coding profile with stats and achievements.',
       path: `/profile/${params.id}`,
       type: 'profile',
     });

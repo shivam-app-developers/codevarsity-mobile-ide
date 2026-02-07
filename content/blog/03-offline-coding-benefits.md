@@ -89,7 +89,7 @@ Phone talking to distant server drains battery 2–3× faster than local process
 Here's how offline-first works in practice:
 
 **Day 1:** 
-- Download CoderKit app (30 MB)
+- Download CodeVarsity app (30 MB)
 - Download Python 101 course (5 MB)
 - Start learning
 
@@ -326,7 +326,7 @@ Once internet available:
 
 ## Try It Yourself
 
-1. Download CoderKit
+1. Download CodeVarsity
 2. Download a course (happens automatically)
 3. Airplane mode (or just go offline)
 4. Code for an hour
@@ -352,8 +352,9 @@ In a world obsessed with cloud, offline-first is quietly revolutionary.
 
 **What parts of your learning would benefit from offline-first?** Comment below.
 
-**Ready to experience offline learning?** [Download CoderKit (works offline, always) →](https://coderkit.app/download)
+**Ready to experience offline learning?** [Download CodeVarsity (works offline, always) →](https://CodeVarsity.app/download)
 
 ---
 
 *Next week: The engineering behind custom keyboard design. Why touch-based coding needed to be completely rethought.*
+

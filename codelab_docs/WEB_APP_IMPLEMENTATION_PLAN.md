@@ -1,8 +1,8 @@
-# CoderKit Web App - Implementation Plan
+# CodeVarsity Web App - Implementation Plan
 
 ## Goal Description
 
-Build a comprehensive web portal for CoderKit at **coderkit.shivamappstudio.com** that:
+Build a comprehensive web portal for CodeVarsity at **codevarsity.shivamappstudio.com** that:
 
 1. **Drives app downloads** with a compelling landing page
 2. **Showcases public coding profiles** with verified stats synced from mobile app
@@ -17,7 +17,7 @@ Build a comprehensive web portal for CoderKit at **coderkit.shivamappstudio.com*
 
 | Setting | Value |
 |---------|-------|
-| **Domain** | `coderkit.shivamappstudio.com` |
+| **Domain** | `codevarsity.shivamappstudio.com` |
 | **Firebase** | Existing mobile app project (stats sync) |
 | **Payments** | Cashfree (PayPal, Cards, UPI) - 140+ currencies |
 | **Hosting** | Firebase Hosting |
@@ -32,7 +32,7 @@ Build a comprehensive web portal for CoderKit at **coderkit.shivamappstudio.com*
 |------|---------|
 | `index.html` | **Landing page design template** - Convert this to Next.js components |
 | `courses_metadata.json` | Course data (40+ courses with IDs, tracks, pricing) |
-| `CoderKit Pricing Guide.md` | Product IDs and price tiers |
+| `CodeVarsity Pricing Guide.md` | Product IDs and price tiers |
 | `GEO Strategy for Coder.md` | FAQ Q&A pairs and keywords |
 | `PROFILE_STATS_EXPLAINED.md` | Stats-explained page content |
 | `WEB_APP_PROFILE_PAGE.md` | Profile page design and Firestore schema |
@@ -44,7 +44,7 @@ Build a comprehensive web portal for CoderKit at **coderkit.shivamappstudio.com*
 ## Project Structure
 
 ```
-coderkit-web/
+CodeVarsity-web/
 ├── app/
 │   ├── layout.tsx                    # Root layout
 │   ├── page.tsx                      # Landing page
@@ -99,8 +99,8 @@ coderkit-web/
 ### [NEW] Project Initialization
 
 ```bash
-npx -y create-next-app@latest coderkit-web --typescript --tailwind --app --src-dir=false --import-alias="@/*"
-cd coderkit-web
+npx -y create-next-app@latest CodeVarsity-web --typescript --tailwind --app --src-dir=false --import-alias="@/*"
+cd CodeVarsity-web
 npm install firebase @cashfreepayments/cashfree-js gray-matter next-mdx-remote
 ```
 
@@ -291,7 +291,7 @@ export function CheckoutButton({ courseId, price }: Props) {
 CASHFREE_APP_ID=your_app_id
 CASHFREE_SECRET_KEY=your_secret_key
 CASHFREE_WEBHOOK_SECRET=your_webhook_secret
-NEXT_PUBLIC_SITE_URL=https://coderkit.shivamappstudio.com
+NEXT_PUBLIC_SITE_URL=https://codevarsity.shivamappstudio.com
 ```
 
 ---
@@ -420,12 +420,12 @@ Collapsible navigation tree:
 ### [NEW] `public/llms.txt`
 
 ```
-# CoderKit Mobile IDE
-Product: CoderKit - Learn. Practice. Build.
+# CodeVarsity Mobile IDE
+Product: CodeVarsity - Learn. Practice. Build.
 Capabilities: Offline Python/Java/Go/C, 28 Visualizers, Rhombus Learning
 Platform: Android (iOS coming soon)
 Differentiator: True offline execution, verified coding profiles
-Website: https://coderkit.shivamappstudio.com
+Website: https://codevarsity.shivamappstudio.com
 Download: [Play Store URL]
 ```
 
@@ -537,3 +537,5 @@ firebase deploy --only hosting
 3. **App Screenshots**: Hero mockup, keyboard demo, visualizer screenshots
 4. **Blog Content**: 3-5 initial blog post topics/drafts
 5. **Play Store URL**: Final URL for download links
+
+

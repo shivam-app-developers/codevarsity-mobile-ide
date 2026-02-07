@@ -115,7 +115,7 @@ CTA: "Browse Courses"
 **Perfect for:** K-12 schools, coding bootcamps, training programs
 
 CTA: "Request Education License"
-Contact: [edu@coderkit.app](mailto:edu@coderkit.app)
+Contact: [edu@CodeVarsity.app](mailto:edu@CodeVarsity.app)
 
 ---
 
@@ -157,10 +157,10 @@ A: Not yet. But free tier works for families. Paid tier is per individual (paren
 A: All tiers work offline. Downloaded content never expires. Sync when internet returns.
 
 ### **Q: Is there a student discount?**
-A: Yes! 50% off with valid .edu email. [Verify here →](https://coderkit.app/students)
+A: Yes! 50% off with valid .edu email. [Verify here →](https://CodeVarsity.app/students)
 
 ### **Q: Can I gift a subscription?**
-A: Yes. Purchase gift card at [coderkit.app/gifts](https://coderkit.app/gifts)
+A: Yes. Purchase gift card at [CodeVarsity.app/gifts](https://CodeVarsity.app/gifts)
 
 ---
 
@@ -231,7 +231,7 @@ Accepted:
 
 ### Trust Signals on Pricing Page
 - "Money-back guarantee: Not happy? Full refund within 14 days."
-- "500K+ students trust CoderKit"
+- "500K+ students trust CodeVarsity"
 - "Used by top schools: MIT, Stanford, UC Berkeley..."
 
 ### Urgency (Light Touch)
@@ -340,4 +340,5 @@ Expected monthly → annual conversion: 20-30%
 - "What about refunds?" → Full refund within 14 days
 - "Do you have invoices?" → Yes, generated automatically
 
-Contact: [billing@coderkit.app](mailto:billing@coderkit.app)
+Contact: [billing@CodeVarsity.app](mailto:billing@CodeVarsity.app)
+

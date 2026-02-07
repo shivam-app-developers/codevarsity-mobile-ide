@@ -1,6 +1,6 @@
-# Understanding Your CoderKit Profile
+# Understanding Your CodeVarsity Profile
 
-Your CoderKit profile showcases **verified coding activity** — not just courses completed, but real skills demonstrated through practice and problem-solving.
+Your CodeVarsity profile showcases **verified coding activity** — not just courses completed, but real skills demonstrated through practice and problem-solving.
 
 ---
 
@@ -10,7 +10,7 @@ These metrics track your educational progress and time invested.
 
 ### Courses
 
-**What it measures:** Complete learning paths finished on CoderKit.
+**What it measures:** Complete learning paths finished on CodeVarsity.
 
 Each course contains multiple modules with interactive lessons, coding exercises, and assessments. Completing a course means you've mastered all concepts within that track.
 
@@ -31,7 +31,7 @@ Higher XP indicates consistent, long-term engagement with the platform.
 
 **What it measures:** Total lines of code you've written in the editor.
 
-**Why it matters:** This stat only counts code typed through CoderKit's custom keyboard — not pasted text. It represents genuine coding practice, building muscle memory and syntax familiarity.
+**Why it matters:** This stat only counts code typed through CodeVarsity's custom keyboard — not pasted text. It represents genuine coding practice, building muscle memory and syntax familiarity.
 
 ---
 
@@ -77,7 +77,7 @@ These metrics showcase your project creation and completion capabilities.
 
 ### Projects
 
-**What it measures:** Independent coding projects created in CoderKit.
+**What it measures:** Independent coding projects created in CodeVarsity.
 
 Projects are self-directed — you choose what to build. This demonstrates initiative, creativity, and the ability to apply learned concepts to real applications.
 
@@ -109,7 +109,7 @@ These metrics demonstrate discipline, persistence, and commitment to continuous 
 
 **What it measures:** Consecutive days of coding activity.
 
-Your streak counts how many days in a row you've practiced on CoderKit. Even small daily practice compounds into significant skill growth over time.
+Your streak counts how many days in a row you've practiced on CodeVarsity. Even small daily practice compounds into significant skill growth over time.
 
 **Why recruiters care:** A long streak shows discipline and commitment — qualities that translate directly to workplace reliability.
 
@@ -164,7 +164,7 @@ Achievements are milestone badges earned through cumulative activity. They provi
 
 ### How We Ensure Authenticity
 
-Your CoderKit stats are **verified** — meaning they reflect genuine coding activity.
+Your CodeVarsity stats are **verified** — meaning they reflect genuine coding activity.
 
 **Anti-Cheat Measures:**
 
@@ -172,7 +172,7 @@ Your CoderKit stats are **verified** — meaning they reflect genuine coding act
 - **Activity Tracking:** We track when and how code is written, not just the final result
 - **First-Try Tracking:** Your initial attempt is recorded, preventing brute-force solutions
 
-**What "Verified by CoderKit" means:**
+**What "Verified by CodeVarsity" means:**
 
 - Stats cannot be falsified or inflated
 - Activity is tracked in real-time
@@ -180,7 +180,7 @@ Your CoderKit stats are **verified** — meaning they reflect genuine coding act
 
 ### For Recruiters
 
-When you see a CoderKit profile, you're seeing:
+When you see a CodeVarsity profile, you're seeing:
 
 - **Actual skills demonstrated**, not just courses watched
 - **Quality metrics** (first-try rate), not just quantity
@@ -191,10 +191,10 @@ When you see a CoderKit profile, you're seeing:
 
 ## 📤 Sharing Your Profile
 
-Your CoderKit profile can be shared via a unique URL:
+Your CodeVarsity profile can be shared via a unique URL:
 
 ```
-https://coderkit.app/profile/[your-id]
+https://CodeVarsity.app/profile/[your-id]
 ```
 
 Include this link on:
@@ -210,8 +210,9 @@ It provides recruiters with instant, verifiable proof of your coding abilities.
 
 ## Questions?
 
-If you have questions about your profile or stats, contact us at **<support@coderkit.app>**.
+If you have questions about your profile or stats, contact us at **<support@CodeVarsity.app>**.
 
 ---
 
 *Stats are updated in real-time and synced securely to your account.*
+

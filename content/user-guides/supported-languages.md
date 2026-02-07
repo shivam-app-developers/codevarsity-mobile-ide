@@ -1,12 +1,12 @@
 # Supported Languages & Execution Guide
 
-Everything you need to know about the languages CoderKit supports and how to use them.
+Everything you need to know about the languages CodeVarsity supports and how to use them.
 
 ---
 
 ## 🌍 Supported Languages Overview
 
-CoderKit supports **15+ programming languages** across multiple domains:
+CodeVarsity supports **15+ programming languages** across multiple domains:
 
 | Language | Best For | Status | Runtime |
 |----------|----------|--------|---------|
@@ -35,7 +35,7 @@ CoderKit supports **15+ programming languages** across multiple domains:
 - **Powerful** (data science, AI, web backends)
 - **Versatile** (can do anything)
 
-### Python Capabilities in CoderKit
+### Python Capabilities in CodeVarsity
 
 **Execution:**
 - ✅ Run Python scripts
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     guess_number()
 ```
 
-**Run in CoderKit:**
+**Run in CodeVarsity:**
 ```
 ▶ Run
 → Guess a number (1-100): 50
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 ✓ Correct! You guessed in 3 tries!
 ```
 
-### Python Courses in CoderKit
+### Python Courses in CodeVarsity
 1. **Python 101** - Variables, loops, functions (free)
 2. **Python 201** - OOP, file I/O, libraries
 3. **Python 301** - Advanced patterns, decorators, generators
@@ -106,7 +106,7 @@ if __name__ == "__main__":
 - **Enterprise standard** (banks, corporations use it)
 - **Android foundation** (mobile apps)
 
-### Java Capabilities in CoderKit
+### Java Capabilities in CodeVarsity
 
 **Execution:**
 - ✅ Compile to bytecode
@@ -147,7 +147,7 @@ public class Calculator {
 }
 ```
 
-**Run in CoderKit:**
+**Run in CodeVarsity:**
 ```
 ▶ Run
 Enter first number: 10
@@ -156,7 +156,7 @@ Enter second number: 5
 Result: 50.0
 ```
 
-### Java Courses in CoderKit
+### Java Courses in CodeVarsity
 1. **Java 101** - Basics, classes, objects (free)
 2. **Java 201** - Inheritance, polymorphism, generics
 3. **Java 301** - Advanced patterns, streams, threading
@@ -176,7 +176,7 @@ Result: 50.0
 - **Interactive web** (buttons, forms, animations)
 - **ES6+ modern** (arrow functions, async/await, destructuring)
 
-### JavaScript in CoderKit
+### JavaScript in CodeVarsity
 
 **Execution:**
 - ✅ ES6+ syntax (arrow functions, const/let, template literals)
@@ -244,7 +244,7 @@ Click Delete → Todo removed
 ```
 
 ### React & Vue Support
-CoderKit supports modern frameworks:
+CodeVarsity supports modern frameworks:
 
 **React Example:**
 ```jsx
@@ -288,7 +288,7 @@ export default function Counter() {
 
 ### What is C++?
 - **C with objects** (OOP on top of C)
-- **Modern C++** (C++17/20 features in CoderKit)
+- **Modern C++** (C++17/20 features in CodeVarsity)
 - **Performance** (game engines, finance systems)
 
 ### C/C++ Execution
@@ -445,7 +445,7 @@ UPDATE users SET age = 29 WHERE name = 'Alice';
 DELETE FROM users WHERE id = 1;
 ```
 
-### SQL in CoderKit
+### SQL in CodeVarsity
 - **SQLite** (embedded database)
 - **Interactive** (write queries, see results instantly)
 - **Visualization** (see tables as they change)
@@ -571,4 +571,5 @@ DELETE FROM users WHERE id = 1;
 - 🏆 Ready for challenges? Practice problems await
 
 **Which language calls to you?** 🚀
+
 

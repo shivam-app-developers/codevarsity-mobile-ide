@@ -20,10 +20,10 @@
 "Problem 4: Motivation. Build something day 1 on phone: game, web page. Or read theory for 8 weeks? One builds momentum. One kills it. Guess which people choose?"
 
 **Tweet 6:**
-"The result? 500K+ people learning on @CoderKitApp. Students in 120 countries. No longer does 'where I live' determine if I can code. That's huge."
+"The result? 500K+ people learning on @CodeVarsityApp. Students in 120 countries. No longer does 'where I live' determine if I can code. That's huge."
 
 **Tweet 7:**
-"If you want to learn to code: download @CoderKitApp. Build a game week 1. You'll know if you love it. Then commit. But the entry ramp is now 30 seconds, not 30 minutes setup."
+"If you want to learn to code: download @CodeVarsityApp. Build a game week 1. You'll know if you love it. Then commit. But the entry ramp is now 30 seconds, not 30 minutes setup."
 
 ---
 
@@ -48,7 +48,7 @@
 "So learn: fundamentals, data structures, algorithms, design patterns. Then use AI for scaffolding + boilerplate. That's the 2025+ developer."
 
 **Tweet 7:**
-"Get fundamentals right. Do it on @CoderKitApp—visualizers + challenges force you to *understand*, not just copy."
+"Get fundamentals right. Do it on @CodeVarsityApp—visualizers + challenges force you to *understand*, not just copy."
 
 ---
 
@@ -87,7 +87,7 @@ The career ladder just got shorter. #CareerChange"
 
 Now: each student has a phone. 30 students, zero computer lab needed. Pass rate up 40%. Engagement up 70%.
 
-Technology should expand access, not restrict it. CoderKit proved it can."
+Technology should expand access, not restrict it. CodeVarsity proved it can."
 
 ---
 
@@ -102,7 +102,7 @@ Technology should expand access, not restrict it. CoderKit proved it can."
 
 Language choice matters 1%. Fundamentals matter 99%.
 
-Learn on CoderKit. Master the 99%."
+Learn on CodeVarsity. Master the 99%."
 
 ---
 
@@ -113,7 +113,7 @@ Learn on CoderKit. Master the 99%."
 **Post:** "Is it possible to learn to code on a phone?"
 
 **Your comment:**
-"100% possible. I learned Python on @CoderKitApp—built 3 projects on my phone before upgrading to a laptop for professional work.
+"100% possible. I learned Python on @CodeVarsityApp—built 3 projects on my phone before upgrading to a laptop for professional work.
 
 Key: Don't learn everything on phone. Learn fundamentals on phone. Graduate to laptop for big projects.
 
@@ -126,11 +126,11 @@ But for getting started? Phone is perfect. Zero friction, your own pace."
 **Post:** "Should I pay $15K for a bootcamp?"
 
 **Your comment:**
-"Before bootcamp, try CoderKit ($99/year). 3 months of learning. If you're serious, *then* commit to bootcamp or self-study.
+"Before bootcamp, try CodeVarsity ($99/year). 3 months of learning. If you're serious, *then* commit to bootcamp or self-study.
 
 Many people quit at month 2. Better to know cheaply than pay $15K to discover you don't like coding.
 
-Also: 3 months on CoderKit might be enough. Depends on your goal."
+Also: 3 months on CodeVarsity might be enough. Depends on your goal."
 
 ---
 
@@ -139,7 +139,7 @@ Also: 3 months on CoderKit might be enough. Depends on your goal."
 **Post:** "How do you teach programming without a computer lab?"
 
 **Your comment:**
-"Phone-based learning changed this. CoderKit works offline, no setup. I went from 40% pass rate to 80%. Game-changer for schools without budget for computer labs.
+"Phone-based learning changed this. CodeVarsity works offline, no setup. I went from 40% pass rate to 80%. Game-changer for schools without budget for computer labs.
 
 Check out the teacher dashboard—saved me 5 hours/week grading."
 
@@ -149,11 +149,11 @@ Check out the teacher dashboard—saved me 5 hours/week grading."
 
 ### Video 1: "Learning to Code in 60 Seconds"
 
-[0-5s] Student pulls out phone, opens CoderKit
+[0-5s] Student pulls out phone, opens CodeVarsity
 [5-15s] Types Python code, clicks visualizer, sees algorithm execute
 [15-25s] Completes challenge, ranks on leaderboard
 [25-35s] "I did that in 20 minutes. On my phone."
-[35-50s] "Want to learn? Download CoderKit. Free."
+[35-50s] "Want to learn? Download CodeVarsity. Free."
 [50-60s] Logo, CTA
 
 ---
@@ -164,7 +164,7 @@ Check out the teacher dashboard—saved me 5 hours/week grading."
 [10-20s] Teacher projects visualizer on screen, runs code step-by-step
 [20-40s] Students lean forward, lights go on
 [40-50s] Hands up: "Oh I get it now!"
-[50-60s] "This is what CoderKit does. Best $100 spent."
+[50-60s] "This is what CodeVarsity does. Best $100 spent."
 
 ---
 
@@ -173,7 +173,7 @@ Check out the teacher dashboard—saved me 5 hours/week grading."
 [0-10s] "I was a chef. Now I code."
 [10-25s] Phone montage: coding, completing courses, projects
 [25-35s] "Got hired. $120K/year."
-[35-45s] "It started with CoderKit on my phone."
+[35-45s] "It started with CodeVarsity on my phone."
 [45-60s] "You could be next."
 
 ---
@@ -181,13 +181,13 @@ Check out the teacher dashboard—saved me 5 hours/week grading."
 ## Instagram Captions
 
 **Post 1: Leaderboard screenshot**
-"Coding doesn't require a fancy setup. Just consistency. These students went from 0 to top 1% in 8 weeks. All on their phones. You could be next 🚀 #CoderKit #Learning"
+"Coding doesn't require a fancy setup. Just consistency. These students went from 0 to top 1% in 8 weeks. All on their phones. You could be next 🚀 #CodeVarsity #Learning"
 
 **Post 2: Game demo video**
-"Built this in week 2 of coding. No laptop. No prior experience. Just a phone and 30 min/day. Believe in yourself 💪 #CoderKit #GameDev"
+"Built this in week 2 of coding. No laptop. No prior experience. Just a phone and 30 min/day. Believe in yourself 💪 #CodeVarsity #GameDev"
 
 **Post 3: Success story photo**
-"She learned Python on her phone in rural India. Now freelancing, earning $5K/month. Story coming to our blog 🌟 #CoderKit #Success"
+"She learned Python on her phone in rural India. Now freelancing, earning $5K/month. Story coming to our blog 🌟 #CodeVarsity #Success"
 
 ---
 
@@ -197,7 +197,7 @@ Check out the teacher dashboard—saved me 5 hours/week grading."
 
 "Hey Alex,
 
-30 days ago, you downloaded CoderKit. Here's what you've done:
+30 days ago, you downloaded CodeVarsity. Here's what you've done:
 
 ✅ Completed 2 courses
 ✅ Solved 25 challenges
@@ -218,20 +218,20 @@ Next: Build your portfolio project. Upgrade to Pro to unlock advanced challenges
 
 One of our students, Carlos, just got hired as a junior developer. $110K/year.
 
-He learned on CoderKit. 4 months. Started on phone. Built portfolio. Landed interviews. Got offers.
+He learned on CodeVarsity. 4 months. Started on phone. Built portfolio. Landed interviews. Got offers.
 
 His story: [Read →]
 
 Want to be next? You could start this week.
 
-👉 [Download CoderKit]"
+👉 [Download CodeVarsity]"
 
 ---
 
 ## Hashtag Strategy
 
 **Always use:**
-- #CoderKit
+- #CodeVarsity
 - #LearnToCoding
 - #Programming
 - #CareerChange
@@ -247,13 +247,13 @@ Want to be next? You could start this week.
 ## Community Engagement
 
 **Where to engage:**
-- Twitter: @CoderKitApp + reply to students sharing wins
+- Twitter: @CodeVarsityApp + reply to students sharing wins
 - Reddit: r/learnprogramming, r/CSCareerQuestions, r/coding, r/teaching
-- Discord: CoderKit community server (official)
+- Discord: CodeVarsity community server (official)
 - LinkedIn: Share student stories, research, trends
 - TikTok/Instagram: Celebrate user-generated content
 
-**Don't:** Sell directly. Engage authentically. Help people. They'll find CoderKit.
+**Don't:** Sell directly. Engage authentically. Help people. They'll find CodeVarsity.
 
 ---
 
@@ -280,10 +280,11 @@ Want to be next? You could start this week.
 
 - "New AI model released" → "AI + fundamentals = future developers"
 - "Bootcamp costs rise" → "Alternative paths to career change"
-- "New programming language" → "CoderKit supports X language"
+- "New programming language" → "CodeVarsity supports X language"
 - "Remote work trend" → "Learn from anywhere, work from anywhere"
 - "Education shortage" → "Phone-first learning for all"
 
 ---
 
-**Key Principle:** Share value, not products. Help people learn. They'll trust CoderKit.
+**Key Principle:** Share value, not products. Help people learn. They'll trust CodeVarsity.
+

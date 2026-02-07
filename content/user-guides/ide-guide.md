@@ -1,6 +1,6 @@
 # IDE Guide: Master the Code Editor
 
-A deep dive into CoderKit's powerful code editor and everything you can do with it.
+A deep dive into CodeVarsity's powerful code editor and everything you can do with it.
 
 ---
 
@@ -54,7 +54,7 @@ A deep dive into CoderKit's powerful code editor and everything you can do with 
 ## The Custom Keyboard
 
 ### Overview
-CoderKit's keyboard is **purpose-built for coding**, not texting. Every symbol you need is within 2 taps.
+CodeVarsity's keyboard is **purpose-built for coding**, not texting. Every symbol you need is within 2 taps.
 
 ### Keyboard Structure
 
@@ -188,7 +188,7 @@ _ . : ( ) [ ] { } # @ ! = + - * / % &
 
 **Step 2: Run Code**
 1. Tap **▶ Run** button (top toolbar)
-2. CoderKit checks for syntax errors
+2. CodeVarsity checks for syntax errors
 3. If OK → Code executes
 4. **Terminal opens** with output
 
@@ -213,7 +213,7 @@ What's your name? [TextInput Field]
 
 ### Error Messages
 
-CoderKit provides **helpful error messages**:
+CodeVarsity provides **helpful error messages**:
 
 **Syntax Error:**
 ```
@@ -417,7 +417,7 @@ If you connect a **Bluetooth keyboard**, these work:
 ### General Tips
 
 **Save Automatically:**
-- CoderKit **auto-saves** as you type
+- CodeVarsity **auto-saves** as you type
 - No need to manually save
 - Recover unsaved work from history (Undo goes back far)
 
@@ -513,4 +513,5 @@ If you connect a **Bluetooth keyboard**, these work:
 - 🎯 Ready for challenges? Practice problems await!
 
 **Happy coding!** 💻
+
 

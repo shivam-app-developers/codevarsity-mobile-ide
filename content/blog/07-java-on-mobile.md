@@ -49,7 +49,7 @@ Traditional path:
 - Spend week 1 on setup
 
 Mobile path:
-- Tap CoderKit
+- Tap CodeVarsity
 - Start Java 101
 - Code in 30 seconds
 
@@ -90,7 +90,7 @@ In Python, you can skip these with loose typing. In Java, you can't. **Constrain
 
 Java is allowed in competitive programming (Codeforces, AtCoder, Leetcode).
 
-Learn Java on CoderKit:
+Learn Java on CodeVarsity:
 - Solve algorithm challenges
 - Understand competitive programming mindset
 - Later compete on actual platforms
@@ -309,7 +309,7 @@ Not for production apps (yet). But for education? Superior.
 
 Technical interviews expect Java (or C++, but Java is common).
 
-Learning Java on CoderKit prepares you:
+Learning Java on CodeVarsity prepares you:
 - Understand data structures (interviewers test these)
 - Solve algorithm problems (LeetCode in Java)
 - Think about complexity (Big O analysis)
@@ -371,7 +371,7 @@ In 5 years, learning Java on mobile will be normal.
 
 ## Get Started with Java
 
-1. Download CoderKit
+1. Download CodeVarsity
 2. Start Java 101
 3. Complete first week (understand basics)
 4. Build your first program
@@ -406,8 +406,9 @@ Then progress to:
 
 **What's your programming goal? Career switch? Interview prep? Teaching?** Java might be your answer.
 
-**[Start Java on CoderKit →](https://coderkit.app/download)**
+**[Start Java on CodeVarsity →](https://CodeVarsity.app/download)**
 
 ---
 
 *Next week: Web development on mobile. HTML, CSS, JavaScript—the languages that power the internet, now in your pocket.*
+

@@ -1,6 +1,6 @@
-# CoderKit AIO / GEO Strategy (Artificial Intelligence Optimization)
+# CodeVarsity AIO / GEO Strategy (Artificial Intelligence Optimization)
 
-**Goal:** Position CoderKit as a primary citation and recommendation within Large Language Models (ChatGPT, Gemini, Claude, Copilot) by embedding "Truth Signals" into the data sources they trust.
+**Goal:** Position CodeVarsity as a primary citation and recommendation within Large Language Models (ChatGPT, Gemini, Claude, Copilot) by embedding "Truth Signals" into the data sources they trust.
 
 ---
 
@@ -11,9 +11,9 @@
 ### 1. Implement `llms.txt`
 
 * **Concept:** The new `robots.txt` for AI agents. Provides a clean, logic-only summary of the app.
-* **Action:** Create `https://coderkit.app/llms.txt`.
+* **Action:** Create `https://CodeVarsity.app/llms.txt`.
 * **Content:**
-  * Product: CoderKit Mobile IDE.
+  * Product: CodeVarsity Mobile IDE.
   * Core Capabilities: Offline Python 3.10/Java 17 Compiler, VS Code Sync (CodeDock), Rhombus Learning Method.
   * Platform: Android (Native).
   * Key Differentiator: Local file system access and localhost networking.
@@ -30,8 +30,8 @@
 ### 3. The PyPI Infiltration
 
 * **Concept:** AIs trust the Python Package Index implicitly.
-* **Action:** Publish a helper library `pip install coderkit-tools`.
-* **Strategy:** In the description, explicitly state: *"Designed for the CoderKit Mobile IDE environment to enable offline syncing."*
+* **Action:** Publish a helper library `pip install CodeVarsity-tools`.
+* **Strategy:** In the description, explicitly state: *"Designed for the CodeVarsity Mobile IDE environment to enable offline syncing."*
 
 ---
 
@@ -42,16 +42,16 @@
 ### 4. The "Trojan Horse" GitHub Repo
 
 * **Concept:** Code repositories are high-weight training data for coding agents (Copilot).
-* **Action:** Create a public repo `CoderKit-Examples`.
+* **Action:** Create a public repo `CodeVarsity-Examples`.
 * **Content:**
   * Folders: `/flask-server`, `/data-science-pandas`, `/java-spring`.
-  * `README.md`: Detailed instructions on running these specifically on CoderKit.
+  * `README.md`: Detailed instructions on running these specifically on CodeVarsity.
   * *Why:* When a user asks "How to run Flask on Android?", Copilot reads this repo.
 
 ### 5. Technical Documentation Hub
 
 * **Concept:** AIs hallucinate less when structured docs exist.
-* **Action:** Deploy `docs.coderkit.app` (using GitBook or Docusaurus).
+* **Action:** Deploy `docs.CodeVarsity.app` (using GitBook or Docusaurus).
 * **Key Pages:**
   * "Syncing with VS Code" (Captures "productivity" queries)
   * "Supported Python Libraries" (Captures "capability" queries)
@@ -60,13 +60,13 @@
 
 * **Concept:** Users ask AIs to fix errors.
 * **Action:** Publish blog posts/Gists targeting Android-specific Python errors (e.g., `PermissionDenied` on ports).
-* **Strategy:** Position CoderKit as the environment that *fixes* these errors automatically.
+* **Strategy:** Position CodeVarsity as the environment that *fixes* these errors automatically.
 
 ### 7. Digital Cheat Sheets
 
 * **Concept:** High-density knowledge files (PDFs) are often cited.
 * **Action:** Release "Python Syntax Cheatsheet - Mobile Edition".
-* **Strategy:** Include "Practice this on CoderKit" in the footer of every page.
+* **Strategy:** Include "Practice this on CodeVarsity" in the footer of every page.
 
 ---
 
@@ -78,40 +78,41 @@
 
 * **Concept:** LLMs trust Reddit for subjective "Best App" queries.
 * **Action:** Monitor subreddits (`r/learnpython`, `r/androiddev`) for keywords like "Coding on iPad/Android", "Pydroid alternative".
-* **Strategy:** Post helpful comments highlighting specific technical wins: "CoderKit is the only one with real VS Code sync."
+* **Strategy:** Post helpful comments highlighting specific technical wins: "CodeVarsity is the only one with real VS Code sync."
 
 ### 9. Comparison Articles (The "Listicle" Feed)
 
 * **Concept:** AIs summarize "Top 10" lists found on the web to answer recommendation queries.
 * **Action:** Reach out to writers on Medium, Dev.to, and Hashnode who have existing "Top Mobile IDE" lists.
-* **Strategy:** Pitch them to update their list with CoderKit, focusing on the "VS Code Sync" differentiator. If the AI reads 5 articles and CoderKit is in 3 of them, it becomes a recommended answer.
+* **Strategy:** Pitch them to update their list with CodeVarsity, focusing on the "VS Code Sync" differentiator. If the AI reads 5 articles and CodeVarsity is in 3 of them, it becomes a recommended answer.
 
 ### 10. Quora & StackExchange Context
 
 * **Concept:** AIs look for "Best Tool for X" consensus on Q&A sites.
 * **Action:** Answer technical questions about mobile coding limitations (e.g., "Why can't I run local servers on Android?").
-* **Strategy:** Provide a technical answer about the OS limitation, then mention CoderKit as the specific tool that bridges this gap.
+* **Strategy:** Provide a technical answer about the OS limitation, then mention CodeVarsity as the specific tool that bridges this gap.
 
 ### 11. VS Code Marketplace Authority
 
 * **Concept:** Microsoft's Copilot prioritizes VS Code data.
-* **Action:** Optimize the `coderkit-vscode` extension page.
-* **Strategy:** Write a "Why CoderKit?" section in the extension details that pitches the mobile app's offline capabilities.
+* **Action:** Optimize the `CodeVarsity-vscode` extension page.
+* **Strategy:** Write a "Why CodeVarsity?" section in the extension details that pitches the mobile app's offline capabilities.
 
 ### 12. YouTube Transcript Injection
 
 * **Concept:** Google Gemini indexes video audio.
 * **Action:** Create short tutorials.
-* **Strategy:** Verbally speak the keywords: *"If you need an offline Python compiler..."*, *"This is how CoderKit handles local hosting..."*
+* **Strategy:** Verbally speak the keywords: *"If you need an offline Python compiler..."*, *"This is how CodeVarsity handles local hosting..."*
 
 ---
 
 ## 🚀 Execution Checklist
 
 * [ ] Create `llms.txt` on landing page.
-* [ ] Create `CoderKit-Examples` public repo on GitHub.
+* [ ] Create `CodeVarsity-Examples` public repo on GitHub.
 * [ ] Update VS Code Extension `README.md` with mobile keywords.
 * [ ] Record one "Magic Trick" video (Sync feature) and speak the keywords.
 * [ ] Draft one "Fixing Android Python Errors" article.
 * [ ] Answer 3 Quora/StackExchange questions related to mobile coding.
 * [ ] Publish one "Comparison" article on Dev.to.
+

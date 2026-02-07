@@ -4,7 +4,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "How does offline execution work?",
-      answer: "CoderKit embeds real runtimes (Chaquopy for Python, ECJ for Java, Yaegi for Go, TCC for C) directly in the app. No internet required."
+      answer: "CodeVarsity embeds real runtimes (Chaquopy for Python, ECJ for Java, Yaegi for Go, TCC for C) directly in the app. No internet required."
     },
     {
       question: "Can I use NumPy, Pandas, Flask, Django?",
@@ -19,12 +19,12 @@ export default function FAQSection() {
       answer: "Yes! Our custom developer keyboard includes arrow keys, Tab, Ctrl, and quick access to coding symbols."
     },
     {
-      question: "Is CoderKit free?",
-      answer: "Yes! CoderKit is free to download with a generous free tier. Premium courses available via subscription."
+      question: "Is CodeVarsity free?",
+      answer: "Yes! CodeVarsity is free to download with a generous free tier. Premium courses available via subscription."
     },
     {
       question: "How is it different from Pydroid?",
-      answer: "Pydroid is Python-only. CoderKit offers multiple languages, structured courses, 20+ visualizers, and Ghost Code practice."
+      answer: "Pydroid is Python-only. CodeVarsity offers multiple languages, structured courses, 20+ visualizers, and Ghost Code practice."
     }
   ];
 
@@ -49,3 +49,4 @@ export default function FAQSection() {
     </section>
   );
 }
+

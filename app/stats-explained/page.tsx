@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
   title: 'Understanding Your Stats',
-  description: 'Learn what your CoderKit profile stats mean. Verified coding metrics for Learning, Problem Solving, Building, and Consistency.',
+  description: 'Learn what your CodeVarsity profile stats mean. Verified coding metrics for Learning, Problem Solving, Building, and Consistency.',
   path: '/stats-explained',
   type: 'website',
 });
@@ -16,8 +16,8 @@ export default function StatsExplainedPage() {
       <Navbar />
       <main className="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full prose prose-indigo">
 
-        <h1 className="text-4xl font-black text-gray-900 mb-8">Understanding Your CoderKit Profile</h1>
-        <p className="text-xl text-gray-600 mb-12">Your CoderKit profile showcases <strong>verified coding activity</strong> — not just courses completed, but real skills demonstrated through practice and problem-solving.</p>
+        <h1 className="text-4xl font-black text-gray-900 mb-8">Understanding Your CodeVarsity Profile</h1>
+        <p className="text-xl text-gray-600 mb-12">Your CodeVarsity profile showcases <strong>verified coding activity</strong> — not just courses completed, but real skills demonstrated through practice and problem-solving.</p>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🏆 Learning Stats</h2>
@@ -26,7 +26,7 @@ export default function StatsExplainedPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
               <h3 className="font-bold text-lg text-brand-primary mb-2">Courses</h3>
-              <p className="text-gray-700"><strong>What it measures:</strong> Complete learning paths finished on CoderKit.</p>
+              <p className="text-gray-700"><strong>What it measures:</strong> Complete learning paths finished on CodeVarsity.</p>
               <p className="text-gray-600 text-sm mt-2">Each course contains multiple modules with interactive lessons, coding exercises, and assessments. Completing a course means you&apos;ve mastered all concepts within that track.</p>
             </div>
 
@@ -44,7 +44,7 @@ export default function StatsExplainedPage() {
             <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
               <h3 className="font-bold text-lg text-brand-accent mb-2">Lines Typed</h3>
               <p className="text-gray-700"><strong>What it measures:</strong> Total lines of code you&apos;ve written in the editor.</p>
-              <p className="text-gray-600 text-sm mt-2"><strong>Why it matters:</strong> This stat only counts code typed through CoderKit&apos;s custom keyboard — not pasted text. It represents genuine coding practice, building muscle memory and syntax familiarity.</p>
+              <p className="text-gray-600 text-sm mt-2"><strong>Why it matters:</strong> This stat only counts code typed through CodeVarsity&apos;s custom keyboard — not pasted text. It represents genuine coding practice, building muscle memory and syntax familiarity.</p>
             </div>
           </div>
         </section>
@@ -87,7 +87,7 @@ export default function StatsExplainedPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">✓ Verified & Authentic</h2>
           <div className="bg-green-50 p-6 rounded-xl border border-green-100">
              <h3 className="font-bold text-lg text-green-800 mb-3">How We Ensure Authenticity</h3>
-             <p className="text-green-800 mb-4">Your CoderKit stats are <strong>verified</strong> — meaning they reflect genuine coding activity.</p>
+             <p className="text-green-800 mb-4">Your CodeVarsity stats are <strong>verified</strong> — meaning they reflect genuine coding activity.</p>
              <ul className="list-disc list-inside text-green-700 text-sm space-y-2">
                <li><strong>Custom Keyboard Only:</strong> In challenges, code must be typed through our custom keyboard.</li>
                <li><strong>Activity Tracking:</strong> We track when and how code is written, not just the final result.</li>
@@ -101,3 +101,4 @@ export default function StatsExplainedPage() {
     </div>
   );
 }
+

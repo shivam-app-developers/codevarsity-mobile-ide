@@ -73,7 +73,7 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
                 order_currency: 'INR',
                 customer_details: {
                     customer_id: user.uid,
-                    customer_email: user.email || 'user@coderkit.in',
+                    customer_email: user.email || 'user@codevarsity.in',
                     customer_phone: '9999999999', // Dummy, can be collected from user
                 },
                 order_meta: {
@@ -173,7 +173,7 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
                 strategy="lazyOnload"
                 onLoad={() => setCashfreeLoaded(true)}
             />
-            
+
             <Navbar />
             <main className="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto w-full">
 

@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="w-9 h-9 gradient-bg rounded-lg flex items-center justify-center text-white font-bold text-sm">
             &lt;/&gt;
           </div>
-          <span className="font-bold text-lg text-gray-900">CoderKit</span>
+          <span className="font-bold text-lg text-gray-900">CodeVarsity</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -172,7 +172,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          
+
           <div className="border-t border-gray-100 pt-3 mt-3">
             {loading ? (
               <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse mx-4 mb-2"></div>

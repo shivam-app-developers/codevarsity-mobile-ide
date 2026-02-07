@@ -10,7 +10,7 @@ It's brutal. You have 45 minutes to solve an algorithmic problem. No Google. No 
 
 But here's the secret: **Coding interviews are learnable skills.**
 
-This is how to prepare—using CoderKit.
+This is how to prepare—using CodeVarsity.
 
 ---
 
@@ -201,7 +201,7 @@ Can you do better?
 
 ---
 
-## How CoderKit Prepares You
+## How CodeVarsity Prepares You
 
 ### **1. Guided Courses**
 - Data structures (with visualizers)
@@ -320,17 +320,17 @@ Most interviewers don't care about language. They care about problem-solving.
 
 ## Practice Resources
 
-**Within CoderKit:**
+**Within CodeVarsity:**
 - Structured courses
 - Auto-graded problems
 - Visualizers for understanding
 
-**Outside CoderKit:**
+**Outside CodeVarsity:**
 - LeetCode (1900+ problems)
 - HackerRank (coding challenges)
 - InterviewBit (mock interviews)
 
-**Hybrid approach:** Learn on CoderKit, practice on LeetCode.
+**Hybrid approach:** Learn on CodeVarsity, practice on LeetCode.
 
 ---
 
@@ -402,8 +402,9 @@ It's a proven path.
 
 **What's your target company?** Google? Meta? Startup? Comment below.
 
-**[Start interview prep on CoderKit →](https://coderkit.app/download)**
+**[Start interview prep on CodeVarsity →](https://CodeVarsity.app/download)**
 
 ---
 
 *Next week: Career paths in programming. How different languages and specializations lead to different jobs and salaries.*
+

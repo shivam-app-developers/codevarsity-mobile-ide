@@ -47,7 +47,7 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
     }
 
     const result = await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'noreply@coderkit.shivamappstudio.com',
+      from: process.env.SMTP_FROM || 'noreply@codevarsity.shivamappstudio.com',
       ...options,
     });
 
@@ -68,11 +68,11 @@ export async function sendContactConfirmation(
 ): Promise<boolean> {
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #4F46E5;">Thank you for contacting CoderKit!</h2>
+      <h2 style="color: #4F46E5;">Thank you for contacting CodeVarsity!</h2>
       <p>Hi ${escapeHtml(userName)},</p>
       <p>We've received your message and will get back to you as soon as possible.</p>
       <p style="color: #666; font-size: 14px; margin-top: 20px;">
-        In the meantime, feel free to explore our documentation at <a href="https://coderkit.shivamappstudio.com/docs">https://coderkit.shivamappstudio.com/docs</a>
+        In the meantime, feel free to explore our documentation at <a href="https://codevarsity.shivamappstudio.com/docs">https://codevarsity.shivamappstudio.com/docs</a>
       </p>
       <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
       <p style="color: #999; font-size: 12px;">
@@ -83,9 +83,9 @@ export async function sendContactConfirmation(
 
   return sendEmail({
     to: userEmail,
-    subject: 'We received your message - CoderKit',
+    subject: 'We received your message - CodeVarsity',
     html,
-    text: `Thank you for contacting CoderKit! We've received your message and will get back to you as soon as possible.`,
+    text: `Thank you for contacting CodeVarsity! We've received your message and will get back to you as soon as possible.`,
   });
 }
 
@@ -141,3 +141,5 @@ function escapeHtml(text: string): string {
   };
   return text.replace(/[&<>"']/g, (char) => map[char]);
 }
+
+

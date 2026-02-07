@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'CoderKit',
+  name: 'CodeVarsity',
   description: 'Learn, Practice, Build. Offline coding IDE for Android with Python, Java, Go, C and 28+ visualizers.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://coderkit.shivamappstudio.com',
-  ogImage: 'https://coderkit.shivamappstudio.com/og-image.png',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com',
+  ogImage: 'https://codevarsity.shivamappstudio.com/og-image.png',
   links: {
     twitter: 'https://twitter.com/shivamappstudio',
-    github: 'https://github.com/shivam-app-developers/coderkit-mobile-ide',
+    github: 'https://github.com/shivam-app-developers/codevarsity-mobile-ide',
   },
 };
 
@@ -79,3 +79,4 @@ export function createMetadata({
 
   return metadata;
 }
+

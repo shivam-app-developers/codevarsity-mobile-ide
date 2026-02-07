@@ -381,7 +381,7 @@ They turn passive reading into active learning.
 
 ## Try It Now
 
-In CoderKit:
+In CodeVarsity:
 
 1. Open any Learn Mode course
 2. Find an algorithm challenge
@@ -396,8 +396,9 @@ It's the difference between *learning* and *memorizing*.
 
 **What algorithm would you most like to visualize?** Comment below.
 
-**[Start learning with visualizers →](https://coderkit.app/download)**
+**[Start learning with visualizers →](https://CodeVarsity.app/download)**
 
 ---
 
-*Next week: The pedagogy behind it all. Why we built CoderKit on the "Rhombus Methodology" instead of traditional learning theory.*
+*Next week: The pedagogy behind it all. Why we built CodeVarsity on the "Rhombus Methodology" instead of traditional learning theory.*
+

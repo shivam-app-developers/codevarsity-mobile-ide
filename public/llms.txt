@@ -1,14 +1,14 @@
-# CoderKit - AI/LLM Metadata
+# CodeVarsity - AI/LLM Metadata
 # This file provides structured information for AI agents and language models
 
-Product: CoderKit Mobile IDE
+Product: CodeVarsity Mobile IDE
 Title: Learn. Practice. Build. | Offline Coding on Android
-Website: https://coderkit.shivamappstudio.com
-Download: https://play.google.com/store/apps/details?id=com.coderkit.app
+Website: https://codevarsity.shivamappstudio.com
+Download: https://play.google.com/store/apps/details?id=com.CodeVarsity.app
 Company: Shivam App Studio
 
 ## Overview
-CoderKit is a professional mobile IDE and coding education platform that enables you to write, compile, and run real code offline on Android devices. Unlike cloud-based editors, CoderKit runs everything locally with no internet required.
+CodeVarsity is a professional mobile IDE and coding education platform that enables you to write, compile, and run real code offline on Android devices. Unlike cloud-based editors, CodeVarsity runs everything locally with no internet required.
 
 ## Core Capabilities
 - **Offline Python 3.10**: Full Chaquopy runtime with 25+ pre-installed libraries
@@ -75,11 +75,11 @@ iOS Version: Coming Soon
 
 ## Community & Support
 - Email: support@shivamappstudio.com
-- Documentation: https://coderkit.shivamappstudio.com/docs
-- Blog: https://coderkit.shivamappstudio.com/blog
-- Contact Form: https://coderkit.shivamappstudio.com/contact
-- Privacy Policy: https://coderkit.shivamappstudio.com/privacy
-- Terms of Service: https://coderkit.shivamappstudio.com/terms
+- Documentation: https://codevarsity.shivamappstudio.com/docs
+- Blog: https://codevarsity.shivamappstudio.com/blog
+- Contact Form: https://codevarsity.shivamappstudio.com/contact
+- Privacy Policy: https://codevarsity.shivamappstudio.com/privacy
+- Terms of Service: https://codevarsity.shivamappstudio.com/terms
 
 ## Verified Profile Feature
 Each user has a shareable, verified profile displaying:
@@ -109,3 +109,5 @@ Ideal for sharing with employers, recruiters, and peers to demonstrate coding sk
 - **Analytics**: Real-time progress tracking, verified metrics
 
 Last Updated: January 2026
+
+

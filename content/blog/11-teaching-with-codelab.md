@@ -1,4 +1,4 @@
-# Teaching Programming with CoderKit: A Teacher's Guide
+# Teaching Programming with CodeVarsity: A Teacher's Guide
 
 **Posted:** January 2025 | **Reading time:** 9 minutes
 
@@ -10,36 +10,36 @@ You're a teacher. You want to teach programming. But:
 - Curriculum time is limited
 - Engagement is low
 
-CoderKit solves every one of these problems.
+CodeVarsity solves every one of these problems.
 
-This guide shows how to use CoderKit in your classroom.
+This guide shows how to use CodeVarsity in your classroom.
 
 ---
 
-## Why CoderKit for Teaching?
+## Why CodeVarsity for Teaching?
 
 ### **Problem 1: No Computer Lab**
 Traditional approach: Requires 30 desktop computers + IT support
 
-CoderKit: Students use phones they already have
+CodeVarsity: Students use phones they already have
 
 ### **Problem 2: High Cost**
 Traditional: $1000s for hardware + $100s/month for licenses
 
-CoderKit: $100/year for 30 students = $3.33/student/year
+CodeVarsity: $100/year for 30 students = $3.33/student/year
 
 ### **Problem 3: Engagement**
 Traditional: Lecture format, few see immediate results
 
-CoderKit: Interactive, build games week 1, leaderboards, challenges
+CodeVarsity: Interactive, build games week 1, leaderboards, challenges
 
 ### **Problem 4: Teacher Prerequisites**
-You don't need to be a programmer. CoderKit handles curriculum + grading.
+You don't need to be a programmer. CodeVarsity handles curriculum + grading.
 
 ### **Problem 5: Differentiation**
 Traditional: One-speed-fits-all teaching
 
-CoderKit: Self-paced, advanced students move faster, struggling students get support
+CodeVarsity: Self-paced, advanced students move faster, struggling students get support
 
 ---
 
@@ -50,7 +50,7 @@ CoderKit: Self-paced, advanced students move faster, struggling students get sup
 **Goal:** Student builds first game
 
 **Class Activities:**
-1. Day 1: CoderKit overview, download app
+1. Day 1: CodeVarsity overview, download app
 2. Day 2-4: Complete Python 101 (Week 1)
 3. Day 5: Build first number guessing game
 
@@ -84,7 +84,7 @@ CoderKit: Self-paced, advanced students move faster, struggling students get sup
 - Let students work independently
 - Use dashboard to see who's struggling
 
-**CoderKit Teacher Dashboard:**
+**CodeVarsity Teacher Dashboard:**
 - See which students completed each lesson
 - Identify struggling students (stuck on challenge X)
 - Flag misconceptions early
@@ -266,7 +266,7 @@ Celebrates different strengths (not just fast).
 - Immediate rewards
 
 ### **Non-English Speakers**
-- CoderKit has multi-language support
+- CodeVarsity has multi-language support
 - Code is language-agnostic
 - Visual feedback helps regardless of language
 - Pair with bilingual peer
@@ -277,7 +277,7 @@ Celebrates different strengths (not just fast).
 
 ### **Obstacle 1: "Students Just Game Instead of Code"**
 
-**Reality:** Phone access is important. But CoderKit's interface is designed for coding, not distraction.
+**Reality:** Phone access is important. But CodeVarsity's interface is designed for coding, not distraction.
 
 **Solution:**
 - Monitor via dashboard (see screen time)
@@ -295,10 +295,10 @@ Celebrates different strengths (not just fast).
 
 ### **Obstacle 3: "I'm Not a Programmer"**
 
-**You don't need to be.** CoderKit provides:
+**You don't need to be.** CodeVarsity provides:
 - Curriculum (you just facilitate)
 - Auto-grading (no coding knowledge needed)
-- Visualizers (you guide, CoderKit explains)
+- Visualizers (you guide, CodeVarsity explains)
 - Dashboard (shows who needs help)
 
 Your role: Facilitator, not expert.
@@ -379,7 +379,7 @@ vs. Traditional:
 
 "Alex got a B+ on the programming unit"
 
-CoderKit data tells the real story.
+CodeVarsity data tells the real story.
 
 ---
 
@@ -387,7 +387,7 @@ CoderKit data tells the real story.
 
 Share with parents:
 
-"Your child is learning programming on CoderKit. This week, they:
+"Your child is learning programming on CodeVarsity. This week, they:
 - Completed variables and loops
 - Built a number guessing game
 - Solved 15 challenges
@@ -401,7 +401,7 @@ Parents love seeing concrete progress.
 
 ## The Results
 
-Schools using CoderKit see:
+Schools using CodeVarsity see:
 
 - **Engagement:** +70% participation
 - **Pass rate:** 80% (vs. 40% traditional)
@@ -415,7 +415,7 @@ Schools using CoderKit see:
 
 ### **Step 1: Get License**
 - Education license: $100/year (30 students)
-- Request to: [edu@coderkit.app](mailto:edu@coderkit.app)
+- Request to: [edu@CodeVarsity.app](mailto:edu@CodeVarsity.app)
 
 ### **Step 2: Explore Dashboard**
 - Familiarize yourself with teacher tools
@@ -446,11 +446,11 @@ You're not just teaching coding. You're:
 - Preparing for tech world
 - Democratizing education
 
-CoderKit is the tool. You're the teacher who makes it come alive.
+CodeVarsity is the tool. You're the teacher who makes it come alive.
 
 ---
 
-**Are you a teacher thinking about CoderKit?** Email [edu@coderkit.app](mailto:edu@coderkit.app) with questions. We offer:
+**Are you a teacher thinking about CodeVarsity?** Email [edu@CodeVarsity.app](mailto:edu@CodeVarsity.app) with questions. We offer:
 - Free trial (2 weeks, full access)
 - Teacher onboarding
 - Curriculum guidance
@@ -458,8 +458,9 @@ CoderKit is the tool. You're the teacher who makes it come alive.
 
 ---
 
-**[Request education license →](mailto:edu@coderkit.app)**
+**[Request education license →](mailto:edu@CodeVarsity.app)**
 
 ---
 
 *Next week: 2026 coding trends. What's coming in the next year for programming, AI integration, and education.*
+

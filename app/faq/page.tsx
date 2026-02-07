@@ -7,7 +7,7 @@ import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
   title: 'FAQ',
-  description: 'Frequently asked questions about CoderKit, pricing, features, and learning methodology.',
+  description: 'Frequently asked questions about CodeVarsity, pricing, features, and learning methodology.',
   path: '/faq',
   type: 'website',
 });
@@ -16,24 +16,24 @@ const faqs = [
     // General
     {
         category: "General",
-        question: "What is CoderKit?",
-        answer: "CoderKit is a mobile IDE and learning platform that lets you write, compile, and run real code offline on your Android device. It includes 40+ structured courses, 20+ interactive visualizers, and supports Python, Java, Go, C, and web development."
+        question: "What is CodeVarsity?",
+        answer: "CodeVarsity is a mobile IDE and learning platform that lets you write, compile, and run real code offline on your Android device. It includes 40+ structured courses, 20+ interactive visualizers, and supports Python, Java, Go, C, and web development."
     },
     {
         category: "General",
-        question: "Is CoderKit free?",
-        answer: "Yes! CoderKit is free to download with a generous free tier including the sandbox IDE and introductory lessons. Premium courses and advanced features are available via one-time purchases or subscription."
+        question: "Is CodeVarsity free?",
+        answer: "Yes! CodeVarsity is free to download with a generous free tier including the sandbox IDE and introductory lessons. Premium courses and advanced features are available via one-time purchases or subscription."
     },
     {
         category: "General",
         question: "Is there an iOS version?",
-        answer: "CoderKit is currently available on Android only. iOS support is planned for the future. Join our newsletter to be notified when it launches."
+        answer: "CodeVarsity is currently available on Android only. iOS support is planned for the future. Join our newsletter to be notified when it launches."
     },
     // Offline & Technical
     {
         category: "Offline & Technical",
         question: "How does offline execution work?",
-        answer: "CoderKit embeds real language runtimes directly in the app: Chaquopy for Python 3.10, ECJ for Java, Yaegi for Go, and TCC for C. Everything runs locally on your device - no internet required."
+        answer: "CodeVarsity embeds real language runtimes directly in the app: Chaquopy for Python 3.10, ECJ for Java, Yaegi for Go, and TCC for C. Everything runs locally on your device - no internet required."
     },
     {
         category: "Offline & Technical",
@@ -101,13 +101,13 @@ const faqs = [
     // Comparison
     {
         category: "Comparison",
-        question: "How is CoderKit different from Pydroid?",
-        answer: "Pydroid is a Python-only sandbox. CoderKit offers multiple languages (Python, Java, Go, C), structured courses, interactive visualizers, and Ghost Code practice - it's a complete learning platform."
+        question: "How is CodeVarsity different from Pydroid?",
+        answer: "Pydroid is a Python-only sandbox. CodeVarsity offers multiple languages (Python, Java, Go, C), structured courses, interactive visualizers, and Ghost Code practice - it's a complete learning platform."
     },
     {
         category: "Comparison",
         question: "Why not just use YouTube tutorials?",
-        answer: "Watching doesn't equal learning. CoderKit makes you actively practice with Ghost Code, debug with Bug Squasher, and test your understanding with quizzes. Active learning beats passive watching."
+        answer: "Watching doesn't equal learning. CodeVarsity makes you actively practice with Ghost Code, debug with Bug Squasher, and test your understanding with quizzes. Active learning beats passive watching."
     }
 ];
 
@@ -142,7 +142,7 @@ export default function FAQPage() {
 
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-black text-gray-900 mb-4">Frequently Asked Questions</h1>
-                    <p className="text-xl text-gray-600">Everything you need to know about CoderKit</p>
+                    <p className="text-xl text-gray-600">Everything you need to know about CodeVarsity</p>
                 </div>
 
                 {/* Quick Links */}
@@ -190,3 +190,4 @@ export default function FAQPage() {
         </div>
     );
 }
+

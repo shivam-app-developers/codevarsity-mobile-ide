@@ -38,7 +38,7 @@ landing-content/
 │   ├── 08-web-dev-on-mobile.md
 │   ├── 09-coding-interview-prep.md
 │   ├── 10-career-paths-guide.md
-│   ├── 11-teaching-with-coderkit.md
+│   ├── 11-teaching-with-CodeVarsity.md
 │   ├── 12-vs-code-extension.md
 │   └── 13-2026-coding-trends.md
 │
@@ -75,7 +75,7 @@ landing-content/
 - **Audience:** Decision-makers, educators, parents, career changers
 
 **Files:**
-1. **product-overview.md** - What is CoderKit, who uses it, why (1,100+ lines)
+1. **product-overview.md** - What is CodeVarsity, who uses it, why (1,100+ lines)
 2. **why-codelab.md** - Benefits, comparisons, testimonials (1,600+ lines)
 3. **education-guide.md** - Schools, teachers, curriculum, pricing (1,400+ lines)
 4. **success-stories.md** - Real user stories, metrics, outcomes (1,400+ lines)
@@ -99,7 +99,7 @@ landing-content/
 8. **08-web-dev-on-mobile.md** - Web technologies on phone (2,000+ lines)
 9. **09-coding-interview-prep.md** - Interview preparation (2,200+ lines)
 10. **10-career-paths-guide.md** - Career options by language (2,000+ lines)
-11. **11-teaching-with-coderkit.md** - Educator guide (2,000+ lines)
+11. **11-teaching-with-CodeVarsity.md** - Educator guide (2,000+ lines)
 12. **12-vs-code-extension.md** - Desktop IDE integration (1,800+ lines)
 13. **13-2026-coding-trends.md** - Year-ahead predictions (1,600+ lines)
 
@@ -326,7 +326,7 @@ All files:
 ## 🎉 Final Notes
 
 **What you have:**
-A complete, production-ready content library for CoderKit's landing website. Enough content for:
+A complete, production-ready content library for CodeVarsity's landing website. Enough content for:
 - 6 months of blog posts
 - Complete product website
 - User education center
@@ -358,10 +358,11 @@ With this content published and promoted:
 
 **Estimated value if outsourced:** $5,000-$10,000 (professional copywriting + content strategy)
 
-**Your gain:** Complete, ready-to-use, optimized landing content for CoderKit 🚀
+**Your gain:** Complete, ready-to-use, optimized landing content for CodeVarsity 🚀
 
 ---
 
 *Document created: January 2025*
 *Status: Complete and ready for deployment*
 *Next review: In 3 months (after publishing and gathering analytics)*
+

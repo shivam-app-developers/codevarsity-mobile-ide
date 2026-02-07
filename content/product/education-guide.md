@@ -1,10 +1,10 @@
-# CoderKit for Education: Classroom & School Guide
+# CodeVarsity for Education: Classroom & School Guide
 
 Empower your students with professional developer tools and proven pedagogy.
 
 ---
 
-## 📚 Why Schools Choose CoderKit
+## 📚 Why Schools Choose CodeVarsity
 
 ### The Problem with Traditional CS Education
 
@@ -14,7 +14,7 @@ Empower your students with professional developer tools and proven pedagogy.
 - Students disengage from passive content
 - Hard to track who's struggling
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - ✅ Works on phones every student has
 - ✅ Interactive learning (proven 3x better retention)
 - ✅ Teacher dashboard (see progress, intervene early)
@@ -23,7 +23,7 @@ Empower your students with professional developer tools and proven pedagogy.
 
 ### Proven Results
 
-**Schools using CoderKit report:**
+**Schools using CodeVarsity report:**
 - 📈 **40% improvement** in student engagement
 - ✅ **80%+ course completion** (vs. 60% national average)
 - 🏆 **Higher scores** on AP CS exams
@@ -32,11 +32,11 @@ Empower your students with professional developer tools and proven pedagogy.
 
 ---
 
-## 🎓 How CoderKit Works in Classrooms
+## 🎓 How CodeVarsity Works in Classrooms
 
 ### 1. Blended Learning (Hybrid)
 **In-class:** 
-- Use CoderKit visualizers to teach concepts interactively
+- Use CodeVarsity visualizers to teach concepts interactively
 - Project on screen, discuss algorithm behavior
 - Students follow along on phones/tablets
 
@@ -64,7 +64,7 @@ Empower your students with professional developer tools and proven pedagogy.
 ### 3. Self-Paced Learning Lab
 **Setup:**
 - Computer lab with phones/tablets (can use student phones)
-- CoderKit on all devices
+- CodeVarsity on all devices
 - Teacher circulates and helps
 
 **Workflow:**
@@ -77,10 +77,10 @@ Empower your students with professional developer tools and proven pedagogy.
 
 ---
 
-## 🛠️ Getting Started with CoderKit in Schools
+## 🛠️ Getting Started with CodeVarsity in Schools
 
 ### Step 1: Request Education License
-1. **Email:** [schools@coderkit.app](mailto:schools@coderkit.app)
+1. **Email:** [schools@CodeVarsity.app](mailto:schools@CodeVarsity.app)
 2. **Tell us:**
    - School name & district
    - Grade levels / subjects
@@ -159,7 +159,7 @@ Charlie Lee      | 38/60 (63%)      | Loops           | 7 🔥
 
 ### Pre-Built Curricula
 
-CoderKit comes with full curricula for:
+CodeVarsity comes with full curricula for:
 
 **Computer Science (K-12):**
 - 6th-8th grade: **CS Fundamentals** (logic, problem-solving, no code)
@@ -181,7 +181,7 @@ CoderKit comes with full curricula for:
 - Full-stack projects
 
 ### Customization
-- **Use CoderKit as-is** (pre-built is solid)
+- **Use CodeVarsity as-is** (pre-built is solid)
 - **Supplement** (add your own lessons)
 - **Replace** (swap lessons completely)
 - **White-label** (coming 2026—your school's branding)
@@ -191,7 +191,7 @@ CoderKit comes with full curricula for:
 ## 🎮 Gamification for Student Motivation
 
 ### Why Gamification Works
-Students learn more when learning is fun. CoderKit includes:
+Students learn more when learning is fun. CodeVarsity includes:
 
 ### Streaks (The "Show Up" Motivation)
 - **Daily streak counter** (consecutive days coding)
@@ -222,14 +222,14 @@ Students learn more when learning is fun. CoderKit includes:
 
 ## 📊 Equity & Accessibility
 
-### Why CoderKit is More Equitable
+### Why CodeVarsity is More Equitable
 
 **Traditional Problem:**
 - Only students with expensive laptops can code at home
 - Creates "digital divide"
 - Low-income students fall behind
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - ✅ Works on any Android phone (even old budget phones)
 - ✅ Offline capable (no internet requirement)
 - ✅ Affordable ($100/year for 30 students = $3.33/student)
@@ -250,7 +250,7 @@ Students learn more when learning is fun. CoderKit includes:
 
 ### We Train Your Teachers
 1. **Online workshop** (1 hour)
-   - How to use CoderKit IDE
+   - How to use CodeVarsity IDE
    - How to assign courses
    - How to read teacher dashboard
    - Tips for classroom use
@@ -277,7 +277,7 @@ Students learn more when learning is fun. CoderKit includes:
 - ✅ **No selling data** (we never sell student data)
 - ✅ **Privacy audit annual** (3rd-party verification)
 
-### What CoderKit Collects
+### What CodeVarsity Collects
 - ✅ **What they learn** (progress, scores)
 - ❌ **Not** personal information beyond what's needed
 - ❌ **Not** location, biometrics, or other sensitive data
@@ -340,7 +340,7 @@ Students learn more when learning is fun. CoderKit includes:
 
 **School:** Green Valley Middle School (rural Texas)  
 **Challenge:** No computer lab budget, only smartphones  
-**Solution:** CoderKit ($100/year for 30 students)
+**Solution:** CodeVarsity ($100/year for 30 students)
 
 **Results:**
 - ✅ All 30 students learn Python
@@ -348,7 +348,7 @@ Students learn more when learning is fun. CoderKit includes:
 - ✅ 2 students join state robotics competition
 - ✅ Parents amazed kids are "coding"
 
-**Quote:** *"We couldn't afford a computer lab. CoderKit gave us the tools we needed, and it's actually MORE engaging than traditional IDEs."* — Mr. Hernandez, Teacher
+**Quote:** *"We couldn't afford a computer lab. CodeVarsity gave us the tools we needed, and it's actually MORE engaging than traditional IDEs."* — Mr. Hernandez, Teacher
 
 ---
 
@@ -356,7 +356,7 @@ Students learn more when learning is fun. CoderKit includes:
 
 **School:** Lincoln High School (suburban California)  
 **Challenge:** AP CS A is hard to teach, 40% pass rate  
-**Solution:** CoderKit visualizers for hard concepts  
+**Solution:** CodeVarsity visualizers for hard concepts  
 
 **Results:**
 - ✅ 80% pass rate (up from 40%)
@@ -391,7 +391,7 @@ Students learn more when learning is fun. CoderKit includes:
 | **District** | Custom | 1000+ | District-wide |
 | **Free (K-12 Pilot)** | $0 | 30 | Try before buying |
 
-**Bulk discounts available.** Email [schools@coderkit.app](mailto:schools@coderkit.app)
+**Bulk discounts available.** Email [schools@CodeVarsity.app](mailto:schools@CodeVarsity.app)
 
 ---
 
@@ -413,11 +413,12 @@ Students learn more when learning is fun. CoderKit includes:
 - 30-day money-back guarantee
 
 ### Questions?
-- **Email:** [schools@coderkit.app](mailto:schools@coderkit.app)
+- **Email:** [schools@CodeVarsity.app](mailto:schools@CodeVarsity.app)
 - **Phone:** +1-555-CODE-LAB (1-555-263-3522)
 - **Discord:** #education channel
 
 ---
 
 **Let's transform CS education together.** 🚀
+
 

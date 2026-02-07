@@ -1,12 +1,12 @@
-# CoderKit Features Overview
+# CodeVarsity Features Overview
 
-A complete guide to every feature inside CoderKit—your complete mobile IDE and learning platform.
+A complete guide to every feature inside CodeVarsity—your complete mobile IDE and learning platform.
 
 ---
 
 ## 🎯 The Core Experience
 
-CoderKit has **two main modes**:
+CodeVarsity has **two main modes**:
 
 ### 1. **IDE Mode** - Write, Run, Debug Code
 Everything you need to code like a professional, right on your phone.
@@ -342,11 +342,12 @@ squares = [x**2 for x in range(10)]
 - Settings → FAQ
 
 **Online Support:**
-- **Email:** [support@coderkit.app](mailto:support@coderkit.app)
+- **Email:** [support@CodeVarsity.app](mailto:support@CodeVarsity.app)
 - **Discord:** [discord.gg/codelab](https://discord.gg/codelab)
-- **Twitter:** [@CoderKitApp](https://twitter.com/CoderKitApp)
+- **Twitter:** [@CodeVarsityApp](https://twitter.com/CodeVarsityApp)
 
 ---
 
-**Ready to explore?** Download CoderKit and start coding! 🚀
+**Ready to explore?** Download CodeVarsity and start coding! 🚀
+
 

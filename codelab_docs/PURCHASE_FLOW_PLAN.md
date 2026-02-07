@@ -271,7 +271,7 @@ export const cleanupExpiredSubscriptions = functions.pubsub
 
 ```
 ┌─────────────────────────────────────┐
-│           Sign in to CoderKit       │
+│           Sign in to CodeVarsity       │
 ├─────────────────────────────────────┤
 │  ┌─────────────────────────────┐    │
 │  │  [G] Continue with Google   │    │
@@ -322,7 +322,7 @@ export const cleanupExpiredSubscriptions = functions.pubsub
 │  Amount: $5.99                      │
 │                                     │
 │  Your course is now available       │
-│  in the CoderKit mobile app.        │
+│  in the CodeVarsity mobile app.        │
 │                                     │
 │  [Download App] [Browse Courses]    │
 └─────────────────────────────────────┘
@@ -391,7 +391,7 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=xxx
 CASHFREE_APP_ID=xxx
 CASHFREE_SECRET_KEY=xxx
 CASHFREE_WEBHOOK_SECRET=xxx
-NEXT_PUBLIC_SITE_URL=https://coderkit.shivamappstudio.com
+NEXT_PUBLIC_SITE_URL=https://codevarsity.shivamappstudio.com
 ```
 
 ---
@@ -457,3 +457,5 @@ NEXT_PUBLIC_SITE_URL=https://coderkit.shivamappstudio.com
 | Lifetime | No expiry check needed | `lifetime_power_pack` = forever |
 
 **Estimated Total: 6-9 days**
+
+

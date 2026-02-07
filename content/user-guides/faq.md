@@ -21,14 +21,14 @@ Got questions? Here are answers to the most common ones.
 
 **Tip:** Delete unused language runtimes to free space (Settings → Languages → Manage).
 
-### Q: Does CoderKit work offline?
+### Q: Does CodeVarsity work offline?
 **A:**
 - ✅ **Offline:** Code editor, running Python/Java/C, integrated courses, visualizers
 - ❌ **Requires internet:** Downloading runtimes, syncing progress, premium course access, GitHub features
 
 **Recommendation:** Download your language runtime on WiFi, then use offline.
 
-### Q: Can I use CoderKit on iPad/Tablet?
+### Q: Can I use CodeVarsity on iPad/Tablet?
 **A:**
 - ✅ Yes! iPad is supported
 - ✅ Larger screen = larger keyboard (more comfortable)
@@ -49,7 +49,7 @@ Got questions? Here are answers to the most common ones.
 **A:**
 - ✅ Yes! Full support for external keyboards
 - ✅ Keyboard shortcuts work (Ctrl+C, Ctrl+Z, etc.)
-- ⚠️ Custom CoderKit keyboard disables (you'll use system keyboard)
+- ⚠️ Custom CodeVarsity keyboard disables (you'll use system keyboard)
 
 ### Q: How do I run code?
 **A:**
@@ -124,11 +124,11 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 - ✅ Yes! Pre-installed: NumPy, Pandas, Requests, BeautifulSoup, Flask, Django, etc.
 - ❌ Custom packages require specific versions (limited to Chaquopy mirror)
 
-### Q: Does CoderKit support Jupyter Notebooks?
+### Q: Does CodeVarsity support Jupyter Notebooks?
 **A:**
 - ❌ Not yet
 - ✅ Alternative: Interactive Python console (REPL mode) coming Q2 2026
-- 💡 For now: Use CoderKit's Python IDE + visualizers for learning
+- 💡 For now: Use CodeVarsity's Python IDE + visualizers for learning
 
 ### Q: Can I use NumPy, Pandas, TensorFlow?
 **A:**
@@ -147,7 +147,7 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 - ❌ No (requires full GUI framework)
 - ✅ Alternative: Print output to terminal, use web preview for UI
 
-### Q: Does CoderKit support async/await in Python?
+### Q: Does CodeVarsity support async/await in Python?
 **A:**
 - ✅ Yes! Full asyncio support
 - Works for network requests, concurrent tasks
@@ -207,7 +207,7 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 
 ### Q: Is there a free plan?
 **A:**
-- ✅ **Absolutely!** CoderKit is free forever
+- ✅ **Absolutely!** CodeVarsity is free forever
 - Limited features: Python + Web + free courses
 - **Free plan includes:** IDE, limited courses, 1 visualizer
 
@@ -239,7 +239,7 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 **A:**
 - ✅ **30-day money-back guarantee** on courses
 - ✅ **7-day refund** on subscriptions (during trial)
-- Email support@coderkit.app to request refund
+- Email support@CodeVarsity.app to request refund
 
 ### Q: Do prices vary by country?
 **A:**
@@ -302,7 +302,7 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 - ✅ Alternative: Use Bluetooth keyboard (disables custom keyboard)
 - 💡 Pro tip: Keyboard gets easier after 30 minutes of use
 
-### Q: Can I use CoderKit on a Chromebook?
+### Q: Can I use CodeVarsity on a Chromebook?
 **A:**
 - ✅ **Android app** on Chrome OS (Google Play Store)
 - ✅ **VS Code extension** on Chromebook (full desktop experience)
@@ -324,10 +324,10 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 - ❌ **Never:** Password (Firebase hashes it), payment info
 - ❌ **Never:** Code content (unless you explicitly share)
 
-### Q: Can I see CoderKit's privacy policy?
+### Q: Can I see CodeVarsity's privacy policy?
 **A:**
-- [privacy.coderkit.app](https://privacy.coderkit.app)
-- [terms.coderkit.app](https://terms.coderkit.app)
+- [privacy.CodeVarsity.app](https://privacy.CodeVarsity.app)
+- [terms.CodeVarsity.app](https://terms.CodeVarsity.app)
 
 ---
 
@@ -342,18 +342,18 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 ### Q: How do I report a bug?
 **A:**
 1. **In-app:** Settings → Help → Report Bug
-2. **Email:** [bugs@coderkit.app](mailto:bugs@coderkit.app)
+2. **Email:** [bugs@CodeVarsity.app](mailto:bugs@CodeVarsity.app)
 3. **GitHub:** [github.com/codelab/issues](https://github.com/shivam-app-developers/code_lab/issues)
 
 ### Q: How do I request a feature?
 **A:**
 1. **Discord:** #feature-requests channel
-2. **Email:** [feedback@coderkit.app](mailto:feedback@coderkit.app)
+2. **Email:** [feedback@CodeVarsity.app](mailto:feedback@CodeVarsity.app)
 3. **In-app:** Settings → Help → Suggest Feature
 
 ### Q: Who do I contact for urgent issues?
 **A:**
-- **Email:** [support@coderkit.app](mailto:support@coderkit.app)
+- **Email:** [support@CodeVarsity.app](mailto:support@CodeVarsity.app)
 - **Response time:** 24-48 hours
 - **Include:** Device model, app version, error screenshot
 
@@ -398,10 +398,11 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 
 ## 📞 Still Have Questions?
 
-- **Email:** [support@coderkit.app](mailto:support@coderkit.app)
+- **Email:** [support@CodeVarsity.app](mailto:support@CodeVarsity.app)
 - **Discord:** [discord.gg/codelab](https://discord.gg/codelab)
-- **Twitter:** [@CoderKitApp](https://twitter.com/CoderKitApp)
+- **Twitter:** [@CodeVarsityApp](https://twitter.com/CodeVarsityApp)
 - **Live chat:** Available in Settings → Help
 
 **We're here to help!** Don't hesitate to reach out. 💬
+
 

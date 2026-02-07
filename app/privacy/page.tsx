@@ -6,7 +6,7 @@ import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
   title: 'Privacy Policy',
-  description: 'How we collect, use, and protect your data on CoderKit. Learn about our privacy practices and your rights.',
+  description: 'How we collect, use, and protect your data on CodeVarsity. Learn about our privacy practices and your rights.',
   path: '/privacy',
   type: 'website',
 });
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
                     <section className="mb-8">
                         <h2 className="text-xl font-bold text-gray-900 mb-4">7. Children&apos;s Privacy</h2>
                         <p className="text-gray-600 mb-4">
-                            CoderKit is not intended for children under 13. We do not knowingly collect
+                            CodeVarsity is not intended for children under 13. We do not knowingly collect
                             personal information from children under 13.
                         </p>
                     </section>
@@ -119,3 +119,4 @@ export default function PrivacyPage() {
         </div>
     );
 }
+

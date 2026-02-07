@@ -86,7 +86,7 @@ Enter strategies like:
 - **Local server execution** (code runs locally, not in the cloud)
 - **Offline-first architecture** (download once, run forever)
 
-These aren't theoretical—they work right now. CoderKit uses them. So does [Replit](https://replit.com) (though they prefer cloud). The technical proof-of-concept is solved.
+These aren't theoretical—they work right now. CodeVarsity uses them. So does [Replit](https://replit.com) (though they prefer cloud). The technical proof-of-concept is solved.
 
 ---
 
@@ -128,7 +128,7 @@ These aren't theoretical—they work right now. CoderKit uses them. So does [Rep
 - **Total: $19,000**
 
 **Mobile-first pathway:**
-- CoderKit subscription: $60/year
+- CodeVarsity subscription: $60/year
 - Phone: already owned
 - Work full-time: keep your income
 - **Total: $60 + opportunity cost = Much lower barrier**
@@ -187,7 +187,7 @@ The future of mobile coding isn't just about writing code on a phone. It's about
 - Creating global talent pools
 - Proving that constraints breed innovation
 
-CoderKit is part of this movement. So is Replit Mobile. So is every tool that says "we're not leaving billions of people behind because they don't have laptops."
+CodeVarsity is part of this movement. So is Replit Mobile. So is every tool that says "we're not leaving billions of people behind because they don't have laptops."
 
 ---
 
@@ -195,7 +195,7 @@ CoderKit is part of this movement. So is Replit Mobile. So is every tool that sa
 
 Whether you're a student, teacher, developer, or parent:
 
-- **Students:** Try CoderKit. See what's possible on a phone.
+- **Students:** Try CodeVarsity. See what's possible on a phone.
 - **Teachers:** Bring coding to your classroom, with or without a computer lab.
 - **Developers:** Build for mobile-first. Expand your reach.
 - **Parents:** Your kids don't need a $1000 laptop to start coding.
@@ -206,8 +206,9 @@ The future of coding is mobile. And it's not coming—it's here.
 
 **What do you think? Is mobile coding the future, or just a novelty?** Share your thoughts in the comments.
 
-**Ready to code on your phone?** [Download CoderKit for free →](https://coderkit.app/download)
+**Ready to code on your phone?** [Download CodeVarsity for free →](https://CodeVarsity.app/download)
 
 ---
 
 *Next week: We go deep on Python on mobile. How a 30-year-old language dominates modern learning.*
+

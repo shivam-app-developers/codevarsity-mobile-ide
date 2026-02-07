@@ -351,7 +351,7 @@ Reality: You learn by doing, not by preparation
 
 **This week:**
 1. Choose your path (based on quiz above)
-2. Download CoderKit
+2. Download CodeVarsity
 3. Start the recommended course
 
 **Next 6-12 months:**
@@ -384,8 +384,9 @@ No wonder it's worth the effort.
 
 **Which path appeals to you most?** Comment and I'll give personalized recommendations.
 
-**[Start your path on CoderKit →](https://coderkit.app/download)**
+**[Start your path on CodeVarsity →](https://CodeVarsity.app/download)**
 
 ---
 
-*Next week: Teaching with CoderKit. How educators use it in classrooms and get students actually excited about programming.*
+*Next week: Teaching with CodeVarsity. How educators use it in classrooms and get students actually excited about programming.*
+

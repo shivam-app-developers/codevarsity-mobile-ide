@@ -1,4 +1,4 @@
-# CoderKit Course Pricing Guide
+# CodeVarsity Course Pricing Guide
 
 Complete pricing for all courses. Use these when setting up in-app products in Google Play Console.
 
@@ -162,3 +162,4 @@ Complete pricing for all courses. Use these when setting up in-app products in G
 | **TOTAL** | **48 Products** | |
 
 *Note: Google Play handles regional pricing automatically. Set base USD price and it converts to local currencies.*
+

@@ -1,7 +1,7 @@
-# CoderKit - Mobile Coding IDE & Learning Platform
+# CodeVarsity - Mobile Coding IDE & Learning Platform
 
 <p align="center">
-  <img src="assets/icon/logo.png" alt="CoderKit Logo" width="120"/>
+  <img src="assets/icon/logo.png" alt="CodeVarsity Logo" width="120"/>
 </p>
 
 <p align="center">
@@ -18,13 +18,13 @@
 
 ---
 
-## What is CoderKit?
+## What is CodeVarsity?
 
-**CoderKit** is a professional mobile IDE and coding education platform that lets you **write, compile, and run real code offline** on your Android device. Unlike cloud-based coding apps, CoderKit runs everything locally - no internet required.
+**CodeVarsity** is a professional mobile IDE and coding education platform that lets you **write, compile, and run real code offline** on your Android device. Unlike cloud-based coding apps, CodeVarsity runs everything locally - no internet required.
 
 ### Key Differentiators
 
-| Feature | CoderKit | Pydroid | AIDE |
+| Feature | CodeVarsity | Pydroid | AIDE |
 |---------|----------|---------|------|
 | **Offline Python** | ✅ Full Python 3.10 | ✅ | ❌ |
 | **Offline Java** | ✅ ECJ Compiler | ❌ | ✅ |
@@ -97,7 +97,7 @@
 
 ## Interactive Visualizers
 
-CoderKit includes **20+ interactive visualizers** to help you understand how code works:
+CodeVarsity includes **20+ interactive visualizers** to help you understand how code works:
 
 | Category | Visualizers |
 |----------|-------------|
@@ -151,7 +151,7 @@ Find and fix bugs in realistic code scenarios. Gamified debugging to sharpen you
 
 ### Can I run Python offline on Android?
 
-**Yes!** CoderKit includes a full Python 3.10 runtime via Chaquopy. No internet required. Supports NumPy, Pandas, Flask, Django, and more.
+**Yes!** CodeVarsity includes a full Python 3.10 runtime via Chaquopy. No internet required. Supports NumPy, Pandas, Flask, Django, and more.
 
 ### Does it support interactive input?
 
@@ -185,7 +185,7 @@ Find and fix bugs in realistic code scenarios. Gamified debugging to sharpen you
 ## Links
 
 - 📱 **Download**: [Google Play Store](#) *(Coming Soon)*
-- 🌐 **Website**: [coderkit.shivamappstudio.com](https://coderkit.shivamappstudio.com)
+- 🌐 **Website**: [codevarsity.shivamappstudio.com](https://codevarsity.shivamappstudio.com)
 - 💻 **VS Code Extension**: *(Coming Soon)*
 
 ---
@@ -199,3 +199,5 @@ Find and fix bugs in realistic code scenarios. Gamified debugging to sharpen you
 <p align="center">
   Made with ❤️ by <a href="https://shivamappstudio.com">Shivam App Studio</a>
 </p>
+
+

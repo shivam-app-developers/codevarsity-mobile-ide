@@ -1,45 +1,45 @@
-# Why CoderKit? Benefits & Competitive Advantages
+# Why CodeVarsity? Benefits & Competitive Advantages
 
-Stop struggling with learning to code. Here's why thousands of developers choose CoderKit.
+Stop struggling with learning to code. Here's why thousands of developers choose CodeVarsity.
 
 ---
 
-## 🎯 The Problems CoderKit Solves
+## 🎯 The Problems CodeVarsity Solves
 
 ### Problem 1: "I want to learn but I'm always busy"
 **Traditional solution:** Sit at a computer for 2 hours  
-**CoderKit solution:** 30 minutes on your phone, anywhere
+**CodeVarsity solution:** 30 minutes on your phone, anywhere
 
 You code on the bus, at lunch, before bed. Small, consistent practice beats rare marathon sessions.
 
 ### Problem 2: "Online IDEs require internet constantly"
 **Replit, Glitch, GitHub Codespaces:** Worthless without WiFi  
-**CoderKit:** Download once, code offline forever
+**CodeVarsity:** Download once, code offline forever
 
-Airplane? Coffee shop with bad WiFi? Off-grid hike? CoderKit works perfectly.
+Airplane? Coffee shop with bad WiFi? Off-grid hike? CodeVarsity works perfectly.
 
 ### Problem 3: "I don't understand what I'm reading"
 **YouTube tutorials:** Watch passively, forget 80% after a week  
 **Textbooks:** Static text, no interaction  
-**CoderKit:** See animations, interact with visualizers, code alongside
+**CodeVarsity:** See animations, interact with visualizers, code alongside
 
 The Rhombus Methodology (our learning framework) produces **3x better retention** than video.
 
 ### Problem 4: "Coding bootcamps are expensive ($15K+)"
 **Bootcamp:** 12 weeks, $15,000, requires time off work  
-**CoderKit:** Self-paced, $50–$200 total, learn while working
+**CodeVarsity:** Self-paced, $50–$200 total, learn while working
 
 Career change doesn't mean burning out savings.
 
 ### Problem 5: "I can't type fast on my phone"
 **System keyboard:** Not designed for coding  
-**CoderKit's custom keyboard:** Symbols with one tap, optimized for every language
+**CodeVarsity's custom keyboard:** Symbols with one tap, optimized for every language
 
 After 30 minutes, typing code on mobile feels natural.
 
 ---
 
-## ✅ What You Get with CoderKit
+## ✅ What You Get with CodeVarsity
 
 ### IDE That Works Anywhere
 - **No WiFi? No problem.** Code offline, sync when online
@@ -85,7 +85,7 @@ After 30 minutes, typing code on mobile feels natural.
 
 ---
 
-## 💰 Why CoderKit is a Better Deal
+## 💰 Why CodeVarsity is a Better Deal
 
 ### Cost Comparison
 
@@ -94,7 +94,7 @@ After 30 minutes, typing code on mobile feels natural.
 | **Bootcamp** | $15,000 | 12 weeks | Job-ready (maybe) |
 | **College degree** | $40,000–$100,000 | 4 years | Degree + debt |
 | **Udemy courses** | $100–$500 | Self-paced | Certificate (meh) |
-| ****CoderKit*** | $50–$200/year | Self-paced | **Mastery + portfolio** |
+| ****CodeVarsity*** | $50–$200/year | Self-paced | **Mastery + portfolio** |
 
 *With Full Stack Pro subscription + a few individual courses*
 
@@ -111,7 +111,7 @@ After 30 minutes, typing code on mobile feels natural.
 - ❌ Time-intensive
 - ❌ Location-dependent
 
-**CoderKit:**
+**CodeVarsity:**
 - ✅ Structured curriculum (Rhombus Methodology)
 - ✅ Interactive help (visualizers, challenges, Discord)
 - ✅ Portfolio building (code your projects)
@@ -154,10 +154,10 @@ After 30 minutes, typing code on mobile feels natural.
 
 ---
 
-## 🏆 Why Developers Choose CoderKit Over Alternatives
+## 🏆 Why Developers Choose CodeVarsity Over Alternatives
 
 ### vs. Replit / Glitch (Online IDEs)
-| Feature | CoderKit | Replit |
+| Feature | CodeVarsity | Replit |
 |---------|---------|--------|
 | **Offline** | ✅ Full IDE offline | ❌ Requires internet |
 | **Learning** | ✅ 20+ visualizers | ❌ No learning tools |
@@ -165,10 +165,10 @@ After 30 minutes, typing code on mobile feels natural.
 | **Cost** | ✅ $1.99/mo | ❌ $7–$19/mo |
 | **Keyboard** | ✅ Optimized for code | ❌ System keyboard |
 
-**Winner for learners:** CoderKit
+**Winner for learners:** CodeVarsity
 
 ### vs. Udemy / Coursera (Online Learning)
-| Feature | CoderKit | Udemy |
+| Feature | CodeVarsity | Udemy |
 |---------|---------|-------|
 | **Interactive** | ✅ Visualizers + hands-on | ❌ Watch videos passively |
 | **Retention** | ✅ 3x better | ⚠️ 80% forget content |
@@ -176,10 +176,10 @@ After 30 minutes, typing code on mobile feels natural.
 | **Mobile** | ✅ Native app | ⚠️ Web-based, clunky |
 | **Cost** | ✅ $1.99/mo | ⚠️ $12–$50 per course |
 
-**Winner for interactive learning:** CoderKit
+**Winner for interactive learning:** CodeVarsity
 
 ### vs. Bootcamp (In-Person)
-| Feature | CoderKit | Bootcamp |
+| Feature | CodeVarsity | Bootcamp |
 |---------|---------|----------|
 | **Cost** | ✅ $50–$200 | ❌ $15,000+ |
 | **Time** | ✅ Flexible | ❌ 12 weeks full-time |
@@ -187,8 +187,8 @@ After 30 minutes, typing code on mobile feels natural.
 | **Job placement** | 🔄 Coming 2026 | ✅ Job guarantee |
 | **Flexibility** | ✅ Learn on your schedule | ❌ Fixed schedule |
 
-**Winner for affordability & flexibility:** CoderKit  
-**Winner for job guarantee:** Bootcamp (but CoderKit + personal projects beats bootcamp)
+**Winner for affordability & flexibility:** CodeVarsity  
+**Winner for job guarantee:** Bootcamp (but CodeVarsity + personal projects beats bootcamp)
 
 ---
 
@@ -231,7 +231,7 @@ After 30 minutes, typing code on mobile feels natural.
 
 ---
 
-## 🌟 The CoderKit Difference
+## 🌟 The CodeVarsity Difference
 
 ### **1. Learning Science Meets Technology**
 The **Rhombus Methodology** isn't made up—it's based on:
@@ -288,7 +288,7 @@ The **Rhombus Methodology** isn't made up—it's based on:
 
 ## 🚀 Your Next Steps
 
-### Try CoderKit Free
+### Try CodeVarsity Free
 1. Download from Google Play Store
 2. Sign up (email or Google account)
 3. Complete Python 101 (free course, 2 hours)
@@ -308,7 +308,7 @@ The **Rhombus Methodology** isn't made up—it's based on:
 > **"I learned Python in 4 weeks. The visualizers finally made algorithms click!"**  
 > — Maya, 16, student
 
-> **"Changed careers without burning out my savings. CoderKit + personal projects = new dev job."**  
+> **"Changed careers without burning out my savings. CodeVarsity + personal projects = new dev job."**  
 > — Alex, 32, career changer
 
 > **"My students go from 0 to building actual games. This is how we should teach coding."**  
@@ -316,5 +316,6 @@ The **Rhombus Methodology** isn't made up—it's based on:
 
 ---
 
-**Ready to learn differently?** Download CoderKit today. 🚀
+**Ready to learn differently?** Download CodeVarsity today. 🚀
+
 

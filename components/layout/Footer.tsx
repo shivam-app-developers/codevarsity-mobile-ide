@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center text-white text-sm font-bold">
                 &lt;/&gt;
               </div>
-              <span className="font-bold text-white">CoderKit</span>
+              <span className="font-bold text-white">CodeVarsity</span>
             </div>
             <p className="text-sm">Learn. Practice. Build.</p>
           </div>

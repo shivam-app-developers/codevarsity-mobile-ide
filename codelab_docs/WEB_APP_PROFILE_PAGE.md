@@ -1,4 +1,4 @@
-# CoderKit Web App - Public Profile Page
+# CodeVarsity Web App - Public Profile Page
 
 ## Overview
 
@@ -9,7 +9,7 @@ Public shareable profile page displaying verified user stats from Firebase. This
 ## URL Structure
 
 ```
-https://coderkit.app/profile/{encoded_user_id}
+https://CodeVarsity.app/profile/{encoded_user_id}
 ```
 
 ### Encoding
@@ -27,7 +27,7 @@ String getShareableProfileUrl() {
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) return '';
   final encoded = base64Encode(utf8.encode(uid));
-  return 'https://coderkit.app/profile/$encoded';
+  return 'https://CodeVarsity.app/profile/$encoded';
 }
 ```
 
@@ -99,7 +99,7 @@ String getShareableProfileUrl() {
 ┌─────────────────────────────────────────────────────┐
 │  [Photo]  Jane Doe                                  │
 │           Member since Dec 2024                     │
-│           ✓ Verified by CoderKit                    │
+│           ✓ Verified by CodeVarsity                    │
 │                                                     │
 │  [Learn More About Stats]  [Share]                  │
 ├─────────────────────────────────────────────────────┤
@@ -250,7 +250,7 @@ function getLanguageSkills(languageStats) {
 
 ### Verified Badge
 
-Display "✓ Verified by CoderKit" badge prominently. This indicates:
+Display "✓ Verified by CodeVarsity" badge prominently. This indicates:
 
 - Stats are tracked via anti-cheat measures
 - No copy-paste in challenges
@@ -271,7 +271,7 @@ For Bug Squasher and Code Refactor, show visual progress bars:
 
 ```javascript
 function shareProfile(encodedId) {
-  const url = `https://coderkit.app/profile/${encodedId}`;
+  const url = `https://CodeVarsity.app/profile/${encodedId}`;
   navigator.clipboard.writeText(url);
   // Show toast: "Profile link copied!"
 }
@@ -328,8 +328,8 @@ service cloud.firestore {
 ## SEO Metadata
 
 ```html
-<title>{displayName}'s Coding Profile | CoderKit</title>
-<meta name="description" content="{displayName} has completed {bugTotal} debugging challenges, fixed {errorsFixed} errors, and maintained a {streak}-day coding streak. View verified coding stats on CoderKit.">
+<title>{displayName}'s Coding Profile | CodeVarsity</title>
+<meta name="description" content="{displayName} has completed {bugTotal} debugging challenges, fixed {errorsFixed} errors, and maintained a {streak}-day coding streak. View verified coding stats on CodeVarsity.">
 <meta property="og:title" content="{displayName}'s Verified Coding Profile">
 <meta property="og:description" content="87 Bug Squashers | 72% First-Try Rate | 23 Day Streak">
 <meta property="og:image" content="{photoUrl}">
@@ -341,3 +341,4 @@ service cloud.firestore {
 
 - [PROFILE_STATS_EXPLAINED.md](./PROFILE_STATS_EXPLAINED.md) - Detailed explanation of each stat
 - [APP_CAPABILITIES.md](./APP_CAPABILITIES.md) - Full app features documentation
+

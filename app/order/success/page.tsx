@@ -58,7 +58,7 @@ function OrderSuccessContent() {
                 <div className="bg-blue-50 rounded-xl p-4 mb-8">
                     <p className="text-sm text-blue-800">
                         <i className="fa-solid fa-circle-info mr-2"></i>
-                        Your course is now available in the CoderKit mobile app. Download the app to start learning!
+                        Your course is now available in the CodeVarsity mobile app. Download the app to start learning!
                     </p>
                 </div>
 
@@ -109,3 +109,4 @@ export default function OrderSuccessPage() {
         </div>
     );
 }
+

@@ -29,7 +29,7 @@ export default function Home() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is CoderKit free?",
+        "name": "Is CodeVarsity free?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The app is free to download with basic lessons. Full courses and certificates require a premium subscription."
@@ -40,7 +40,7 @@ export default function Home() {
         "name": "Does it work offline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, CoderKit includes a true offline compiler for Python, C, C++, and Java. You can code without an internet connection."
+          "text": "Yes, CodeVarsity includes a true offline compiler for Python, C, C++, and Java. You can code without an internet connection."
         }
       }
     ]
@@ -70,7 +70,7 @@ export default function Home() {
         {/* OBJECTIONS */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Why Choose CoderKit?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Why Choose CodeVarsity?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl border border-gray-100">
                 <p className="font-semibold text-gray-900 mb-2">&quot;Why not Pydroid?&quot;</p>
@@ -78,11 +78,11 @@ export default function Home() {
               </div>
               <div className="bg-white p-6 rounded-xl border border-gray-100">
                 <p className="font-semibold text-gray-900 mb-2">&quot;Why not YouTube?&quot;</p>
-                <p className="text-sm text-gray-600">Watching ≠ Learning. CoderKit makes you practice.</p>
+                <p className="text-sm text-gray-600">Watching ≠ Learning. CodeVarsity makes you practice.</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-gray-100">
                 <p className="font-semibold text-gray-900 mb-2">&quot;Why not my laptop?&quot;</p>
-                <p className="text-sm text-gray-600">CoderKit is always in your pocket.</p>
+                <p className="text-sm text-gray-600">CodeVarsity is always in your pocket.</p>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
         <section className="py-20 gradient-bg text-white text-center">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Learning?</h2>
-            <p className="text-lg opacity-90 mb-8">Download CoderKit and master coding today.</p>
+            <p className="text-lg opacity-90 mb-8">Download CodeVarsity and master coding today.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#" className="bg-white text-brand-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-gray-100">
                 <i className="fa-brands fa-google-play text-xl"></i> Get on Google Play
@@ -113,3 +113,4 @@ export default function Home() {
     </div>
   );
 }
+

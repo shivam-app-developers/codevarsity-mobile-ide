@@ -18,7 +18,7 @@ export default function ProfileClient({ id }: { id: string }) {
                 // Decode the user ID from base64
                 const decodedId = atob(id);
                 const userStats = await getUserStats(decodedId);
-                
+
                 if (userStats) {
                     setStats(userStats);
                     setError(null);
@@ -89,18 +89,18 @@ export default function ProfileClient({ id }: { id: string }) {
                         </div>
                         <div className="text-center md:text-left flex-1">
                             <h1 className="text-3xl font-bold text-gray-900">{stats.displayName}</h1>
-                            <p className="text-gray-500 text-sm mt-1">CoderKit Learner • Verified Profile</p>
+                            <p className="text-gray-500 text-sm mt-1">CodeVarsity Learner • Verified Profile</p>
                         </div>
                         <div className="flex flex-col items-center md:items-end gap-4">
                             <div className="w-full md:w-auto">
                                 <SocialShareButtons
-                                  title={`${stats.displayName}'s CoderKit Profile`}
-                                  description={`Check out ${stats.displayName}'s verified coding profile with ${stats.coursesCompleted} courses completed and ${stats.xp} XP!`}
-                                  url={`${typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_SITE_URL}/profile/${id}`}
-                                  showLabel={false}
+                                    title={`${stats.displayName}'s CodeVarsity Profile`}
+                                    description={`Check out ${stats.displayName}'s verified coding profile with ${stats.coursesCompleted} courses completed and ${stats.xp} XP!`}
+                                    url={`${typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_SITE_URL}/profile/${id}`}
+                                    showLabel={false}
                                 />
                             </div>
-                            <button 
+                            <button
                                 onClick={() => {
                                     const url = `${typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_SITE_URL}/profile/${id}`;
                                     navigator.clipboard.writeText(url);
@@ -269,9 +269,9 @@ export default function ProfileClient({ id }: { id: string }) {
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">✓</div>
                         <div>
-                            <h3 className="font-bold text-gray-900">Verified by CoderKit</h3>
+                            <h3 className="font-bold text-gray-900">Verified by CodeVarsity</h3>
                             <p className="text-sm text-gray-600 mt-1">
-                                This profile represents verified coding activity. Stats are tracked in real-time and cannot be falsified. 
+                                This profile represents verified coding activity. Stats are tracked in real-time and cannot be falsified.
                                 The custom keyboard requirement ensures all code was genuinely typed through our platform.
                             </p>
                         </div>

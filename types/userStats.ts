@@ -1,7 +1,7 @@
 import { Timestamp } from 'firebase/firestore';
 
 /**
- * Comprehensive user profile stats tracked by CoderKit
+ * Comprehensive user profile stats tracked by CodeVarsity
  * These metrics represent verified coding activity, not just courses watched
  */
 
@@ -189,3 +189,4 @@ export const ACHIEVEMENT_DEFINITIONS = {
     stat: 'errorsFixed'
   }
 };
+

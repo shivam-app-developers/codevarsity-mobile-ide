@@ -1,8 +1,8 @@
 # Build Your First Game on Your Phone: Tic-Tac-Toe in Python
 
-**Posted:** January 2026 | **Reading time:** 12 minutes | **Platform:** CoderKit Mobile IDE
+**Posted:** January 2026 | **Reading time:** 12 minutes | **Platform:** CodeVarsity Mobile IDE
 
-> **Only on CoderKit:** Build, test, and run a complete Python game—right on your phone. No laptop needed. No complex setup. Just code and play.
+> **Only on CodeVarsity:** Build, test, and run a complete Python game—right on your phone. No laptop needed. No complex setup. Just code and play.
 
 You're starting to learn Python. You've done loops, conditions, functions. But you haven't built anything *real* yet.
 
@@ -10,9 +10,9 @@ This week, you're building a complete, playable game: **Tic-Tac-Toe**.
 
 By Friday, you'll have a game your friends can play. You'll understand game logic, data structures, and functions at a deeper level. Most importantly, you'll feel like a real programmer.
 
-Let's build it—**on your phone with CoderKit.**
+Let's build it—**on your phone with CodeVarsity.**
 
-**[Download CoderKit Free →](https://coderkit.app/download)** Start building in minutes, no setup required.
+**[Download CodeVarsity Free →](https://CodeVarsity.app/download)** Start building in minutes, no setup required.
 
 ---
 
@@ -80,7 +80,7 @@ We'll build each section step-by-step.
 
 **What we're doing:** Create a data structure to represent the game board.
 
-> **CoderKit Advantage:** Write this code in CoderKit's built-in Python editor. Test instantly without leaving your phone.
+> **CodeVarsity Advantage:** Write this code in CodeVarsity's built-in Python editor. Test instantly without leaving your phone.
 
 ```python
 # Initialize empty board (3x3)
@@ -368,9 +368,9 @@ if __name__ == "__main__":
 
 ---
 
-## Complete Code (Copy This Into CoderKit)
+## Complete Code (Copy This Into CodeVarsity)
 
-**Open CoderKit → Create new Python file → Paste this entire code → Run**
+**Open CodeVarsity → Create new Python file → Paste this entire code → Run**
 
 ```python
 def initialize_board():
@@ -501,7 +501,7 @@ play_game()
 
 ## Step-by-Step Implementation Plan
 
-**Ready? [Open CoderKit now](https://coderkit.app/download) to start coding.**
+**Ready? [Open CodeVarsity now](https://CodeVarsity.app/download) to start coding.**
 
 ### **Monday (1 hour)**
 - Write `initialize_board()`
@@ -609,14 +609,14 @@ You just built a **complete, playable game**—on your phone.
 
 This is no longer "learning to code." This is **being a programmer**.
 
-**CoderKit made this possible:** No laptop. No complex setup. Just your phone and your ideas.
+**CodeVarsity made this possible:** No laptop. No complex setup. Just your phone and your ideas.
 
 Share it:
 - Play with friends on your phone
 - Show your family ("I built this on my phone!")
 - Post the code on GitHub
-- Screenshot from CoderKit → Share on social media
-- Tell people "I built this in CoderKit"
+- Screenshot from CodeVarsity → Share on social media
+- Tell people "I built this in CodeVarsity"
 
 **This is portfolio-worthy.** Seriously.
 
@@ -647,12 +647,13 @@ You'll look back on this project and remember the moment you went from student t
 
 ---
 
-**[Download CoderKit Free - Start Building →](https://coderkit.app/download)**
+**[Download CodeVarsity Free - Start Building →](https://CodeVarsity.app/download)**
 
 *Your first game is 5 hours away. No laptop needed. Just your phone.*
 
 ---
 
-**Share your game:** Built your Tic-Tac-Toe game in CoderKit? Tag us [@coderkit](https://twitter.com/coderkit) with your screenshots!
+**Share your game:** Built your Tic-Tac-Toe game in CodeVarsity? Tag us [@CodeVarsity](https://twitter.com/CodeVarsity) with your screenshots!
 
 *Next week: Portfolio projects. How to build 5 games and get hired.*
+

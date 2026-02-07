@@ -1,4 +1,4 @@
-# Competitive Programming: From CoderKit to Codeforces Glory
+# Competitive Programming: From CodeVarsity to Codeforces Glory
 
 **Posted:** January 2026 | **Reading time:** 10 minutes
 
@@ -10,7 +10,7 @@ Google, Meta, Amazon all hire competitive programmers. Not because they love con
 - Code efficiency (Big O matters)
 - Debugging speed
 
-CoderKit makes competitive programming accessible. This is your guide.
+CodeVarsity makes competitive programming accessible. This is your guide.
 
 ---
 
@@ -71,7 +71,7 @@ Recruiters search leaderboards. You get contacted by companies you didn't apply 
 
 ### **Phase 1: Fundamentals (Weeks 1-4)**
 
-**Learn on CoderKit:**
+**Learn on CodeVarsity:**
 - Data structures (arrays, stacks, queues, trees)
 - Basic algorithms (sorting, searching)
 - Complexity analysis (Big O)
@@ -87,7 +87,7 @@ Recruiters search leaderboards. You get contacted by companies you didn't apply 
 
 ### **Phase 2: Intermediate Algorithms (Weeks 5-8)**
 
-**Learn on CoderKit:**
+**Learn on CodeVarsity:**
 - Two pointers technique
 - Binary search
 - Prefix sums
@@ -106,7 +106,7 @@ Recruiters search leaderboards. You get contacted by companies you didn't apply 
 
 ### **Phase 3: Advanced Algorithms (Weeks 9-12)**
 
-**Learn on CoderKit:**
+**Learn on CodeVarsity:**
 - Complex DP (harder variations)
 - Graph algorithms (DFS, BFS, shortest path)
 - Segment trees or Fenwick trees
@@ -132,21 +132,21 @@ Recruiters search leaderboards. You get contacted by companies you didn't apply 
 
 ---
 
-## How to Use CoderKit for Competitive Programming
+## How to Use CodeVarsity for Competitive Programming
 
 ### **Step 1: Master Data Structures**
 
-CoderKit's visualizers are PERFECT for this:
+CodeVarsity's visualizers are PERFECT for this:
 - Watch array operations (insertion, deletion)
 - See tree balancing in real-time
 - Understand graph traversal step-by-step
 - Visualize sorting algorithm efficiency
 
-**Action:** Complete "Data Structures" course on CoderKit before contests.
+**Action:** Complete "Data Structures" course on CodeVarsity before contests.
 
 ### **Step 2: Learn Problem Patterns**
 
-CoderKit's challenges are categorized by technique:
+CodeVarsity's challenges are categorized by technique:
 - "Two Pointer Problems" (20 problems)
 - "Binary Search" (15 problems)
 - "Dynamic Programming" (25 problems)
@@ -155,7 +155,7 @@ CoderKit's challenges are categorized by technique:
 
 ### **Step 3: Practice Under Pressure**
 
-CoderKit has **timed challenges**:
+CodeVarsity has **timed challenges**:
 - Easy: 5 minutes
 - Medium: 15 minutes
 - Hard: 30 minutes
@@ -166,11 +166,11 @@ This trains contest mindset.
 
 ### **Step 4: Graduate to Live Contests**
 
-Once comfortable with CoderKit:
+Once comfortable with CodeVarsity:
 1. Join Codeforces (free)
 2. Participate in div 2 contests (2 hours, 4-5 problems)
 3. Check your rating
-4. Return to CoderKit to learn what you missed
+4. Return to CodeVarsity to learn what you missed
 5. Repeat
 
 ---
@@ -269,10 +269,10 @@ Habit matters. Interviewers notice.
 | **C++** | Fastest, most common in contests | Harder syntax, debugging tough | Serious competitors |
 | **Python** | Easy, readable, fast to code | Slower execution (TLE risk) | Learning phase |
 | **Java** | Balanced, verbose but safe | Slower than C++ | Interview prep |
-| **JavaScript** | Can use on CoderKit! | Slower for heavy computation | Web background |
+| **JavaScript** | Can use on CodeVarsity! | Slower for heavy computation | Web background |
 
 **Recommendation:**
-- **Start:** Python on CoderKit (easiest)
+- **Start:** Python on CodeVarsity (easiest)
 - **Advance:** C++ on Codeforces (faster)
 - **Interviews:** Java (safe, clean)
 
@@ -282,9 +282,9 @@ Habit matters. Interviewers notice.
 
 **Priya's journey:**
 
-**Week 0:** Downloads CoderKit, thinks "I can't do this"
+**Week 0:** Downloads CodeVarsity, thinks "I can't do this"
 
-**Week 2:** Completes 30 CoderKit challenges, understands basics
+**Week 2:** Completes 30 CodeVarsity challenges, understands basics
 
 **Week 4:** Joins Codeforces, rating 600 (bottom tier)
 
@@ -297,7 +297,7 @@ Habit matters. Interviewers notice.
 - Interview technical skill already proven
 - Hired at $200K
 
-**Total investment:** 6 months, no bootcamp, no degree. Just CoderKit + Codeforces.
+**Total investment:** 6 months, no bootcamp, no degree. Just CodeVarsity + Codeforces.
 
 ---
 
@@ -339,7 +339,7 @@ Worth mastering.
 
 ## Tools to Master
 
-**On CoderKit:**
+**On CodeVarsity:**
 - Visualizers (understand algorithms)
 - Timed challenges (build speed)
 - Leaderboards (motivation)
@@ -360,7 +360,7 @@ Worth mastering.
 
 ## Timeline to Competitive Programmer
 
-- **Month 0-1:** Learn fundamentals on CoderKit (800 rating equivalent)
+- **Month 0-1:** Learn fundamentals on CodeVarsity (800 rating equivalent)
 - **Month 1-3:** Intermediate algorithms (1200 rating)
 - **Month 3-6:** Advanced topics, live contests (1600+ rating)
 - **Month 6+:** Mastery, job opportunities emerge
@@ -393,15 +393,15 @@ Companies that hire competitive programmers:
 - Look at Div 2 A problems (easiest)
 
 **Days 2-5:**
-- Complete CoderKit "Data Structures" course
-- Solve 20 easy CoderKit challenges
+- Complete CodeVarsity "Data Structures" course
+- Solve 20 easy CodeVarsity challenges
 
 **Days 6-7:**
 - Solve 3 Codeforces Div 2 A problems
 - Check your rating (probably 400-600)
 
 **Week 2 onwards:**
-- 30 min CoderKit + 30 min Codeforces daily
+- 30 min CodeVarsity + 30 min Codeforces daily
 - 1 virtual contest per week
 
 ---
@@ -410,7 +410,7 @@ Companies that hire competitive programmers:
 
 Track these:
 
-**CoderKit:**
+**CodeVarsity:**
 - Problems solved per week
 - Accuracy percentage
 - Speed improvement
@@ -459,15 +459,16 @@ It's about:
 
 **Ready to start your competitive programming journey?**
 
-→ Open CoderKit today
+→ Open CodeVarsity today
 → Complete data structures
 → Join Codeforces
 → Participate in your first contest
 
 In 6 months, recruiters will be contacting you.
 
-**[Start Competitive Programming on CoderKit →](https://coderkit.app/download)**
+**[Start Competitive Programming on CodeVarsity →](https://CodeVarsity.app/download)**
 
 ---
 
 *Next week: Building your first game. From zero to playable in one week.*
+

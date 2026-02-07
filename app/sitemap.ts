@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://coderkit.shivamappstudio.com';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -139,3 +139,5 @@ function getDocPages(): string[] {
 
   return pages;
 }
+
+

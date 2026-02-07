@@ -1,6 +1,6 @@
 # Firestore Purchase Schema for Web Purchases Integration
 
-This document describes the Firestore schema used by the CoderKit mobile app for storing purchases. **Web purchases must follow this exact schema** to ensure cross-platform sync.
+This document describes the Firestore schema used by the CodeVarsity mobile app for storing purchases. **Web purchases must follow this exact schema** to ensure cross-platform sync.
 
 ---
 
@@ -372,3 +372,4 @@ service cloud.firestore {
 ---
 
 *Last updated: 2026-01-11*
+

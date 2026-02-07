@@ -20,7 +20,7 @@
     ]
   },
   "apphosting": {
-    "backendId": "coderkit-web-backend",
+    "backendId": "CodeVarsity-web-backend",
     "rootDir": "/",
     "ignore": [
       "node_modules",
@@ -31,3 +31,4 @@
     ]
   }
 }
+

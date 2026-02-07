@@ -248,7 +248,7 @@ ML model trained on 1000+ open-source Python projects.
 | Desktop QWERTY | 15 min | Optimized for all inputs |
 | iPhone default keyboard | 1 hour | Terrible for code |
 | Android Gboard (swipe) | 45 min | Built for text, not code |
-| CoderKit custom keyboard | 25 min | Optimized for code syntax |
+| CodeVarsity custom keyboard | 25 min | Optimized for code syntax |
 
 **Our keyboard is 2–2.4× faster than standard mobile keyboards.**
 
@@ -299,7 +299,7 @@ We're just getting started.
 
 ## Try It Yourself
 
-Download CoderKit and experience the custom keyboard:
+Download CodeVarsity and experience the custom keyboard:
 
 1. Start typing a Python program
 2. Type `if` and watch the keyboard adapt
@@ -320,8 +320,9 @@ We chose to obsess over this interface. It's the difference between coding being
 
 **What's your biggest frustration with mobile keyboards?** Comment below. We're still iterating.
 
-**Ready to code with the right keyboard?** [Download CoderKit →](https://coderkit.app/download)
+**Ready to code with the right keyboard?** [Download CodeVarsity →](https://CodeVarsity.app/download)
 
 ---
 
 *Next week: Visualizers. How seeing algorithms execute step-by-step changes everything about learning.*
+

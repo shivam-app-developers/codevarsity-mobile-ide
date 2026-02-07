@@ -1,12 +1,12 @@
 # Learn Mode Guide: Master Interactive Learning
 
-Everything you need to know about CoderKit's powerful learning platform and how to maximize your learning.
+Everything you need to know about CodeVarsity's powerful learning platform and how to maximize your learning.
 
 ---
 
 ## 📚 What is Learn Mode?
 
-Learn Mode is **CoderKit's interactive learning platform** built on the **Rhombus Methodology**—a scientifically-proven 7-layer framework for taking you from zero knowledge to expert mastery.
+Learn Mode is **CodeVarsity's interactive learning platform** built on the **Rhombus Methodology**—a scientifically-proven 7-layer framework for taking you from zero knowledge to expert mastery.
 
 Unlike passive videos or reading, every concept teaches through:
 - **Clear explanations** (with visuals)
@@ -50,7 +50,7 @@ LESSON 1: Variables in Python
 
 ## 🔄 The Learning Flow (Rhombus Methodology)
 
-CoderKit uses a **7-layer learning system** that spirals from overview → mastery → application:
+CodeVarsity uses a **7-layer learning system** that spirals from overview → mastery → application:
 
 ```
          Layer 1: Big Picture
@@ -126,7 +126,7 @@ Some text is **interactive**:
 
 ## 🎨 Interactive Visualizers
 
-The **secret sauce** of CoderKit learning. Instead of imagining how things work, you **see them animated**.
+The **secret sauce** of CodeVarsity learning. Instead of imagining how things work, you **see them animated**.
 
 ### Types of Visualizers
 
@@ -257,7 +257,7 @@ STEP 3: Narrow search space
 1. **Challenge displayed** - "Write a function that doubles a number"
 2. **Ghost code shown** - Semi-transparent hint code appears
 3. **You type alongside hint** - Match the pattern yourself
-4. **Validation checks** - CoderKit verifies your solution
+4. **Validation checks** - CodeVarsity verifies your solution
 5. **Next challenge** - Move to next when complete
 
 ### Example Guided Practice
@@ -560,4 +560,5 @@ Earn badges for:
 - 👥 Want community? Connect on Discord
 
 **Remember:** Learning to code is a marathon, not a sprint. Consistency beats intensity. Code a little every day! 💪
+
 

@@ -46,7 +46,7 @@ function AuthContent() {
                         <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white font-bold text-lg">
                             &lt;/&gt;
                         </div>
-                        <span className="font-bold text-2xl text-gray-900">CoderKit</span>
+                        <span className="font-bold text-2xl text-gray-900">CodeVarsity</span>
                     </Link>
                 </div>
 
@@ -104,3 +104,4 @@ export default function AuthPage() {
         </Suspense>
     );
 }
+

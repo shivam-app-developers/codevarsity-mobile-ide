@@ -1,14 +1,14 @@
-# What is CoderKit? Product Overview
+# What is CodeVarsity? Product Overview
 
-## Introducing CoderKit: Mobile IDE Meets Interactive Learning
+## Introducing CodeVarsity: Mobile IDE Meets Interactive Learning
 
-CoderKit is a **professional code editor and interactive learning platform** built entirely for mobile devices. Write real code, learn new languages, and build projects—all from your phone or tablet, offline.
+CodeVarsity is a **professional code editor and interactive learning platform** built entirely for mobile devices. Write real code, learn new languages, and build projects—all from your phone or tablet, offline.
 
 ### The Vision
 
 **"The world's best developer tools should be accessible to everyone, everywhere."**
 
-Whether you're on a bus, at a coffee shop, or lounging at home, CoderKit gives you the complete developer experience—editor, compiler, visualizers, and interactive courses—right in your pocket.
+Whether you're on a bus, at a coffee shop, or lounging at home, CodeVarsity gives you the complete developer experience—editor, compiler, visualizers, and interactive courses—right in your pocket.
 
 ---
 
@@ -16,7 +16,7 @@ Whether you're on a bus, at a coffee shop, or lounging at home, CoderKit gives y
 
 ### 1. **IDE Mode: Your Mobile Code Editor**
 
-CoderKit is a **fully-featured code editor** for 15+ languages:
+CodeVarsity is a **fully-featured code editor** for 15+ languages:
 - Write Python, Java, JavaScript, C/C++, Go, and more
 - Syntax highlighting, auto-formatting, error detection
 - Custom keyboard optimized for touch-based coding
@@ -27,7 +27,7 @@ CoderKit is a **fully-featured code editor** for 15+ languages:
 
 ### 2. **Learn Mode: Interactive Courses**
 
-CoderKit is also an **interactive learning platform** with:
+CodeVarsity is also an **interactive learning platform** with:
 - Structured courses for Python, Java, Web, and more
 - 20+ animated visualizers (see algorithms, data structures, memory in action)
 - Guided practice with "ghost code" hints
@@ -38,7 +38,7 @@ CoderKit is also an **interactive learning platform** with:
 
 ### 3. **Desktop Sync: VS Code Extension**
 
-CoderKit syncs with a **VS Code extension** (CoderKit):
+CodeVarsity syncs with a **VS Code extension** (CodeVarsity):
 - Same courses on desktop and mobile
 - Progress syncs across devices
 - Start on phone, continue on computer
@@ -46,7 +46,7 @@ CoderKit syncs with a **VS Code extension** (CoderKit):
 
 ---
 
-## 💡 Why CoderKit?
+## 💡 Why CodeVarsity?
 
 ### Problem We Solve
 
@@ -59,7 +59,7 @@ CoderKit syncs with a **VS Code extension** (CoderKit):
 | **YouTube Videos** | Free content | Passive, hard to practice |
 | **Textbooks** | Structured | No interactivity, static |
 
-**CoderKit Fills the Gap:**
+**CodeVarsity Fills the Gap:**
 - ✅ Full IDE + learning, offline
 - ✅ Hands-on, interactive (not passive)
 - ✅ Fits in your pocket
@@ -87,7 +87,7 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 
 ---
 
-## 🎓 Who Uses CoderKit?
+## 🎓 Who Uses CodeVarsity?
 
 ### 1. **Students Learning to Code**
 - Free/affordable courses
@@ -111,7 +111,7 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 - Visualizers for algorithm understanding
 - Offline practice (no internet at competitions)
 
-**Example:** High school student ranks top 100 nationally using CoderKit to practice algorithms.
+**Example:** High school student ranks top 100 nationally using CodeVarsity to practice algorithms.
 
 ### 4. **Educators & Trainers**
 - Bulk licensing for classrooms
@@ -119,7 +119,7 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 - Unified curriculum (mobile + desktop)
 - Proven pedagogy (Rhombus Methodology)
 
-**Example:** CS teacher uses CoderKit in classroom, sees 40% improvement in student retention vs. traditional teaching.
+**Example:** CS teacher uses CodeVarsity in classroom, sees 40% improvement in student retention vs. traditional teaching.
 
 ### 5. **Professionals Upskilling**
 - Learn new languages without expensive bootcamps
@@ -218,7 +218,7 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 
 ## 🏆 What Makes Us Different
 
-| Aspect | CoderKit | Competitors |
+| Aspect | CodeVarsity | Competitors |
 |--------|---------|-------------|
 | **Offline** | ✅ Full offline IDE + courses | ❌ Mostly online |
 | **Mobile-native** | ✅ Optimized for touch | ❌ Web/desktop ports |
@@ -229,7 +229,7 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 
 ---
 
-## 🎁 CoderKit for Different Audiences
+## 🎁 CodeVarsity for Different Audiences
 
 ### For Students
 - Learn programming fundamentals
@@ -271,13 +271,14 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 
 ## 🔗 Where to Learn More
 
-- **Website:** [coderkit.app](https://coderkit.app)
+- **Website:** [CodeVarsity.app](https://CodeVarsity.app)
 - **Download:** [Google Play Store](https://play.google.com/store/apps/details?id=com.codelab)
 - **Discord:** [discord.gg/codelab](https://discord.gg/codelab)
-- **Twitter:** [@CoderKitApp](https://twitter.com/CoderKitApp)
-- **Blog:** [blog.coderkit.app](https://blog.coderkit.app)
+- **Twitter:** [@CodeVarsityApp](https://twitter.com/CodeVarsityApp)
+- **Blog:** [blog.CodeVarsity.app](https://blog.CodeVarsity.app)
 
 ---
 
-**Join thousands of learners already coding on CoderKit. Download today—it's free to try!** 🚀
+**Join thousands of learners already coding on CodeVarsity. Download today—it's free to try!** 🚀
+
 

@@ -14,16 +14,16 @@ CTA Button: "Start Coding Free"
 ### Option 2 (Problem-Solution)
 **"Learn to Code Without a $1000 Laptop"**
 
-Subheading: "Millions can't afford bootcamps or expensive computers. CoderKit brings professional coding education to your pocket. Master real languages. Build real projects. Get real jobs."
+Subheading: "Millions can't afford bootcamps or expensive computers. CodeVarsity brings professional coding education to your pocket. Master real languages. Build real projects. Get real jobs."
 
-CTA Button: "Download CoderKit Free"
+CTA Button: "Download CodeVarsity Free"
 
 ---
 
 ### Option 3 (Outcome-Focused)
 **"From Zero to Employed: Code to Your Next Job"**
 
-Subheading: "30 minutes a day. 4 weeks to your first game. 3 months to job-ready. CoderKit: the fastest path from curious to hired."
+Subheading: "30 minutes a day. 4 weeks to your first game. 3 months to job-ready. CodeVarsity: the fastest path from curious to hired."
 
 CTA Button: "Begin Your Journey"
 
@@ -34,7 +34,7 @@ CTA Button: "Begin Your Journey"
 1. "Over 500K students learning. 15+ languages. 100% offline-capable. $1.99/month."
 2. "Free to download. Free to start. Premium features optional. Your pace. Your schedule."
 3. "Used by students, teachers, and career-changers in 120 countries."
-4. "From rural India to Silicon Valley. CoderKit makes programming accessible everywhere."
+4. "From rural India to Silicon Valley. CodeVarsity makes programming accessible everywhere."
 
 ---
 
@@ -64,7 +64,7 @@ CTA Button: "Begin Your Journey"
 ## Hero Video Suggestion
 
 30-second video showing:
-- 0-5s: Student opening CoderKit
+- 0-5s: Student opening CodeVarsity
 - 5-15s: Building a game (mouse-over code → see game update)
 - 15-25s: Leaderboard, celebrating win
 - 25-30s: "Join 500K+ students. Code starts now."
@@ -77,7 +77,7 @@ Keep upbeat music, fast cuts, show diversity.
 
 **Testimonials:**
 
-1. "I thought I couldn't code. CoderKit proved me wrong. Got hired 6 months later." — Priya, 17
+1. "I thought I couldn't code. CodeVarsity proved me wrong. Got hired 6 months later." — Priya, 17
 2. "My AP pass rate went from 40% to 80%. Game-changer." — Mr. Rodriguez, Teacher
 3. "Best $60 I spent. Learned 3 languages while traveling." — Sam, Career Changer
 
@@ -107,7 +107,7 @@ CTA: "Build Free"
 
 ### For Parents
 **"Your Child's Future is in Tech"**
-"Don't let expensive bootcamps be the only option. CoderKit makes quality coding education affordable and accessible."
+"Don't let expensive bootcamps be the only option. CodeVarsity makes quality coding education affordable and accessible."
 CTA: "Let's Get Started"
 
 ### For Teachers
@@ -196,3 +196,4 @@ Run each for 2 weeks, measure: CTR, signup rate, quality of signups.
 **Note:** Choose ONE hero headline. Test it. Refine based on data.
 
 Pick the one that resonates with your primary audience first.
+

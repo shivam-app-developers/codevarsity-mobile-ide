@@ -35,11 +35,11 @@ export default function PricingPage() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "CoderKit Premium Subscription",
+    "name": "CodeVarsity Premium Subscription",
     "description": "Access to all interactive coding courses, visualizers, and offline runtimes.",
     "brand": {
       "@type": "Brand",
-      "name": "CoderKit"
+      "name": "CodeVarsity"
     },
     "offers": {
       "@type": "Offer",
@@ -138,3 +138,4 @@ export default function PricingPage() {
     </div>
   );
 }
+

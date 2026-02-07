@@ -2,9 +2,9 @@
 
 **Posted:** January 2026 | **Reading time:** 8 minutes
 
-You learn on your phone with CoderKit. But eventually, you need to write *real* code on a desktop.
+You learn on your phone with CodeVarsity. But eventually, you need to write *real* code on a desktop.
 
-Enter the CoderKit VS Code extension—the bridge between your phone and professional development environment.
+Enter the CodeVarsity VS Code extension—the bridge between your phone and professional development environment.
 
 ---
 
@@ -20,7 +20,7 @@ But your phone can't handle large projects. You need a laptop.
 
 **The friction point:** Switching platforms. Your code is on your phone. Your laptop is blank.
 
-**The CoderKit extension solves this:** Your progress syncs. Your code ports. Your learning path continues.
+**The CodeVarsity extension solves this:** Your progress syncs. Your code ports. Your learning path continues.
 
 ### **Developers Need Multiple Environments**
 
@@ -30,7 +30,7 @@ But your phone can't handle large projects. You need a laptop.
 
 Most tools work in *one* environment. You're stuck.
 
-CoderKit works in *all three*. And they sync automatically.
+CodeVarsity works in *all three*. And they sync automatically.
 
 ---
 
@@ -55,14 +55,14 @@ Your statistics, completion certificates, learning path—all there.
 Code written on phone. Now you're on a laptop.
 
 In VS Code:
-- Open command palette: `CoderKit: Import Mobile Code`
+- Open command palette: `CodeVarsity: Import Mobile Code`
 - Select which project to import
 - Code appears in editor
 - Ready to extend and refactor
 
 ### **3. Full IDE Experience**
 
-VS Code is the world's most popular code editor. Now it includes CoderKit:
+VS Code is the world's most popular code editor. Now it includes CodeVarsity:
 
 - **Integrated tutorials** (learn without switching apps)
 - **Interactive challenges** (solve right in VS Code)
@@ -98,7 +98,7 @@ Seamless switching between devices.
 
 ### **Behind the Scenes**
 
-1. **Authentication:** Sign in with CoderKit account (same one as phone)
+1. **Authentication:** Sign in with CodeVarsity account (same one as phone)
 2. **Sync:** Connect to cloud (Firestore database)
 3. **Code Transfer:** Pull code from cloud to local
 4. **IDE Integration:** Full VS Code features available
@@ -127,18 +127,18 @@ Seamless switching between devices.
 
 ### **Step 1: Install Extension**
 
-VS Code marketplace: Search "CoderKit"
-Or: `ext install coderkit-official`
+VS Code marketplace: Search "CodeVarsity"
+Or: `ext install CodeVarsity-official`
 
 ### **Step 2: Sign In**
 
-Click CoderKit icon (left sidebar)
+Click CodeVarsity icon (left sidebar)
 → Sign in with phone account
 → Authorize sync
 
 ### **Step 3: Import Code**
 
-`CoderKit: Import Mobile Projects`
+`CodeVarsity: Import Mobile Projects`
 → Select which code to import
 → Done. Start coding.
 
@@ -212,7 +212,7 @@ def two_sum(nums, target):
     # Your code here
     pass
 
-# Run: CoderKit: Check Solution
+# Run: CodeVarsity: Check Solution
 ```
 
 Instant feedback. Test with visualizer. Compare with optimal solution.
@@ -243,11 +243,11 @@ Classmates can:
 
 ### **6. Git Integration**
 
-CoderKit auto-generates:
+CodeVarsity auto-generates:
 ```bash
 git init
 git add .
-git commit -m "CoderKit: Python 101 Lesson 5"
+git commit -m "CodeVarsity: Python 101 Lesson 5"
 git push origin main
 ```
 
@@ -345,7 +345,7 @@ Like Google Docs for code
 
 ### **2. Code Snapshots**
 
-VS Code command: `CoderKit: Create Snapshot`
+VS Code command: `CodeVarsity: Create Snapshot`
 - Captures state at moment
 - Compare with previous versions
 - See growth over time
@@ -391,7 +391,7 @@ A: Extension is free. Same subscription as phone app.
 
 ## Getting Started
 
-1. **Download CoderKit app** (phone)
+1. **Download CodeVarsity app** (phone)
 2. **Complete Python 101** on phone
 3. **Install VS Code extension**
 4. **Import code to desktop**
@@ -414,16 +414,17 @@ The VS Code extension is the bridge. And it changes everything.
 
 **Ready to bring your phone learning to desktop?**
 
-→ Install CoderKit VS Code extension now
+→ Install CodeVarsity VS Code extension now
 → Import your first project today
 → Start building professional projects
 
-The world's best developers started somewhere. Many will start on CoderKit.
+The world's best developers started somewhere. Many will start on CodeVarsity.
 
 ---
 
-**[Install CoderKit VS Code Extension →](https://marketplace.visualstudio.com/items?itemName=coderkit-official.coderkit)**
+**[Install CodeVarsity VS Code Extension →](https://marketplace.visualstudio.com/items?itemName=CodeVarsity-official.CodeVarsity)**
 
 ---
 
 *Next week: Building portfolio projects. From beginner exercises to hire-worthy code.*
+

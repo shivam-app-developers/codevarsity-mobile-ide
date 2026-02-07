@@ -308,17 +308,17 @@ Combine coding + design. Make things beautiful while making them work.
 ### **Challenge 1: Screen Size**
 HTML/CSS is responsive by nature. But typing in small space is hard.
 
-**Solution:** CoderKit's custom keyboard + landscape mode = comfortable editing.
+**Solution:** CodeVarsity's custom keyboard + landscape mode = comfortable editing.
 
 ### **Challenge 2: Testing**
 Hard to test on phone screen vs. monitor.
 
-**Solution:** Mirror to laptop (debugging) while coding on mobile. CoderKit supports this.
+**Solution:** Mirror to laptop (debugging) while coding on mobile. CodeVarsity supports this.
 
 ### **Challenge 3: APIs**
 Many web projects fetch from APIs (weather, news, etc.)
 
-**Solution:** CoderKit includes guide on using free APIs. Easy integration.
+**Solution:** CodeVarsity includes guide on using free APIs. Easy integration.
 
 ---
 
@@ -365,13 +365,13 @@ Then you can:
 
 ## Tools You'll Use on Mobile
 
-### **In CoderKit:**
+### **In CodeVarsity:**
 - HTML editor with syntax highlighting
 - CSS preview (see changes live)
 - JavaScript console (debug)
 - Browser preview (full site view)
 
-### **Outside CoderKit:**
+### **Outside CodeVarsity:**
 - Chrome DevTools (inspect elements)
 - GitHub (version control)
 - Figma (design mockups, view on mobile)
@@ -399,7 +399,7 @@ Then you can:
 
 ## Try It Now
 
-1. Download CoderKit
+1. Download CodeVarsity
 2. Start HTML + CSS + JavaScript course
 3. Week 1: Build portfolio
 4. Week 2-4: Expand with more pages
@@ -426,8 +426,9 @@ It's one of the most practical programming skills to learn.
 
 **What website would you build first?** A portfolio? A game? A tool? Comment below.
 
-**[Start web development on CoderKit →](https://coderkit.app/download)**
+**[Start web development on CodeVarsity →](https://CodeVarsity.app/download)**
 
 ---
 
-*Next week: Coding interviews. How CoderKit prepares you for FAANG interviews with algorithms, data structures, and time management.*
+*Next week: Coding interviews. How CodeVarsity prepares you for FAANG interviews with algorithms, data structures, and time management.*
+

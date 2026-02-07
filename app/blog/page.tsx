@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
       <main className="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-black text-gray-900 mb-4">CoderKit Blog</h1>
+          <h1 className="text-4xl font-black text-gray-900 mb-4">CodeVarsity Blog</h1>
           <p className="text-xl text-gray-600">Insights on coding, education, and mobile development.</p>
         </div>
 
@@ -56,3 +56,4 @@ export default function BlogIndexPage() {
     </div>
   );
 }
+

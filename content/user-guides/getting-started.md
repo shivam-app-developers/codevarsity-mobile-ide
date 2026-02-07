@@ -1,6 +1,6 @@
-# Getting Started with CoderKit
+# Getting Started with CodeVarsity
 
-Welcome to CoderKit! This guide will help you download, install, and launch your first coding project on your mobile device.
+Welcome to CodeVarsity! This guide will help you download, install, and launch your first coding project on your mobile device.
 
 ---
 
@@ -12,16 +12,16 @@ Welcome to CoderKit! This guide will help you download, install, and launch your
 - **Storage:** ~200MB free space (for core app + one language runtime)
 - **RAM:** 4GB minimum (works best with 6GB+)
 
-### Download CoderKit
+### Download CodeVarsity
 
 **Option 1: Google Play Store** (Recommended)
 1. Open Google Play Store on your Android device
-2. Search for **"CoderKit"** or **"CoderKit"**
+2. Search for **"CodeVarsity"** or **"CodeVarsity"**
 3. Tap **Install**
 4. Wait for download (~50MB base app)
 
 **Option 2: Direct APK**
-1. Visit [coderkit.app/download](https://coderkit.app)
+1. Visit [CodeVarsity.app/download](https://CodeVarsity.app)
 2. Tap **Download APK**
 3. Open the downloaded file and tap **Install**
 
@@ -30,14 +30,14 @@ Welcome to CoderKit! This guide will help you download, install, and launch your
 ## 🚀 First Launch
 
 ### Step 1: Create Your Account
-1. Open CoderKit
+1. Open CodeVarsity
 2. Tap **Sign Up** or **Sign In with Google**
 3. Complete profile (name, email, avatar optional)
 4. You're in!
 
 ### Step 2: Choose Your First Language
 
-When you first launch, CoderKit shows a **language selector**:
+When you first launch, CodeVarsity shows a **language selector**:
 
 - 🐍 **Python** - Best for: Data science, scripting, learning
 - ☕ **Java** - Best for: Object-oriented programming, Android
@@ -49,7 +49,7 @@ When you first launch, CoderKit shows a **language selector**:
 
 ### Step 3: Download Your First Language Runtime
 
-After selecting, CoderKit will ask to download the language runtime:
+After selecting, CodeVarsity will ask to download the language runtime:
 - **Size:** 150-300MB (depends on language)
 - **Time:** 2-5 minutes (WiFi recommended)
 - **What it does:** Installs the compiler/interpreter so you can run code offline
@@ -94,7 +94,7 @@ After selecting, CoderKit will ask to download the language runtime:
 
 ## ⌨️ The Custom Keyboard
 
-CoderKit's keyboard is **designed for coders**, not texting:
+CodeVarsity's keyboard is **designed for coders**, not texting:
 
 ### Keyboard Rows (Top to Bottom)
 
@@ -154,7 +154,7 @@ If your code calls `input()`, the terminal shows a **text field**:
 
 ## 📚 Explore Learn Mode
 
-CoderKit isn't just an IDE—it's also a **learning platform**:
+CodeVarsity isn't just an IDE—it's also a **learning platform**:
 
 ### Access Learn Mode
 1. Tap the **📚 Learn** tab (bottom nav or sidebar)
@@ -215,7 +215,7 @@ CoderKit isn't just an IDE—it's also a **learning platform**:
 4. Restart the app (close completely, reopen)
 
 ### "Keyboard is too small"
-- **iPad users:** CoderKit is touch-optimized; keyboard will be larger on bigger screens
+- **iPad users:** CodeVarsity is touch-optimized; keyboard will be larger on bigger screens
 - **Phone users:** Landscape mode gives more keyboard space
 
 ### "App is slow/crashing"
@@ -237,9 +237,10 @@ CoderKit isn't just an IDE—it's also a **learning platform**:
 ## 📞 Need Help?
 
 - **FAQ** - See [faq.md](./faq.md) for common questions
-- **Email** - [support@coderkit.app](mailto:support@coderkit.app)
+- **Email** - [support@CodeVarsity.app](mailto:support@CodeVarsity.app)
 - **Discord** - Join our community: [discord.gg/codelab](https://discord.gg/codelab)
-- **Twitter** - [@CoderKitApp](https://twitter.com/CodelabApp)
+- **Twitter** - [@CodeVarsityApp](https://twitter.com/CodelabApp)
 
 **Happy coding!** 🚀
+
 

@@ -43,7 +43,7 @@ So what's next? What should you learn this year to stay ahead?
 **2026:** Desktop "native" apps are outdated. Mobile = primary.
 
 **What this means:**
-- Learn on mobile early (CoderKit!)
+- Learn on mobile early (CodeVarsity!)
 - Design for small screens first
 - Offline-first architecture standard
 - Touch interactions optimized
@@ -248,7 +248,7 @@ So what's next? What should you learn this year to stay ahead?
 - Running models locally (Ollama, LLaMA.cpp)
 - Fine-tuning for specific tasks
 
-**Impact:** Mobile models (like CoderKit's! 👀) become viable for real work.
+**Impact:** Mobile models (like CodeVarsity's! 👀) become viable for real work.
 
 ---
 
@@ -297,7 +297,7 @@ So what's next? What should you learn this year to stay ahead?
 ## What Should You Learn in 2026?
 
 ### **High Priority:**
-1. **Mobile development** (CoderKit is perfect for this!)
+1. **Mobile development** (CodeVarsity is perfect for this!)
 2. **AI integration** (prompting, using APIs)
 3. **Full-stack** (frontend + backend)
 4. **Testing** (automated testing critical)
@@ -338,7 +338,7 @@ So what's next? What should you learn this year to stay ahead?
 
 ### **Q1 (Jan-Mar):**
 - Deepen current language (Python, JavaScript, Java)
-- Start mobile development (CoderKit)
+- Start mobile development (CodeVarsity)
 - Begin open source contribution
 
 ### **Q2 (Apr-Jun):**
@@ -391,8 +391,9 @@ Plan your 2026 learning around these trends. You'll be ahead of 90% of developer
 
 **What trend excites you most?** Comment below.
 
-**[Start learning for 2026 →](https://coderkit.app/download)**
+**[Start learning for 2026 →](https://CodeVarsity.app/download)**
 
 ---
 
 *That's all for our blog series! Next: Landing page content to convert visitors.*
+

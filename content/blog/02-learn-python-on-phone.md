@@ -86,7 +86,7 @@ while running:
     clock.tick(60)
 ```
 
-Thousands of CoderKit users have built games that actually work, with graphics, collision detection, scoring.
+Thousands of CodeVarsity users have built games that actually work, with graphics, collision detection, scoring.
 
 ### **Data Analysis**
 ```python
@@ -150,7 +150,7 @@ Let me be honest. Mobile Python has real constraints:
 - Autocomplete becomes essential
 - Split-screen editing helps
 
-**Solution:** CoderKit's custom keyboard + autocomplete + line scrolling handles this well.
+**Solution:** CodeVarsity's custom keyboard + autocomplete + line scrolling handles this well.
 
 ### **2. File System**
 - Can't organize into 50 nested folders
@@ -318,7 +318,7 @@ print(f"y after multiplication: {y}")
 Simple but powerful. Phones don't have debuggers yet, so `print()` is your friend.
 
 ### **6. Join Communities**
-- Discord servers for CoderKit users
+- Discord servers for CodeVarsity users
 - r/learnprogramming on Reddit
 - Python communities online
 - Ask questions. Learn from answers.
@@ -399,7 +399,7 @@ A: Basic ML is possible. Advanced deep learning would require a laptop. But you 
 
 **Ready to learn Python on your phone?**
 
-1. Download CoderKit (free)
+1. Download CodeVarsity (free)
 2. Start Python 101 course
 3. Build your first game in week 1
 4. Share it with friends
@@ -410,8 +410,9 @@ Python on mobile isn't a toy. It's the fastest way to learn real programming, fr
 
 **What's your Python goal?** Game developer? Data analyst? Web developer? Comment below—I'll point you to the right learning path.
 
-**[Download CoderKit and start Python today →](https://coderkit.app/download)**
+**[Download CodeVarsity and start Python today →](https://CodeVarsity.app/download)**
 
 ---
 
 *Next week: Why offline coding is a superpower, and how it changes everything about accessibility.*
+

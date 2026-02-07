@@ -19,7 +19,7 @@ const docSections = [
     title: "Product",
     items: [
       { title: "Product Overview", href: "/docs/product/product-overview" },
-      { title: "Why CoderKit", href: "/docs/product/why-codelab" },
+      { title: "Why CodeVarsity", href: "/docs/product/why-codelab" },
       { title: "Education Guide", href: "/docs/product/education-guide" },
       { title: "Success Stories", href: "/docs/product/success-stories" },
     ]
@@ -65,3 +65,4 @@ export default function DocsSidebar() {
     </nav>
   );
 }
+

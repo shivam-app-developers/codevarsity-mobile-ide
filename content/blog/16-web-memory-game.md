@@ -1,12 +1,12 @@
 # Build a Web Game on Your Phone: Memory Card Game
 
-**Posted:** January 2026 | **Reading time:** 14 minutes | **Platform:** CoderKit Mobile IDE
+**Posted:** January 2026 | **Reading time:** 14 minutes | **Platform:** CodeVarsity Mobile IDE
 
 You want to build games, but you want to see them **right on your phone screen**.
 
-This tutorial teaches you **web-based game development** using HTML, CSS, and JavaScript—all running live in **CoderKit's integrated web server**.
+This tutorial teaches you **web-based game development** using HTML, CSS, and JavaScript—all running live in **CodeVarsity's integrated web server**.
 
-> **CoderKit Superpower:** Run a full Flask web server on your phone. Build, test, and deploy web games without a computer.
+> **CodeVarsity Superpower:** Run a full Flask web server on your phone. Build, test, and deploy web games without a computer.
 
 By Friday, you'll have a playable **Memory Card Game** that runs in your phone's browser. You'll understand:
 - DOM manipulation (HTML from JavaScript)
@@ -21,7 +21,7 @@ By Friday, you'll have a playable **Memory Card Game** that runs in your phone's
 
 **Prerequisites:** Basic HTML, CSS, JavaScript (or willingness to learn alongside)
 
-**[Download CoderKit Free →](https://coderkit.app/download)** Everything you need is built-in.
+**[Download CodeVarsity Free →](https://CodeVarsity.app/download)** Everything you need is built-in.
 
 ---
 
@@ -56,21 +56,21 @@ Flip a card → See emoji → Flip another → Match or no match
 
 ---
 
-## Why Web Games on Your Phone? (Only on CoderKit)
+## Why Web Games on Your Phone? (Only on CodeVarsity)
 
 **Problem:** Building games requires a laptop + complex development tools + struggle with setup.
 
-**CoderKit Solution:** Run a **complete web development environment on your phone**.
+**CodeVarsity Solution:** Run a **complete web development environment on your phone**.
 
 **What makes this possible:**
-- ✅ Full Python + Flask support in CoderKit
+- ✅ Full Python + Flask support in CodeVarsity
 - ✅ Integrated web server (no localhost config needed)
 - ✅ Live browser preview on same device
 - ✅ File management built-in
 - ✅ One-click execution
 
 You can:
-- Code HTML/CSS/JavaScript in CoderKit
+- Code HTML/CSS/JavaScript in CodeVarsity
 - Serve it with Flask running on your phone
 - View in browser (same phone, real-time!)
 - Deploy to web instantly
@@ -81,7 +81,7 @@ You can:
 
 ## File Structure
 
-In CoderKit, create three files:
+In CodeVarsity, create three files:
 
 ```
 memory_game/
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
 **To run:**
 - Create `app.py`
-- Run it in CoderKit
+- Run it in CodeVarsity
 - Open `http://localhost:5000` in browser
 
 ---
@@ -569,7 +569,7 @@ window.onload = initGame;
 
 ---
 
-## File Structure in CoderKit
+## File Structure in CodeVarsity
 
 ```
 project/
@@ -580,7 +580,7 @@ project/
     └── game.js
 ```
 
-**In CoderKit (this is how simple it is):**
+**In CodeVarsity (this is how simple it is):**
 1. Create `app.py` with Flask code
 2. Create `templates` folder, add `index.html`
 3. Create `static` folder, add `game.js`
@@ -606,7 +606,7 @@ if __name__ == '__main__':
 
 ---
 
-## Step-by-Step Implementation (CoderKit Mobile)
+## Step-by-Step Implementation (CodeVarsity Mobile)
 
 ### **Monday (1.5 hours)**
 - Create `app.py` with Flask
@@ -637,7 +637,7 @@ if __name__ == '__main__':
 
 ---
 
-**Next: Test your game in CoderKit's browser.**
+**Next: Test your game in CodeVarsity's browser.**
 
 ## Testing Checklist
 
@@ -726,9 +726,9 @@ const themes = {
 
 ## Deploy to Web (Optional Friday Bonus)
 
-**This is the power of CoderKit:** You built a web game on your phone. Now deploy it to the world.
+**This is the power of CodeVarsity:** You built a web game on your phone. Now deploy it to the world.
 
-Once you build it in CoderKit, you can deploy it free:
+Once you build it in CodeVarsity, you can deploy it free:
 
 1. **Option 1: Vercel** (HTML/CSS/JS only)
    - Push to GitHub
@@ -744,7 +744,7 @@ Once you build it in CoderKit, you can deploy it free:
    - Same process
    - Free tier available
 
-Your CoderKit project becomes a **live web game** 🌐
+Your CodeVarsity project becomes a **live web game** 🌐
 
 ---
 
@@ -755,7 +755,7 @@ You're not just "learning to code."
 You're building **production web applications** on your phone.
 
 The same HTML/CSS/JavaScript works:
-- In CoderKit on your phone
+- In CodeVarsity on your phone
 - On your desktop browser
 - On a live website
 - On tablets and laptops
@@ -766,7 +766,7 @@ The same HTML/CSS/JavaScript works:
 
 ## Your Achievement
 
-You just built—**on your phone with CoderKit:**
+You just built—**on your phone with CodeVarsity:**
 - ✅ A web server (Flask)
 - ✅ A responsive frontend (HTML/CSS)
 - ✅ Complex game logic (JavaScript)
@@ -797,7 +797,7 @@ You have the skills. Pick what excites you.
 
 You have everything you need.
 
-- Download CoderKit
+- Download CodeVarsity
 - Create these files
 - Build the game
 - **Ship it.**
@@ -808,12 +808,13 @@ This game will teach you more than 100 hours of tutorials.
 
 ---
 
-**[Download CoderKit Free - Start Building →](https://coderkit.app/download)**
+**[Download CodeVarsity Free - Start Building →](https://CodeVarsity.app/download)**
 
 *Your web game is waiting. Build it this week—without a laptop.*
 
 ---
 
-**Share your game:** Built your Memory Game in CoderKit? Tag us [@coderkit](https://twitter.com/coderkit) with your screenshots!
+**Share your game:** Built your Memory Game in CodeVarsity? Tag us [@CodeVarsity](https://twitter.com/CodeVarsity) with your screenshots!
 
 *Next week: Deploy your projects. From phone to the world in minutes.*
+

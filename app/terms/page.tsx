@@ -6,7 +6,7 @@ import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
   title: 'Terms of Service',
-  description: 'CoderKit Terms of Service. Read our terms for using the platform, purchases, intellectual property, and user responsibilities.',
+  description: 'CodeVarsity Terms of Service. Read our terms for using the platform, purchases, intellectual property, and user responsibilities.',
   path: '/terms',
   type: 'website',
 });
@@ -24,7 +24,7 @@ export default function TermsPage() {
                     <section className="mb-8">
                         <h2 className="text-xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                         <p className="text-gray-600 mb-4">
-                            By accessing or using CoderKit (&quot;the Service&quot;), provided by Shivam App Studio (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
+                            By accessing or using CodeVarsity (&quot;the Service&quot;), provided by Shivam App Studio (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
                             you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.
                         </p>
                     </section>
@@ -32,7 +32,7 @@ export default function TermsPage() {
                     <section className="mb-8">
                         <h2 className="text-xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
                         <p className="text-gray-600 mb-4">
-                            CoderKit is a mobile coding IDE and learning platform that provides:
+                            CodeVarsity is a mobile coding IDE and learning platform that provides:
                         </p>
                         <ul className="list-disc pl-6 text-gray-600 space-y-2">
                             <li>Offline code editors for Python, Java, Go, C, and web technologies</li>
@@ -119,3 +119,4 @@ export default function TermsPage() {
         </div>
     );
 }
+

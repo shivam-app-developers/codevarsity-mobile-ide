@@ -1,7 +1,7 @@
 # Cashfree Payment Integration Guide
 
 ## Overview
-CoderKit now supports real payment processing via **Cashfree Payments** in sandbox mode (testing environment).
+CodeVarsity now supports real payment processing via **Cashfree Payments** in sandbox mode (testing environment).
 
 ## Setup Instructions
 
@@ -25,7 +25,7 @@ To get real webhook secret:
 2. Go to **Settings → Webhooks**
 3. Click **Add Webhook**
 4. **Webhook URL**: `{NEXT_PUBLIC_SITE_URL}/api/webhooks/cashfree`
-   - Example: `https://coderkit.vercel.app/api/webhooks/cashfree`
+   - Example: `https://CodeVarsity.vercel.app/api/webhooks/cashfree`
 5. **Events**: Select
    - `order.paid` - Payment successful
    - `order.failed` - Payment failed
@@ -150,8 +150,8 @@ Also check `users/{userId}` document:
     "customer_phone": "9999999999"
   },
   "order_meta": {
-    "return_url": "https://coderkit.vercel.app/order/success?orderId=...",
-    "notify_url": "https://coderkit.vercel.app/api/webhooks/cashfree"
+    "return_url": "https://CodeVarsity.vercel.app/order/success?orderId=...",
+    "notify_url": "https://CodeVarsity.vercel.app/api/webhooks/cashfree"
   },
   "course_id": "python_101"
 }
@@ -271,3 +271,4 @@ When deploying to production:
 4. ⏳ Verify webhook delivery
 5. ⏳ Add purchase history to account page
 6. ⏳ Setup production credentials for deployment
+

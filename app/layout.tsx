@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://coderkit.shivamappstudio.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "CoderKit | Learn. Practice. Build. - Mobile Coding IDE",
+  title: "CodeVarsity | Learn. Practice. Build. - Mobile Coding IDE",
   description: "Master coding with visual learning. Python, Java, Go, C with 28+ visualizers, ghost-code practice, and real offline runtimes on Android.",
   keywords: [
     "coding IDE",
@@ -44,23 +44,23 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "CoderKit | Learn. Practice. Build. - Mobile Coding IDE",
+    title: "CodeVarsity | Learn. Practice. Build. - Mobile Coding IDE",
     description: "Master coding with visual learning. Python, Java, Go, C with 28+ visualizers and real offline runtimes.",
     url: siteUrl,
-    siteName: "CoderKit",
+    siteName: "CodeVarsity",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "CoderKit Mobile Coding IDE",
+        alt: "CodeVarsity Mobile Coding IDE",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CoderKit | Learn. Practice. Build. - Mobile Coding IDE",
+    title: "CodeVarsity | Learn. Practice. Build. - Mobile Coding IDE",
     description: "Master coding with visual learning. Python, Java, Go, C with 28+ visualizers and real offline runtimes.",
     images: [`${siteUrl}/og-image.png`],
     creator: "@shivamappstudio",
@@ -91,7 +91,7 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "name": "CoderKit",
+        "name": "CodeVarsity",
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "Android",
         "offers": {
@@ -104,8 +104,8 @@ export default function RootLayout({
       {
         "@type": "Organization",
         "name": "Shivam App Studio",
-        "url": "https://coderkit.shivamappstudio.com",
-        "logo": "https://coderkit.shivamappstudio.com/assets/logo.png"
+        "url": "https://codevarsity.shivamappstudio.com",
+        "logo": "https://codevarsity.shivamappstudio.com/assets/logo.png"
       }
     ]
   };
@@ -129,3 +129,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

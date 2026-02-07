@@ -1,4 +1,4 @@
-# CoderKit Landing Page - Required Assets & Content
+# CodeVarsity Landing Page - Required Assets & Content
 
 > **Instructions**: Fill in or provide the items below. Check off each item as you complete it.
 
@@ -9,7 +9,7 @@
 | Item | Status | Description | Your Input |
 |------|--------|-------------|------------|
 | App Icon | ⬜ | High-res PNG (512x512) | `public/assets/icon.png` |
-| App Logo | ⬜ | Logo with text "CoderKit" | `public/assets/logo.png` |
+| App Logo | ⬜ | Logo with text "CodeVarsity" | `public/assets/logo.png` |
 | Favicon | ⬜ | 32x32 favicon | `public/assets/favicon.ico` |
 
 **Tagline Options** (pick one or suggest):
@@ -67,9 +67,9 @@
 
 ## 5. Competitor Comparison Table
 
-> For the "Why CoderKit?" section
+> For the "Why CodeVarsity?" section
 
-| Feature | CoderKit | Pydroid 3 | AIDE | Spck Editor |
+| Feature | CodeVarsity | Pydroid 3 | AIDE | Spck Editor |
 |---------|----------|-----------|------|-------------|
 | Offline Python | ⬜ | ⬜ | ⬜ | ⬜ |
 | Offline Java | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -135,7 +135,7 @@
 
 | Item | Status | Details |
 |------|--------|---------|
-| Extension Name | ⬜ | "CoderKit" or "CoderKit - Learn" |
+| Extension Name | ⬜ | "CodeVarsity" or "CodeVarsity - Learn" |
 | VS Code Marketplace Link | ⬜ | (once published) |
 | Key Feature Highlight | ⬜ | e.g., "Sync mobile progress to desktop" |
 
@@ -172,3 +172,4 @@
 ---
 
 *Last Updated: 2025-12-25*
+

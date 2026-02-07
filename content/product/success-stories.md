@@ -1,6 +1,6 @@
-# Success Stories: Real CoderKit Users, Real Results
+# Success Stories: Real CodeVarsity Users, Real Results
 
-Meet the people learning to code with CoderKit.
+Meet the people learning to code with CodeVarsity.
 
 ---
 
@@ -18,7 +18,7 @@ Meet the people learning to code with CoderKit.
 - Didn't want to spend hours reading tutorials
 - Wanted to see immediate results
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - Downloaded free app (no cost!)
 - Completed Python 101 (free course)
 - Visualizers made concepts click
@@ -32,7 +32,7 @@ Meet the people learning to code with CoderKit.
 - ✅ Parents now proud she's "a programmer"
 
 **Quote:**
-> *"My school doesn't teach coding, and classes cost so much. CoderKit made me realize I can code. The games I built are actually impressive!"*
+> *"My school doesn't teach coding, and classes cost so much. CodeVarsity made me realize I can code. The games I built are actually impressive!"*
 >
 > — Maya
 
@@ -55,7 +55,7 @@ Meet the people learning to code with CoderKit.
 - Can't afford to quit job for 3 months
 - No coding experience
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - 1 hour/day, 5 days/week
 - Learned Python first (weeks 1–4)
 - Built projects to show employers
@@ -67,10 +67,10 @@ Meet the people learning to code with CoderKit.
 - ✅ Built 5 projects (portfolio ready)
 - ✅ Didn't miss a single paycheck
 - ✅ Hired as junior developer (salary $65K)
-- ✅ Uses CoderKit at new job (learns Go)
+- ✅ Uses CodeVarsity at new job (learns Go)
 
 **Quote:**
-> *"I was terrified I couldn't learn to code at 32. CoderKit proved me wrong. The visualizers made complex topics simple, and I could learn at my own pace. Best $50 I spent."*
+> *"I was terrified I couldn't learn to code at 32. CodeVarsity proved me wrong. The visualizers made complex topics simple, and I could learn at my own pace. Best $50 I spent."*
 >
 > — Alex
 
@@ -93,7 +93,7 @@ Meet the people learning to code with CoderKit.
 - Need to practice many languages
 - Wants to compete globally
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - Visualizer for sorting, searching, pathfinding
 - Practiced algorithms (see them execute!)
 - Challenge problems with leaderboards
@@ -107,7 +107,7 @@ Meet the people learning to code with CoderKit.
 - ✅ Teaches friends Python now
 
 **Quote:**
-> *"Seeing algorithms visualized changed my life. I actually UNDERSTAND sorting now instead of memorizing. CoderKit's challenges are incredibly good."*
+> *"Seeing algorithms visualized changed my life. I actually UNDERSTAND sorting now instead of memorizing. CodeVarsity's challenges are incredibly good."*
 >
 > — Priya
 
@@ -131,7 +131,7 @@ Meet the people learning to code with CoderKit.
 - Grading takes 5+ hours/week
 - Hard to differentiate (gifted vs. struggling)
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - Bought education license ($100/year, 30 students)
 - Used visualizers in class (project on screen)
 - Dashboard shows who's struggling (early intervention)
@@ -143,7 +143,7 @@ Meet the people learning to code with CoderKit.
 - ✅ Students say "concepts finally make sense"
 - ✅ Saves 5 hours/week grading (more 1-on-1 time)
 - ✅ Department wants to adopt for all CS classes
-- ✅ District using CoderKit next year (8 teachers)
+- ✅ District using CodeVarsity next year (8 teachers)
 
 **Quote:**
 > *"The visualizers alone have transformed my teaching. When students SEE recursion execute step-by-step, it clicks. And the dashboard? It tells me exactly who needs help. This tool is a game-changer."*
@@ -170,7 +170,7 @@ Meet the people learning to code with CoderKit.
 - Books and tutorials outdated
 - Textbook English is confusing
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - Downloaded app, selected offline mode
 - Completes courses at own pace (no WiFi needed)
 - Visualizers help him understand (better than textbooks)
@@ -181,10 +181,10 @@ Meet the people learning to code with CoderKit.
 - ✅ Built data analysis projects
 - ✅ Got 3 freelance projects (earned $500)
 - ✅ Progressed to JavaScript (still learning)
-- ✅ Hopes to work remote (CoderKit helped him skill up)
+- ✅ Hopes to work remote (CodeVarsity helped him skill up)
 
 **Quote:**
-> *"In Bangladesh, we don't have access to top schools or expensive bootcamps. CoderKit lets me learn the same things as students in America. The offline mode is perfect for my internet situation. Thank you."*
+> *"In Bangladesh, we don't have access to top schools or expensive bootcamps. CodeVarsity lets me learn the same things as students in America. The offline mode is perfect for my internet situation. Thank you."*
 >
 > — Raj
 
@@ -208,7 +208,7 @@ Meet the people learning to code with CoderKit.
 - Wants interactive learning (not books)
 - Needs it on phone (commute time)
 
-**CoderKit Solution:**
+**CodeVarsity Solution:**
 - Go 101 course (start with fundamentals)
 - Visualizers help understand goroutines
 - Can practice on laptop + phone (sync)
@@ -219,10 +219,10 @@ Meet the people learning to code with CoderKit.
 - ✅ Built cloud microservice (used at work)
 - ✅ Got promotion (promoted to Senior with Go skills)
 - ✅ Salary +$15K/year
-- ✅ Uses CoderKit to learn Rust next
+- ✅ Uses CodeVarsity to learn Rust next
 
 **Quote:**
-> *"CoderKit let me level up without a bootcamp or bootleg courses. The visualizers + hands-on practice is perfect for busy professionals. Worth every penny."*
+> *"CodeVarsity let me level up without a bootcamp or bootleg courses. The visualizers + hands-on practice is perfect for busy professionals. Worth every penny."*
 >
 > — Sam
 
@@ -258,7 +258,7 @@ All success stories share:
 > — Prof. Chen
 
 ### From Career Changers
-> *"I landed a junior dev job. CoderKit + portfolio projects did it."*  
+> *"I landed a junior dev job. CodeVarsity + portfolio projects did it."*  
 > — Marco, 30
 
 > *"Best career investment I made. Cost less than a bootcamp, more valuable."*  
@@ -269,16 +269,17 @@ All success stories share:
 ## 🚀 Your Story Could Be Next
 
 **Start where they started:**
-1. Download CoderKit (free)
+1. Download CodeVarsity (free)
 2. Complete one course (Python 101 is a good start)
 3. Build a project you're proud of
-4. Share your success on [Twitter](https://twitter.com/CoderKitApp)
+4. Share your success on [Twitter](https://twitter.com/CodeVarsityApp)
 
 ---
 
-**We'd love to feature YOUR story.** Share your CoderKit journey with us!
+**We'd love to feature YOUR story.** Share your CodeVarsity journey with us!
 
-- **Email:** [stories@coderkit.app](mailto:stories@coderkit.app)
+- **Email:** [stories@CodeVarsity.app](mailto:stories@CodeVarsity.app)
 - **Discord:** #success-stories channel
-- **Twitter:** [@CoderKitApp](https://twitter.com/CoderKitApp) #CodelabSuccess
+- **Twitter:** [@CodeVarsityApp](https://twitter.com/CodeVarsityApp) #CodelabSuccess
+
 

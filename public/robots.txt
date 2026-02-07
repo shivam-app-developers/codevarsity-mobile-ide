@@ -1,4 +1,4 @@
-# robots.txt for CoderKit
+# robots.txt for CodeVarsity
 # Allow search engines to crawl public content
 
 User-agent: *
@@ -21,7 +21,7 @@ Disallow: /checkout/
 Disallow: /.next/
 
 # Sitemap
-Sitemap: https://coderkit.shivamappstudio.com/sitemap.xml
+Sitemap: https://codevarsity.shivamappstudio.com/sitemap.xml
 
 # Crawl delay (be nice to servers)
 Crawl-delay: 1
@@ -35,3 +35,5 @@ Crawl-delay: 0
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+
+

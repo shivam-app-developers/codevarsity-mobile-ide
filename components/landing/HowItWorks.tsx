@@ -3,7 +3,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How <span className="gradient-text">CoderKit Works</span></h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How <span className="gradient-text">CodeVarsity Works</span></h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">A proven 3-step approach that turns beginners into confident developers.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -32,3 +32,4 @@ export default function HowItWorks() {
     </section>
   );
 }
+

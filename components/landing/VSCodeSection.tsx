@@ -21,7 +21,7 @@ export default function VSCodeSection() {
             </div>
             <div className="flex gap-4">
               <div className="w-48 bg-gray-800 rounded-lg p-3 text-xs">
-                <p className="text-indigo-400 font-semibold mb-2"><i className="fa-solid fa-graduation-cap mr-1"></i> CoderKit</p>
+                <p className="text-indigo-400 font-semibold mb-2"><i className="fa-solid fa-graduation-cap mr-1"></i> CodeVarsity</p>
                 <div className="bg-indigo-500/20 p-1.5 rounded text-indigo-300">Python - 80%</div>
               </div>
               <div className="flex-1 bg-gray-800 rounded-lg p-3 font-mono text-xs text-gray-400">
@@ -35,3 +35,4 @@ export default function VSCodeSection() {
     </section>
   );
 }
+
