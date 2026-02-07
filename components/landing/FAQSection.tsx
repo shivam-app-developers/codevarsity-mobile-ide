@@ -1,47 +1,55 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function FAQSection() {
   const faqs = [
     {
-      question: "How does offline execution work?",
-      answer: "CodeVarsity embeds real runtimes (Chaquopy for Python, ECJ for Java, Yaegi for Go, TCC for C) directly in the app. No internet required."
+      question: "How does professional offline execution work?",
+      answer: "CodeVarsity embeds professional runtimes for Python, Java, Go, and C directly in the app. No internet required for compiling or running code."
     },
     {
-      question: "Can I use NumPy, Pandas, Flask, Django?",
-      answer: "Yes! Python comes pre-bundled with NumPy, Pandas, Matplotlib, Scikit-learn, Flask, Django, and 20+ libraries."
+      question: "Can I use NumPy, Pandas, and professional frameworks?",
+      answer: "Yes! Python comes pre-bundled with industrial libraries including NumPy, Pandas, Scikit-learn, Flask, and Django. All work 100% offline."
     },
     {
-      question: "What is Ghost Code practice?",
-      answer: "You see faded code and type along character-by-character. It builds muscle memory faster than passive learning."
+      question: "What is the Rhombus Methodology™?",
+      answer: "A unique 7-layer learning framework designed for mastery. You can try the first 2 layers of every course for free! Full access is via one-time lifetime purchases."
     },
     {
-      question: "Does the keyboard have arrow keys?",
-      answer: "Yes! Our custom developer keyboard includes arrow keys, Tab, Ctrl, and quick access to coding symbols."
+      question: "Is there a free trial for the IDE?",
+      answer: "Yes! Professional features like the Java/C compilers come with a 7-day free trial through our Workspace Subscriptions ($1.99/mo)."
     },
     {
-      question: "Is CodeVarsity free?",
-      answer: "Yes! CodeVarsity is free to download with a generous free tier. Premium courses available via subscription."
+      question: "How do I prove my technical competence?",
+      answer: "Your profile tracks verified XP, lines typed, and Bug Squasher stats. Share your unique profile URL with recruiters as proof of skills."
     },
     {
-      question: "How is it different from Pydroid?",
-      answer: "Pydroid is Python-only. CodeVarsity offers multiple languages, structured courses, 20+ visualizers, and Ghost Code practice."
+      question: "What is Ghost Code™?",
+      answer: "Guided Practice sessions where you type according to a 'ghost' template. It builds muscle memory and ensures you master syntax before moving to Layer 4 (Implementation)."
     }
   ];
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-24 bg-background-soft">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          <Link href="/faq" className="text-brand-primary font-medium hover:underline flex items-center gap-2">
-            View all <i className="fa-solid fa-arrow-right text-sm"></i>
+        <div className="flex justify-between items-end mb-16">
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-black text-brand-primary tracking-tight">Technical <span className="text-brand-secondary/80">Support</span></h2>
+            <p className="text-gray-500 mt-2 font-medium">Common inquiries about our professional ecosystem.</p>
+          </div>
+          <Link href="/faq" className="hidden sm:inline-flex text-brand-primary font-black uppercase tracking-widest text-[10px] hover:underline items-center gap-2 mb-2">
+            View All <i className="fa-solid fa-arrow-right text-xs"></i>
           </Link>
         </div>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <details key={index} className="bg-white p-5 rounded-xl border border-gray-100">
-              <summary className="font-semibold text-gray-900 cursor-pointer">{faq.question}</summary>
-              <p className="mt-3 text-gray-600 text-sm">{faq.answer}</p>
+            <details key={index} className="group bg-white p-6 rounded-[2rem] border border-brand-primary/5 hover:border-brand-primary/10 transition-all shadow-xl shadow-brand-primary/5 overflow-hidden">
+              <summary className="font-black text-brand-primary cursor-pointer list-none flex justify-between items-center group-open:mb-4">
+                <span>{faq.question}</span>
+                <i className="fa-solid fa-plus group-open:rotate-45 transition-transform text-xs opacity-40"></i>
+              </summary>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium animate-fade-in">{faq.answer}</p>
             </details>
           ))}
         </div>

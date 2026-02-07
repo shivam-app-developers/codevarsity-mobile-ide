@@ -2,54 +2,71 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center text-white text-sm font-bold">
-                &lt;/&gt;
-              </div>
-              <span className="font-bold text-white">CodeVarsity</span>
+    <footer className="bg-brand-primary text-white/50 py-24 relative overflow-hidden">
+      {/* Subtle Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px]"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid md:grid-cols-4 gap-16 mb-20">
+          <div className="col-span-1 md:col-span-1">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/assets/logo-white.png" alt="CodeVarsity Logo" className="h-8 w-auto grayscale brightness-200" />
+              <span className="font-black text-xl text-white tracking-tighter uppercase">CodeVarsity</span>
             </div>
-            <p className="text-sm">Learn. Practice. Build.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-white mb-3">Product</h4>
-            <ul className="text-sm space-y-2">
-              <li><a href="/#courses" className="hover:text-white">Courses</a></li>
-              <li><a href="/#visualizers" className="hover:text-white">Visualizers</a></li>
-              <li><a href="/#sandbox" className="hover:text-white">Sandbox</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-white mb-3">Resources</h4>
-            <ul className="text-sm space-y-2">
-              <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
-              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-              <li><Link href="/docs" className="hover:text-white">Docs</Link></li>
-              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-white mb-3">Connect</h4>
-            <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary">
-                <i className="fa-brands fa-twitter"></i>
+            <p className="text-sm font-medium leading-relaxed mb-8">
+              The premier mobile-first institutional ecosystem for professional computer science education.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <i className="fa-brands fa-x-twitter"></i>
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary">
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all">
                 <i className="fa-brands fa-github"></i>
               </a>
+              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
             </div>
-            <p className="text-xs mt-3">Made with ❤️ by<br /><a href="#" className="text-brand-accent">Shivam App Studio</a></p>
+          </div>
+
+          <div>
+            <h4 className="font-black text-white text-xs uppercase tracking-[0.3em] mb-8">Curriculum</h4>
+            <ul className="text-sm space-y-4 font-bold">
+              <li><a href="/#courses" className="hover:text-white transition-colors">Academic Tracks</a></li>
+              <li><a href="/#visualizers" className="hover:text-white transition-colors">Visual Runtimes</a></li>
+              <li><a href="/#sandbox" className="hover:text-white transition-colors">Offline Compilers</a></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Research Blog</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-black text-white text-xs uppercase tracking-[0.3em] mb-8">Enrolment</h4>
+            <ul className="text-sm space-y-4 font-bold">
+              <li><Link href="/auth" className="hover:text-white transition-colors">Student Portal</Link></li>
+              <li><Link href="/faq" className="hover:text-white transition-colors">Technical FAQ</Link></li>
+              <li><Link href="/docs" className="hover:text-white transition-colors">Documentation</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Faculty</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-black text-white text-xs uppercase tracking-[0.3em] mb-8">Laboratory</h4>
+            <p className="text-xs leading-relaxed mb-6 opacity-60 italic">
+              "Building the future of mobile engineering in our pockets."
+            </p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-brand-accent">
+              Shivam App Studio <br />
+              Institutional Division
+            </p>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2026 Shivam App Studio</p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-white">Privacy</Link>
-            <Link href="/terms" className="hover:text-white">Terms</Link>
-            <Link href="/refund" className="hover:text-white">Refund</Link>
+
+        <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-black uppercase tracking-widest">
+          <p>© 2026 Shivam App Studio. All Rights Reserved.</p>
+          <div className="flex gap-8">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Charter</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/refund" className="hover:text-white transition-colors">Financial Policy</Link>
           </div>
         </div>
       </div>

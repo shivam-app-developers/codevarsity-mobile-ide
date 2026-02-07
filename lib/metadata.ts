@@ -2,9 +2,26 @@ import { Metadata } from 'next';
 
 export const siteConfig = {
   name: 'CodeVarsity',
-  description: 'Learn, Practice, Build. Offline coding IDE for Android with Python, Java, Go, C and 28+ visualizers.',
+  description: 'Pro mobile IDE & coding courses. Learn Python, Java, JS, SQL, Go & C offline with 30+ interactive visualizers and Rhombus Methodology™.',
   url: 'https://codevarsity.shivamappstudio.com',
   ogImage: 'https://codevarsity.shivamappstudio.com/og-image.png',
+  keywords: [
+    'CodeVarsity',
+    'Learn to Code',
+    'Mobile IDE',
+    'Offline Programming',
+    'Python Tutorial Android',
+    'Java Compiler Mobile',
+    'Coding Courses',
+    'Rhombus Methodology',
+    'SQL Mobile',
+    'JavaScript IDE',
+    'Go Programming',
+    'C Programming Mobile',
+    'Bug Squasher',
+    'Visual Learning',
+    'Software Development App'
+  ],
   links: {
     twitter: 'https://twitter.com/shivamappstudio',
     github: 'https://github.com/shivam-app-developers/codevarsity-mobile-ide',
@@ -16,6 +33,7 @@ interface CreateMetadataProps {
   description?: string;
   path?: string;
   ogImage?: string;
+  keywords?: string[];
   type?: 'website' | 'article' | 'profile';
   publishedTime?: string;
   author?: string;
@@ -26,6 +44,7 @@ export function createMetadata({
   description,
   path = '/',
   ogImage = siteConfig.ogImage,
+  keywords = siteConfig.keywords,
   type = 'website',
   publishedTime,
   author,
@@ -37,6 +56,7 @@ export function createMetadata({
   const metadata: Metadata = {
     title: fullTitle,
     description: fullDescription,
+    keywords: keywords.join(', '),
     metadataBase: new URL(siteConfig.url),
     alternates: {
       canonical: url,
@@ -45,6 +65,7 @@ export function createMetadata({
       title: fullTitle,
       description: fullDescription,
       url,
+      siteName: siteConfig.name,
       type,
       images: [
         {

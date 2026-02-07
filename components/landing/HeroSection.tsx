@@ -2,48 +2,74 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
+      {/* Background Decorative Element */}
+      <div className="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-brand-primary/[0.02] rounded-full blur-[100px] -mr-64 -mt-32"></div>
+
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <p className="text-brand-primary font-semibold text-sm mb-3">📱 Available on Android • iOS Coming Soon</p>
-          <h1 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6">
-            Learn Coding.<br /><span className="gradient-text">Practice Smart.</span><br />Build Real.
-          </h1>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Master Python, Java, Go, C with <strong>interactive visualizers</strong>, <strong>ghost-code practice</strong>, and <strong>real offline runtimes</strong>. From absolute beginner to job-ready.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="#" className="gradient-bg text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90">
-              <i className="fa-brands fa-google-play"></i> Start Learning Free
-            </Link>
-            <a href="#courses" className="border-2 border-gray-200 px-6 py-3 rounded-xl font-semibold text-gray-700 hover:border-brand-primary hover:text-brand-primary transition">
-              Browse 40+ Courses
-            </a>
-          </div>
-        </div>
-        <div className="relative flex justify-center">
-          {/* Floating language badges */}
-          <div className="absolute -top-4 -left-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-float">
-            🐍 Python
-          </div>
-          <div className="absolute top-20 -right-8 bg-cyan-400 text-cyan-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-float-delayed">
-            🔷 Go
-          </div>
-          <div className="absolute bottom-32 -left-6 bg-red-400 text-red-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-float">
-            ☕ Java
-          </div>
-          <div className="absolute bottom-10 -right-4 bg-blue-400 text-blue-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-float-delayed">
-            ⚙️ C
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/5 text-brand-primary text-xs font-black uppercase tracking-widest mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
+            </span>
+            Institutional Access Available
           </div>
 
-          <div className="w-64 h-[450px] bg-brand-dark rounded-[2.5rem] border-4 border-gray-700 p-4 shadow-2xl">
-            <div className="bg-gray-800 rounded-2xl h-full p-4 flex flex-col justify-center items-center">
-              <div className="w-full bg-gray-700 rounded-lg p-3 font-mono text-xs text-green-400 mb-4">
-                <div className="text-gray-500"># Ghost Code Practice</div>
-                <div><span className="text-purple-400">def</span> <span className="text-yellow-400">sort</span>(arr):</div>
-                <div className="text-gray-600 opacity-50"> for i in range...</div>
+          <h1 className="text-4xl sm:text-6xl font-black text-brand-primary leading-[1.1] mb-8 tracking-tight">
+            Professional Coding.<br />
+            <span className="text-brand-secondary/80">Academic Precision.</span><br />
+            Mobile Freedom.
+          </h1>
+
+          <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl font-medium">
+            Master computer science with <strong>interactive visualizers</strong>,
+            <strong>ghost-code practice</strong>, and true <strong>offline compilers</strong>.
+            The elite IDE for mobile learning.
+          </p>
+
+          <div className="flex flex-wrap gap-5">
+            <Link href="#" className="bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-brand-secondary hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-brand-primary/20">
+              <i className="fa-brands fa-google-play text-xl"></i>
+              <div className="text-left">
+                <div className="text-[10px] uppercase tracking-tighter opacity-70 leading-none">Get it on</div>
+                <div className="text-base leading-none mt-1">Google Play</div>
               </div>
-              <p className="text-gray-400 text-sm">App Preview</p>
+            </Link>
+            <Link href="#courses" className="bg-white border-2 border-brand-primary/10 text-brand-primary px-8 py-4 rounded-2xl font-bold hover:border-brand-primary hover:-translate-y-1 transition-all duration-300 flex items-center">
+              Explore Curriculum
+            </Link>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center">
+          {/* Floating language badges with refined styling */}
+          <div className="absolute -top-6 left-12 bg-white px-4 py-2 rounded-2xl text-sm font-black text-brand-primary shadow-[0_8px_30px_rgb(5,43,35,0.1)] border border-brand-primary/5 animate-float flex items-center gap-2">
+            <span className="p-1 px-2 bg-yellow-100 rounded-lg">🐍</span> Python
+          </div>
+          <div className="absolute top-24 -right-4 bg-white px-4 py-2 rounded-2xl text-sm font-black text-brand-primary shadow-[0_8px_30px_rgb(5,43,35,0.1)] border border-brand-primary/5 animate-float-delayed flex items-center gap-2" style={{ animationDelay: '1s' }}>
+            <span className="p-1 px-2 bg-cyan-100 rounded-lg">🔷</span> Go
+          </div>
+          <div className="absolute bottom-20 -left-10 bg-white px-4 py-2 rounded-2xl text-sm font-black text-brand-primary shadow-[0_8px_30px_rgb(5,43,35,0.1)] border border-brand-primary/5 animate-float flex items-center gap-2" style={{ animationDelay: '2s' }}>
+            <span className="p-1 px-2 bg-red-100 rounded-lg">☕</span> Java
+          </div>
+
+          <div className="w-72 h-[480px] bg-[#020617] rounded-[3rem] border-[8px] border-[#1e293b] p-4 shadow-[0_48px_100px_-20px_rgba(5,43,35,0.3)]">
+            <div className="bg-[#0f172a] rounded-[2rem] h-full p-5 flex flex-col items-center border border-white/5">
+              <div className="w-full bg-[#1e293b] rounded-xl p-4 font-mono text-[10px] text-green-400 mb-6 border border-white/5">
+                <div className="text-blue-400 opacity-60 mb-2">// Mastering Algorithms</div>
+                <div><span className="text-pink-400 font-bold">def</span> <span className="text-yellow-300">bubbleSort</span>(arr):</div>
+                <div className="ml-4 mt-1">n = <span className="text-orange-300">len</span>(arr)</div>
+                <div className="ml-4">for i <span className="text-pink-400">in</span> <span className="text-orange-300">range</span>(n):</div>
+                <div className="ml-8 text-gray-400 opacity-40">...active practice...</div>
+              </div>
+              <div className="flex-1 flex flex-col items-center justify-center text-center">
+                <div className="w-12 h-12 rounded-2xl bg-brand-primary flex items-center justify-center text-white font-black text-lg mb-4 shadow-lg shadow-brand-primary/40">
+                  <i className="fa-solid fa-graduation-cap"></i>
+                </div>
+                <p className="text-white font-black tracking-tight text-lg mb-1">CodeVarsity</p>
+                <p className="text-gray-400 text-[10px] uppercase tracking-widest font-black">Learn Mode</p>
+              </div>
             </div>
           </div>
         </div>

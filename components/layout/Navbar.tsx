@@ -45,11 +45,19 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 gradient-bg rounded-lg flex items-center justify-center text-white font-bold text-sm">
-            &lt;/&gt;
+        <Link href="/" className="flex items-center gap-3 active:scale-95 transition-transform group">
+          <div className="relative">
+            <div className="absolute -inset-2 bg-brand-primary/5 rounded-lg blur group-hover:bg-brand-primary/10 transition-colors"></div>
+            <img
+              src="/assets/logo-brand.png"
+              alt="CodeVarsity Logo"
+              className="w-10 h-10 relative z-10 drop-shadow-sm"
+            />
           </div>
-          <span className="font-bold text-lg text-gray-900">CodeVarsity</span>
+          <div className="hidden sm:block">
+            <span className="block font-black text-xl text-brand-primary tracking-tight leading-none mb-0.5">CodeVarsity</span>
+            <span className="block text-[8px] font-black text-brand-primary/60 uppercase tracking-[0.2em]">Institutional IDE</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

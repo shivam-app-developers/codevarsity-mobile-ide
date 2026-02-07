@@ -55,13 +55,6 @@ export default function DocsIndexPage() {
             <p className="text-gray-600 text-sm">Overview of features, architecture, and why we built CodeVarsity.</p>
           </Link>
 
-          <Link href="/docs/product/education-guide" className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
-            <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4 text-xl">
-              <i className="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition">Education Guide</h2>
-            <p className="text-gray-600 text-sm">Information for teachers and schools using CodeVarsity in class.</p>
-          </Link>
 
           <Link href="/faq" className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
             <div className="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-4 text-xl">

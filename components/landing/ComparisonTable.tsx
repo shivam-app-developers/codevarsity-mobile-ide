@@ -1,54 +1,48 @@
 export default function ComparisonTable() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">CodeVarsity vs Alternatives</h2>
-        <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+        <h2 className="text-3xl sm:text-4xl font-black text-brand-primary text-center mb-16 tracking-tight">The Institutional <span className="text-brand-secondary/80">Edge</span></h2>
+        <div className="bg-white rounded-[32px] overflow-hidden border border-brand-primary/10 shadow-[0_32px_64px_-16px_rgba(5,43,35,0.08)]">
           <table className="w-full text-sm">
-            <thead className="bg-gray-900 text-white">
-              <tr>
-                <th className="py-3 px-4 text-left">Feature</th>
-                <th className="py-3 px-4 text-center gradient-bg">CodeVarsity</th>
-                <th className="py-3 px-4 text-center">Pydroid</th>
-                <th className="py-3 px-4 text-center">AIDE</th>
+            <thead>
+              <tr className="bg-brand-primary text-white">
+                <th className="py-5 px-6 text-left font-black uppercase tracking-widest text-[10px]">Comparative Features</th>
+                <th className="py-5 px-6 text-center bg-brand-secondary/50 font-black uppercase tracking-widest text-[10px]">CodeVarsity</th>
+                <th className="py-5 px-6 text-center font-black uppercase tracking-widest text-[10px]">Common IDEs</th>
+                <th className="py-5 px-6 text-center font-black uppercase tracking-widest text-[10px]">Static Video</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="py-3 px-4">Offline Python</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
+            <tbody className="divide-y divide-brand-primary/5">
+              <tr className="group hover:bg-brand-primary/[0.01] transition-colors">
+                <td className="py-5 px-6 font-bold text-brand-primary">Full Offline Runtimes</td>
+                <td className="py-5 px-6 text-center text-brand-secondary"><i className="fa-solid fa-circle-check text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
               </tr>
-              <tr className="bg-white">
-                <td className="py-3 px-4">Go & C Support</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
+              <tr className="group hover:bg-brand-primary/[0.01] transition-colors">
+                <td className="py-5 px-6 font-bold text-brand-primary">Interactive Visualizers</td>
+                <td className="py-5 px-6 text-center text-brand-secondary"><i className="fa-solid fa-circle-check text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
               </tr>
-              <tr>
-                <td className="py-3 px-4">20+ Visualizers</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
+              <tr className="group hover:bg-brand-primary/[0.01] transition-colors">
+                <td className="py-5 px-6 font-bold text-brand-primary">Ghost Code™ Mastery</td>
+                <td className="py-5 px-6 text-center text-brand-secondary"><i className="fa-solid fa-circle-check text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
               </tr>
-              <tr className="bg-white">
-                <td className="py-3 px-4">Structured Courses</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
+              <tr className="group hover:bg-brand-primary/[0.01] transition-colors">
+                <td className="py-5 px-6 font-bold text-brand-primary">Layered Methodology</td>
+                <td className="py-5 px-6 text-center text-brand-secondary"><i className="fa-solid fa-circle-check text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
               </tr>
-              <tr>
-                <td className="py-3 px-4">Ghost Code Practice</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-              </tr>
-              <tr className="bg-white">
-                <td className="py-3 px-4">VS Code Sync</td>
-                <td className="py-3 px-4 text-center text-green-500"><i className="fa-solid fa-check"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
-                <td className="py-3 px-4 text-center text-gray-300"><i className="fa-solid fa-xmark"></i></td>
+              <tr className="group hover:bg-brand-primary/[0.01] transition-colors">
+                <td className="py-5 px-6 font-bold text-brand-primary">Desktop Sync (VS Code)</td>
+                <td className="py-5 px-6 text-center text-brand-secondary"><i className="fa-solid fa-circle-check text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
+                <td className="py-5 px-6 text-center text-gray-300"><i className="fa-solid fa-circle-xmark text-lg"></i></td>
               </tr>
             </tbody>
           </table>

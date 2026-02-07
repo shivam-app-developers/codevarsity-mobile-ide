@@ -7,6 +7,7 @@ Welcome to CodeVarsity! This guide will help you download, install, and launch y
 ## 📱 Installation
 
 ### System Requirements
+
 - **Android:** Android 10+ (API 29+)
 - **iOS:** iOS 14+ (coming soon)
 - **Storage:** ~200MB free space (for core app + one language runtime)
@@ -15,12 +16,14 @@ Welcome to CodeVarsity! This guide will help you download, install, and launch y
 ### Download CodeVarsity
 
 **Option 1: Google Play Store** (Recommended)
+
 1. Open Google Play Store on your Android device
 2. Search for **"CodeVarsity"** or **"CodeVarsity"**
 3. Tap **Install**
 4. Wait for download (~50MB base app)
 
 **Option 2: Direct APK**
+
 1. Visit [CodeVarsity.app/download](https://CodeVarsity.app)
 2. Tap **Download APK**
 3. Open the downloaded file and tap **Install**
@@ -30,6 +33,7 @@ Welcome to CodeVarsity! This guide will help you download, install, and launch y
 ## 🚀 First Launch
 
 ### Step 1: Create Your Account
+
 1. Open CodeVarsity
 2. Tap **Sign Up** or **Sign In with Google**
 3. Complete profile (name, email, avatar optional)
@@ -47,9 +51,17 @@ When you first launch, CodeVarsity shows a **language selector**:
 
 **Tip:** Don't worry—you can install multiple languages later. Pick one to get started!
 
+### Plan Selection (Optional)
+
+You can choose to access the full catalog of courses and advanced IDE features by starting a trial or purchasing a course.
+
+- **Trial**: Test drive all premium features for a limited time.
+- **Lifetime**: Purchase individual courses for permanent access.
+
 ### Step 3: Download Your First Language Runtime
 
 After selecting, CodeVarsity will ask to download the language runtime:
+
 - **Size:** 150-300MB (depends on language)
 - **Time:** 2-5 minutes (WiFi recommended)
 - **What it does:** Installs the compiler/interpreter so you can run code offline
@@ -85,6 +97,7 @@ After selecting, CodeVarsity will ask to download the language runtime:
 ```
 
 **Key Areas:**
+
 - **File Tabs:** See `main.py` or `Main.java` at the top—tap to switch files
 - **Code Editor:** The big white area where you type
 - **Custom Keyboard:** Special mobile keyboard optimized for coding
@@ -125,7 +138,9 @@ CodeVarsity's keyboard is **designed for coders**, not texting:
 ## ▶️ Running Your First Code
 
 ### Step 1: Write Code
+
 Type a simple program:
+
 ```python
 # Python example
 name = input("What's your name? ")
@@ -133,17 +148,21 @@ print(f"Hello, {name}!")
 ```
 
 ### Step 2: Tap Run
+
 1. Find the **▶ Run** button (top-right)
 2. Tap it
 3. Watch the **Terminal** open at the bottom
 
 ### Step 3: Interact (if needed)
+
 If your code calls `input()`, the terminal shows a **text field**:
+
 1. Type your response
 2. Tap **Submit** (or press ENTER)
 3. See the output
 
 ### What If It Fails?
+
 - **"Language not installed"** → Download the runtime (1st run only)
 - **"Syntax error"** → Red line under the mistake; fix and try again
 - **"Runtime error"** → Message in terminal tells you what went wrong
@@ -157,6 +176,7 @@ If your code calls `input()`, the terminal shows a **text field**:
 CodeVarsity isn't just an IDE—it's also a **learning platform**:
 
 ### Access Learn Mode
+
 1. Tap the **📚 Learn** tab (bottom nav or sidebar)
 2. Browse **courses** like:
    - Python 101 - Your First Arcade Games
@@ -165,12 +185,14 @@ CodeVarsity isn't just an IDE—it's also a **learning platform**:
    - CS Fundamentals
 
 ### How Lessons Work
+
 1. **Concept Explanation** - Read the idea (with visuals)
 2. **Interactive Visualizer** - See the concept in action (touch to interact)
 3. **Guided Practice** - Write code with hints (ghost code overlay)
 4. **Challenge** - Solve a problem to prove you learned it
 
 ### Track Progress
+
 - **Completion Bar** shows how far you are in a course
 - **Streak Counter** shows consecutive days you've coded
 - **Stats Dashboard** shows all your metrics
@@ -180,21 +202,25 @@ CodeVarsity isn't just an IDE—it's also a **learning platform**:
 ## 💡 Pro Tips for Getting Started
 
 ### Keyboard Tips
+
 - **Swipe left on symbols row** to see more symbols
 - **Long-press a key** for more options (e.g., long-press `:` for `::`)
 - **Double-tap SPACE** for quick period (`.`)
 
 ### Editor Tips
+
 - **Tap line number** to jump to that line
 - **Swipe left/right** in editor to scroll horizontally (for long lines)
 - **Pinch to zoom** in/out
 
 ### Learning Tips
+
 - **Do the interactive practice** before moving to the next concept
 - **Use the visualizers**—they're the secret sauce for understanding
 - **Join the community Discord** to ask questions and share projects
 
 ### Performance Tips
+
 - **Close other apps** when running large programs
 - **Use WiFi** for downloading language runtimes
 - **Enable Dark Mode** (Settings → Theme) to save battery
@@ -204,21 +230,25 @@ CodeVarsity isn't just an IDE—it's also a **learning platform**:
 ## 🆘 Troubleshooting
 
 ### "Language download keeps failing"
+
 - Check your internet connection (WiFi > cellular)
 - Try again later (servers might be busy)
 - Use cellular + WiFi simultaneously if available
 
 ### "My code won't run—what's wrong?"
+
 1. Check the **error message** in the terminal
 2. Look for **red underlines** in the editor (syntax errors)
 3. Make sure the **language is downloaded** (Settings → Languages)
 4. Restart the app (close completely, reopen)
 
 ### "Keyboard is too small"
+
 - **iPad users:** CodeVarsity is touch-optimized; keyboard will be larger on bigger screens
 - **Phone users:** Landscape mode gives more keyboard space
 
 ### "App is slow/crashing"
+
 - Free up RAM (close other apps)
 - Clear cache (Settings → Storage → Clear Cache)
 - Uninstall unused language runtimes
@@ -242,5 +272,3 @@ CodeVarsity isn't just an IDE—it's also a **learning platform**:
 - **Twitter** - [@CodeVarsityApp](https://twitter.com/CodelabApp)
 
 **Happy coding!** 🚀
-
-

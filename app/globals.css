@@ -2,11 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --brand-primary: #4F46E5;
-  --brand-secondary: #7C3AED;
+  --foreground: #020617;
+  --brand-primary: #052b23;
+  --brand-secondary: #0a4d40;
   --brand-accent: #10B981;
-  --brand-dark: #111827;
+  --brand-dark: #020617;
+  --background-soft: #fcfdfd;
 }
 
 @theme inline {
@@ -55,13 +56,27 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes float-delayed {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .animate-float {
@@ -71,9 +86,10 @@ body {
 .animate-float-delayed {
   animation: float-delayed 4s ease-in-out infinite;
 }
+
 /* Prose styling for blog and documentation */
 .prose {
-  @apply text-gray-700;
+  @apply text-gray-800 text-base sm:text-lg leading-relaxed;
 }
 
 .prose h1,
@@ -82,27 +98,27 @@ body {
 .prose h4,
 .prose h5,
 .prose h6 {
-  @apply font-black text-gray-900 mt-8 mb-4;
+  @apply font-black text-gray-900 mt-10 mb-5 tracking-tight;
 }
 
 .prose h1 {
-  @apply text-3xl;
+  @apply text-3xl sm:text-4xl;
 }
 
 .prose h2 {
-  @apply text-2xl border-b border-gray-200 pb-3;
+  @apply text-2xl sm:text-3xl border-b border-gray-100 pb-3;
 }
 
 .prose h3 {
-  @apply text-xl;
+  @apply text-xl sm:text-2xl;
 }
 
 .prose p {
-  @apply leading-relaxed my-4;
+  @apply my-5;
 }
 
 .prose a {
-  @apply text-brand-primary font-medium hover:underline;
+  @apply text-brand-primary font-bold underline decoration-brand-primary/20 underline-offset-4 hover:decoration-brand-primary transition;
 }
 
 .prose strong {
@@ -110,51 +126,115 @@ body {
 }
 
 .prose em {
-  @apply italic text-gray-700;
+  @apply italic text-gray-800;
 }
 
 .prose ul,
 .prose ol {
-  @apply my-6 ml-6;
+  @apply my-8 ml-8 space-y-3;
 }
 
 .prose li {
-  @apply my-2;
+  @apply pl-2;
 }
 
 .prose ul li {
-  @apply list-disc;
+  @apply list-disc marker:text-brand-primary;
 }
 
 .prose ol li {
-  @apply list-decimal;
+  @apply list-decimal marker:text-brand-primary marker:font-bold;
 }
 
 .prose code {
-  @apply bg-gray-100 text-gray-900 px-2 py-1 rounded text-sm font-mono;
+  @apply bg-gray-100 text-indigo-600 px-1.5 py-0.5 rounded text-[0.9em] font-mono font-medium;
 }
 
 .prose pre {
-  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6;
+  @apply bg-gray-900 text-gray-100 p-6 rounded-2xl overflow-x-auto my-10 shadow-xl shadow-gray-200/50;
 }
 
 .prose pre code {
-  @apply bg-transparent p-0 text-inherit;
+  @apply bg-transparent p-0 text-inherit text-sm sm:text-base;
 }
 
 .prose blockquote {
-  @apply border-l-4 border-brand-primary pl-4 italic text-gray-600 my-6;
+  @apply border-l-8 border-brand-primary bg-gray-50 px-8 py-6 rounded-r-2xl italic text-gray-700 my-10 text-xl font-medium;
 }
 
 .prose table {
-  @apply w-full my-6 border-collapse;
+  @apply w-full my-10 border-collapse rounded-xl overflow-hidden shadow-sm border border-gray-100;
 }
 
 .prose th,
 .prose td {
-  @apply border border-gray-200 px-4 py-2 text-left;
+  @apply border-b border-gray-100 px-6 py-4 text-left;
 }
 
 .prose th {
-  @apply bg-gray-50 font-bold text-gray-900;
+  @apply bg-gray-50 font-bold text-gray-900 text-sm uppercase tracking-wider;
+}
+
+.prose tr:last-child td {
+  @apply border-b-0;
+}
+
+.prose img {
+  @apply rounded-2xl shadow-lg my-12 mx-auto w-full object-cover;
+}
+
+/* Premium UI Utilities */
+.premium-grid {
+  background-image: radial-gradient(circle, var(--brand-primary) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.03;
+}
+
+.premium-shadow {
+  box-shadow:
+    0 10px 15px -3px rgba(5, 43, 35, 0.03),
+    0 4px 6px -4px rgba(5, 43, 35, 0.05),
+    0 25px 50px -12px rgba(5, 43, 35, 0.08);
+}
+
+.premium-card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 20px 25px -5px rgba(5, 43, 35, 0.05),
+    0 30px 60px -15px rgba(5, 43, 35, 0.12);
+  border-color: var(--brand-primary)/10;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
 }

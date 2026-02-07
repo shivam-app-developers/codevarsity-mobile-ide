@@ -6,10 +6,10 @@ import { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'FAQ',
-  description: 'Frequently asked questions about CodeVarsity, pricing, features, and learning methodology.',
-  path: '/faq',
-  type: 'website',
+    title: 'FAQ',
+    description: 'Frequently asked questions about CodeVarsity, pricing, features, and learning methodology.',
+    path: '/faq',
+    type: 'website',
 });
 
 const faqs = [
@@ -17,97 +17,91 @@ const faqs = [
     {
         category: "General",
         question: "What is CodeVarsity?",
-        answer: "CodeVarsity is a mobile IDE and learning platform that lets you write, compile, and run real code offline on your Android device. It includes 40+ structured courses, 20+ interactive visualizers, and supports Python, Java, Go, C, and web development."
+        answer: "CodeVarsity is a professional mobile IDE and learning platform built on the Rhombus Methodology™. It enables you to write, compile, and run real code offline on your Android device. It features 50+ structured courses, 30+ interactive visualizers, and supports 15+ languages including Python, Java, Go, C, and JavaScript."
     },
     {
         category: "General",
         question: "Is CodeVarsity free?",
-        answer: "Yes! CodeVarsity is free to download with a generous free tier including the sandbox IDE and introductory lessons. Premium courses and advanced features are available via one-time purchases or subscription."
+        answer: "CodeVarsity is free to download and includes a sandbox IDE for web/scripting. You can try the first 2 layers of every course for free! Full access to courses is via one-time lifetime purchases. Advanced Workspace features (like the mobile Java/C compiler) are available via subscription with a 7-day free trial."
     },
     {
         category: "General",
         question: "Is there an iOS version?",
-        answer: "CodeVarsity is currently available on Android only. iOS support is planned for the future. Join our newsletter to be notified when it launches."
+        answer: "CodeVarsity is currently available on Android. We are actively working on the iOS version to bring high-performance offline coding to Apple devices soon."
     },
     // Offline & Technical
     {
         category: "Offline & Technical",
         question: "How does offline execution work?",
-        answer: "CodeVarsity embeds real language runtimes directly in the app: Chaquopy for Python 3.10, ECJ for Java, Yaegi for Go, and TCC for C. Everything runs locally on your device - no internet required."
+        answer: "CodeVarsity embeds professional language runtimes directly in the app: an industrial Python engine, a professional Java compiler, an advanced Go runtime, and an optimized C compiler. Everything runs locally on your device - no internet required for compiling or executing code."
     },
     {
         category: "Offline & Technical",
         question: "Can I use NumPy, Pandas, Flask, Django?",
-        answer: "Yes! Python comes pre-bundled with NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, Flask, Django, Requests, BeautifulSoup, and 20+ other libraries. All work offline."
+        answer: "Yes! Python comes pre-bundled with professional libraries: NumPy, Pandas, SciPy, Scikit-learn, Flask, Django, Requests, and more. All are fully functional without an internet connection. Note: Matplotlib and Seaborn are not supported due to mobile display limitations."
     },
     {
         category: "Offline & Technical",
         question: "Does it support interactive input?",
-        answer: "Yes! You can use input() in Python, Scanner in Java, and fmt.Scanln() in Go. Build interactive CLI programs just like on a desktop."
+        answer: "Yes! You can use input() in Python, Scanner in Java, and fmt.Scanln() in Go. Build interactive CLI programs and terminal-based tools just like on a desktop."
     },
     {
         category: "Offline & Technical",
         question: "Can I build web pages on my phone?",
-        answer: "Absolutely! Write HTML, CSS, and JavaScript with live preview. You can even use React and Vue.js with in-browser Babel compilation."
+        answer: "Absolutely! CodeVarsity includes a full web development environment for HTML, CSS, and JavaScript with live preview. You can even use modern frameworks like React and Vue.js."
     },
     // Learning
     {
         category: "Learning",
-        question: "What is Ghost Code practice?",
-        answer: "Ghost Code shows faded target code that you type along character-by-character. It builds muscle memory and helps you internalize syntax faster than just reading or watching."
+        question: "What is the Rhombus Methodology™?",
+        answer: "Our unique 7-layer learning framework takes students from high-level conceptual overviews to technical precision. It combines instructional spirals (Layers 1-3), mastery deep dives (Layer 4), and application spirals for debugging and design (Layers 5-7)."
+    },
+    {
+        category: "Learning",
+        question: "What is Guided Practice (Ghost Code™)?",
+        answer: "Guided Practice helps you learn by typing character-by-character along with 'Ghost Code' templates. This builds muscle memory and helps you master complex syntax without getting frustrated by simple typos."
     },
     {
         category: "Learning",
         question: "What are the interactive visualizers?",
-        answer: "Visualizers are animated, interactive tools that show how code works. Examples include Memory Manager (stack/heap), Execution Trace (step-by-step), Algorithm Sandbox (sorting/searching), SQL Visualizer, and more."
+        answer: "We offer 30+ visualizers to help you 'see' your code. This includes Flowcharts, Execution Trace (step-by-step), Memory Manager (Stack/Heap), SQL Database View, and Tree/Graph visualizers for data structures."
     },
     {
         category: "Learning",
-        question: "How are courses structured?",
-        answer: "Courses follow a spiral methodology: start with high-level concepts, then progressively dive deeper. Each concept uses our Explain → Visualize → Test loop to ensure understanding before moving on."
+        question: "What are Profile Stats?",
+        answer: "Your profile tracks verified coding activity: XP, total lines typed (verified, no copy-paste), Bug Squasher challenges solved, and your first-try rate. You can share your profile URL with recruiters to prove your coding competence."
     },
     // IDE Features
     {
         category: "IDE Features",
         question: "Does the keyboard have arrow keys?",
-        answer: "Yes! Our custom developer keyboard includes arrow keys, Tab, Ctrl modifier, and quick access to coding symbols like brackets, semicolons, and operators."
+        answer: "Yes! Our custom developer keyboard is designed specifically for mobile coding. It includes arrow keys, Tab, Ctrl, and quick-access symbols like brackets, semicolons, and operators."
     },
     {
         category: "IDE Features",
         question: "Can I work on multi-file projects?",
-        answer: "Yes! The workspace supports folders, multiple files, and asset management. Great for building real projects with HTML/CSS/JS or Python packages."
+        answer: "Yes! The workspace supports complex multi-file projects, folders, and asset management. You can build complete Flask web apps or Java console applications with multiple classes."
     },
     {
         category: "IDE Features",
         question: "Is there code formatting and linting?",
-        answer: "Yes! Real-time linting catches errors as you type. Auto-formatting follows language standards (PEP8 for Python, gofmt for Go, etc.)."
+        answer: "Yes! CodeVarsity features real-time linting to catch errors as you type, and auto-formatting that follows professional standards like PEP8 (Python) and gofmt (Go)."
     },
-    // Purchasing
+    // Pricing
     {
-        category: "Purchasing",
-        question: "How do I buy a course?",
-        answer: "Visit the Pricing page, select a course or subscription, and complete checkout with Cashfree. Purchases sync across devices when you log in with the same account."
+        category: "Pricing",
+        question: "How does course pricing work?",
+        answer: "Courses are one-time 'Lifetime Access' purchases ranging from $5.99 to $19.99. Once you buy a course, it's yours forever. You can sample the first 2 layers of any course for free."
     },
     {
-        category: "Purchasing",
+        category: "Pricing",
+        question: "How does the IDE Workspace subscription work?",
+        answer: "Advanced IDE features (like the Java/C compilers) require a Workspace Subscription (starting at $1.99/mo). We offer a 7-day free trial so you can test all pro features risk-free."
+    },
+    {
+        category: "Pricing",
         question: "What payment methods are accepted?",
-        answer: "We accept Credit/Debit cards (Visa, Mastercard, Amex), PayPal, UPI, and Netbanking. International payments in 140+ currencies are supported."
-    },
-    {
-        category: "Purchasing",
-        question: "Can I get a refund?",
-        answer: "Yes, we offer a 7-day refund policy for courses. If you're not satisfied, contact support within 7 days of purchase for a full refund."
-    },
-    // Comparison
-    {
-        category: "Comparison",
-        question: "How is CodeVarsity different from Pydroid?",
-        answer: "Pydroid is a Python-only sandbox. CodeVarsity offers multiple languages (Python, Java, Go, C), structured courses, interactive visualizers, and Ghost Code practice - it's a complete learning platform."
-    },
-    {
-        category: "Comparison",
-        question: "Why not just use YouTube tutorials?",
-        answer: "Watching doesn't equal learning. CodeVarsity makes you actively practice with Ghost Code, debug with Bug Squasher, and test your understanding with quizzes. Active learning beats passive watching."
+        answer: "We accept Credit/Debit cards (Visa, Mastercard, Amex), PayPal, and region-specific methods like UPI in India through our secure partner, Cashfree."
     }
 ];
 

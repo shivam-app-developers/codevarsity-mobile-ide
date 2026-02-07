@@ -20,16 +20,7 @@ const docSections = [
     items: [
       { title: "Product Overview", href: "/docs/product/product-overview" },
       { title: "Why CodeVarsity", href: "/docs/product/why-codelab" },
-      { title: "Education Guide", href: "/docs/product/education-guide" },
       { title: "Success Stories", href: "/docs/product/success-stories" },
-    ]
-  },
-  {
-    title: "Marketing",
-    items: [
-      { title: "Landing Page Hero", href: "/docs/marketing/landing-page-hero" },
-      { title: "Pricing Page", href: "/docs/marketing/pricing-page" },
-      { title: "Social Media Snippets", href: "/docs/marketing/social-media-snippets" },
     ]
   },
 ];
@@ -50,8 +41,8 @@ export default function DocsSidebar() {
                   <Link
                     href={item.href}
                     className={`block text-sm py-1 border-l-2 pl-3 transition ${isActive
-                        ? 'border-brand-primary text-brand-primary font-medium'
-                        : 'border-transparent text-gray-600 hover:text-brand-primary hover:border-brand-primary'
+                      ? 'border-brand-primary text-brand-primary font-medium'
+                      : 'border-transparent text-gray-600 hover:text-brand-primary hover:border-brand-primary'
                       }`}
                   >
                     {item.title}

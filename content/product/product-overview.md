@@ -17,6 +17,7 @@ Whether you're on a bus, at a coffee shop, or lounging at home, CodeVarsity give
 ### 1. **IDE Mode: Your Mobile Code Editor**
 
 CodeVarsity is a **fully-featured code editor** for 15+ languages:
+
 - Write Python, Java, JavaScript, C/C++, Go, and more
 - Syntax highlighting, auto-formatting, error detection
 - Custom keyboard optimized for touch-based coding
@@ -28,6 +29,7 @@ CodeVarsity is a **fully-featured code editor** for 15+ languages:
 ### 2. **Learn Mode: Interactive Courses**
 
 CodeVarsity is also an **interactive learning platform** with:
+
 - Structured courses for Python, Java, Web, and more
 - 20+ animated visualizers (see algorithms, data structures, memory in action)
 - Guided practice with "ghost code" hints
@@ -39,6 +41,7 @@ CodeVarsity is also an **interactive learning platform** with:
 ### 3. **Desktop Sync: VS Code Extension**
 
 CodeVarsity syncs with a **VS Code extension** (CodeVarsity):
+
 - Same courses on desktop and mobile
 - Progress syncs across devices
 - Start on phone, continue on computer
@@ -60,10 +63,11 @@ CodeVarsity syncs with a **VS Code extension** (CodeVarsity):
 | **Textbooks** | Structured | No interactivity, static |
 
 **CodeVarsity Fills the Gap:**
+
 - ✅ Full IDE + learning, offline
 - ✅ Hands-on, interactive (not passive)
 - ✅ Fits in your pocket
-- ✅ Affordable ($1.99–$4.99/month)
+- ✅ Accessible learning framework
 
 ### Our Unique Approach
 
@@ -83,57 +87,53 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 7. Mastery Check (prove you understand)
 ```
 
-**Result:** Retention rates **3x higher** than video tutorials. Users graduate from our courses as true practitioners, not just consumers of content.
+**Result:** Retention rates significantly higher than traditional video tutorials. Users graduate from our courses as true practitioners, not just consumers of content.
 
 ---
 
 ## 🎓 Who Uses CodeVarsity?
 
 ### 1. **Students Learning to Code**
-- Free/affordable courses
+
 - Interactive visualizers make complex topics click
 - Practice challenges build real skills
 - Gamification keeps them motivated
 
-**Example:** 15-year-old learns Python 101 in 4 weeks, goes from zero to building arcade games.
+**Example:** A beginner learns Python foundations by building interactive programs and games.
 
 ### 2. **Career Changers**
-- Structured learning paths (Python → Java → Web Development)
-- Realistic on-the-go practice (30 min/day is enough)
-- Certificates upon completion
-- Affordable ($50–$200 total vs. $500+ bootcamps)
 
-**Example:** Teacher switches to tech, learns JavaScript evenings on mobile, lands job in 6 months.
+- Structured learning paths (Python → Java → Web Development)
+- Realistic on-the-go practice
+- Certificates upon completion
+
+**Example:** A professional transitions into tech by building a strong foundation in modern programming languages.
 
 ### 3. **Competitive Programmers**
-- All languages supported (Python, C++, Java)
-- Challenge problems with leaderboards
-- Visualizers for algorithm understanding
-- Offline practice (no internet at competitions)
 
-**Example:** High school student ranks top 100 nationally using CodeVarsity to practice algorithms.
+- All major languages supported (Python, C++, Java)
+- Challenge problems to test logic
+- Visualizers for algorithm understanding
+- Offline practice for coding on the go
 
 ### 4. **Educators & Trainers**
-- Bulk licensing for classrooms
-- Student progress dashboards
-- Unified curriculum (mobile + desktop)
-- Proven pedagogy (Rhombus Methodology)
 
-**Example:** CS teacher uses CodeVarsity in classroom, sees 40% improvement in student retention vs. traditional teaching.
+- Pre-built curriculum based on the Rhombus Methodology
+- Integrated tools for classroom use
+- Unified experience across mobile and desktop
 
 ### 5. **Professionals Upskilling**
-- Learn new languages without expensive bootcamps
-- Offline practice (commute, airplane mode)
-- Cross-platform (mobile + desktop)
-- Self-paced (no rigid schedules)
 
-**Example:** Java developer learns Go to build cloud services, finishes course in 8 weeks.
+- Learn new languages and frameworks efficiently
+- Offline practice during commutes or travel
+- Self-paced learning paths
 
 ---
 
 ## 🌟 Key Features
 
 ### Mobile IDE
+
 - 🎹 Custom keyboard (optimized for coding on touch)
 - 🎯 15+ languages supported
 - 💨 Fast execution (offline, no server round-trips)
@@ -141,89 +141,44 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 - 🔧 File management & project organization
 
 ### Interactive Learning
-- 🧠 20+ animated visualizers
-- ✍️ Guided practice with hints
+
+- 🧠 30+ animated visualizers
+- ✍️ Guided practice with character-by-character "ghost code" hints
 - 🎮 Real challenges & problem sets
 - 📈 Progress tracking & gamification
-- 🏆 Leaderboards & achievements
+- 🏆 Achievements & verifiable profile stats
 
 ### Cross-Platform
-- 📱 Mobile app (Android 10+, iOS 14+)
+
+- 📱 Mobile app (Android & iOS)
 - 💻 VS Code extension
-- ☁️ Cloud sync across devices
-- 🔄 Same courses, everywhere
-
----
-
-## 💰 How It Works (Business Model)
-
-### Freemium Model
-
-**Free Plan ($0):**
-- Python & Web IDEs
-- 3 free courses (Python 101, Web 101, CS Fundamentals)
-- 5 visualizers
-- Limited challenges
-
-**Paid Subscriptions ($1.99–$4.99/month):**
-- All languages (Java, C++, Go, etc.)
-- All 20+ visualizers
-- Premium courses (300+ hours)
-- Desktop sync
-- Offline downloads
-- Priority support
-
-**Individual Courses ($5.99–$19.99):**
-- Buy single courses (lifetime access)
-- No subscription needed
-- 30-day refund guarantee
-
-### Revenue Streams
-1. **Subscriptions** (recurring)
-2. **Individual course purchases** (one-time)
-3. **Education licensing** (bulk for schools)
-4. **Enterprise training** (custom for companies)
-
----
-
-## 📊 Traction & Growth
-
-### Early Metrics
-- **50K+ downloads** (first 6 months)
-- **8.5/10 rating** on Play Store
-- **47% monthly active rate** (industry average: 20%)
-- **$250K ARR** (year 1)
-
-### Growth Drivers
-- Viral word-of-mouth (students share with friends)
-- Education partnerships (schools bulk licensing)
-- Content marketing (blog, YouTube tutorials)
-- PR in tech media
+- ☁️ Secure sync across devices
+- 🔄 Consistent learning experience everywhere
 
 ---
 
 ## 🚀 Our Mission & Vision
 
 ### Mission
-**Democratize code education.** Make professional developer tools and high-quality learning accessible to anyone, anywhere, regardless of income or geography.
 
-### Vision (5-Year Goal)
-- **10M+ global users**
+**Democratize code education.** Make professional developer tools and high-quality learning accessible to anyone, anywhere.
+
+### Vision
+
 - **50+ languages supported**
-- **K-12 integration** (coding in schools)
-- **Enterprise adoption** (companies train employees)
-- **Open-source** (release visualizer engine to community)
+- **Global K-12 integration**
+- **Comprehensive Career Transformation paths**
 
 ---
 
 ## 🏆 What Makes Us Different
 
 | Aspect | CodeVarsity | Competitors |
-|--------|---------|-------------|
+| :--- | :--- | :--- |
 | **Offline** | ✅ Full offline IDE + courses | ❌ Mostly online |
 | **Mobile-native** | ✅ Optimized for touch | ❌ Web/desktop ports |
-| **Interactive** | ✅ 20+ visualizers | ❌ Videos or static |
-| **Affordable** | ✅ $1.99–$4.99/mo | ❌ $9.99–$49.99/mo |
+| **Interactive** | ✅ 30+ visualizers | ❌ Videos or static |
+| **Accessible** | ✅ High-quality learning for all | ❌ Variable quality |
 | **Holistic** | ✅ IDE + learn + sync | ⚠️ Usually separate |
 | **Pedagogy** | ✅ Rhombus Methodology | ⚠️ Varies widely |
 
@@ -232,53 +187,41 @@ We invented a 7-layer learning framework that takes you from zero knowledge to e
 ## 🎁 CodeVarsity for Different Audiences
 
 ### For Students
+
 - Learn programming fundamentals
 - Build portfolio projects
-- Compete on leaderboards
-- All for $1.99/month
+- Compete on achievements
 
 ### For Teachers
-- Pre-built curriculum
-- Student progress dashboards
-- Classroom license (30+ seats): $100/year
-- Free for K-12 pilot schools
 
-### For Companies
-- Employee upskilling programs
-- Custom learning paths
-- Team progress tracking
-- Custom pricing
+- Pre-built curriculum
+- Integrated methodology
+- Classroom-ready tools
 
 ### For Career Changers
-- Structured bootcamp alternative
+
+- Structured learning paths
 - Real-world projects
-- Job placement help (coming 2026)
-- Affordable ($500 total vs. $15K bootcamp)
+- Verifiable skill profile
 
 ---
 
 ## 📱 Getting Started
 
-1. **Download** - Free from Google Play Store
-2. **Sign up** - Email or Google account
-3. **Choose path** - Python, Web, Java, etc.
-4. **Start free** - Explore with free plan
-5. **Subscribe** (optional) - $1.99/month for everything
-
-**No credit card required** for free plan. Money-back guarantee on first month.
+1. **Download** - Available on the Google Play Store
+2. **Sign up** - Create your account to track progress
+3. **Choose path** - Select your language: Python, Web, Java, and more
+4. **Learn & Build** - Start your coding journey today
 
 ---
 
 ## 🔗 Where to Learn More
 
 - **Website:** [CodeVarsity.app](https://CodeVarsity.app)
-- **Download:** [Google Play Store](https://play.google.com/store/apps/details?id=com.codelab)
 - **Discord:** [discord.gg/codelab](https://discord.gg/codelab)
 - **Twitter:** [@CodeVarsityApp](https://twitter.com/CodeVarsityApp)
 - **Blog:** [blog.CodeVarsity.app](https://blog.CodeVarsity.app)
 
 ---
 
-**Join thousands of learners already coding on CodeVarsity. Download today—it's free to try!** 🚀
-
-
+**Join thousands of learners already coding on CodeVarsity. Download today!** 🚀

@@ -57,6 +57,7 @@ export function SocialShareButtons({ title, description, url, imageUrl, showLabe
             target="_blank"
             rel="noopener noreferrer"
             title={`Share on ${link.name}`}
+            aria-label={`Share on ${link.name}`}
             className={`w-10 h-10 rounded-full flex items-center justify-center transition ${link.color} hover:text-white`}
           >
             <i className={`fa-brands ${link.icon}`}></i>
