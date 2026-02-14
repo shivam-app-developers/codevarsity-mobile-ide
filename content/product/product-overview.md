@@ -1,6 +1,12 @@
-# What is CodeVarsity? Product Overview
+---
+title: "Product Overview: The Portable Visual IDE"
+description: "A comprehensive look at the CodeVarsity ecosystem. Learn how we bridge the gap between passive learning and professional development on mobile."
+section: "Product"
+---
 
-## Introducing CodeVarsity: Mobile IDE Meets Interactive Learning
+# Product Overview: The Portable Visual IDE
+
+CodeVarsity: Mobile IDE Meets Interactive Learning
 
 CodeVarsity is a **professional code editor and interactive learning platform** built entirely for mobile devices. Write real code, learn new languages, and build projects—all from your phone or tablet, offline.
 
@@ -31,7 +37,15 @@ CodeVarsity is a **fully-featured code editor** for 15+ languages:
 CodeVarsity is also an **interactive learning platform** with:
 
 - Structured courses for Python, Java, Web, and more
-- 20+ animated visualizers (see algorithms, data structures, memory in action)
+- 20+ animated visualizers (see algorithms, data str---
+title: "Success Stories: CodeVarsity in Action"
+description: "Read how students, career changers, and professional developers use CodeVarsity to master computer science and build real-world applications."
+section: "Product"
+
+---
+
+# Success Stories: CodeVarsity in Action
+
 - Guided practice with "ghost code" hints
 - Real-time challenges and problem sets
 - Progress tracking with gamification (streaks, badges, leaderboards)

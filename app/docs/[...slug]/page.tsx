@@ -7,9 +7,28 @@ import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
+import JsonLd from '@/components/seo/JsonLd';
 
 // Define the documentation folders
 const docsFolders = ['user-guides', 'product'];
+
+export async function generateMetadata({ params }: { params: { slug: string[] } }): Promise<Metadata> {
+  const slugPath = params.slug.join('/');
+  const doc = getDocBySlug(slugPath);
+
+  if (!doc) {
+    return createMetadata({ title: 'Documentation Not Found' });
+  }
+
+  const { data } = doc;
+  return createMetadata({
+    title: (data as any).title || slugPath,
+    description: (data as any).description || (data as any).excerpt || `Learn more about ${slugPath} on CodeVarsity.`,
+    path: `/docs/${slugPath}`,
+  });
+}
 
 function getAllDocSlugs(): { slug: string[]; folder: string }[] {
   const slugs: { slug: string[]; folder: string }[] = [];
@@ -100,8 +119,29 @@ export default function DocPage({ params }: { params: { slug: string[] } }) {
 
   const { content, data, folder } = doc;
 
+  const techArticleSchema = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": (data as any).title || slugPath,
+    "description": (data as any).description || (data as any).excerpt || `Technical documentation for ${slugPath}.`,
+    "articleSection": getSectionTitle(folder),
+    "author": {
+      "@type": "Organization",
+      "name": "CodeVarsity Faculty"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CodeVarsity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/assets/logo-brand.png"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <JsonLd data={techArticleSchema} />
       <Navbar />
       <div className="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex gap-12">
 

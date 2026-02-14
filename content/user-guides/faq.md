@@ -1,4 +1,12 @@
-# Frequently Asked Questions (FAQ)
+```
+---
+title: "FAQ: Frequently Asked Questions"
+description: "Find answers to common questions about CodeVarsity, including offline support, pricing, language features, and institutional use cases."
+section: "User Guides"
+---
+
+# FAQ: Frequently Asked Questions
+ (FAQ)
 
 Got questions? Here are answers to the most common ones.
 
@@ -23,14 +31,27 @@ Got questions? Here are answers to the most common ones.
 - **Per language runtime:** 150-300MB (download once, use offline)
 - **Courses:** 20-50MB bundled, more available as downloads
 
-**Tip:** Delete unused language runtimes to free space (Settings → Languages → Manage).
+**Tip:** Delete---
+title: "Supported Languages & Runtimes"
+description: "Explore the 15+ programming languages supported by CodeVarsity, including Python, Java, C++, Go, and SQL, all with offline execution."
+section: "User Guides"
+---
+
+# Supported Languages & Runtimes
+ to free space (Settings → Languages → Manage).
 
 ### Q: Does CodeVarsity work offline?
 
 **A:**
 
 - ✅ **Offline:** Code editor, running Python/Java/C, integrated courses, visualizers
-- ❌ **Requires internet:** Downloading runtimes, syncing progress, premium course access, GitHub features
+- ❌ **Requires internet:** Downloading runtimes, syncing progress, premium course access, GitHub---
+title: "Features Overview"
+description: "Learn about the core features of CodeVarsity, including the professional offline IDE, interactive visualizers, and guided coding practice."
+section: "User Guides"
+---
+
+# Features Overview
 
 **Recommendation:** Download your language runtime on WiFi, then use offline.
 
@@ -145,7 +166,14 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 **A:**
 
 - **Python:** ~250MB (includes NumPy, Pandas, Scikit-learn)
-- **Java:** ~150MB (includes Professional Compiler + Android SDK)
+- **Java:** ~150MB---
+title: "IDE Guide: Professional Mobile Development"
+description: "Master the CodeVarsity mobile IDE. Learn about the file system, custom coding keyboard, offline compilers, and integrated terminal."
+section: "User Guides"
+---
+
+# IDE Guide: Professional Mobile Development
+droid SDK)
 - **C/C++:** ~200MB (Optimized compiler + NDK headers)
 - **Go:** ~100MB (Advanced Go runtime)
 
@@ -389,7 +417,13 @@ See [supported-languages.md](./supported-languages.md) for details on each.
 
 - ✅ **Android app** on Chrome OS (Google Play Store)
 - ✅ **VS Code extension** on Chromebook (full desktop experience)
-- Recommend: VS Code extension for better experience
+- Recommend: VS Code extension---
+title: "Learn Mode: Mastering Computer Science"
+description: "A deep dive into CodeVarsity's unique 'Learn Mode'. How our guided practice, visualizers, and Rhombus Methodology help you master coding faster."
+section: "User Guides"
+---
+
+# Learn Mode: Mastering Computer Science
 
 ---
 

@@ -47,9 +47,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     "datePublished": post.frontmatter.date,
     "author": {
       "@type": "Person",
-      "name": post.frontmatter.author
+      "name": post.frontmatter.author || "CodeVarsity Team"
     },
-    "articleBody": post.content.substring(0, 150) + "..."
+    "image": post.frontmatter.coverImage || `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "CodeVarsity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${process.env.NEXT_PUBLIC_SITE_URL}/assets/logo-brand.png`
+      }
+    },
+    "articleBody": post.content.substring(0, 200) + "..."
   };
 
   return (

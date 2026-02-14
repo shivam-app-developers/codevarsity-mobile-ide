@@ -10,6 +10,7 @@ import ComparisonTable from '@/components/landing/ComparisonTable';
 import FAQSection from '@/components/landing/FAQSection';
 import BlogRow from '@/components/landing/BlogRow';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
+import PAASection from '@/components/landing/PAASection';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/mdx';
 import JsonLd from '@/components/seo/JsonLd';
@@ -51,6 +52,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <PAASection />
 
         {/* AEO: DEFINITION BLOCK */}
         <section className="py-12 bg-white border-b border-gray-100">

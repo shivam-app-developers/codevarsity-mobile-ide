@@ -1,6 +1,10 @@
-# Getting Started with CodeVarsity
+---
+title: "Getting Started with CodeVarsity"
+description: "Learn how to download, install, and launch your first mobile coding project. A complete guide to setting up your mobile IDE and choosing your first language."
+section: "User Guides"
+---
 
-Welcome to CodeVarsity! This guide will help you download, install, and launch your first coding project on your mobile device.
+# Getting Started with CodeVarsity
 
 ---
 
