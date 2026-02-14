@@ -8,22 +8,30 @@ import { UserStatsDocument, UserStatsSummary, ACHIEVEMENT_DEFINITIONS, Difficult
  */
 export async function getUserStats(userId: string): Promise<UserStatsSummary | null> {
   try {
-    // Check main user document first (Standard Mobile Schema)
-    const userSnap = await getDoc(doc(db, 'users', userId));
-    if (userSnap.exists()) {
-      const data = userSnap.data();
-      if (data.stats) {
-        return convertToSummary(data.stats as UserStatsDocument);
-      }
+    // 1. Try public subcollection first (Standard Mobile Sync & Publicly Readable)
+    // match /users/{userId}/profile/{document=**} { allow read: if true; }
+    const publicRef = doc(db, 'users', userId, 'profile', 'stats');
+    const publicSnap = await getDoc(publicRef);
+
+    if (publicSnap.exists()) {
+      const data = publicSnap.data() as UserStatsDocument;
+      return convertToSummary(data);
     }
 
-    // Fallback to subcollection (Legacy or specialized storage)
-    const docRef = doc(db, 'users', userId, 'profile', 'stats');
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      const data = docSnap.data() as UserStatsDocument;
-      return convertToSummary(data);
+    // 2. Fallback to main user document (Authenticated/Private)
+    // match /users/{userId} { allow read: if isOwner(userId); }
+    // Only works if the caller has permissions (e.g. user viewing their own account)
+    try {
+      const userSnap = await getDoc(doc(db, 'users', userId));
+      if (userSnap.exists()) {
+        const data = userSnap.data();
+        if (data.stats) {
+          return convertToSummary(data.stats as UserStatsDocument);
+        }
+      }
+    } catch (permError) {
+      // Ignore permission errors - it just means we can't access the private root doc
+      console.log('Skipping private root doc check due to permissions');
     }
 
     return null;

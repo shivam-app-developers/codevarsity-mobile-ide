@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </section>
 
-        <VSCodeSection />
+        {/* <VSCodeSection /> */}
 
         {/* OBJECTIONS / ACADEMIC RIGOR */}
         <section className="py-24 bg-white border-t border-gray-100">
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
               <div className="bg-white p-10 rounded-[32px] border border-brand-primary/5 shadow-xl shadow-brand-primary/5 hover:-translate-y-2 transition-transform">
                 <p className="font-black text-brand-primary mb-4 text-lg">Offline Fidelity</p>
-                <p className="text-gray-500 font-medium leading-relaxed">We don't cheat with wrappers. Experience desktop-grade compilers for Java, C, and Go directly on your device.</p>
+                <p className="text-gray-500 font-medium leading-relaxed">We don't cheat with wrappers. Experience desktop-grade compilers for Java 21, Python, and Go directly on your device.</p>
               </div>
               <div className="bg-white p-10 rounded-[32px] border border-brand-primary/5 shadow-xl shadow-brand-primary/5 hover:-translate-y-2 transition-transform">
                 <p className="font-black text-brand-primary mb-4 text-lg">Academic Support</p>

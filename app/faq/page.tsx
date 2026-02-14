@@ -17,12 +17,12 @@ const faqs = [
     {
         category: "General",
         question: "What is CodeVarsity?",
-        answer: "CodeVarsity is a professional mobile IDE and learning platform built on the Rhombus Methodology™. It enables you to write, compile, and run real code offline on your Android device. It features 50+ structured courses, 30+ interactive visualizers, and supports 15+ languages including Python, Java, Go, C, and JavaScript."
+        answer: "CodeVarsity is a professional mobile IDE and learning platform built on the Rhombus Methodology™. It enables you to write, compile, and run real code offline on your Android device. It features 50+ structured courses, 30+ interactive visualizers, and supports 15+ languages including Python, Java 21, Go, and Web languages (HTML/CSS/JS)."
     },
     {
         category: "General",
         question: "Is CodeVarsity free?",
-        answer: "CodeVarsity is free to download and includes a sandbox IDE for web/scripting. You can try the first 2 layers of every course for free! Full access to courses is via one-time lifetime purchases. Advanced Workspace features (like the mobile Java/C compiler) are available via subscription with a 7-day free trial."
+        answer: "CodeVarsity is free to download and includes a sandbox IDE for web/scripting. You can try the first 2 layers of every course for free! Full access to courses is via one-time lifetime purchases. Advanced Workspace features (like the mobile Java 21 compiler) are available via subscription with a 7-day free trial."
     },
     {
         category: "General",
@@ -33,7 +33,7 @@ const faqs = [
     {
         category: "Offline & Technical",
         question: "How does offline execution work?",
-        answer: "CodeVarsity embeds professional language runtimes directly in the app: an industrial Python engine, a professional Java compiler, an advanced Go runtime, and an optimized C compiler. Everything runs locally on your device - no internet required for compiling or executing code."
+        answer: "CodeVarsity embeds professional language runtimes directly in the app: an industrial Python 3.10 engine, a professional Java 21 compiler, an advanced Go runtime, and a live-preview Web environment. Everything runs locally on your device - no internet required for compiling or executing code."
     },
     {
         category: "Offline & Technical",
@@ -96,7 +96,7 @@ const faqs = [
     {
         category: "Pricing",
         question: "How does the IDE Workspace subscription work?",
-        answer: "Advanced IDE features (like the Java/C compilers) require a Workspace Subscription (starting at $1.99/mo). We offer a 7-day free trial so you can test all pro features risk-free."
+        answer: "Advanced IDE features (like the Java 21 and Python compilers) require a Workspace Subscription (starting at $1.99/mo). We offer a 7-day free trial so you can test all pro features risk-free."
     },
     {
         category: "Pricing",

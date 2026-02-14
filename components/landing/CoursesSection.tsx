@@ -130,7 +130,7 @@ export default function CoursesSection() {
               </div>
 
               <div className="pt-5 border-t border-brand-primary/5 flex items-center justify-between">
-                <span className="text-[10px] font-black text-brand-primary/40 uppercase tracking-widest">Java 17 Compiler</span>
+                <span className="text-[10px] font-black text-brand-primary/40 uppercase tracking-widest">Java 21 Compiler</span>
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>

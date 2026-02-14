@@ -26,8 +26,8 @@ export default function SandboxSection() {
               <div className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors"><i className="fa-brands fa-java text-red-400 text-xl"></i></div>
                 <div>
-                  <span className="block text-sm font-black">Java 17</span>
-                  <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider">JVM Runtime</span>
+                  <span className="block text-sm font-black">Java 21</span>
+                  <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider">LTS Runtime</span>
                 </div>
               </div>
               <div className="flex items-center gap-4 group">
@@ -57,25 +57,25 @@ export default function SandboxSection() {
             </div>
           </div>
 
-          <div className="bg-[#020617] rounded-[2.5rem] p-8 border border-white/10 shadow-[0_48px_100px_-20px_rgba(0,0,0,0.5)]">
-            <div className="flex gap-2 mb-6">
-              <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-              <div className="ml-auto text-[10px] font-black text-white/20 uppercase tracking-widest">Compiler Output</div>
+          <div className="flex justify-center md:justify-end gap-4 sm:gap-8 relative">
+            <div className="relative w-[45%] aspect-[1080/2100] bg-gray-900 rounded-[1.5rem] sm:rounded-[2.5rem] border-[4px] sm:border-[8px] border-white/5 shadow-[0_48px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden transform md:-rotate-1 md:hover:rotate-0 transition-transform duration-500">
+              <img
+                src="/assets/workspace.jpg"
+                alt="CodeVarsity Professional Workspace - Editor and Terminal"
+                className="w-full h-full object-fill"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none"></div>
             </div>
-            <div className="font-mono text-sm space-y-2">
-              <div className="flex gap-3">
-                <span className="text-brand-accent font-bold">$</span>
-                <span className="text-white/40">python3 scripts/analyze.py</span>
-              </div>
-              <div className="text-blue-400 ml-6">import pandas as pd</div>
-              <div className="text-blue-400 ml-6">data = pd.read_csv('results.csv')</div>
-              <div className="text-white/60 ml-6">print(data.describe())</div>
-              <div className="bg-white/5 p-4 rounded-xl mt-4 border border-white/5">
-                <div className="text-emerald-400 font-bold mb-1">✓ Execution Successful</div>
-                <div className="text-white/40 text-[10px]">Memory: 14.2MB | Time: 0.02s</div>
-              </div>
+
+            <div className="relative w-[45%] aspect-[1080/2100] mt-12 sm:mt-20 bg-gray-900 rounded-[1.5rem] sm:rounded-[2.5rem] border-[4px] sm:border-[8px] border-white/5 shadow-[0_48px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden transform md:rotate-1 md:hover:rotate-0 transition-transform duration-500 z-10">
+              <img
+                src="/assets/keyboard.jpg"
+                alt="CodeVarsity Institutional Keyboard - Optimized for Coding"
+                className="w-full h-full object-fill"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none"></div>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@
 * **Action:** Create `https://CodeVarsity.app/llms.txt`.
 * **Content:**
   * Product: CodeVarsity Mobile IDE.
-  * Core Capabilities: Offline Python 3.10/Java 17 Compiler, VS Code Sync (CodeDock), Rhombus Learning Method.
+  * Core Capabilities: Offline Python 3.10/Java 21 Compiler, VS Code Sync (CodeDock), Rhombus Learning Method.
   * Platform: Android (Native).
   * Key Differentiator: Local file system access and localhost networking.
 
@@ -115,4 +115,3 @@
 * [ ] Draft one "Fixing Android Python Errors" article.
 * [ ] Answer 3 Quora/StackExchange questions related to mobile coding.
 * [ ] Publish one "Comparison" article on Dev.to.
-

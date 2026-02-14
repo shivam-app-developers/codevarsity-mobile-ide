@@ -5,7 +5,7 @@ export default function TestimonialsSection() {
         {
             name: "Arjun Mehta",
             role: "Engineering Student",
-            quote: "CodeVarsity's offline compiler was a lifesaver during my commute. I mastered Java 17 and built my first project entirely on my phone. The visualizers made recursion finally click for me.",
+            quote: "CodeVarsity's offline compiler was a lifesaver during my commute. I mastered Java 21 and built my first project entirely on my phone. The visualizers made recursion finally click for me.",
             avatar: "AM",
             gradient: "from-blue-500 to-indigo-600"
         },

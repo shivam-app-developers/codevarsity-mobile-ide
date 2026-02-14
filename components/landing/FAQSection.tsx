@@ -6,7 +6,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "How does professional offline execution work?",
-      answer: "CodeVarsity embeds professional runtimes for Python, Java, Go, and C directly in the app. No internet required for compiling or running code."
+      answer: "CodeVarsity embeds professional runtimes for Python 3.10, Java 21, Go, and HTML/CSS directly in the app. No internet required for compiling or running code."
     },
     {
       question: "Can I use NumPy, Pandas, and professional frameworks?",
@@ -18,7 +18,7 @@ export default function FAQSection() {
     },
     {
       question: "Is there a free trial for the IDE?",
-      answer: "Yes! Professional features like the Java/C compilers come with a 7-day free trial through our Workspace Subscriptions ($1.99/mo)."
+      answer: "Yes! Professional features like the Java 21 and Python industrial libraries come with a 7-day free trial through our Workspace Subscriptions ($1.99/mo)."
     },
     {
       question: "How do I prove my technical competence?",
