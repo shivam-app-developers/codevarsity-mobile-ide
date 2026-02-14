@@ -20,7 +20,7 @@ export default function HowItWorks() {
           <div className="group bg-brand-primary/[0.02] p-10 rounded-[32px] border border-brand-primary/5 hover:border-brand-primary/10 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/5">
             <div className="w-16 h-16 mb-8 rounded-2xl bg-brand-primary text-white flex items-center justify-center text-2xl font-black shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform">2</div>
             <h3 className="text-2xl font-bold text-brand-primary mb-4 tracking-tight">Guided Practice</h3>
-            <p className="text-gray-600 leading-relaxed font-medium">Write and compile code with <strong>real offline runtimes</strong>. <strong>Ghost Code™</strong> builds muscle memory through directed typing sessions.</p>
+            <p className="text-gray-600 leading-relaxed font-medium">Write and compile code with <strong>real offline runtimes</strong>. <strong>Guided Practice</strong> builds muscle memory through directed typing sessions.</p>
           </div>
 
           <div className="group bg-brand-primary/[0.02] p-10 rounded-[32px] border border-brand-primary/5 hover:border-brand-primary/10 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/5">

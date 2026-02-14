@@ -5,10 +5,10 @@ import { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Refund Policy',
-  description: '7-day money-back guarantee on courses and 48-hour refund window on subscriptions. Simple, transparent refund policy.',
-  path: '/refund',
-  type: 'website',
+    title: 'Refund Policy',
+    description: '7-day money-back guarantee on courses and 48-hour refund window on subscriptions. Simple, transparent refund policy.',
+    path: '/refund',
+    type: 'website',
 });
 
 export default function RefundPage() {
@@ -74,7 +74,7 @@ export default function RefundPage() {
                         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Request a Refund</h2>
                         <div className="bg-gray-50 rounded-xl p-6">
                             <ol className="list-decimal pl-6 text-gray-600 space-y-3">
-                                <li>Email <a href="mailto:support@shivamappstudio.com" className="text-brand-primary hover:underline">support@shivamappstudio.com</a></li>
+                                <li>Email <a href="mailto:shivamappstudio@gmail.com" className="text-brand-primary hover:underline">shivamappstudio@gmail.com</a></li>
                                 <li>Include your order ID or transaction reference</li>
                                 <li>Briefly state the reason for your refund request</li>
                                 <li>Our team will review and respond within 24-48 hours</li>

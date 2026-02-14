@@ -10,6 +10,7 @@ import { getUserPurchases, hasActiveSubscription, Purchases } from '@/lib/purcha
 import { getUserStats } from '@/lib/userStats';
 import { UserStatsSummary } from '@/types/userStats';
 import coursesMetadata from '@/codelab_docs/courses_metadata.json';
+import { getLanguageIcon } from '@/lib/icons';
 
 interface Course {
     id: string;
@@ -28,7 +29,7 @@ export default function AccountPage() {
 
     useEffect(() => {
         if (!authLoading && !user) {
-            router.push('/auth?returnUrl=/account');
+            router.replace('/auth?returnUrl=/account');
             return;
         }
 
@@ -169,18 +170,23 @@ export default function AccountPage() {
 
                     {purchasedCourses.length > 0 ? (
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {purchasedCourses.map(course => (
-                                <div key={course.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                                    <span className="text-3xl">{course.icon}</span>
-                                    <div className="flex-1">
-                                        <p className="font-medium text-gray-900">{course.title}</p>
-                                        <p className="text-sm text-gray-500">{course.track}</p>
+                            {purchasedCourses.map(course => {
+                                const langIcon = getLanguageIcon((course as any).language);
+                                return (
+                                    <div key={course.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
+                                        <div className={`w-10 h-10 rounded-lg bg-white flex items-center justify-center text-xl ${langIcon.color} shadow-sm`}>
+                                            <i className={langIcon.icon}></i>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="font-medium text-gray-900">{course.title}</p>
+                                            <p className="text-sm text-gray-500">{course.track}</p>
+                                        </div>
+                                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">
+                                            Owned
+                                        </span>
                                     </div>
-                                    <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">
-                                        Owned
-                                    </span>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     ) : (
                         <div className="text-center py-12">

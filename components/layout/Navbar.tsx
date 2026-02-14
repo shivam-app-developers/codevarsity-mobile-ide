@@ -36,7 +36,6 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Courses', href: '/#courses' },
     { label: 'Visualizers', href: '/#visualizers' },
-    { label: 'Pricing', href: '/pricing' },
     { label: 'Docs', href: '/docs' },
     { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '/faq' },
@@ -50,11 +49,11 @@ export default function Navbar() {
             <div className="absolute -inset-2 bg-brand-primary/5 rounded-lg blur group-hover:bg-brand-primary/10 transition-colors"></div>
             <img
               src="/assets/logo-brand.png"
-              alt="CodeVarsity Logo"
+              alt="CodeVarsity - Professional Mobile IDE"
               className="w-10 h-10 relative z-10 drop-shadow-sm"
             />
           </div>
-          <div className="hidden sm:block">
+          <div className="block">
             <span className="block font-black text-xl text-brand-primary tracking-tight leading-none mb-0.5">CodeVarsity</span>
             <span className="block text-[8px] font-black text-brand-primary/60 uppercase tracking-[0.2em]">Institutional IDE</span>
           </div>
@@ -153,17 +152,12 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <Link
-              href="/auth"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-primary"
-            >
-              Sign In
-            </Link>
+            null
           )}
 
-          <Link href="#" className="gradient-bg text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90">
+          <a href="https://play.google.com/store/apps/details?id=com.shivam_app_studio.codelab&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="gradient-bg text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90">
             Get App
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -212,23 +206,19 @@ export default function Navbar() {
                 </button>
               </>
             ) : (
-              <Link
-                href="/auth"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-2 text-sm font-medium text-brand-primary hover:bg-gray-50 rounded-lg"
-              >
-                Sign In
-              </Link>
+              null
             )}
           </div>
 
-          <Link
-            href="#"
+          <a
+            href="https://play.google.com/store/apps/details?id=com.shivam_app_studio.codelab&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-4 py-2 gradient-bg text-white rounded-lg text-sm font-medium text-center hover:opacity-90"
           >
             Get App
-          </Link>
+          </a>
         </div>
       )}
     </nav>

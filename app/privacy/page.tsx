@@ -5,10 +5,10 @@ import { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Privacy Policy',
-  description: 'How we collect, use, and protect your data on CodeVarsity. Learn about our privacy practices and your rights.',
-  path: '/privacy',
-  type: 'website',
+    title: 'Privacy Policy',
+    description: 'How we collect, use, and protect your data on CodeVarsity. Learn about our privacy practices and your rights.',
+    path: '/privacy',
+    type: 'website',
 });
 
 export default function PrivacyPage() {
@@ -106,8 +106,8 @@ export default function PrivacyPage() {
                         <h2 className="text-xl font-bold text-gray-900 mb-4">9. Contact Us</h2>
                         <p className="text-gray-600 mb-4">
                             For privacy-related questions, contact us at{' '}
-                            <a href="mailto:privacy@shivamappstudio.com" className="text-brand-primary hover:underline">
-                                privacy@shivamappstudio.com
+                            <a href="mailto:shivamappstudio@gmail.com" className="text-brand-primary hover:underline">
+                                shivamappstudio@gmail.com
                             </a>
                             {' '}or visit our <Link href="/contact" className="text-brand-primary hover:underline">Contact page</Link>.
                         </p>

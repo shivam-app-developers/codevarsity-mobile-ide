@@ -1,6 +1,6 @@
 export default function VSCodeSection() {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24 bg-slate-50 relative border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 export const siteConfig = {
   name: 'CodeVarsity',
+  shortName: 'CodeVarsity', // Used for site name in search
   description: 'Pro mobile IDE & coding courses. Learn Python, Java, JS, SQL, Go & C offline with 30+ interactive visualizers and Rhombus Methodology™.',
   url: 'https://codevarsity.shivamappstudio.com',
   ogImage: 'https://codevarsity.shivamappstudio.com/og-image.png',
@@ -26,6 +27,20 @@ export const siteConfig = {
     twitter: 'https://twitter.com/shivamappstudio',
     github: 'https://github.com/shivam-app-developers/codevarsity-mobile-ide',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/assets/logo-brand.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/logo-brand.png', sizes: '48x48', type: 'image/png' },
+      { url: '/assets/logo-brand.png', sizes: '96x96', type: 'image/png' },
+      { url: '/assets/logo-brand.png', sizes: '144x144', type: 'image/png' },
+      { url: '/assets/logo-brand.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/assets/logo-brand.png',
+    apple: [
+      { url: '/assets/logo-brand.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 interface CreateMetadataProps {
@@ -49,7 +64,7 @@ export function createMetadata({
   publishedTime,
   author,
 }: CreateMetadataProps): Metadata {
-  const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
+  const fullTitle = title || 'CodeVarsity: Learn To Code In Mobile IDE';
   const fullDescription = description || siteConfig.description;
   const url = `${siteConfig.url}${path}`;
 
@@ -96,6 +111,7 @@ export function createMetadata({
         'max-snippet': -1,
       },
     },
+    icons: siteConfig.icons,
   };
 
   return metadata;

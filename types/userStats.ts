@@ -12,10 +12,16 @@ export interface LearningStats {
   linesTyped: number; // Total lines of code typed (not pasted)
 }
 
+export interface DifficultyBreakdown {
+  easy: number;
+  medium: number;
+  hard: number;
+}
+
 // Problem Solving Stats
 export interface ProblemSolvingStats {
-  bugSquasherCompleted: number; // Debugging challenges completed
-  codeRefactorCompleted: number; // Code improvement challenges completed
+  bugSquasherCompleted: number | DifficultyBreakdown; // Debugging challenges completed
+  codeRefactorCompleted: number | DifficultyBreakdown; // Code improvement challenges completed
   errorsFixed: number; // Total syntax and runtime errors resolved
 }
 
@@ -49,16 +55,16 @@ export interface UserStatsDocument {
   displayName: string;
   email: string;
   photoURL?: string;
-  
+
   // All stats
   learning: LearningStats;
   problemSolving: ProblemSolvingStats;
   building: BuildingStats;
   consistency: ConsistencyStats;
-  
+
   // Achievements
   achievements: Achievement[];
-  
+
   // Timestamps
   createdAt: Timestamp;
   lastActivityAt: Timestamp;

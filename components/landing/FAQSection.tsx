@@ -31,7 +31,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-background-soft">
+    <section id="faq" className="py-24 bg-slate-50 border-t border-gray-100">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-end mb-16">
           <div>

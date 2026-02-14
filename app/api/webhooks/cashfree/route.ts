@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { db } from '@/lib/firebase';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, arrayUnion } from 'firebase/firestore';
 
 export const dynamic = 'force-dynamic';
 
@@ -47,7 +47,7 @@ async function handlePaymentSuccess(orderData: any, userId: string) {
     // Create purchase record
     const purchaseId = `${userId}_${orderData.order_id}`;
     const purchaseRef = doc(db, 'purchases', purchaseId);
-    
+
     await setDoc(purchaseRef, {
       userId,
       orderId: orderData.order_id,
@@ -64,22 +64,32 @@ async function handlePaymentSuccess(orderData: any, userId: string) {
     });
 
     // Update user subscription status
-    const userRef = doc(db, 'users', userId);
-    const userDoc = await getDoc(userRef);
-    
-    if (userDoc.exists()) {
-      await setDoc(
-        userRef,
-        {
-          subscription: {
-            status: 'active',
-            purchasedAt: new Date(),
-            orderId: orderData.order_id,
-          },
-        },
-        { merge: true }
-      );
+    // Update user purchases status (Standard Mobile Schema)
+    const product_id = orderData.course_id || orderData.product_id;
+    const isCourse = product_id && !product_id.startsWith('sub_') && product_id !== 'lifetime_power_pack';
+
+    const updateData: any = {
+      purchases: {
+        lastSyncedAt: new Date(),
+      }
+    };
+
+    if (isCourse) {
+      updateData.purchases.purchasedCourses = arrayUnion(product_id);
+    } else if (product_id) {
+      updateData.purchases.activeSubscription = product_id;
+
+      // Calculate expiry for non-lifetime subs
+      if (product_id !== 'lifetime_power_pack') {
+        const expiresAt = new Date();
+        expiresAt.setMonth(expiresAt.getMonth() + 1); // Default to monthly
+        updateData.purchases.subscriptionExpiresAt = expiresAt;
+      } else {
+        updateData.purchases.subscriptionExpiresAt = null;
+      }
     }
+
+    await setDoc(doc(db, 'users', userId), updateData, { merge: true });
 
     console.log(`Payment processed for user ${userId}, order ${orderData.order_id}`);
     return true;

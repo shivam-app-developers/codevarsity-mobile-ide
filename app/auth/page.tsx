@@ -17,12 +17,12 @@ function AuthContent() {
 
     useEffect(() => {
         if (!loading && user) {
-            router.push(returnUrl);
+            router.replace(returnUrl);
         }
     }, [user, loading, router, returnUrl]);
 
     const handleSuccess = () => {
-        router.push(returnUrl);
+        router.replace(returnUrl);
     };
 
     const handleError = (error: Error) => {

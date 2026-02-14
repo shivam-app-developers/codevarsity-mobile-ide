@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export default function CoursesSection() {
   return (
-    <section id="courses" className="py-24 bg-background-soft">
+    <section id="courses" className="py-24 bg-slate-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-5xl font-black text-brand-primary mb-6 tracking-tight">Complete <span className="text-brand-secondary/80">Curriculum</span></h2>
@@ -13,7 +15,7 @@ export default function CoursesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* PYTHON */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/python" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -71,10 +73,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* JAVA */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/java" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -132,10 +134,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* WEB */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/web" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -193,10 +195,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* GO */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/go" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -254,13 +256,13 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Universal Tracks Row 2 */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* SQL */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/sql" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -311,10 +313,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* C Language */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/c" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -365,10 +367,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Groovy */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/groovy" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -419,10 +421,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Clojure */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/clojure" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -473,7 +475,7 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Desktop Tracks */}
@@ -484,7 +486,7 @@ export default function CoursesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {/* C++ */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/cpp" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -529,10 +531,10 @@ export default function CoursesSection() {
                 <span className="text-[9px] font-black text-brand-secondary/60 uppercase tracking-widest">VS Code Exclusive</span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* C# */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/specializations" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -577,10 +579,10 @@ export default function CoursesSection() {
                 <span className="text-[9px] font-black text-brand-secondary/60 uppercase tracking-widest">Enterprise Track</span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* SPRING BOOT */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/specializations" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -625,10 +627,10 @@ export default function CoursesSection() {
                 <span className="text-[9px] font-black text-brand-secondary/60 uppercase tracking-widest">Backend Master</span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* MERN */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/specializations" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -673,10 +675,10 @@ export default function CoursesSection() {
                 <span className="text-[9px] font-black text-brand-secondary/60 uppercase tracking-widest">Modern Web</span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* KOTLIN */}
-          <div className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover">
+          <Link href="/tracks/kotlin" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -721,7 +723,7 @@ export default function CoursesSection() {
                 <span className="text-[9px] font-black text-brand-secondary/60 uppercase tracking-widest">App Development</span>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

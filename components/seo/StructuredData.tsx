@@ -23,12 +23,20 @@ export default function StructuredData() {
         },
     };
 
+    const websiteSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'CodeVarsity',
+        alternateName: 'CodeVarsity Mobile IDE',
+        url: siteConfig.url,
+    };
+
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'Shivam App Studio',
-        url: 'https://shivamappstudio.com',
-        logo: `${siteConfig.url}/logo.png`,
+        name: 'CodeVarsity',
+        url: siteConfig.url,
+        logo: `${siteConfig.url}/assets/logo-brand.png`,
         sameAs: [
             siteConfig.links.twitter,
             siteConfig.links.github,
@@ -37,6 +45,10 @@ export default function StructuredData() {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}

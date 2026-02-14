@@ -1,6 +1,6 @@
 import { doc, getDoc, setDoc, serverTimestamp, Timestamp } from 'firebase/firestore';
 import { db } from './firebase';
-import { UserStatsDocument, UserStatsSummary, ACHIEVEMENT_DEFINITIONS } from '@/types/userStats';
+import { UserStatsDocument, UserStatsSummary, ACHIEVEMENT_DEFINITIONS, DifficultyBreakdown } from '@/types/userStats';
 
 /**
  * Fetch user stats from Firestore
@@ -8,15 +8,25 @@ import { UserStatsDocument, UserStatsSummary, ACHIEVEMENT_DEFINITIONS } from '@/
  */
 export async function getUserStats(userId: string): Promise<UserStatsSummary | null> {
   try {
+    // Check main user document first (Standard Mobile Schema)
+    const userSnap = await getDoc(doc(db, 'users', userId));
+    if (userSnap.exists()) {
+      const data = userSnap.data();
+      if (data.stats) {
+        return convertToSummary(data.stats as UserStatsDocument);
+      }
+    }
+
+    // Fallback to subcollection (Legacy or specialized storage)
     const docRef = doc(db, 'users', userId, 'profile', 'stats');
     const docSnap = await getDoc(docRef);
 
-    if (!docSnap.exists()) {
-      return null;
+    if (docSnap.exists()) {
+      const data = docSnap.data() as UserStatsDocument;
+      return convertToSummary(data);
     }
 
-    const data = docSnap.data() as UserStatsDocument;
-    return convertToSummary(data);
+    return null;
   } catch (error) {
     console.error('Error fetching user stats:', error);
     return null;
@@ -34,39 +44,41 @@ export async function initializeUserStats(userId: string, email: string, display
       displayName: displayName || email?.split('@')[0] || 'Learner',
       email,
       photoURL,
-      
+
       learning: {
         coursesCompleted: 0,
         xp: 0,
         linesTyped: 0
       },
-      
+
       problemSolving: {
         bugSquasherCompleted: 0,
         codeRefactorCompleted: 0,
         errorsFixed: 0
       },
-      
+
       building: {
         projectsCreated: 0,
         capstonesCompleted: 0,
         scramblesSolved: 0
       },
-      
+
       consistency: {
         currentStreak: 0,
         longestStreak: 0,
         practiceSessionsCompleted: 0,
         firstTryRate: 0
       },
-      
+
       achievements: [],
-      
+
       createdAt: now,
       lastActivityAt: now,
       statsUpdatedAt: now
     };
 
+    await setDoc(doc(db, 'users', userId), { stats: statsDoc }, { merge: true });
+    // Also maintain subcollection for now if needed by other services
     await setDoc(doc(db, 'users', userId, 'profile', 'stats'), statsDoc);
     return true;
   } catch (error) {
@@ -79,6 +91,11 @@ export async function initializeUserStats(userId: string, email: string, display
  * Convert UserStatsDocument to UserStatsSummary for display
  */
 function convertToSummary(stats: UserStatsDocument): UserStatsSummary {
+  const getCount = (val: number | DifficultyBreakdown): number => {
+    if (typeof val === 'number') return val;
+    return (val.easy || 0) + (val.medium || 0) + (val.hard || 0);
+  };
+
   return {
     displayName: stats.displayName,
     photoURL: stats.photoURL,
@@ -87,15 +104,15 @@ function convertToSummary(stats: UserStatsDocument): UserStatsSummary {
     linesTyped: stats.learning.linesTyped,
     currentStreak: stats.consistency.currentStreak,
     achievements: stats.achievements,
-    
-    bugSquasherCompleted: stats.problemSolving.bugSquasherCompleted,
-    codeRefactorCompleted: stats.problemSolving.codeRefactorCompleted,
+
+    bugSquasherCompleted: getCount(stats.problemSolving.bugSquasherCompleted),
+    codeRefactorCompleted: getCount(stats.problemSolving.codeRefactorCompleted),
     errorsFixed: stats.problemSolving.errorsFixed,
-    
+
     projectsCreated: stats.building.projectsCreated,
     capstonesCompleted: stats.building.capstonesCompleted,
     scramblesSolved: stats.building.scramblesSolved,
-    
+
     longestStreak: stats.consistency.longestStreak,
     practiceSessionsCompleted: stats.consistency.practiceSessionsCompleted,
     firstTryRate: stats.consistency.firstTryRate

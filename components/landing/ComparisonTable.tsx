@@ -1,6 +1,6 @@
 export default function ComparisonTable() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-slate-50 border-t border-gray-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl font-black text-brand-primary text-center mb-16 tracking-tight">The Institutional <span className="text-brand-secondary/80">Edge</span></h2>
         <div className="bg-white rounded-[32px] overflow-hidden border border-brand-primary/10 shadow-[0_32px_64px_-16px_rgba(5,43,35,0.08)]">

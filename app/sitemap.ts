@@ -93,7 +93,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogSitemap, ...docSitemap];
+  const tracks = [
+    'python', 'java', 'web', 'go', 'kotlin', 'groovy', 'clojure', 'sql', 'c', 'rust', 'cpp', 'specializations'
+  ];
+  const trackSitemap: MetadataRoute.Sitemap = tracks.map((track) => ({
+    url: `${baseUrl}/tracks/${track}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...blogSitemap, ...docSitemap, ...trackSitemap];
 }
 
 function getBlogPosts(): { slug: string; date: string }[] {

@@ -9,6 +9,8 @@ import Footer from '@/components/layout/Footer';
 import { useAuth } from '@/contexts/AuthContext';
 import { isCoursePurchased, getUserPurchases, addCoursePurchase } from '@/lib/purchases';
 import coursesMetadata from '@/codelab_docs/courses_metadata.json';
+import { detectCountry, getRegionalPrice } from '@/lib/pricing';
+import { getLanguageIcon } from '@/lib/icons';
 
 interface Course {
     id: string;
@@ -18,12 +20,6 @@ interface Course {
     icon: string;
 }
 
-function getCoursePrice(level: string): number {
-    if (level.includes("Intermediate")) return 9.99;
-    if (level.includes("Advanced")) return 14.99;
-    if (level.includes("Professional") || level.includes("Expert")) return 19.99;
-    return 5.99;
-}
 
 declare global {
     interface Window {
@@ -37,13 +33,27 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
     const [loading, setLoading] = useState(false);
     const [alreadyOwned, setAlreadyOwned] = useState(false);
     const [cashfreeLoaded, setCashfreeLoaded] = useState(false);
+    const [countryCode, setCountryCode] = useState('DEFAULT');
+    const [pricing, setPricing] = useState({ amount: 0, currency: 'USD', symbol: '$' });
 
     const course = (coursesMetadata as Course[]).find(c => c.id === courseId);
-    const price = course ? getCoursePrice(course.level) : 0;
+
+    useEffect(() => {
+        detectCountry().then(code => {
+            setCountryCode(code);
+        });
+    }, []);
+
+    useEffect(() => {
+        if (course) {
+            const regionalPricing = getRegionalPrice(course.level, countryCode);
+            setPricing(regionalPricing);
+        }
+    }, [course, countryCode]);
 
     useEffect(() => {
         if (!authLoading && !user) {
-            router.push(`/auth?returnUrl=/checkout/${courseId}`);
+            router.replace(`/auth?returnUrl=/checkout/${courseId}`);
             return;
         }
 
@@ -64,21 +74,20 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
         try {
             // Generate unique order ID
             const orderId = `${user.uid}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            const priceInPaisa = Math.round(price * 100);
 
             // Prepare order with course info in metadata
             const orderData = {
                 order_id: orderId,
-                order_amount: price,
-                order_currency: 'INR',
+                order_amount: pricing.amount,
+                order_currency: pricing.currency,
                 customer_details: {
                     customer_id: user.uid,
-                    customer_email: user.email || 'user@codevarsity.in',
-                    customer_phone: '9999999999', // Dummy, can be collected from user
+                    customer_email: user.email || 'shivamappstudio@gmail.com',
+                    customer_phone: '',
                 },
                 order_meta: {
-                    return_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/order/success?orderId=${orderId}`,
-                    notify_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/webhooks/cashfree`,
+                    return_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com'}/order/success?orderId=${orderId}`,
+                    notify_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://codevarsity.shivamappstudio.com'}/api/webhooks/cashfree`,
                 },
                 course_id: courseId,
             };
@@ -192,17 +201,24 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
                     <h2 className="font-medium text-gray-500 text-sm uppercase tracking-wide mb-4">Order Summary</h2>
 
                     <div className="flex items-center gap-4 py-4 border-b border-gray-100">
-                        <span className="text-4xl">{course.icon}</span>
+                        {(() => {
+                            const langIcon = getLanguageIcon((course as any).language);
+                            return (
+                                <div className={`w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-2xl ${langIcon.color}`}>
+                                    <i className={langIcon.icon}></i>
+                                </div>
+                            );
+                        })()}
                         <div className="flex-1">
                             <p className="font-medium text-gray-900">{course.title}</p>
                             <p className="text-sm text-gray-500">{course.track} • {course.level}</p>
                         </div>
-                        <p className="font-bold text-gray-900">${price.toFixed(2)}</p>
+                        <p className="font-bold text-gray-900">{pricing.symbol}{pricing.amount.toFixed(2)}</p>
                     </div>
 
                     <div className="flex justify-between items-center pt-4">
                         <span className="font-medium text-gray-900">Total</span>
-                        <span className="text-2xl font-bold text-gray-900">${price.toFixed(2)}</span>
+                        <span className="text-2xl font-bold text-gray-900">{pricing.symbol}{pricing.amount.toFixed(2)}</span>
                     </div>
                 </div>
 
@@ -234,7 +250,7 @@ export default function CheckoutClient({ courseId }: { courseId: string }) {
                             Processing...
                         </span>
                     ) : (
-                        `Complete Purchase - $${price.toFixed(2)}`
+                        `Complete Purchase - ${pricing.symbol}${pricing.amount.toFixed(2)}`
                     )}
                 </button>
 

@@ -67,8 +67,8 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-medium text-gray-900">Email Support</h3>
-                                    <a href="mailto:support@shivamappstudio.com" className="text-brand-primary hover:underline">
-                                        support@shivamappstudio.com
+                                    <a href="mailto:shivamappstudio@gmail.com" className="text-brand-primary hover:underline">
+                                        shivamappstudio@gmail.com
                                     </a>
                                     <p className="text-sm text-gray-500 mt-1">Typical response: within 24 hours</p>
                                 </div>
@@ -80,8 +80,8 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-medium text-gray-900">Technical Support</h3>
-                                    <a href="mailto:tech@shivamappstudio.com" className="text-brand-primary hover:underline">
-                                        tech@shivamappstudio.com
+                                    <a href="mailto:shivamappstudio@gmail.com" className="text-brand-primary hover:underline">
+                                        shivamappstudio@gmail.com
                                     </a>
                                     <p className="text-sm text-gray-500 mt-1">For app issues and bugs</p>
                                 </div>

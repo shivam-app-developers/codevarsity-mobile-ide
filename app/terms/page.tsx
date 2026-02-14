@@ -5,10 +5,10 @@ import { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Terms of Service',
-  description: 'CodeVarsity Terms of Service. Read our terms for using the platform, purchases, intellectual property, and user responsibilities.',
-  path: '/terms',
-  type: 'website',
+    title: 'Terms of Service',
+    description: 'CodeVarsity Terms of Service. Read our terms for using the platform, purchases, intellectual property, and user responsibilities.',
+    path: '/terms',
+    type: 'website',
 });
 
 export default function TermsPage() {
@@ -107,8 +107,8 @@ export default function TermsPage() {
                         <h2 className="text-xl font-bold text-gray-900 mb-4">9. Contact</h2>
                         <p className="text-gray-600 mb-4">
                             For questions about these Terms, please contact us at{' '}
-                            <a href="mailto:support@shivamappstudio.com" className="text-brand-primary hover:underline">
-                                support@shivamappstudio.com
+                            <a href="mailto:shivamappstudio@gmail.com" className="text-brand-primary hover:underline">
+                                shivamappstudio@gmail.com
                             </a>
                         </p>
                     </section>
