@@ -21,38 +21,45 @@ export async function generateMetadata({ params }: { params: { id: string[] } })
             throw new Error('Invalid ID');
         }
 
-        // Try decoding if it looks like base64
-        let userId = fullId;
+        // 1. Try fetching with the ID as provided (raw UID or already decoded)
+        let stats = null;
         try {
-            if (fullId.length > 30) {
-                const decoded = atob(fullId);
-                if (decoded.length >= 20 && /^[a-zA-Z0-9_-]+$/.test(decoded)) {
-                    userId = decoded;
-                }
-            }
-        } catch {
-            userId = fullId;
-        }
-
-        const stats = await Promise.race([
-            getUserStats(userId),
-            new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 2000))
-        ]) as any;
-
-        // If stats is null, it might be that we need to try the other format
-        let finalStats = stats;
-        if (!finalStats && userId !== fullId) {
-            finalStats = await Promise.race([
+            stats = await Promise.race([
                 getUserStats(fullId),
                 new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 2000))
             ]) as any;
+        } catch {
+            // Ignore timeout/error and proceed to decoding
         }
 
-        const profileName = finalStats?.displayName || 'CodeVarsity Profile';
+        // 2. If not found, it might be Base64 encoded
+        if (!stats) {
+            try {
+                // Support both standard and URL-safe base64
+                const base64 = fullId.replace(/-/g, '+').replace(/_/g, '/');
+                const decodedValue = atob(base64);
+
+                if (decodedValue && decodedValue.length >= 20) {
+                    stats = await getUserStats(decodedValue);
+                }
+            } catch {
+                // Not valid base64, ignore
+            }
+        }
+
+        // 3. Fallback: if it has segments, try the last segment
+        if (!stats && fullId.includes('/')) {
+            const lastSegment = fullId.split('/').pop();
+            if (lastSegment && lastSegment.length >= 20) {
+                stats = await getUserStats(lastSegment);
+            }
+        }
+
+        const profileName = stats?.displayName || 'CodeVarsity Profile';
 
         return createMetadata({
             title: `${profileName}'s Profile | CodeVarsity`,
-            description: `Verified coding profile. ${finalStats?.coursesCompleted || 0} courses completed, ${finalStats?.linesTyped || 0} lines typed.`,
+            description: `Verified coding profile. ${stats?.coursesCompleted || 0} courses completed, ${stats?.linesTyped || 0} lines typed.`,
             path: `/profile/${fullId}`,
             type: 'profile',
         });

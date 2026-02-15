@@ -33,6 +33,7 @@ export default function Footer() {
               <li><a href="/#visualizers" className="hover:text-white transition-colors">Visual Runtimes</a></li>
               <li><a href="/#sandbox" className="hover:text-white transition-colors">Offline Compilers</a></li>
               <li><Link href="/docs/product/why-codelab" className="hover:text-white transition-colors">Why CodeVarsity</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About The Solver</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Research Blog</Link></li>
             </ul>
           </div>

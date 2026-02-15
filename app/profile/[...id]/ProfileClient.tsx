@@ -15,43 +15,50 @@ export default function ProfileClient({ id }: { id: string }) {
     useEffect(() => {
         async function fetchStats() {
             try {
-                // Try decoding first, but be prepared for it to be a raw UID
+                // Determine the most likely userId
                 let userId = id;
-                try {
-                    // Only try decoding if it looks like it might be base64 (not a standard 28-char UID)
-                    // Standard Firebase UIDs are 28 chars. Base64 would be ~40 chars for these.
-                    if (id.length > 30) {
-                        const decodedValue = atob(id);
-                        // Simple heuristic: if it decodes to something alphanumeric and reasonably long, it's likely a UID
-                        if (decodedValue.length >= 20 && /^[a-zA-Z0-9_-]+$/.test(decodedValue)) {
-                            userId = decodedValue;
+                let userStats = null;
+
+                // 1. Try fetching with the ID as provided (raw UID or already decoded)
+                userStats = await getUserStats(id);
+
+                // 2. If not found, it might be Base64 encoded (as the mobile app does)
+                if (!userStats) {
+                    try {
+                        // Support both standard and URL-safe base64
+                        // URL-safe uses '-' instead of '+' and '_' instead of '/'
+                        const base64 = id.replace(/-/g, '+').replace(/_/g, '/');
+                        const decodedValue = atob(base64);
+
+                        // If it decodes to something alphanumeric and reasonably long, it's likely a UID
+                        if (decodedValue && decodedValue.length >= 20) {
+                            userStats = await getUserStats(decodedValue);
+                            if (userStats) {
+                                userId = decodedValue;
+                            }
                         }
+                    } catch (e) {
+                        // Not valid base64 or failed to fetch decoded, ignore
                     }
-                } catch (e) {
-                    // Not valid base64, stick with raw id
-                    userId = id;
                 }
 
-                const userStats = await getUserStats(userId);
+                // 3. Last ditch effort: if it has segments (e.g. stats/UID), try the last segment
+                if (!userStats && id.includes('/')) {
+                    const lastSegment = id.split('/').pop();
+                    if (lastSegment && lastSegment.length >= 20) {
+                        userStats = await getUserStats(lastSegment);
+                    }
+                }
 
                 if (userStats) {
                     setStats(userStats);
                     setError(null);
                 } else {
-                    // If not found, and we didn't try the other format, try it now
-                    if (userId !== id) {
-                        const directStats = await getUserStats(id);
-                        if (directStats) {
-                            setStats(directStats);
-                            setError(null);
-                            return;
-                        }
-                    }
                     setError('Profile not found');
                     setStats(null);
                 }
             } catch (err) {
-                console.error('Error decoding or fetching stats:', err);
+                console.error('Error in profile fetch:', err);
                 setError('Failed to load profile');
                 setStats(null);
             } finally {

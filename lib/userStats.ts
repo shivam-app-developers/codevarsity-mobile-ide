@@ -7,19 +7,30 @@ import { UserStatsDocument, UserStatsSummary, ACHIEVEMENT_DEFINITIONS, Difficult
  * Used by public profile page (no auth required)
  */
 export async function getUserStats(userId: string): Promise<UserStatsSummary | null> {
-  try {
-    // 1. Try public subcollection first (Standard Mobile Sync & Publicly Readable)
-    // match /users/{userId}/profile/{document=**} { allow read: if true; }
-    const publicRef = doc(db, 'users', userId, 'profile', 'stats');
-    const publicSnap = await getDoc(publicRef);
+  if (!userId || userId.length < 5) return null;
 
-    if (publicSnap.exists()) {
-      const data = publicSnap.data() as UserStatsDocument;
-      return convertToSummary(data);
+  try {
+    // 1. Try public subcollection paths first (Standard Mobile Sync & Publicly Readable)
+    // We check both 'profile/stats' and 'stats' subcollections to be resilient to mobile app path variations
+    const publicPaths = [
+      doc(db, 'users', userId, 'profile', 'stats'),
+      doc(db, 'users', userId, 'stats', 'stats'), // Generic subcollection stats/stats
+      doc(db, 'users', userId, 'profile', 'profile'), // Some mobile versions use profile/profile
+    ];
+
+    for (const ref of publicPaths) {
+      try {
+        const snap = await getDoc(ref);
+        if (snap.exists()) {
+          const data = snap.data() as UserStatsDocument;
+          return convertToSummary(data);
+        }
+      } catch (e) {
+        // Silently continue to next path on error
+      }
     }
 
     // 2. Fallback to main user document (Authenticated/Private)
-    // match /users/{userId} { allow read: if isOwner(userId); }
     // Only works if the caller has permissions (e.g. user viewing their own account)
     try {
       const userSnap = await getDoc(doc(db, 'users', userId));
@@ -31,7 +42,6 @@ export async function getUserStats(userId: string): Promise<UserStatsSummary | n
       }
     } catch (permError) {
       // Ignore permission errors - it just means we can't access the private root doc
-      console.log('Skipping private root doc check due to permissions');
     }
 
     return null;

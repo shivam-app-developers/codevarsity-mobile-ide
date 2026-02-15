@@ -37,6 +37,10 @@ export default function StructuredData() {
         name: 'CodeVarsity',
         url: siteConfig.url,
         logo: `${siteConfig.url}/assets/logo-brand.png`,
+        founder: {
+            '@type': 'Person',
+            name: 'Marikanti Puli Bala Krishna',
+        },
         sameAs: [
             siteConfig.links.twitter,
             siteConfig.links.github,
