@@ -1,0 +1,17 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "visualizerType": "GuidedPractice",
+      "visualizerParams": {
+        "mode": "snippet",
+        "title": "String Abbreviation Mastery",
+        "description": "Master the dynamic programming logic to check if string transformations are possible under capitalization and deletion rules.",
+        "language": "python",
+        "ghostCode": "def abbr(a: str, b: str) -> bool:\n    n, m = len(a), len(b)\n    dp = [[False for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                if a[i].islower():\n                    dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(f\"daBcd -> ABC: {abbr('daBcd', 'ABC')}\")",
+        "finalCode": "def abbr(a: str, b: str) -> bool:\n    n, m = len(a), len(b)\n    dp = [[False for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                if a[i].islower():\n                    dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(f\"daBcd -> ABC: {abbr('daBcd', 'ABC')}\")"
+      }
+    }
+  }
+}

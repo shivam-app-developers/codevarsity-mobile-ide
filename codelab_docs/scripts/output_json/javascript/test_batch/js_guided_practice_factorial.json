@@ -1,0 +1,17 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "JavaScript Factorial (Recursive)",
+      "description": "Learn to calculate the factorial of a number using recursion in JavaScript.",
+      "language": "javascript",
+      "mode": "snippet",
+      "ghostCode": "const factorial = (n) => {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n};\n\nconst num = 5;\nconsole.log(`Factorial of ${num} is ${factorial(num)}`);",
+      "finalCode": "const factorial = (n) => {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n};\n\nconst num = 5;\nconsole.log(`Factorial of ${num} is ${factorial(num)}`);",
+      "validation": {
+        "pattern": "Factorial of 5 is 120"
+      }
+    }
+  }
+}

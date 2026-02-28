@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Go Refactor: Factorial",
+      "problemDescription": "Refactor the recursive factorial function into an iterative one using a loop for better performance.",
+      "language": "go",
+      "initialCode": "package main\n\nfunc factorial(n int) int {\n\tif n <= 1 {\n\t\treturn 1\n\t}\n\treturn n * factorial(n-1)\n}\n\nfunc main() {\n\tfactorial(5)\n}",
+      "solution": {
+        "code": "package main\n\nfunc factorial(n int) int {\n\tres := 1\n\tfor i := 2; i <= n; i++ {\n\t\tres *= i\n\t}\n\treturn res\n}\n\nfunc main() {\n\tfactorial(5)\n}",
+        "explanation": "Iterative solutions are generally preferred in Go for simple tasks like factorial to avoid potential stack overflow and recursion overhead."
+      }
+    }
+  }
+}

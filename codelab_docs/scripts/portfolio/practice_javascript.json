@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "snippets": [
+    {
+      "id": "js_bug_squasher_binarysearch",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: JS Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_bug_squasher_binarysearch.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_bug_squasher_bubblesort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: JS Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_bug_squasher_bubblesort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: JS Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_binarysearch",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "JS Refactor: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_code_refactor_binarysearch.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_code_refactor_bubblesort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "JS Refactor: Idiomatic Swap",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_code_refactor_bubblesort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_code_refactor_factorial",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "JS Refactor: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_binarysearch",
+      "type": "guided",
+      "language": "javascript",
+      "title": "JavaScript Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_guided_practice_binarysearch.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_guided_practice_bubblesort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "JavaScript Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_guided_practice_bubblesort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "js_guided_practice_factorial",
+      "type": "guided",
+      "language": "javascript",
+      "title": "JavaScript Factorial (Recursive)",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/javascript/test_batch/js_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    }
+  ],
+  "projects": []
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Go Bubble Sort",
+      "problemDescription": "Fix the logic that causes the sorting to stop prematurely after the first pass.",
+      "language": "go",
+      "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc bubbleSort(arr []int) {\n\tswapped := true\n\tfor swapped {\n\t\tswapped = false\n\t\tfor i := 0; i < len(arr)-1; i++ {\n\t\t\tif arr[i] > arr[i+1] {\n\t\t\t\tarr[i], arr[i+1] = arr[i+1], arr[i]\n\t\t\t\t// BUG: Missing swapped = true here\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{5, 1, 4, 2, 8}\n\tbubbleSort(arr)\n\tfmt.Println(arr)\n}",
+      "solution": {
+        "code": "package main\n\nimport \"fmt\"\n\nfunc bubbleSort(arr []int) {\n\tswapped := true\n\tfor swapped {\n\t\tswapped = false\n\t\tfor i := 0; i < len(arr)-1; i++ {\n\t\t\tif arr[i] > arr[i+1] {\n\t\t\t\tarr[i], arr[i+1] = arr[i+1], arr[i]\n\t\t\t\tswapped = true\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{5, 1, 4, 2, 8}\n\tbubbleSort(arr)\n\tfmt.Println(arr)\n}",
+        "explanation": "If 'swapped' is not set to true, the outer loop exits even if the array is not fully sorted."
+      }
+    }
+  }
+}

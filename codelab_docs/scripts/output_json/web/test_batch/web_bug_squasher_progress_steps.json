@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Progress Steps",
+      "problemDescription": "Fix the selector so the script can correctly identify and highlight the step circles.",
+      "language": "html",
+      "buggyCode": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"circle\">1</div>\n  <div class=\"circle\">2</div>\n  <script>\n    // BUG: Missing the dot for class selector\n    const circles = document.querySelectorAll('circle'); \n    console.log(`Found ${circles.length} circles`);\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"circle\">1</div>\n  <div class=\"circle\">2</div>\n  <script>\n    const circles = document.querySelectorAll('.circle'); \n    console.log(`Found ${circles.length} circles`);\n  </script>\n</body>\n</html>",
+        "explanation": "querySelectorAll('circle') looks for <circle> tags. To find elements with the class 'circle', use '.circle'."
+      }
+    }
+  }
+}

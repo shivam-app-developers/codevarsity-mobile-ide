@@ -1,0 +1,17 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "C Binary Search",
+      "description": "Learn to search for an element in a sorted array using the efficient Binary Search algorithm.",
+      "language": "c",
+      "mode": "snippet",
+      "ghostCode": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    int result = binarySearch(arr, 5, 10);\n    if (result == -1) printf(\"Not found\");\n    else printf(\"Found at index %d\", result);\n    return 0;\n}",
+      "finalCode": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    int result = binarySearch(arr, 5, 10);\n    if (result == -1) printf(\"Not found\");\n    else printf(\"Found at index %d\", result);\n    return 0;\n}",
+      "validation": {
+        "pattern": "Found at index 3"
+      }
+    }
+  }
+}

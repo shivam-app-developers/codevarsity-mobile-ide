@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Blurry Loading",
+      "problemDescription": "Fix the JavaScript selector to correctly target the loading text element and update the percentage.",
+      "language": "html",
+      "buggyCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { background: #333; height: 100vh; display: flex; align-items: center; justify-content: center; }\n    .loading-text { font-size: 50px; color: #fff; }\n  </style>\n</head>\n<body>\n  <div class=\"loading-text\">0%</div>\n  <script>\n    const loadText = document.querySelector('#loading-text'); // BUG: Should be .loading-text\n    let load = 0;\n    let int = setInterval(() => {\n        load++;\n        if (load > 99) clearInterval(int);\n        if (loadText) loadText.innerText = `${load}%`;\n    }, 30);\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { background: #333; height: 100vh; display: flex; align-items: center; justify-content: center; }\n    .loading-text { font-size: 50px; color: #fff; }\n  </style>\n</head>\n<body>\n  <div class=\"loading-text\">0%</div>\n  <script>\n    const loadText = document.querySelector('.loading-text');\n    let load = 0;\n    let int = setInterval(() => {\n        load++;\n        if (load > 99) clearInterval(int);\n        if (loadText) loadText.innerText = `${load}%`;\n    }, 30);\n  </script>\n</body>\n</html>",
+        "explanation": "The HTML uses a class 'loading-text', but the script tries to select it as an ID '#loading-text'."
+      }
+    }
+  }
+}

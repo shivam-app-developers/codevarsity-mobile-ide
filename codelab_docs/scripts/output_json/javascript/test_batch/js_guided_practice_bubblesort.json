@@ -1,0 +1,17 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "JavaScript Bubble Sort",
+      "description": "Learn to implement Bubble Sort in JavaScript using ES6 features like arrow functions and destructuring assignment.",
+      "language": "javascript",
+      "mode": "snippet",
+      "ghostCode": "const bubbleSort = (arr) => {\n    const n = arr.length;\n    for (let i = 0; i < n - 1; i++) {\n        for (let j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n            }\n        }\n    }\n    return arr;\n};\n\nconst arr = [64, 34, 25, 12, 22, 11, 90];\nconsole.log(\"Sorted array:\", bubbleSort(arr));",
+      "finalCode": "const bubbleSort = (arr) => {\n    const n = arr.length;\n    for (let i = 0; i < n - 1; i++) {\n        for (let j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n            }\n        }\n    }\n    return arr;\n};\n\nconst arr = [64, 34, 25, 12, 22, 11, 90];\nconsole.log(\"Sorted array:\", bubbleSort(arr));",
+      "validation": {
+        "pattern": "Sorted array: [ 11, 12, 22, 25, 34, 64, 90 ]"
+      }
+    }
+  }
+}

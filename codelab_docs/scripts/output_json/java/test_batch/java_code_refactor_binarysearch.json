@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Java Refactor: Binary Search",
+      "problemDescription": "Refactor a recursive Binary Search to an iterative one to avoid stack overflow risks in large datasets.",
+      "language": "java",
+      "initialCode": "public class BinarySearch {\n    static int search(int[] arr, int x, int l, int r) {\n        if (l > r) return -1;\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) return search(arr, x, m + 1, r);\n        return search(arr, x, l, m - 1);\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 10};\n        search(arr, 10, 0, 4);\n    }\n}",
+      "solution": {
+        "code": "public class BinarySearch {\n    static int search(int[] arr, int x) {\n        int l = 0, r = arr.length - 1;\n        while (l <= r) {\n            int m = l + (r - l) / 2;\n            if (arr[m] == x) return m;\n            if (arr[m] < x) l = m + 1;\n            else r = m - 1;\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 10};\n        search(arr, 10);\n    }\n}",
+        "explanation": "Iterative implementations are more memory-efficient as they don't consume extra stack space for each step."
+      }
+    }
+  }
+}

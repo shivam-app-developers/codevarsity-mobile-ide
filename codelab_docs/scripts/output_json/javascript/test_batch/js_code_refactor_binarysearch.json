@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "JS Refactor: Binary Search",
+      "problemDescription": "Refactor a recursive Binary Search to an iterative one for better performance in JavaScript.",
+      "language": "javascript",
+      "initialCode": "const binarySearch = (arr, x, l, r) => {\n    if (l > r) return -1;\n    const m = l + Math.floor((r - l) / 2);\n    if (arr[m] === x) return m;\n    if (arr[m] < x) return binarySearch(arr, x, m + 1, r);\n    return binarySearch(arr, x, l, m - 1);\n};\n\nconst arr = [1, 2, 3, 4, 10];\nbinarySearch(arr, 10, 0, 4);",
+      "solution": {
+        "code": "const binarySearch = (arr, x) => {\n    let l = 0, r = arr.length - 1;\n    while (l <= r) {\n        const m = l + Math.floor((r - l) / 2);\n        if (arr[m] === x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n};\n\nconst arr = [1, 2, 3, 4, 10];\nbinarySearch(arr, 10);",
+        "explanation": "Iterative solutions are more memory-efficient as they don't use extra stack space for each recursion step."
+      }
+    }
+  }
+}

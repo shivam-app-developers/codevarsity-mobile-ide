@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Go Binary Search",
+      "problemDescription": "Fix an infinite loop in Binary Search caused by an incorrect index update.",
+      "language": "go",
+      "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, x int) int {\n\tl, r := 0, len(arr)-1\n\tfor l <= r {\n\t\tm := l + (r-l)/2\n\t\tif arr[m] == x {\n\t\t\treturn m\n\t\t}\n\t\tif arr[m] < x {\n\t\t\tl = m // BUG: Should be l = m + 1\n\t\t} else {\n\t\t\tr = m - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tarr := []int{1, 2, 3, 4, 10}\n\tfmt.Println(binarySearch(arr, 10))\n}",
+      "solution": {
+        "code": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, x int) int {\n\tl, r := 0, len(arr)-1\n\tfor l <= r {\n\t\tm := l + (r-l)/2\n\t\tif arr[m] == x {\n\t\t\treturn m\n\t\t}\n\t\tif arr[m] < x {\n\t\t\tl = m + 1\n\t\t} else {\n\t\t\tr = m - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tarr := []int{1, 2, 3, 4, 10}\n\tfmt.Println(binarySearch(arr, 10))\n}",
+        "explanation": "Setting 'l' to 'm' without incrementing leads to an infinite loop when the target is at the right end."
+      }
+    }
+  }
+}

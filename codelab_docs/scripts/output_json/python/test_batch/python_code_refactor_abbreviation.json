@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "",
+      "problemDescription": "",
+      "language": "",
+      "initialCode": "",
+      "solution": {
+        "code": "",
+        "explanation": "Refactor for better code quality."
+      }
+    }
+  }
+}

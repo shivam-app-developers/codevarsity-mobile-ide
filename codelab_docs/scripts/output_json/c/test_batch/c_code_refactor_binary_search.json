@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "C Refactor: Binary Search",
+      "problemDescription": "Refactor the midpoint calculation to be overflow-safe for very large arrays.",
+      "language": "c",
+      "initialCode": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l <= r) {\n        int m = (l + r) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    binarySearch(arr, 5, 10);\n    return 0;\n}",
+      "solution": {
+        "code": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    binarySearch(arr, 5, 10);\n    return 0;\n}",
+        "explanation": "Using l + (r - l) / 2 prevents potential integer overflow when l and r are very large."
+      }
+    }
+  }
+}

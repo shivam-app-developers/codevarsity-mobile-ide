@@ -1,0 +1,17 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "visualizerType": "GuidedPractice",
+      "visualizerParams": {
+        "mode": "snippet",
+        "title": "A1Z26 Alphabet Cipher",
+        "description": "Learn how to convert a string of characters to their alphabetical positions (A=1, Z=26) and vice versa in Python.",
+        "language": "python",
+        "ghostCode": "def encode(plain: str) -> list[int]:\n    return [ord(elem) - 96 for elem in plain]\n\ndef decode(encoded: list[int]) -> str:\n    return \"\".join(chr(elem + 96) for elem in encoded)\n\nif __name__ == \"__main__\":\n    test_str = \"hello\"\n    encoded = encode(test_str)\n    print(f\"Encoded '{test_str}': {encoded}\")\n    print(f\"Decoded: {decode(encoded)}\")",
+        "finalCode": "def encode(plain: str) -> list[int]:\n    return [ord(elem) - 96 for elem in plain]\n\ndef decode(encoded: list[int]) -> str:\n    return \"\".join(chr(elem + 96) for elem in encoded)\n\nif __name__ == \"__main__\":\n    test_str = \"hello\"\n    encoded = encode(test_str)\n    print(f\"Encoded '{test_str}': {encoded}\")\n    print(f\"Decoded: {decode(encoded)}\")"
+      }
+    }
+  }
+}

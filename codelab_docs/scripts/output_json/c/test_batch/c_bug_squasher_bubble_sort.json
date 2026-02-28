@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Bubble Sort",
+      "problemDescription": "Find and fix the off-by-one error causing an out-of-bounds access in this C Bubble Sort.",
+      "language": "c",
+      "buggyCode": "#include <stdio.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) { // BUG: Should be j < n - i - 1\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {5, 1, 4, 2, 8};\n    bubbleSort(arr, 5);\n    for(int i=0; i<5; i++) printf(\"%d \", arr[i]);\n    return 0;\n}",
+      "solution": {
+        "code": "#include <stdio.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {5, 1, 4, 2, 8};\n    bubbleSort(arr, 5);\n    for(int i=0; i<5; i++) printf(\"%d \", arr[i]);\n    return 0;\n}",
+        "explanation": "Accessing arr[j+1] when j is n-1 causes out-of-bounds access."
+      }
+    }
+  }
+}

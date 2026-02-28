@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Web Refactor: Expanding Cards",
+      "problemDescription": "Clean up the card expansion logic by refactoring the removal of 'active' classes into a separate, reusable function.",
+      "language": "html",
+      "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    panels.forEach(panel => {\n      panel.addEventListener('click', () => {\n        // Inline removal logic\n        panels.forEach(p => p.classList.remove('active'));\n        panel.classList.add('active');\n      });\n    });\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    const removeActive = () => panels.forEach(p => p.classList.remove('active'));\n\n    panels.forEach(panel => {\n      panel.addEventListener('click', () => {\n        removeActive();\n        panel.classList.add('active');\n      });\n    });\n  </script>\n</body>\n</html>",
+        "explanation": "Extracting repetitive logic into a named function (DRY) makes the code more modular and easier to read."
+      }
+    }
+  }
+}

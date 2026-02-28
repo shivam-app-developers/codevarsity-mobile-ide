@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "snippets": [
+    {
+      "id": "web_bug_squasher_blurry_loading",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Blurry Loading",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_bug_squasher_blurry_loading.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_bug_squasher_expanding_cards",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Expanding Cards",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_bug_squasher_expanding_cards.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_bug_squasher_progress_steps",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Progress Steps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_bug_squasher_progress_steps.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_code_refactor_blurry_loading",
+      "type": "refactor",
+      "language": "web",
+      "title": "Web Refactor: Blurry Loading",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_code_refactor_blurry_loading.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_code_refactor_expanding_cards",
+      "type": "refactor",
+      "language": "web",
+      "title": "Web Refactor: Expanding Cards",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_code_refactor_expanding_cards.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_code_refactor_progress_steps",
+      "type": "refactor",
+      "language": "web",
+      "title": "Web Refactor: Progress Steps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_code_refactor_progress_steps.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_guided_practice_blurry_loading",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Blurry Loading",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_guided_practice_blurry_loading.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_guided_practice_expanding_cards",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Expanding Cards",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_guided_practice_expanding_cards.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "web_guided_practice_progress_steps",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Progress Steps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/web/test_batch/web_guided_practice_progress_steps.json",
+      "difficulty": "medium"
+    }
+  ],
+  "projects": []
+}

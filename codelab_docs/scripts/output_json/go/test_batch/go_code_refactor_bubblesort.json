@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Go Refactor: Idiomatic Swap",
+      "problemDescription": "Refactor the manual temp variable swap to use Go's idiomatic multiple assignment for more concise code.",
+      "language": "go",
+      "initialCode": "package main\n\nfunc bubbleSort(arr []int) {\n\tn := len(arr)\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n-i-1; j++ {\n\t\t\tif arr[j] > arr[j+1] {\n\t\t\t\ttemp := arr[j] // Manual swap\n\t\t\t\tarr[j] = arr[j+1]\n\t\t\t\tarr[j+1] = temp\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{3, 1, 2}\n\tbubbleSort(arr)\n}",
+      "solution": {
+        "code": "package main\n\nfunc bubbleSort(arr []int) {\n\tn := len(arr)\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n-i-1; j++ {\n\t\t\tif arr[j] > arr[j+1] {\n\t\t\t\tarr[j], arr[j+1] = arr[j+1], arr[j] // Idiomatic swap\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{3, 1, 2}\n\tbubbleSort(arr)\n}",
+        "explanation": "Go supports multiple assignment, allowing you to swap two values in a single line without a temporary variable."
+      }
+    }
+  }
+}

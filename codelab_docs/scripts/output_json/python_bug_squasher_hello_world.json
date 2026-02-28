@@ -1,0 +1,13 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Even Number Filter Logic Flaw",
+    "problemDescription": "The `get_even_numbers` function is intended to extract all even numbers from a given list. However, when run with a list of mixed numbers, it seems to be returning a list of odd numbers instead. Identify and fix the logic error that causes this incorrect filtering, ensuring it correctly gathers only the even numbers.",
+    "language": "python",
+    "buggyCode": "def get_even_numbers(numbers):\n    evens = []\n    for num in numbers:\n        if num % 2 != 0:\n            evens.append(num)\n    return evens\n\n\nif __name__ == \"__main__\":\n    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(get_even_numbers(nums))\n",
+    "solution": {
+      "code": "def get_even_numbers(numbers):\n    evens = []\n    for num in numbers:\n        if num % 2 == 0:\n            evens.append(num)\n    return evens\n\n\nif __name__ == \"__main__\":\n    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    print(get_even_numbers(nums))\n",
+      "explanation": "The bug was a subtle logic flaw in the condition used to identify even numbers. The original buggy code used `num % 2 != 0`, which incorrectly checks if a number is *not* even (i.e., odd). To correctly filter for even numbers, the condition must explicitly check if the remainder when divided by 2 is exactly 0. Changing the condition to `num % 2 == 0` ensures that only numbers perfectly divisible by 2 are added to the `evens` list."
+    }
+  }
+}

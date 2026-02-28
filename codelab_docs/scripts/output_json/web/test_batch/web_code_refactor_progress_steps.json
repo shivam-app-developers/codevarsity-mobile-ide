@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Web Refactor: Progress Steps",
+      "problemDescription": "Refactor the progress bar width calculation and button state logic for better maintainability.",
+      "language": "html",
+      "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    function update() {\n      // Verbose if-else for button states\n      if(currentActive === 1) {\n          prev.disabled = true;\n      } else if(currentActive === circles.length) {\n          next.disabled = true;\n      } else {\n          prev.disabled = false;\n          next.disabled = false;\n      }\n    }\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    function update() {\n      // Concise boolean logic\n      prev.disabled = currentActive === 1;\n      next.disabled = currentActive === circles.length;\n    }\n  </script>\n</body>\n</html>",
+        "explanation": "Directly assigning the boolean condition to the 'disabled' property is cleaner and more concise than an if-else block."
+      }
+    }
+  }
+}

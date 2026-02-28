@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Java Bubble Sort",
+      "problemDescription": "Fix the ArrayIndexOutOfBoundsException caused by an incorrect inner loop condition.",
+      "language": "java",
+      "buggyCode": "public class BubbleSort {\n    static void bubbleSort(int[] arr) {\n        int n = arr.length;\n        for (int i = 0; i < n - 1; i++) {\n            for (int j = 0; j < n - i; j++) { // BUG: Should be n - i - 1\n                if (arr[j] > arr[j + 1]) {\n                    int temp = arr[j];\n                    arr[j] = arr[j + 1];\n                    arr[j + 1] = temp;\n                }\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {5, 1, 4, 2};\n        bubbleSort(arr);\n    }\n}",
+      "solution": {
+        "code": "public class BubbleSort {\n    static void bubbleSort(int[] arr) {\n        int n = arr.length;\n        for (int i = 0; i < n - 1; i++) {\n            for (int j = 0; j < n - i - 1; j++) {\n                if (arr[j] > arr[j + 1]) {\n                    int temp = arr[j];\n                    arr[j] = arr[j + 1];\n                    arr[j + 1] = temp;\n                }\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {5, 1, 4, 2};\n        bubbleSort(arr);\n    }\n}",
+        "explanation": "When j reaches n-i, j+1 is out of bounds. The loop should stop at n-i-1."
+      }
+    }
+  }
+}

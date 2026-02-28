@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Go Factorial",
+      "problemDescription": "Fix the loop boundary to ensure the last number in the factorial sequence is included.",
+      "language": "go",
+      "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tres := 1\n\tfor i := 1; i < n; i++ { // BUG: Should be i <= n\n\t\tres *= i\n\t}\n\treturn res\n}\n\nfunc main() {\n\tfmt.Printf(\"Factorial of 5 is %d\\n\", factorial(5))\n}",
+      "solution": {
+        "code": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tres := 1\n\tfor i := 1; i <= n; i++ {\n\t\tres *= i\n\t}\n\treturn res\n}\n\nfunc main() {\n\tfmt.Printf(\"Factorial of 5 is %d\\n\", factorial(5))\n}",
+        "explanation": "Using '<' instead of '<=' skips multiplying by 'n', yielding n-1 factorial instead."
+      }
+    }
+  }
+}

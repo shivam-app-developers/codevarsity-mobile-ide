@@ -1,0 +1,17 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "Go Binary Search",
+      "description": "Learn to search for an element in a sorted slice efficiently using Binary Search in Go.",
+      "language": "go",
+      "mode": "snippet",
+      "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, x int) int {\n\tl, r := 0, len(arr)-1\n\tfor l <= r {\n\t\tm := l + (r-l)/2\n\t\tif arr[m] == x {\n\t\t\treturn m\n\t\t}\n\t\tif arr[m] < x {\n\t\t\tl = m + 1\n\t\t} else {\n\t\t\tr = m - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tarr := []int{2, 3, 4, 10, 40}\n\tresult := binarySearch(arr, 10)\n\tfmt.Printf(\"Result: %d\\n\", result)\n}",
+      "finalCode": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, x int) int {\n\tl, r := 0, len(arr)-1\n\tfor l <= r {\n\t\tm := l + (r-l)/2\n\t\tif arr[m] == x {\n\t\t\treturn m\n\t\t}\n\t\tif arr[m] < x {\n\t\t\tl = m + 1\n\t\t} else {\n\t\t\tr = m - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tarr := []int{2, 3, 4, 10, 40}\n\tresult := binarySearch(arr, 10)\n\tfmt.Printf(\"Result: %d\\n\", result)\n}",
+      "validation": {
+        "pattern": "Result: 3"
+      }
+    }
+  }
+}

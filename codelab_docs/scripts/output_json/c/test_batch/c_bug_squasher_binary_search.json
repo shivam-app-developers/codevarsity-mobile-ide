@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Binary Search",
+      "problemDescription": "Fix the loop condition that skips the target when it's at the high index boundary.",
+      "language": "c",
+      "buggyCode": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l < r) { // BUG: Should be l <= r\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    int result = binarySearch(arr, 5, 40);\n    if (result == -1) printf(\"Target not found\\n\");\n    else printf(\"Found target at index %d\\n\", result);\n    return 0;\n}",
+      "solution": {
+        "code": "#include <stdio.h>\n\nint binarySearch(int arr[], int n, int x) {\n    int l = 0, r = n - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (arr[m] == x) return m;\n        if (arr[m] < x) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}\n\nint main() {\n    int arr[] = {2, 3, 4, 10, 40};\n    int result = binarySearch(arr, 5, 40);\n    if (result == -1) printf(\"Target not found\\n\");\n    else printf(\"Found target at index %d\\n\", result);\n    return 0;\n}",
+        "explanation": "Targets at indices result in l == r. Using '<' instead of '<=' will fail in these cases."
+      }
+    }
+  }
+}

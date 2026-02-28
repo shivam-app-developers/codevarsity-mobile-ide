@@ -1,0 +1,17 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "C Factorial (Recursive)",
+      "description": "Learn to calculate the factorial of a number using recursion in C.",
+      "language": "c",
+      "mode": "snippet",
+      "ghostCode": "#include <stdio.h>\n\nlong long factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num = 5;\n    printf(\"Factorial of %d is %lld\\n\", num, factorial(num));\n    return 0;\n}",
+      "finalCode": "#include <stdio.h>\n\nlong long factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num = 5;\n    printf(\"Factorial of %d is %lld\\n\", num, factorial(num));\n    return 0;\n}",
+      "validation": {
+        "pattern": "Factorial of 5 is 120"
+      }
+    }
+  }
+}

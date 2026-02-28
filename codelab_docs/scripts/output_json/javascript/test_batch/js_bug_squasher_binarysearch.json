@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: JS Binary Search",
+      "problemDescription": "Fix the infinite loop in this Binary Search implementation by correctly updating the search boundaries.",
+      "language": "javascript",
+      "buggyCode": "const binarySearch = (arr, x) => {\n    let l = 0, r = arr.length - 1;\n    while (l <= r) {\n        let m = l + Math.floor((r - l) / 2);\n        if (arr[m] === x) return m;\n        if (arr[m] < x) {\n            l = m; // BUG: Should be m + 1\n        } else {\n            r = m - 1;\n        }\n    }\n    return -1;\n};\n\nconsole.log(binarySearch([1, 2, 3, 4, 10], 10));",
+      "solution": {
+        "code": "const binarySearch = (arr, x) => {\n    let l = 0, r = arr.length - 1;\n    while (l <= r) {\n        let m = l + Math.floor((r - l) / 2);\n        if (arr[m] === x) return m;\n        if (arr[m] < x) {\n            l = m + 1;\n        } else {\n            r = m - 1;\n        }\n    }\n    return -1;\n};\n\nconsole.log(binarySearch([1, 2, 3, 4, 10], 10));",
+        "explanation": "Setting 'l' to 'm' without incrementing results in an infinite loop when 'l' and 'r' are adjacent and the target is at 'r'."
+      }
+    }
+  }
+}

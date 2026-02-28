@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Go Refactor: Binary Search",
+      "problemDescription": "Refactor a recursive Binary Search implementation into an iterative one to save stack memory.",
+      "language": "go",
+      "initialCode": "package main\n\nfunc binarySearch(arr []int, x int, l int, r int) int {\n\tif l > r {\n\t\treturn -1\n\t}\n\tm := l + (r-l)/2\n\tif arr[m] == x {\n\t\treturn m\n\t}\n\tif arr[m] < x {\n\t\treturn binarySearch(arr, x, m+1, r)\n\t}\n\treturn binarySearch(arr, x, l, m-1)\n}\n\nfunc main() {\n\tarr := []int{1, 2, 3, 4, 10}\n\tbinarySearch(arr, 10, 0, 4)\n}",
+      "solution": {
+        "code": "package main\n\nfunc binarySearch(arr []int, x int) int {\n\tl, r := 0, len(arr)-1\n\tfor l <= r {\n\t\tm := l + (r-l)/2\n\t\tif arr[m] == x {\n\t\t\treturn m\n\t\t}\n\t\tif arr[m] < x {\n\t\t\tl = m + 1\n\t\t} else {\n\t\t\tr = m - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tarr := []int{1, 2, 3, 4, 10}\n\tbinarySearch(arr, 10)\n}",
+        "explanation": "Iterative implementations avoid the memory overhead of multiple function calls on the recursion stack."
+      }
+    }
+  }
+}

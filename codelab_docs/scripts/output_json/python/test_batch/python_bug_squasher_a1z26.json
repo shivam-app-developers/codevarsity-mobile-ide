@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "",
+      "problemDescription": "",
+      "language": "",
+      "buggyCode": "",
+      "solution": {
+        "code": "",
+        "explanation": "Fix the bug."
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "Go Bubble Sort",
+      "description": "Implement a simple Bubble Sort in Go using slices and multiple assignment for swapping.",
+      "language": "go",
+      "mode": "snippet",
+      "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc bubbleSort(arr []int) {\n\tn := len(arr)\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n-i-1; j++ {\n\t\t\tif arr[j] > arr[j+1] {\n\t\t\t\tarr[j], arr[j+1] = arr[j+1], arr[j]\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{64, 34, 25, 12, 22, 11, 90}\n\tbubbleSort(arr)\n\tfmt.Println(\"Sorted array:\", arr)\n}",
+      "finalCode": "package main\n\nimport \"fmt\"\n\nfunc bubbleSort(arr []int) {\n\tn := len(arr)\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n-i-1; j++ {\n\t\t\tif arr[j] > arr[j+1] {\n\t\t\t\tarr[j], arr[j+1] = arr[j+1], arr[j]\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tarr := []int{64, 34, 25, 12, 22, 11, 90}\n\tbubbleSort(arr)\n\tfmt.Println(\"Sorted array:\", arr)\n}",
+      "validation": {
+        "pattern": "Sorted array: [11 12 22 25 34 64 90]"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Web Refactor: Blurry Loading",
+      "problemDescription": "Refactor the style calculations to use a reusable scale helper function for better readability.",
+      "language": "html",
+      "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"loading-text\">0%</div>\n  <script>\n    const loadText = document.querySelector('.loading-text');\n    let load = 0;\n    setInterval(() => {\n      load++;\n      if (load > 99) return;\n      loadText.innerText = `${load}%`;\n      // Hardcoded math for opacity and filter\n      loadText.style.opacity = (100 - load) / 100;\n    }, 30);\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"loading-text\">0%</div>\n  <script>\n    const loadText = document.querySelector('.loading-text');\n    let load = 0;\n    const scale = (num, in_min, in_max, out_min, out_max) => {\n      return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;\n    };\n    setInterval(() => {\n      load++;\n      if (load > 100) return;\n      loadText.innerText = `${load}%`;\n      loadText.style.opacity = scale(load, 0, 100, 1, 0);\n    }, 30);\n  </script>\n</body>\n</html>",
+        "explanation": "Using a 'scale' function makes it easier to map the loading percentage (0-100) to other ranges like opacity (1-0) or blur intensity."
+      }
+    }
+  }
+}

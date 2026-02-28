@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Java Factorial",
+      "problemDescription": "Fix the initial value of the result to ensure the factorial calculation progresses correctly.",
+      "language": "java",
+      "buggyCode": "public class Factorial {\n    static long factorial(int n) {\n        long res = 0; // BUG: Should be 1\n        for (int i = 1; i <= n; i++) {\n            res *= i;\n        }\n        return res;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5));\n    }\n}",
+      "solution": {
+        "code": "public class Factorial {\n    static long factorial(int n) {\n        long res = 1;\n        for (int i = 1; i <= n; i++) {\n            res *= i;\n        }\n        return res;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5));\n    }\n}",
+        "explanation": "Starting 'res' at 0 means any subsequent multiplication will result in 0."
+      }
+    }
+  }
+}

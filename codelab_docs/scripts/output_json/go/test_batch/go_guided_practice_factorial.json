@@ -1,0 +1,17 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "title": "Go Factorial (Recursive)",
+      "description": "Learn to calculate the factorial of a number using recursion in Go.",
+      "language": "go",
+      "mode": "snippet",
+      "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tif n <= 1 {\n\t\treturn 1\n\t}\n\treturn n * factorial(n-1)\n}\n\nfunc main() {\n\tnum := 5\n\tfmt.Printf(\"Factorial of %d is %d\\n\", num, factorial(num))\n}",
+      "finalCode": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tif n <= 1 {\n\t\treturn 1\n\t}\n\treturn n * factorial(n-1)\n}\n\nfunc main() {\n\tnum := 5\n\tfmt.Printf(\"Factorial of %d is %d\\n\", num, factorial(num))\n}",
+      "validation": {
+        "pattern": "Factorial of 5 is 120"
+      }
+    }
+  }
+}

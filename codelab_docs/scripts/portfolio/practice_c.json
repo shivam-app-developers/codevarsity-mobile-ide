@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "snippets": [
+    {
+      "id": "c_bug_squasher_binary_search",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_bug_squasher_binary_search.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_bug_squasher_bubble_sort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_binary_search",
+      "type": "refactor",
+      "language": "c",
+      "title": "C Refactor: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_code_refactor_binary_search.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "c",
+      "title": "C Refactor: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_code_refactor_bubble_sort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_code_refactor_factorial",
+      "type": "refactor",
+      "language": "c",
+      "title": "C Refactor: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_binary_search",
+      "type": "guided",
+      "language": "c",
+      "title": "C Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_guided_practice_binary_search.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "c",
+      "title": "C Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_guided_practice_bubble_sort.json",
+      "difficulty": "medium"
+    },
+    {
+      "id": "c_guided_practice_factorial",
+      "type": "guided",
+      "language": "c",
+      "title": "C Factorial (Recursive)",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/c/test_batch/c_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    }
+  ],
+  "projects": []
+}

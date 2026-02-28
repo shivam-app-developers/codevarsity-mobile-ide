@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "C Refactor: Bubble Sort",
+      "problemDescription": "Optimize the basic Bubble Sort by adding a swapped flag to stop early if the array is already sorted.",
+      "language": "c",
+      "initialCode": "#include <stdio.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    bubbleSort(arr, 5);\n    return 0;\n}",
+      "solution": {
+        "code": "#include <stdio.h>\n#include <stdbool.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        bool swapped = false;\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n                swapped = true;\n            }\n        }\n        if (!swapped) break;\n    }\n}\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    bubbleSort(arr, 5);\n    return 0;\n}",
+        "explanation": "Adding a 'swapped' flag reduces the time complexity to O(n) for nearly sorted arrays."
+      }
+    }
+  }
+}

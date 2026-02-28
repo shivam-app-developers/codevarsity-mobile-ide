@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: JS Factorial",
+      "problemDescription": "Fix the initial value of the result to ensure the factorial calculation progresses correctly.",
+      "language": "javascript",
+      "buggyCode": "const factorial = (n) => {\n    let res = 0; // BUG: Should be 1\n    for (let i = 1; i <= n; i++) {\n        res *= i;\n    }\n    return res;\n};\n\nconsole.log(factorial(5));",
+      "solution": {
+        "code": "const factorial = (n) => {\n    let res = 1;\n    for (let i = 1; i <= n; i++) {\n        res *= i;\n    }\n    return res;\n};\n\nconsole.log(factorial(5));",
+        "explanation": "Starting 'res' at 0 means any subsequent multiplication will result in 0."
+      }
+    }
+  }
+}

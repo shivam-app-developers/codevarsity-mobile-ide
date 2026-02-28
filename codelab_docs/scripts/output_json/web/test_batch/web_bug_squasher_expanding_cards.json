@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bug Squasher: Expanding Cards",
+      "problemDescription": "Fix the logic so that only one card remains expanded at a time when clicked.",
+      "language": "html",
+      "buggyCode": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"panel active\">Card 1</div>\n  <div class=\"panel\">Card 2</div>\n  <script>\n    const panels = document.querySelectorAll('.panel');\n    panels.forEach(panel => {\n      panel.addEventListener('click', () => {\n        // BUG: Missing the logic to remove 'active' from other panels\n        panel.classList.add('active');\n      });\n    });\n  </script>\n</body>\n</html>",
+      "solution": {
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n  <div class=\"panel active\">Card 1</div>\n  <div class=\"panel\">Card 2</div>\n  <script>\n    const panels = document.querySelectorAll('.panel');\n    panels.forEach(panel => {\n      panel.addEventListener('click', () => {\n        panels.forEach(p => p.classList.remove('active')); // Fixed\n        panel.classList.add('active');\n      });\n    });\n  </script>\n</body>\n</html>",
+        "explanation": "Failing to remove the 'active' class from other panels means all clicked panels will stay expanded simultaneously."
+      }
+    }
+  }
+}
