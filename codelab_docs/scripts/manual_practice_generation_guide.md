@@ -49,7 +49,7 @@ To ensure the JSON remains valid and can be parsed by the mobile app, follow the
 
 A typing drill to help users memorize syntax and patterns.
 
-* **Logic**: `ghostCode` and `finalCode` must be **IDENTICAL**.
+* **Logic**: `ghostCode` and `finalCode` must be **EXACTLY IDENTICAL**. This includes all comments, print statements, and main entry blocks. If you add an entry point (e.g., `if __name__ == "__main__":`) to `finalCode`, you MUST also add it exactly to `ghostCode`. The validation script will **REJECT** any file where these two strings do not match exactly.
 * **Mode**: Must be set to `"snippet"`.
 * **Mobile Optimization**: Aggressively strip all comments, docstrings, and external links.
 * **Runnable**: Include an `if __name__ == "__main__":` block with sample inputs and `print()` statements.

@@ -7,7 +7,7 @@
       "title": "A1Z26 Cipher Encoder",
       "description": "Practice typing a simple A1Z26 cipher encoder that converts a word into its alphabetical position numbers.",
       "language": "python",
-      "ghostCode": "def encode(plain):\n    return [ord(elem) - 96 for elem in plain]",
+      "ghostCode": "def encode(plain):\n    return [ord(elem) - 96 for elem in plain]\n\nif __name__ == \"__main__\":\n    encoded = encode(\"hello\")\n    print(\"Encoded:\", encoded)",
       "finalCode": "def encode(plain):\n    return [ord(elem) - 96 for elem in plain]\n\nif __name__ == \"__main__\":\n    encoded = encode(\"hello\")\n    print(\"Encoded:\", encoded)"
     }
   }

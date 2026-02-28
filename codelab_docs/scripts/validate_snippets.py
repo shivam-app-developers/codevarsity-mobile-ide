@@ -43,6 +43,15 @@ def validate_json_file(file_path):
 
     try:
         jsonschema.validate(instance=v_params, schema=schema)
+
+        # Enforce exact code match for GuidedPractice
+        if v_type == "GuidedPractice":
+            if v_params.get("ghostCode") != v_params.get("finalCode"):
+                print(
+                    f"❌ Validation Failed for {file_path.name}: ghostCode and finalCode must be EXACTLY identical."
+                )
+                return False
+
         print(f"✅ Validation Passed: {file_path.name}")
         return True
     except jsonschema.exceptions.ValidationError as e:
