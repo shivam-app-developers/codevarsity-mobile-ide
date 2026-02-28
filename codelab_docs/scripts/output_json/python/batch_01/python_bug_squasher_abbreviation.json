@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "DP State Transition Flaw",
+      "problemDescription": "The `abbr` function uses dynamic programming to determine if string `a` can be transformed into string `b`. However, it's failing some tests because it incorrectly assumes uppercase letters in `a` can be skipped. Find and fix the flaw in the DP transitions.",
+      "language": "python",
+      "buggyCode": "def abbr(a: str, b: str) -> bool:\n    n = len(a)\n    m = len(b)\n    dp = [[False for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(abbr(\"daBcd\", \"ABC\"))",
+      "solution": {
+        "code": "def abbr(a: str, b: str) -> bool:\n    n = len(a)\n    m = len(b)\n    dp = [[False for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                if a[i].islower():\n                    dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(abbr(\"daBcd\", \"ABC\"))",
+        "explanation": "The bug allows skipping *any* character from string `a` by unconditionally setting `dp[i + 1][j] = True`. However, the problem states that we can only delete *lowercase* letters. If we encounter an uppercase letter in `a` that doesn't match the current character in `b`, we cannot skip it. By adding the condition `if a[i].islower():` before transitioning without consuming a character from `b`, we correctly enforce the rule that uppercase letters must match."
+      }
+    }
+  }
+}

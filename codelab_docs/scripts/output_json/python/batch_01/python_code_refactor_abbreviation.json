@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Abbreviation DP",
+      "problemDescription": "Refactor the DP-based abbreviation matching function. The current implementation uses an unnecessary amount of variables and redundant checks. Simplify the structure without losing the O(N*M) performance.",
+      "language": "python",
+      "initialCode": "def abbr(a: str, b: str) -> bool:\n    n_len = len(a)\n    m_len = len(b)\n    dp_table = []\n    for _ in range(n_len + 1):\n        row = []\n        for _ in range(m_len + 1):\n            row.append(False)\n        dp_table.append(row)\n        \n    dp_table[0][0] = True\n    \n    i = 0\n    while i < n_len:\n        j = 0\n        while j <= m_len:\n            if dp_table[i][j] == True:\n                if j < m_len:\n                    if a[i].upper() == b[j]:\n                        dp_table[i + 1][j + 1] = True\n                if a[i].islower() == True:\n                    dp_table[i + 1][j] = True\n            j += 1\n        i += 1\n        \n    return dp_table[n_len][m_len]\n\nif __name__ == \"__main__\":\n    print(abbr(\"daBcd\", \"ABC\"))",
+      "solution": {
+        "code": "def abbr(a: str, b: str) -> bool:\n    n, m = len(a), len(b)\n    dp = [[False] * (m + 1) for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                if a[i].islower():\n                    dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(abbr(\"daBcd\", \"ABC\"))",
+        "explanation": "The original code uses cumbersome `while` loops and manually builds the 2D DP matrix using nested `for` loops and `append`. In Python, you can initialize a 2D matrix much more concisely and efficiently using list comprehensions like `[[False] * (m + 1) for _ in range(n + 1)]`. Replacing the `while` loops with `for` loops iterating over `range()` also makes the code cleaner and less prone to infinite loop bugs. Finally, `if a[i].islower() == True:` is redundant; `if a[i].islower():` is sufficient and preferred."
+      }
+    }
+  }
+}

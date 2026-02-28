@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing A1Z26 Encoder",
+      "problemDescription": "Refactor the provided A1Z26 encoder. The current implementation uses a verbose `for` loop and `append()` to build the list, which can be made more concise and efficient using Python's list comprehension.",
+      "language": "python",
+      "initialCode": "def encode(plain):\n    encoded_list = []\n    for elem in plain:\n        char_code = ord(elem)\n        alphabet_pos = char_code - 96\n        encoded_list.append(alphabet_pos)\n    return encoded_list\n\nif __name__ == \"__main__\":\n    print(encode(\"hello\"))",
+      "solution": {
+        "code": "def encode(plain):\n    return [ord(elem) - 96 for elem in plain]\n\nif __name__ == \"__main__\":\n    print(encode(\"hello\"))",
+        "explanation": "The original code uses a multi-line `for` loop to manually build the list element by element. In Python, a list comprehension `[ord(elem) - 96 for elem in plain]` achieves the exact same result in a single, more readable line and is often slightly faster because it is optimized at the C level within the Python interpreter."
+      }
+    }
+  }
+}
