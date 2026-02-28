@@ -11,7 +11,9 @@ For every input source file, generate **three** JSON files corresponding to the 
 1. **Select Snippet**: Choose a file from `input_snippets/python/batch_01/`.
 2. **Analyze Logic**: Understand the core algorithm or logic.
 3. **Generate Modes**: Create the 3 JSON files described below.
-4. **Validate**: Run the validation script on the output.
+4. **Fix Structure**: If you didn't nest the `visualizerType` correctly, run the `fix_json_structure.py` script.
+5. **Validate**: Run the validation script on the output.
+6. **Generate Portfolio**: Run `generate_portfolio.py` to update the index and language catalogs.
 
 ---
 
@@ -109,6 +111,7 @@ Generated code MUST be runnable in the app's mobile terminal. Follow these rules
 ### 1. Mandatory Main Entry Points
 
 Every snippet must be self-contained and runnable. Add a main entry point if missing:
+
 * **Python**: Use `if __name__ == "__main__":` with `print()` calls.
 * **C**: Use `int main() { ... }` with `printf()`.
 * **Java**: Use `public static void main(String[] args) { ... }` with `System.out.println()`.
@@ -119,13 +122,15 @@ Every snippet must be self-contained and runnable. Add a main entry point if mis
 ### 2. Mobile Optimization (Conciseness)
 
 Mobile screens are small. Keep code tight:
+
 * **Aggressively Remove**: Docstrings, long explanatory comments, and external links in the code fields.
 * **Use Clear Names**: Favor self-documenting code over lengthy comments.
 * **Avoid GUI**: Do NOT use GUI-related libraries (Tkinter, Swing, AWT, etc.). Standard I/O only.
 
 ### 3. Language-Specific Environments
 
-- **Python**: Chaquopy (3.10). Standard libraries + Data Science stack.
+* **Python**: Chaquopy (3.10). Standard libraries + Data Science stack.
+
 * **Java**: ECJ compiler. Java 8-21 support.
 * **Go**: Yaegi interpreter. Standard library only (no CGO).
 * **JavaScript**: Rhino engine (ES6). No DOM/Node APIs.
@@ -134,39 +139,36 @@ Mobile screens are small. Keep code tight:
 
 ---
 
-## 3. Code Refactor Mode
+## Automation Scripts
 
-A performance or clean-code challenge.
+To maintain consistency and speed up deployment, use these scripts located in `codelab_docs/scripts/`:
 
-* **Logic**: Start with inefficient or "messy" code (e.g., O(N^2) instead of O(N)).
-* **Solution**: Include the original "clean" version and explain the benefits.
-* **Filename**: `python_code_refactor_<original_name>.json`
+### 1. Structural Fix (`fix_json_structure.py`)
 
-```json
-{
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
-    "visualizerParams": {
-      "title": "Refactor Topic",
-      "problemDescription": "Why is it inefficient?",
-      "language": "python",
-      "initialCode": "INEFFICIENT_CODE_HERE",
-      "solution": {
-        "code": "CLEAN_OPTIMIZED_CODE",
-        "explanation": "Why this is better..."
-      }
-    }
-  }
-}
+If you manually created snippets using the "flat" structure, run this to wrap them into the nested format required by `schemas.py`. It also maps generic fields (like `description`) to type-specific fields (like `problemDescription`).
+
+```bash
+python fix_json_structure.py
+```
+
+### 2. Portfolio Generation (`generate_portfolio.py`)
+
+After validating your snippets, run this to update `practice_index.json` and the language catalogs. It automatically calculates the GitHub Raw URLs based on the repository structure.
+
+```bash
+python generate_portfolio.py
 ```
 
 ---
 
 ## Validation
 
-Run the validation script to ensure schema compliance:
+Run the validation script to ensure schema compliance for all languages:
 
 ```bash
+# Validate a specific batch
 python validate_snippets.py --output_dir output_json/python/test_batch
+
+# Validate all generated snippets
+python validate_snippets.py --output_dir output_json
 ```
