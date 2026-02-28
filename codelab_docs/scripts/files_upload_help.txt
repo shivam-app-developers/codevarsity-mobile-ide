@@ -1,0 +1,17 @@
+Help on method upload in module google.genai.files:
+
+upload(
+    *,
+    file: Union[str, os.PathLike[str], io.IOBase],
+    config: Optional[types.UploadFileConfigOrDict] = None
+) -> types.File method of google.genai.files.Files instance
+    Calls the API to upload a file using a supported file service.
+
+    Args:
+      file: A path to the file or an `IOBase` object to be uploaded. If it's an
+        IOBase object, it must be opened in blocking (the default) mode and
+        binary mode. In other words, do not use non-blocking mode or text mode.
+        The given stream must be seekable, that is, it must be able to call
+        `seek()` on 'path'.
+      config: Optional parameters to set `diplay_name`, `mime_type`, and `name`.
+

@@ -1,0 +1,31 @@
+Help on method create in module google.genai.batches:
+
+create(
+    *,
+    model: str,
+    src: types.BatchJobSourceUnionDict,
+    config: Optional[types.CreateBatchJobConfigOrDict] = None
+) -> types.BatchJob method of google.genai.batches.Batches instance
+    Creates a batch job.
+
+    Args:
+      model (str): The model to use for the batch job.
+      src: The source of the batch job. Currently Vertex AI supports GCS URI(-s)
+        or BigQuery URI. Example: "gs://path/to/input/data" or
+        "bq://projectId.bqDatasetId.bqTableId". Gemini Developer API supports
+        List of inlined_request, or file name. Example: "files/file_name".
+      config (CreateBatchJobConfig): Optional configuration for the batch job.
+
+    Returns:
+      A BatchJob object that contains details about the batch job.
+
+    Usage:
+
+    .. code-block:: python
+
+      batch_job = client.batches.create(
+          model="gemini-2.0-flash-001",
+          src="gs://path/to/input/data",
+      )
+      print(batch_job.state)
+
