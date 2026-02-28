@@ -1,0 +1,14 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Abbreviation Subsequence DP",
+      "description": "Practice typing the core dynamic programming loop to solve the abbreviation string matching problem.",
+      "language": "python",
+      "ghostCode": "for i in range(n):\n    for j in range(m + 1):\n        if dp[i][j]:\n            if j < m and a[i].upper() == b[j]:\n                dp[i + 1][j + 1] = True\n            if a[i].islower():\n                dp[i + 1][j] = True",
+      "finalCode": "def abbr(a: str, b: str) -> bool:\n    n = len(a)\n    m = len(b)\n    dp = [[False for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = True\n    for i in range(n):\n        for j in range(m + 1):\n            if dp[i][j]:\n                if j < m and a[i].upper() == b[j]:\n                    dp[i + 1][j + 1] = True\n                if a[i].islower():\n                    dp[i + 1][j] = True\n    return dp[n][m]\n\nif __name__ == \"__main__\":\n    print(abbr(\"daBcd\", \"ABC\"))"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "A1Z26 Decoder Offset Bug",
+      "problemDescription": "The `decode` function is supposed to convert a list of numbers (1-26) back into lowercase letters. However, it seems to be outputting the wrong characters (e.g. `1` becomes `b` instead of `a`). Identify and fix the offset bug.",
+      "language": "python",
+      "buggyCode": "def decode(encoded):\n    return \"\".join(chr(elem + 97) for elem in encoded)\n\nif __name__ == \"__main__\":\n    print(decode([8, 5, 12, 12, 15]))",
+      "solution": {
+        "code": "def decode(encoded):\n    return \"\".join(chr(elem + 96) for elem in encoded)\n\nif __name__ == \"__main__\":\n    print(decode([8, 5, 12, 12, 15]))",
+        "explanation": "The bug was an incorrect offset in the `chr()` function. In ASCII, the lowercase letter 'a' has the value 97. If the input `elem` is 1 (for 'a'), adding 97 results in 98, which is 'b'. To map 1 to 97, the correct offset is 96 (`elem + 96`)."
+      }
+    }
+  }
+}
