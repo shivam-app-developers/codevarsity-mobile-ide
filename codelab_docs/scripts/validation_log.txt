@@ -1,0 +1,15 @@
+Validating 312 Snippets found in output_json\python\batch_01...
+Traceback (most recent call last):
+  File "C:\Users\Software\DevelopementFlutter\project5\codevarsity-mobile-ide\codelab_docs\scripts\validate_snippets.py", line 94, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Software\DevelopementFlutter\project5\codevarsity-mobile-ide\codelab_docs\scripts\validate_snippets.py", line 87, in main
+    if validate_json_file(f):
+       ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Software\DevelopementFlutter\project5\codevarsity-mobile-ide\codelab_docs\scripts\validate_snippets.py", line 55, in validate_json_file
+    print(f"\u2705 Validation Passed: {file_path.name}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mbalu\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
