@@ -6,7 +6,7 @@
       "type": "bug_squasher",
       "language": "go",
       "title": "Bug Squasher: Go Binary Search",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_binary.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_binary.json",
       "difficulty": "medium"
     },
     {
@@ -14,7 +14,7 @@
       "type": "bug_squasher",
       "language": "go",
       "title": "Bug Squasher: Go Bubble Sort",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_bubblesort.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_bubblesort.json",
       "difficulty": "medium"
     },
     {
@@ -22,7 +22,7 @@
       "type": "bug_squasher",
       "language": "go",
       "title": "Bug Squasher: Go Factorial",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_factorial.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_factorial.json",
       "difficulty": "beginner"
     },
     {
@@ -30,7 +30,7 @@
       "type": "refactor",
       "language": "go",
       "title": "Go Refactor: Binary Search",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_binary.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_binary.json",
       "difficulty": "medium"
     },
     {
@@ -38,7 +38,7 @@
       "type": "refactor",
       "language": "go",
       "title": "Go Refactor: Idiomatic Swap",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_bubblesort.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_bubblesort.json",
       "difficulty": "medium"
     },
     {
@@ -46,7 +46,7 @@
       "type": "refactor",
       "language": "go",
       "title": "Go Refactor: Factorial",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_factorial.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_factorial.json",
       "difficulty": "beginner"
     },
     {
@@ -54,7 +54,7 @@
       "type": "guided",
       "language": "go",
       "title": "Go Binary Search",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_binary.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_binary.json",
       "difficulty": "medium"
     },
     {
@@ -62,7 +62,7 @@
       "type": "guided",
       "language": "go",
       "title": "Go Bubble Sort",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_bubblesort.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_bubblesort.json",
       "difficulty": "medium"
     },
     {
@@ -70,7 +70,7 @@
       "type": "guided",
       "language": "go",
       "title": "Go Factorial (Recursive)",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_factorial.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_factorial.json",
       "difficulty": "beginner"
     }
   ],

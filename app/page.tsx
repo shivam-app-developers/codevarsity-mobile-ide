@@ -147,6 +147,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FOR EDUCATORS & CREATORS FUNNELS */}
+        <section className="py-12 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+
+            {/* Educators Card */}
+            <div className="bg-white p-8 rounded-[2rem] border border-brand-primary/10 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-0"></div>
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl text-xl">
+                  <i className="fa-solid fa-school"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">For Educators</h3>
+                  <p className="text-sm font-medium text-gray-500">High Schools & Bootcamps</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-8 relative z-10">Manage massive student rosters, assign rigor-tested coding labs, and track completion analytics seamlessly.</p>
+              <Link href="/institutions" className="inline-flex items-center gap-2 text-brand-primary font-bold hover:gap-3 transition-all relative z-10">
+                Explore CodeVarsity Institute <i className="fa-solid fa-arrow-right"></i>
+              </Link>
+            </div>
+
+            {/* Creators Card */}
+            <div className="bg-white p-8 rounded-[2rem] border border-purple-100 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-0"></div>
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                <div className="w-12 h-12 bg-purple-100 text-purple-600 flex items-center justify-center rounded-xl text-xl">
+                  <i className="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">For Content Creators</h3>
+                  <p className="text-sm font-medium text-gray-500">YouTubers & Influencers</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-8 relative z-10">Turn your free YouTube videos into interactive coding lessons. Attach starter code and a live IDE to your tutorials.</p>
+              <Link href="/creators" className="inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-3 transition-all relative z-10">
+                Build your Creator Hub <i className="fa-solid fa-arrow-right"></i>
+              </Link>
+            </div>
+
+          </div>
+        </section>
+
         <ComparisonTable />
         <TestimonialsSection />
         <BlogRow posts={getAllPosts()} />

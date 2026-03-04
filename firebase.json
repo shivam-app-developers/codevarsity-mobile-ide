@@ -19,6 +19,9 @@
       }
     ]
   },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
   "apphosting": {
     "backendId": "CodeVarsity-web-backend",
     "rootDir": "/",
@@ -31,4 +34,3 @@
     ]
   }
 }
-

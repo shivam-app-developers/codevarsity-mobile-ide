@@ -6,7 +6,7 @@
       "type": "bug_squasher",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_a1z26.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_a1z26.json",
       "difficulty": "medium"
     },
     {
@@ -14,7 +14,7 @@
       "type": "bug_squasher",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_abbreviation.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_abbreviation.json",
       "difficulty": "advanced"
     },
     {
@@ -22,7 +22,7 @@
       "type": "bug_squasher",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_activity_selection.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_bug_squasher_activity_selection.json",
       "difficulty": "medium"
     },
     {
@@ -30,7 +30,7 @@
       "type": "refactor",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_a1z26.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_a1z26.json",
       "difficulty": "advanced"
     },
     {
@@ -38,7 +38,7 @@
       "type": "refactor",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_abbreviation.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_abbreviation.json",
       "difficulty": "advanced"
     },
     {
@@ -46,7 +46,7 @@
       "type": "refactor",
       "language": "python",
       "title": "",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_activity_selection.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_code_refactor_activity_selection.json",
       "difficulty": "advanced"
     },
     {
@@ -54,7 +54,7 @@
       "type": "guided",
       "language": "python",
       "title": "Python Guided Practice A1Z26",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_a1z26.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_a1z26.json",
       "difficulty": "beginner"
     },
     {
@@ -62,7 +62,7 @@
       "type": "guided",
       "language": "python",
       "title": "Python Guided Practice Abbreviation",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_abbreviation.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_abbreviation.json",
       "difficulty": "medium"
     },
     {
@@ -70,7 +70,7 @@
       "type": "guided",
       "language": "python",
       "title": "Python Guided Practice Activity Selection",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_activity_selection.json",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/python/test_batch/python_guided_practice_activity_selection.json",
       "difficulty": "medium"
     }
   ],

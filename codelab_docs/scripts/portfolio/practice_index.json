@@ -3,27 +3,27 @@
   "catalogs": [
     {
       "language": "c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_c.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_c.json"
     },
     {
       "language": "go",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_go.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_go.json"
     },
     {
       "language": "java",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_java.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_java.json"
     },
     {
       "language": "javascript",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_javascript.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_javascript.json"
     },
     {
       "language": "python",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_python.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_python.json"
     },
     {
       "language": "web",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/main/codelab_docs/scripts/portfolio/practice_web.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_web.json"
     }
   ]
 }

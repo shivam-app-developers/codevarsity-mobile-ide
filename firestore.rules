@@ -43,6 +43,45 @@ service cloud.firestore {
       allow write: if false; // Handled via Cloud Functions
     }
 
+    // --- Institute Dashboard Rules ---
+    match /institutes/{instituteId} {
+      allow read, write: if isSignedIn() && request.auth.uid == instituteId;
+    }
+    match /institute_groups/{groupId} {
+      // Students need to read groups to join via code
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && request.auth.uid == request.resource.data.instituteId;
+      allow update, delete: if isSignedIn() && request.auth.uid == resource.data.instituteId;
+    }
+    match /institute_memberships/{membershipId} {
+      // Admins read/update their institute's requests. Users read their own requests. Users create their own requests.
+      allow read: if isSignedIn() && (request.auth.uid == resource.data.userId || request.auth.uid == resource.data.instituteId);
+      allow create: if isSignedIn() && request.auth.uid == request.resource.data.userId;
+      allow update: if isSignedIn() && request.auth.uid == resource.data.instituteId;
+      allow delete: if isSignedIn() && (request.auth.uid == resource.data.userId || request.auth.uid == resource.data.instituteId);
+    }
+    match /institute_rosters/{rosterId} {
+      // Only the institute admin handles rosters
+      allow read, delete: if isSignedIn() && request.auth.uid == resource.data.instituteId;
+      allow create, update: if isSignedIn() && request.auth.uid == request.resource.data.instituteId;
+    }
+    
+    // --- Creator Hub Rules ---
+    match /creators/{creatorId} {
+      // Anyone can read a creator profile to view their hub
+      allow read: if true;
+      // Only the creator can edit their own profile
+      allow write: if isSignedIn() && request.auth.uid == creatorId;
+    }
+    match /creator_lessons/{lessonId} {
+      // Anyone can read lessons
+      allow read: if true;
+      // Only the creator can create/update/delete their own lessons
+      allow create: if isSignedIn() && request.auth.uid == request.resource.data.creatorId;
+      allow update, delete: if isSignedIn() && request.auth.uid == resource.data.creatorId;
+    }
+    // ---------------------------------------
+
     // Blog and docs are public
     match /{document=**} {
       allow read: if true;

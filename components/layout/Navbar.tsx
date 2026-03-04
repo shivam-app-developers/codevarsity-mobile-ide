@@ -35,11 +35,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Courses', href: '/#courses' },
-    { label: 'Visualizers', href: '/#visualizers' },
+    { label: 'For Educators', href: '/institutions' },
+    { label: 'For Creators', href: '/creators' },
     { label: 'Docs', href: '/docs' },
     { label: 'Blog', href: '/blog' },
-    { label: 'FAQ', href: '/faq' },
-    { label: 'About', href: '/about' },
   ];
 
   return (

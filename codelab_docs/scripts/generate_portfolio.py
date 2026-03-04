@@ -5,7 +5,7 @@ from pathlib import Path
 # Configuration
 REPO_OWNER = "shivam-app-developers"
 REPO_NAME = "codevarsity-mobile-ide"
-BRANCH = "main"
+BRANCH = "master"
 BASE_GITHUB_URL = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/codelab_docs/scripts/output_json"
 
 OUTPUT_DIR = Path("portfolio")
