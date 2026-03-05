@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Using `math.comb` for nCr",
+      "problemDescription": "The provided code manually implements the combination formula using a loop. Refactor it to use Python's built-in `math.comb()` function, which is more efficient and handles large numbers and edge cases properly.",
+      "language": "python",
+      "initialCode": "def combinations(n, k):\n    if k < 0 or k > n: return 0\n    res = 1\n    for i in range(k):\n        res = res * (n - i) // (i + 1)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"52 choose 5: {combinations(52, 5)}\")",
+      "solution": {
+        "code": "import math\n\ndef combinations(n, k):\n    try:\n        return math.comb(n, k)\n    except ValueError:\n        return 0\n\nif __name__ == \"__main__\":\n    print(f\"52 choose 5: {combinations(52, 5)}\")",
+        "explanation": "Python 3.8+ provides `math.comb(n, k)` which is the most efficient and standard way to calculate combinations. It is implemented in C and avoids common overflow or precision pitfalls associated with manual calculations."
+      }
+    }
+  }
+}

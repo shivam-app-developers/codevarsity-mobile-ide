@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Recursive Bisection Method",
+      "problemDescription": "The provided bisection method uses an iterative `while` loop. Refactor it to use a recursive approach, which mirrors the mathematical definition of repeatedly halving the interval.",
+      "language": "python",
+      "initialCode": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0: return None\n    mid = (a + b) / 2\n    if (b - a) / 2 < tol or f(mid) == 0:\n        return mid\n    if f(a) * f(mid) < 0: return bisection(f, a, mid, tol)\n    return bisection(f, mid, b, tol)\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")",
+      "solution": {
+        "code": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0: return None\n    mid = (a + b) / 2\n    if (b - a) / 2 < tol or f(mid) == 0:\n        return mid\n    if f(a) * f(mid) < 0: \n        return bisection(f, a, mid, tol)\n    else:\n        return bisection(f, mid, b, tol)\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")",
+        "explanation": "The recursive bisection clearly expresses the divide-and-conquer nature of the algorithm. It checks the base cases (convergence or exact root) and then recursively searches the sub-interval that contains the sign change."
+      }
+    }
+  }
+}

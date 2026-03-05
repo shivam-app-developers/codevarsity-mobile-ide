@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Large Non-Mersenne Prime",
+      "description": "Calculate the last ten digits of the massive prime number: 28433 * 2^7830457 + 1.",
+      "language": "python",
+      "ghostCode": "def solution(n: int = 10) -> str:\n    \"\"\"\n    Returns the last n digits of the prime number: 28433 * 2^7830457 + 1\n    \"\"\"\n    # We only need the last 10 digits, so we work modulo 10^10\n    modulus = 10**n\n    \n    # Use modular exponentiation: pow(base, exp, mod) is efficient\n    power_part = pow(2, 7830457, modulus)\n    \n    # Complete the calculation under the modulus\n    result = (28433 * power_part + 1) % modulus\n    \n    # Format with leading zeros if necessary\n    return str(result).zfill(n)\n\n\nif __name__ == \"__main__\":\n    print(f\"Last ten digits: {solution(10)}\")",
+      "finalCode": "def solution(n: int = 10) -> str:\n    \"\"\"\n    Returns the last n digits of the prime number: 28433 * 2^7830457 + 1\n    \"\"\"\n    # We only need the last 10 digits, so we work modulo 10^10\n    modulus = 10**n\n    \n    # Use modular exponentiation: pow(base, exp, mod) is efficient\n    power_part = pow(2, 7830457, modulus)\n    \n    # Complete the calculation under the modulus\n    result = (28433 * power_part + 1) % modulus\n    \n    # Format with leading zeros if necessary\n    return str(result).zfill(n)\n\n\nif __name__ == \"__main__\":\n    print(f\"Last ten digits: {solution(10)}\")"
+    }
+  }
+}

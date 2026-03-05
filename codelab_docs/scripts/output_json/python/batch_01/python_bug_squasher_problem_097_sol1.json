@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Large Non-Mersenne Prime",
+      "problemDescription": "Fix the logic to correctly calculate the last ten digits of a large prime number without memory errors.",
+      "language": "python",
+      "buggyCode": "def solution():\n    # BUG: Calculating 2**7830457 directly will create a massive number\n    # and might cause an OverflowError or consume huge amounts of memory/time\n    large_prime = 28433 * (2 ** 7830457) + 1\n    \n    # BUG: Converting a million-digit number to string just to slice it is slow\n    return str(large_prime)[-10:]\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "def solution():\n    # Use the three-argument form of pow() for efficient modular exponentiation\n    # pow(base, exp, mod) avoids creating the giant intermediate number\n    MOD = 10**10\n    power_val = pow(2, 7830457, MOD)\n    result = (28433 * power_val + 1) % MOD\n    \n    # Ensure 10 digits with leading zeros if necessary\n    return str(result).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

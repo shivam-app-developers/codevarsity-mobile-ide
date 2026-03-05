@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Champernowne's Constant",
+      "problemDescription": "Fix the logic to efficiently generate Champernowne's constant and calculate the digit product.",
+      "language": "python",
+      "buggyCode": "def solution():\n    constant = \"\"\n    # BUG: Range logic or loop termination might miss the 1,000,000th digit\n    for i in range(1, 100000):\n        constant += str(i)\n    \n    # BUG: Indices are 1-based in the problem (dn), but 0-based in strings\n    return int(constant[1]) * int(constant[10]) * int(constant[100])\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "def solution():\n    # Efficiently build string up to 1,000,000 digits\n    constant_parts = []\n    length = 0\n    i = 1\n    while length < 1000000:\n        s = str(i)\n        constant_parts.append(s)\n        length += len(s)\n        i += 1\n    \n    constant = \"\".join(constant_parts)\n    \n    # dn refers to 1st, 10th... digits, so index is dn - 1\n    indices = [0, 9, 99, 999, 9999, 99999, 999999]\n    res = 1\n    for idx in indices:\n        res *= int(constant[idx])\n    return res\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

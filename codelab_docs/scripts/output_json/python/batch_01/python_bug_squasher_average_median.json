@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Median Sorting Bug",
+      "problemDescription": "The median calculation is producing incorrect results. It seems the function is not properly preparing the data before finding the middle value. Identify and fix the logic bug.",
+      "language": "python",
+      "buggyCode": "def get_median(nums):\n    if not nums: return 0\n    n = len(nums)\n    mid = n // 2\n    if n % 2 == 0:\n        return (nums[mid - 1] + nums[mid]) / 2\n    return nums[mid]\n\nif __name__ == \"__main__\":\n    print(f\"Median of [4, 1, 3, 2]: {get_median([4, 1, 3, 2])}\")",
+      "solution": {
+        "code": "def get_median(nums):\n    if not nums: return 0\n    s = sorted(nums)\n    n = len(s)\n    mid = n // 2\n    if n % 2 == 0:\n        return (s[mid - 1] + s[mid]) / 2\n    return s[mid]\n\nif __name__ == \"__main__\":\n    print(f\"Median of [4, 1, 3, 2]: {get_median([4, 1, 3, 2])}\")",
+        "explanation": "To calculate the median, the list must be sorted first. The buggy code skipped the sorting step, leading to incorrect results based on the original, unordered list."
+      }
+    }
+  }
+}

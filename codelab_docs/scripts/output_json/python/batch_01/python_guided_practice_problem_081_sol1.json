@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Minimal Path Sum: Two Ways",
+      "description": "Find the minimal path sum from the top left to the bottom right of an 80x80 matrix by only moving right and down.",
+      "language": "python",
+      "ghostCode": "def solution(matrix: list[list[int]]) -> int:\n    \"\"\"\n    Returns the minimal path sum moving only right and down.\n    matrix: a 2D list of integers.\n    \"\"\"\n    rows = len(matrix)\n    cols = len(matrix[0])\n    \n    # dp[i][j] will store the minimum path sum to cell (i, j)\n    dp = [[0] * cols for _ in range(rows)]\n    \n    # Initialize starting point\n    dp[0][0] = matrix[0][0]\n    \n    # Initialize first row (can only move right)\n    for j in range(1, cols):\n        dp[0][j] = dp[0][j-1] + matrix[0][j]\n        \n    # Initialize first column (can only move down)\n    for i in range(1, rows):\n        dp[i][0] = dp[i-1][0] + matrix[i][0]\n        \n    # Fill the rest of the dp table\n    for i in range(1, rows):\n        for j in range(1, cols):\n            dp[i][j] = matrix[i][j] + min(dp[i-1][j], dp[i][j-1])\n            \n    return dp[rows-1][cols-1]\n\n\nif __name__ == \"__main__\":\n    # Small example test\n    test_grid = [\n        [131, 673, 234],\n        [201, 96, 342],\n        [630, 803, 746]\n    ]\n    print(f\"Minimal path sum: {solution(test_grid)}\")",
+      "finalCode": "def solution(matrix: list[list[int]]) -> int:\n    \"\"\"\n    Returns the minimal path sum moving only right and down.\n    matrix: a 2D list of integers.\n    \"\"\"\n    rows = len(matrix)\n    cols = len(matrix[0])\n    \n    # dp[i][j] will store the minimum path sum to cell (i, j)\n    dp = [[0] * cols for _ in range(rows)]\n    \n    # Initialize starting point\n    dp[0][0] = matrix[0][0]\n    \n    # Initialize first row (can only move right)\n    for j in range(1, cols):\n        dp[0][j] = dp[0][j-1] + matrix[0][j]\n        \n    # Initialize first column (can only move down)\n    for i in range(1, rows):\n        dp[i][0] = dp[i-1][0] + matrix[i][0]\n        \n    # Fill the rest of the dp table\n    for i in range(1, rows):\n        for j in range(1, cols):\n            dp[i][j] = matrix[i][j] + min(dp[i-1][j], dp[i][j-1])\n            \n    return dp[rows-1][cols-1]\n\n\nif __name__ == \"__main__\":\n    # Small example test\n    test_grid = [\n        [131, 673, 234],\n        [201, 96, 342],\n        [630, 803, 746]\n    ]\n    print(f\"Minimal path sum: {solution(test_grid)}\")"
+    }
+  }
+}

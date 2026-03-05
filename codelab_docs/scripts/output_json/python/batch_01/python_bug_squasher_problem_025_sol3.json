@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "First Fibonacci with N Digits",
+      "problemDescription": "Fix the loop logic and digit counting to correctly find the index of the first term with N digits.",
+      "language": "python",
+      "buggyCode": "def solution(n: int = 1000) -> int:\n    f1, f2 = 1, 1\n    index = 1\n    # BUG: index should start at 2 since we are looking for the next terms\n    # BUG: The loop condition might miss the first occurrence if not handled carefully\n    while len(str(f1)) < n:\n        # BUG: Swapping logic is incorrect\n        f1 = f2\n        f2 = f1 + f2\n        index += 1\n    return index\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+      "solution": {
+        "code": "def solution(n: int = 1000) -> int:\n    f1, f2 = 1, 1\n    index = 2\n    # Check if the current term (f2) has the required number of digits\n    while len(str(f2)) < n:\n        f1, f2 = f2, f1 + f2\n        index += 1\n    return index\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

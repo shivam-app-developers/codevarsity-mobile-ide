@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Combinatoric Selections",
+      "problemDescription": "Fix the logic to correctly calculate and count combinations exceeding a threshold.",
+      "language": "python",
+      "buggyCode": "import math\n\ndef solution():\n    count = 0\n    for n in range(1, 101):\n        # BUG: range(n) misses the case r=n\n        for r in range(n):\n            # BUG: Calculating factorials repeatedly is inefficient and can cause float issues if using division\n            val = math.factorial(n) / (math.factorial(r) * math.factorial(n-r))\n            if val > 1000000:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "import math\n\ndef solution():\n    count = 0\n    for n in range(1, 101):\n        for r in range(0, n + 1):\n            # Use math.comb for robust integer combination calculation\n            if math.comb(n, r) > 1000000:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

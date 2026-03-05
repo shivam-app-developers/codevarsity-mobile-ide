@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Binomial Distribution",
+      "description": "Calculate the probability of k successes in n trials for a binomial distribution.",
+      "language": "python",
+      "ghostCode": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    if k > n or not (0 <= p <= 1):\n        return 0.0\n    coeff = factorial(n) / (factorial(k) * factorial(n - k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob(2/4, p=0.5): {binomial_dist(2, 4, 0.5)}\")",
+      "finalCode": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    if k > n or not (0 <= p <= 1):\n        return 0.0\n    coeff = factorial(n) / (factorial(k) * factorial(n - k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob(2/4, p=0.5): {binomial_dist(2, 4, 0.5)}\")"
+    }
+  }
+}

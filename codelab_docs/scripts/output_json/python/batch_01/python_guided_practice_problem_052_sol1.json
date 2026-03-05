@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Permuted Multiples",
+      "description": "Find the smallest positive integer x such that 2x, 3x, 4x, 5x, and 6x contain the same digits.",
+      "language": "python",
+      "ghostCode": "def solution() -> int:\n    \"\"\"\n    Finds the smallest positive integer x such that x, 2x, 3x, 4x, 5x, 6x\n    all contain the same digits in some order.\n    \"\"\"\n    x = 1\n    while True:\n        # Convert digits of x to a sorted list for easy comparison\n        digits_x = sorted(str(x))\n        \n        # Check if multiples have the same sorted digits\n        if all(sorted(str(x * i)) == digits_x for i in range(2, 7)):\n            return x\n            \n        x += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Smallest x: {solution()}\")",
+      "finalCode": "def solution() -> int:\n    \"\"\"\n    Finds the smallest positive integer x such that x, 2x, 3x, 4x, 5x, 6x\n    all contain the same digits in some order.\n    \"\"\"\n    x = 1\n    while True:\n        # Convert digits of x to a sorted list for easy comparison\n        digits_x = sorted(str(x))\n        \n        # Check if multiples have the same sorted digits\n        if all(sorted(str(x * i)) == digits_x for i in range(2, 7)):\n            return x\n            \n        x += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Smallest x: {solution()}\")"
+    }
+  }
+}

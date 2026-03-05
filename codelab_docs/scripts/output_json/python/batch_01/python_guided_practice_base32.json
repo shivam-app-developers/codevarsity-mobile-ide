@@ -1,0 +1,14 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Base32 Encoding",
+      "description": "Implement Base32 encoding by converting data to binary and then to 5-bit chunks.",
+      "language": "python",
+      "ghostCode": "CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n\ndef b32_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    binary = binary.ljust(5 * ((len(binary) + 4) // 5), \"0\")\n    chunks = [binary[i:i+5] for i in range(0, len(binary), 5)]\n    res = \"\".join(CHARSET[int(c, 2)] for c in chunks)\n    return res.ljust(8 * ((len(res) + 7) // 8), \"=\")\n\nif __name__ == \"__main__\":\n    print(f\"'Hello' -> {b32_encode('Hello')}\")",
+      "finalCode": "CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n\ndef b32_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    binary = binary.ljust(5 * ((len(binary) + 4) // 5), \"0\")\n    chunks = [binary[i:i+5] for i in range(0, len(binary), 5)]\n    res = \"\".join(CHARSET[int(c, 2)] for c in chunks)\n    return res.ljust(8 * ((len(res) + 7) // 8), \"=\")\n\nif __name__ == \"__main__\":\n    print(f\"'Hello' -> {b32_encode('Hello')}\")"
+    }
+  }
+}

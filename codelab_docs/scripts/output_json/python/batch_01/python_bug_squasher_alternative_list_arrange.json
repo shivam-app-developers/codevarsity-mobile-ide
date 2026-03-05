@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Alternative List Index Bug",
+      "problemDescription": "The list arrangement function is failing when the two input lists have different lengths. It seems to be cutting off elements from the longer list. Find and fix the error in the loop range.",
+      "language": "python",
+      "buggyCode": "def arrange_alt(list1, list2):\n    min_len = min(len(list1), len(list2))\n    result = []\n    for i in range(min_len):\n        result.append(list1[i])\n        result.append(list2[i])\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt([1, 2, 3], ['A']))",
+      "solution": {
+        "code": "def arrange_alt(list1, list2):\n    max_len = max(len(list1), len(list2))\n    result = []\n    for i in range(max_len):\n        if i < len(list1):\n            result.append(list1[i])\n        if i < len(list2):\n            result.append(list2[i])\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt([1, 2, 3], ['A']))",
+        "explanation": "The buggy code used the minimum length of the two lists, which caused it to ignore elements from the longer list. The correct approach is to iterate until the maximum length and check if an index exists for each list before appending."
+      }
+    }
+  }
+}

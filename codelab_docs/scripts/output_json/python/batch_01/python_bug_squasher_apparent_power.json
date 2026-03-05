@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "AC Power Angle Bug",
+      "problemDescription": "The apparent power calculation is failing when angles are provided in degrees. It seems the function is not properly handling the unit conversion for trigonometric functions. Fix the bug.",
+      "language": "python",
+      "buggyCode": "import cmath\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rect = cmath.rect(v, v_ang)\n    i_rect = cmath.rect(i, i_ang)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power (90 deg): {get_apparent_power(100, 5, 90, 0)}\")",
+      "solution": {
+        "code": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rad = math.radians(v_ang)\n    i_rad = math.radians(i_ang)\n    v_rect = cmath.rect(v, v_rad)\n    i_rect = cmath.rect(i, i_rad)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power (90 deg): {get_apparent_power(100, 5, 90, 0)}\")",
+        "explanation": "The `cmath.rect` function expects the angle argument in radians, not degrees. The buggy code passed degree values directly, leading to incorrect calculations. Using `math.radians()` to convert the input angles fixes the issue."
+      }
+    }
+  }
+}

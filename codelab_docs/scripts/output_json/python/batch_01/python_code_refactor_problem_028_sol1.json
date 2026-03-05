@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Number Spiral Diagonals",
+      "problemDescription": "Refactor the spiral diagonal sum to use a closed-form formula for O(1) calculation.",
+      "language": "python",
+      "initialCode": "def solution(n: int = 1001) -> int:\n    if n == 1: return 1\n    total = 1\n    current = 1\n    for side_len in range(3, n + 1, 2):\n        gap = side_len - 1\n        for _ in range(4):\n            current += gap\n            total += current\n    return total",
+      "solution": {
+        "code": "def solution(n: int = 1001) -> int:\n    \"\"\"\n    Uses a closed-form formula to calculate the sum of diagonal elements in an n x n spiral.\n    Let m = (n - 1) / 2. The corners of the (2k+1)x(2k+1) square are:\n    (2k+1)^2, (2k+1)^2 - 2k, (2k+1)^2 - 4k, (2k+1)^2 - 6k.\n    Sum of these 4 corners = 4(2k+1)^2 - 12k.\n    Summing from k=1 to m and adding 1 (the center).\n    Simplified sum formula: (4n^3 + 3n^2 + 8n - 9) / 6\n    Alternative simple sum: total_sum = (16*m^3 + 30*m^2 + 26*m + 3) / 3\n    \"\"\"\n    if n == 1: return 1\n    # Using the simplified formula: sum = (4n^3 + 3n^2 + 8n - 9) / 6\n    return (4 * n**3 + 3 * n**2 + 8 * n - 9) // 6\n\n\nif __name__ == \"__main__\":\n    print(solution(1001))",
+        "explanation": "By deriving a polynomial formula for the sum of the corners, we can calculate the result in O(1) time, avoiding the loop entirely."
+      }
+    }
+  }
+}

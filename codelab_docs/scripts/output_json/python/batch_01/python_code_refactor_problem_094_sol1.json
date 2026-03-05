@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Almost Equilateral Triangles",
+      "problemDescription": "Refactor the almost equilateral triangle search to use a unified recurrence relation for better efficiency.",
+      "language": "python",
+      "initialCode": "def solution(limit=10**9):\n    p_sum = 0\n    p_prev, p_curr = 0, 16\n    while p_curr <= limit:\n        p_sum += p_curr\n        p_prev, p_curr = p_curr, 14 * p_curr - p_prev - 8\n    p_prev, p_curr = 0, 4\n    while p_curr <= limit:\n        if p_curr > 2: p_sum += p_curr\n        p_prev, p_curr = p_curr, 14 * p_curr - p_prev + 8\n    return p_sum",
+      "solution": {
+        "code": "def solution(limit: int = 10**9) -> int:\n    \"\"\"\n    Uses the side length recurrence: a_{n} = 4*a_{n-1} - a_{n-2} +/- 2.\n    \"\"\"\n    total_perimeter = 0\n    # Case 1: sides (a, a, a+1)\n    a_prev, a_curr = 1, 5\n    while 3 * a_curr + 1 <= limit:\n        total_perimeter += 3 * a_curr + 1\n        a_prev, a_curr = a_curr, 4 * a_curr - a_prev + 2\n\n    # Case 2: sides (a, a, a-1)\n    a_prev, a_curr = 1, 17\n    while 3 * a_curr - 1 <= limit:\n        total_perimeter += 3 * a_curr - 1\n        a_prev, a_curr = a_curr, 4 * a_curr - a_prev - 2\n        \n    return total_perimeter\n\n\nif __name__ == \"__main__\":\n    print(solution(10**9))",
+        "explanation": "The recurrence `a_n = 4*a_{n-1} - a_{n-2} +/- 2` directly generates valid side lengths for 'almost equilateral' triangles with integral area, making the code much more readable and efficient than handling perimeters with correction terms."
+      }
+    }
+  }
+}

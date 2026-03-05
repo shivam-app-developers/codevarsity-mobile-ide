@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Alternative List Arrangement",
+      "problemDescription": "The current `arrange_alt` function uses an explicit loop and index checking. Refactor it to use more Pythonic techniques like `itertools.zip_longest` or list comprehensions for a more elegant implementation.",
+      "language": "python",
+      "initialCode": "def arrange_alt(list1, list2):\n    max_len = max(len(list1), len(list2))\n    result = []\n    for i in range(max_len):\n        if i < len(list1):\n            result.append(list1[i])\n        if i < len(list2):\n            result.append(list2[i])\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt([1, 2, 3], ['A']))",
+      "solution": {
+        "code": "from itertools import zip_longest\n\ndef arrange_alt(list1, list2):\n    return [item for pair in zip_longest(list1, list2) for item in pair if item is not None]\n\nif __name__ == \"__main__\":\n    print(arrange_alt([1, 2, 3], ['A']))",
+        "explanation": "By using `itertools.zip_longest`, we can easily pair elements from lists of unequal length. The nested list comprehension then flattens these pairs into a single list while filtering out `None` values (placeholders for the shorter list)."
+      }
+    }
+  }
+}

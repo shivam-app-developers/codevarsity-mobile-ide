@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Sum of Factorial Digits",
+      "problemDescription": "Fix the logic to correctly calculate the sum of the digits in the factorial of a given number.",
+      "language": "python",
+      "buggyCode": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    # BUG: factorial(num) returns an integer, which is not iterable\n    # BUG: sum() expects an iterable of numbers\n    return sum(factorial(num))\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter the Number: \").strip())\n    print(solution(n))",
+      "solution": {
+        "code": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    # Convert the factorial result to a string to iterate over digits,\n    # then convert each character back to an integer to sum them.\n    return sum(int(x) for x in str(factorial(num)))\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter the Number: \").strip())\n    print(solution(n))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

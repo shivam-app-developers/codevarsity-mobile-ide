@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Amicable Numbers",
+      "description": "Calculate the sum of all amicable numbers under a given limit.",
+      "language": "python",
+      "ghostCode": "from math import sqrt\n\n\ndef sum_of_divisors(n: int) -> int:\n    \"\"\"Calculates the sum of proper divisors of n.\"\"\"\n    if n <= 1:\n        return 0\n    total = 1\n    for i in range(2, int(sqrt(n)) + 1):\n        if n % i == 0:\n            if i * i == n:\n                total += i\n            else:\n                total += i + n // i\n    return total\n\n\ndef solution(n: int = 10000) -> int:\n    \"\"\"Returns the sum of all the amicable numbers under n.\"\"\"\n    amicable_sum = 0\n    for i in range(1, n):\n        b = sum_of_divisors(i)\n        if b != i and b < n:\n            if sum_of_divisors(b) == i:\n                amicable_sum += i\n    return amicable_sum\n\n\nif __name__ == \"__main__\":\n    limit = int(input(\"Enter limit: \").strip())\n    print(solution(limit))",
+      "finalCode": "from math import sqrt\n\n\ndef sum_of_divisors(n: int) -> int:\n    \"\"\"Calculates the sum of proper divisors of n.\"\"\"\n    if n <= 1:\n        return 0\n    total = 1\n    for i in range(2, int(sqrt(n)) + 1):\n        if n % i == 0:\n            if i * i == n:\n                total += i\n            else:\n                total += i + n // i\n    return total\n\n\ndef solution(n: int = 10000) -> int:\n    \"\"\"Returns the sum of all the amicable numbers under n.\"\"\"\n    amicable_sum = 0\n    for i in range(1, n):\n        b = sum_of_divisors(i)\n        if b != i and b < n:\n            if sum_of_divisors(b) == i:\n                amicable_sum += i\n    return amicable_sum\n\n\nif __name__ == \"__main__\":\n    limit = int(input(\"Enter limit: \").strip())\n    print(solution(limit))"
+    }
+  }
+}

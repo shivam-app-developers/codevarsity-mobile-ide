@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Sum of Factorial Digits",
+      "description": "Calculate the sum of the digits in the factorial of a given number.",
+      "language": "python",
+      "ghostCode": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    \"\"\"Returns the sum of the digits in the factorial of num\n    >>> solution(100)\n    648\n    \"\"\"\n    # Calculate factorial and convert to string to iterate over digits\n    return sum(int(x) for x in str(factorial(num)))\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter the Number: \").strip())\n    print(solution(n))",
+      "finalCode": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    \"\"\"Returns the sum of the digits in the factorial of num\n    >>> solution(100)\n    648\n    \"\"\"\n    # Calculate factorial and convert to string to iterate over digits\n    return sum(int(x) for x in str(factorial(num)))\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter the Number: \").strip())\n    print(solution(n))"
+    }
+  }
+}

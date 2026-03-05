@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Anagram Signature Case Bug",
+      "problemDescription": "The `get_signature` function is supposed to generate identical signatures for anagrams. However, it seems to be generating different signatures when words have different cases. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word)\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'Listen': {get_signature('Listen')}\")\n    print(f\"'Silent': {get_signature('Silent')}\")",
+      "solution": {
+        "code": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word.lower())\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'Listen': {get_signature('Listen')}\")\n    print(f\"'Silent': {get_signature('Silent')}\")",
+        "explanation": "Anagrams are case-insensitive. The buggy code didn't convert the input `word` to lower case before counting character frequencies, leading to different signatures for words like 'Listen' and 'Silent' due to capital 'L' and 'S'."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Anagram Space Handling Bug",
+      "problemDescription": "The anagram checker is failing for strings that contain different numbers of spaces, even if the actual letters match. Identify and fix the flaw in how characters are processed.",
+      "language": "python",
+      "buggyCode": "from collections import Counter\n\ndef are_anagrams(s1, s2):\n    return Counter(s1.lower()) == Counter(s2.lower())\n\nif __name__ == \"__main__\":\n    print(f\"'a b', 'ab': {are_anagrams('a b', 'ab')}\")",
+      "solution": {
+        "code": "from collections import Counter\n\ndef are_anagrams(s1, s2):\n    c1 = Counter(s1.lower().replace(' ', ''))\n    c2 = Counter(s2.lower().replace(' ', ''))\n    return c1 == c2\n\nif __name__ == \"__main__\":\n    print(f\"'a b', 'ab': {are_anagrams('a b', 'ab')}\")",
+        "explanation": "Anagrams ignore spaces. The buggy code included spaces in the frequency count, so 'a b' (with one space) was not considered an anagram of 'ab' (with zero spaces). Removing spaces before comparison fixes the issue."
+      }
+    }
+  }
+}

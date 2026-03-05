@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "DFS Bridge/Articulation Point Bug",
+      "problemDescription": "The articulation point discovery is failing to identify correctly the points that split the graph into separate components. There's a subtle bug in how back-edges are handled. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def dfs(u, p, disc, low, time, ap, graph):\n    disc[u] = low[u] = time[0]\n    time[0] += 1\n    for v in graph[u]:\n        if v == p: continue\n        if disc[v] == -1:\n            dfs(v, u, disc, low, time, ap, graph)\n            low[u] = min(low[u], low[v])\n            if p != -1 and low[v] > disc[u]:\n                    ap[u] = True\n        else:\n            low[u] = min(low[u], low[v])\n    return",
+      "solution": {
+        "code": "def dfs(u, p, disc, low, time, ap, graph):\n    disc[u] = low[u] = time[0]\n    time[0] += 1\n    for v in graph[u]:\n        if v == p: continue\n        if disc[v] == -1:\n            dfs(v, u, disc, low, time, ap, graph)\n            low[u] = min(low[u], low[v])\n            if p != -1 and low[v] >= disc[u]:\n                    ap[u] = True\n        else:\n            low[u] = min(low[u], disc[v])\n    return",
+        "explanation": "The original code incorrectly used `low[v] > disc[u]` instead of `low[v] >= disc[u]` to identify articulation points. Also, when encountering a back-edge, the update should be `low[u] = min(low[u], disc[v])` to correctly account for the discovery time of the ancestor."
+      }
+    }
+  }
+}

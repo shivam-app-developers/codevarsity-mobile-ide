@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Mode Calculation",
+      "problemDescription": "The provided `get_mode` function manually identifies the maximum frequency and filters elements. Refactor it to use Python's built-in `statistics.multimode` for a more idiomatic and concise implementation.",
+      "language": "python",
+      "initialCode": "from collections import Counter\n\ndef get_mode(data):\n    if not data: return []\n    counts = Counter(data)\n    max_count = max(counts.values())\n    return sorted(val for val, count in counts.items() if count == max_count)\n\nif __name__ == \"__main__\":\n    print(f\"Mode: {get_mode([2, 3, 4, 3, 2, 2])}\")",
+      "solution": {
+        "code": "import statistics\n\ndef get_mode(data):\n    return sorted(statistics.multimode(data))\n\nif __name__ == \"__main__\":\n    print(f\"Mode: {get_mode([2, 3, 4, 3, 2, 2])}\")",
+        "explanation": "Python's `statistics.multimode()` is a powerful function that directly returns a list of all modes in a dataset. Using it eliminates the need for manual frequency counting and filtering, leading to much cleaner code."
+      }
+    }
+  }
+}

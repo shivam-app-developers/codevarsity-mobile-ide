@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Check Polygon Existence",
+      "description": "Determine if a polygon with given side lengths can exist in Euclidean space using the triangle inequality generalization.",
+      "language": "python",
+      "ghostCode": "def is_polygon(sides):\n    if len(sides) < 3:\n        return False\n    if any(s <= 0 for s in sides):\n        return False\n    sorted_sides = sorted(sides)\n    return sorted_sides[-1] < sum(sorted_sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[3, 4, 5]: {is_polygon([3, 4, 5])}\")\n    print(f\"[1, 1, 10]: {is_polygon([1, 1, 10])}\")",
+      "finalCode": "def is_polygon(sides):\n    if len(sides) < 3:\n        return False\n    if any(s <= 0 for s in sides):\n        return False\n    sorted_sides = sorted(sides)\n    return sorted_sides[-1] < sum(sorted_sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[3, 4, 5]: {is_polygon([3, 4, 5])}\")\n    print(f\"[1, 1, 10]: {is_polygon([1, 1, 10])}\")"
+    }
+  }
+}

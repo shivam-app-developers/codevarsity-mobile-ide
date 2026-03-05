@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Singular Integer Right Triangles",
+      "problemDescription": "Refactor the singular triple count to use a more efficient perimeter generation and array-based tracking.",
+      "language": "python",
+      "initialCode": "from math import gcd\ndef solution(limit=1500000):\n    counts = [0] * (limit + 1)\n    m_limit = int((limit // 2)**0.5)\n    for m in range(2, m_limit + 1):\n        for n in range(1, m):\n            if (m - n) % 2 == 1 and gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n    return sum(1 for c in counts if c == 1)",
+      "solution": {
+        "code": "import math\n\ndef solution(limit: int = 1500000) -> int:\n    \"\"\"\n    Further optimized singular triple count using an array and a more direct m loop.\n    \"\"\"\n    counts = [0] * (limit + 1)\n    \n    for m in range(2, int(math.sqrt(limit / 2)) + 1):\n        # Optimization: start n from 1 if m is even, else 2. Step by 2.\n        start_n = 1 if m % 2 == 0 else 2\n        for n in range(start_n, m, 2):\n            if math.gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                if p > limit: break\n                # Use a while loop or range to mark all multiples\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n                    \n    return counts.count(1)\n\n\nif __name__ == \"__main__\":\n    print(solution(1500000))",
+        "explanation": "Using `counts.count(1)` is faster than a generator expression. Stepping `n` by 2 ensures `m` and `n` have opposite parity from the start, avoiding the `if (m-n)%2 == 1` check inside the loop."
+      }
+    }
+  }
+}

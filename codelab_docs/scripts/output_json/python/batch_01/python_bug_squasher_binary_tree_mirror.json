@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Tree Mirror Recursion Bug",
+      "problemDescription": "The tree mirroring function is only mirroring the first level of the tree. It seems to be failing to process the children nodes recursively. Find and fix the error.",
+      "language": "python",
+      "buggyCode": "def mirror_tree(tree, root):\n    if not root or root not in tree:\n        return\n    left, right = tree[root][:2]\n    tree[root] = [right, left]\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5]}\n    mirror_tree(tree, 1)\n    print(f\"Result: {tree}\")",
+      "solution": {
+        "code": "def mirror_tree(tree, root):\n    if not root or root not in tree:\n        return\n    left, right = tree[root][:2]\n    tree[root] = [right, left]\n    mirror_tree(tree, left)\n    mirror_tree(tree, right)",
+        "explanation": "To mirror the entire tree, the function must be called recursively on the left and right subtrees AFTER swapping them at the current node. The buggy code lacked these recursive calls, so it only swapped the children of the root."
+      }
+    }
+  }
+}

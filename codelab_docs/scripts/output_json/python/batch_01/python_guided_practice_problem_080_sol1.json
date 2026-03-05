@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Square Root Digital Expansion",
+      "description": "Calculate the total sum of the first 100 decimal digits for irrational square roots of numbers 1-100.",
+      "language": "python",
+      "ghostCode": "from decimal import Decimal, getcontext\n\ndef solution() -> int:\n    \"\"\"\n    Returns the total sum of the first 100 digits for irrational square roots up to 100.\n    \"\"\"\n    # Set precision to slightly more than 100 to avoid rounding errors\n    getcontext().prec = 110\n    total_sum = 0\n    \n    for n in range(1, 101):\n        sqrt_n = Decimal(n).sqrt()\n        \n        # Check if root is irrational (not an integer)\n        if sqrt_n % 1 != 0:\n            # Get digits string, remove decimal point\n            digit_str = str(sqrt_n).replace('.', '')[:100]\n            total_sum += sum(int(d) for d in digit_str)\n            \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(f\"Total digit sum: {solution()}\")",
+      "finalCode": "from decimal import Decimal, getcontext\n\ndef solution() -> int:\n    \"\"\"\n    Returns the total sum of the first 100 digits for irrational square roots up to 100.\n    \"\"\"\n    # Set precision to slightly more than 100 to avoid rounding errors\n    getcontext().prec = 110\n    total_sum = 0\n    \n    for n in range(1, 101):\n        sqrt_n = Decimal(n).sqrt()\n        \n        # Check if root is irrational (not an integer)\n        if sqrt_n % 1 != 0:\n            # Get digits string, remove decimal point\n            digit_str = str(sqrt_n).replace('.', '')[:100]\n            total_sum += sum(int(d) for d in digit_str)\n            \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(f\"Total digit sum: {solution()}\")"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Number Spiral Diagonals",
+      "problemDescription": "Fix the logic to correctly calculate the sum of numbers on the diagonals of a clockwise spiral.",
+      "language": "python",
+      "buggyCode": "def solution(n: int = 1001) -> int:\n    total = 1\n    # BUG: Iterating through every number is unnecessary and slow\n    # BUG: Range logic for layers is incorrect\n    for i in range(1, n + 1):\n        # BUG: Condition for diagonal elements is wrong\n        if i % 2 == 0:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution(1001))",
+      "solution": {
+        "code": "def solution(n: int = 1001) -> int:\n    if n == 1: return 1\n    total = 1\n    current = 1\n    # side_len goes 3, 5, 7 ... n\n    for side_len in range(3, n + 1, 2):\n        gap = side_len - 1\n        for _ in range(4):\n            current += gap\n            total += current\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution(1001))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

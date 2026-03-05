@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Square Root Convergents",
+      "problemDescription": "Fix the recurrence relation and digit counting for square root expansion convergents.",
+      "language": "python",
+      "buggyCode": "def solution(n: int = 1000):\n    count = 0\n    num, den = 1, 1\n    for _ in range(n):\n        # BUG: Incorrect recurrence relation logic\n        num = num + den\n        den = num + den\n        # BUG: Counting logic might be misplaced\n        if len(str(num)) > len(str(den)):\n            count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+      "solution": {
+        "code": "def solution(n: int = 1000):\n    count = 0\n    num, den = 3, 2\n    for _ in range(1000):\n        if len(str(num)) > len(str(den)):\n            count += 1\n        # Correct recurrence: next_num = num + 2*den, next_den = num + den\n        num, den = num + 2 * den, num + den\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

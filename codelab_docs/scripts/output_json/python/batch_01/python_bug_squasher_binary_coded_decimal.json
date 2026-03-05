@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "BCD Bit Width Bug",
+      "problemDescription": "The Binary Coded Decimal conversion is not producing standard 4-bit sequences for each digit. Some digits seem to have shorter binary representations, leading to incorrect alignment. Find and fix the error.",
+      "language": "python",
+      "buggyCode": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(bin(int(d))[2:] for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"12 in BCD: {to_bcd(12)}\")",
+      "solution": {
+        "code": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(bin(int(d))[2:].zfill(4) for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"12 in BCD: {to_bcd(12)}\")",
+        "explanation": "In BCD, every decimal digit MUST be represented by exactly 4 bits. The buggy code didn't use `zfill(4)`, so digits like 1 (bin '1') and 2 (bin '10') were not properly padded to '0001' and '0010', resulting in an incorrect bitstream."
+      }
+    }
+  }
+}

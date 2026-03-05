@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Using `str.capitalize()` Built-in",
+      "problemDescription": "The provided code manually capitalizes the first character using slicing and string concatenation. Refactor it to use Python's built-in `str.capitalize()` method, which is the standard and most concise way to perform this operation.",
+      "language": "python",
+      "initialCode": "def capitalize_text(s):\n    if not s: return \"\"\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"'hello' -> {capitalize_text('hello')}\")",
+      "solution": {
+        "code": "def capitalize_text(s):\n    return s.capitalize()\n\nif __name__ == \"__main__\":\n    print(f\"'hello' -> {capitalize_text('hello')}\")",
+        "explanation": "Python's `capitalize()` method automatically handles empty strings and ensures the first character is uppercase while all subsequent characters are lowercase. Note: if the original intent was to ONLY change the first character, manual slicing might still be preferred, but `capitalize()` is the most common built-in for this task."
+      }
+    }
+  }
+}

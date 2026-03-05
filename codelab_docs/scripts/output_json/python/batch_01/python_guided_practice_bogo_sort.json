@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Bogo Sort (Stupid Sort)",
+      "description": "Implement Bogo Sort, a highly inefficient algorithm that repeatedly shuffles a list until it is sorted.",
+      "language": "python",
+      "ghostCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        return all(a[i] <= a[i+1] for i in range(len(a)-1))\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")",
+      "finalCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        return all(a[i] <= a[i+1] for i in range(len(a)-1))\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Cycle Detection with Kahn's Algorithm",
+      "problemDescription": "The provided cycle detection uses DFS. Refactor it to use Kahn's Algorithm (topological sort), which identifies cycles by checking if any nodes with incoming edges remain after the sorting process.",
+      "language": "python",
+      "initialCode": "def has_cycle_dfs(graph):\n    visited, stack = set(), set()\n    def dfs(u):\n        visited.add(u); stack.add(u)\n        for v in graph.get(u, []):\n            if v in stack: return True\n            if v not in visited and dfs(v): return True\n        stack.remove(u); return False\n    return any(node not in visited and dfs(node) for node in graph)",
+      "solution": {
+        "code": "from collections import deque\n\ndef has_cycle_kahn(graph):\n    in_degree = {u: 0 for u in graph}\n    for u in graph:\n        for v in graph[u]:\n            in_degree[v] = in_degree.get(v, 0) + 1\n    queue = deque([u for u in in_degree if in_degree[u] == 0])\n    visited_count = 0\n    while queue:\n        u = queue.popleft(); visited_count += 1\n        for v in graph.get(u, []):\n            in_degree[v] -= 1\n            if in_degree[v] == 0: queue.append(v)\n    return visited_count != len(graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1], 1: [2], 2: [0]}\n    print(f\"Has Cycle: {has_cycle_kahn(graph)}\")",
+        "explanation": "Kahn's Algorithm is an iterative approach for cycle detection. If a graph is a DAG, we can visit all nodes by repeatedly removing those with zero in-degree. If any nodes remain unvisited, it implies a cycle exists that prevents their in-degrees from reaching zero."
+      }
+    }
+  }
+}

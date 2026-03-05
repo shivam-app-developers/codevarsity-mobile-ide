@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Sum of Non-Abundant Sums",
+      "problemDescription": "Refactor the abundant sum search for better efficiency and clarity using sets.",
+      "language": "python",
+      "initialCode": "def solution(limit: int = 28123) -> int:\n    sum_divs = [0] * (limit + 1)\n    for i in range(1, limit // 2 + 1):\n        for j in range(2 * i, limit + 1, i):\n            sum_divs[j] += i\n    abundants = [i for i, s in enumerate(sum_divs) if s > i]\n    is_abundant_sum = [False] * (limit + 1)\n    for i in range(len(abundants)):\n        for j in range(i, len(abundants)):\n            s = abundants[i] + abundants[j]\n            if s <= limit: is_abundant_sum[s] = True\n            else: break\n    return sum(i for i in range(1, limit + 1) if not is_abundant_sum[i])",
+      "solution": {
+        "code": "def solution(limit: int = 28123) -> int:\n    \"\"\"\n    Optimized version using a set for O(1) lookups and a more concise divisor sum sieve.\n    \"\"\"\n    # Divisor sum sieve\n    div_sum = [1] * (limit + 1)\n    for i in range(2, int(limit**0.5) + 1):\n        div_sum[i*i] += i\n        for j in range(i + 1, limit // i + 1):\n            div_sum[i*j] += i + j\n\n    abundants = [i for i, s in enumerate(div_sum) if i > 1 and s > i]\n    abundant_set = set(abundants)\n\n    def is_abundant_sum(n):\n        for a in abundants:\n            if a > n // 2: break\n            if (n - a) in abundant_set:\n                return True\n        return False\n\n    return sum(n for n in range(1, limit + 1) if not is_abundant_sum(n))\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "The refactored version uses a set for `O(1)` lookups to check if `n - a` is an abundant number, and a slightly more efficient divisor sum sieve."
+      }
+    }
+  }
+}

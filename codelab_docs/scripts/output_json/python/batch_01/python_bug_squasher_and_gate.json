@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "AND Gate Multi-Input Bug",
+      "problemDescription": "The multi-input AND gate is intended to return 1 ONLY if ALL inputs are 1. However, it seems to be returning 1 in some incorrect cases. Find and fix the error in the logic gate implementation.",
+      "language": "python",
+      "buggyCode": "def n_input_and_gate(inputs):\n    return int(any(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 0, 1]: {n_input_and_gate([1, 0, 1])}\")",
+      "solution": {
+        "code": "def n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 0, 1]: {n_input_and_gate([1, 0, 1])}\")",
+        "explanation": "The buggy code incorrectly used the `any()` function, which implements an OR gate (returns 1 if AT LEAST one input is 1). For an AND gate, we must use the `all()` function, which returns True only if ALL elements in the list are truthy."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Longest Recurring Cycle",
+      "problemDescription": "Refactor the solution to use properties of primes and order of 10 modulo d for a more efficient number-theoretic approach.",
+      "language": "python",
+      "initialCode": "def solution(limit: int = 1000) -> int:\n    best_d = 1\n    max_len = 0\n    for d in range(2, limit):\n        remainders = {}\n        curr_rem = 1\n        pos = 0\n        while curr_rem != 0 and curr_rem not in remainders:\n            remainders[curr_rem] = pos\n            curr_rem = (curr_rem * 10) % d\n            pos += 1\n        if curr_rem != 0:\n            cycle_len = pos - remainders[curr_rem]\n            if cycle_len > max_len:\n                max_len = cycle_len\n                best_d = d\n    return best_d",
+      "solution": {
+        "code": "def solution(limit: int = 1000) -> int:\n    \"\"\"\n    Optimized approach: recurring cycle length for 1/d is the smallest k such that 10^k = 1 (mod d').\n    d' is d without factors of 2 and 5.\n    \"\"\"\n    def get_cycle_len(d):\n        while d % 2 == 0: d //= 2\n        while d % 5 == 0: d //= 5\n        if d == 1: return 0\n        \n        # Find multiplicative order of 10 modulo d\n        rem = 10 % d\n        k = 1\n        while rem != 1:\n            rem = (rem * 10) % d\n            k += 1\n        return k\n\n    max_len = 0\n    best_d = 1\n    # We only need to check primes for potentially longest cycles\n    # or numbers close to primes. Checking downwards from limit.\n    for d in range(limit - 1, 1, -1):\n        if d <= max_len: break # Optimization\n        cycle_len = get_cycle_len(d)\n        if cycle_len > max_len:\n            max_len = cycle_len\n            best_d = d\n            \n    return best_d\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+        "explanation": "The length of the cycle of `1/d` is the multiplicative order of 10 modulo `d'` (where `d'` is `d` with factors of 2 and 5 removed). By using this property and optimizing the loop to break early, we can find the result much faster."
+      }
+    }
+  }
+}

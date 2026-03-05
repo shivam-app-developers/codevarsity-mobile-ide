@@ -1,0 +1,14 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Chudnovsky PI Algorithm",
+      "description": "Calculate digits of PI using the highly efficient Chudnovsky algorithm based on Ramanujan's formulae.",
+      "language": "python",
+      "ghostCode": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    num_iter = ceil(prec / 14)\n    C = 426880 * Decimal(10005).sqrt()\n    L, X, M, S = 13591409, 1, 1, Decimal(13591409)\n    for k in range(1, num_iter):\n        M = (factorial(6*k) // (factorial(3*k) * factorial(k)**3))\n        L += 545140134\n        X *= -262537412640768000\n        S += Decimal(M * L) / X\n    return str(C / S)[:-2]\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")",
+      "finalCode": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    num_iter = ceil(prec / 14)\n    C = 426880 * Decimal(10005).sqrt()\n    L, X, M, S = 13591409, 1, 1, Decimal(13591409)\n    for k in range(1, num_iter):\n        M = (factorial(6*k) // (factorial(3*k) * factorial(k)**3))\n        L += 545140134\n        X *= -262537412640768000\n        S += Decimal(M * L) / X\n    return str(C / S)[:-2]\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")"
+    }
+  }
+}

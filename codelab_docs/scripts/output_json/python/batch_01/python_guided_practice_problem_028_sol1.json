@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Number Spiral Diagonals",
+      "description": "Calculate the sum of the numbers on the diagonals in an n by n spiral.",
+      "language": "python",
+      "ghostCode": "def solution(n: int = 1001) -> int:\n    \"\"\"\n    Returns the sum of the numbers on the diagonals in an n by n spiral.\n    n must be odd.\n    \"\"\"\n    if n == 1:\n        return 1\n    \n    total = 1\n    current_val = 1\n    \n    # For each layer (from 3x3 to nxn), the gap between diagonal elements increases by 2\n    for side_len in range(3, n + 1, 2):\n        gap = side_len - 1\n        # There are 4 corners in each layer\n        for _ in range(4):\n            current_val += gap\n            total += current_val\n            \n    return total\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter spiral size (odd): \").strip())\n    print(solution(n))",
+      "finalCode": "def solution(n: int = 1001) -> int:\n    \"\"\"\n    Returns the sum of the numbers on the diagonals in an n by n spiral.\n    n must be odd.\n    \"\"\"\n    if n == 1:\n        return 1\n    \n    total = 1\n    current_val = 1\n    \n    # For each layer (from 3x3 to nxn), the gap between diagonal elements increases by 2\n    for side_len in range(3, n + 1, 2):\n        gap = side_len - 1\n        # There are 4 corners in each layer\n        for _ in range(4):\n            current_val += gap\n            total += current_val\n            \n    return total\n\n\nif __name__ == \"__main__\":\n    n = int(input(\"Enter spiral size (odd): \").strip())\n    print(solution(n))"
+    }
+  }
+}

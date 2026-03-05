@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Clean Articulation Point Discovery",
+      "problemDescription": "The current `compute_ap` function uses a lot of local variable initialization and nested functions. Refactor it to use a cleaner, class-based approach or to encapsulate the state more clearly using more Pythonic techniques.",
+      "language": "python",
+      "initialCode": "def compute_ap(graph):\n    n = len(graph)\n    time = 0\n    low = [-1] * n\n    disc = [-1] * n\n    ap = [False] * n\n    def dfs(u, p):\n        nonlocal time\n        disc[u] = low[u] = time\n        time += 1\n        children = 0\n        for v in graph[u]:\n            if v == p: continue\n            if disc[v] == -1:\n                children += 1\n                dfs(v, u)\n                low[u] = min(low[u], low[v])\n                if p != -1 and low[v] >= disc[u]:\n                    ap[u] = True\n            else:\n                low[u] = min(low[u], disc[v])\n        if p == -1 and children > 1:\n            ap[u] = True\n    for i in range(n):\n        if disc[i] == -1: dfs(i, -1)\n    return [i for i, x in enumerate(ap) if x]",
+      "solution": {
+        "code": "from typing import Dict, List\n\nclass ArticulationPoints:\n    def __init__(self, graph: Dict[int, List[int]]):\n        self.graph = graph\n        self.n = len(graph)\n        self.time = 0\n        self.low = [-1] * self.n\n        self.disc = [-1] * self.n\n        self.ap = set()\n\n    def compute(self) -> List[int]:\n        for i in range(self.n):\n            if self.disc[i] == -1:\n                self._dfs(i, -1)\n        return sorted(list(self.ap))\n\n    def _dfs(self, u: int, p: int):\n        self.disc[u] = self.low[u] = self.time\n        self.time += 1\n        children = 0\n        for v in self.graph[u]:\n            if v == p: continue\n            if self.disc[v] == -1:\n                children += 1\n                self._dfs(v, u)\n                self.low[u] = min(self.low[u], self.low[v])\n                if p != -1 and self.low[v] >= self.disc[u]:\n                    self.ap.add(u)\n            else:\n                self.low[u] = min(self.low[u], self.disc[v])\n        if p == -1 and children > 1: self.ap.add(u)\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [0, 2], 2: [0, 1, 3], 3: [2, 4], 4: [3]}\n    print(f\"APs: {ArticulationPoints(graph).compute()}\")",
+        "explanation": "Refactoring the algorithm into a class provides much better encapsulation. The state is clearly defined in the instance variables (`self.disc`, `self.low`, `self.time`), eliminating the need for `nonlocal` and nested functions. It follows the SRP principle by separating initialization from the computation logic."
+      }
+    }
+  }
+}

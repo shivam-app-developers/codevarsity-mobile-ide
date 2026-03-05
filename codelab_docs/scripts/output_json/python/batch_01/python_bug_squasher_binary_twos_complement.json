@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Two's Complement Width Bug",
+      "problemDescription": "The two's complement calculation is failing for certain negative numbers. The binary width seems to be calculated incorrectly, leading to missing bits or wrong values. Find and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def twos_complement(n):\n    width = len(bin(n)) # Bug: Includes '-' and '0b'\n    val = bin(abs(n) - (1 << width))[3:]\n    return '0b1' + val\n\nif __name__ == \"__main__\":\n    print(f\"-1 in 2's complement: {twos_complement(-1)}\")",
+      "solution": {
+        "code": "def twos_complement(n):\n    if n == 0: return '0b0'\n    width = len(bin(n)) - 3 # Exclude '-0b'\n    val = bin(abs(n) - (1 << width))[3:]\n    res = '1' + '0' * (width - len(val)) + val\n    return '0b' + res\n\nif __name__ == \"__main__\":\n    print(f\"-1 in 2's complement: {twos_complement(-1)}\")",
+        "explanation": "In the buggy code, `len(bin(n))` counted the '-' and '0b' prefix, which made the width calculation incorrect. Subtracting 3 gives the actual number of magnitude bits. Also, manual padding is needed to ensure the resulting bitstring matches the expected width."
+      }
+    }
+  }
+}

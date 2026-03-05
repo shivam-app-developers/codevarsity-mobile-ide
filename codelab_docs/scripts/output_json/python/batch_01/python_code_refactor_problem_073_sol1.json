@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Counting Fractions in a Range",
+      "problemDescription": "Refactor the fraction count using the Stern-Brocot tree or Farey sequence properties for a more efficient search.",
+      "language": "python",
+      "initialCode": "from math import gcd\ndef solution(limit=12000):\n    count = 0\n    for d in range(1, limit + 1):\n        n_start = d // 3 + 1\n        n_end = (d - 1) // 2\n        for n in range(n_start, n_end + 1):\n            if gcd(n, d) == 1:\n                count += 1\n    return count",
+      "solution": {
+        "code": "def solution(limit: int = 12000) -> int:\n    \"\"\"\n    Uses a recursive Farey sequence approach (Stern-Brocot) to count fractions between 1/3 and 1/2.\n    \"\"\"\n    def count_between(n1, d1, n2, d2):\n        # Mediant is (n1+n2) / (d1+d2)\n        nm, dm = n1 + n2, d1 + d2\n        if dm > limit:\n            return 0\n        return 1 + count_between(n1, d1, nm, dm) + count_between(nm, dm, n2, d2)\n\n    # Count between 1/3 and 1/2\n    return count_between(1, 3, 1, 2)\n\n\nif __name__ == \"__main__\":\n    print(solution(12000))",
+        "explanation": "The Stern-Brocot (or Farey) sequence approach builds fractions between 1/3 and 1/2 using the mediant property. It only generates reduced fractions and automatically stays within the denominator limit, which is much more elegant and avoids `gcd` calls."
+      }
+    }
+  }
+}

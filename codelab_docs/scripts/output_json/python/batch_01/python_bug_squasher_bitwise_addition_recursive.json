@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Recursive Bitwise Addition Carry Bug",
+      "problemDescription": "The recursive bitwise addition is failing to produce the correct sum. It seems the carry bit is not being shifted correctly. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) >> 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"2 + 2 = {bitwise_add(2, 2)}\")",
+      "solution": {
+        "code": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) << 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"2 + 2 = {bitwise_add(2, 2)}\")",
+        "explanation": "In bitwise addition, the carry bits from the current position must be added to the NEXT (higher) position. This requires a left shift (`<< 1`). The buggy code incorrectly used a right shift (`>> 1`)."
+      }
+    }
+  }
+}
