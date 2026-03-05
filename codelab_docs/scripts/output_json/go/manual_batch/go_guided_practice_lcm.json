@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Lcm",
+            "description": "Learn Go basics by implementing lcm.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}\n\nfunc lcm(a, b int) int {\n\treturn (a * b) / gcd(a, b)\n}\n\nfunc main() {\n\tfmt.Printf(\"LCM of 12 and 15 is: %d\\n\", lcm(12, 15))\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}\n\nfunc lcm(a, b int) int {\n\treturn (a * b) / gcd(a, b)\n}\n\nfunc main() {\n\tfmt.Printf(\"LCM of 12 and 15 is: %d\\n\", lcm(12, 15))\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

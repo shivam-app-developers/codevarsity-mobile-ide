@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Factorial",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tif n == 0 {\n\t\treturn 1\n\t}\n\treturn n * factorial(n-1)\n}\n\nfunc main() {\n\tfmt.Println(\"Factorial of 5 is:\", factorial(5))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n\tif n == 0 {\n\t\treturn 1\n\t}\n\treturn n * factorial(n-1)\n}\n\nfunc main() {\n\tfmt.Println(\"Factorial of 5 is:\", factorial(5))\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

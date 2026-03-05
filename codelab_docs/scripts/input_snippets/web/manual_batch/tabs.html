@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs {
+            width: 300px;
+        }
+
+        .tabs-header {
+            display: flex;
+            background: #ddd;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background: #3498db;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <div class="tabs-header">
+            <div class="tab-btn active" data-tab="tab1">Home</div>
+            <div class="tab-btn" data-tab="tab2">Info</div>
+            <div class="tab-btn" data-tab="tab3">Contact</div>
+        </div>
+        <div class="tab-content active" id="tab1">Welcome to the homepage.</div>
+        <div class="tab-content" id="tab2">Here is some more info.</div>
+        <div class="tab-content" id="tab3">Get in touch with us!</div>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

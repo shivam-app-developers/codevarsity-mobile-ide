@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Button Animations",
+            "problemDescription": "Refactor the following button animations code for better readability or performance.",
+            "language": "html",
+            "initialCode": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Animations</title>\n    <style>\n        body {\n            display: flex;\n            gap: 30px;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            background: #222;\n        }\n\n        button {\n            padding: 15px 35px;\n            font-size: 1.1rem;\n            border: 2px solid #00d2ff;\n            background: transparent;\n            color: #00d2ff;\n            cursor: pointer;\n            border-radius: 30px;\n            position: relative;\n            overflow: hidden;\n            transition: all 0.3s;\n        }\n\n        .btn-hover:hover {\n            background: #00d2ff;\n            color: #fff;\n            box-shadow: 0 0 20px #00d2ff;\n        }\n\n        .btn-scale:active {\n            transform: scale(0.9);\n        }\n\n        .btn-border::after {\n            content: '';\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 0;\n            height: 2px;\n            background: #fff;\n            transition: width 0.3s;\n        }\n\n        .btn-border:hover::after {\n            width: 100%;\n        }\n    </style>\n</head>\n\n<body>\n    <button class=\"btn-hover\">Glow Effect</button>\n    <button class=\"btn-scale\">Click Me</button>\n    <button class=\"btn-border\">Underline</button>\n</body>\n\n</html>",
+            "solution": {
+                "code": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Animations</title>\n    <style>\n        body {\n            display: flex;\n            gap: 30px;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            background: #222;\n        }\n\n        button {\n            padding: 15px 35px;\n            font-size: 1.1rem;\n            border: 2px solid #00d2ff;\n            background: transparent;\n            color: #00d2ff;\n            cursor: pointer;\n            border-radius: 30px;\n            position: relative;\n            overflow: hidden;\n            transition: all 0.3s;\n        }\n\n        .btn-hover:hover {\n            background: #00d2ff;\n            color: #fff;\n            box-shadow: 0 0 20px #00d2ff;\n        }\n\n        .btn-scale:active {\n            transform: scale(0.9);\n        }\n\n        .btn-border::after {\n            content: '';\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 0;\n            height: 2px;\n            background: #fff;\n            transition: width 0.3s;\n        }\n\n        .btn-border:hover::after {\n            width: 100%;\n        }\n    </style>\n</head>\n\n<body>\n    <button class=\"btn-hover\">Glow Effect</button>\n    <button class=\"btn-scale\">Click Me</button>\n    <button class=\"btn-border\">Underline</button>\n</body>\n\n</html>",
+                "explanation": "Refactored the code to follow best practices."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

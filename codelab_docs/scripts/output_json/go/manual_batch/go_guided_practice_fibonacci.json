@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Fibonacci",
+            "description": "Learn Go basics by implementing fibonacci.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc fibonacci(n int) {\n\ta, b := 0, 1\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Printf(\"%d \", a)\n\t\ta, b = b, a+b\n\t}\n\tfmt.Println()\n}\n\nfunc main() {\n\tfibonacci(10)\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc fibonacci(n int) {\n\ta, b := 0, 1\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Printf(\"%d \", a)\n\t\ta, b = b, a+b\n\t}\n\tfmt.Println()\n}\n\nfunc main() {\n\tfibonacci(10)\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

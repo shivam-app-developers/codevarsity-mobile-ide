@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Binary Search",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, target int) int {\n\tlow, high := 0, len(arr)-1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif arr[mid] == target {\n\t\t\treturn mid\n\t\t} else if arr[mid] < target {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tnums := []int{10, 20, 30, 40, 50}\n\ttarget := 30\n\tfmt.Printf(\"Index of %d: %d\\n\", target, binarySearch(nums, target))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc binarySearch(arr []int, target int) int {\n\tlow, high := 0, len(arr)-1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif arr[mid] == target {\n\t\t\treturn mid\n\t\t} else if arr[mid] < target {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tnums := []int{10, 20, 30, 40, 50}\n\ttarget := 30\n\tfmt.Printf(\"Index of %d: %d\\n\", target, binarySearch(nums, target))\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

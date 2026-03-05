@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Variables",
+            "problemDescription": "The Go program for variables has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package primary\n\nimport \"fmt\"\n\nfunc main() {\n\tvar name string = \"CodeVarsity\"\n\tage := 5\n\tisLearning := true\n\n\tfmt.Printf(\"Name: %s, Age: %d, Learning: %t\\n\", name, age, isLearning)\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar name string = \"CodeVarsity\"\n\tage := 5\n\tisLearning := true\n\n\tfmt.Printf(\"Name: %s, Age: %d, Learning: %t\\n\", name, age, isLearning)\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

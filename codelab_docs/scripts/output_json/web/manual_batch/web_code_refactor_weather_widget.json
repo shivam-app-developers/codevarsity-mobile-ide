@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Weather Widget",
+            "problemDescription": "Refactor the following weather widget code for better readability or performance.",
+            "language": "html",
+            "initialCode": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Weather Widget UI</title>\n    <style>\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #a1c4fd;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n        }\n\n        .weather-card {\n            background: white;\n            padding: 30px;\n            border-radius: 20px;\n            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);\n            width: 250px;\n            text-align: center;\n        }\n\n        .city {\n            color: #888;\n            font-size: 1.2rem;\n        }\n\n        .temp {\n            font-size: 3.5rem;\n            font-weight: bold;\n            margin: 10px 0;\n        }\n\n        .desc {\n            color: #3498db;\n            text-transform: capitalize;\n        }\n\n        .details {\n            display: flex;\n            justify-content: space-around;\n            margin-top: 20px;\n            color: #666;\n            font-size: 0.9rem;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"weather-card\">\n        <div class=\"city\">New York</div>\n        <div class=\"temp\">22\u00b0C</div>\n        <div class=\"desc\">Sunny</div>\n        <div class=\"details\">\n            <div>Humidity: 45%</div>\n            <div>Wind: 12 km/h</div>\n        </div>\n    </div>\n</body>\n\n</html>",
+            "solution": {
+                "code": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Weather Widget UI</title>\n    <style>\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #a1c4fd;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n        }\n\n        .weather-card {\n            background: white;\n            padding: 30px;\n            border-radius: 20px;\n            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);\n            width: 250px;\n            text-align: center;\n        }\n\n        .city {\n            color: #888;\n            font-size: 1.2rem;\n        }\n\n        .temp {\n            font-size: 3.5rem;\n            font-weight: bold;\n            margin: 10px 0;\n        }\n\n        .desc {\n            color: #3498db;\n            text-transform: capitalize;\n        }\n\n        .details {\n            display: flex;\n            justify-content: space-around;\n            margin-top: 20px;\n            color: #666;\n            font-size: 0.9rem;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"weather-card\">\n        <div class=\"city\">New York</div>\n        <div class=\"temp\">22\u00b0C</div>\n        <div class=\"desc\">Sunny</div>\n        <div class=\"details\">\n            <div>Humidity: 45%</div>\n            <div>Wind: 12 km/h</div>\n        </div>\n    </div>\n</body>\n\n</html>",
+                "explanation": "Refactored the code to follow best practices."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

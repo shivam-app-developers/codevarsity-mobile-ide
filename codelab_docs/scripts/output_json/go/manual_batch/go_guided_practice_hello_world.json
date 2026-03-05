@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Hello World",
+            "description": "Learn Go basics by implementing hello world.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, Go!\")\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, Go!\")\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

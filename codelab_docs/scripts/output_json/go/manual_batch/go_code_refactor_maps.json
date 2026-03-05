@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Maps",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tm := make(map[string]int)\n\tm[\"Apple\"] = 5\n\tm[\"Banana\"] = 10\n\tm[\"Orange\"] = 8\n\n\tfmt.Println(\"Inventory:\")\n\tfor key, value := range m {\n\t\tfmt.Printf(\"%s: %d\\n\", key, value)\n\t}\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tm := make(map[string]int)\n\tm[\"Apple\"] = 5\n\tm[\"Banana\"] = 10\n\tm[\"Orange\"] = 8\n\n\tfmt.Println(\"Inventory:\")\n\tfor key, value := range m {\n\t\tfmt.Printf(\"%s: %d\\n\", key, value)\n\t}\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

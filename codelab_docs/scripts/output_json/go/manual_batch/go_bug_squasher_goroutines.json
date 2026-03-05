@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Goroutines",
+            "problemDescription": "The Go program for goroutines has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc say(s string) {\n\tfor i := 0; i < 3; i++ {\n\t\ttime.Sleep(100 * time.Millisecond)\n\t\tfmt.PrintLine(s)\n\t}\n}\n\nfunc main() {\n\tgo say(\"world\")\n\tsay(\"hello\")\n}\n",
+            "solution": {
+                "code": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc say(s string) {\n\tfor i := 0; i < 3; i++ {\n\t\ttime.Sleep(100 * time.Millisecond)\n\t\tfmt.Println(s)\n\t}\n}\n\nfunc main() {\n\tgo say(\"world\")\n\tsay(\"hello\")\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

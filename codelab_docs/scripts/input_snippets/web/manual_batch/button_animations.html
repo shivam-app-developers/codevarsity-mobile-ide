@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animations</title>
+    <style>
+        body {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #222;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border: 2px solid #00d2ff;
+            background: transparent;
+            color: #00d2ff;
+            cursor: pointer;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .btn-hover:hover {
+            background: #00d2ff;
+            color: #fff;
+            box-shadow: 0 0 20px #00d2ff;
+        }
+
+        .btn-scale:active {
+            transform: scale(0.9);
+        }
+
+        .btn-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s;
+        }
+
+        .btn-border:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-hover">Glow Effect</button>
+    <button class="btn-scale">Click Me</button>
+    <button class="btn-border">Underline</button>
+</body>
+
+</html>

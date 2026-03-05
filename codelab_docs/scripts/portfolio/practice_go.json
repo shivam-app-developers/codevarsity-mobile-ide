@@ -10,6 +10,22 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_bug_squasher_binary_search",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_binary_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_bug_squasher_bubblesort",
       "type": "bug_squasher",
       "language": "go",
@@ -18,11 +34,155 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_bug_squasher_channels",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Channels",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_channels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_error_handling",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Error Handling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_error_handling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_bug_squasher_factorial",
       "type": "bug_squasher",
       "language": "go",
       "title": "Bug Squasher: Go Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_fibonacci",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Fibonacci",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_goroutines",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Goroutines",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_goroutines.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_hello_world",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Hello World",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_interfaces",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Interfaces",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_interfaces.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_json_marshalling",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Json Marshalling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_json_marshalling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_lcm",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Lcm",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_maps",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Maps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_maps.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_palindrome",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Palindrome",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_pointers",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Pointers",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_pointers.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_prime_check",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Prime Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_prime_check.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_reverse_string",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Reverse String",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_slices_append",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Slices Append",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_slices_append.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_structs_methods",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Structs Methods",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_structs_methods.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_switch_stmt",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Switch Stmt",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_switch_stmt.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_bug_squasher_variables",
+      "type": "bug_squasher",
+      "language": "go",
+      "title": "Bug Squasher: Variables",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_bug_squasher_variables.json",
       "difficulty": "beginner"
     },
     {
@@ -34,6 +194,22 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_code_refactor_binary_search",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_binary_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_code_refactor_bubblesort",
       "type": "refactor",
       "language": "go",
@@ -42,11 +218,155 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_code_refactor_channels",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Channels",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_channels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_error_handling",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Error Handling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_error_handling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_factorial",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_code_refactor_factorial",
       "type": "refactor",
       "language": "go",
       "title": "Go Refactor: Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_fibonacci",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Fibonacci",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_goroutines",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Goroutines",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_goroutines.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_hello_world",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Hello World",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_interfaces",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Interfaces",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_interfaces.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_json_marshalling",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Json Marshalling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_json_marshalling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_lcm",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Lcm",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_maps",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Maps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_maps.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_palindrome",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Palindrome",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_pointers",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Pointers",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_pointers.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_prime_check",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Prime Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_prime_check.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_reverse_string",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Reverse String",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_slices_append",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Slices Append",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_slices_append.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_structs_methods",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Structs Methods",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_structs_methods.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_switch_stmt",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Switch Stmt",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_switch_stmt.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_code_refactor_variables",
+      "type": "refactor",
+      "language": "go",
+      "title": "Code Refactor: Variables",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_code_refactor_variables.json",
       "difficulty": "beginner"
     },
     {
@@ -58,6 +378,22 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_guided_practice_binary_search",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Binary Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_binary_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_guided_practice_bubblesort",
       "type": "guided",
       "language": "go",
@@ -66,11 +402,155 @@
       "difficulty": "medium"
     },
     {
+      "id": "go_guided_practice_channels",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Channels",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_channels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_error_handling",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Error Handling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_error_handling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_factorial",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "go_guided_practice_factorial",
       "type": "guided",
       "language": "go",
       "title": "Go Factorial (Recursive)",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/test_batch/go_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_fibonacci",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Fibonacci",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_goroutines",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Goroutines",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_goroutines.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_hello_world",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Hello World",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_interfaces",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Interfaces",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_interfaces.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_json_marshalling",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Json Marshalling",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_json_marshalling.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_lcm",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Lcm",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_maps",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Maps",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_maps.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_palindrome",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Palindrome",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_pointers",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Pointers",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_pointers.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_prime_check",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Prime Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_prime_check.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_reverse_string",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Reverse String",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_slices_append",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Slices Append",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_slices_append.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_structs_methods",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Structs Methods",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_structs_methods.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_switch_stmt",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Switch Stmt",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_switch_stmt.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "go_guided_practice_variables",
+      "type": "guided",
+      "language": "go",
+      "title": "Go: Variables",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/go/manual_batch/go_guided_practice_variables.json",
       "difficulty": "beginner"
     }
   ],

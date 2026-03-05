@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Slices Append",
+            "problemDescription": "The Go program for slices append has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.PrintLine(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.Println(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

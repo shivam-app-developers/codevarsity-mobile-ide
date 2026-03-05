@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Channels",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc sum(s []int, c chan int) {\n\ttotal := 0\n\tfor _, v := range s {\n\t\ttotal += v\n\t}\n\tc <- total\n}\n\nfunc main() {\n\ts := []int{7, 2, 8, -9, 4, 0}\n\tc := make(chan int)\n\tgo sum(s[:len(s)/2], c)\n\tgo sum(s[len(s)/2:], c)\n\tx, y := <-c, <-c\n\tfmt.Println(x, y, x+y)\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc sum(s []int, c chan int) {\n\ttotal := 0\n\tfor _, v := range s {\n\t\ttotal += v\n\t}\n\tc <- total\n}\n\nfunc main() {\n\ts := []int{7, 2, 8, -9, 4, 0}\n\tc := make(chan int)\n\tgo sum(s[:len(s)/2], c)\n\tgo sum(s[len(s)/2:], c)\n\tx, y := <-c, <-c\n\tfmt.Println(x, y, x+y)\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

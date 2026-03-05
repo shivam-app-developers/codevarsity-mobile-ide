@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Hello World",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, Go!\")\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, Go!\")\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

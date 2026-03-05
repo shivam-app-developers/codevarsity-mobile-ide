@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Hello World",
+            "problemDescription": "The Go program for hello world has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.PrintLine(\"Hello, Go!\")\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, Go!\")\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

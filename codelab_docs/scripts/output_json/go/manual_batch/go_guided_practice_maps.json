@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Maps",
+            "description": "Learn Go basics by implementing maps.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tm := make(map[string]int)\n\tm[\"Apple\"] = 5\n\tm[\"Banana\"] = 10\n\tm[\"Orange\"] = 8\n\n\tfmt.Println(\"Inventory:\")\n\tfor key, value := range m {\n\t\tfmt.Printf(\"%s: %d\\n\", key, value)\n\t}\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tm := make(map[string]int)\n\tm[\"Apple\"] = 5\n\tm[\"Banana\"] = 10\n\tm[\"Orange\"] = 8\n\n\tfmt.Println(\"Inventory:\")\n\tfor key, value := range m {\n\t\tfmt.Printf(\"%s: %d\\n\", key, value)\n\t}\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

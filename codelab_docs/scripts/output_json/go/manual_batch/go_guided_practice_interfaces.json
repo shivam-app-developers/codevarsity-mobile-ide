@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Interfaces",
+            "description": "Learn Go basics by implementing interfaces.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\ntype Shape interface {\n\tArea() float64\n}\n\ntype Circle struct {\n\tRadius float64\n}\n\nfunc (c Circle) Area() float64 {\n\treturn math.Pi * c.Radius * c.Radius\n}\n\nfunc printArea(s Shape) {\n\tfmt.Printf(\"Area: %.2f\\n\", s.Area())\n}\n\nfunc main() {\n\tc := Circle{Radius: 5}\n\tprintArea(c)\n}\n",
+            "finalCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\ntype Shape interface {\n\tArea() float64\n}\n\ntype Circle struct {\n\tRadius float64\n}\n\nfunc (c Circle) Area() float64 {\n\treturn math.Pi * c.Radius * c.Radius\n}\n\nfunc printArea(s Shape) {\n\tfmt.Printf(\"Area: %.2f\\n\", s.Area())\n}\n\nfunc main() {\n\tc := Circle{Radius: 5}\n\tprintArea(c)\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

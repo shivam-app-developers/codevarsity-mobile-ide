@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Switch Stmt",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tswitch day := time.Now().Weekday(); day {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.Println(\"It's the weekend!\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday.\")\n\t}\n}\n",
+            "solution": {
+                "code": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tswitch day := time.Now().Weekday(); day {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.Println(\"It's the weekend!\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday.\")\n\t}\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Switch Stmt",
+            "problemDescription": "The Go program for switch stmt has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tswitch day := time.Now().Weekday(); day {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.PrintLine(\"It's the weekend!\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday.\")\n\t}\n}\n",
+            "solution": {
+                "code": "package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\tswitch day := time.Now().Weekday(); day {\n\tcase time.Saturday, time.Sunday:\n\t\tfmt.Println(\"It's the weekend!\")\n\tdefault:\n\t\tfmt.Println(\"It's a weekday.\")\n\t}\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

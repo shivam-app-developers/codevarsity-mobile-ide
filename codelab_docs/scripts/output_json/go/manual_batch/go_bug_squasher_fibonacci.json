@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Fibonacci",
+            "problemDescription": "The Go program for fibonacci has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc fibonacci(n int) {\n\ta, b := 0, 1\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Printf(\"%d \", a)\n\t\ta, b = b, a+b\n\t}\n\tfmt.PrintLine()\n}\n\nfunc main() {\n\tfibonacci(10)\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc fibonacci(n int) {\n\ta, b := 0, 1\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Printf(\"%d \", a)\n\t\ta, b = b, a+b\n\t}\n\tfmt.Println()\n}\n\nfunc main() {\n\tfibonacci(10)\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

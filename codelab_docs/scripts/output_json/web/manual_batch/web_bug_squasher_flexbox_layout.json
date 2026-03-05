@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Flexbox Layout",
+            "problemDescription": "The flexbox layout is not functioning correctly. Identify and fix the bug in the code.",
+            "language": "html",
+            "buggyCode": "<!DOCTYPE html\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Flexbox Layout</title>\n    <style>\n        body {\n            font-family: sans-serif;\n            margin: 0;\n            padding: 20px;\n        }\n\n        .flex-container {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 20px;\n            justify-content: center;\n        }\n\n        .card {\n            background: #3498db;\n            color: white;\n            padding: 30px;\n            width: 200px;\n            text-align: center;\n            border-radius: 8px;\n            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n        }\n\n        .card:nth-child(even) {\n            background: #2ecc71;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"flex-container\">\n        <div class=\"card\">Card 1</div>\n        <div class=\"card\">Card 2</div>\n        <div class=\"card\">Card 3</div>\n        <div class=\"card\">Card 4</div>\n        <div class=\"card\">Card 5</div>\n        <div class=\"card\">Card 6</div>\n    </div>\n</body>\n\n</html>",
+            "solution": {
+                "code": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Flexbox Layout</title>\n    <style>\n        body {\n            font-family: sans-serif;\n            margin: 0;\n            padding: 20px;\n        }\n\n        .flex-container {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 20px;\n            justify-content: center;\n        }\n\n        .card {\n            background: #3498db;\n            color: white;\n            padding: 30px;\n            width: 200px;\n            text-align: center;\n            border-radius: 8px;\n            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n        }\n\n        .card:nth-child(even) {\n            background: #2ecc71;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"flex-container\">\n        <div class=\"card\">Card 1</div>\n        <div class=\"card\">Card 2</div>\n        <div class=\"card\">Card 3</div>\n        <div class=\"card\">Card 4</div>\n        <div class=\"card\">Card 5</div>\n        <div class=\"card\">Card 6</div>\n    </div>\n</body>\n\n</html>",
+                "explanation": "Fixed the incorrect method call or syntax error."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

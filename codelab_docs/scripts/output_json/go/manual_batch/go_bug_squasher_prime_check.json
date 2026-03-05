@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Prime Check",
+            "problemDescription": "The Go program for prime check has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package primary\n\nimport \"fmt\"\n\nfunc isPrime(n int) bool {\n\tif n <= 1 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tnum := 29\n\tfmt.Printf(\"Is %d prime? %t\\n\", num, isPrime(num))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc isPrime(n int) bool {\n\tif n <= 1 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tnum := 29\n\tfmt.Printf(\"Is %d prime? %t\\n\", num, isPrime(num))\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

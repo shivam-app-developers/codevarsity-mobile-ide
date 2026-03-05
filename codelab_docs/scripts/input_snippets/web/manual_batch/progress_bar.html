@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .progress-container {
+            width: 300px;
+            height: 30px;
+            background: #eee;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #progressFill {
+            width: 0%;
+            height: 100%;
+            background: #3498db;
+            transition: width 0.4s;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-container">
+        <div id="progressFill"></div>
+    </div>
+    <div class="controls">
+        <button id="prevBtn">Back</button>
+        <button id="nextBtn">Forward</button>
+    </div>
+
+    <script>
+        const fill = document.getElementById('progressFill');
+        const next = document.getElementById('nextBtn');
+        const prev = document.getElementById('prevBtn');
+        let progress = 0;
+
+        next.addEventListener('click', () => {
+            progress = Math.min(progress + 25, 100);
+            fill.style.width = progress + '%';
+        });
+
+        prev.addEventListener('click', () => {
+            progress = Math.max(progress - 25, 0);
+            fill.style.width = progress + '%';
+        });
+    </script>
+</body>
+
+</html>

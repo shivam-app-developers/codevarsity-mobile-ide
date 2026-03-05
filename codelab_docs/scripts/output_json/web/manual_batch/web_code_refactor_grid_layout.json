@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Grid Layout",
+            "problemDescription": "Refactor the following grid layout code for better readability or performance.",
+            "language": "html",
+            "initialCode": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>CSS Grid Layout</title>\n    <style>\n        body {\n            font-family: sans-serif;\n            padding: 20px;\n        }\n\n        .grid-container {\n            display: grid;\n            grid-template-columns: repeat(3, 1fr);\n            gap: 10px;\n        }\n\n        .grid-item {\n            background: #e67e22;\n            color: white;\n            padding: 40px;\n            text-align: center;\n            font-size: 1.2rem;\n            border-radius: 5px;\n        }\n\n        .header {\n            grid-column: span 3;\n            background: #2c3e50;\n        }\n\n        .sidebar {\n            grid-row: span 2;\n            background: #95a5a6;\n        }\n\n        .footer {\n            grid-column: span 3;\n            background: #2c3e50;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"grid-container\">\n        <div class=\"grid-item header\">Header</div>\n        <div class=\"grid-item sidebar\">Sidebar</div>\n        <div class=\"grid-item\">Main Content 1</div>\n        <div class=\"grid-item\">Main Content 2</div>\n        <div class=\"grid-item\">Main Content 3</div>\n        <div class=\"grid-item footer\">Footer</div>\n    </div>\n</body>\n\n</html>",
+            "solution": {
+                "code": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>CSS Grid Layout</title>\n    <style>\n        body {\n            font-family: sans-serif;\n            padding: 20px;\n        }\n\n        .grid-container {\n            display: grid;\n            grid-template-columns: repeat(3, 1fr);\n            gap: 10px;\n        }\n\n        .grid-item {\n            background: #e67e22;\n            color: white;\n            padding: 40px;\n            text-align: center;\n            font-size: 1.2rem;\n            border-radius: 5px;\n        }\n\n        .header {\n            grid-column: span 3;\n            background: #2c3e50;\n        }\n\n        .sidebar {\n            grid-row: span 2;\n            background: #95a5a6;\n        }\n\n        .footer {\n            grid-column: span 3;\n            background: #2c3e50;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"grid-container\">\n        <div class=\"grid-item header\">Header</div>\n        <div class=\"grid-item sidebar\">Sidebar</div>\n        <div class=\"grid-item\">Main Content 1</div>\n        <div class=\"grid-item\">Main Content 2</div>\n        <div class=\"grid-item\">Main Content 3</div>\n        <div class=\"grid-item footer\">Footer</div>\n    </div>\n</body>\n\n</html>",
+                "explanation": "Refactored the code to follow best practices."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

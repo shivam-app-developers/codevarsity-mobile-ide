@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Pointers",
+            "problemDescription": "The Go program for pointers has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.PrintLine(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.Println(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

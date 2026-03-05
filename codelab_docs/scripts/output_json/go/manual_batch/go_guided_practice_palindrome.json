@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Palindrome",
+            "description": "Learn Go basics by implementing palindrome.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc isPalindrome(s string) bool {\n\ts = strings.ToLower(s)\n\tfor i := 0; i < len(s)/2; i++ {\n\t\tif s[i] != s[len(s)-1-i] {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tword := \"Racecar\"\n\tfmt.Printf(\"Is %s a palindrome? %t\\n\", word, isPalindrome(word))\n}\n",
+            "finalCode": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc isPalindrome(s string) bool {\n\ts = strings.ToLower(s)\n\tfor i := 0; i < len(s)/2; i++ {\n\t\tif s[i] != s[len(s)-1-i] {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tword := \"Racecar\"\n\tfmt.Printf(\"Is %s a palindrome? %t\\n\", word, isPalindrome(word))\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

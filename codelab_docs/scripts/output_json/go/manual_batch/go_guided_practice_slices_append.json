@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Slices Append",
+            "description": "Learn Go basics by implementing slices append.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.Println(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.Println(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

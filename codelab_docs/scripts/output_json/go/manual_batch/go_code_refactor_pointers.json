@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Pointers",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.Println(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.Println(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

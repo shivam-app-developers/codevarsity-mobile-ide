@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Structs Methods",
+            "problemDescription": "The Go program for structs methods has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package primary\n\nimport \"fmt\"\n\ntype Rectangle struct {\n\tWidth, Height float64\n}\n\nfunc (r Rectangle) Area() float64 {\n\treturn r.Width * r.Height\n}\n\nfunc main() {\n\trect := Rectangle{Width: 10, Height: 5}\n\tfmt.Printf(\"Area of rectangle: %.2f\\n\", rect.Area())\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\ntype Rectangle struct {\n\tWidth, Height float64\n}\n\nfunc (r Rectangle) Area() float64 {\n\treturn r.Width * r.Height\n}\n\nfunc main() {\n\trect := Rectangle{Width: 10, Height: 5}\n\tfmt.Printf(\"Area of rectangle: %.2f\\n\", rect.Area())\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Web: Digital Clock",
+            "description": "Learn how to build a digital clock using HTML/CSS/JS.",
+            "language": "html",
+            "mode": "snippet",
+            "ghostCode": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Digital Clock</title>\n    <style>\n        body {\n            background: #2c3e50;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n            font-family: 'Courier New', Courier, monospace;\n        }\n\n        .clock {\n            font-size: 5rem;\n            color: #2ecc71;\n            border: 5px solid #2ecc71;\n            padding: 20px;\n            border-radius: 15px;\n            box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"clock\" id=\"clock\">00:00:00</div>\n\n    <script>\n        function updateClock() {\n            const now = new Date();\n            const h = String(now.getHours()).padStart(2, '0');\n            const m = String(now.getMinutes()).padStart(2, '0');\n            const s = String(now.getSeconds()).padStart(2, '0');\n            document.getElementById('clock').innerText = `${h}:${m}:${s}`;\n        }\n        setInterval(updateClock, 1000);\n        updateClock();\n    </script>\n</body>\n\n</html>",
+            "finalCode": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Digital Clock</title>\n    <style>\n        body {\n            background: #2c3e50;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n            font-family: 'Courier New', Courier, monospace;\n        }\n\n        .clock {\n            font-size: 5rem;\n            color: #2ecc71;\n            border: 5px solid #2ecc71;\n            padding: 20px;\n            border-radius: 15px;\n            box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"clock\" id=\"clock\">00:00:00</div>\n\n    <script>\n        function updateClock() {\n            const now = new Date();\n            const h = String(now.getHours()).padStart(2, '0');\n            const m = String(now.getMinutes()).padStart(2, '0');\n            const s = String(now.getSeconds()).padStart(2, '0');\n            document.getElementById('clock').innerText = `${h}:${m}:${s}`;\n        }\n        setInterval(updateClock, 1000);\n        updateClock();\n    </script>\n</body>\n\n</html>",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

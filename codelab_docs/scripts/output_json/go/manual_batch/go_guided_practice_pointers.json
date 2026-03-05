@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Pointers",
+            "description": "Learn Go basics by implementing pointers.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.Println(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc updateValue(n *int) {\n\t*n = *n + 10\n}\n\nfunc main() {\n\tx := 5\n\tfmt.Println(\"Before:\", x)\n\tupdateValue(&x)\n\tfmt.Println(\"After:\", x)\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

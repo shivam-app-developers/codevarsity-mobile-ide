@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Reverse String",
+            "description": "Learn Go basics by implementing reverse string.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc reverse(s string) string {\n\trunes := []rune(s)\n\tfor i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {\n\t\trunes[i], runes[j] = runes[j], runes[i]\n\t}\n\treturn string(runes)\n}\n\nfunc main() {\n\tstr := \"Golang\"\n\tfmt.Printf(\"Original: %s, Reversed: %s\\n\", str, reverse(str))\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc reverse(s string) string {\n\trunes := []rune(s)\n\tfor i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {\n\t\trunes[i], runes[j] = runes[j], runes[i]\n\t}\n\treturn string(runes)\n}\n\nfunc main() {\n\tstr := \"Golang\"\n\tfmt.Printf(\"Original: %s, Reversed: %s\\n\", str, reverse(str))\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

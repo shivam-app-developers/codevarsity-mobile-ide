@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Variables",
+            "description": "Learn Go basics by implementing variables.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar name string = \"CodeVarsity\"\n\tage := 5\n\tisLearning := true\n\n\tfmt.Printf(\"Name: %s, Age: %d, Learning: %t\\n\", name, age, isLearning)\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar name string = \"CodeVarsity\"\n\tage := 5\n\tisLearning := true\n\n\tfmt.Printf(\"Name: %s, Age: %d, Learning: %t\\n\", name, age, isLearning)\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

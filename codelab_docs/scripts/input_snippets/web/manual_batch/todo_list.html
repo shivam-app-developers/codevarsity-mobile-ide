@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal To-Do List</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #fdfdfd;
+            padding: 50px;
+        }
+
+        .todo-app {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-box {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .remove {
+            color: #e74c3c;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo-app">
+        <h2>To-Do List</h2>
+        <div class="input-box">
+            <input type="text" id="todoInput" placeholder="Enter task...">
+            <button id="addTodo">Add</button>
+        </div>
+        <ul id="todoList"></ul>
+    </div>
+
+    <script>
+        const input = document.getElementById('todoInput');
+        const btn = document.getElementById('addTodo');
+        const list = document.getElementById('todoList');
+
+        btn.addEventListener('click', () => {
+            if (input.value === "") return;
+            const li = document.createElement('li');
+            li.innerHTML = `<span>${input.value}</span> <span class="remove">Delete</span>`;
+            li.addEventListener('click', (e) => {
+                if (e.target.classList.contains('remove')) {
+                    li.remove();
+                } else {
+                    li.classList.toggle('completed');
+                }
+            });
+            list.appendChild(li);
+            input.value = "";
+        });
+    </script>
+</body>
+
+</html>

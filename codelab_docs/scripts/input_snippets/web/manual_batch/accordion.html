@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion UI</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .accordion {
+            width: 350px;
+        }
+
+        .item {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header {
+            background: #f4f4f4;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .content {
+            display: none;
+            padding: 15px;
+            background: white;
+            color: #555;
+        }
+
+        .active .content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="item">
+            <div class="header">Section 1 <span>+</span></div>
+            <div class="content">Content for section 1 goes here. It provides more detail.</div>
+        </div>
+        <div class="item">
+            <div class="header">Section 2 <span>+</span></div>
+            <div class="content">Information about section 2 is displayed when expanded.</div>
+        </div>
+        <div class="item">
+            <div class="header">Section 3 <span>+</span></div>
+            <div class="content">Final details for the third section of the accordion.</div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            item.querySelector('.header').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                items.forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

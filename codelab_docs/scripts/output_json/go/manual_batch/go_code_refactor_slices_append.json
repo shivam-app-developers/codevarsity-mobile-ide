@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Slices Append",
+            "problemDescription": "Refactor this Go code for better performance or idiomatic style.",
+            "language": "go",
+            "initialCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.Println(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ts := []int{1, 2, 3}\n\ts = append(s, 4, 5)\n\tfmt.Println(\"Slice:\", s)\n\tfmt.Println(\"Length:\", len(s), \"Capacity:\", cap(s))\n}\n",
+                "explanation": "Improved the code structure and readability."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

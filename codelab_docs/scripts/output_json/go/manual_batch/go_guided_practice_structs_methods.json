@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Structs Methods",
+            "description": "Learn Go basics by implementing structs methods.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\ntype Rectangle struct {\n\tWidth, Height float64\n}\n\nfunc (r Rectangle) Area() float64 {\n\treturn r.Width * r.Height\n}\n\nfunc main() {\n\trect := Rectangle{Width: 10, Height: 5}\n\tfmt.Printf(\"Area of rectangle: %.2f\\n\", rect.Area())\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\ntype Rectangle struct {\n\tWidth, Height float64\n}\n\nfunc (r Rectangle) Area() float64 {\n\treturn r.Width * r.Height\n}\n\nfunc main() {\n\trect := Rectangle{Width: 10, Height: 5}\n\tfmt.Printf(\"Area of rectangle: %.2f\\n\", rect.Area())\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

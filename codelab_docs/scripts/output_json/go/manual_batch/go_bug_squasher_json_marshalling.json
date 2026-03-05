@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Json Marshalling",
+            "problemDescription": "The Go program for json marshalling has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package main\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n)\n\ntype User struct {\n\tID   int    `json:\"id\"`\n\tName string `json:\"name\"`\n}\n\nfunc main() {\n\tuser := User{ID: 1, Name: \"Alice\"}\n\tjsonData, _ := json.Marshal(user)\n\tfmt.PrintLine(string(jsonData))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n)\n\ntype User struct {\n\tID   int    `json:\"id\"`\n\tName string `json:\"name\"`\n}\n\nfunc main() {\n\tuser := User{ID: 1, Name: \"Alice\"}\n\tjsonData, _ := json.Marshal(user)\n\tfmt.Println(string(jsonData))\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

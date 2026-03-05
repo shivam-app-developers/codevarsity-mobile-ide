@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            padding: 8px;
+            width: 70%;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Item List</h2>
+        <input type="text" id="itemInput" placeholder="Add a new item...">
+        <button id="addBtn">Add</button>
+        <ul id="itemList"></ul>
+    </div>
+
+    <script>
+        const input = document.getElementById('itemInput');
+        const addBtn = document.getElementById('addBtn');
+        const list = document.getElementById('itemList');
+
+        addBtn.addEventListener('click', () => {
+            if (input.value.trim() !== "") {
+                const li = document.createElement('li');
+                li.innerHTML = `${input.value} <span class="delete-btn">X</span>`;
+                list.appendChild(li);
+                input.value = "";
+
+                li.querySelector('.delete-btn').addEventListener('click', () => {
+                    li.remove();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

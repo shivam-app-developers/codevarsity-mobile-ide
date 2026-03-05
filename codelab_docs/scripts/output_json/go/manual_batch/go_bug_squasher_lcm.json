@@ -1,0 +1,19 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Lcm",
+            "problemDescription": "The Go program for lcm has a bug. Find and fix it.",
+            "language": "go",
+            "buggyCode": "package primary\n\nimport \"fmt\"\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}\n\nfunc lcm(a, b int) int {\n\treturn (a * b) / gcd(a, b)\n}\n\nfunc main() {\n\tfmt.Printf(\"LCM of 12 and 15 is: %d\\n\", lcm(12, 15))\n}\n",
+            "solution": {
+                "code": "package main\n\nimport \"fmt\"\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}\n\nfunc lcm(a, b int) int {\n\treturn (a * b) / gcd(a, b)\n}\n\nfunc main() {\n\tfmt.Printf(\"LCM of 12 and 15 is: %d\\n\", lcm(12, 15))\n}\n",
+                "explanation": "Fixed the incorrect syntax or method call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

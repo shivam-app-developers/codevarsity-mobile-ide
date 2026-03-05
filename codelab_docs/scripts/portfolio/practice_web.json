@@ -2,12 +2,60 @@
   "version": 1,
   "snippets": [
     {
+      "id": "web_bug_squasher_accordion",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Accordion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_accordion.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "web_bug_squasher_blurry_loading",
       "type": "bug_squasher",
       "language": "web",
       "title": "Bug Squasher: Blurry Loading",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/test_batch/web_bug_squasher_blurry_loading.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "web_bug_squasher_button_animations",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Button Animations",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_button_animations.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_calculator",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Calculator",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_calculator.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_dark_mode_toggle",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Dark Mode Toggle",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_dark_mode_toggle.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_digital_clock",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Digital Clock",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_digital_clock.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_dynamic_list",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Dynamic List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_dynamic_list.json",
+      "difficulty": "beginner"
     },
     {
       "id": "web_bug_squasher_expanding_cards",
@@ -18,12 +66,132 @@
       "difficulty": "medium"
     },
     {
+      "id": "web_bug_squasher_flexbox_layout",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Flexbox Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_flexbox_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_form_validation",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Form Validation",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_form_validation.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_grid_layout",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Grid Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_grid_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_image_slider",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Image Slider",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_image_slider.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_modal_window",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Modal Window",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_modal_window.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_profile_card",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Profile Card",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_profile_card.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_progress_bar",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Progress Bar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_progress_bar.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "web_bug_squasher_progress_steps",
       "type": "bug_squasher",
       "language": "web",
       "title": "Bug Squasher: Progress Steps",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/test_batch/web_bug_squasher_progress_steps.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "web_bug_squasher_responsive_navbar",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Responsive Navbar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_responsive_navbar.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_scroll_to_top",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Scroll To Top",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_scroll_to_top.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_search_filter",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Search Filter",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_search_filter.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_tabs",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Tabs",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_tabs.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_todo_list",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Todo List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_todo_list.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_tooltip",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Tooltip",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_tooltip.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_bug_squasher_weather_widget",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Weather Widget",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_bug_squasher_weather_widget.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_accordion",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Accordion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_accordion.json",
+      "difficulty": "beginner"
     },
     {
       "id": "web_code_refactor_blurry_loading",
@@ -34,12 +202,108 @@
       "difficulty": "medium"
     },
     {
+      "id": "web_code_refactor_button_animations",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Button Animations",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_button_animations.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_calculator",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Calculator",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_calculator.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_dark_mode_toggle",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Dark Mode Toggle",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_dark_mode_toggle.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_digital_clock",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Digital Clock",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_digital_clock.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_dynamic_list",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Dynamic List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_dynamic_list.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "web_code_refactor_expanding_cards",
       "type": "refactor",
       "language": "web",
       "title": "Web Refactor: Expanding Cards",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/test_batch/web_code_refactor_expanding_cards.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "web_code_refactor_flexbox_layout",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Flexbox Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_flexbox_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_form_validation",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Form Validation",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_form_validation.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_grid_layout",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Grid Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_grid_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_image_slider",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Image Slider",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_image_slider.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_modal_window",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Modal Window",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_modal_window.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_profile_card",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Profile Card",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_profile_card.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_progress_bar",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Progress Bar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_progress_bar.json",
+      "difficulty": "beginner"
     },
     {
       "id": "web_code_refactor_progress_steps",
@@ -50,12 +314,116 @@
       "difficulty": "medium"
     },
     {
+      "id": "web_code_refactor_responsive_navbar",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Responsive Navbar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_responsive_navbar.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_scroll_to_top",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Scroll To Top",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_scroll_to_top.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_search_filter",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Search Filter",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_search_filter.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_tabs",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Tabs",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_tabs.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_todo_list",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Todo List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_todo_list.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_tooltip",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Tooltip",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_tooltip.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_code_refactor_weather_widget",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Weather Widget",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_code_refactor_weather_widget.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_accordion",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Accordion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_accordion.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "web_guided_practice_blurry_loading",
       "type": "guided",
       "language": "web",
       "title": "Web: Blurry Loading",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/test_batch/web_guided_practice_blurry_loading.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "web_guided_practice_button_animations",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Button Animations",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_button_animations.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_calculator",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Calculator",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_calculator.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_dark_mode_toggle",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Dark Mode Toggle",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_dark_mode_toggle.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_digital_clock",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Digital Clock",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_digital_clock.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_dynamic_list",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Dynamic List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_dynamic_list.json",
+      "difficulty": "beginner"
     },
     {
       "id": "web_guided_practice_expanding_cards",
@@ -66,12 +434,124 @@
       "difficulty": "medium"
     },
     {
+      "id": "web_guided_practice_flexbox_layout",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Flexbox Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_flexbox_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_form_validation",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Form Validation",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_form_validation.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_grid_layout",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Grid Layout",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_grid_layout.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_image_slider",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Image Slider",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_image_slider.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_modal_window",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Modal Window",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_modal_window.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_profile_card",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Profile Card",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_profile_card.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_progress_bar",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Progress Bar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_progress_bar.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "web_guided_practice_progress_steps",
       "type": "guided",
       "language": "web",
       "title": "Web: Progress Steps",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/test_batch/web_guided_practice_progress_steps.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "web_guided_practice_responsive_navbar",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Responsive Navbar",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_responsive_navbar.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_scroll_to_top",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Scroll To Top",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_scroll_to_top.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_search_filter",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Search Filter",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_search_filter.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_tabs",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Tabs",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_tabs.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_todo_list",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Todo List",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_todo_list.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_tooltip",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Tooltip",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_tooltip.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web_guided_practice_weather_widget",
+      "type": "guided",
+      "language": "web",
+      "title": "Web: Weather Widget",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/web/manual_batch/web_guided_practice_weather_widget.json",
+      "difficulty": "beginner"
     }
   ],
   "projects": []

@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Go: Prime Check",
+            "description": "Learn Go basics by implementing prime check.",
+            "language": "go",
+            "mode": "snippet",
+            "ghostCode": "package main\n\nimport \"fmt\"\n\nfunc isPrime(n int) bool {\n\tif n <= 1 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tnum := 29\n\tfmt.Printf(\"Is %d prime? %t\\n\", num, isPrime(num))\n}\n",
+            "finalCode": "package main\n\nimport \"fmt\"\n\nfunc isPrime(n int) bool {\n\tif n <= 1 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tnum := 29\n\tfmt.Printf(\"Is %d prime? %t\\n\", num, isPrime(num))\n}\n",
+            "validation": {
+                "type": "run_code"
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget UI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #a1c4fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .weather-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .city {
+            color: #888;
+            font-size: 1.2rem;
+        }
+
+        .temp {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .desc {
+            color: #3498db;
+            text-transform: capitalize;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weather-card">
+        <div class="city">New York</div>
+        <div class="temp">22°C</div>
+        <div class="desc">Sunny</div>
+        <div class="details">
+            <div>Humidity: 45%</div>
+            <div>Wind: 12 km/h</div>
+        </div>
+    </div>
+</body>
+
+</html>
