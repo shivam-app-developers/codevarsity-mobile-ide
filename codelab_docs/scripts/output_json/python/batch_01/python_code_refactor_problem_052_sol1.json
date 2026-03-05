@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Permuted Multiples",
-      "problemDescription": "Refactor the permuted multiples search to use frequency counting for potentially better performance.",
-      "language": "python",
-      "initialCode": "def solution():\n    i = 1\n    while True:\n        s_i = sorted(str(i))\n        if all(sorted(str(i * m)) == s_i for m in range(2, 7)):\n            return i\n        i += 1",
-      "solution": {
-        "code": "from collections import Counter\n\ndef solution() -> int:\n    \"\"\"\n    Optimized search for permuted multiples.\n    x and 6x must have the same number of digits.\n    \"\"\"\n    # Start at 100,000 because 6 * 166667 is the first 7-digit number\n    # x must start with '1' for 6x to have the same number of digits.\n    for length in range(1, 7):\n        start = 10**(length - 1)\n        end = 10**length // 6\n        for x in range(start, end + 1):\n            digits = Counter(str(x))\n            if all(Counter(str(x * m)) == digits for m in range(2, 7)):\n                return x\n    return -1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Adding constraints on the search range (x must start with '1' so 6x has the same number of digits) significantly reduces the number of integers to check."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Permuted Multiples",
+            "problemDescription": "Refactor the permuted multiples search to use frequency counting for potentially better performance.",
+            "language": "python",
+            "initialCode": "def solution():\n    i = 1\n    while True:\n        s_i = sorted(str(i))\n        if all(sorted(str(i * m)) == s_i for m in range(2, 7)):\n            return i\n        i += 1",
+            "solution": {
+                "code": "from collections import Counter\n\ndef solution() -> int:\n    \"\"\"\n    Optimized search for permuted multiples.\n    x and 6x must have the same number of digits.\n    \"\"\"\n    # Start at 100,000 because 6 * 166667 is the first 7-digit number\n    # x must start with '1' for 6x to have the same number of digits.\n    for length in range(1, 7):\n        start = 10**(length - 1)\n        end = 10**length // 6\n        for x in range(start, end + 1):\n            digits = Counter(str(x))\n            if all(Counter(str(x * m)) == digits for m in range(2, 7)):\n                return x\n    return -1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Adding constraints on the search range (x must start with '1' so 6x has the same number of digits) significantly reduces the number of integers to check."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

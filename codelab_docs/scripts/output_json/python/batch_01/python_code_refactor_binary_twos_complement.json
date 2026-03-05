@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Clean Two's Complement with Bitwise",
-      "problemDescription": "The provided code uses string manipulation and math to calculate two's complement. Refactor it to use more idiomatic bitwise operations, like `~n + 1`, which is the standard definition of two's complement.",
-      "language": "python",
-      "initialCode": "def twos_complement(n, bits):\n    if n < 0:\n        n = (1 << bits) + n\n    return bin(n)\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 8-bit: {twos_complement(-5, 8)}\")",
-      "solution": {
-        "code": "def twos_complement(n, bits):\n    mask = (1 << bits) - 1\n    return bin((n & mask))\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 8-bit: {twos_complement(-5, 8)}\")",
-        "explanation": "In Python, integers are arbitrary precision. To get the bit representation for a specific bit-width (like 8-bit), we can simply bitwise AND the negative number with a mask of that width. This effectively simulates the overflow behavior of fixed-width integers and gives the two's complement representation directly."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Clean Two's Complement with Bitwise",
+            "problemDescription": "The provided code uses string manipulation and math to calculate two's complement. Refactor it to use more idiomatic bitwise operations, like `~n + 1`, which is the standard definition of two's complement.",
+            "language": "python",
+            "initialCode": "def twos_complement(n, bits):\n    if n < 0:\n        n = (1 << bits) + n\n    return bin(n)\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 8-bit: {twos_complement(-5, 8)}\")",
+            "solution": {
+                "code": "def twos_complement(n, bits):\n    mask = (1 << bits) - 1\n    return bin((n & mask))\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 8-bit: {twos_complement(-5, 8)}\")",
+                "explanation": "In Python, integers are arbitrary precision. To get the bit representation for a specific bit-width (like 8-bit), we can simply bitwise AND the negative number with a mask of that width. This effectively simulates the overflow behavior of fixed-width integers and gives the two's complement representation directly."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

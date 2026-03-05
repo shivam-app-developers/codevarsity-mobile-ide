@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Binary OR Operation",
-      "description": "Perform a bitwise OR operation on two integers and return the result as a binary string.",
-      "language": "python",
-      "ghostCode": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
-      "finalCode": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Binary OR Operation",
+            "description": "Perform a bitwise OR operation on two integers and return the result as a binary string.",
+            "language": "python",
+            "ghostCode": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
+            "finalCode": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

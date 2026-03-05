@@ -10,7 +10,7 @@
             "ghostCode": "public class FactorialRecursion {\n    public static int fact(int n) {\n        if (n <= 1) return 1;\n        return n * fact(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fact(4));\n    }\n}",
             "finalCode": "public class FactorialRecursion {\n    public static int fact(int n) {\n        if (n <= 1) return 1;\n        return n * fact(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fact(4));\n    }\n}",
             "validation": {
-                "pattern": "24"
+                "type": "run_code"
             }
         }
     }

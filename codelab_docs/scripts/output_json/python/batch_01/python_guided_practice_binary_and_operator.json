@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Binary AND Operation",
-      "description": "Perform a bitwise AND operation on two integers and return the result as a binary string.",
-      "language": "python",
-      "ghostCode": "def binary_and(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    res = bin(a & b)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"25 AND 32: {binary_and(25, 32)}\")",
-      "finalCode": "def binary_and(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    res = bin(a & b)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"25 AND 32: {binary_and(25, 32)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Binary AND Operation",
+            "description": "Perform a bitwise AND operation on two integers and return the result as a binary string.",
+            "language": "python",
+            "ghostCode": "def binary_and(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    res = bin(a & b)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"25 AND 32: {binary_and(25, 32)}\")",
+            "finalCode": "def binary_and(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    res = bin(a & b)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"25 AND 32: {binary_and(25, 32)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

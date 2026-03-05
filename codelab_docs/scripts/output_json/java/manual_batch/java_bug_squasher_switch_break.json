@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int day = 2;\n        switch (day) {\n            case 1:\n                System.out.println(\"Monday\");\n                break;\n            case 2:\n                System.out.println(\"Tuesday\");\n                break;\n            case 3:\n                System.out.println(\"Wednesday\");\n                break;\n        }\n    }\n}",
                 "explanation": "Without a 'break' statement, execution 'falls through' to subsequent case blocks regardless of the value."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

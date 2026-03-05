@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Binary Count Trailing Zeros",
-      "description": "Calculate the number of trailing zeros in the binary representation of an integer using logarithmic and bitwise operations.",
-      "language": "python",
-      "ghostCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    if n < 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36 (100100): {count_trailing_zeros(36)}\")",
-      "finalCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    if n < 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36 (100100): {count_trailing_zeros(36)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Binary Count Trailing Zeros",
+            "description": "Calculate the number of trailing zeros in the binary representation of an integer using logarithmic and bitwise operations.",
+            "language": "python",
+            "ghostCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    if n < 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36 (100100): {count_trailing_zeros(36)}\")",
+            "finalCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    if n < 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36 (100100): {count_trailing_zeros(36)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

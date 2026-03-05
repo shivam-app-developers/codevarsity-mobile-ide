@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Recursive Directory Generator",
-      "problemDescription": "The provided code uses `os.walk` (iterative) to traverse the directory. Refactor it to use a manual recursive function, which can provide more fine-grained control over the output formatting and nesting logic.",
-      "language": "python",
-      "initialCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith('.')]\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
-      "solution": {
-        "code": "import os\n\ndef list_files(path, indent=0):\n    items = sorted(os.listdir(path))\n    for item in items:\n        if item.startswith('.') or item == 'venv': continue\n        full_path = os.path.join(path, item)\n        if os.path.isdir(full_path):\n            print('  ' * indent + f\"## {item.title()}\")\n            list_files(full_path, indent + 1)\n        elif item.endswith('.py'):\n            print('  ' * indent + f\"* {item}\")\n\nif __name__ == \"__main__\":\n    list_files(\".\")",
-        "explanation": "A manual recursive implementation makes the hierarchical structure of the directory tree explicit in the code. It allows for easier formatting of folder headers and nested lists compared to tracking depth with `os.walk`."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Recursive Directory Generator",
+            "problemDescription": "The provided code uses `os.walk` (iterative) to traverse the directory. Refactor it to use a manual recursive function, which can provide more fine-grained control over the output formatting and nesting logic.",
+            "language": "python",
+            "initialCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith('.')]\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+            "solution": {
+                "code": "import os\n\ndef list_files(path, indent=0):\n    items = sorted(os.listdir(path))\n    for item in items:\n        if item.startswith('.') or item == 'venv': continue\n        full_path = os.path.join(path, item)\n        if os.path.isdir(full_path):\n            print('  ' * indent + f\"## {item.title()}\")\n            list_files(full_path, indent + 1)\n        elif item.endswith('.py'):\n            print('  ' * indent + f\"* {item}\")\n\nif __name__ == \"__main__\":\n    list_files(\".\")",
+                "explanation": "A manual recursive implementation makes the hierarchical structure of the directory tree explicit in the code. It allows for easier formatting of folder headers and nested lists compared to tracking depth with `os.walk`."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

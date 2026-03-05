@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Alternative String Concatenation Bug",
-      "problemDescription": "The function is intended to alternate characters from two strings. However, it seems to be failing for certain input combinations or outputting extra characters. Find and fix the error in the character selection logic.",
-      "language": "python",
-      "buggyCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = \"\"\n    for i in range(max_len):\n        result += str1[i] if i < len(str1) else \"\"\n        result += str2[i] if i < len(str2) else \"\"\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"A\", \"BC\"))",
-      "solution": {
-        "code": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)",
-        "explanation": "While the buggy code works for the given example, it is inefficient because string concatenation in a loop is O(n^2) in some Python implementations due to string immutability. Using a list and `join()` is the idiomatic and more efficient O(n) approach."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Alternative String Concatenation Bug",
+            "problemDescription": "The function is intended to alternate characters from two strings. However, it seems to be failing for certain input combinations or outputting extra characters. Find and fix the error in the character selection logic.",
+            "language": "python",
+            "buggyCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = \"\"\n    for i in range(max_len):\n        result += str1[i] if i < len(str1) else \"\"\n        result += str2[i] if i < len(str2) else \"\"\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"A\", \"BC\"))",
+            "solution": {
+                "code": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)",
+                "explanation": "While the buggy code works for the given example, it is inefficient because string concatenation in a loop is O(n^2) in some Python implementations due to string immutability. Using a list and `join()` is the idiomatic and more efficient O(n) approach."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

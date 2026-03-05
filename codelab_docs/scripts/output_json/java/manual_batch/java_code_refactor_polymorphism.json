@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog(); // Upcasting\n        animal.sound();\n    }\n}",
                 "explanation": "Programming to an interface/parent class (upcasting) makes the code more flexible and allows you to swap implementations easily."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Digit Fifth Powers",
-      "description": "Find the sum of all numbers that can be written as the sum of fifth powers of their digits.",
-      "language": "python",
-      "ghostCode": "def solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the fifth powers of their digits.\n    \"\"\"\n    # 9^5 = 59049. 6 * 9^5 = 354294. 7 * 9^5 = 413343.\n    # So the upper bound doesn't need to exceed 1,000,000.\n    total_sum = 0\n    for num in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(num))\n        if num == digit_power_sum:\n            total_sum += num\n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-      "finalCode": "def solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the fifth powers of their digits.\n    \"\"\"\n    # 9^5 = 59049. 6 * 9^5 = 354294. 7 * 9^5 = 413343.\n    # So the upper bound doesn't need to exceed 1,000,000.\n    total_sum = 0\n    for num in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(num))\n        if num == digit_power_sum:\n            total_sum += num\n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Digit Fifth Powers",
+            "description": "Find the sum of all numbers that can be written as the sum of fifth powers of their digits.",
+            "language": "python",
+            "ghostCode": "def solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the fifth powers of their digits.\n    \"\"\"\n    # 9^5 = 59049. 6 * 9^5 = 354294. 7 * 9^5 = 413343.\n    # So the upper bound doesn't need to exceed 1,000,000.\n    total_sum = 0\n    for num in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(num))\n        if num == digit_power_sum:\n            total_sum += num\n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "finalCode": "def solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the fifth powers of their digits.\n    \"\"\"\n    # 9^5 = 59049. 6 * 9^5 = 354294. 7 * 9^5 = 413343.\n    # So the upper bound doesn't need to exceed 1,000,000.\n    total_sum = 0\n    for num in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(num))\n        if num == digit_power_sum:\n            total_sum += num\n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

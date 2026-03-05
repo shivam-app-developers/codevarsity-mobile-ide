@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isArmstrong(int num) {\\n    int originalNum = num, result = 0;\\n    while (originalNum != 0) {\\n        int remainder = originalNum % 10;\\n        result += remainder * remainder * remainder;\\n        originalNum /= 10;\\n    }\\n    return result == num;\\n}\\n\\nint main() {\\n    if (isArmstrong(371)) printf(\\\"Yes\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "Extracting logic into functions makes the code modular, easier to test, and more readable."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

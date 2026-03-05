@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const toDec = (b) => \\n  [...b].reduce((acc, digit) => (acc << 1) + Number(digit), 0);",
                 "explanation": "The manual calculation using bitwise shift (`<< 1`) and adding the current digit is a clever way to convert binary strings without relying on `parseInt`."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

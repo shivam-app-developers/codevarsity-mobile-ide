@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Right Triangles with Integer Coordinates",
-      "problemDescription": "Refactor the right triangle count using a more efficient geometric approach to avoid O(N^4) complexity.",
-      "language": "python",
-      "initialCode": "from itertools import product, combinations\n\ndef solution(limit=50):\n    count = 0\n    points = list(product(range(limit + 1), repeat=2))\n    points.remove((0, 0))\n    for p1, p2 in combinations(points, 2):\n        x1, y1 = p1\n        x2, y2 = p2\n        a2 = x1*x1 + y1*y1\n        b2 = x2*x2 + y2*y2\n        c2 = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)\n        if a2 + b2 == c2 or a2 + c2 == b2 or b2 + c2 == a2:\n            count += 1\n    return count",
-      "solution": {
-        "code": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Highly optimized version using the property of perpendicular gradients.\n    Complexity: O(limit^2).\n    \"\"\"\n    # 1. Right angle at origin: limit * limit\n    # 2. Right angle on x-axis: limit * limit\n    # 3. Right angle on y-axis: limit * limit\n    count = 3 * limit * limit\n\n    # 4. Right angle at P(x, y) where P is not on an axis\n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Vector OP = (x, y). Perpendicular vector is (y, -x) or (-y, x).\n            # Reduced gradient: (y/g, -x/g) where g = gcd(x, y)\n            g = gcd(x, y)\n            dx, dy = y // g, x // g\n            \n            # Count points Q in direction (x + k*dx, y - k*dy)\n            count += min(y // dy, (limit - x) // dx)\n            # Count points Q in direction (x - k*dx, y + k*dy)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50))",
-        "explanation": "The O(N^4) brute force check is extremely slow. By observing that for any point P(x,y), we can count points Q such that PQ is perpendicular to OP using the reduced gradient of the line OP, we reduce the complexity to O(N^2)."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Right Triangles with Integer Coordinates",
+            "problemDescription": "Refactor the right triangle count using a more efficient geometric approach to avoid O(N^4) complexity.",
+            "language": "python",
+            "initialCode": "from itertools import product, combinations\n\ndef solution(limit=50):\n    count = 0\n    points = list(product(range(limit + 1), repeat=2))\n    points.remove((0, 0))\n    for p1, p2 in combinations(points, 2):\n        x1, y1 = p1\n        x2, y2 = p2\n        a2 = x1*x1 + y1*y1\n        b2 = x2*x2 + y2*y2\n        c2 = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)\n        if a2 + b2 == c2 or a2 + c2 == b2 or b2 + c2 == a2:\n            count += 1\n    return count",
+            "solution": {
+                "code": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Highly optimized version using the property of perpendicular gradients.\n    Complexity: O(limit^2).\n    \"\"\"\n    # 1. Right angle at origin: limit * limit\n    # 2. Right angle on x-axis: limit * limit\n    # 3. Right angle on y-axis: limit * limit\n    count = 3 * limit * limit\n\n    # 4. Right angle at P(x, y) where P is not on an axis\n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Vector OP = (x, y). Perpendicular vector is (y, -x) or (-y, x).\n            # Reduced gradient: (y/g, -x/g) where g = gcd(x, y)\n            g = gcd(x, y)\n            dx, dy = y // g, x // g\n            \n            # Count points Q in direction (x + k*dx, y - k*dy)\n            count += min(y // dy, (limit - x) // dx)\n            # Count points Q in direction (x - k*dx, y + k*dy)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50))",
+                "explanation": "The O(N^4) brute force check is extremely slow. By observing that for any point P(x,y), we can count points Q such that PQ is perpendicular to OP using the reduced gradient of the line OP, we reduce the complexity to O(N^2)."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

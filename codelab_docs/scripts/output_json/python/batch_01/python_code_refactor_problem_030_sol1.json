@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Digit Fifth Powers",
-      "problemDescription": "Refactor the digit fifth power calculation using a pre-calculated dictionary for better performance.",
-      "language": "python",
-      "initialCode": "def solution():\n    total = 0\n    for i in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(i))\n        if i == digit_power_sum:\n            total += i\n    return total",
-      "solution": {
-        "code": "def solution():\n    \"\"\"\n    Optimized digit fifth power sum calculation using a pre-calculated list for digit powers.\n    \"\"\"\n    # Pre-calculate digit powers to avoid repeating the operation\n    powers = [d**5 for d in range(10)]\n    \n    total = 0\n    # The maximum possible sum of 5th powers for a k-digit number is k * 9^5.\n    # For 6 digits, 6 * 59049 = 354294. For 7 digits, 7 * 59049 = 413343.\n    # So we don't need to check beyond 354,294.\n    for i in range(10, 354295):\n        # Extract digits mathematically to avoid string conversion overhead\n        n = i\n        s = 0\n        while n > 0:\n            s += powers[n % 10]\n            n //= 10\n        if i == s:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Pre-calculating the fifth powers of digits 0-9 and extracting digits using modulo/division (instead of `str()` and `int()`) significantly improves the performance of the loop."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Digit Fifth Powers",
+            "problemDescription": "Refactor the digit fifth power calculation using a pre-calculated dictionary for better performance.",
+            "language": "python",
+            "initialCode": "def solution():\n    total = 0\n    for i in range(2, 1000000):\n        digit_power_sum = sum(int(d)**5 for d in str(i))\n        if i == digit_power_sum:\n            total += i\n    return total",
+            "solution": {
+                "code": "def solution():\n    \"\"\"\n    Optimized digit fifth power sum calculation using a pre-calculated list for digit powers.\n    \"\"\"\n    # Pre-calculate digit powers to avoid repeating the operation\n    powers = [d**5 for d in range(10)]\n    \n    total = 0\n    # The maximum possible sum of 5th powers for a k-digit number is k * 9^5.\n    # For 6 digits, 6 * 59049 = 354294. For 7 digits, 7 * 59049 = 413343.\n    # So we don't need to check beyond 354,294.\n    for i in range(10, 354295):\n        # Extract digits mathematically to avoid string conversion overhead\n        n = i\n        s = 0\n        while n > 0:\n            s += powers[n % 10]\n            n //= 10\n        if i == s:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Pre-calculating the fifth powers of digits 0-9 and extracting digits using modulo/division (instead of `str()` and `int()`) significantly improves the performance of the loop."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

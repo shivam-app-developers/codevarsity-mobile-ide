@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "",
-      "problemDescription": "",
-      "language": "",
-      "buggyCode": "",
-      "solution": {
-        "code": "",
-        "explanation": "Fix the bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "",
+            "problemDescription": "",
+            "language": "",
+            "buggyCode": "",
+            "solution": {
+                "code": "",
+                "explanation": "Fix the bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

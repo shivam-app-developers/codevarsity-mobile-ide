@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Snake Case Underscore Bug",
-      "problemDescription": "The camelCase to snake_case converter is adding an extra leading underscore when the input starts with a capital letter (PascalCase). Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def to_snake_case(s):\n    res = \"\"\n    for char in s:\n        if char.isupper():\n            res += \"_\" + char.lower()\n        else:\n            res += char\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Pascal -> {to_snake_case('Pascal')}\")",
-      "solution": {
-        "code": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper():\n            if i > 0: res += \"_\"\n            res += char.lower()\n        else:\n            res += char\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Pascal -> {to_snake_case('Pascal')}\")",
-        "explanation": "When converting to snake_case, an underscore should be inserted BEFORE capital letters, but NOT if the capital letter is the very first character of the string. The buggy code blindly added an underscore for every uppercase character."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Snake Case Underscore Bug",
+            "problemDescription": "The camelCase to snake_case converter is adding an extra leading underscore when the input starts with a capital letter (PascalCase). Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def to_snake_case(s):\n    res = \"\"\n    for char in s:\n        if char.isupper():\n            res += \"_\" + char.lower()\n        else:\n            res += char\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Pascal -> {to_snake_case('Pascal')}\")",
+            "solution": {
+                "code": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper():\n            if i > 0: res += \"_\"\n            res += char.lower()\n        else:\n            res += char\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Pascal -> {to_snake_case('Pascal')}\")",
+                "explanation": "When converting to snake_case, an underscore should be inserted BEFORE capital letters, but NOT if the capital letter is the very first character of the string. The buggy code blindly added an underscore for every uppercase character."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

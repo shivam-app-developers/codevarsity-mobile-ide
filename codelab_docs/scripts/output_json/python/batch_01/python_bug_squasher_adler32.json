@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Adler-32 Modulo Bug",
-      "problemDescription": "The Adler-32 checksum calculation seems incorrect. The modular arithmetic is not correctly applied to both parts. Identify and fix the logic flaw.",
-      "language": "python",
-      "buggyCode": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = a + ord(char)\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
-      "solution": {
-        "code": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = (a + ord(char)) % MOD_ADLER\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
-        "explanation": "The checksum component `a` was missing the modulo operation inside the loop. Without it, `a` can grow very large and overflow or cause incorrect values when calculating `b` and the final result."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Adler-32 Modulo Bug",
+            "problemDescription": "The Adler-32 checksum calculation seems incorrect. The modular arithmetic is not correctly applied to both parts. Identify and fix the logic flaw.",
+            "language": "python",
+            "buggyCode": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = a + ord(char)\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
+            "solution": {
+                "code": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = (a + ord(char)) % MOD_ADLER\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
+                "explanation": "The checksum component `a` was missing the modulo operation inside the loop. Without it, `a` can grow very large and overflow or cause incorrect values when calculating `b` and the final result."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

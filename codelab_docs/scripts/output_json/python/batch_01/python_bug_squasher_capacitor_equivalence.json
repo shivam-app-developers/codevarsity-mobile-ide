@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Capacitor Series Formula Bug",
-      "problemDescription": "The series capacitance calculation is incorrect. It seems the reciprocal relationship is being handled incorrectly in the formula. Find and fix the logic flaw.",
-      "language": "python",
-      "buggyCode": "def cap_series(caps):\n    return sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Series [10, 10]: {cap_series([10, 10])}\")",
-      "solution": {
-        "code": "def cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Series [10, 10]: {cap_series([10, 10])}\")",
-        "explanation": "The formula for capacitors in series is `1 / Ceq = 1/C1 + 1/C2 + ...`. Therefore, `Ceq = 1 / (1/C1 + 1/C2 + ...)`. The buggy code only calculated the sum of reciprocals, forgetting to take the final reciprocal of that sum."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Capacitor Series Formula Bug",
+            "problemDescription": "The series capacitance calculation is incorrect. It seems the reciprocal relationship is being handled incorrectly in the formula. Find and fix the logic flaw.",
+            "language": "python",
+            "buggyCode": "def cap_series(caps):\n    return sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Series [10, 10]: {cap_series([10, 10])}\")",
+            "solution": {
+                "code": "def cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Series [10, 10]: {cap_series([10, 10])}\")",
+                "explanation": "The formula for capacitors in series is `1 / Ceq = 1/C1 + 1/C2 + ...`. Therefore, `Ceq = 1 / (1/C1 + 1/C2 + ...)`. The buggy code only calculated the sum of reciprocals, forgetting to take the final reciprocal of that sum."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

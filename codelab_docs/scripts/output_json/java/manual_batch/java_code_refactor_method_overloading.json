@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class MethodOverloading {\n    static void printItems(String... items) {\n        for (String item : items) {\n            System.out.print(item + \" \");\n        }\n        System.out.println();\n    }\n\n    public static void main(String[] args) {\n        printItems(\"A\", \"B\");\n        printItems(\"One\", \"Two\", \"Three\");\n    }\n}",
                 "explanation": "The '...' syntax denotes variable-length arguments (varargs), allowing a single method to accept any number of arguments of a specific type."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

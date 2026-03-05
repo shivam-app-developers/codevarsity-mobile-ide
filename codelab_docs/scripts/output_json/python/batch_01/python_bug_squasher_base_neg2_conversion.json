@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Negabinary Remainder Bug",
-      "problemDescription": "The conversion to base -2 is failing for negative inputs. The standard `divmod` with -2 can result in negative remainders, which must be adjusted for negabinary. Find and fix the adjustment logic.",
-      "language": "python",
-      "buggyCode": "def to_negabinary(n):\n    if n == 0: return \"0\"\n    res = \"\"\n    while n != 0:\n        n, rem = divmod(n, -2)\n        if rem < 0:\n            rem -= 2\n            n -= 1\n        res = str(rem) + res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"-19 in base -2: {to_negabinary(-19)}\")",
-      "solution": {
-        "code": "def to_negabinary(n):\n    if n == 0: return \"0\"\n    res = \"\"\n    while n != 0:\n        n, rem = divmod(n, -2)\n        if rem < 0:\n            rem += 2\n            n += 1\n        res = str(rem) + res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"-19 in base -2: {to_negabinary(-19)}\")",
-        "explanation": "In negabinary, the remainder must be non-negative (0 or 1). If `divmod(n, -2)` returns a negative remainder, we must add 2 to the remainder and increment the quotient by 1 to maintain the equality `n = q * (-2) + rem`. The buggy code incorrectly subtracted values."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Negabinary Remainder Bug",
+            "problemDescription": "The conversion to base -2 is failing for negative inputs. The standard `divmod` with -2 can result in negative remainders, which must be adjusted for negabinary. Find and fix the adjustment logic.",
+            "language": "python",
+            "buggyCode": "def to_negabinary(n):\n    if n == 0: return \"0\"\n    res = \"\"\n    while n != 0:\n        n, rem = divmod(n, -2)\n        if rem < 0:\n            rem -= 2\n            n -= 1\n        res = str(rem) + res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"-19 in base -2: {to_negabinary(-19)}\")",
+            "solution": {
+                "code": "def to_negabinary(n):\n    if n == 0: return \"0\"\n    res = \"\"\n    while n != 0:\n        n, rem = divmod(n, -2)\n        if rem < 0:\n            rem += 2\n            n += 1\n        res = str(rem) + res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"-19 in base -2: {to_negabinary(-19)}\")",
+                "explanation": "In negabinary, the remainder must be non-negative (0 or 1). If `divmod(n, -2)` returns a negative remainder, we must add 2 to the remainder and increment the quotient by 1 to maintain the equality `n = q * (-2) + rem`. The buggy code incorrectly subtracted values."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

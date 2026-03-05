@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const factorial = (n) => \\n  n <= 1 ? 1 : Array.from({ length: n }, (_, i) => i + 1).reduce((acc, val) => acc * val, 1);",
                 "explanation": "Functional programming patterns like `reduce()` can make code more declarative and expressive, though for simple math loops, a standard for-loop is often more performance-efficient."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

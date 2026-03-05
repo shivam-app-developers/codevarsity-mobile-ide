@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isAnagram(s1, s2) {\\n  const format = (s) => s.toLowerCase().split('').sort().join('');\\n  return format(s1) === format(s2);\\n}",
                 "explanation": "To perform a case-insensitive comparison, both strings should be converted to the same case (lowercase or uppercase) before sorting and comparing."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

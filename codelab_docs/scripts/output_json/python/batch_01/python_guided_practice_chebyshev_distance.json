@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Chebyshev Distance",
-      "description": "Calculate the Chebyshev distance (Chessboard distance) between two n-dimensional points.",
-      "language": "python",
-      "ghostCode": "def chebyshev_dist(p1, p2):\n    if len(p1) != len(p2):\n        return 0.0\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1, 1], [2, 2])}\")",
-      "finalCode": "def chebyshev_dist(p1, p2):\n    if len(p1) != len(p2):\n        return 0.0\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1, 1], [2, 2])}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Chebyshev Distance",
+            "description": "Calculate the Chebyshev distance (Chessboard distance) between two n-dimensional points.",
+            "language": "python",
+            "ghostCode": "def chebyshev_dist(p1, p2):\n    if len(p1) != len(p2):\n        return 0.0\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1, 1], [2, 2])}\")",
+            "finalCode": "def chebyshev_dist(p1, p2):\n    if len(p1) != len(p2):\n        return 0.0\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1, 1], [2, 2])}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

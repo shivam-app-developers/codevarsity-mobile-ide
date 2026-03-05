@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Optimizing Chudnovsky with Generators",
-      "problemDescription": "The current Chudnovsky implementation uses a standard loop to calculate the partial sum. Refactor it to use a generator for the terms of the series and `sum()` for a cleaner, more functional approach.",
-      "language": "python",
-      "initialCode": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    S = Decimal(13591409)\n    for k in range(1, ceil(prec/14)):\n        M = factorial(6*k) // (factorial(3*k) * factorial(k)**3)\n        S += Decimal(M * (13591409 + 545140134*k)) / ((-262537412640768000)**k)\n    return str((426880 * Decimal(10005).sqrt()) / S)\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")",
-      "solution": {
-        "code": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_terms(n):\n    for k in range(n):\n        M = factorial(6*k) // (factorial(3*k) * factorial(k)**3)\n        L = 13591409 + 545140134 * k\n        X = (-262537412640768000) ** k\n        yield Decimal(M * L) / X\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    S = sum(chudnovsky_terms(ceil(prec/14)))\n    C = 426880 * Decimal(10005).sqrt()\n    return str(C / S)[:prec+2]\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")",
-        "explanation": "Separating the term generation into a generator function decouples the mathematical series definition from the summation logic. This is cleaner, more modular, and follows Python's iterator patterns for processing sequences."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Chudnovsky with Generators",
+            "problemDescription": "The current Chudnovsky implementation uses a standard loop to calculate the partial sum. Refactor it to use a generator for the terms of the series and `sum()` for a cleaner, more functional approach.",
+            "language": "python",
+            "initialCode": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    S = Decimal(13591409)\n    for k in range(1, ceil(prec/14)):\n        M = factorial(6*k) // (factorial(3*k) * factorial(k)**3)\n        S += Decimal(M * (13591409 + 545140134*k)) / ((-262537412640768000)**k)\n    return str((426880 * Decimal(10005).sqrt()) / S)\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")",
+            "solution": {
+                "code": "from decimal import Decimal, getcontext\nfrom math import factorial, ceil\n\ndef chudnovsky_terms(n):\n    for k in range(n):\n        M = factorial(6*k) // (factorial(3*k) * factorial(k)**3)\n        L = 13591409 + 545140134 * k\n        X = (-262537412640768000) ** k\n        yield Decimal(M * L) / X\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    S = sum(chudnovsky_terms(ceil(prec/14)))\n    C = 426880 * Decimal(10005).sqrt()\n    return str(C / S)[:prec+2]\n\nif __name__ == \"__main__\":\n    print(f\"PI: {chudnovsky_pi(20)}\")",
+                "explanation": "Separating the term generation into a generator function decouples the mathematical series definition from the summation logic. This is cleaner, more modular, and follows Python's iterator patterns for processing sequences."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

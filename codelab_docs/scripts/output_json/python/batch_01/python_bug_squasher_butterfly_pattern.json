@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Butterfly Pattern Symmetry Bug",
-      "problemDescription": "The butterfly pattern generator is not producing a symmetric shape. It seems the spacing calculation for the inner 'wings' is incorrect. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (n - i)\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
-      "solution": {
-        "code": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
-        "explanation": "To maintain a symmetric butterfly shape, the number of spaces in the middle must be double the distance from the edge (`2 * (n - i)`). The buggy code used only `(n - i)`, which made the butterfly look 'collapsed' and misaligned."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Butterfly Pattern Symmetry Bug",
+            "problemDescription": "The butterfly pattern generator is not producing a symmetric shape. It seems the spacing calculation for the inner 'wings' is incorrect. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (n - i)\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+            "solution": {
+                "code": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+                "explanation": "To maintain a symmetric butterfly shape, the number of spaces in the middle must be double the distance from the edge (`2 * (n - i)`). The buggy code used only `(n - i)`, which made the butterfly look 'collapsed' and misaligned."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

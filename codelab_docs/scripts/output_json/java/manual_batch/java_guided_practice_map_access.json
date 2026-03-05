@@ -10,7 +10,7 @@
             "ghostCode": "import java.util.*;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> items = new HashMap<>();\n        items.put(\"Java\", 100);\n        System.out.println(\"Score: \" + items.get(\"Java\"));\n    }\n}",
             "finalCode": "import java.util.*;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> items = new HashMap<>();\n        items.put(\"Java\", 100);\n        System.out.println(\"Score: \" + items.get(\"Java\"));\n    }\n}",
             "validation": {
-                "pattern": "Score: 100"
+                "type": "run_code"
             }
         }
     }

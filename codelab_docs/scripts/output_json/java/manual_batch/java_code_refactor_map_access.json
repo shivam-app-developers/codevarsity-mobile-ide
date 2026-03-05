@@ -10,6 +10,9 @@
             "solution": {
                 "code": "import java.util.Map;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> map = Map.of(\"A\", 1);\n        int val = map.getOrDefault(\"B\", 0);\n        System.out.println(val);\n    }\n}",
                 "explanation": "Java 8 introduced 'getOrDefault', which allows you to specify a fallback value if a key is not found, making the code more readable and safer."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

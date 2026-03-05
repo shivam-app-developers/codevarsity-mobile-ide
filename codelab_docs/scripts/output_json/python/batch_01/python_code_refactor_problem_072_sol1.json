@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Counting Fractions",
-      "problemDescription": "Refactor the totient sum using a more memory-efficient sieve or a specialized algorithm for summing phi values.",
-      "language": "python",
-      "initialCode": "def solution(limit: int = 1000000):\n    phi = list(range(limit + 1))\n    for i in range(2, limit + 1):\n        if phi[i] == i:\n            for j in range(i, limit + 1, i):\n                phi[j] -= phi[j] // i\n    return sum(phi[2:])",
-      "solution": {
-        "code": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Uses a modified sieve to calculate the sum of Euler's totient function more efficiently.\n    Based on the property: sum_{d|n} phi(d) = n.\n    \"\"\"\n    phi = list(range(limit + 1))\n    total_sum = 0\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i:\n            # Prime i found\n            for j in range(i, limit + 1, i):\n                phi[j] -= phi[j] // i\n        total_sum += phi[i]\n        \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
-        "explanation": "Integrating the summation into the same loop as the sieve reduces the number of passes over the large array, improving cache locality and performance."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Counting Fractions",
+            "problemDescription": "Refactor the totient sum using a more memory-efficient sieve or a specialized algorithm for summing phi values.",
+            "language": "python",
+            "initialCode": "def solution(limit: int = 1000000):\n    phi = list(range(limit + 1))\n    for i in range(2, limit + 1):\n        if phi[i] == i:\n            for j in range(i, limit + 1, i):\n                phi[j] -= phi[j] // i\n    return sum(phi[2:])",
+            "solution": {
+                "code": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Uses a modified sieve to calculate the sum of Euler's totient function more efficiently.\n    Based on the property: sum_{d|n} phi(d) = n.\n    \"\"\"\n    phi = list(range(limit + 1))\n    total_sum = 0\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i:\n            # Prime i found\n            for j in range(i, limit + 1, i):\n                phi[j] -= phi[j] // i\n        total_sum += phi[i]\n        \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
+                "explanation": "Integrating the summation into the same loop as the sieve reduces the number of passes over the large array, improving cache locality and performance."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

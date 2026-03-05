@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Self Powers",
-      "problemDescription": "Refactor the self-power sum using a list comprehension for a more concise implementation.",
-      "language": "python",
-      "initialCode": "def solution(n: int = 1000):\n    total = 0\n    MOD = 10**10\n    for i in range(1, n + 1):\n        total = (total + pow(i, i, MOD)) % MOD\n    return str(total).zfill(10)",
-      "solution": {
-        "code": "def solution(n: int = 1000) -> str:\n    \"\"\"\n    Concise version using sum and a generator expression.\n    \"\"\"\n    MOD = 10**10\n    last_ten = sum(pow(i, i, MOD) for i in range(1, n + 1)) % MOD\n    return f\"{last_ten:010d}\"\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
-        "explanation": "Using a generator expression with `sum()` is more concise. The f-string format `:010d` is a clean way to ensure 10 digits with leading zeros."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Self Powers",
+            "problemDescription": "Refactor the self-power sum using a list comprehension for a more concise implementation.",
+            "language": "python",
+            "initialCode": "def solution(n: int = 1000):\n    total = 0\n    MOD = 10**10\n    for i in range(1, n + 1):\n        total = (total + pow(i, i, MOD)) % MOD\n    return str(total).zfill(10)",
+            "solution": {
+                "code": "def solution(n: int = 1000) -> str:\n    \"\"\"\n    Concise version using sum and a generator expression.\n    \"\"\"\n    MOD = 10**10\n    last_ten = sum(pow(i, i, MOD) for i in range(1, n + 1)) % MOD\n    return f\"{last_ten:010d}\"\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+                "explanation": "Using a generator expression with `sum()` is more concise. The f-string format `:010d` is a clean way to ensure 10 digits with leading zeros."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

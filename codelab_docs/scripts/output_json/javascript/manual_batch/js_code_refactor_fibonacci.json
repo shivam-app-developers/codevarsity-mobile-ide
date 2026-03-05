@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function fib(n) {\\n  let a = 0, b = 1;\\n  for (let i = 2; i <= n; i++) {\\n    [a, b] = [b, a + b];\\n  }\\n  return b;\\n}",
                 "explanation": "ES6 array destructuring allows you to reassign multiple variables in a single expression, eliminating the need for a temporary `temp` variable during a swap."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

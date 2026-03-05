@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class FactorialRecursion {\n    public static int factorial(int n) {\n        if (n <= 0) return 1;\n        return n * factorial(n - 1);\n    }\n}",
                 "explanation": "The factorial of 0 is defined as 1. Without checking for 'n <= 0', calling factorial(0) would result in a StackOverflowError."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

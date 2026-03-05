@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "First Fibonacci with N Digits",
-      "description": "Find the index of the first term in the Fibonacci sequence to contain a specified number of digits.",
-      "language": "python",
-      "ghostCode": "def solution(n: int = 1000) -> int:\n    \"\"\"Returns the index of the first term in the Fibonacci sequence to contain n digits.\"\"\"\n    f1, f2 = 1, 1\n    index = 2\n    # The Fibonacci sequence starts F1=1, F2=1, F3=2...\n    while True:\n        f = f1 + f2\n        f1, f2 = f2, f\n        index += 1\n        # Check number of digits by converting to string\n        if len(str(f)) >= n:\n            break\n    return index\n\n\nif __name__ == \"__main__\":\n    n_digits = int(input(\"Enter number of digits: \").strip())\n    print(solution(n_digits))",
-      "finalCode": "def solution(n: int = 1000) -> int:\n    \"\"\"Returns the index of the first term in the Fibonacci sequence to contain n digits.\"\"\"\n    f1, f2 = 1, 1\n    index = 2\n    # The Fibonacci sequence starts F1=1, F2=1, F3=2...\n    while True:\n        f = f1 + f2\n        f1, f2 = f2, f\n        index += 1\n        # Check number of digits by converting to string\n        if len(str(f)) >= n:\n            break\n    return index\n\n\nif __name__ == \"__main__\":\n    n_digits = int(input(\"Enter number of digits: \").strip())\n    print(solution(n_digits))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "First Fibonacci with N Digits",
+            "description": "Find the index of the first term in the Fibonacci sequence to contain a specified number of digits.",
+            "language": "python",
+            "ghostCode": "def solution(n: int = 1000) -> int:\n    \"\"\"Returns the index of the first term in the Fibonacci sequence to contain n digits.\"\"\"\n    f1, f2 = 1, 1\n    index = 2\n    # The Fibonacci sequence starts F1=1, F2=1, F3=2...\n    while True:\n        f = f1 + f2\n        f1, f2 = f2, f\n        index += 1\n        # Check number of digits by converting to string\n        if len(str(f)) >= n:\n            break\n    return index\n\n\nif __name__ == \"__main__\":\n    n_digits = int(input(\"Enter number of digits: \").strip())\n    print(solution(n_digits))",
+            "finalCode": "def solution(n: int = 1000) -> int:\n    \"\"\"Returns the index of the first term in the Fibonacci sequence to contain n digits.\"\"\"\n    f1, f2 = 1, 1\n    index = 2\n    # The Fibonacci sequence starts F1=1, F2=1, F3=2...\n    while True:\n        f = f1 + f2\n        f1, f2 = f2, f\n        index += 1\n        # Check number of digits by converting to string\n        if len(str(f)) >= n:\n            break\n    return index\n\n\nif __name__ == \"__main__\":\n    n_digits = int(input(\"Enter number of digits: \").strip())\n    print(solution(n_digits))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

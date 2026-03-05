@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPrime(int n) {\\n    if (n < 2) return false;\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) return false;\\n    }\\n    return true;\\n}\\n\\nint main() {\\n    if (isPrime(17)) printf(\\\"Prime\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "Moving logic to a function clearly separates the 'what' (check if prime) from the 'how' (algorithm details), improving code readability."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Aliquot Sum Boundary Bug",
-      "problemDescription": "The `aliquot_sum` function is supposed to return the sum of all proper divisors. However, it seems to be failing for certain inputs, perhaps by excluding some divisors. Find the bug in the divisor search range.",
-      "language": "python",
-      "buggyCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    return sum(i for i in range(1, n // 2) if n % i == 0)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 6: {aliquot_sum(6)}\")",
-      "solution": {
-        "code": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    return sum(i for i in range(1, n // 2 + 1) if n % i == 0)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 6: {aliquot_sum(6)}\")",
-        "explanation": "The original code used `range(1, n // 2)`, which does not include `n // 2`. For numbers like 6, where 3 (i.e. 6/2) is a divisor, the loop stopped early, giving the incorrect sum (1 + 2 = 3 instead of 1 + 2 + 3 = 6). The range should go to `n // 2 + 1`."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Aliquot Sum Boundary Bug",
+            "problemDescription": "The `aliquot_sum` function is supposed to return the sum of all proper divisors. However, it seems to be failing for certain inputs, perhaps by excluding some divisors. Find the bug in the divisor search range.",
+            "language": "python",
+            "buggyCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    return sum(i for i in range(1, n // 2) if n % i == 0)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 6: {aliquot_sum(6)}\")",
+            "solution": {
+                "code": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    return sum(i for i in range(1, n // 2 + 1) if n % i == 0)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 6: {aliquot_sum(6)}\")",
+                "explanation": "The original code used `range(1, n // 2)`, which does not include `n // 2`. For numbers like 6, where 3 (i.e. 6/2) is a divisor, the loop stopped early, giving the incorrect sum (1 + 2 = 3 instead of 1 + 2 + 3 = 6). The range should go to `n // 2 + 1`."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

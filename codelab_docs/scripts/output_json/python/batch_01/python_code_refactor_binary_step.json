@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Vectorized Binary Step with NumPy",
-      "problemDescription": "The current `binary_step` function uses a list comprehension for batch processing. Refactor it to use NumPy's vectorization capabilities, which are much faster and more concise for numerical arrays.",
-      "language": "python",
-      "initialCode": "def binary_step(x):\n    return [1 if i >= 0 else 0 for i in x]\n\nif __name__ == \"__main__\":\n    data = [-1.2, 0, 0.3]\n    print(f\"Batch: {binary_step(data)}\")",
-      "solution": {
-        "code": "import numpy as np\n\ndef binary_step(x):\n    return np.where(np.array(x) >= 0, 1, 0)\n\nif __name__ == \"__main__\":\n    data = [-1.2, 0, 0.3]\n    print(f\"Batch: {binary_step(data)}\")",
-        "explanation": "Using `np.where()` on a NumPy array is a vectorized operation. It applies the condition to the entire array at once at the C level, avoiding Python-level loops and significantly improving performance for large datasets."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Vectorized Binary Step with NumPy",
+            "problemDescription": "The current `binary_step` function uses a list comprehension for batch processing. Refactor it to use NumPy's vectorization capabilities, which are much faster and more concise for numerical arrays.",
+            "language": "python",
+            "initialCode": "def binary_step(x):\n    return [1 if i >= 0 else 0 for i in x]\n\nif __name__ == \"__main__\":\n    data = [-1.2, 0, 0.3]\n    print(f\"Batch: {binary_step(data)}\")",
+            "solution": {
+                "code": "import numpy as np\n\ndef binary_step(x):\n    return np.where(np.array(x) >= 0, 1, 0)\n\nif __name__ == \"__main__\":\n    data = [-1.2, 0, 0.3]\n    print(f\"Batch: {binary_step(data)}\")",
+                "explanation": "Using `np.where()` on a NumPy array is a vectorized operation. It applies the condition to the entire array at once at the C level, avoiding Python-level loops and significantly improving performance for large datasets."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

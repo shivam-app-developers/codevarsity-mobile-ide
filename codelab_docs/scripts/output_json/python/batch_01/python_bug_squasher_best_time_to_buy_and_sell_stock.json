@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Stock Profit Buy Order Bug",
-      "problemDescription": "The `max_profit` function is supposed to find the maximum profit from buying and then selling. However, it seems to be failing for certain price lists, perhaps by selling before buying. Identify the logic flaw.",
-      "language": "python",
-      "buggyCode": "def max_profit(prices):\n    if not prices: return 0\n    min_p = min(prices)\n    max_p = max(prices)\n    if prices.index(min_p) < prices.index(max_p):\n        return max_p - min_p\n    return 0\n\nif __name__ == \"__main__\":\n    print(f\"Prices [7, 6, 1, 3]: {max_profit([7, 6, 1, 3])}\")",
-      "solution": {
-        "code": "def max_profit(prices):\n    if not prices: return 0\n    min_p = prices[0]\n    max_f = 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_f = max(max_f, p - min_p)\n    return max_f\n\nif __name__ == \"__main__\":\n    print(f\"Prices [7, 6, 1, 3]: {max_profit([7, 6, 1, 3])}\")",
-        "explanation": "The buggy code only considered the absolute minimum and maximum price. If the maximum happened BEFORE the minimum (e.g., [7, 6, 1, 3]), it would return 0 even if a profit was possible by buying at 1 and selling at 3. The greedy approach properly tracks the lowest price seen so far at each step."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Stock Profit Buy Order Bug",
+            "problemDescription": "The `max_profit` function is supposed to find the maximum profit from buying and then selling. However, it seems to be failing for certain price lists, perhaps by selling before buying. Identify the logic flaw.",
+            "language": "python",
+            "buggyCode": "def max_profit(prices):\n    if not prices: return 0\n    min_p = min(prices)\n    max_p = max(prices)\n    if prices.index(min_p) < prices.index(max_p):\n        return max_p - min_p\n    return 0\n\nif __name__ == \"__main__\":\n    print(f\"Prices [7, 6, 1, 3]: {max_profit([7, 6, 1, 3])}\")",
+            "solution": {
+                "code": "def max_profit(prices):\n    if not prices: return 0\n    min_p = prices[0]\n    max_f = 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_f = max(max_f, p - min_p)\n    return max_f\n\nif __name__ == \"__main__\":\n    print(f\"Prices [7, 6, 1, 3]: {max_profit([7, 6, 1, 3])}\")",
+                "explanation": "The buggy code only considered the absolute minimum and maximum price. If the maximum happened BEFORE the minimum (e.g., [7, 6, 1, 3]), it would return 0 even if a profit was possible by buying at 1 and selling at 3. The greedy approach properly tracks the lowest price seen so far at each step."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

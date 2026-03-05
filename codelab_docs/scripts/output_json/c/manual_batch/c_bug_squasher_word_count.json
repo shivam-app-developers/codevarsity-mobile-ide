@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <string.h>\\n#include <stdbool.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    bool inWord = false;\\n    for (int i = 0; str[i] != '\\\\0'; i++) {\\n        if (str[i] == ' ' || str[i] == '\\\\n' || str[i] == '\\\\t') {\\n            inWord = false;\\n        } else if (!inWord) {\\n            inWord = true;\\n            count++;\\n        }\\n    }\\n    return count;\\n}\\n\\nint main() {\\n    char s[] = \\\"One Two Three\\\";\\n    printf(\\\"%d\\\\n\\\", countWords(s));\\n    return 0;\\n}",
                 "explanation": "Counting spaces is not enough to count words (e.g., '  ' has one space but zero words). You should track whether you are currently 'inside' a word to increment the counter correctly."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

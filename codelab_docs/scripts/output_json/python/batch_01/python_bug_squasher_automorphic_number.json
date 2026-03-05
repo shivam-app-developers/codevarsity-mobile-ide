@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Automorphic Number Square Bug",
-      "problemDescription": "The automorphic number check is supposed to return True for numbers like 5, 6, 25, etc. However, it seems to be returning False for certain automorphic numbers. Find the bug in the square comparison logic.",
-      "language": "python",
-      "buggyCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n + n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")",
-      "solution": {
-        "code": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")",
-        "explanation": "An automorphic number is defined by comparing it with its square, not with its double. The buggy code incorrectly used `sq = n + n`, which resulted in incorrect checks for all numbers except zero."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Automorphic Number Square Bug",
+            "problemDescription": "The automorphic number check is supposed to return True for numbers like 5, 6, 25, etc. However, it seems to be returning False for certain automorphic numbers. Find the bug in the square comparison logic.",
+            "language": "python",
+            "buggyCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n + n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")",
+            "solution": {
+                "code": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")",
+                "explanation": "An automorphic number is defined by comparing it with its square, not with its double. The buggy code incorrectly used `sq = n + n`, which resulted in incorrect checks for all numbers except zero."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

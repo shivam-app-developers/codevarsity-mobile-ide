@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint main() {\\n    int n = 123, reversed = 0, original;\\n    original = n;\\n    while (n != 0) {\\n        int remainder = n % 10;\\n        reversed = reversed * 10 + remainder;\\n        n /= 10;\\n    }\\n    if (original == reversed) printf(\\\"Palindrome\\\\n\\\");\\n    else printf(\\\"Not Palindrome\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "To reverse a number, you must multiply the current `reversed` value by 10 before adding the next digit. Adding them directly just gives the sum of digits."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

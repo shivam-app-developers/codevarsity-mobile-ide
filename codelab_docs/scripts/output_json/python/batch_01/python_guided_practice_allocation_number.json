@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Byte Allocation (Multi-threading)",
-      "description": "Divide a total number of bytes into non-overlapping blocks for multi-threaded processing.",
-      "language": "python",
-      "ghostCode": "def allocation_num(total_bytes, partitions):\n    if partitions <= 0 or partitions > total_bytes:\n        return []\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
-      "finalCode": "def allocation_num(total_bytes, partitions):\n    if partitions <= 0 or partitions > total_bytes:\n        return []\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Byte Allocation (Multi-threading)",
+            "description": "Divide a total number of bytes into non-overlapping blocks for multi-threaded processing.",
+            "language": "python",
+            "ghostCode": "def allocation_num(total_bytes, partitions):\n    if partitions <= 0 or partitions > total_bytes:\n        return []\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+            "finalCode": "def allocation_num(total_bytes, partitions):\n    if partitions <= 0 or partitions > total_bytes:\n        return []\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

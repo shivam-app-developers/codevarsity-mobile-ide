@@ -10,6 +10,9 @@
             "solution": {
                 "code": "import java.util.Objects;\n\npublic class StringComparison {\n    public static void main(String[] args) {\n        String s1 = new String(\"hello\");\n        String s2 = new String(\"hello\");\n\n        if (Objects.equals(s1, s2)) {\n            System.out.println(\"Strings are equal\");\n        }\n    }\n}",
                 "explanation": "Objects.equals() is a null-safe way to compare two objects. It handles cases where s1 might be null, preventing a NullPointerException."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

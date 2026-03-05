@@ -8,7 +8,10 @@
             "description": "Build the final sorted array one item at a time.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nvoid insertionSort(int arr[], int n) {\\n    for (int i = 1; i < n; i++) {\\n        int key = arr[i];\\n        int j = i - 1;\\n        while (j >= 0 && arr[j] > key) {\\n            arr[j + 1] = arr[j];\\n            j = j - 1;\\n        }\\n        arr[j + 1] = key;\\n    }\\n}\\n\\nint main() {\\n    int arr[] = {12, 11, 13, 5, 6};\\n    insertionSort(arr, 5);\\n    for (int i = 0; i < 5; i++) printf(\\\"%d \\\", arr[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nvoid insertionSort(int arr[], int n) {\\n    for (int i = 1; i < n; i++) {\\n        int key = arr[i];\\n        int j = i - 1;\\n        while (j >= 0 && arr[j] > key) {\\n            arr[j + 1] = arr[j];\\n            j = j - 1;\\n        }\\n        arr[j + 1] = key;\\n    }\\n}\\n\\nint main() {\\n    int arr[] = {12, 11, 13, 5, 6};\\n    insertionSort(arr, 5);\\n    for (int i = 0; i < 5; i++) printf(\\\"%d \\\", arr[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nvoid insertionSort(int arr[], int n) {\\n    for (int i = 1; i < n; i++) {\\n        int key = arr[i];\\n        int j = i - 1;\\n        while (j >= 0 && arr[j] > key) {\\n            arr[j + 1] = arr[j];\\n            j = j - 1;\\n        }\\n        arr[j + 1] = key;\\n    }\\n}\\n\\nint main() {\\n    int arr[] = {12, 11, 13, 5, 6};\\n    insertionSort(arr, 5);\\n    for (int i = 0; i < 5; i++) printf(\\\"%d \\\", arr[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

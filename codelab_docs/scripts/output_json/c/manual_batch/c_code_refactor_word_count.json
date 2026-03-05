@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <string.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    char *token = strtok(str, \\\" \\\\n\\\\t\\\");\\n    while (token != NULL) {\\n        count++;\\n        token = strtok(NULL, \\\" \\\\n\\\\t\\\");\\n    }\\n    return count;\\n}",
                 "explanation": "`strtok` is a powerful standard library function for splitting strings into tokens based on delimiters, making common tasks like word counting much simpler."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class NullPointer {\n    public static void main(String[] args) {\n        String name = null;\n        if (name != null && name.length() > 0) {\n            System.out.println(\"Name: \" + name);\n        }\n    }\n}",
                 "explanation": "Always verify that an object is not null before calling any of its methods."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

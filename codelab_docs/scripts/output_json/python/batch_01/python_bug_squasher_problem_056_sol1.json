@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Powerful Digit Sum",
-      "problemDescription": "Fix the logic to find the maximum sum of digits for numbers in the form a^b.",
-      "language": "python",
-      "buggyCode": "def solution(limit=100):\n    max_sum = 0\n    for a in range(limit):\n        for b in range(limit):\n            # BUG: Calculating sum of digits incorrectly\n            digit_sum = sum(int(d) for d in str(a * b))\n            # BUG: Problem asks for a**b, not a*b\n            if digit_sum > max_sum:\n                max_sum = digit_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
-      "solution": {
-        "code": "def solution(limit=100):\n    max_sum = 0\n    for a in range(limit):\n        for b in range(limit):\n            # Correctly calculate a to the power of b\n            res = a**b\n            # Sum the digits of the result\n            digit_sum = sum(int(d) for d in str(res))\n            if digit_sum > max_sum:\n                max_sum = digit_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Powerful Digit Sum",
+            "problemDescription": "Fix the logic to find the maximum sum of digits for numbers in the form a^b.",
+            "language": "python",
+            "buggyCode": "def solution(limit=100):\n    max_sum = 0\n    for a in range(limit):\n        for b in range(limit):\n            # BUG: Calculating sum of digits incorrectly\n            digit_sum = sum(int(d) for d in str(a * b))\n            # BUG: Problem asks for a**b, not a*b\n            if digit_sum > max_sum:\n                max_sum = digit_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+            "solution": {
+                "code": "def solution(limit=100):\n    max_sum = 0\n    for a in range(limit):\n        for b in range(limit):\n            # Correctly calculate a to the power of b\n            res = a**b\n            # Sum the digits of the result\n            digit_sum = sum(int(d) for d in str(res))\n            if digit_sum > max_sum:\n                max_sum = digit_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

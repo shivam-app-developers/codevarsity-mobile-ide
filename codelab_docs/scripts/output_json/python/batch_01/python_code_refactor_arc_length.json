@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Using Radians for Arc Length",
-      "problemDescription": "The provided arc length formula works for angles in degrees. Refactor it to accept the angle in radians, as the relationship `s = rθ` (where `s` is arc length and `θ` is the angle) is more direct when working with radians.",
-      "language": "python",
-      "initialCode": "from math import pi\n\ndef arc_length(angle_deg, radius):\n    return 2 * pi * radius * (angle_deg / 360)\n\nif __name__ == \"__main__\":\n    print(f\"Arc Length: {arc_length(90, 10)}\")",
-      "solution": {
-        "code": "def arc_length(angle_rad, radius):\n    return radius * angle_rad\n\nif __name__ == \"__main__\":\n    import math\n    ang_rad = math.pi / 2\n    print(f\"Arc Length (pi/2 rad): {arc_length(ang_rad, 10)}\")",
-        "explanation": "Refactoring the function to use radians simplifies the formula significantly: the arc length `s` is just the radius `r` times the angle `θ`. This is because a radian is defined such that the arc length of one radian is equal to the radius."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Using Radians for Arc Length",
+            "problemDescription": "The provided arc length formula works for angles in degrees. Refactor it to accept the angle in radians, as the relationship `s = r\u03b8` (where `s` is arc length and `\u03b8` is the angle) is more direct when working with radians.",
+            "language": "python",
+            "initialCode": "from math import pi\n\ndef arc_length(angle_deg, radius):\n    return 2 * pi * radius * (angle_deg / 360)\n\nif __name__ == \"__main__\":\n    print(f\"Arc Length: {arc_length(90, 10)}\")",
+            "solution": {
+                "code": "def arc_length(angle_rad, radius):\n    return radius * angle_rad\n\nif __name__ == \"__main__\":\n    import math\n    ang_rad = math.pi / 2\n    print(f\"Arc Length (pi/2 rad): {arc_length(ang_rad, 10)}\")",
+                "explanation": "Refactoring the function to use radians simplifies the formula significantly: the arc length `s` is just the radius `r` times the angle `\u03b8`. This is because a radian is defined such that the arc length of one radian is equal to the radius."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "First Fibonacci with N Digits",
-      "problemDescription": "Refactor the solution to use Binet's formula for a more efficient mathematical approach.",
-      "language": "python",
-      "initialCode": "def solution(n: int = 1000) -> int:\n    f1, f2 = 1, 1\n    index = 2\n    while len(str(f2)) < n:\n        f1, f2 = f2, f1 + f2\n        index += 1\n    return index",
-      "solution": {
-        "code": "import math\n\ndef solution(n: int = 1000) -> int:\n    \"\"\"\n    Uses Binet's formula to calculate the index of the first Fibonacci number with n digits.\n    F_k approx equals phi^k / sqrt(5).\n    Log10(F_k) approx k * Log10(phi) - Log10(sqrt(5)).\n    For F_k to have n digits, Log10(F_k) >= n - 1.\n    \"\"\"\n    if n == 1: return 1\n    phi = (1 + math.sqrt(5)) / 2\n    # k * log10(phi) - log10(sqrt(5)) >= n - 1\n    # k * log10(phi) >= n - 1 + log10(sqrt(5))\n    index = math.ceil((n - 1 + math.log10(math.sqrt(5))) / math.log10(phi))\n    return index\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
-        "explanation": "Using Binet's formula and logarithms allows us to calculate the index in O(1) time without iterating through thousands of large Fibonacci numbers, which is significantly more efficient."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "First Fibonacci with N Digits",
+            "problemDescription": "Refactor the solution to use Binet's formula for a more efficient mathematical approach.",
+            "language": "python",
+            "initialCode": "def solution(n: int = 1000) -> int:\n    f1, f2 = 1, 1\n    index = 2\n    while len(str(f2)) < n:\n        f1, f2 = f2, f1 + f2\n        index += 1\n    return index",
+            "solution": {
+                "code": "import math\n\ndef solution(n: int = 1000) -> int:\n    \"\"\"\n    Uses Binet's formula to calculate the index of the first Fibonacci number with n digits.\n    F_k approx equals phi^k / sqrt(5).\n    Log10(F_k) approx k * Log10(phi) - Log10(sqrt(5)).\n    For F_k to have n digits, Log10(F_k) >= n - 1.\n    \"\"\"\n    if n == 1: return 1\n    phi = (1 + math.sqrt(5)) / 2\n    # k * log10(phi) - log10(sqrt(5)) >= n - 1\n    # k * log10(phi) >= n - 1 + log10(sqrt(5))\n    index = math.ceil((n - 1 + math.log10(math.sqrt(5))) / math.log10(phi))\n    return index\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+                "explanation": "Using Binet's formula and logarithms allows us to calculate the index in O(1) time without iterating through thousands of large Fibonacci numbers, which is significantly more efficient."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

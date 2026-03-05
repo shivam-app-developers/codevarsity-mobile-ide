@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Square Root Digital Expansion",
-      "problemDescription": "Fix the logic to correctly sum the first 100 digits of irrational square roots.",
-      "language": "python",
-      "buggyCode": "from decimal import Decimal, getcontext\n\ndef solution():\n    # BUG: Precision must be higher than target digits to avoid rounding at the 100th digit\n    getcontext().prec = 100\n    total = 0\n    for i in range(1, 101):\n        root = Decimal(i).sqrt()\n        # BUG: This check for irrationality might fail due to precision\n        if root == int(root):\n            continue\n        \n        # BUG: Extracting digits by slicing string might include decimal point\n        s = str(root)[:100]\n        total += sum(int(d) for d in s)\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-      "solution": {
-        "code": "from decimal import Decimal, getcontext\n\ndef solution():\n    # Set precision to slightly above 100\n    getcontext().prec = 105\n    total = 0\n    for i in range(1, 101):\n        # Skip perfect squares\n        if (i**0.5).is_integer():\n            continue\n        \n        root = Decimal(i).sqrt()\n        # Convert to string and remove the decimal point\n        s = str(root).replace('.', '')\n        # Sum the first 100 digits\n        total += sum(int(d) for d in s[:100])\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Square Root Digital Expansion",
+            "problemDescription": "Fix the logic to correctly sum the first 100 digits of irrational square roots.",
+            "language": "python",
+            "buggyCode": "from decimal import Decimal, getcontext\n\ndef solution():\n    # BUG: Precision must be higher than target digits to avoid rounding at the 100th digit\n    getcontext().prec = 100\n    total = 0\n    for i in range(1, 101):\n        root = Decimal(i).sqrt()\n        # BUG: This check for irrationality might fail due to precision\n        if root == int(root):\n            continue\n        \n        # BUG: Extracting digits by slicing string might include decimal point\n        s = str(root)[:100]\n        total += sum(int(d) for d in s)\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "solution": {
+                "code": "from decimal import Decimal, getcontext\n\ndef solution():\n    # Set precision to slightly above 100\n    getcontext().prec = 105\n    total = 0\n    for i in range(1, 101):\n        # Skip perfect squares\n        if (i**0.5).is_integer():\n            continue\n        \n        root = Decimal(i).sqrt()\n        # Convert to string and remove the decimal point\n        s = str(root).replace('.', '')\n        # Sum the first 100 digits\n        total += sum(int(d) for d in s[:100])\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

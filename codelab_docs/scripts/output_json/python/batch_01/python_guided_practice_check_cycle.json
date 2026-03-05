@@ -1,14 +1,17 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Cycle Detection in Graphs",
-      "description": "Detect if a directed graph contains any cycles using Depth-First Search and a recursion stack.",
-      "language": "python",
-      "ghostCode": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v not in visited:\n                if dfs(v): return True\n            elif v in stack: return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1], 1: [2], 2: [0]}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
-      "finalCode": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v not in visited:\n                if dfs(v): return True\n            elif v in stack: return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1], 1: [2], 2: [0]}\n    print(f\"Has Cycle: {has_cycle(graph)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Cycle Detection in Graphs",
+            "description": "Detect if a directed graph contains any cycles using Depth-First Search and a recursion stack.",
+            "language": "python",
+            "ghostCode": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v not in visited:\n                if dfs(v): return True\n            elif v in stack: return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1], 1: [2], 2: [0]}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
+            "finalCode": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v not in visited:\n                if dfs(v): return True\n            elif v in stack: return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1], 1: [2], 2: [0]}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Stock Profit with O(n)",
-      "problemDescription": "The provided `max_profit` function iterates over the prices and finds the minimum and maximum seen so far. This is an efficient O(n) approach. Refactor it to use more Pythonic techniques or built-ins while maintaining this efficiency.",
-      "language": "python",
-      "initialCode": "def max_profit(prices):\n    if not prices: return 0\n    min_price = prices[0]\n    max_prof = 0\n    for price in prices:\n        if price < min_price:\n            min_price = price\n        elif price - min_price > max_prof:\n            max_prof = price - min_price\n    return max_prof\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")",
-      "solution": {
-        "code": "def max_profit(prices):\n    min_p, max_f = float('inf'), 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_f = max(max_f, p - min_p)\n    return max_f\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")",
-        "explanation": "Refactoring using `min()` and `max()` within the loop makes the logic more expressive. Initializing `min_p` to infinity allows us to handle the empty list case gracefully if prices are non-negative."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Stock Profit with O(n)",
+            "problemDescription": "The provided `max_profit` function iterates over the prices and finds the minimum and maximum seen so far. This is an efficient O(n) approach. Refactor it to use more Pythonic techniques or built-ins while maintaining this efficiency.",
+            "language": "python",
+            "initialCode": "def max_profit(prices):\n    if not prices: return 0\n    min_price = prices[0]\n    max_prof = 0\n    for price in prices:\n        if price < min_price:\n            min_price = price\n        elif price - min_price > max_prof:\n            max_prof = price - min_price\n    return max_prof\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")",
+            "solution": {
+                "code": "def max_profit(prices):\n    min_p, max_f = float('inf'), 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_f = max(max_f, p - min_p)\n    return max_f\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")",
+                "explanation": "Refactoring using `min()` and `max()` within the loop makes the logic more expressive. Initializing `min_p` to infinity allows us to handle the empty list case gracefully if prices are non-negative."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function bubbleSort(arr) {\\n  let swapped;\\n  do {\\n    swapped = false;\\n    for (let i = 0; i < arr.length - 1; i++) {\\n      if (arr[i] > arr[i + 1]) {\\n        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];\\n        swapped = true;\\n      }\\n    }\\n  } while (swapped);\\n  return arr;\\n}",
                 "explanation": "A `do-while` loop combined with a `swapped` flag is a common way to optimize bubble sort. The array destructuring `[a, b] = [b, a]` is the modern JS way to swap variables."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

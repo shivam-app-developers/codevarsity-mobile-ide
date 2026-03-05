@@ -8,7 +8,10 @@
             "description": "Check if a number is odd.",
             "language": "javascript",
             "ghostCode": "function isOdd(number) {\\n  return number % 2 !== 0;\\n}\\n\\nconsole.log(isOdd(5)); // true\\nconsole.log(isOdd(8)); // false",
-            "finalCode": "function isOdd(number) {\\n  return number % 2 !== 0;\\n}\\n\\nconsole.log(isOdd(5)); // true\\nconsole.log(isOdd(8)); // false"
+            "finalCode": "function isOdd(number) {\\n  return number % 2 !== 0;\\n}\\n\\nconsole.log(isOdd(5)); // true\\nconsole.log(isOdd(8)); // false",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

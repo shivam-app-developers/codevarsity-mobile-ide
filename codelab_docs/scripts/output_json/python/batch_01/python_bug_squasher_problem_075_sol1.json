@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Singular Integer Right Triangles",
-      "problemDescription": "Fix the logic to correctly count perimeters with exactly one Pythagorean triple solution.",
-      "language": "python",
-      "buggyCode": "from math import gcd\n\ndef solution(limit=1500000):\n    counts = {}\n    # BUG: Range logic for m and n might miss primitive triples or overcount\n    for m in range(2, limit):\n        for n in range(1, m):\n            p = 2 * m * (m + n)\n            if p > limit: break\n            # BUG: Not checking for primitive triple conditions (m,n coprime, m-n odd)\n            counts[p] = counts.get(p, 0) + 1\n            \n    # BUG: Not accounting for multiples of primitive triples\n    return sum(1 for p in counts if counts[p] == 1)\n\n\nif __name__ == \"__main__\":\n    print(solution(1500000))",
-      "solution": {
-        "code": "from math import gcd\n\ndef solution(limit=1500000):\n    counts = [0] * (limit + 1)\n    m_limit = int((limit // 2)**0.5)\n    for m in range(2, m_limit + 1):\n        for n in range(1, m):\n            # primitive triple conditions\n            if (m - n) % 2 == 1 and gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                # account for all multiples\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n    return sum(1 for c in counts if c == 1)\n\n\nif __name__ == \"__main__\":\n    print(solution(1500000))",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Singular Integer Right Triangles",
+            "problemDescription": "Fix the logic to correctly count perimeters with exactly one Pythagorean triple solution.",
+            "language": "python",
+            "buggyCode": "from math import gcd\n\ndef solution(limit=1500000):\n    counts = {}\n    # BUG: Range logic for m and n might miss primitive triples or overcount\n    for m in range(2, limit):\n        for n in range(1, m):\n            p = 2 * m * (m + n)\n            if p > limit: break\n            # BUG: Not checking for primitive triple conditions (m,n coprime, m-n odd)\n            counts[p] = counts.get(p, 0) + 1\n            \n    # BUG: Not accounting for multiples of primitive triples\n    return sum(1 for p in counts if counts[p] == 1)\n\n\nif __name__ == \"__main__\":\n    print(solution(1500000))",
+            "solution": {
+                "code": "from math import gcd\n\ndef solution(limit=1500000):\n    counts = [0] * (limit + 1)\n    m_limit = int((limit // 2)**0.5)\n    for m in range(2, m_limit + 1):\n        for n in range(1, m):\n            # primitive triple conditions\n            if (m - n) % 2 == 1 and gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                # account for all multiples\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n    return sum(1 for c in counts if c == 1)\n\n\nif __name__ == \"__main__\":\n    print(solution(1500000))",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

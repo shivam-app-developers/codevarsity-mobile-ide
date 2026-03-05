@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Binary XOR Logic Bug",
-      "problemDescription": "The manual binary XOR implementation is producing incorrect results. It seems the bitwise comparison logic for 'Exclusive OR' is wrong. Identify and fix the flaw.",
-      "language": "python",
-      "buggyCode": "def binary_xor(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == cb) else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 XOR 1: {binary_xor(1, 1)}\")",
-      "solution": {
-        "code": "def binary_xor(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca != cb) else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 XOR 1: {binary_xor(1, 1)}\")",
-        "explanation": "Exclusive OR (XOR) returns 1 only if the bits are DIFFERENT (`ca != cb`). The buggy code used `ca == cb`, which is the logic for a XNOR (Exclusive NOR) gate."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Binary XOR Logic Bug",
+            "problemDescription": "The manual binary XOR implementation is producing incorrect results. It seems the bitwise comparison logic for 'Exclusive OR' is wrong. Identify and fix the flaw.",
+            "language": "python",
+            "buggyCode": "def binary_xor(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == cb) else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 XOR 1: {binary_xor(1, 1)}\")",
+            "solution": {
+                "code": "def binary_xor(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca != cb) else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 XOR 1: {binary_xor(1, 1)}\")",
+                "explanation": "Exclusive OR (XOR) returns 1 only if the bits are DIFFERENT (`ca != cb`). The buggy code used `ca == cb`, which is the logic for a XNOR (Exclusive NOR) gate."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

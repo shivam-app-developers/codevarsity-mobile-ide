@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isAnagram(s1, s2) {\\n  if (s1.length !== s2.length) return false;\\n  const map = {};\\n  for (let char of s1.toLowerCase()) {\\n    map[char] = (map[char] || 0) + 1;\\n  }\\n  for (let char of s2.toLowerCase()) {\\n    if (!map[char]) return false;\\n    map[char]--;\\n  }\\n  return true;\\n}",
                 "explanation": "A frequency map approach is more efficient than sorting because it only requires iterating through each string twice, resulting in linear time complexity."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

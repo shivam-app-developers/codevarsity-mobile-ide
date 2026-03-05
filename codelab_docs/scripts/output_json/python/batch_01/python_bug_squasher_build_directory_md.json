@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "OS Walk Directory Filtering Bug",
-      "problemDescription": "The directory generator is intended to skip hidden folders and virtual environments. However, it seems to be recursing into them anyway, leading to an overly large index. Find and fix the error in directory list modification.",
-      "language": "python",
-      "buggyCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs = [d for d in dirs if not d.startswith('.') and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
-      "solution": {
-        "code": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith('.') and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
-        "explanation": "To prune the recursion in `os.walk`, you must modify the `dirs` list IN-PLACE using slice assignment (`dirs[:] = ...`). Simple reassignment (`dirs = ...`) only changes the local variable and does not affect the generator's internal state for subsequent steps."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "OS Walk Directory Filtering Bug",
+            "problemDescription": "The directory generator is intended to skip hidden folders and virtual environments. However, it seems to be recursing into them anyway, leading to an overly large index. Find and fix the error in directory list modification.",
+            "language": "python",
+            "buggyCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs = [d for d in dirs if not d.startswith('.') and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+            "solution": {
+                "code": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith('.') and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py'):\n                print(f\"* {f}\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+                "explanation": "To prune the recursion in `os.walk`, you must modify the `dirs` list IN-PLACE using slice assignment (`dirs[:] = ...`). Simple reassignment (`dirs = ...`) only changes the local variable and does not affect the generator's internal state for subsequent steps."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

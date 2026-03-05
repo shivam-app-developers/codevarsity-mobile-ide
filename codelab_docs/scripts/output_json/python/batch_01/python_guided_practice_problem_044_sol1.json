@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Pentagon Numbers",
-      "description": "Find the minimum difference D = |Pk - Pj| such that both the sum and difference of two pentagonal numbers are also pentagonal.",
-      "language": "python",
-      "ghostCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number n is a pentagonal number.\"\"\"\n    if n < 1: return False\n    # Pn = n(3n-1)/2 => 3n^2 - n - 2Pn = 0\n    # n = (1 + sqrt(1 + 24Pn)) / 6\n    val = (math.sqrt(1 + 24 * n) + 1) / 6\n    return val.is_integer()\n\ndef solution() -> int:\n    \"\"\"\n    Finds the pair of pentagonal numbers with the minimum difference satisfying the condition.\n    \"\"\"\n    p = []\n    i = 1\n    while True:\n        # Generate next pentagonal number\n        pi = i * (3 * i - 1) // 2\n        # Check against previously generated pentagonal numbers\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Minimum difference: {solution()}\")",
-      "finalCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number n is a pentagonal number.\"\"\"\n    if n < 1: return False\n    # Pn = n(3n-1)/2 => 3n^2 - n - 2Pn = 0\n    # n = (1 + sqrt(1 + 24Pn)) / 6\n    val = (math.sqrt(1 + 24 * n) + 1) / 6\n    return val.is_integer()\n\ndef solution() -> int:\n    \"\"\"\n    Finds the pair of pentagonal numbers with the minimum difference satisfying the condition.\n    \"\"\"\n    p = []\n    i = 1\n    while True:\n        # Generate next pentagonal number\n        pi = i * (3 * i - 1) // 2\n        # Check against previously generated pentagonal numbers\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Minimum difference: {solution()}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Pentagon Numbers",
+            "description": "Find the minimum difference D = |Pk - Pj| such that both the sum and difference of two pentagonal numbers are also pentagonal.",
+            "language": "python",
+            "ghostCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number n is a pentagonal number.\"\"\"\n    if n < 1: return False\n    # Pn = n(3n-1)/2 => 3n^2 - n - 2Pn = 0\n    # n = (1 + sqrt(1 + 24Pn)) / 6\n    val = (math.sqrt(1 + 24 * n) + 1) / 6\n    return val.is_integer()\n\ndef solution() -> int:\n    \"\"\"\n    Finds the pair of pentagonal numbers with the minimum difference satisfying the condition.\n    \"\"\"\n    p = []\n    i = 1\n    while True:\n        # Generate next pentagonal number\n        pi = i * (3 * i - 1) // 2\n        # Check against previously generated pentagonal numbers\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Minimum difference: {solution()}\")",
+            "finalCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number n is a pentagonal number.\"\"\"\n    if n < 1: return False\n    # Pn = n(3n-1)/2 => 3n^2 - n - 2Pn = 0\n    # n = (1 + sqrt(1 + 24Pn)) / 6\n    val = (math.sqrt(1 + 24 * n) + 1) / 6\n    return val.is_integer()\n\ndef solution() -> int:\n    \"\"\"\n    Finds the pair of pentagonal numbers with the minimum difference satisfying the condition.\n    \"\"\"\n    p = []\n    i = 1\n    while True:\n        # Generate next pentagonal number\n        pi = i * (3 * i - 1) // 2\n        # Check against previously generated pentagonal numbers\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1\n\n\nif __name__ == \"__main__\":\n    print(f\"Minimum difference: {solution()}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

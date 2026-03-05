@@ -10,7 +10,7 @@
             "ghostCode": "public class NullPointer {\n    public static void main(String[] args) {\n        String text = null;\n        if (text != null) {\n            System.out.println(\"Length: \" + text.length());\n        } else {\n            System.out.println(\"Text is null\");\n        }\n    }\n}",
             "finalCode": "public class NullPointer {\n    public static void main(String[] args) {\n        String text = null;\n        if (text != null) {\n            System.out.println(\"Length: \" + text.length());\n        } else {\n            System.out.println(\"Text is null\");\n        }\n    }\n}",
             "validation": {
-                "pattern": "Text is null"
+                "type": "run_code"
             }
         }
     }

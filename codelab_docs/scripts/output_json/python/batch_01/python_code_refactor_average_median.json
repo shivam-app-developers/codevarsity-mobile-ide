@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Median Calculation",
-      "problemDescription": "The provided `get_median` function manually handles sorting and even/odd case logic. Refactor it to use Python's built-in `statistics.median` for a more idiomatic and concise implementation.",
-      "language": "python",
-      "initialCode": "def get_median(nums):\n    if not nums: return 0\n    s = sorted(nums)\n    n = len(s)\n    mid = n // 2\n    if n % 2 == 0:\n        return (s[mid - 1] + s[mid]) / 2\n    return s[mid]\n\nif __name__ == \"__main__\":\n    print(f\"Median: {get_median([4, 1, 2, 3])}\")",
-      "solution": {
-        "code": "import statistics\n\ndef get_median(nums):\n    return statistics.median(nums) if nums else 0\n\nif __name__ == \"__main__\":\n    print(f\"Median: {get_median([4, 1, 2, 3])}\")",
-        "explanation": "By using `statistics.median()`, we improve the code's readability and rely on standard library functions for statistical calculations. It handles both sorting and the logic for even/odd list lengths internally."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Median Calculation",
+            "problemDescription": "The provided `get_median` function manually handles sorting and even/odd case logic. Refactor it to use Python's built-in `statistics.median` for a more idiomatic and concise implementation.",
+            "language": "python",
+            "initialCode": "def get_median(nums):\n    if not nums: return 0\n    s = sorted(nums)\n    n = len(s)\n    mid = n // 2\n    if n % 2 == 0:\n        return (s[mid - 1] + s[mid]) / 2\n    return s[mid]\n\nif __name__ == \"__main__\":\n    print(f\"Median: {get_median([4, 1, 2, 3])}\")",
+            "solution": {
+                "code": "import statistics\n\ndef get_median(nums):\n    return statistics.median(nums) if nums else 0\n\nif __name__ == \"__main__\":\n    print(f\"Median: {get_median([4, 1, 2, 3])}\")",
+                "explanation": "By using `statistics.median()`, we improve the code's readability and rely on standard library functions for statistical calculations. It handles both sorting and the logic for even/odd list lengths internally."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

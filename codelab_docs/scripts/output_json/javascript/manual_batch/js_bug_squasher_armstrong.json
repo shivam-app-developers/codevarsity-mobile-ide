@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isArmstrong(n) {\\n  const s = n.toString();\\n  const p = s.length;\\n  let sum = 0;\\n  for (let d of s) {\\n    sum += Math.pow(parseInt(d), p);\\n  }\\n  return sum === n;\\n}",
                 "explanation": "A Narcissistic (Armstrong) number is defined by the sum of its digits raised to the power of the *total count* of digits in that number."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

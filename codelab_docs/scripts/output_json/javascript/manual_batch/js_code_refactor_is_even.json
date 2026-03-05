@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const isEven = (number) => number % 2 === 0;",
                 "explanation": "Arrow functions provide a more concise syntax for writing function expressions, especially for simple one-liners."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing...\");\n    }\n}",
                 "explanation": "Methods declared in an interface are implicitly 'public'. When implementing them, you MUST use the 'public' keyword, as you cannot reduce the visibility of a parent method."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

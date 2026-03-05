@@ -314,7 +314,7 @@ VISUALIZER_SCHEMAS = {
                         "properties": {
                             "type": {
                                 "type": "string",
-                                "enum": ["exact", "regex", "run_output"],
+                                "enum": ["exact", "regex", "run_output", "run_code"],
                             },
                             "pattern": {
                                 "type": "string",
@@ -995,6 +995,21 @@ VISUALIZER_SCHEMAS = {
                             },
                         },
                     },
+                    "validation": {
+                        "type": "object",
+                        "description": "Rules for checking user code",
+                        "additionalProperties": False,
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": ["exact", "regex", "run_output", "run_code"],
+                            },
+                            "pattern": {
+                                "type": "string",
+                                "description": "Regex pattern or expected output",
+                            },
+                        },
+                    },
                 },
             },
         },
@@ -1032,6 +1047,21 @@ VISUALIZER_SCHEMAS = {
                             "explanation": {
                                 "type": "string",
                                 "description": "Why this fix works",
+                            },
+                        },
+                    },
+                    "validation": {
+                        "type": "object",
+                        "description": "Rules for checking user code",
+                        "additionalProperties": False,
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": ["exact", "regex", "run_output", "run_code"],
+                            },
+                            "pattern": {
+                                "type": "string",
+                                "description": "Regex pattern or expected output",
                             },
                         },
                     },

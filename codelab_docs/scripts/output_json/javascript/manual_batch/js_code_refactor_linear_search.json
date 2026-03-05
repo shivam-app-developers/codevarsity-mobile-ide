@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const search = (arr, target) => arr.findIndex(item => item === target);",
                 "explanation": "JavaScript arrays provide powerful built-in methods like `findIndex()` that are more declarative and less prone to off-by-one errors than manual for-loops."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

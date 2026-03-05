@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Byte Allocation Loops",
-      "problemDescription": "The current `allocation_num` function uses a standard `for` loop. Refactor it to use a more concise approach like a list comprehension, ensuring the special handling for the last partition is preserved.",
-      "language": "python",
-      "initialCode": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
-      "solution": {
-        "code": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    return [\n        f\"{i * size + 1}-{total_bytes if i == partitions - 1 else (i + 1) * size}\"\n        for i in range(partitions)\n    ]\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
-        "explanation": "Refactoring to a list comprehension makes the code more compact and readable, while maintaining the same logic for calculating the start and end of each byte range, including the final partition."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Byte Allocation Loops",
+            "problemDescription": "The current `allocation_num` function uses a standard `for` loop. Refactor it to use a more concise approach like a list comprehension, ensuring the special handling for the last partition is preserved.",
+            "language": "python",
+            "initialCode": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+            "solution": {
+                "code": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    return [\n        f\"{i * size + 1}-{total_bytes if i == partitions - 1 else (i + 1) * size}\"\n        for i in range(partitions)\n    ]\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+                "explanation": "Refactoring to a list comprehension makes the code more compact and readable, while maintaining the same logic for calculating the start and end of each byte range, including the final partition."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

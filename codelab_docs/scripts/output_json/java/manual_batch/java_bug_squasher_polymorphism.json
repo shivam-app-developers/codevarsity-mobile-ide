@@ -10,6 +10,9 @@
             "solution": {
                 "code": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}",
                 "explanation": "Java is case-sensitive. 'Sound()' is a new method and does not override 'sound()'. Use the '@Override' annotation to help catch these mistakes during compilation."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class FinalVariable {\n    public static void main(String[] args) {\n        int maxUsers = 100;\n        if (args.length > 0) {\n            maxUsers = 200;\n        }\n        System.out.println(\"Max Users: \" + maxUsers);\n    }\n}",
                 "explanation": "Variables marked as 'final' in Java can only be assigned once. If you need to change the value later, remove the 'final' keyword."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

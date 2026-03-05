@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Alternative String Arrangement",
-      "description": "Combine two strings by alternating their characters into a single new string.",
-      "language": "python",
-      "ghostCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))",
-      "finalCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Alternative String Arrangement",
+            "description": "Combine two strings by alternating their characters into a single new string.",
+            "language": "python",
+            "ghostCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))",
+            "finalCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

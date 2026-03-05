@@ -8,7 +8,10 @@
             "description": "Sort an array by repeatedly finding the minimum element from the unsorted part.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nvoid selectionSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        int min_idx = i;\\n        for (int j = i + 1; j < n; j++) {\\n            if (arr[j] < arr[min_idx]) min_idx = j;\\n        }\\n        int temp = arr[min_idx];\\n        arr[min_idx] = arr[i];\\n        arr[i] = temp;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {29, 10, 14, 37, 13};\\n    selectionSort(a, 5);\\n    for(int i=0; i<5; i++) printf(\\\"%d \\\", a[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nvoid selectionSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        int min_idx = i;\\n        for (int j = i + 1; j < n; j++) {\\n            if (arr[j] < arr[min_idx]) min_idx = j;\\n        }\\n        int temp = arr[min_idx];\\n        arr[min_idx] = arr[i];\\n        arr[i] = temp;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {29, 10, 14, 37, 13};\\n    selectionSort(a, 5);\\n    for(int i=0; i<5; i++) printf(\\\"%d \\\", a[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nvoid selectionSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        int min_idx = i;\\n        for (int j = i + 1; j < n; j++) {\\n            if (arr[j] < arr[min_idx]) min_idx = j;\\n        }\\n        int temp = arr[min_idx];\\n        arr[min_idx] = arr[i];\\n        arr[i] = temp;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {29, 10, 14, 37, 13};\\n    selectionSort(a, 5);\\n    for(int i=0; i<5; i++) printf(\\\"%d \\\", a[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

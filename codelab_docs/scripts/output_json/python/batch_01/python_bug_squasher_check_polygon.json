@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Polygon Inequality Bug",
-      "problemDescription": "The polygon existence check is incorrectly identifying some sets of side lengths as valid polygons. It seems the comparison between the longest side and the others is flawed. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] <= sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[1, 2, 3]: {is_polygon([1, 2, 3])}\")",
-      "solution": {
-        "code": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] < sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[1, 2, 3]: {is_polygon([1, 2, 3])}\")",
-        "explanation": "In Euclidean space, a polygon can only exist if the longest side is STRICTLY LESS THAN the sum of all other sides. If it's equal (e.g., [1, 2, 3]), the 'polygon' collapses into a line segment (degenerate case), which is not a valid polygon."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Polygon Inequality Bug",
+            "problemDescription": "The polygon existence check is incorrectly identifying some sets of side lengths as valid polygons. It seems the comparison between the longest side and the others is flawed. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] <= sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[1, 2, 3]: {is_polygon([1, 2, 3])}\")",
+            "solution": {
+                "code": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] < sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"[1, 2, 3]: {is_polygon([1, 2, 3])}\")",
+                "explanation": "In Euclidean space, a polygon can only exist if the longest side is STRICTLY LESS THAN the sum of all other sides. If it's equal (e.g., [1, 2, 3]), the 'polygon' collapses into a line segment (degenerate case), which is not a valid polygon."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Self Powers",
-      "description": "Find the last ten digits of the series 1^1 + 2^2 + ... + 1000^1000.",
-      "language": "python",
-      "ghostCode": "def solution(limit: int = 1000) -> str:\n    \"\"\"\n    Returns the last 10 digits of the series 1^1 + 2^2 + ... + n^n.\n    \"\"\"\n    total = 0\n    # We only need the last 10 digits, so we can use modulo 10^10\n    MOD = 10**10\n    \n    for i in range(1, limit + 1):\n        # Use modular exponentiation for efficiency and to avoid giant numbers\n        total = (total + pow(i, i, MOD)) % MOD\n        \n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
-      "finalCode": "def solution(limit: int = 1000) -> str:\n    \"\"\"\n    Returns the last 10 digits of the series 1^1 + 2^2 + ... + n^n.\n    \"\"\"\n    total = 0\n    # We only need the last 10 digits, so we can use modulo 10^10\n    MOD = 10**10\n    \n    for i in range(1, limit + 1):\n        # Use modular exponentiation for efficiency and to avoid giant numbers\n        total = (total + pow(i, i, MOD)) % MOD\n        \n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Self Powers",
+            "description": "Find the last ten digits of the series 1^1 + 2^2 + ... + 1000^1000.",
+            "language": "python",
+            "ghostCode": "def solution(limit: int = 1000) -> str:\n    \"\"\"\n    Returns the last 10 digits of the series 1^1 + 2^2 + ... + n^n.\n    \"\"\"\n    total = 0\n    # We only need the last 10 digits, so we can use modulo 10^10\n    MOD = 10**10\n    \n    for i in range(1, limit + 1):\n        # Use modular exponentiation for efficiency and to avoid giant numbers\n        total = (total + pow(i, i, MOD)) % MOD\n        \n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+            "finalCode": "def solution(limit: int = 1000) -> str:\n    \"\"\"\n    Returns the last 10 digits of the series 1^1 + 2^2 + ... + n^n.\n    \"\"\"\n    total = 0\n    # We only need the last 10 digits, so we can use modulo 10^10\n    MOD = 10**10\n    \n    for i in range(1, limit + 1):\n        # Use modular exponentiation for efficiency and to avoid giant numbers\n        total = (total + pow(i, i, MOD)) % MOD\n        \n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

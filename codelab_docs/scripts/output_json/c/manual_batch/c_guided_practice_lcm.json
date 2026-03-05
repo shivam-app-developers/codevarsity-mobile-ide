@@ -8,7 +8,10 @@
             "description": "Calculate the Least Common Multiple of two numbers.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    return b == 0 ? a : gcd(b, a % b);\\n}\\n\\nint lcm(int a, int b) {\\n    return (a * b) / gcd(a, b);\\n}\\n\\nint main() {\\n    printf(\\\"LCM: %d\\\\n\\\", lcm(15, 20));\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    return b == 0 ? a : gcd(b, a % b);\\n}\\n\\nint lcm(int a, int b) {\\n    return (a * b) / gcd(a, b);\\n}\\n\\nint main() {\\n    printf(\\\"LCM: %d\\\\n\\\", lcm(15, 20));\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    return b == 0 ? a : gcd(b, a % b);\\n}\\n\\nint lcm(int a, int b) {\\n    return (a * b) / gcd(a, b);\\n}\\n\\nint main() {\\n    printf(\\\"LCM: %d\\\\n\\\", lcm(15, 20));\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

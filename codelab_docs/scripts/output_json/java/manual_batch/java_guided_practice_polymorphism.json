@@ -10,7 +10,7 @@
             "ghostCode": "class Animal {\n    void sound() { System.out.println(\"Generic sound\"); }\n}\n\nclass Cat extends Animal {\n    @Override\n    void sound() { System.out.println(\"Meow\"); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat();\n        a.sound();\n    }\n}",
             "finalCode": "class Animal {\n    void sound() { System.out.println(\"Generic sound\"); }\n}\n\nclass Cat extends Animal {\n    @Override\n    void sound() { System.out.println(\"Meow\"); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat();\n        a.sound();\n    }\n}",
             "validation": {
-                "pattern": "Meow"
+                "type": "run_code"
             }
         }
     }

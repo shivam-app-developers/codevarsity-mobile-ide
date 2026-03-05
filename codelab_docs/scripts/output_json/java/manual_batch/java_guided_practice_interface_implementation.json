@@ -10,7 +10,7 @@
             "ghostCode": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing a Circle\");\n    }\n}",
             "finalCode": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing a Circle\");\n    }\n}\n\npublic class InterfaceImplementation {\n    public static void main(String[] args) {\n        Drawable d = new Circle();\n        d.draw();\n    }\n}",
             "validation": {
-                "pattern": "Drawing a Circle"
+                "type": "run_code"
             }
         }
     }

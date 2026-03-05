@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isOdd(number) {\\n  return number % 2 !== 0;\\n}",
                 "explanation": "To check if a number is odd, you check if the remainder when divided by 2 is NOT zero."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

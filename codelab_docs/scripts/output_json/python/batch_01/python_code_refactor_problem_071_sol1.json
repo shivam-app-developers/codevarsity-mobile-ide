@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Ordered Fractions",
-      "problemDescription": "Refactor the fraction search using a number-theoretic approach related to Farey sequences for O(1) or O(log limit) performance.",
-      "language": "python",
-      "initialCode": "def solution(limit: int = 1000000):\n    best_num, best_den = 0, 1\n    for d in range(1, limit + 1):\n        n = (3 * d - 1) // 7\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n    return best_num",
-      "solution": {
-        "code": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Using the property of Mediants in Farey sequences.\n    The fraction immediately to the left of a/b in a Farey sequence \n    is found by solving ay - bx = 1 where d <= limit.\n    Here a=3, b=7.\n    \"\"\"\n    a, b = 3, 7\n    # We want to find x, y such that 3y - 7x = 1 and y is as large as possible <= limit.\n    # Using Extended Euclidean Algorithm or simple iteration since b is small.\n    # 3y = 7x + 1\n    # For x = 1, 3y = 8 (No)\n    # For x = 2, 3y = 15 (Yes, y=5)\n    \n    # General solution: x = 2 + 3k, y = 5 + 7k\n    # We want max y <= 1,000,000\n    # 5 + 7k <= 1,000,000  => 7k <= 999,995 => k <= 142856.4\n    k = (limit - 5) // 7\n    x = 2 + 3 * k\n    return x\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
-        "explanation": "Farey sequence properties allow us to find the neighboring fraction almost instantly. The fraction x/y immediately to the left of a/b satisfies ay - bx = 1. By finding the largest y <= limit, we find the closest neighbor."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Ordered Fractions",
+            "problemDescription": "Refactor the fraction search using a number-theoretic approach related to Farey sequences for O(1) or O(log limit) performance.",
+            "language": "python",
+            "initialCode": "def solution(limit: int = 1000000):\n    best_num, best_den = 0, 1\n    for d in range(1, limit + 1):\n        n = (3 * d - 1) // 7\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n    return best_num",
+            "solution": {
+                "code": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Using the property of Mediants in Farey sequences.\n    The fraction immediately to the left of a/b in a Farey sequence \n    is found by solving ay - bx = 1 where d <= limit.\n    Here a=3, b=7.\n    \"\"\"\n    a, b = 3, 7\n    # We want to find x, y such that 3y - 7x = 1 and y is as large as possible <= limit.\n    # Using Extended Euclidean Algorithm or simple iteration since b is small.\n    # 3y = 7x + 1\n    # For x = 1, 3y = 8 (No)\n    # For x = 2, 3y = 15 (Yes, y=5)\n    \n    # General solution: x = 2 + 3k, y = 5 + 7k\n    # We want max y <= 1,000,000\n    # 5 + 7k <= 1,000,000  => 7k <= 999,995 => k <= 142856.4\n    k = (limit - 5) // 7\n    x = 2 + 3 * k\n    return x\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
+                "explanation": "Farey sequence properties allow us to find the neighboring fraction almost instantly. The fraction x/y immediately to the left of a/b satisfies ay - bx = 1. By finding the largest y <= limit, we find the closest neighbor."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

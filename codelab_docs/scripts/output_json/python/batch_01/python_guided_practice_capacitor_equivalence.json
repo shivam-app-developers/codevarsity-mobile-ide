@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Capacitor Equivalence",
-      "description": "Calculate the equivalent capacitance for capacitors in parallel and series configurations.",
-      "language": "python",
-      "ghostCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    c = [10, 20]\n    print(f\"Parallel: {cap_parallel(c)}\")\n    print(f\"Series: {cap_series(c)}\")",
-      "finalCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    c = [10, 20]\n    print(f\"Parallel: {cap_parallel(c)}\")\n    print(f\"Series: {cap_series(c)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Capacitor Equivalence",
+            "description": "Calculate the equivalent capacitance for capacitors in parallel and series configurations.",
+            "language": "python",
+            "ghostCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    c = [10, 20]\n    print(f\"Parallel: {cap_parallel(c)}\")\n    print(f\"Series: {cap_series(c)}\")",
+            "finalCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    c = [10, 20]\n    print(f\"Parallel: {cap_parallel(c)}\")\n    print(f\"Series: {cap_series(c)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

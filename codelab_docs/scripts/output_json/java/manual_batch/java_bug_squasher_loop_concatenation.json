@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        String res = \"Count: \";\n        int count = 5;\n        res = res.concat(String.valueOf(count));\n        System.out.println(res);\n    }\n}",
                 "explanation": "Since String objects cannot be changed (immutable), 'concat()' returns a NEW string. You must assign that result back to the variable."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

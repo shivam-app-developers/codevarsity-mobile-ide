@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint fact(int n) {\\n    if (n == 0) return 1;\\n    int r = 1; for(int i=1;i<=n;i++) r*=i; return r;\\n}\\n\\nint main() {\\n    int n = 145, sum = 0, temp = n;\\n    while(temp>0) { sum += fact(temp%10); temp/=10; }\\n    if(sum == n) printf(\\\"Strong\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "In mathematics, the factorial of 0 (0!) is defined as 1. The bug was incorrectly returning 0 for 0!."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

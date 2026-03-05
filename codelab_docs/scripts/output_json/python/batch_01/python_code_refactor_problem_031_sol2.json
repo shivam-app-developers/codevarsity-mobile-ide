@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Coin Sums",
-      "problemDescription": "Refactor the coin sum calculation to use a more memory-efficient approach if applicable, or optimize the loop.",
-      "language": "python",
-      "initialCode": "def solution(pence: int = 200):\n    coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    ways = [0] * (pence + 1)\n    ways[0] = 1\n    for coin in coins:\n        for amount in range(coin, pence + 1):\n            ways[amount] += ways[amount - coin]\n    return ways[pence]",
-      "solution": {
-        "code": "def solution(target: int = 200, coins: list = None) -> int:\n    \"\"\"\n    Generalized coin sum solution using recursion with memoization (top-down DP).\n    \"\"\"\n    if coins is None:\n        coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    \n    memo = {}\n\n    def count_ways(remaining, coin_idx):\n        if remaining == 0: return 1\n        if remaining < 0 or coin_idx >= len(coins): return 0\n        \n        state = (remaining, coin_idx)\n        if state in memo:\n            return memo[state]\n        \n        # Ways = (ways using at least one current coin) + (ways using only subsequent coins)\n        res = count_ways(remaining - coins[coin_idx], coin_idx) + \\\n              count_ways(remaining, coin_idx + 1)\n        \n        memo[state] = res\n        return res\n\n    return count_ways(target, 0)\n\n\nif __name__ == \"__main__\":\n    print(solution(200))",
-        "explanation": "The top-down approach with memoization is sometimes more intuitive for partitioning problems and allows for easy generalization to different coin sets or target values."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Coin Sums",
+            "problemDescription": "Refactor the coin sum calculation to use a more memory-efficient approach if applicable, or optimize the loop.",
+            "language": "python",
+            "initialCode": "def solution(pence: int = 200):\n    coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    ways = [0] * (pence + 1)\n    ways[0] = 1\n    for coin in coins:\n        for amount in range(coin, pence + 1):\n            ways[amount] += ways[amount - coin]\n    return ways[pence]",
+            "solution": {
+                "code": "def solution(target: int = 200, coins: list = None) -> int:\n    \"\"\"\n    Generalized coin sum solution using recursion with memoization (top-down DP).\n    \"\"\"\n    if coins is None:\n        coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    \n    memo = {}\n\n    def count_ways(remaining, coin_idx):\n        if remaining == 0: return 1\n        if remaining < 0 or coin_idx >= len(coins): return 0\n        \n        state = (remaining, coin_idx)\n        if state in memo:\n            return memo[state]\n        \n        # Ways = (ways using at least one current coin) + (ways using only subsequent coins)\n        res = count_ways(remaining - coins[coin_idx], coin_idx) + \\\n              count_ways(remaining, coin_idx + 1)\n        \n        memo[state] = res\n        return res\n\n    return count_ways(target, 0)\n\n\nif __name__ == \"__main__\":\n    print(solution(200))",
+                "explanation": "The top-down approach with memoization is sometimes more intuitive for partitioning problems and allows for easy generalization to different coin sets or target values."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

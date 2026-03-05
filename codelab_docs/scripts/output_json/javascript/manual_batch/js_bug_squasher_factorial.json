@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function factorial(n) {\\n  if (n <= 1) return 1;\\n  return n * factorial(n - 1);\\n}",
                 "explanation": "Recursion must always have a 'base case' to stop the recursive calls. For factorials, 0! and 1! are both 1."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

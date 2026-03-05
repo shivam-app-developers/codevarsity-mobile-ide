@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function findIndex(arr, item) {\\n  for (let i = 0; i < arr.length; i++) {\\n    if (arr[i] === item) return i;\\n  }\\n  return -1;\\n}",
                 "explanation": "To follow standard `indexOf` behavior, you should return the index of the found element, or `-1` if the element does not exist in the array."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

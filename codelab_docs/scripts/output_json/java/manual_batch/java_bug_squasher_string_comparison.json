@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class StringComparison {\n    public static void main(String[] args) {\n        String s1 = new String(\"hello\");\n        String s2 = new String(\"hello\");\n\n        if (s1.equals(s2)) {\n            System.out.println(\"Strings are equal\");\n        } else {\n            System.out.println(\"Strings are NOT equal\");\n        }\n    }\n}",
                 "explanation": "Use 'equals()' to compare the content of Strings. '==' checks if both variables point to the exact same memory address."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

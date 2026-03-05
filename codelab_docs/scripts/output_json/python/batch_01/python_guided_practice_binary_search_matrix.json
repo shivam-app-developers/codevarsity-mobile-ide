@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Binary Search in a Matrix",
-      "description": "Perform binary search to find a value within a sorted 2D matrix.",
-      "language": "python",
-      "ghostCode": "def binary_search(arr, low, high, x):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] > x: return binary_search(arr, low, mid - 1, x)\n        else: return binary_search(arr, mid + 1, high, x)\n    else: return -1\n\ndef search_matrix(mat, x):\n    for i in range(len(mat)):\n        if mat[i][0] <= x <= mat[i][-1]:\n            res = binary_search(mat[i], 0, len(mat[i]) - 1, x)\n            if res != -1: return [i, res]\n    return [-1, -1]\n\nif __name__ == \"__main__\":\n    matrix = [[1, 3, 5], [7, 9, 11]]\n    print(f\"Search 9: {search_matrix(matrix, 9)}\")",
-      "finalCode": "def binary_search(arr, low, high, x):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] > x: return binary_search(arr, low, mid - 1, x)\n        else: return binary_search(arr, mid + 1, high, x)\n    else: return -1\n\ndef search_matrix(mat, x):\n    for i in range(len(mat)):\n        if mat[i][0] <= x <= mat[i][-1]:\n            res = binary_search(mat[i], 0, len(mat[i]) - 1, x)\n            if res != -1: return [i, res]\n    return [-1, -1]\n\nif __name__ == \"__main__\":\n    matrix = [[1, 3, 5], [7, 9, 11]]\n    print(f\"Search 9: {search_matrix(matrix, 9)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Binary Search in a Matrix",
+            "description": "Perform binary search to find a value within a sorted 2D matrix.",
+            "language": "python",
+            "ghostCode": "def binary_search(arr, low, high, x):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] > x: return binary_search(arr, low, mid - 1, x)\n        else: return binary_search(arr, mid + 1, high, x)\n    else: return -1\n\ndef search_matrix(mat, x):\n    for i in range(len(mat)):\n        if mat[i][0] <= x <= mat[i][-1]:\n            res = binary_search(mat[i], 0, len(mat[i]) - 1, x)\n            if res != -1: return [i, res]\n    return [-1, -1]\n\nif __name__ == \"__main__\":\n    matrix = [[1, 3, 5], [7, 9, 11]]\n    print(f\"Search 9: {search_matrix(matrix, 9)}\")",
+            "finalCode": "def binary_search(arr, low, high, x):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] > x: return binary_search(arr, low, mid - 1, x)\n        else: return binary_search(arr, mid + 1, high, x)\n    else: return -1\n\ndef search_matrix(mat, x):\n    for i in range(len(mat)):\n        if mat[i][0] <= x <= mat[i][-1]:\n            res = binary_search(mat[i], 0, len(mat[i]) - 1, x)\n            if res != -1: return [i, res]\n    return [-1, -1]\n\nif __name__ == \"__main__\":\n    matrix = [[1, 3, 5], [7, 9, 11]]\n    print(f\"Search 9: {search_matrix(matrix, 9)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

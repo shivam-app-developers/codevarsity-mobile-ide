@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Centripetal Force Calculation",
-      "description": "Calculate the centripetal force acting on an object in circular motion given its mass, velocity, and radius.",
-      "language": "python",
-      "ghostCode": "def get_centripetal_force(m, v, r):\n    if r <= 0: return 0.0\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_centripetal_force(10, 15, 5)} N\")",
-      "finalCode": "def get_centripetal_force(m, v, r):\n    if r <= 0: return 0.0\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_centripetal_force(10, 15, 5)} N\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Centripetal Force Calculation",
+            "description": "Calculate the centripetal force acting on an object in circular motion given its mass, velocity, and radius.",
+            "language": "python",
+            "ghostCode": "def get_centripetal_force(m, v, r):\n    if r <= 0: return 0.0\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_centripetal_force(10, 15, 5)} N\")",
+            "finalCode": "def get_centripetal_force(m, v, r):\n    if r <= 0: return 0.0\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_centripetal_force(10, 15, 5)} N\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

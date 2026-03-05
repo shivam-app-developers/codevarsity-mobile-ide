@@ -8,7 +8,10 @@
             "description": "Convert temperature from Celsius to Fahrenheit using the standard formula.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nint main() {\\n    float celsius = 37.5;\\n    float fahrenheit = (celsius * 9 / 5) + 32;\\n    printf(\\\"%.1f Celsius is %.1f Fahrenheit\\\\n\\\", celsius, fahrenheit);\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    float celsius = 37.5;\\n    float fahrenheit = (celsius * 9 / 5) + 32;\\n    printf(\\\"%.1f Celsius is %.1f Fahrenheit\\\\n\\\", celsius, fahrenheit);\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    float celsius = 37.5;\\n    float fahrenheit = (celsius * 9 / 5) + 32;\\n    printf(\\\"%.1f Celsius is %.1f Fahrenheit\\\\n\\\", celsius, fahrenheit);\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

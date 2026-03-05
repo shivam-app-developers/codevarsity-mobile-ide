@@ -8,7 +8,10 @@
             "description": "Count the number of vowels (a, e, i, o, u) in a given string.",
             "language": "javascript",
             "ghostCode": "function countVowels(str) {\\n  const vowels = \\\"aeiouAEIOU\\\";\\n  let count = 0;\\n  for (let char of str) {\\n    if (vowels.includes(char)) count++;\\n  }\\n  return count;\\n}\\n\\nconsole.log(countVowels(\\\"Hello World\\\")); // 3",
-            "finalCode": "function countVowels(str) {\\n  const vowels = \\\"aeiouAEIOU\\\";\\n  let count = 0;\\n  for (let char of str) {\\n    if (vowels.includes(char)) count++;\\n  }\\n  return count;\\n}\\n\\nconsole.log(countVowels(\\\"Hello World\\\")); // 3"
+            "finalCode": "function countVowels(str) {\\n  const vowels = \\\"aeiouAEIOU\\\";\\n  let count = 0;\\n  for (let char of str) {\\n    if (vowels.includes(char)) count++;\\n  }\\n  return count;\\n}\\n\\nconsole.log(countVowels(\\\"Hello World\\\")); // 3",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

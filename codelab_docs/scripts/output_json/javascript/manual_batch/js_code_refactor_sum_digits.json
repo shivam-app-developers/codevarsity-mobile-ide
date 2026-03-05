@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const sumOfDigits = (n) => \\n  n.toString().split('').reduce((acc, digit) => acc + Number(digit), 0);",
                 "explanation": "Converting a number to a string and iterating over its characters is a common but slightly less efficient way to process individual digits in JavaScript compared to mathematical extraction."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

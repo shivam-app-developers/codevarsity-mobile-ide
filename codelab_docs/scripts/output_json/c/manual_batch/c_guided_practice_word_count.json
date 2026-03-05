@@ -8,7 +8,10 @@
             "description": "Count the number of words in a space-separated string.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    bool inWord = false;\\n    while (*str) {\\n        if (*str == ' ' || *str == '\\\\n' || *str == '\\\\t') {\\n            inWord = false;\\n        } else if (!inWord) {\\n            inWord = true;\\n            count++;\\n        }\\n        str++;\\n    }\\n    return count;\\n}\\n\\nint main() {\\n    char text[] = \\\"Hello world from C!\\\";\\n    printf(\\\"Words: %d\\\\n\\\", countWords(text));\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n#include <string.h>\\n#include <stdbool.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    bool inWord = false;\\n    while (*str) {\\n        if (*str == ' ' || *str == '\\\\n' || *str == '\\\\t') {\\n            inWord = false;\\n        } else if (!inWord) {\\n            inWord = true;\\n            count++;\\n        }\\n        str++;\\n    }\\n    return count;\\n}\\n\\nint main() {\\n    char text[] = \\\"Hello world from C!\\\";\\n    printf(\\\"Words: %d\\\\n\\\", countWords(text));\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n#include <string.h>\\n#include <stdbool.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    bool inWord = false;\\n    while (*str) {\\n        if (*str == ' ' || *str == '\\\\n' || *str == '\\\\t') {\\n            inWord = false;\\n        } else if (!inWord) {\\n            inWord = true;\\n            count++;\\n        }\\n        str++;\\n    }\\n    return count;\\n}\\n\\nint main() {\\n    char text[] = \\\"Hello world from C!\\\";\\n    printf(\\\"Words: %d\\\\n\\\", countWords(text));\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

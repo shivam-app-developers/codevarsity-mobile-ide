@@ -10,6 +10,9 @@
             "solution": {
                 "code": "interface Drawable {\n    void draw();\n    default void log() {\n        System.out.println(\"Performing draw operation...\");\n    }\n}\n\nclass Circle implements Drawable {\n    public void draw() {\n        log();\n        System.out.println(\"Circle\");\n    }\n}",
                 "explanation": "Default methods (introduced in Java 8) allow interfaces to provide common logic that implementing classes can use or override."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

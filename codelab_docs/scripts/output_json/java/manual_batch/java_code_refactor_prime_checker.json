@@ -10,6 +10,9 @@
             "solution": {
                 "code": "import java.util.stream.IntStream;\n\npublic class PrimeNumber {\n    public static boolean isPrime(int n) {\n        return n > 1 && IntStream.rangeClosed(2, (int) Math.sqrt(n))\n                 .noneMatch(i -> n % i == 0);\n    }\n}",
                 "explanation": "IntStream allows for a declarative way to express a range of numbers and check a condition across all of them using 'noneMatch'."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

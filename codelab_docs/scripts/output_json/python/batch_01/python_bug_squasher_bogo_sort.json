@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Bogo Sort Infinite Loop Bug",
-      "problemDescription": "The bogo sort algorithm seems to be running infinitely even on very small lists. It seems the condition to stop the shuffling is never met. Find and fix the error in the sorted check.",
-      "language": "python",
-      "buggyCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a)):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([2, 1])}\")",
-      "solution": {
-        "code": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a) - 1):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([2, 1])}\")",
-        "explanation": "The `is_sorted` function had an off-by-one error in its loop range. `range(len(a))` caused an `IndexError` when accessing `a[i+1]` on the last element. In some environments, this might be caught as a logic error or crash the script. The range should be `len(a) - 1`."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bogo Sort Infinite Loop Bug",
+            "problemDescription": "The bogo sort algorithm seems to be running infinitely even on very small lists. It seems the condition to stop the shuffling is never met. Find and fix the error in the sorted check.",
+            "language": "python",
+            "buggyCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a)):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([2, 1])}\")",
+            "solution": {
+                "code": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a) - 1):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([2, 1])}\")",
+                "explanation": "The `is_sorted` function had an off-by-one error in its loop range. `range(len(a))` caused an `IndexError` when accessing `a[i+1]` on the last element. In some environments, this might be caught as a logic error or crash the script. The range should be `len(a) - 1`."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

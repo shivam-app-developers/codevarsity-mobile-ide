@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Climbing Stairs Fibonacci Bug",
-      "problemDescription": "The climbing stairs solution is producing incorrect counts for larger staircases. It seems the state transition in the iterative approach is wrong. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def climb_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a = b\n        b = a + b\n    return b\n\nif __name__ == \"__main__\":\n    print(f\"Ways for 4: {climb_stairs(4)}\")",
-      "solution": {
-        "code": "def climb_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b\n\nif __name__ == \"__main__\":\n    print(f\"Ways for 4: {climb_stairs(4)}\")",
-        "explanation": "The buggy code updated `a` to `b` and THEN used the NEW `a` to calculate the next `b`. This resulted in `b = b + b`, which is incorrect. The updates must happen simultaneously (`a, b = b, a + b`) or using a temporary variable to preserve the old value of `b`."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Climbing Stairs Fibonacci Bug",
+            "problemDescription": "The climbing stairs solution is producing incorrect counts for larger staircases. It seems the state transition in the iterative approach is wrong. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def climb_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a = b\n        b = a + b\n    return b\n\nif __name__ == \"__main__\":\n    print(f\"Ways for 4: {climb_stairs(4)}\")",
+            "solution": {
+                "code": "def climb_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b\n\nif __name__ == \"__main__\":\n    print(f\"Ways for 4: {climb_stairs(4)}\")",
+                "explanation": "The buggy code updated `a` to `b` and THEN used the NEW `a` to calculate the next `b`. This resulted in `b = b + b`, which is incorrect. The updates must happen simultaneously (`a, b = b, a + b`) or using a temporary variable to preserve the old value of `b`."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

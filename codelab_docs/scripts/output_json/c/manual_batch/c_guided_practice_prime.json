@@ -8,7 +8,10 @@
             "description": "Check if a number is prime using a simple loop.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nint main() {\\n    int n = 29;\\n    bool isPrime = true;\\n    if (n < 2) isPrime = false;\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) {\\n            isPrime = false;\\n            break;\\n        }\\n    }\\n    if (isPrime) printf(\\\"%d is prime\\\\n\\\", n);\\n    else printf(\\\"%d is not prime\\\\n\\\", n);\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nint main() {\\n    int n = 29;\\n    bool isPrime = true;\\n    if (n < 2) isPrime = false;\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) {\\n            isPrime = false;\\n            break;\\n        }\\n    }\\n    if (isPrime) printf(\\\"%d is prime\\\\n\\\", n);\\n    else printf(\\\"%d is not prime\\\\n\\\", n);\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nint main() {\\n    int n = 29;\\n    bool isPrime = true;\\n    if (n < 2) isPrime = false;\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) {\\n            isPrime = false;\\n            break;\\n        }\\n    }\\n    if (isPrime) printf(\\\"%d is prime\\\\n\\\", n);\\n    else printf(\\\"%d is not prime\\\\n\\\", n);\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

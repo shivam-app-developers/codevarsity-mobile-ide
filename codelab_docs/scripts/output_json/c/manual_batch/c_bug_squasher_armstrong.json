@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint main() {\\n    int num = 153, originalNum, remainder, result = 0;\\n    originalNum = num;\\n    while (originalNum != 0) {\\n        remainder = originalNum % 10;\\n        result += remainder * remainder * remainder;\\n        originalNum /= 10;\\n    }\\n    if (result == num) printf(\\\"Armstrong\\\\n\\\");\\n    else printf(\\\"Not Armstrong\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "The loop modifies the variable used for calculation. You should store the original value in a separate variable to perform the final comparison correctly."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

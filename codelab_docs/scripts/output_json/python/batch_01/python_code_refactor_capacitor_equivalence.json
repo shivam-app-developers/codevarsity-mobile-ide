@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Using `math.fsum` for Capacitance",
-      "problemDescription": "The provided capacitance calculations use Python's built-in `sum()`. For floating-point numbers, this can sometimes lead to precision errors. Refactor it to use `math.fsum()`, which is more accurate for summing floating-point values.",
-      "language": "python",
-      "initialCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Parallel: {cap_parallel([5.7, 12.3])}\")",
-      "solution": {
-        "code": "import math\n\ndef cap_parallel(caps):\n    return math.fsum(caps)\n\ndef cap_series(caps):\n    return 1 / math.fsum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Parallel: {cap_parallel([5.7, 12.3])}\")",
-        "explanation": "The `math.fsum()` function tracks multiple intermediate partial sums to avoid loss of precision in floating-point addition. This is particularly important when dealing with physical values where high precision might be required across many elements."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Using `math.fsum` for Capacitance",
+            "problemDescription": "The provided capacitance calculations use Python's built-in `sum()`. For floating-point numbers, this can sometimes lead to precision errors. Refactor it to use `math.fsum()`, which is more accurate for summing floating-point values.",
+            "language": "python",
+            "initialCode": "def cap_parallel(caps):\n    return sum(caps)\n\ndef cap_series(caps):\n    return 1 / sum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Parallel: {cap_parallel([5.7, 12.3])}\")",
+            "solution": {
+                "code": "import math\n\ndef cap_parallel(caps):\n    return math.fsum(caps)\n\ndef cap_series(caps):\n    return 1 / math.fsum(1 / c for c in caps)\n\nif __name__ == \"__main__\":\n    print(f\"Parallel: {cap_parallel([5.7, 12.3])}\")",
+                "explanation": "The `math.fsum()` function tracks multiple intermediate partial sums to avoid loss of precision in floating-point addition. This is particularly important when dealing with physical values where high precision might be required across many elements."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

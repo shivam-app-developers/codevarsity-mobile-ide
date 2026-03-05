@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Capitalization Empty String Bug",
-      "problemDescription": "The capitalization function is crashing when an empty string is provided as input. Find and fix the missing safety check.",
-      "language": "python",
-      "buggyCode": "def capitalize(s):\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"Empty: {capitalize('')}\")",
-      "solution": {
-        "code": "def capitalize(s):\n    if not s: return \"\"\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"Empty: {capitalize('')}\")",
-        "explanation": "Accessing `s[0]` on an empty string raises an `IndexError`. We must add a check to see if the string is empty and return it as-is (or an empty string) before attempting to access its first character."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Capitalization Empty String Bug",
+            "problemDescription": "The capitalization function is crashing when an empty string is provided as input. Find and fix the missing safety check.",
+            "language": "python",
+            "buggyCode": "def capitalize(s):\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"Empty: {capitalize('')}\")",
+            "solution": {
+                "code": "def capitalize(s):\n    if not s: return \"\"\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"Empty: {capitalize('')}\")",
+                "explanation": "Accessing `s[0]` on an empty string raises an `IndexError`. We must add a check to see if the string is empty and return it as-is (or an empty string) before attempting to access its first character."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

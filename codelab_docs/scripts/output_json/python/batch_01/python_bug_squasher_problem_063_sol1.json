@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Powerful Digit Counts",
-      "problemDescription": "Fix the logic to find all n-digit numbers that are an nth power.",
-      "language": "python",
-      "buggyCode": "def solution():\n    count = 0\n    # BUG: Searching through bases up to 100 is unnecessary\n    for base in range(1, 100):\n        # BUG: Searching through powers up to 100 is also overkill\n        for n in range(1, 100):\n            # BUG: Digit counting logic might be slow or incorrect\n            if len(str(base**n)) == n:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-      "solution": {
-        "code": "def solution():\n    count = 0\n    # base^n can only have n digits if base < 10\n    # (If base >= 10, then base^n >= 10^n, which has at least n+1 digits)\n    for base in range(1, 10):\n        n = 1\n        while True:\n            # Calculate value and check its length\n            val = base**n\n            if len(str(val)) == n:\n                count += 1\n            elif len(str(val)) < n:\n                # As n increases, base^n grows slower than 10^(n-1)\n                # so once it falls behind, it will never catch up\n                break\n            n += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Powerful Digit Counts",
+            "problemDescription": "Fix the logic to find all n-digit numbers that are an nth power.",
+            "language": "python",
+            "buggyCode": "def solution():\n    count = 0\n    # BUG: Searching through bases up to 100 is unnecessary\n    for base in range(1, 100):\n        # BUG: Searching through powers up to 100 is also overkill\n        for n in range(1, 100):\n            # BUG: Digit counting logic might be slow or incorrect\n            if len(str(base**n)) == n:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "solution": {
+                "code": "def solution():\n    count = 0\n    # base^n can only have n digits if base < 10\n    # (If base >= 10, then base^n >= 10^n, which has at least n+1 digits)\n    for base in range(1, 10):\n        n = 1\n        while True:\n            # Calculate value and check its length\n            val = base**n\n            if len(str(val)) == n:\n                count += 1\n            elif len(str(val)) < n:\n                # As n increases, base^n grows slower than 10^(n-1)\n                # so once it falls behind, it will never catch up\n                break\n            n += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

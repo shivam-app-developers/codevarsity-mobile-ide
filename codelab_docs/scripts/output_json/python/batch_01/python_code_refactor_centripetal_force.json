@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Centripetal Force with Angular Velocity",
-      "problemDescription": "The current function uses tangential velocity `v`. Refactor it to accept angular velocity `ω` instead, using the relationship `v = rω` to derive the force formula `F = mrω²`.",
-      "language": "python",
-      "initialCode": "def get_force_tangential(m, v, r):\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_force_tangential(10, 15, 5)}\")",
-      "solution": {
-        "code": "def get_force_angular(m, omega, r):\n    return m * r * (omega**2)\n\nif __name__ == \"__main__\":\n    print(f\"Force (omega=3): {get_force_angular(10, 3, 5)}\")",
-        "explanation": "Using angular velocity `ω` simplifies the centripetal force calculation in many physical scenarios. Substituting `v = rω` into `mv²/r` gives `m(rω)²/r`, which reduces to `mrω²`. This avoids the division by `r` in the final calculation."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Centripetal Force with Angular Velocity",
+            "problemDescription": "The current function uses tangential velocity `v`. Refactor it to accept angular velocity `\u03c9` instead, using the relationship `v = r\u03c9` to derive the force formula `F = mr\u03c9\u00b2`.",
+            "language": "python",
+            "initialCode": "def get_force_tangential(m, v, r):\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_force_tangential(10, 15, 5)}\")",
+            "solution": {
+                "code": "def get_force_angular(m, omega, r):\n    return m * r * (omega**2)\n\nif __name__ == \"__main__\":\n    print(f\"Force (omega=3): {get_force_angular(10, 3, 5)}\")",
+                "explanation": "Using angular velocity `\u03c9` simplifies the centripetal force calculation in many physical scenarios. Substituting `v = r\u03c9` into `mv\u00b2/r` gives `m(r\u03c9)\u00b2/r`, which reduces to `mr\u03c9\u00b2`. This avoids the division by `r` in the final calculation."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

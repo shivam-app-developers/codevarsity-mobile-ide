@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Aliquot Sum Calculation",
-      "description": "Calculate the aliquot sum of a positive integer, which is the sum of its proper divisors.",
-      "language": "python",
-      "ghostCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    divisors = [i for i in range(1, n // 2 + 1) if n % i == 0]\n    return sum(divisors)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 15: {aliquot_sum(15)}\")",
-      "finalCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    divisors = [i for i in range(1, n // 2 + 1) if n % i == 0]\n    return sum(divisors)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 15: {aliquot_sum(15)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Aliquot Sum Calculation",
+            "description": "Calculate the aliquot sum of a positive integer, which is the sum of its proper divisors.",
+            "language": "python",
+            "ghostCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    divisors = [i for i in range(1, n // 2 + 1) if n % i == 0]\n    return sum(divisors)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 15: {aliquot_sum(15)}\")",
+            "finalCode": "def aliquot_sum(n):\n    if not isinstance(n, int) or n <= 0:\n        return 0\n    divisors = [i for i in range(1, n // 2 + 1) if n % i == 0]\n    return sum(divisors)\n\nif __name__ == \"__main__\":\n    print(f\"Aliquot sum of 15: {aliquot_sum(15)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

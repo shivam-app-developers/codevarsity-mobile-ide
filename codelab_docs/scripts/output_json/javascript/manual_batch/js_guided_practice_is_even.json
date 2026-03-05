@@ -8,7 +8,10 @@
             "description": "Check if a number is even using the modulo operator.",
             "language": "javascript",
             "ghostCode": "function isEven(number) {\\n  return number % 2 === 0;\\n}\\n\\nconsole.log(isEven(4)); // true\\nconsole.log(isEven(7)); // false",
-            "finalCode": "function isEven(number) {\\n  return number % 2 === 0;\\n}\\n\\nconsole.log(isEven(4)); // true\\nconsole.log(isEven(7)); // false"
+            "finalCode": "function isEven(number) {\\n  return number % 2 === 0;\\n}\\n\\nconsole.log(isEven(4)); // true\\nconsole.log(isEven(7)); // false",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Clean Bogo Sort Check",
-      "problemDescription": "The provided bogo sort uses a manual loop for the sorted check. Refactor it to use Python's built-in `all()` function and a generator expression for a more concise and readable implementation.",
-      "language": "python",
-      "initialCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a) - 1):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")",
-      "solution": {
-        "code": "import random\n\ndef bogo_sort(arr):\n    while any(arr[i] > arr[i+1] for i in range(len(arr)-1)):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")",
-        "explanation": "Using `any()` with a generator expression allows us to express the 'is not sorted' condition in a single line. It's more idiomatic Python and avoids the overhead of a nested function definition."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Clean Bogo Sort Check",
+            "problemDescription": "The provided bogo sort uses a manual loop for the sorted check. Refactor it to use Python's built-in `all()` function and a generator expression for a more concise and readable implementation.",
+            "language": "python",
+            "initialCode": "import random\n\ndef bogo_sort(arr):\n    def is_sorted(a):\n        for i in range(len(a) - 1):\n            if a[i] > a[i+1]: return False\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")",
+            "solution": {
+                "code": "import random\n\ndef bogo_sort(arr):\n    while any(arr[i] > arr[i+1] for i in range(len(arr)-1)):\n        random.shuffle(arr)\n    return arr\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bogo_sort([3, 1, 2])}\")",
+                "explanation": "Using `any()` with a generator expression allows us to express the 'is not sorted' condition in a single line. It's more idiomatic Python and avoids the overhead of a nested function definition."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const mean = (arr) => arr.length === 0 ? 0 : arr.reduce((a, b) => a + b) / arr.length;",
                 "explanation": "Using a ternary operator and the `reduce` method allows for a very concise implementation of common mathematical aggregates like the mean."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

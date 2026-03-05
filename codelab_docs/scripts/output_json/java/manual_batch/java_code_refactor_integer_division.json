@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class IntegerDivision {\n    public static void main(String[] args) {\n        double result = 5.0 / 2;\n        System.out.println(result);\n    }\n}",
                 "explanation": "Using a floating-point literal (like 5.0) automatically promotes the operation to double precision, making the code cleaner than an explicit cast."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

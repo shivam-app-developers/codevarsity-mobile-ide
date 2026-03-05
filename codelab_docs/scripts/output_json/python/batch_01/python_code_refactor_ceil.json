@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Using `math.ceil()` Built-in",
-      "problemDescription": "The provided code manually implements the ceiling logic using type casting and comparisons. Refactor it to use Python's built-in `math.ceil()` function, which is the standard, most efficient, and reliable way to perform this operation.",
-      "language": "python",
-      "initialCode": "def manual_ceil(x):\n    return int(x) if x <= int(x) else int(x) + 1\n\nif __name__ == \"__main__\":\n    print(f\"Ceil: {manual_ceil(1.1)}\")",
-      "solution": {
-        "code": "import math\n\ndef fast_ceil(x):\n    return math.ceil(x)\n\nif __name__ == \"__main__\":\n    print(f\"Ceil: {fast_ceil(1.1)}\")",
-        "explanation": "Python's `math.ceil()` is implemented in C and handles all edge cases (like extremely large floats or negative values) correctly and efficiently. Using standard library functions is preferred for clarity and performance."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Using `math.ceil()` Built-in",
+            "problemDescription": "The provided code manually implements the ceiling logic using type casting and comparisons. Refactor it to use Python's built-in `math.ceil()` function, which is the standard, most efficient, and reliable way to perform this operation.",
+            "language": "python",
+            "initialCode": "def manual_ceil(x):\n    return int(x) if x <= int(x) else int(x) + 1\n\nif __name__ == \"__main__\":\n    print(f\"Ceil: {manual_ceil(1.1)}\")",
+            "solution": {
+                "code": "import math\n\ndef fast_ceil(x):\n    return math.ceil(x)\n\nif __name__ == \"__main__\":\n    print(f\"Ceil: {fast_ceil(1.1)}\")",
+                "explanation": "Python's `math.ceil()` is implemented in C and handles all edge cases (like extremely large floats or negative values) correctly and efficiently. Using standard library functions is preferred for clarity and performance."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

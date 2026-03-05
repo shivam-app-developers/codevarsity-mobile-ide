@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }\\n\\n#define LCM(a, b) ((a && b) ? ((a / gcd(a, b)) * b) : 0)\\n\\nint main() {\\n    printf(\\\"%d\\\\n\\\", LCM(12, 18));\\n    return 0;\\n}",
                 "explanation": "A macro can provide a concise way to represent simple formulas, though functions are generally preferred for type safety. We also added a check for zero."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -10,7 +10,7 @@
             "ghostCode": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int score = 1;\n        switch (score) {\n            case 1:\n                System.out.println(\"Gold\");\n                break;\n            case 2:\n                System.out.println(\"Silver\");\n                break;\n        }\n    }\n}",
             "finalCode": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int score = 1;\n        switch (score) {\n            case 1:\n                System.out.println(\"Gold\");\n                break;\n            case 2:\n                System.out.println(\"Silver\");\n                break;\n        }\n    }\n}",
             "validation": {
-                "pattern": "Gold"
+                "type": "run_code"
             }
         }
     }

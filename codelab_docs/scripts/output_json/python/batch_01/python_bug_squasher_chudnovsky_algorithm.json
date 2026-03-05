@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Chudnovsky PI Precision Bug",
-      "problemDescription": "The Chudnovsky algorithm implementation is not returning the requested number of digits. It seems the decimal context or the final string slicing is incorrect. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "from decimal import Decimal, getcontext\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = 10\n    C = 426880 * Decimal(10005).sqrt()\n    S = Decimal(13591409)\n    return str(C / S)\n\nif __name__ == \"__main__\":\n    print(f\"PI (20 digits): {chudnovsky_pi(20)}\")",
-      "solution": {
-        "code": "from decimal import Decimal, getcontext\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    C = 426880 * Decimal(10005).sqrt()\n    S = Decimal(13591409)\n    return str(C / S)[:prec+2]\n\nif __name__ == \"__main__\":\n    print(f\"PI (20 digits): {chudnovsky_pi(20)}\")",
-        "explanation": "To calculate PI to a specific precision using the `decimal` module, you must set `getcontext().prec` to at least the desired number of digits. The buggy code had a hardcoded precision of 10, which ignored the input parameter."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Chudnovsky PI Precision Bug",
+            "problemDescription": "The Chudnovsky algorithm implementation is not returning the requested number of digits. It seems the decimal context or the final string slicing is incorrect. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "from decimal import Decimal, getcontext\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = 10\n    C = 426880 * Decimal(10005).sqrt()\n    S = Decimal(13591409)\n    return str(C / S)\n\nif __name__ == \"__main__\":\n    print(f\"PI (20 digits): {chudnovsky_pi(20)}\")",
+            "solution": {
+                "code": "from decimal import Decimal, getcontext\n\ndef chudnovsky_pi(prec):\n    getcontext().prec = prec + 2\n    C = 426880 * Decimal(10005).sqrt()\n    S = Decimal(13591409)\n    return str(C / S)[:prec+2]\n\nif __name__ == \"__main__\":\n    print(f\"PI (20 digits): {chudnovsky_pi(20)}\")",
+                "explanation": "To calculate PI to a specific precision using the `decimal` module, you must set `getcontext().prec` to at least the desired number of digits. The buggy code had a hardcoded precision of 10, which ignored the input parameter."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

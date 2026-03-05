@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Pentagon Numbers",
-      "problemDescription": "Refactor the pentagonal search to use a set for O(1) lookups and more robust checks.",
-      "language": "python",
-      "initialCode": "import math\ndef is_pentagonal(n):\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution():\n    p = []\n    i = 1\n    while True:\n        pi = i * (3 * i - 1) // 2\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1",
-      "solution": {
-        "code": "def solution():\n    \"\"\"\n    Highly optimized search using a set for O(1) lookups and generating pentagonal numbers incrementally.\n    \"\"\"\n    p_set = set()\n    i = 1\n    while True:\n        pi = i * (3 * i - 1) // 2\n        # Loop through existing pentagonal numbers to find a valid pair\n        for pj in p_set:\n            # Condition: sum and difference must be pentagonal\n            if (pi - pj) in p_set and is_pentagonal(pi + pj):\n                return pi - pj\n            # Alternative check to ensure we catch pairs in either order\n            # though the current loop order usually finds it first\n        \n        # Mathematical check for sum is often faster than generating it and looking it up\n        # if we haven't reached that value yet.\n        p_set.add(pi)\n        i += 1\n\ndef is_pentagonal(n):\n    if n < 0: return False\n    # Use integer-only checks where possible or epsilon for floats\n    test = (24 * n + 1)**0.5\n    return test % 6 == 5\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Using a set for lookups changes the search from O(n^2) to O(n) average case per new pentagonal number. The optimized `is_pentagonal` uses `test % 6 == 5` which is equivalent to `(test + 1) % 6 == 0`."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Pentagon Numbers",
+            "problemDescription": "Refactor the pentagonal search to use a set for O(1) lookups and more robust checks.",
+            "language": "python",
+            "initialCode": "import math\ndef is_pentagonal(n):\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution():\n    p = []\n    i = 1\n    while True:\n        pi = i * (3 * i - 1) // 2\n        for pj in reversed(p):\n            if is_pentagonal(pi - pj) and is_pentagonal(pi + pj):\n                return pi - pj\n        p.append(pi)\n        i += 1",
+            "solution": {
+                "code": "def solution():\n    \"\"\"\n    Highly optimized search using a set for O(1) lookups and generating pentagonal numbers incrementally.\n    \"\"\"\n    p_set = set()\n    i = 1\n    while True:\n        pi = i * (3 * i - 1) // 2\n        # Loop through existing pentagonal numbers to find a valid pair\n        for pj in p_set:\n            # Condition: sum and difference must be pentagonal\n            if (pi - pj) in p_set and is_pentagonal(pi + pj):\n                return pi - pj\n            # Alternative check to ensure we catch pairs in either order\n            # though the current loop order usually finds it first\n        \n        # Mathematical check for sum is often faster than generating it and looking it up\n        # if we haven't reached that value yet.\n        p_set.add(pi)\n        i += 1\n\ndef is_pentagonal(n):\n    if n < 0: return False\n    # Use integer-only checks where possible or epsilon for floats\n    test = (24 * n + 1)**0.5\n    return test % 6 == 5\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Using a set for lookups changes the search from O(n^2) to O(n) average case per new pentagonal number. The optimized `is_pentagonal` uses `test % 6 == 5` which is equivalent to `(test + 1) % 6 == 0`."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

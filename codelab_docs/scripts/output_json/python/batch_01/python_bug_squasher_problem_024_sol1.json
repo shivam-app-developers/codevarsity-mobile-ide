@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Millionth Lexicographic Permutation",
-      "problemDescription": "Fix the code to correctly find the millionth permutation without running out of memory.",
-      "language": "python",
-      "buggyCode": "from itertools import permutations\n\n\ndef solution():\n    # BUG: Generating all permutations in a list is extremely memory-intensive (10! = 3,628,800)\n    digits = \"0123456789\"\n    perms = list(permutations(digits))\n    # BUG: Indexing might be off if not 0-indexed correctly\n    return \"\".join(perms[1000000])\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-      "solution": {
-        "code": "from itertools import permutations, islice\n\n\ndef solution():\n    # Use islice to iterate directly to the 1,000,000th permutation\n    # without storing all of them in memory.\n    digits = \"0123456789\"\n    # 1,000,000th permutation is at index 999,999\n    target = islice(permutations(digits), 999999, 1000000)\n    return \"\".join(next(target))\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Millionth Lexicographic Permutation",
+            "problemDescription": "Fix the code to correctly find the millionth permutation without running out of memory.",
+            "language": "python",
+            "buggyCode": "from itertools import permutations\n\n\ndef solution():\n    # BUG: Generating all permutations in a list is extremely memory-intensive (10! = 3,628,800)\n    digits = \"0123456789\"\n    perms = list(permutations(digits))\n    # BUG: Indexing might be off if not 0-indexed correctly\n    return \"\".join(perms[1000000])\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "solution": {
+                "code": "from itertools import permutations, islice\n\n\ndef solution():\n    # Use islice to iterate directly to the 1,000,000th permutation\n    # without storing all of them in memory.\n    digits = \"0123456789\"\n    # 1,000,000th permutation is at index 999,999\n    target = islice(permutations(digits), 999999, 1000000)\n    return \"\".join(next(target))\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

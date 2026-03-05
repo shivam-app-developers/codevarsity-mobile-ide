@@ -1,14 +1,17 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Directory Index Generator",
-      "description": "Generate a Markdown index for a directory structure, excluding specific files and folders.",
-      "language": "python",
-      "ghostCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith(('.', '_')) and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py') and f != '__init__.py':\n                depth = root.count(os.sep)\n                prefix = '  ' * depth + '* '\n                print(f\"{prefix}[{f}]({os.path.join(root, f)})\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
-      "finalCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith(('.', '_')) and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py') and f != '__init__.py':\n                depth = root.count(os.sep)\n                prefix = '  ' * depth + '* '\n                print(f\"{prefix}[{f}]({os.path.join(root, f)})\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Directory Index Generator",
+            "description": "Generate a Markdown index for a directory structure, excluding specific files and folders.",
+            "language": "python",
+            "ghostCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith(('.', '_')) and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py') and f != '__init__.py':\n                depth = root.count(os.sep)\n                prefix = '  ' * depth + '* '\n                print(f\"{prefix}[{f}]({os.path.join(root, f)})\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+            "finalCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith(('.', '_')) and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py') and f != '__init__.py':\n                depth = root.count(os.sep)\n                prefix = '  ' * depth + '* '\n                print(f\"{prefix}[{f}]({os.path.join(root, f)})\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

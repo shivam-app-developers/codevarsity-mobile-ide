@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Automorphic Number Identification",
-      "description": "Determine if a number is automorphic, meaning its square ends with the same digits as the number itself.",
-      "language": "python",
-      "ghostCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")\n    print(f\"7: {is_automorphic(7)}\")",
-      "finalCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")\n    print(f\"7: {is_automorphic(7)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Automorphic Number Identification",
+            "description": "Determine if a number is automorphic, meaning its square ends with the same digits as the number itself.",
+            "language": "python",
+            "ghostCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")\n    print(f\"7: {is_automorphic(7)}\")",
+            "finalCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10:\n            return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"5: {is_automorphic(5)}\")\n    print(f\"7: {is_automorphic(7)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

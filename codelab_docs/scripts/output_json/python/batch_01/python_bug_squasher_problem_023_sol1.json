@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Sum of Non-Abundant Sums",
-      "problemDescription": "Fix the logic to correctly identify abundant numbers and calculate the sum of non-abundant sums.",
-      "language": "python",
-      "buggyCode": "def solution(limit: int = 28123) -> int:\n    sum_divs = [1] * (limit + 1)\n    for i in range(2, limit):\n        # BUG: Incorrect sieve logic for summing divisors\n        for j in range(i, limit, i):\n            sum_divs[j] += i\n            \n    abundants = [i for i, s in enumerate(sum_divs) if s > i]\n    \n    # BUG: result logic is missing or incorrect\n    res = 0\n    for n in range(1, limit + 1):\n        if n not in abundants: # This is not the correct condition\n            res += n\n    return res",
-      "solution": {
-        "code": "def solution(limit: int = 28123) -> int:\n    # Correctly compute sum of proper divisors for all n up to limit\n    sum_divs = [0] * (limit + 1)\n    for i in range(1, limit // 2 + 1):\n        for j in range(2 * i, limit + 1, i):\n            sum_divs[j] += i\n            \n    abundants = [i for i, s in enumerate(sum_divs) if s > i]\n    \n    is_abundant_sum = [False] * (limit + 1)\n    for i in range(len(abundants)):\n        for j in range(i, len(abundants)):\n            s = abundants[i] + abundants[j]\n            if s <= limit:\n                is_abundant_sum[s] = True\n            else:\n                break\n                \n    return sum(i for i in range(1, limit + 1) if not is_abundant_sum[i])\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Sum of Non-Abundant Sums",
+            "problemDescription": "Fix the logic to correctly identify abundant numbers and calculate the sum of non-abundant sums.",
+            "language": "python",
+            "buggyCode": "def solution(limit: int = 28123) -> int:\n    sum_divs = [1] * (limit + 1)\n    for i in range(2, limit):\n        # BUG: Incorrect sieve logic for summing divisors\n        for j in range(i, limit, i):\n            sum_divs[j] += i\n            \n    abundants = [i for i, s in enumerate(sum_divs) if s > i]\n    \n    # BUG: result logic is missing or incorrect\n    res = 0\n    for n in range(1, limit + 1):\n        if n not in abundants: # This is not the correct condition\n            res += n\n    return res",
+            "solution": {
+                "code": "def solution(limit: int = 28123) -> int:\n    # Correctly compute sum of proper divisors for all n up to limit\n    sum_divs = [0] * (limit + 1)\n    for i in range(1, limit // 2 + 1):\n        for j in range(2 * i, limit + 1, i):\n            sum_divs[j] += i\n            \n    abundants = [i for i, s in enumerate(sum_divs) if s > i]\n    \n    is_abundant_sum = [False] * (limit + 1)\n    for i in range(len(abundants)):\n        for j in range(i, len(abundants)):\n            s = abundants[i] + abundants[j]\n            if s <= limit:\n                is_abundant_sum[s] = True\n            else:\n                break\n                \n    return sum(i for i in range(1, limit + 1) if not is_abundant_sum[i])\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

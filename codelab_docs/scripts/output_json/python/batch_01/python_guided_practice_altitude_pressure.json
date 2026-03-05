@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Altitude from Pressure",
-      "description": "Approximate altitude using the Barometric formula based on measured atmospheric pressure.",
-      "language": "python",
-      "ghostCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
-      "finalCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Altitude from Pressure",
+            "description": "Approximate altitude using the Barometric formula based on measured atmospheric pressure.",
+            "language": "python",
+            "ghostCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
+            "finalCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

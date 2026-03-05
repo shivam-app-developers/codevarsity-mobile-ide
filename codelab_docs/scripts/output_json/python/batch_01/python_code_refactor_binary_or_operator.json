@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Binary OR with `|`",
-      "problemDescription": "The provided code manually performs bitwise OR by iterating over strings. Refactor it to use Python's built-in `|` operator, which is the standard and most efficient way to perform bitwise operations.",
-      "language": "python",
-      "initialCode": "def binary_or(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == '1' or cb == '1') else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
-      "solution": {
-        "code": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
-        "explanation": "Python's `|` operator performs bitwise OR directly on integers at the hardware level, making it extremely efficient. Converting the result to a string using `bin()` is the idiomatic way to get the binary representation."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Binary OR with `|`",
+            "problemDescription": "The provided code manually performs bitwise OR by iterating over strings. Refactor it to use Python's built-in `|` operator, which is the standard and most efficient way to perform bitwise operations.",
+            "language": "python",
+            "initialCode": "def binary_or(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == '1' or cb == '1') else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
+            "solution": {
+                "code": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
+                "explanation": "Python's `|` operator performs bitwise OR directly on integers at the hardware level, making it extremely efficient. Converting the result to a string using `bin()` is the idiomatic way to get the binary representation."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

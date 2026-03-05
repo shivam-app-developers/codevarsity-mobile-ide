@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Centripetal Force Velocity Bug",
-      "problemDescription": "The centripetal force calculation is failing to scale correctly when velocity changes. It seems the relationship between velocity and force is being handled incorrectly in the code. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def get_centripetal_force(m, v, r):\n    return (m * v) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force (v=10): {get_centripetal_force(1, 10, 1)}\")",
-      "solution": {
-        "code": "def get_centripetal_force(m, v, r):\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force (v=10): {get_centripetal_force(1, 10, 1)}\")",
-        "explanation": "Centripetal force is proportional to the SQUARE of the velocity (`mv²/r`). The buggy code used linear velocity (`mv/r`), which is the formula for momentum over radius, not force."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Centripetal Force Velocity Bug",
+            "problemDescription": "The centripetal force calculation is failing to scale correctly when velocity changes. It seems the relationship between velocity and force is being handled incorrectly in the code. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def get_centripetal_force(m, v, r):\n    return (m * v) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force (v=10): {get_centripetal_force(1, 10, 1)}\")",
+            "solution": {
+                "code": "def get_centripetal_force(m, v, r):\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force (v=10): {get_centripetal_force(1, 10, 1)}\")",
+                "explanation": "Centripetal force is proportional to the SQUARE of the velocity (`mv\u00b2/r`). The buggy code used linear velocity (`mv/r`), which is the formula for momentum over radius, not force."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

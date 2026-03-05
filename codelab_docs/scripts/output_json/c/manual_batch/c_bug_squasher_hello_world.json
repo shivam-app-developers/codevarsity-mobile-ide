@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint main() {\\n    printf(\\\"Hello, World!\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "In C, every statement must end with a semicolon (`;`)."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

@@ -10,7 +10,7 @@
             "ghostCode": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int x = 10;\n        double y = 4.0;\n        double result = x / y;\n        System.out.println(\"Result: \" + result);\n    }\n}",
             "finalCode": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int x = 10;\n        double y = 4.0;\n        double result = x / y;\n        System.out.println(\"Result: \" + result);\n    }\n}",
             "validation": {
-                "pattern": "Result: 2.5"
+                "type": "run_code"
             }
         }
     }

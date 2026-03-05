@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    public static synchronized SingletonPattern getInstance() {\n        if (instance == null) {\n            instance = new SingletonPattern();\n        }\n        return instance;\n    }\n}",
                 "explanation": "Using 'synchronized' on the 'getInstance()' method ensures that only one thread can execute the initialization logic at a time, preventing multiple instances from being created."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

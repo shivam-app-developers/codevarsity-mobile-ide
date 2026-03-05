@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Atbash with `maketrans`",
-      "problemDescription": "The provided Atbash implementation uses a `for` loop and character-by-character appending. Refactor it to use Python's built-in `str.maketrans()` and `str.translate()` methods, which are more idiomatic and faster for bulk character mapping.",
-      "language": "python",
-      "initialCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    return \"\".join(\n        reversed_letters[letters.index(c)] if c in letters else c for c in text\n    )\n\nif __name__ == \"__main__\":\n    print(f\"'ABCabc' -> {atbash('ABCabc')}\")",
-      "solution": {
-        "code": "import string\n\ndef atbash(text):\n    lowers = string.ascii_lowercase\n    uppers = string.ascii_uppercase\n    mapping = str.maketrans(\n        lowers + uppers, lowers[::-1] + uppers[::-1]\n    )\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABCabc' -> {atbash('ABCabc')}\")",
-        "explanation": "By using `str.maketrans()` and `str.translate()`, we avoid the overhead of a Python loop and character indexing for each character in the string. This is a much more efficient and idiomatic way to handle character-level translations in Python."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Atbash with `maketrans`",
+            "problemDescription": "The provided Atbash implementation uses a `for` loop and character-by-character appending. Refactor it to use Python's built-in `str.maketrans()` and `str.translate()` methods, which are more idiomatic and faster for bulk character mapping.",
+            "language": "python",
+            "initialCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    return \"\".join(\n        reversed_letters[letters.index(c)] if c in letters else c for c in text\n    )\n\nif __name__ == \"__main__\":\n    print(f\"'ABCabc' -> {atbash('ABCabc')}\")",
+            "solution": {
+                "code": "import string\n\ndef atbash(text):\n    lowers = string.ascii_lowercase\n    uppers = string.ascii_uppercase\n    mapping = str.maketrans(\n        lowers + uppers, lowers[::-1] + uppers[::-1]\n    )\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABCabc' -> {atbash('ABCabc')}\")",
+                "explanation": "By using `str.maketrans()` and `str.translate()`, we avoid the overhead of a Python loop and character indexing for each character in the string. This is a much more efficient and idiomatic way to handle character-level translations in Python."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

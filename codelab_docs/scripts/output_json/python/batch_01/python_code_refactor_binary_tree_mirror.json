@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Iterative Tree Mirroring",
-      "problemDescription": "The provided code uses recursion to mirror a binary tree. Refactor it to use an iterative approach using a stack or queue, which can avoid recursion depth limits for very large trees.",
-      "language": "python",
-      "initialCode": "def mirror_tree(tree, root):\n    if not root or root not in tree: return\n    tree[root] = tree[root][::-1]\n    mirror_tree(tree, tree[root][1])\n    mirror_tree(tree, tree[root][0])\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5]}\n    mirror_tree(tree, 1)\n    print(tree)",
-      "solution": {
-        "code": "def mirror_tree(tree, root):\n    stack = [root]\n    while stack:\n        node = stack.pop()\n        if node in tree:\n            left, right = tree[node]\n            tree[node] = [right, left]\n            stack.extend([left, right])\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5]}\n    mirror_tree(tree, 1)\n    print(tree)",
-        "explanation": "An iterative approach using a stack performs a Depth-First Traversal of the tree. It achieves the same result as recursion but uses explicit memory on the heap instead of the call stack, providing more control and avoiding potential stack overflow."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Iterative Tree Mirroring",
+            "problemDescription": "The provided code uses recursion to mirror a binary tree. Refactor it to use an iterative approach using a stack or queue, which can avoid recursion depth limits for very large trees.",
+            "language": "python",
+            "initialCode": "def mirror_tree(tree, root):\n    if not root or root not in tree: return\n    tree[root] = tree[root][::-1]\n    mirror_tree(tree, tree[root][1])\n    mirror_tree(tree, tree[root][0])\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5]}\n    mirror_tree(tree, 1)\n    print(tree)",
+            "solution": {
+                "code": "def mirror_tree(tree, root):\n    stack = [root]\n    while stack:\n        node = stack.pop()\n        if node in tree:\n            left, right = tree[node]\n            tree[node] = [right, left]\n            stack.extend([left, right])\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5]}\n    mirror_tree(tree, 1)\n    print(tree)",
+                "explanation": "An iterative approach using a stack performs a Depth-First Traversal of the tree. It achieves the same result as recursion but uses explicit memory on the heap instead of the call stack, providing more control and avoiding potential stack overflow."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

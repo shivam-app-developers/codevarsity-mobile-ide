@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Atbash Cipher Offset Bug",
-      "problemDescription": "The Atbash cipher is supposed to map 'A' to 'Z' and 'a' to 'z'. However, the mapping for lowercase letters seems to be slightly off. Identify and fix the logic bug.",
-      "language": "python",
-      "buggyCode": "def atbash(text):\n    output = \"\"\n    for char in text:\n        val = ord(char)\n        if 65 <= val <= 90: # A-Z\n            output += chr(155 - val)\n        elif 97 <= val <= 122: # a-z\n            output += chr(218 - val)\n        else:\n            output += char\n    return output\n\nif __name__ == \"__main__\":\n    print(f\"'abc' -> {atbash('abc')}\")",
-      "solution": {
-        "code": "def atbash(text):\n    output = \"\"\n    for char in text:\n        val = ord(char)\n        if 65 <= val <= 90: # A-Z\n            output += chr(155 - val)\n        elif 97 <= val <= 122: # a-z\n            output += chr(219 - val)\n        else:\n            output += char\n    return output\n\nif __name__ == \"__main__\":\n    print(f\"'abc' -> {atbash('abc')}\")",
-        "explanation": "In Atbash, the sum of the ASCII values of a character and its replacement is constant. For lowercase ('a'=97, 'z'=122), 97 + 122 = 219. The buggy code used 218, which caused all lowercase characters to be shifted by one position incorrectly (e.g., 'a' mapped to 'y' instead of 'z')."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Atbash Cipher Offset Bug",
+            "problemDescription": "The Atbash cipher is supposed to map 'A' to 'Z' and 'a' to 'z'. However, the mapping for lowercase letters seems to be slightly off. Identify and fix the logic bug.",
+            "language": "python",
+            "buggyCode": "def atbash(text):\n    output = \"\"\n    for char in text:\n        val = ord(char)\n        if 65 <= val <= 90: # A-Z\n            output += chr(155 - val)\n        elif 97 <= val <= 122: # a-z\n            output += chr(218 - val)\n        else:\n            output += char\n    return output\n\nif __name__ == \"__main__\":\n    print(f\"'abc' -> {atbash('abc')}\")",
+            "solution": {
+                "code": "def atbash(text):\n    output = \"\"\n    for char in text:\n        val = ord(char)\n        if 65 <= val <= 90: # A-Z\n            output += chr(155 - val)\n        elif 97 <= val <= 122: # a-z\n            output += chr(219 - val)\n        else:\n            output += char\n    return output\n\nif __name__ == \"__main__\":\n    print(f\"'abc' -> {atbash('abc')}\")",
+                "explanation": "In Atbash, the sum of the ASCII values of a character and its replacement is constant. For lowercase ('a'=97, 'z'=122), 97 + 122 = 219. The buggy code used 218, which caused all lowercase characters to be shifted by one position incorrectly (e.g., 'a' mapped to 'y' instead of 'z')."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

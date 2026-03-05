@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Anagram Signature",
-      "problemDescription": "The current `get_signature` function manually builds the frequency string using a loop. Refactor it to use a more concise approach like sorting the lowercase string directly for simpler anagram identification.",
-      "language": "python",
-      "initialCode": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word.lower())\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")",
-      "solution": {
-        "code": "def get_signature(word):\n    return \"\".join(sorted(word.lower()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")",
-        "explanation": "Simply sorting the characters of the lowercase word is an efficient and clean way to generate a canonical signature for anagram detection. All anagrams will have the same sorted character sequence, making comparison straightforward."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Anagram Signature",
+            "problemDescription": "The current `get_signature` function manually builds the frequency string using a loop. Refactor it to use a more concise approach like sorting the lowercase string directly for simpler anagram identification.",
+            "language": "python",
+            "initialCode": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word.lower())\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")",
+            "solution": {
+                "code": "def get_signature(word):\n    return \"\".join(sorted(word.lower()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")",
+                "explanation": "Simply sorting the characters of the lowercase word is an efficient and clean way to generate a canonical signature for anagram detection. All anagrams will have the same sorted character sequence, making comparison straightforward."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

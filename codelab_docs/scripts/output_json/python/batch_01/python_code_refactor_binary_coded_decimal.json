@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing BCD with `format`",
-      "problemDescription": "The provided BCD implementation uses `bin()` and `zfill()`. Refactor it to use Python's `format()` function with a custom format string, which can handle both conversion and padding in a single, more concise step.",
-      "language": "python",
-      "initialCode": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(bin(int(d))[2:].zfill(4) for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"BCD: {to_bcd(123)}\")",
-      "solution": {
-        "code": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(format(int(d), \"04b\") for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"BCD: {to_bcd(123)}\")",
-        "explanation": "Using `format(digit, '04b')` is the most Pythonic and efficient way to convert an integer to a binary string of a specific width (4 in this case) with leading zeros. It replaces the multi-step `bin()[2:].zfill()` process with a single optimized call."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing BCD with `format`",
+            "problemDescription": "The provided BCD implementation uses `bin()` and `zfill()`. Refactor it to use Python's `format()` function with a custom format string, which can handle both conversion and padding in a single, more concise step.",
+            "language": "python",
+            "initialCode": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(bin(int(d))[2:].zfill(4) for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"BCD: {to_bcd(123)}\")",
+            "solution": {
+                "code": "def to_bcd(n):\n    if n < 0: n = 0\n    return \"0b\" + \"\".join(format(int(d), \"04b\") for d in str(n))\n\nif __name__ == \"__main__\":\n    print(f\"BCD: {to_bcd(123)}\")",
+                "explanation": "Using `format(digit, '04b')` is the most Pythonic and efficient way to convert an integer to a binary string of a specific width (4 in this case) with leading zeros. It replaces the multi-step `bin()[2:].zfill()` process with a single optimized call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

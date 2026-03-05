@@ -10,6 +10,9 @@
             "solution": {
                 "code": "final class Config {\n    public static final int MAX_USERS = 100;\n    private Config() {} // Prevent instantiation\n}\n\npublic class FinalVariable {\n    public static void main(String[] args) {\n        System.out.println(Config.MAX_USERS);\n    }\n}",
                 "explanation": "Using a final class with static final fields is a common pattern for managing global constants in Java projects."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

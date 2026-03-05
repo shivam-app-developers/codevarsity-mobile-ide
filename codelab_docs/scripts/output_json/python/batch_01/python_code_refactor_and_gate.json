@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Multi-Input AND Gate",
-      "problemDescription": "The provided multi-input AND gate uses Python's built-in `all()`. Refactor it to implement the logic using a manual `for` loop for better understanding of the short-circuiting behavior.",
-      "language": "python",
-      "initialCode": "def n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
-      "solution": {
-        "code": "def n_input_and_gate(inputs):\n    for item in inputs:\n        if not item:\n            return 0\n    return 1\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
-        "explanation": "This manual loop clearly shows the short-circuit behavior: as soon as we find a 0 (False), we can immediately return 0 without checking the rest of the inputs. This is exactly what the built-in `all()` function does internally in C."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Multi-Input AND Gate",
+            "problemDescription": "The provided multi-input AND gate uses Python's built-in `all()`. Refactor it to implement the logic using a manual `for` loop for better understanding of the short-circuiting behavior.",
+            "language": "python",
+            "initialCode": "def n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
+            "solution": {
+                "code": "def n_input_and_gate(inputs):\n    for item in inputs:\n        if not item:\n            return 0\n    return 1\n\nif __name__ == \"__main__\":\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
+                "explanation": "This manual loop clearly shows the short-circuit behavior: as soon as we find a 0 (False), we can immediately return 0 without checking the rest of the inputs. This is exactly what the built-in `all()` function does internally in C."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

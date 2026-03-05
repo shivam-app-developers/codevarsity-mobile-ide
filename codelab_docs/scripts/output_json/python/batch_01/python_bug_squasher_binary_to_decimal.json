@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Binary to Decimal Base Bug",
-      "problemDescription": "The manual binary to decimal conversion is producing incorrect results. It seems the power-of-two weighting is being applied incorrectly in the loop. Find and fix the bug.",
-      "language": "python",
-      "buggyCode": "def bin_to_dec(s):\n    res = 0\n    for char in s:\n        res = res * 10 + int(char)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")",
-      "solution": {
-        "code": "def bin_to_dec(s):\n    res = 0\n    for char in s:\n        res = res * 2 + int(char)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")",
-        "explanation": "Binary is base 2. To convert a bitstream to decimal as you traverse it from left to right, you must multiply the current total by 2 before adding the next bit. The buggy code incorrectly used 10, which would only work for decimal strings."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Binary to Decimal Base Bug",
+            "problemDescription": "The manual binary to decimal conversion is producing incorrect results. It seems the power-of-two weighting is being applied incorrectly in the loop. Find and fix the bug.",
+            "language": "python",
+            "buggyCode": "def bin_to_dec(s):\n    res = 0\n    for char in s:\n        res = res * 10 + int(char)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")",
+            "solution": {
+                "code": "def bin_to_dec(s):\n    res = 0\n    for char in s:\n        res = res * 2 + int(char)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")",
+                "explanation": "Binary is base 2. To convert a bitstream to decimal as you traverse it from left to right, you must multiply the current total by 2 before adding the next bit. The buggy code incorrectly used 10, which would only work for decimal strings."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

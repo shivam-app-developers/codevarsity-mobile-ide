@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "All Construct Index Bug",
-      "problemDescription": "The dynamic programming table for the `all_construct` function is not properly tracking the combinations for each prefix. There's a subtle error in how the table is initialized or accessed. Find and fix it.",
-      "language": "python",
-      "buggyCode": "def all_construct(target, word_bank):\n    table = [[]] * (len(target) + 1)\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"he\", [\"h\", \"e\"]))",
-      "solution": {
-        "code": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"he\", [\"h\", \"e\"]))",
-        "explanation": "In Python, `[[]] * (len(target) + 1)` creates a list where every element is a reference to the SAME empty list. Modifying one entry would modify all of them. The solution uses a list comprehension `[[] for _ in ...]` to ensure each entry is a unique, independent list."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "All Construct Index Bug",
+            "problemDescription": "The dynamic programming table for the `all_construct` function is not properly tracking the combinations for each prefix. There's a subtle error in how the table is initialized or accessed. Find and fix it.",
+            "language": "python",
+            "buggyCode": "def all_construct(target, word_bank):\n    table = [[]] * (len(target) + 1)\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"he\", [\"h\", \"e\"]))",
+            "solution": {
+                "code": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"he\", [\"h\", \"e\"]))",
+                "explanation": "In Python, `[[]] * (len(target) + 1)` creates a list where every element is a reference to the SAME empty list. Modifying one entry would modify all of them. The solution uses a list comprehension `[[] for _ in ...]` to ensure each entry is a unique, independent list."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

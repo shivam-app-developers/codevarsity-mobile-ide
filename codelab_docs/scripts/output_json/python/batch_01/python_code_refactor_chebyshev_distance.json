@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Vectorized Chebyshev with NumPy",
-      "problemDescription": "The provided Chebyshev distance uses a generator expression. Refactor it to use NumPy's vectorization for much faster coordinate-wise subtraction and maximum finding, which is ideal for high-dimensional points.",
-      "language": "python",
-      "initialCode": "def chebyshev_dist(p1, p2):\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1.0, 9.0], [2.0, -5.2])}\")",
-      "solution": {
-        "code": "import numpy as np\n\ndef chebyshev_dist(p1, p2):\n    return np.linalg.norm(np.array(p1) - np.array(p2), ord=np.inf)\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1.0, 9.0], [2.0, -5.2])}\")",
-        "explanation": "In NumPy, the Chebyshev distance is equivalent to the L-infinity norm. `np.linalg.norm` with `ord=np.inf` is a highly optimized way to calculate this metric on vectorized data, avoiding Python loops and yielding better performance for scientific applications."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Vectorized Chebyshev with NumPy",
+            "problemDescription": "The provided Chebyshev distance uses a generator expression. Refactor it to use NumPy's vectorization for much faster coordinate-wise subtraction and maximum finding, which is ideal for high-dimensional points.",
+            "language": "python",
+            "initialCode": "def chebyshev_dist(p1, p2):\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1.0, 9.0], [2.0, -5.2])}\")",
+            "solution": {
+                "code": "import numpy as np\n\ndef chebyshev_dist(p1, p2):\n    return np.linalg.norm(np.array(p1) - np.array(p2), ord=np.inf)\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1.0, 9.0], [2.0, -5.2])}\")",
+                "explanation": "In NumPy, the Chebyshev distance is equivalent to the L-infinity norm. `np.linalg.norm` with `ord=np.inf` is a highly optimized way to calculate this metric on vectorized data, avoiding Python loops and yielding better performance for scientific applications."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

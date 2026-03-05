@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function bubbleSort(arr) {\\n  for (let i = 0; i < arr.length - 1; i++) {\\n    for (let j = 0; j < arr.length - i - 1; j++) {\\n      if (arr[j] > arr[j + 1]) {\\n        let t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\\n      }\\n    }\\n  }\\n  return arr;\\n}",
                 "explanation": "In JavaScript, a function returns `undefined` by default if no `return` statement is provided. You must explicitly return the sorted array."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

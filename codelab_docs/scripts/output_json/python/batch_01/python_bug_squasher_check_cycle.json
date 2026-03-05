@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Cycle Detection DFS Bug",
-      "problemDescription": "The cycle detection function is incorrectly identifying cycles in cases where a node is reachable via multiple paths but no actual loop exists (a DAG). Find and fix the flaw in the visit tracking.",
-      "language": "python",
-      "buggyCode": "def has_cycle(graph):\n    visited = set()\n    def dfs(u):\n        visited.add(u)\n        for v in graph.get(u, []):\n            if v in visited: return True\n            if dfs(v): return True\n        return False\n    return any(dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [2], 2: []}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
-      "solution": {
-        "code": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v in stack: return True\n            if v not in visited and dfs(v): return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [2], 2: []}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
-        "explanation": "In directed graphs, a cycle is only present if we encounter a node that is currently in the RECURSION STACK (a 'back-edge'). The buggy code incorrectly flagged any already-visited node as a cycle, which incorrectly returns True for diamond-shaped graphs that are actually acyclic."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Cycle Detection DFS Bug",
+            "problemDescription": "The cycle detection function is incorrectly identifying cycles in cases where a node is reachable via multiple paths but no actual loop exists (a DAG). Find and fix the flaw in the visit tracking.",
+            "language": "python",
+            "buggyCode": "def has_cycle(graph):\n    visited = set()\n    def dfs(u):\n        visited.add(u)\n        for v in graph.get(u, []):\n            if v in visited: return True\n            if dfs(v): return True\n        return False\n    return any(dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [2], 2: []}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
+            "solution": {
+                "code": "def has_cycle(graph):\n    visited = set()\n    stack = set()\n    def dfs(u):\n        visited.add(u)\n        stack.add(u)\n        for v in graph.get(u, []):\n            if v in stack: return True\n            if v not in visited and dfs(v): return True\n        stack.remove(u)\n        return False\n    return any(node not in visited and dfs(node) for node in graph)\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [2], 2: []}\n    print(f\"Has Cycle: {has_cycle(graph)}\")",
+                "explanation": "In directed graphs, a cycle is only present if we encounter a node that is currently in the RECURSION STACK (a 'back-edge'). The buggy code incorrectly flagged any already-visited node as a cycle, which incorrectly returns True for diamond-shaped graphs that are actually acyclic."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

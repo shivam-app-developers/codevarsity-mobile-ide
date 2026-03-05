@@ -10,7 +10,7 @@
             "ghostCode": "public class MethodOverloading {\n    static void show(int i) {\n        System.out.println(\"Int: \" + i);\n    }\n    \n    static void show(String s) {\n        System.out.println(\"Str: \" + s);\n    }\n\n    public static void main(String[] args) {\n        show(5);\n        show(\"Five\");\n    }\n}",
             "finalCode": "public class MethodOverloading {\n    static void show(int i) {\n        System.out.println(\"Int: \" + i);\n    }\n    \n    static void show(String s) {\n        System.out.println(\"Str: \" + s);\n    }\n\n    public static void main(String[] args) {\n        show(5);\n        show(\"Five\");\n    }\n}",
             "validation": {
-                "pattern": "Int: 5\nStr: Five"
+                "type": "run_code"
             }
         }
     }

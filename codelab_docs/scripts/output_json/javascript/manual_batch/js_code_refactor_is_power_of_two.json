@@ -10,6 +10,9 @@
             "solution": {
                 "code": "const isPowerOfTwo = (n) => n > 0 && (n & (n - 1)) === 0;",
                 "explanation": "A power of two in binary is always a 1 followed by zeros (e.g., 8 is 1000). Subtracting 1 flips all bits (7 is 0111). A bitwise AND between `n` and `n-1` will result in 0 only if `n` is a power of two."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

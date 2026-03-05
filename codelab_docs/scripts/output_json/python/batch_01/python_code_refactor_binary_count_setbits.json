@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Set Bit Counting",
-      "problemDescription": "The current `count_set_bits` function uses a `while` loop with bit manipulation. Refactor it to use more efficient Pythonic built-ins for counting bits, which are highly optimized for this task.",
-      "language": "python",
-      "initialCode": "def count_set_bits(n):\n    count = 0\n    while n > 0:\n        n &= (n - 1)\n        count += 1\n    return count\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 25: {count_set_bits(25)}\")",
-      "solution": {
-        "code": "def count_set_bits(n):\n    return bin(n).count('1')\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 25: {count_set_bits(25)}\")",
-        "explanation": "In Python, `bin(n).count('1')` is a very fast way to count the set bits (population count) of an integer because `bin()` and `count()` are implemented in highly optimized C. This is more readable and efficient for most use cases in Python."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Set Bit Counting",
+            "problemDescription": "The current `count_set_bits` function uses a `while` loop with bit manipulation. Refactor it to use more efficient Pythonic built-ins for counting bits, which are highly optimized for this task.",
+            "language": "python",
+            "initialCode": "def count_set_bits(n):\n    count = 0\n    while n > 0:\n        n &= (n - 1)\n        count += 1\n    return count\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 25: {count_set_bits(25)}\")",
+            "solution": {
+                "code": "def count_set_bits(n):\n    return bin(n).count('1')\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 25: {count_set_bits(25)}\")",
+                "explanation": "In Python, `bin(n).count('1')` is a very fast way to count the set bits (population count) of an integer because `bin()` and `count()` are implemented in highly optimized C. This is more readable and efficient for most use cases in Python."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

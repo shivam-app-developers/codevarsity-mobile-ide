@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Digit Fifth Powers",
-      "problemDescription": "Fix the logic to find and sum numbers equal to the sum of their digits raised to the fifth power.",
-      "language": "python",
-      "buggyCode": "def solution():\n    total = 0\n    # BUG: Starting from 1 is incorrect as the problem excludes single-digit numbers\n    for i in range(1, 10000):\n        # BUG: Incorrectly calculating sum of powers\n        digit_sum = sum(int(d) for d in str(i)) ** 5\n        if i == digit_sum:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-      "solution": {
-        "code": "def solution():\n    total = 0\n    # Start from 2, as 1 is excluded. Upper bound of 1,000,000 is sufficient.\n    for i in range(2, 1000000):\n        # Sum of the fifth powers of each digit\n        digit_power_sum = sum(int(d)**5 for d in str(i))\n        if i == digit_power_sum:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Digit Fifth Powers",
+            "problemDescription": "Fix the logic to find and sum numbers equal to the sum of their digits raised to the fifth power.",
+            "language": "python",
+            "buggyCode": "def solution():\n    total = 0\n    # BUG: Starting from 1 is incorrect as the problem excludes single-digit numbers\n    for i in range(1, 10000):\n        # BUG: Incorrectly calculating sum of powers\n        digit_sum = sum(int(d) for d in str(i)) ** 5\n        if i == digit_sum:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+            "solution": {
+                "code": "def solution():\n    total = 0\n    # Start from 2, as 1 is excluded. Upper bound of 1,000,000 is sufficient.\n    for i in range(2, 1000000):\n        # Sum of the fifth powers of each digit\n        digit_power_sum = sum(int(d)**5 for d in str(i))\n        if i == digit_power_sum:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

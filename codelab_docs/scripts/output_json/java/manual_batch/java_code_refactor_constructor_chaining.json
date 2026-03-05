@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class User {\n    private final String name;\n    private final int age;\n\n    private User(Builder b) {\n        this.name = b.name;\n        this.age = b.age;\n    }\n\n    public static class Builder {\n        private String name; private int age = 0;\n        public Builder name(String n) { this.name = n; return this; }\n        public Builder age(int a) { this.age = a; return this; }\n        public User build() { return new User(this); }\n    }\n\n    public static void main(String[] args) {\n        User u = new User.Builder().name(\"Bob\").age(25).build();\n    }\n}",
                 "explanation": "The Builder pattern is ideal for classes with many optional parameters, making object creation clearer than having many overloaded constructors."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

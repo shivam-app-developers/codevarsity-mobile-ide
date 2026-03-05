@@ -10,7 +10,7 @@
             "ghostCode": "public class FinalVariable {\n    public static void main(String[] args) {\n        final double PI = 3.14159;\n        System.out.println(\"Value of PI: \" + PI);\n    }\n}",
             "finalCode": "public class FinalVariable {\n    public static void main(String[] args) {\n        final double PI = 3.14159;\n        System.out.println(\"Value of PI: \" + PI);\n    }\n}",
             "validation": {
-                "pattern": "Value of PI: 3.14159"
+                "type": "run_code"
             }
         }
     }

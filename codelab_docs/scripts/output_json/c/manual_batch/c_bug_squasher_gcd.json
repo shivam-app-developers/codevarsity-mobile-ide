@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    if (a == 0) return b;\\n    while (b != 0) {\\n        int temp = b;\\n        b = a % b;\\n        a = temp;\\n    }\\n    return a;\\n}\\n\\nint main() {\\n    printf(\\\"GCD: %d\\\\n\\\", gcd(48, 0));\\n    return 0;\\n}",
                 "explanation": "Euclid's algorithm using modulo is more efficient and handles cases where one of the numbers is zero more robustly."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

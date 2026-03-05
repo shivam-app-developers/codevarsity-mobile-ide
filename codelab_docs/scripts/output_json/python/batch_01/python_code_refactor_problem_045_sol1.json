@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Triangular, Pentagonal, and Hexagonal",
-      "problemDescription": "Refactor the search for figurate numbers using a more efficient loop and mathematical properties.",
-      "language": "python",
-      "initialCode": "import math\ndef is_pentagonal(n):\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution():\n    n = 144\n    while True:\n        hex_num = n * (2 * n - 1)\n        if is_pentagonal(hex_num): return hex_num\n        n += 1",
-      "solution": {
-        "code": "def solution(start_h: int = 144) -> int:\n    \"\"\"\n    Optimized search by generating both hexagonal and pentagonal numbers \n    and finding their intersection using a two-pointer approach.\n    \"\"\"\n    h_idx = start_h\n    p_idx = 166 # Start after P_165 = 40755\n    \n    while True:\n        h_val = h_idx * (2 * h_idx - 1)\n        p_val = p_idx * (3 * p_idx - 1) // 2\n        \n        if h_val == p_val:\n            return h_val\n        \n        if h_val < p_val:\n            h_idx += 1\n        else:\n            p_idx += 1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Using a two-pointer approach to find the intersection of two increasing sequences is often more efficient than repeated calls to `sqrt` inside `is_pentagonal`, as it only uses basic arithmetic."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Triangular, Pentagonal, and Hexagonal",
+            "problemDescription": "Refactor the search for figurate numbers using a more efficient loop and mathematical properties.",
+            "language": "python",
+            "initialCode": "import math\ndef is_pentagonal(n):\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution():\n    n = 144\n    while True:\n        hex_num = n * (2 * n - 1)\n        if is_pentagonal(hex_num): return hex_num\n        n += 1",
+            "solution": {
+                "code": "def solution(start_h: int = 144) -> int:\n    \"\"\"\n    Optimized search by generating both hexagonal and pentagonal numbers \n    and finding their intersection using a two-pointer approach.\n    \"\"\"\n    h_idx = start_h\n    p_idx = 166 # Start after P_165 = 40755\n    \n    while True:\n        h_val = h_idx * (2 * h_idx - 1)\n        p_val = p_idx * (3 * p_idx - 1) // 2\n        \n        if h_val == p_val:\n            return h_val\n        \n        if h_val < p_val:\n            h_idx += 1\n        else:\n            p_idx += 1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Using a two-pointer approach to find the intersection of two increasing sequences is often more efficient than repeated calls to `sqrt` inside `is_pentagonal`, as it only uses basic arithmetic."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

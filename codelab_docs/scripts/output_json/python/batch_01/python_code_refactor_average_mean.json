@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Optimizing Mean Calculation",
-      "problemDescription": "The provided `get_mean` function manually calculates the sum and length of the list. Refactor it to use Python's built-in `statistics.mean` for a more idiomatic and concise implementation.",
-      "language": "python",
-      "initialCode": "def get_mean(nums):\n    if not nums: return 0.0\n    return sum(nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")",
-      "solution": {
-        "code": "import statistics\n\ndef get_mean(nums):\n    return statistics.mean(nums) if nums else 0.0\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")",
-        "explanation": "Python's `statistics` module provides highly optimized and readable functions for statistical tasks. Using `statistics.mean()` handles the core calculation in a single, well-documented call."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Mean Calculation",
+            "problemDescription": "The provided `get_mean` function manually calculates the sum and length of the list. Refactor it to use Python's built-in `statistics.mean` for a more idiomatic and concise implementation.",
+            "language": "python",
+            "initialCode": "def get_mean(nums):\n    if not nums: return 0.0\n    return sum(nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")",
+            "solution": {
+                "code": "import statistics\n\ndef get_mean(nums):\n    return statistics.mean(nums) if nums else 0.0\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")",
+                "explanation": "Python's `statistics` module provides highly optimized and readable functions for statistical tasks. Using `statistics.mean()` handles the core calculation in a single, well-documented call."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

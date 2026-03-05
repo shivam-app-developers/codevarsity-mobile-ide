@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isPalindrome(str) {\\n  const reversed = str.split('').reverse().join('');\\n  return str === reversed;\\n}",
                 "explanation": "`reverse()` modifies the array in-place. While `split('').reverse()` works fine because it's a new array, understanding in-place modifications is crucial in JS."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

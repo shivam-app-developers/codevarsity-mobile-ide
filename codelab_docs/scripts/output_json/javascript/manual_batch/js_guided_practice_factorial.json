@@ -8,7 +8,10 @@
             "description": "Calculate the factorial of a number using a standard `for` loop.",
             "language": "javascript",
             "ghostCode": "function factorial(n) {\\n  if (n < 0) return undefined;\\n  let result = 1;\\n  for (let i = 2; i <= n; i++) {\\n    result *= i;\\n  }\\n  return result;\\n}\\n\\nconsole.log(factorial(5)); // 120",
-            "finalCode": "function factorial(n) {\\n  if (n < 0) return undefined;\\n  let result = 1;\\n  for (let i = 2; i <= n; i++) {\\n    result *= i;\\n  }\\n  return result;\\n}\\n\\nconsole.log(factorial(5)); // 120"
+            "finalCode": "function factorial(n) {\\n  if (n < 0) return undefined;\\n  let result = 1;\\n  for (let i = 2; i <= n; i++) {\\n    result *= i;\\n  }\\n  return result;\\n}\\n\\nconsole.log(factorial(5)); // 120",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

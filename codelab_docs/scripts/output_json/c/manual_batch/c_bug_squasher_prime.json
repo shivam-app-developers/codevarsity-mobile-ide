@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nint main() {\\n    int n = 1;\\n    bool is_prime = (n > 1);\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) {\\n            is_prime = false;\\n            break;\\n        }\\n    }\\n    if (is_prime) printf(\\\"Prime\\\\n\\\");\\n    else printf(\\\"Not Prime\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "Prime numbers are defined as natural numbers greater than 1. Additionally, checking up to the square root of `n` is much more efficient."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

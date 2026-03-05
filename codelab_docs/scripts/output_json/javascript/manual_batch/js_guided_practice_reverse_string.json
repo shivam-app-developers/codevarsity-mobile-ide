@@ -8,7 +8,10 @@
             "description": "Reverse a string using built-in methods.",
             "language": "javascript",
             "ghostCode": "function reverseString(str) {\\n  return str.split('').reverse().join('');\\n}\\n\\nconsole.log(reverseString(\\\"hello\\\")); // \\\"olleh\\\"",
-            "finalCode": "function reverseString(str) {\\n  return str.split('').reverse().join('');\\n}\\n\\nconsole.log(reverseString(\\\"hello\\\")); // \\\"olleh\\\""
+            "finalCode": "function reverseString(str) {\\n  return str.split('').reverse().join('');\\n}\\n\\nconsole.log(reverseString(\\\"hello\\\")); // \\\"olleh\\\"",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

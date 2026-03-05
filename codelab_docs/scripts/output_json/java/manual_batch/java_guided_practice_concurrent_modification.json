@@ -10,7 +10,7 @@
             "ghostCode": "import java.util.*;\n\npublic class ListModification {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3));\n        Iterator<Integer> it = nums.iterator();\n        while (it.hasNext()) {\n            if (it.next() == 2) it.remove();\n        }\n        System.out.println(nums.size());\n    }\n}",
             "finalCode": "import java.util.*;\n\npublic class ListModification {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3));\n        Iterator<Integer> it = nums.iterator();\n        while (it.hasNext()) {\n            if (it.next() == 2) it.remove();\n        }\n        System.out.println(nums.size());\n    }\n}",
             "validation": {
-                "pattern": "2"
+                "type": "run_code"
             }
         }
     }

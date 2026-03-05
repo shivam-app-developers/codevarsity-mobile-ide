@@ -10,7 +10,7 @@
             "ghostCode": "public class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            int x = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Division by zero error\");\n        }\n    }\n}",
             "finalCode": "public class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            int x = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Division by zero error\");\n        }\n    }\n}",
             "validation": {
-                "pattern": "Division by zero error"
+                "type": "run_code"
             }
         }
     }

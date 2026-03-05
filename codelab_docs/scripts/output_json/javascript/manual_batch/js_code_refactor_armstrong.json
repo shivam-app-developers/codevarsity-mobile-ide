@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isArmstrong(n) {\\n  const s = String(n);\\n  const p = s.length;\\n  return [...s].reduce((acc, d) => acc + Number(d) ** p, 0) === n;\\n}",
                 "explanation": "The `**` operator is a concise way to perform exponentiation in modern JavaScript, equivalent to `Math.pow()` but much shorter."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

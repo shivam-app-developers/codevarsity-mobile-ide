@@ -1,16 +1,19 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "title": "Optimizing Adler-32 with `functools`",
-      "problemDescription": "Refactor the iterative `adler32` function into a more functional style using Python's `functools.reduce`. This can lead to more compact and expressive code.",
-      "language": "python",
-      "initialCode": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = (a + ord(char)) % MOD_ADLER\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
-      "solution": {
-        "code": "from functools import reduce\n\nMOD_ADLER = 65521\n\ndef adler32(text):\n    a, b = reduce(\n        lambda acc, char: (\n            (acc[0] + ord(char)) % MOD_ADLER,\n            (acc[1] + (acc[0] + ord(char)) % MOD_ADLER) % MOD_ADLER\n        ),\n        text,\n        (1, 0)\n    )\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
-        "explanation": "Using `functools.reduce` allows us to express the cumulative state update (the checksum calculation) in a single functional block. While slightly more complex, it's a powerful pattern for reducing sequences to a single value."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Adler-32 with `functools`",
+            "problemDescription": "Refactor the iterative `adler32` function into a more functional style using Python's `functools.reduce`. This can lead to more compact and expressive code.",
+            "language": "python",
+            "initialCode": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = (a + ord(char)) % MOD_ADLER\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
+            "solution": {
+                "code": "from functools import reduce\n\nMOD_ADLER = 65521\n\ndef adler32(text):\n    a, b = reduce(\n        lambda acc, char: (\n            (acc[0] + ord(char)) % MOD_ADLER,\n            (acc[1] + (acc[0] + ord(char)) % MOD_ADLER) % MOD_ADLER\n        ),\n        text,\n        (1, 0)\n    )\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
+                "explanation": "Using `functools.reduce` allows us to express the cumulative state update (the checksum calculation) in a single functional block. While slightly more complex, it's a powerful pattern for reducing sequences to a single value."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

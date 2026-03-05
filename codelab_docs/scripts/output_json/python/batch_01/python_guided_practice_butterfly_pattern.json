@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Butterfly Pattern Generator",
-      "description": "Create a butterfly-shaped pattern using stars and spaces based on a given size.",
-      "language": "python",
-      "ghostCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
-      "finalCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Butterfly Pattern Generator",
+            "description": "Create a butterfly-shaped pattern using stars and spaces based on a given size.",
+            "language": "python",
+            "ghostCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+            "finalCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

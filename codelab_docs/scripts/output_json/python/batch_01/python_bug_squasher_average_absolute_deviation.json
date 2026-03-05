@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Average Deviation Mean Bug",
-      "problemDescription": "The average absolute deviation calculation is producing incorrect results. It seems the reference point (the mean) is not being calculated correctly for the deviation sum. Identify and fix the logic flaw.",
-      "language": "python",
-      "buggyCode": "def avg_abs_dev(nums):\n    if not nums: return 0.0\n    total_sum = sum(nums)\n    return sum(abs(x - total_sum) for x in nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
-      "solution": {
-        "code": "def avg_abs_dev(nums):\n    if not nums: return 0.0\n    mean = sum(nums) / len(nums)\n    return sum(abs(x - mean) for x in nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
-        "explanation": "The average absolute deviation must be calculated relative to the arithmetic mean (average) of the numbers. The buggy code incorrectly used the `total_sum` of the list instead of the `mean` (`total_sum / length`)."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Average Deviation Mean Bug",
+            "problemDescription": "The average absolute deviation calculation is producing incorrect results. It seems the reference point (the mean) is not being calculated correctly for the deviation sum. Identify and fix the logic flaw.",
+            "language": "python",
+            "buggyCode": "def avg_abs_dev(nums):\n    if not nums: return 0.0\n    total_sum = sum(nums)\n    return sum(abs(x - total_sum) for x in nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
+            "solution": {
+                "code": "def avg_abs_dev(nums):\n    if not nums: return 0.0\n    mean = sum(nums) / len(nums)\n    return sum(abs(x - mean) for x in nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
+                "explanation": "The average absolute deviation must be calculated relative to the arithmetic mean (average) of the numbers. The buggy code incorrectly used the `total_sum` of the list instead of the `mean` (`total_sum / length`)."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

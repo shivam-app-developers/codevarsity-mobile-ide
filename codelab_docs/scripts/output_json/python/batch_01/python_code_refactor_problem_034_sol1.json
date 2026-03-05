@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Digit Factorials",
-      "problemDescription": "Refactor the digit factorial sum using mathematical digit extraction for speed.",
-      "language": "python",
-      "initialCode": "from math import factorial\ndef solution():\n    f = [factorial(i) for i in range(10)]\n    total = 0\n    for i in range(10, 2540161):\n        s = sum(f[int(d)] for d in str(i))\n        if s == i: total += i\n    return total",
-      "solution": {
-        "code": "import math\n\ndef solution() -> int:\n    \"\"\"\n    Highly optimized version using pre-calculated list and avoiding string conversion.\n    \"\"\"\n    fact = [math.factorial(i) for i in range(10)]\n    total_sum = 0\n    \n    # Only check up to 7 * 9! since 8 * 9! is still a 7-digit number.\n    for i in range(10, 1499999):\n        s = 0\n        temp = i\n        while temp > 0:\n            s += fact[temp % 10]\n            if s > i: break # Early exit if sum exceeds number\n            temp //= 10\n        if s == i:\n            total_sum += i\n            \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Extracting digits using `% 10` and `// 10` is significantly faster than converting the number to a string. Adding an early exit if `s > i` further improves performance."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Digit Factorials",
+            "problemDescription": "Refactor the digit factorial sum using mathematical digit extraction for speed.",
+            "language": "python",
+            "initialCode": "from math import factorial\ndef solution():\n    f = [factorial(i) for i in range(10)]\n    total = 0\n    for i in range(10, 2540161):\n        s = sum(f[int(d)] for d in str(i))\n        if s == i: total += i\n    return total",
+            "solution": {
+                "code": "import math\n\ndef solution() -> int:\n    \"\"\"\n    Highly optimized version using pre-calculated list and avoiding string conversion.\n    \"\"\"\n    fact = [math.factorial(i) for i in range(10)]\n    total_sum = 0\n    \n    # Only check up to 7 * 9! since 8 * 9! is still a 7-digit number.\n    for i in range(10, 1499999):\n        s = 0\n        temp = i\n        while temp > 0:\n            s += fact[temp % 10]\n            if s > i: break # Early exit if sum exceeds number\n            temp //= 10\n        if s == i:\n            total_sum += i\n            \n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Extracting digits using `% 10` and `// 10` is significantly faster than converting the number to a string. Adding an early exit if `s > i` further improves performance."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint main() {\\n    int celsius = 37;\\n    float fahrenheit = (celsius * 9.0 / 5.0) + 32;\\n    printf(\\\"Fahrenheit: %f\\\\n\\\", fahrenheit);\\n    return 0;\\n}",
                 "explanation": "In C, `9 / 5` performs integer division, which results in `1`. Using `9.0 / 5.0` ensures floating-point division is used, preserving the decimal values."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

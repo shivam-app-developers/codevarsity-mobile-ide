@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isStrong(int n) {\\n    static const int fact[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};\\n    int sum = 0, temp = n;\\n    while (temp > 0) {\\n        sum += fact[temp % 10];\\n        temp /= 10;\\n    }\\n    return sum == n;\\n}",
                 "explanation": "Since we only care about factorials of digits (0-9), using a pre-calculated lookup table is much more efficient than recalculating the factorial every time."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

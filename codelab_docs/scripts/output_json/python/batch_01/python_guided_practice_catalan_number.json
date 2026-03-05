@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Catalan Number Calculation",
-      "description": "Calculate the nth Catalan number using an iterative formula.",
-      "language": "python",
-      "ghostCode": "def catalan(n):\n    if not isinstance(n, int) or n < 1: return 0\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")",
-      "finalCode": "def catalan(n):\n    if not isinstance(n, int) or n < 1: return 0\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Catalan Number Calculation",
+            "description": "Calculate the nth Catalan number using an iterative formula.",
+            "language": "python",
+            "ghostCode": "def catalan(n):\n    if not isinstance(n, int) or n < 1: return 0\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")",
+            "finalCode": "def catalan(n):\n    if not isinstance(n, int) or n < 1: return 0\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

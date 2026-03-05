@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPalindrome(int n) {\\n    int reversed = 0, original = n;\\n    while (n > 0) {\\n        reversed = reversed * 10 + n % 10;\\n        n /= 10;\\n    }\\n    return reversed == original;\\n}\\n\\nint main() {\\n    if (isPalindrome(121)) printf(\\\"Yes\\\\n\\\");\\n    return 0;\\n}",
                 "explanation": "Using `stdbool.h` and the `bool` type makes the code's intention clearer and follows modern C standards."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

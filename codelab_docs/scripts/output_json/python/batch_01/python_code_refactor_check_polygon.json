@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Clean Polygon Check with `max()`",
-      "problemDescription": "The provided polygon check sorts the entire list of sides to find the largest. Refactor it to use the `max()` function and total `sum()` for a more efficient and direct implementation that avoids O(n log n) sorting.",
-      "language": "python",
-      "initialCode": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] < sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"Result: {is_polygon([6, 10, 5])}\")",
-      "solution": {
-        "code": "def is_polygon(sides):\n    total_sum = sum(sides)\n    max_side = max(sides)\n    return max_side < (total_sum - max_side)\n\nif __name__ == \"__main__\":\n    print(f\"Result: {is_polygon([6, 10, 5])}\")",
-        "explanation": "Using `max()` and `sum()` reduces the time complexity from O(n log n) to O(n). Mathematically, the condition `max_side < sum(others)` is equivalent to `max_side < (total_sum - max_side)`, which is cleaner and faster to compute."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Clean Polygon Check with `max()`",
+            "problemDescription": "The provided polygon check sorts the entire list of sides to find the largest. Refactor it to use the `max()` function and total `sum()` for a more efficient and direct implementation that avoids O(n log n) sorting.",
+            "language": "python",
+            "initialCode": "def is_polygon(sides):\n    sides = sorted(sides)\n    return sides[-1] < sum(sides[:-1])\n\nif __name__ == \"__main__\":\n    print(f\"Result: {is_polygon([6, 10, 5])}\")",
+            "solution": {
+                "code": "def is_polygon(sides):\n    total_sum = sum(sides)\n    max_side = max(sides)\n    return max_side < (total_sum - max_side)\n\nif __name__ == \"__main__\":\n    print(f\"Result: {is_polygon([6, 10, 5])}\")",
+                "explanation": "Using `max()` and `sum()` reduces the time complexity from O(n log n) to O(n). Mathematically, the condition `max_side < sum(others)` is equivalent to `max_side < (total_sum - max_side)`, which is cleaner and faster to compute."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

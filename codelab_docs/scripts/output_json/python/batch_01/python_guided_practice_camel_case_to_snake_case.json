@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "CamelCase to snake_case",
-      "description": "Convert a string from camelCase or PascalCase to snake_case by inserting underscores before capital letters.",
-      "language": "python",
-      "ghostCode": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper() and i > 0:\n            res += \"_\" + char.lower()\n        else:\n            res += char.lower()\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"camelCase -> {to_snake_case('camelCase')}\")\n    print(f\"PascalCase -> {to_snake_case('PascalCase')}\")",
-      "finalCode": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper() and i > 0:\n            res += \"_\" + char.lower()\n        else:\n            res += char.lower()\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"camelCase -> {to_snake_case('camelCase')}\")\n    print(f\"PascalCase -> {to_snake_case('PascalCase')}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "CamelCase to snake_case",
+            "description": "Convert a string from camelCase or PascalCase to snake_case by inserting underscores before capital letters.",
+            "language": "python",
+            "ghostCode": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper() and i > 0:\n            res += \"_\" + char.lower()\n        else:\n            res += char.lower()\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"camelCase -> {to_snake_case('camelCase')}\")\n    print(f\"PascalCase -> {to_snake_case('PascalCase')}\")",
+            "finalCode": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper() and i > 0:\n            res += \"_\" + char.lower()\n        else:\n            res += char.lower()\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"camelCase -> {to_snake_case('camelCase')}\")\n    print(f\"PascalCase -> {to_snake_case('PascalCase')}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

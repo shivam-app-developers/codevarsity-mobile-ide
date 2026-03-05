@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Byte Allocation Off-by-One Bug",
-      "problemDescription": "The byte allocation logic is failing for certain partitions. The ranges are not properly covering the entire byte range or are overlapping at the boundaries. Find and fix the error in the start and end calculation.",
-      "language": "python",
-      "buggyCode": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size\n        end = (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
-      "solution": {
-        "code": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
-        "explanation": "The buggy code didn't account for the 1-based indexing of byte ranges (`start = i * size + 1`) and didn't ensure the last partition always covered up to the final byte (`end = total_bytes`). This could lead to missing or incorrect bytes in multi-threaded downloads."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Byte Allocation Off-by-One Bug",
+            "problemDescription": "The byte allocation logic is failing for certain partitions. The ranges are not properly covering the entire byte range or are overlapping at the boundaries. Find and fix the error in the start and end calculation.",
+            "language": "python",
+            "buggyCode": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size\n        end = (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+            "solution": {
+                "code": "def allocation_num(total_bytes, partitions):\n    size = total_bytes // partitions\n    result = []\n    for i in range(partitions):\n        start = i * size + 1\n        end = total_bytes if i == partitions - 1 else (i + 1) * size\n        result.append(f\"{start}-{end}\")\n    return result\n\nif __name__ == \"__main__\":\n    print(allocation_num(100, 4))",
+                "explanation": "The buggy code didn't account for the 1-based indexing of byte ranges (`start = i * size + 1`) and didn't ensure the last partition always covered up to the final byte (`end = total_bytes`). This could lead to missing or incorrect bytes in multi-threaded downloads."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Binomial Coefficient Bug",
-      "problemDescription": "The binomial distribution calculation is failing. It seems the binomial coefficient (n choose k) is being calculated incorrectly in the code. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    coeff = factorial(n) / (factorial(k) * factorial(n + k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
-      "solution": {
-        "code": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    coeff = factorial(n) / (factorial(k) * factorial(n - k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
-        "explanation": "The formula for the binomial coefficient is `n! / (k! * (n - k)!)`. The buggy code incorrectly used `factorial(n + k)` in the denominator."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Binomial Coefficient Bug",
+            "problemDescription": "The binomial distribution calculation is failing. It seems the binomial coefficient (n choose k) is being calculated incorrectly in the code. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    coeff = factorial(n) / (factorial(k) * factorial(n + k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
+            "solution": {
+                "code": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    coeff = factorial(n) / (factorial(k) * factorial(n - k))\n    prob = coeff * (p**k) * ((1 - p)**(n - k))\n    return prob\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
+                "explanation": "The formula for the binomial coefficient is `n! / (k! * (n - k)!)`. The buggy code incorrectly used `factorial(n + k)` in the denominator."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

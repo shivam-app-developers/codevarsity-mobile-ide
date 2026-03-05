@@ -10,7 +10,7 @@
             "ghostCode": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] data = {10, 20, 30};\n        for (int i = 0; i < data.length; i++) {\n            System.out.println(data[i]);\n        }\n    }\n}",
             "finalCode": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] data = {10, 20, 30};\n        for (int i = 0; i < data.length; i++) {\n            System.out.println(data[i]);\n        }\n    }\n}",
             "validation": {
-                "pattern": "10\n20\n30"
+                "type": "run_code"
             }
         }
     }

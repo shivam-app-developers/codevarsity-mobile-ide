@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nvoid bubbleSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        bool swapped = false;\\n        for (int j = 0; j < n - i - 1; j++) {\\n            if (arr[j] > arr[j+1]) {\\n                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\\n                swapped = true;\\n            }\\n        }\\n        if (!swapped) break;\\n    }\\n}",
                 "explanation": "Using a `swapped` flag allows the algorithm to exit the outer loop early if no swaps occurred in a pass, indicating the array is already sorted."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

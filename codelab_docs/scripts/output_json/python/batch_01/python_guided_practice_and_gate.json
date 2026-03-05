@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "AND Gate Implementation",
-      "description": "Implement a logic AND gate for two or more inputs using Python's boolean operators.",
-      "language": "python",
-      "ghostCode": "def and_gate(a, b):\n    return int(a and b)\n\ndef n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 1: {and_gate(1, 1)}\")\n    print(f\"1 AND 0: {and_gate(1, 0)}\")\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
-      "finalCode": "def and_gate(a, b):\n    return int(a and b)\n\ndef n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 1: {and_gate(1, 1)}\")\n    print(f\"1 AND 0: {and_gate(1, 0)}\")\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "AND Gate Implementation",
+            "description": "Implement a logic AND gate for two or more inputs using Python's boolean operators.",
+            "language": "python",
+            "ghostCode": "def and_gate(a, b):\n    return int(a and b)\n\ndef n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 1: {and_gate(1, 1)}\")\n    print(f\"1 AND 0: {and_gate(1, 0)}\")\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
+            "finalCode": "def and_gate(a, b):\n    return int(a and b)\n\ndef n_input_and_gate(inputs):\n    return int(all(inputs))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 1: {and_gate(1, 1)}\")\n    print(f\"1 AND 0: {and_gate(1, 0)}\")\n    print(f\"All [1, 1, 1]: {n_input_and_gate([1, 1, 1])}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

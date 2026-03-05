@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Binary to Octal Padding Bug",
-      "problemDescription": "The binary to octal conversion is failing for bitstrings whose length is not a multiple of 3. The bits are being grouped incorrectly from the left instead of the right. Find and fix the padding logic.",
-      "language": "python",
-      "buggyCode": "def bin_to_oct(s):\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        res += str(int(triplet, 2))\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'11' (should be 3): {bin_to_oct('11')}\")",
-      "solution": {
-        "code": "def bin_to_oct(s):\n    while len(s) % 3 != 0:\n        s = \"0\" + s\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        res += str(int(triplet, 2))\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'11' (should be 3): {bin_to_oct('11')}\")",
-        "explanation": "Octal digits are formed by groups of 3 bits. If the bitstring length is not a multiple of 3, you must pad the LEFT side with zeros to ensure the bits are weighted correctly. Without padding, the remaining bits at the end would be processed as a partial triplet incorrectly."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Binary to Octal Padding Bug",
+            "problemDescription": "The binary to octal conversion is failing for bitstrings whose length is not a multiple of 3. The bits are being grouped incorrectly from the left instead of the right. Find and fix the padding logic.",
+            "language": "python",
+            "buggyCode": "def bin_to_oct(s):\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        res += str(int(triplet, 2))\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'11' (should be 3): {bin_to_oct('11')}\")",
+            "solution": {
+                "code": "def bin_to_oct(s):\n    while len(s) % 3 != 0:\n        s = \"0\" + s\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        res += str(int(triplet, 2))\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'11' (should be 3): {bin_to_oct('11')}\")",
+                "explanation": "Octal digits are formed by groups of 3 bits. If the bitstring length is not a multiple of 3, you must pad the LEFT side with zeros to ensure the bits are weighted correctly. Without padding, the remaining bits at the end would be processed as a partial triplet incorrectly."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

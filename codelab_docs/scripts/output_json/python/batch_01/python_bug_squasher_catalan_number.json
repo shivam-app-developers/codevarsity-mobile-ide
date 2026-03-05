@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Catalan Number Iteration Bug",
-      "problemDescription": "The Catalan number calculation is failing. It seems the loop range or the formula update within the loop is incorrect. Find and fix the error.",
-      "language": "python",
-      "buggyCode": "def catalan(n):\n    res = 1\n    for i in range(n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Catalan(2): {catalan(2)}\")",
-      "solution": {
-        "code": "def catalan(n):\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Catalan(2): {catalan(2)}\")",
-        "explanation": "The formula for Catalan numbers `C(n+1) = C(n) * (4n + 2) / (n + 2)` requires careful handling of indices. The buggy code started the loop from 0, which resulted in multiplying by -2 (`4*0 - 2`) in the first iteration, leading to incorrect negative results. The loop should start from 1."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Catalan Number Iteration Bug",
+            "problemDescription": "The Catalan number calculation is failing. It seems the loop range or the formula update within the loop is incorrect. Find and fix the error.",
+            "language": "python",
+            "buggyCode": "def catalan(n):\n    res = 1\n    for i in range(n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Catalan(2): {catalan(2)}\")",
+            "solution": {
+                "code": "def catalan(n):\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"Catalan(2): {catalan(2)}\")",
+                "explanation": "The formula for Catalan numbers `C(n+1) = C(n) * (4n + 2) / (n + 2)` requires careful handling of indices. The buggy code started the loop from 0, which resulted in multiplying by -2 (`4*0 - 2`) in the first iteration, leading to incorrect negative results. The loop should start from 1."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

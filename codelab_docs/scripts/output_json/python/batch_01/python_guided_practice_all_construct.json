@@ -1,14 +1,17 @@
 {
-  "difficulty": "advanced",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "advanced",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "String Reconstruction (All Construct)",
-      "description": "Find all the ways a target string can be constructed from a given set of substrings using dynamic programming.",
-      "language": "python",
-      "ghostCode": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))",
-      "finalCode": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "String Reconstruction (All Construct)",
+            "description": "Find all the ways a target string can be constructed from a given set of substrings using dynamic programming.",
+            "language": "python",
+            "ghostCode": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))",
+            "finalCode": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

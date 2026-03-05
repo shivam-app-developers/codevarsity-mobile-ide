@@ -8,7 +8,10 @@
             "description": "Calculate the factorial of a number using a loop.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 5, fact = 1;\\n    for (int i = 1; i <= n; i++) {\\n        fact *= i;\\n    }\\n    printf(\\\"Factorial of %d is %d\\\\n\\\", n, fact);\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 5, fact = 1;\\n    for (int i = 1; i <= n; i++) {\\n        fact *= i;\\n    }\\n    printf(\\\"Factorial of %d is %d\\\\n\\\", n, fact);\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 5, fact = 1;\\n    for (int i = 1; i <= n; i++) {\\n        fact *= i;\\n    }\\n    printf(\\\"Factorial of %d is %d\\\\n\\\", n, fact);\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

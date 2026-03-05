@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isEven(number) {\\n  if (number % 2 === 0) {\\n    return true;\\n  }\\n  return false;\\n}",
                 "explanation": "The `=` operator is used for assignment. For comparison, you must use `===` (strict equality) or `==`."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

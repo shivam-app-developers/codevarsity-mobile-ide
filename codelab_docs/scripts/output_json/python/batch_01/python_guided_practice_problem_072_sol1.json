@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Counting Fractions",
-      "description": "Calculate the number of reduced proper fractions for denominators d <= 1,000,000 using Euler's Totient function.",
-      "language": "python",
-      "ghostCode": "import numpy as np\n\ndef solution(limit: int = 1000000) -> int:\n    \"\"\"\n    The number of reduced proper fractions for d <= limit is the sum of phi(d) for d from 2 to limit.\n    \"\"\"\n    # Sieve for Euler's Totient function\n    phi = np.arange(limit + 1)\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i: # i is prime\n            # Update all multiples of i\n            # phi(n) = n * product(1 - 1/p)\n            phi[i::i] -= phi[i::i] // i\n            \n    return int(np.sum(phi[2:]))\n\n\nif __name__ == \"__main__\":\n    print(f\"Total fractions: {solution(1000000)}\")",
-      "finalCode": "import numpy as np\n\ndef solution(limit: int = 1000000) -> int:\n    \"\"\"\n    The number of reduced proper fractions for d <= limit is the sum of phi(d) for d from 2 to limit.\n    \"\"\"\n    # Sieve for Euler's Totient function\n    phi = np.arange(limit + 1)\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i: # i is prime\n            # Update all multiples of i\n            # phi(n) = n * product(1 - 1/p)\n            phi[i::i] -= phi[i::i] // i\n            \n    return int(np.sum(phi[2:]))\n\n\nif __name__ == \"__main__\":\n    print(f\"Total fractions: {solution(1000000)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Counting Fractions",
+            "description": "Calculate the number of reduced proper fractions for denominators d <= 1,000,000 using Euler's Totient function.",
+            "language": "python",
+            "ghostCode": "import numpy as np\n\ndef solution(limit: int = 1000000) -> int:\n    \"\"\"\n    The number of reduced proper fractions for d <= limit is the sum of phi(d) for d from 2 to limit.\n    \"\"\"\n    # Sieve for Euler's Totient function\n    phi = np.arange(limit + 1)\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i: # i is prime\n            # Update all multiples of i\n            # phi(n) = n * product(1 - 1/p)\n            phi[i::i] -= phi[i::i] // i\n            \n    return int(np.sum(phi[2:]))\n\n\nif __name__ == \"__main__\":\n    print(f\"Total fractions: {solution(1000000)}\")",
+            "finalCode": "import numpy as np\n\ndef solution(limit: int = 1000000) -> int:\n    \"\"\"\n    The number of reduced proper fractions for d <= limit is the sum of phi(d) for d from 2 to limit.\n    \"\"\"\n    # Sieve for Euler's Totient function\n    phi = np.arange(limit + 1)\n    \n    for i in range(2, limit + 1):\n        if phi[i] == i: # i is prime\n            # Update all multiples of i\n            # phi(n) = n * product(1 - 1/p)\n            phi[i::i] -= phi[i::i] // i\n            \n    return int(np.sum(phi[2:]))\n\n\nif __name__ == \"__main__\":\n    print(f\"Total fractions: {solution(1000000)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

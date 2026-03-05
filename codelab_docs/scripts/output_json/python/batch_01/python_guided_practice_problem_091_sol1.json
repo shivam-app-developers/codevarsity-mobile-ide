@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Right Triangles with Integer Coordinates",
-      "description": "Count how many right triangles can be formed with one vertex at (0,0) and the other two vertices at integer coordinates (x,y) where 0 <= x,y <= limit.",
-      "language": "python",
-      "ghostCode": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Counts the number of right triangles OPQ with O=(0,0) and P, Q in [0, limit]^2.\n    \"\"\"\n    # Three types of right triangles:\n    # 1. Right angle at (0,0): P on x-axis, Q on y-axis. There are limit*limit such triangles.\n    # 2. Right angle at P=(x,y) on one of the axes: limit*limit + limit*limit = 2*limit*limit.\n    # 3. Right angle at P=(x,y) NOT on an axis.\n    \n    count = 3 * limit * limit\n    \n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Find normal vector to OP, which is (-y, x)\n            # Reduce to simplest integer form\n            common = gcd(x, y)\n            dx, dy = y // common, x // common\n            \n            # Count points in either direction along the normal within bounds\n            count += min(y // dy, (limit - x) // dx)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Total right triangles: {solution(50)}\")",
-      "finalCode": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Counts the number of right triangles OPQ with O=(0,0) and P, Q in [0, limit]^2.\n    \"\"\"\n    # Three types of right triangles:\n    # 1. Right angle at (0,0): P on x-axis, Q on y-axis. There are limit*limit such triangles.\n    # 2. Right angle at P=(x,y) on one of the axes: limit*limit + limit*limit = 2*limit*limit.\n    # 3. Right angle at P=(x,y) NOT on an axis.\n    \n    count = 3 * limit * limit\n    \n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Find normal vector to OP, which is (-y, x)\n            # Reduce to simplest integer form\n            common = gcd(x, y)\n            dx, dy = y // common, x // common\n            \n            # Count points in either direction along the normal within bounds\n            count += min(y // dy, (limit - x) // dx)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Total right triangles: {solution(50)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Right Triangles with Integer Coordinates",
+            "description": "Count how many right triangles can be formed with one vertex at (0,0) and the other two vertices at integer coordinates (x,y) where 0 <= x,y <= limit.",
+            "language": "python",
+            "ghostCode": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Counts the number of right triangles OPQ with O=(0,0) and P, Q in [0, limit]^2.\n    \"\"\"\n    # Three types of right triangles:\n    # 1. Right angle at (0,0): P on x-axis, Q on y-axis. There are limit*limit such triangles.\n    # 2. Right angle at P=(x,y) on one of the axes: limit*limit + limit*limit = 2*limit*limit.\n    # 3. Right angle at P=(x,y) NOT on an axis.\n    \n    count = 3 * limit * limit\n    \n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Find normal vector to OP, which is (-y, x)\n            # Reduce to simplest integer form\n            common = gcd(x, y)\n            dx, dy = y // common, x // common\n            \n            # Count points in either direction along the normal within bounds\n            count += min(y // dy, (limit - x) // dx)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Total right triangles: {solution(50)}\")",
+            "finalCode": "from math import gcd\n\ndef solution(limit: int = 50) -> int:\n    \"\"\"\n    Counts the number of right triangles OPQ with O=(0,0) and P, Q in [0, limit]^2.\n    \"\"\"\n    # Three types of right triangles:\n    # 1. Right angle at (0,0): P on x-axis, Q on y-axis. There are limit*limit such triangles.\n    # 2. Right angle at P=(x,y) on one of the axes: limit*limit + limit*limit = 2*limit*limit.\n    # 3. Right angle at P=(x,y) NOT on an axis.\n    \n    count = 3 * limit * limit\n    \n    for x in range(1, limit + 1):\n        for y in range(1, limit + 1):\n            # Find normal vector to OP, which is (-y, x)\n            # Reduce to simplest integer form\n            common = gcd(x, y)\n            dx, dy = y // common, x // common\n            \n            # Count points in either direction along the normal within bounds\n            count += min(y // dy, (limit - x) // dx)\n            count += min(x // dx, (limit - y) // dy)\n            \n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Total right triangles: {solution(50)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Recursive Bitwise Addition",
-      "description": "Add two non-negative integers using recursion and bitwise operations.",
-      "language": "python",
-      "ghostCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) << 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"4 + 5 = {bitwise_add(4, 5)}\")",
-      "finalCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) << 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"4 + 5 = {bitwise_add(4, 5)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Recursive Bitwise Addition",
+            "description": "Add two non-negative integers using recursion and bitwise operations.",
+            "language": "python",
+            "ghostCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) << 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"4 + 5 = {bitwise_add(4, 5)}\")",
+            "finalCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    res = a ^ b\n    carry = (a & b) << 1\n    return bitwise_add(res, carry)\n\nif __name__ == \"__main__\":\n    print(f\"4 + 5 = {bitwise_add(4, 5)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

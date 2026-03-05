@@ -8,7 +8,10 @@
             "description": "Determine if a number reads the same forwards and backwards.",
             "language": "c",
             "ghostCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 121, reversed = 0, remainder, original;\\n    original = n;\\n    while (n != 0) {\\n        remainder = n % 10;\\n        reversed = reversed * 10 + remainder;\\n        n /= 10;\\n    }\\n    if (original == reversed) printf(\\\"Palindrome\\\\n\\\");\\n    else printf(\\\"Not Palindrome\\\\n\\\");\\n    return 0;\\n}",
-            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 121, reversed = 0, remainder, original;\\n    original = n;\\n    while (n != 0) {\\n        remainder = n % 10;\\n        reversed = reversed * 10 + remainder;\\n        n /= 10;\\n    }\\n    if (original == reversed) printf(\\\"Palindrome\\\\n\\\");\\n    else printf(\\\"Not Palindrome\\\\n\\\");\\n    return 0;\\n}"
+            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 121, reversed = 0, remainder, original;\\n    original = n;\\n    while (n != 0) {\\n        remainder = n % 10;\\n        reversed = reversed * 10 + remainder;\\n        n /= 10;\\n    }\\n    if (original == reversed) printf(\\\"Palindrome\\\\n\\\");\\n    else printf(\\\"Not Palindrome\\\\n\\\");\\n    return 0;\\n}",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

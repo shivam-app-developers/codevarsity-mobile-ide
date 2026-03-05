@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing AC Rectangular Conversion",
-      "problemDescription": "The current `get_apparent_power` function uses `cmath.rect` for complex number construction. Refactor it to use the `cmath.exp` approach for complex multiplication, which can be more mathematically concise.",
-      "language": "python",
-      "initialCode": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rad = math.radians(v_ang)\n    i_rad = math.radians(i_ang)\n    v_rect = cmath.rect(v, v_rad)\n    i_rect = cmath.rect(i, i_rad)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")",
-      "solution": {
-        "code": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    total_ang_rad = math.radians(v_ang + i_ang)\n    return (v * i) * cmath.exp(1j * total_ang_rad)\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")",
-        "explanation": "Multiplying two complex numbers in polar form (V ∠θ₁ * I ∠θ₂) is equivalent to multiplying their magnitudes and adding their angles (V*I ∠(θ₁+θ₂)). Using `cmath.exp(1j * angle)` is a concise way to represent this rotation and scaling in a single step."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing AC Rectangular Conversion",
+            "problemDescription": "The current `get_apparent_power` function uses `cmath.rect` for complex number construction. Refactor it to use the `cmath.exp` approach for complex multiplication, which can be more mathematically concise.",
+            "language": "python",
+            "initialCode": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rad = math.radians(v_ang)\n    i_rad = math.radians(i_ang)\n    v_rect = cmath.rect(v, v_rad)\n    i_rect = cmath.rect(i, i_rad)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")",
+            "solution": {
+                "code": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    total_ang_rad = math.radians(v_ang + i_ang)\n    return (v * i) * cmath.exp(1j * total_ang_rad)\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")",
+                "explanation": "Multiplying two complex numbers in polar form (V \u2220\u03b8\u2081 * I \u2220\u03b8\u2082) is equivalent to multiplying their magnitudes and adding their angles (V*I \u2220(\u03b8\u2081+\u03b8\u2082)). Using `cmath.exp(1j * angle)` is a concise way to represent this rotation and scaling in a single step."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Binary Step Boundary Bug",
-      "problemDescription": "The binary step function is supposed to return 1 for inputs that are 0 or greater. However, it seems to be failing for the exact zero case. Find and fix the boundary condition.",
-      "language": "python",
-      "buggyCode": "def binary_step(x):\n    return 1 if x > 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0: {binary_step(0)}\")",
-      "solution": {
-        "code": "def binary_step(x):\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0: {binary_step(0)}\")",
-        "explanation": "By definition, the binary step function activates (returns 1) when the input is greater than OR EQUAL to 0. The buggy code used a strict inequality `> 0`, which incorrectly returned 0 for an input of exactly 0."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Binary Step Boundary Bug",
+            "problemDescription": "The binary step function is supposed to return 1 for inputs that are 0 or greater. However, it seems to be failing for the exact zero case. Find and fix the boundary condition.",
+            "language": "python",
+            "buggyCode": "def binary_step(x):\n    return 1 if x > 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0: {binary_step(0)}\")",
+            "solution": {
+                "code": "def binary_step(x):\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0: {binary_step(0)}\")",
+                "explanation": "By definition, the binary step function activates (returns 1) when the input is greater than OR EQUAL to 0. The buggy code used a strict inequality `> 0`, which incorrectly returned 0 for an input of exactly 0."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

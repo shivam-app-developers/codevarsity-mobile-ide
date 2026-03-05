@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function countVowels(str) {\\n  const match = str.match(/[aeiou]/gi);\\n  return match ? match.length : 0;\\n}",
                 "explanation": "The `i` flag in regular expressions stands for 'case-insensitive'. Adding it ensures that both 'A' and 'a' are matched as vowels."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

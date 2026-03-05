@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Atbash Cipher",
-      "description": "Implement the Atbash cipher, a substitution cipher that replaces each letter with its corresponding letter from the reversed alphabet.",
-      "language": "python",
-      "ghostCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    mapping = str.maketrans(letters, reversed_letters)\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABC' -> {atbash('ABC')}\")\n    print(f\"'abc' -> {atbash('abc')}\")",
-      "finalCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    mapping = str.maketrans(letters, reversed_letters)\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABC' -> {atbash('ABC')}\")\n    print(f\"'abc' -> {atbash('abc')}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Atbash Cipher",
+            "description": "Implement the Atbash cipher, a substitution cipher that replaces each letter with its corresponding letter from the reversed alphabet.",
+            "language": "python",
+            "ghostCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    mapping = str.maketrans(letters, reversed_letters)\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABC' -> {atbash('ABC')}\")\n    print(f\"'abc' -> {atbash('abc')}\")",
+            "finalCode": "import string\n\ndef atbash(text):\n    letters = string.ascii_letters\n    reversed_letters = string.ascii_lowercase[::-1] + string.ascii_uppercase[::-1]\n    mapping = str.maketrans(letters, reversed_letters)\n    return text.translate(mapping)\n\nif __name__ == \"__main__\":\n    print(f\"'ABC' -> {atbash('ABC')}\")\n    print(f\"'abc' -> {atbash('abc')}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

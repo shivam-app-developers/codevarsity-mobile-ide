@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function isPalindrome(str) {\\n  let left = 0;\\n  let right = str.length - 1;\\n  while (left < right) {\\n    if (str[left] !== str[right]) return false;\\n    left++;\\n    right--;\\n  }\\n  return true;\\n}",
                 "explanation": "The two-pointer approach avoids creating a new array and joining it, leading to O(1) extra space complexity (besides the input string)."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

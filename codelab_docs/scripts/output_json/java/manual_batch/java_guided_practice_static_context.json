@@ -10,7 +10,7 @@
             "ghostCode": "public class StaticContext {\n    static String appName = \"CodeVarsity\";\n\n    public static void main(String[] args) {\n        System.out.println(\"App: \" + appName);\n    }\n}",
             "finalCode": "public class StaticContext {\n    static String appName = \"CodeVarsity\";\n\n    public static void main(String[] args) {\n        System.out.println(\"App: \" + appName);\n    }\n}",
             "validation": {
-                "pattern": "App: CodeVarsity"
+                "type": "run_code"
             }
         }
     }

@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Combinatoric Selections",
-      "description": "Count how many values of nCr for 1 <= n <= 100 are greater than one million.",
-      "language": "python",
-      "ghostCode": "from math import comb\n\ndef solution(limit: int = 100, threshold: int = 1000000) -> int:\n    \"\"\"\n    Counts nCr > threshold for 1 <= n <= limit.\n    \"\"\"\n    count = 0\n    for n in range(1, limit + 1):\n        for r in range(0, n + 1):\n            if comb(n, r) > threshold:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution()}\")",
-      "finalCode": "from math import comb\n\ndef solution(limit: int = 100, threshold: int = 1000000) -> int:\n    \"\"\"\n    Counts nCr > threshold for 1 <= n <= limit.\n    \"\"\"\n    count = 0\n    for n in range(1, limit + 1):\n        for r in range(0, n + 1):\n            if comb(n, r) > threshold:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution()}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Combinatoric Selections",
+            "description": "Count how many values of nCr for 1 <= n <= 100 are greater than one million.",
+            "language": "python",
+            "ghostCode": "from math import comb\n\ndef solution(limit: int = 100, threshold: int = 1000000) -> int:\n    \"\"\"\n    Counts nCr > threshold for 1 <= n <= limit.\n    \"\"\"\n    count = 0\n    for n in range(1, limit + 1):\n        for r in range(0, n + 1):\n            if comb(n, r) > threshold:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution()}\")",
+            "finalCode": "from math import comb\n\ndef solution(limit: int = 100, threshold: int = 1000000) -> int:\n    \"\"\"\n    Counts nCr > threshold for 1 <= n <= limit.\n    \"\"\"\n    count = 0\n    for n in range(1, limit + 1):\n        for r in range(0, n + 1):\n            if comb(n, r) > threshold:\n                count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution()}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

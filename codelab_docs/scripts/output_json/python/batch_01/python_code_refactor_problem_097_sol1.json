@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Large Non-Mersenne Prime",
-      "problemDescription": "Refactor the last digits calculation to use a more robust formatting approach.",
-      "language": "python",
-      "initialCode": "def solution():\n    MOD = 10**10\n    power_val = pow(2, 7830457, MOD)\n    result = (28433 * power_val + 1) % MOD\n    return str(result).zfill(10)",
-      "solution": {
-        "code": "def solution(digits: int = 10) -> str:\n    \"\"\"\n    Returns the last 'digits' of the massive prime using f-string formatting.\n    \"\"\"\n    mod = 10**digits\n    # result = (28433 * 2^7830457 + 1) mod 10^10\n    val = (28433 * pow(2, 7830457, mod) + 1) % mod\n    return f\"{val:0{digits}d}\"\n\n\nif __name__ == \"__main__\":\n    print(solution(10))",
-        "explanation": "Using f-string formatting with variable precision `:0{digits}d` is more concise than `zfill()` and is highly readable in modern Python."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Large Non-Mersenne Prime",
+            "problemDescription": "Refactor the last digits calculation to use a more robust formatting approach.",
+            "language": "python",
+            "initialCode": "def solution():\n    MOD = 10**10\n    power_val = pow(2, 7830457, MOD)\n    result = (28433 * power_val + 1) % MOD\n    return str(result).zfill(10)",
+            "solution": {
+                "code": "def solution(digits: int = 10) -> str:\n    \"\"\"\n    Returns the last 'digits' of the massive prime using f-string formatting.\n    \"\"\"\n    mod = 10**digits\n    # result = (28433 * 2^7830457 + 1) mod 10^10\n    val = (28433 * pow(2, 7830457, mod) + 1) % mod\n    return f\"{val:0{digits}d}\"\n\n\nif __name__ == \"__main__\":\n    print(solution(10))",
+                "explanation": "Using f-string formatting with variable precision `:0{digits}d` is more concise than `zfill()` and is highly readable in modern Python."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nint factorial(int n) {\\n    if (n <= 1) return 1;\\n    return n * factorial(n - 1);\\n}\\n\\nint main() {\\n    printf(\\\"%d\\\\n\\\", factorial(5));\\n    return 0;\\n}",
                 "explanation": "Recursion is a natural way to express mathematical operations like factorials, where the solution to a problem depends on solutions to smaller instances of the same problem."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

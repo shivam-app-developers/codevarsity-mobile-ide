@@ -10,7 +10,7 @@
             "ghostCode": "    public ConstructorChaining() {\n        this(\"Unknown\", 0);\n    }\n\n    public ConstructorChaining(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }",
             "finalCode": "public class ConstructorChaining {\n    private String name;\n    private int age;\n\n    public ConstructorChaining() {\n        this(\"Unknown\", 0);\n    }\n\n    public ConstructorChaining(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    public void display() {\n        System.out.println(name + \" is \" + age + \" years old.\");\n    }\n\n    public static void main(String[] args) {\n        new ConstructorChaining().display();\n    }\n}",
             "validation": {
-                "pattern": "Unknown is 0 years old."
+                "type": "run_code"
             }
         }
     }

@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class PrimeNumber {\n    public static boolean isPrime(int n) {\n        if (n < 2) return false;\n        if (n == 2) return true;\n        if (n % 2 == 0) return false;\n        for (int i = 3; i * i <= n; i += 2) {\n            if (n % i == 0) return false;\n        }\n        return true;\n    }\n}",
                 "explanation": "While the original logic worked, it was very inefficient for large numbers. The solution optimizes by checking only odd divisors up to the square root."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

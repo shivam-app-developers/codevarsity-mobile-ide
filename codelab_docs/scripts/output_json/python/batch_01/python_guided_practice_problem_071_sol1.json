@@ -1,14 +1,17 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "medium",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Ordered Fractions",
-      "description": "Find the numerator of the fraction immediately to the left of 3/7 in the sorted set of reduced proper fractions for d <= 1,000,000.",
-      "language": "python",
-      "ghostCode": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Returns the numerator of the fraction immediately to the left of 3/7.\n    \"\"\"\n    # We want to find n/d < 3/7 such that n/d is as large as possible.\n    # 7n < 3d  =>  n < 3d/7\n    # For a given d, the largest n is (3d-1) // 7.\n    \n    target_num, target_den = 3, 7\n    best_num = 0\n    best_den = 1\n    \n    for d in range(1, limit + 1):\n        # Maximize n such that n/d < 3/7\n        n = (target_num * d - 1) // target_den\n        \n        # Compare n/d with current best_num/best_den\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n            \n    return best_num\n\n\nif __name__ == \"__main__\":\n    print(f\"Numerator: {solution(1000000)}\")",
-      "finalCode": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Returns the numerator of the fraction immediately to the left of 3/7.\n    \"\"\"\n    # We want to find n/d < 3/7 such that n/d is as large as possible.\n    # 7n < 3d  =>  n < 3d/7\n    # For a given d, the largest n is (3d-1) // 7.\n    \n    target_num, target_den = 3, 7\n    best_num = 0\n    best_den = 1\n    \n    for d in range(1, limit + 1):\n        # Maximize n such that n/d < 3/7\n        n = (target_num * d - 1) // target_den\n        \n        # Compare n/d with current best_num/best_den\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n            \n    return best_num\n\n\nif __name__ == \"__main__\":\n    print(f\"Numerator: {solution(1000000)}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Ordered Fractions",
+            "description": "Find the numerator of the fraction immediately to the left of 3/7 in the sorted set of reduced proper fractions for d <= 1,000,000.",
+            "language": "python",
+            "ghostCode": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Returns the numerator of the fraction immediately to the left of 3/7.\n    \"\"\"\n    # We want to find n/d < 3/7 such that n/d is as large as possible.\n    # 7n < 3d  =>  n < 3d/7\n    # For a given d, the largest n is (3d-1) // 7.\n    \n    target_num, target_den = 3, 7\n    best_num = 0\n    best_den = 1\n    \n    for d in range(1, limit + 1):\n        # Maximize n such that n/d < 3/7\n        n = (target_num * d - 1) // target_den\n        \n        # Compare n/d with current best_num/best_den\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n            \n    return best_num\n\n\nif __name__ == \"__main__\":\n    print(f\"Numerator: {solution(1000000)}\")",
+            "finalCode": "def solution(limit: int = 1000000) -> int:\n    \"\"\"\n    Returns the numerator of the fraction immediately to the left of 3/7.\n    \"\"\"\n    # We want to find n/d < 3/7 such that n/d is as large as possible.\n    # 7n < 3d  =>  n < 3d/7\n    # For a given d, the largest n is (3d-1) // 7.\n    \n    target_num, target_den = 3, 7\n    best_num = 0\n    best_den = 1\n    \n    for d in range(1, limit + 1):\n        # Maximize n such that n/d < 3/7\n        n = (target_num * d - 1) // target_den\n        \n        # Compare n/d with current best_num/best_den\n        if n * best_den > best_num * d:\n            best_num = n\n            best_den = d\n            \n    return best_num\n\n\nif __name__ == \"__main__\":\n    print(f\"Numerator: {solution(1000000)}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

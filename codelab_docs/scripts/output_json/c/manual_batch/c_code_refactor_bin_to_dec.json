@@ -10,6 +10,9 @@
             "solution": {
                 "code": "#include <stdio.h>\\n\\nvoid printBinary(int n) {\\n    for (int i = 31; i >= 0; i--) {\\n        int k = n >> i;\\n        if (k & 1) printf(\\\"1\\\");\\n        else printf(\\\"0\\\");\\n    }\\n}",
                 "explanation": "Bitwise shifts (`>>`) and logical AND (`&`) are much faster than division and modulo operations for binary manipulations on processors."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

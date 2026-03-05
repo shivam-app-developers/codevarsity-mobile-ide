@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Champernowne's Constant",
-      "problemDescription": "Refactor the solution to calculate specific digits without generating the entire million-digit string.",
-      "language": "python",
-      "initialCode": "def solution():\n    parts = []\n    length = 0\n    i = 1\n    while length < 1000000:\n        s = str(i)\n        parts.append(s)\n        length += len(s)\n        i += 1\n    constant = \"\".join(parts)\n    return int(constant[0]) * int(constant[9]) * int(constant[99]) * int(constant[999]) * int(constant[9999]) * int(constant[99999]) * int(constant[999999])",
-      "solution": {
-        "code": "def get_digit(n: int) -> int:\n    \"\"\"\n    Finds the n-th digit of Champernowne's constant mathematically.\n    \"\"\"\n    # Determine how many digits the number containing the n-th digit has\n    digit_len = 1\n    count = 9\n    while n > digit_len * count:\n        n -= digit_len * count\n        digit_len += 1\n        count *= 10\n    \n    # n is now the offset within numbers of digit_len\n    start_num = 10**(digit_len - 1)\n    num = start_num + (n - 1) // digit_len\n    digit_idx = (n - 1) % digit_len\n    return int(str(num)[digit_idx])\n\ndef solution() -> int:\n    product = 1\n    for i in range(7):\n        product *= get_digit(10**i)\n    return product\n\n\nif __name__ == \"__main__\":\n    print(solution())",
-        "explanation": "Calculating the n-th digit mathematically avoids the memory overhead of creating a million-character string, making the solution much more scalable."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Champernowne's Constant",
+            "problemDescription": "Refactor the solution to calculate specific digits without generating the entire million-digit string.",
+            "language": "python",
+            "initialCode": "def solution():\n    parts = []\n    length = 0\n    i = 1\n    while length < 1000000:\n        s = str(i)\n        parts.append(s)\n        length += len(s)\n        i += 1\n    constant = \"\".join(parts)\n    return int(constant[0]) * int(constant[9]) * int(constant[99]) * int(constant[999]) * int(constant[9999]) * int(constant[99999]) * int(constant[999999])",
+            "solution": {
+                "code": "def get_digit(n: int) -> int:\n    \"\"\"\n    Finds the n-th digit of Champernowne's constant mathematically.\n    \"\"\"\n    # Determine how many digits the number containing the n-th digit has\n    digit_len = 1\n    count = 9\n    while n > digit_len * count:\n        n -= digit_len * count\n        digit_len += 1\n        count *= 10\n    \n    # n is now the offset within numbers of digit_len\n    start_num = 10**(digit_len - 1)\n    num = start_num + (n - 1) // digit_len\n    digit_idx = (n - 1) % digit_len\n    return int(str(num)[digit_idx])\n\ndef solution() -> int:\n    product = 1\n    for i in range(7):\n        product *= get_digit(10**i)\n    return product\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+                "explanation": "Calculating the n-th digit mathematically avoids the memory overhead of creating a million-character string, making the solution much more scalable."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

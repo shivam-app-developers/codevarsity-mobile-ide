@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int day = 2;\n        String name = switch (day) {\n            case 1 -> \"Monday\";\n            case 2 -> \"Tuesday\";\n            default -> \"Unknown\";\n        };\n        System.out.println(name);\n    }\n}",
                 "explanation": "Switch expressions are more concise, can return a value directly, and eliminate the need for the 'break' keyword."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

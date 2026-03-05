@@ -8,7 +8,10 @@
             "description": "Convert a binary string to its decimal integer equivalent.",
             "language": "javascript",
             "ghostCode": "function binaryToDecimal(binaryString) {\\n  return parseInt(binaryString, 2);\\n}\\n\\nconsole.log(binaryToDecimal(\\\"1010\\\")); // 10",
-            "finalCode": "function binaryToDecimal(binaryString) {\\n  return parseInt(binaryString, 2);\\n}\\n\\nconsole.log(binaryToDecimal(\\\"1010\\\")); // 10"
+            "finalCode": "function binaryToDecimal(binaryString) {\\n  return parseInt(binaryString, 2);\\n}\\n\\nconsole.log(binaryToDecimal(\\\"1010\\\")); // 10",
+            "validation": {
+                "type": "run_code"
+            }
         }
     }
 }

@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Distinct Powers",
-      "problemDescription": "Fix the logic to correctly count distinct power results in the specified range.",
-      "language": "python",
-      "buggyCode": "def solution(n: int = 100) -> int:\n    results = []\n    for a in range(2, n):\n        for b in range(2, n):\n            # BUG: Results are stored in a list, but duplicates are not removed\n            results.append(a**b)\n    \n    # BUG: Range [2, n] excludes the limit n\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
-      "solution": {
-        "code": "def solution(n: int = 100) -> int:\n    # Use a set to automatically handle and remove duplicate values\n    results = set()\n    # Ensure the range includes the limit n by using n + 1\n    for a in range(2, n + 1):\n        for b in range(2, n + 1):\n            results.add(a**b)\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Distinct Powers",
+            "problemDescription": "Fix the logic to correctly count distinct power results in the specified range.",
+            "language": "python",
+            "buggyCode": "def solution(n: int = 100) -> int:\n    results = []\n    for a in range(2, n):\n        for b in range(2, n):\n            # BUG: Results are stored in a list, but duplicates are not removed\n            results.append(a**b)\n    \n    # BUG: Range [2, n] excludes the limit n\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+            "solution": {
+                "code": "def solution(n: int = 100) -> int:\n    # Use a set to automatically handle and remove duplicate values\n    results = set()\n    # Ensure the range includes the limit n by using n + 1\n    for a in range(2, n + 1):\n        for b in range(2, n + 1):\n            results.add(a**b)\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

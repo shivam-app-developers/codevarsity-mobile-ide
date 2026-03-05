@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int num : numbers) {\n            System.out.println(num);\n        }\n    }\n}",
                 "explanation": "The enhanced for-loop (for-each) eliminates the need for an index variable and prevents index-out-of-bounds errors by design."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

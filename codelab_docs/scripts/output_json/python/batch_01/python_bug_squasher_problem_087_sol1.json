@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Prime Power Triples",
-      "problemDescription": "Fix the logic to correctly identify and count unique sums of prime powers below a limit.",
-      "language": "python",
-      "buggyCode": "def solution(limit=50000000):\n    primes = [2, 3, 5, 7, 11] # BUG: Hardcoded primes list is too short\n    count = 0\n    # BUG: Nested loops without set will overcount duplicate results\n    for p1 in primes:\n        for p2 in primes:\n            for p3 in primes:\n                val = p1**2 + p2**3 + p3**4\n                if val < limit:\n                    count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50000000))",
-      "solution": {
-        "code": "def solution(limit=50000000):\n    # Generate primes up to approx sqrt(limit)\n    p_limit = int(limit**0.5) + 1\n    sieve = [True] * p_limit\n    primes = []\n    for p in range(2, p_limit):\n        if sieve[p]:\n            primes.append(p)\n            for i in range(p*p, p_limit, p):\n                sieve[i] = False\n    \n    # Use a set to handle duplicates like 2^2 + 2^3 + 3^4 and other combinations\n    results = set()\n    for p1 in primes:\n        s1 = p1**2\n        if s1 >= limit: break\n        for p2 in primes:\n            s2 = s1 + p2**3\n            if s2 >= limit: break\n            for p3 in primes:\n                s3 = s2 + p3**4\n                if s3 >= limit: break\n                results.add(s3)\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(50000000))",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Prime Power Triples",
+            "problemDescription": "Fix the logic to correctly identify and count unique sums of prime powers below a limit.",
+            "language": "python",
+            "buggyCode": "def solution(limit=50000000):\n    primes = [2, 3, 5, 7, 11] # BUG: Hardcoded primes list is too short\n    count = 0\n    # BUG: Nested loops without set will overcount duplicate results\n    for p1 in primes:\n        for p2 in primes:\n            for p3 in primes:\n                val = p1**2 + p2**3 + p3**4\n                if val < limit:\n                    count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50000000))",
+            "solution": {
+                "code": "def solution(limit=50000000):\n    # Generate primes up to approx sqrt(limit)\n    p_limit = int(limit**0.5) + 1\n    sieve = [True] * p_limit\n    primes = []\n    for p in range(2, p_limit):\n        if sieve[p]:\n            primes.append(p)\n            for i in range(p*p, p_limit, p):\n                sieve[i] = False\n    \n    # Use a set to handle duplicates like 2^2 + 2^3 + 3^4 and other combinations\n    results = set()\n    for p1 in primes:\n        s1 = p1**2\n        if s1 >= limit: break\n        for p2 in primes:\n            s2 = s1 + p2**3\n            if s2 >= limit: break\n            for p3 in primes:\n                s3 = s2 + p3**4\n                if s3 >= limit: break\n                results.add(s3)\n    return len(results)\n\n\nif __name__ == \"__main__\":\n    print(solution(50000000))",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

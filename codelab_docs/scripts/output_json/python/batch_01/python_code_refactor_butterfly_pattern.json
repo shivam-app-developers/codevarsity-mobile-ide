@@ -1,16 +1,19 @@
 {
-  "difficulty": "medium",
-  "visualizerParams": {
-    "visualizerType": "CodeRefactorChallenge",
+    "difficulty": "medium",
     "visualizerParams": {
-      "title": "Optimizing Butterfly with Mirroring",
-      "problemDescription": "The provided butterfly pattern uses two separate loops for the top and bottom halves. Refactor it to use list mirroring, which can reduce code duplication and improve maintainability.",
-      "language": "python",
-      "initialCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
-      "solution": {
-        "code": "def butterfly(n):\n    lines = []\n    for i in range(1, n + 1):\n        row = '*' * i + ' ' * (2 * (n - i)) + '*' * i\n        lines.append(row)\n    return '\\n'.join(lines + lines[::-1])\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
-        "explanation": "Since the bottom half of the butterfly is a mirror image of the top half, we can generate the top half once and then append its reverse to complete the pattern. This reduces the number of loops and avoids duplicating the string construction logic."
-      }
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Optimizing Butterfly with Mirroring",
+            "problemDescription": "The provided butterfly pattern uses two separate loops for the top and bottom halves. Refactor it to use list mirroring, which can reduce code duplication and improve maintainability.",
+            "language": "python",
+            "initialCode": "def butterfly(n):\n    res = []\n    for i in range(1, n + 1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    for i in range(n, 0, -1):\n        stars = '*' * i\n        spaces = ' ' * (2 * (n - i))\n        res.append(stars + spaces + stars)\n    return '\\n'.join(res)\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+            "solution": {
+                "code": "def butterfly(n):\n    lines = []\n    for i in range(1, n + 1):\n        row = '*' * i + ' ' * (2 * (n - i)) + '*' * i\n        lines.append(row)\n    return '\\n'.join(lines + lines[::-1])\n\nif __name__ == \"__main__\":\n    print(butterfly(3))",
+                "explanation": "Since the bottom half of the butterfly is a mirror image of the top half, we can generate the top half once and then append its reverse to complete the pattern. This reduces the number of loops and avoids duplicating the string construction logic."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

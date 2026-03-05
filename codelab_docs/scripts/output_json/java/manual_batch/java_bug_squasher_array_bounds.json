@@ -10,6 +10,9 @@
             "solution": {
                 "code": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int i = 0; i < numbers.length; i++) {\n            System.out.println(numbers[i]);\n        }\n    }\n}",
                 "explanation": "Arrays in Java are zero-indexed, meaning the last valid index is 'length - 1'. Using '<=' causes the loop to try and access an index equal to the length."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

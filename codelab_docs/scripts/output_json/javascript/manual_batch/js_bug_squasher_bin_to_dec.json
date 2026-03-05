@@ -10,6 +10,9 @@
             "solution": {
                 "code": "function toDecimal(bin) {\\n  return parseInt(bin, 2);\\n}",
                 "explanation": "It's always a best practice to specify the 'radix' (the second argument to `parseInt`) to avoid ambiguity, especially when working with binary strings."
+            },
+            "validation": {
+                "type": "run_code"
             }
         }
     }

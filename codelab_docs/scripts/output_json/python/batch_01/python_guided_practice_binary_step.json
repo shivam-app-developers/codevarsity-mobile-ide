@@ -1,14 +1,17 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "GuidedPractice",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "mode": "snippet",
-      "title": "Binary Step Activation Function",
-      "description": "Implement the Binary Step activation function, which returns 1 for non-negative inputs and 0 otherwise.",
-      "language": "python",
-      "ghostCode": "def binary_step(x):\n    if isinstance(x, (list, tuple)):\n        return [1 if i >= 0 else 0 for i in x]\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0.5: {binary_step(0.5)}\")\n    print(f\"Step -1.2: {binary_step(-1.2)}\")\n    print(f\"Batch: {binary_step([-1, 0, 1])}\")",
-      "finalCode": "def binary_step(x):\n    if isinstance(x, (list, tuple)):\n        return [1 if i >= 0 else 0 for i in x]\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0.5: {binary_step(0.5)}\")\n    print(f\"Step -1.2: {binary_step(-1.2)}\")\n    print(f\"Batch: {binary_step([-1, 0, 1])}\")"
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Binary Step Activation Function",
+            "description": "Implement the Binary Step activation function, which returns 1 for non-negative inputs and 0 otherwise.",
+            "language": "python",
+            "ghostCode": "def binary_step(x):\n    if isinstance(x, (list, tuple)):\n        return [1 if i >= 0 else 0 for i in x]\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0.5: {binary_step(0.5)}\")\n    print(f\"Step -1.2: {binary_step(-1.2)}\")\n    print(f\"Batch: {binary_step([-1, 0, 1])}\")",
+            "finalCode": "def binary_step(x):\n    if isinstance(x, (list, tuple)):\n        return [1 if i >= 0 else 0 for i in x]\n    return 1 if x >= 0 else 0\n\nif __name__ == \"__main__\":\n    print(f\"Step 0.5: {binary_step(0.5)}\")\n    print(f\"Step -1.2: {binary_step(-1.2)}\")\n    print(f\"Batch: {binary_step([-1, 0, 1])}\")",
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }

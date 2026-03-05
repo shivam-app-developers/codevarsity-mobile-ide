@@ -1,16 +1,19 @@
 {
-  "difficulty": "beginner",
-  "visualizerParams": {
-    "visualizerType": "BugSquasherScenario",
+    "difficulty": "beginner",
     "visualizerParams": {
-      "title": "Self Powers",
-      "problemDescription": "Fix the logic to correctly extract the last 10 digits of the self-power series.",
-      "language": "python",
-      "buggyCode": "def solution(n: int = 1000):\n    total = 0\n    for i in range(n):\n        # BUG: range(n) misses the limit n\n        # BUG: Calculating i**i for large i is extremely slow\n        total += i**i\n    \n    # BUG: result might not have 10 digits if leading zeros are present\n    return str(total)[-10:]\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
-      "solution": {
-        "code": "def solution(n: int = 1000):\n    total = 0\n    MOD = 10**10\n    # Iterate from 1 to n inclusive\n    for i in range(1, n + 1):\n        # Use modular exponentiation to keep numbers small\n        total = (total + pow(i, i, MOD)) % MOD\n    \n    # Ensure 10 digits with zero-padding\n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
-        "explanation": "Fix the logic bug."
-      }
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Self Powers",
+            "problemDescription": "Fix the logic to correctly extract the last 10 digits of the self-power series.",
+            "language": "python",
+            "buggyCode": "def solution(n: int = 1000):\n    total = 0\n    for i in range(n):\n        # BUG: range(n) misses the limit n\n        # BUG: Calculating i**i for large i is extremely slow\n        total += i**i\n    \n    # BUG: result might not have 10 digits if leading zeros are present\n    return str(total)[-10:]\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+            "solution": {
+                "code": "def solution(n: int = 1000):\n    total = 0\n    MOD = 10**10\n    # Iterate from 1 to n inclusive\n    for i in range(1, n + 1):\n        # Use modular exponentiation to keep numbers small\n        total = (total + pow(i, i, MOD)) % MOD\n    \n    # Ensure 10 digits with zero-padding\n    return str(total).zfill(10)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+                "explanation": "Fix the logic bug."
+            },
+            "validation": {
+                "type": "run_code"
+            }
+        }
     }
-  }
 }
