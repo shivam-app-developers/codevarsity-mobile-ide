@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Instance Method",
+            "problemDescription": "Refactor the class to use an instance variable and an instance method instead of static members.",
+            "language": "java",
+            "initialCode": "public class StaticContext {\n    private static int count = 0;\n    public static void main(String[] args) {\n        count++;\n        System.out.println(count);\n    }\n}",
+            "solution": {
+                "code": "public class StaticContext {\n    private int count = 0;\n\n    public void increment() {\n        count++;\n    }\n\n    public static void main(String[] args) {\n        StaticContext sc = new StaticContext();\n        sc.increment();\n        System.out.println(sc.count);\n    }\n}",
+                "explanation": "Moving from static to instance members allows each object of the class to maintain its own state."
+            }
+        }
+    }
+}

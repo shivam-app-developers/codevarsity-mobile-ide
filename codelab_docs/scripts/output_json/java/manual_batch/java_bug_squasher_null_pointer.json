@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Null Pointer Exception",
+            "problemDescription": "Fix the null check logic to prevent the program from crashing.",
+            "language": "java",
+            "buggyCode": "public class NullPointer {\n    public static void main(String[] args) {\n        String name = null;\n        if (name.length() > 0) {\n            System.out.println(\"Name: \" + name);\n        }\n    }\n}",
+            "solution": {
+                "code": "public class NullPointer {\n    public static void main(String[] args) {\n        String name = null;\n        if (name != null && name.length() > 0) {\n            System.out.println(\"Name: \" + name);\n        }\n    }\n}",
+                "explanation": "Always verify that an object is not null before calling any of its methods."
+            }
+        }
+    }
+}

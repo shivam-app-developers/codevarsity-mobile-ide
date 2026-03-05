@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Sort Direction",
+            "problemDescription": "Change the sort logic to sort the array in descending order instead of ascending.",
+            "language": "java",
+            "buggyCode": "public class BubbleSort {\n    public static void sort(int[] arr) {\n        for (int i = 0; i < arr.length - 1; i++) {\n            for (int j = 0; j < arr.length - i - 1; j++) {\n                if (arr[j] > arr[j + 1]) {\n                    int temp = arr[j];\n                    arr[j] = arr[j + 1];\n                    arr[j + 1] = temp;\n                }\n            }\n        }\n    }\n}",
+            "solution": {
+                "code": "public class BubbleSort {\n    public static void sort(int[] arr) {\n        for (int i = 0; i < arr.length - 1; i++) {\n            for (int j = 0; j < arr.length - i - 1; j++) {\n                if (arr[j] < arr[j + 1]) {\n                    int temp = arr[j];\n                    arr[j] = arr[j + 1];\n                    arr[j + 1] = temp;\n                }\n            }\n        }\n    }\n}",
+                "explanation": "By flipping the comparison operator from '>' to '<', we swap elements when the first is smaller than the second, resulting in a descending sort."
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "difficulty": "advanced",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: removeIf() Method",
+            "problemDescription": "Refactor the manual iterator loop to use the modern Collection.removeIf() lambda expression.",
+            "language": "java",
+            "initialCode": "import java.util.*;\npublic class ListModification {\n    public static void main(String[] args) {\n        List<String> items = new ArrayList<>(Arrays.asList(\"A\", \"B\", \"C\"));\n        Iterator<String> it = items.iterator();\n        while (it.hasNext()) {\n            if (it.next().equals(\"B\")) it.remove();\n        }\n    }\n}",
+            "solution": {
+                "code": "import java.util.*;\n\npublic class ListModification {\n    public static void main(String[] args) {\n        List<String> items = new ArrayList<>(Arrays.asList(\"A\", \"B\", \"C\"));\n        items.removeIf(item -> item.equals(\"B\"));\n    }\n}",
+                "explanation": "removeIf() is a more concise way to remove elements that match a certain condition, handling the iteration logic internally."
+            }
+        }
+    }
+}

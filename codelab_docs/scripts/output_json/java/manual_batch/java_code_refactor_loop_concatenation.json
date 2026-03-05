@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: String Builder",
+            "problemDescription": "Optimize string concatenation in a loop to improve memory efficiency.",
+            "language": "java",
+            "initialCode": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        String res = \"\";\n        for (int i = 0; i < 1000; i++) {\n            res += i + \" \";\n        }\n        System.out.println(res);\n    }\n}",
+            "solution": {
+                "code": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < 1000; i++) {\n            sb.append(i).append(\" \");\n        }\n        String res = sb.toString();\n        System.out.println(res);\n    }\n}",
+                "explanation": "Using '+' with Strings in a loop creates new String objects on every iteration. 'StringBuilder' is much faster as it modifies the same character buffer."
+            }
+        }
+    }
+}

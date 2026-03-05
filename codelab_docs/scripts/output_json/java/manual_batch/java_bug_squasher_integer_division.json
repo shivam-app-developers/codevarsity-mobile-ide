@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Integer Division",
+            "problemDescription": "Fix the division to ensure the decimal part is preserved.",
+            "language": "java",
+            "buggyCode": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 2;\n        double result = a / b;\n        System.out.println(\"Result: \" + result);\n    }\n}",
+            "solution": {
+                "code": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 2;\n        double result = (double) a / b;\n        System.out.println(\"Result: \" + result);\n    }\n}",
+                "explanation": "In Java, dividing two 'int' values results in an 'int'. You must cast at least one operand to 'double' to perform floating-point division."
+            }
+        }
+    }
+}

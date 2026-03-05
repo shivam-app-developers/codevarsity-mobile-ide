@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Iterative Factorial",
+            "problemDescription": "Refactor the recursive factorial method into an iterative version to save stack space and prevent StackOverflowError.",
+            "language": "java",
+            "initialCode": "public class FactorialRecursion {\n    public static int factorial(int n) {\n        if (n <= 1) return 1;\n        return n * factorial(n - 1);\n    }\n}",
+            "solution": {
+                "code": "public class FactorialRecursion {\n    public static int factorial(int n) {\n        int res = 1;\n        for (int i = 2; i <= n; i++) {\n            res *= i;\n        }\n        return res;\n    }\n}",
+                "explanation": "Iterative solutions are generally safer in Java because they use the heap for data instead of the recursion stack, which is limited in depth."
+            }
+        }
+    }
+}

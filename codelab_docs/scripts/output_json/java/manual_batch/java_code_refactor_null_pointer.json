@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Optional Class",
+            "problemDescription": "Replace manual null checks with Java 8 Optional for a cleaner approach.",
+            "language": "java",
+            "initialCode": "public class NullPointer {\n    public static void main(String[] args) {\n        String name = null;\n        if (name != null) {\n            System.out.println(name.length());\n        }\n    }\n}",
+            "solution": {
+                "code": "import java.util.Optional;\n\npublic class NullPointer {\n    public static void main(String[] args) {\n        String name = null;\n        Optional.ofNullable(name)\n                .ifPresent(n -> System.out.println(n.length()));\n    }\n}",
+                "explanation": "Optional.ofNullable() creates an Optional that may be empty. ifPresent() ensures the code block only runs if a value is actually available."
+            }
+        }
+    }
+}

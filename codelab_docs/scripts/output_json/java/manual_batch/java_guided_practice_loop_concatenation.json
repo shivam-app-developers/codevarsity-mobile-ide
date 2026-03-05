@@ -1,0 +1,17 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: StringBuilder Class",
+            "description": "Practice using StringBuilder to build strings efficiently without creating temporary objects.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder(\"Values: \");\n        for (int i = 1; i <= 3; i++) {\n            sb.append(i).append(\" \");\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+            "finalCode": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder(\"Values: \");\n        for (int i = 1; i <= 3; i++) {\n            sb.append(i).append(\" \");\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+            "validation": {
+                "pattern": "Values: 1 2 3"
+            }
+        }
+    }
+}

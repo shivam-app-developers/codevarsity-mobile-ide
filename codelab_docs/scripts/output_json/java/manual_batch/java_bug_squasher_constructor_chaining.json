@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Chaining Error",
+            "problemDescription": "Fix the constructor chaining logic. In Java, 'this()' must be the very first statement in a constructor.",
+            "language": "java",
+            "buggyCode": "public class ConstructorChaining {\n    private String name;\n    \n    public ConstructorChaining() {\n        System.out.println(\"Initializing...\");\n        this(\"Unknown\"); // BUG: Constructor call must be first\n    }\n\n    public ConstructorChaining(String name) {\n        this.name = name;\n    }\n}",
+            "solution": {
+                "code": "public class ConstructorChaining {\n    private String name;\n    \n    public ConstructorChaining() {\n        this(\"Unknown\");\n        System.out.println(\"Initializing...\");\n    }\n\n    public ConstructorChaining(String name) {\n        this.name = name;\n    }\n}",
+                "explanation": "Java enforces that constructor chaining (using 'this()' or 'super()') occurs as the absolute first line of code in a constructor to ensure the object is properly initialized before any other logic runs."
+            }
+        }
+    }
+}

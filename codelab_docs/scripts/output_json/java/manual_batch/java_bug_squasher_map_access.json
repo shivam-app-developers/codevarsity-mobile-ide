@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Safe Map Access",
+            "problemDescription": "Fix the map access to handle cases where the key might not exist.",
+            "language": "java",
+            "buggyCode": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        scores.put(\"Alice\", 90);\n\n        if (scores.get(\"Bob\") > 50) {\n            System.out.println(\"Bob passed\");\n        }\n    }\n}",
+            "solution": {
+                "code": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        scores.put(\"Alice\", 90);\n\n        Integer bobScore = scores.get(\"Bob\");\n        if (bobScore != null && bobScore > 50) {\n            System.out.println(\"Bob passed\");\n        }\n    }\n}",
+                "explanation": "If a key is missing, 'Map.get()' returns null. Attempting to compare null with an integer using '>' causes a NullPointerException due to unboxing."
+            }
+        }
+    }
+}

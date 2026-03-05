@@ -1,0 +1,17 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Prime Checker",
+            "description": "Implement an efficient primality test using square root optimization.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class PrimeNumber {\n    public static boolean isPrime(int n) {\n        if (n <= 1) return false;\n        for (int i = 2; i <= Math.sqrt(n); i++) {\n            if (n % i == 0) return false;\n        }\n        return true;\n    }\n}",
+            "finalCode": "public class PrimeNumber {\n    public static boolean isPrime(int n) {\n        if (n <= 1) return false;\n        for (int i = 2; i <= Math.sqrt(n); i++) {\n            if (n % i == 0) return false;\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(\"7 is prime: \" + isPrime(7));\n    }\n}",
+            "validation": {
+                "pattern": "7 is prime: true"
+            }
+        }
+    }
+}

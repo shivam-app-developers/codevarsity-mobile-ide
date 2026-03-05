@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Enhanced For Loop",
+            "problemDescription": "Refactor the traditional for-loop to an enhanced for-each loop for better readability.",
+            "language": "java",
+            "initialCode": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int i = 0; i < numbers.length; i++) {\n            System.out.println(numbers[i]);\n        }\n    }\n}",
+            "solution": {
+                "code": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int num : numbers) {\n            System.out.println(num);\n        }\n    }\n}",
+                "explanation": "The enhanced for-loop (for-each) eliminates the need for an index variable and prevents index-out-of-bounds errors by design."
+            }
+        }
+    }
+}

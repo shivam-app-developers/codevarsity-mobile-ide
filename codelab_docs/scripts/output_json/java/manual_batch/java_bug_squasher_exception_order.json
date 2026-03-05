@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Exception Hierarchy",
+            "problemDescription": "Fix the catch block order. In Java, more specific exceptions must be caught before more general ones.",
+            "language": "java",
+            "buggyCode": "import java.io.IOException;\n\npublic class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            throw new IOException(\"File error\");\n        } catch (Exception e) {\n            System.out.println(\"General error\");\n        } catch (IOException ioe) {\n            System.out.println(\"Specific IO error\");\n        }\n    }\n}",
+            "solution": {
+                "code": "import java.io.IOException;\n\npublic class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            throw new IOException(\"File error\");\n        } catch (IOException ioe) {\n            System.out.println(\"Specific IO error\");\n        } catch (Exception e) {\n            System.out.println(\"General error\");\n        }\n    }\n}",
+                "explanation": "Since 'IOException' is a subclass of 'Exception', the general 'catch (Exception e)' block will intercept all IO exceptions if placed first, making the specific block unreachable."
+            }
+        }
+    }
+}

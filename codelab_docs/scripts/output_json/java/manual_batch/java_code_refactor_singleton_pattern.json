@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Thread-Safe Singleton",
+            "problemDescription": "Refactor the Singleton pattern to use synchronized initialization for thread safety.",
+            "language": "java",
+            "initialCode": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    public static SingletonPattern getInstance() {\n        if (instance == null) instance = new SingletonPattern();\n        return instance;\n    }\n}",
+            "solution": {
+                "code": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    public static synchronized SingletonPattern getInstance() {\n        if (instance == null) {\n            instance = new SingletonPattern();\n        }\n        return instance;\n    }\n}",
+                "explanation": "Using 'synchronized' on the 'getInstance()' method ensures that only one thread can execute the initialization logic at a time, preventing multiple instances from being created."
+            }
+        }
+    }
+}

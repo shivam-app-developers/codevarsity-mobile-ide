@@ -1,0 +1,17 @@
+{
+    "difficulty": "advanced",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Binary Search",
+            "description": "Implement a standard Binary Search algorithm with focus on the base cases and loop logic.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class BinarySearchMid {\n    public static int search(int[] arr, int target) {\n        int low = 0, high = arr.length - 1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (arr[mid] == target) return mid;\n            if (arr[mid] < target) low = mid + 1;\n            else high = mid - 1;\n        }\n        return -1;\n    }\n}",
+            "finalCode": "public class BinarySearchMid {\n    public static int search(int[] arr, int target) {\n        int low = 0, high = arr.length - 1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (arr[mid] == target) return mid;\n            if (arr[mid] < target) low = mid + 1;\n            else high = mid - 1;\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        int[] nums = {1, 2, 3};\n        System.out.println(search(nums, 2));\n    }\n}",
+            "validation": {
+                "pattern": "1"
+            }
+        }
+    }
+}

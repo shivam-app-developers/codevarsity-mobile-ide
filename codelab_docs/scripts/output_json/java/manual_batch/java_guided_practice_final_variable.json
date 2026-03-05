@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Final Keyword",
+            "description": "Practice declaring and using a 'final' variable that cannot be modified once set.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class FinalVariable {\n    public static void main(String[] args) {\n        final double PI = 3.14159;\n        System.out.println(\"Value of PI: \" + PI);\n    }\n}",
+            "finalCode": "public class FinalVariable {\n    public static void main(String[] args) {\n        final double PI = 3.14159;\n        System.out.println(\"Value of PI: \" + PI);\n    }\n}",
+            "validation": {
+                "pattern": "Value of PI: 3.14159"
+            }
+        }
+    }
+}

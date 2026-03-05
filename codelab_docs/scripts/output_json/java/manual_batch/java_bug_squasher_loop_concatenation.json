@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Immutable Concatenation",
+            "problemDescription": "Fix the logic to ensure the string 'res' actually updates. In Java, Strings are immutable.",
+            "language": "java",
+            "buggyCode": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        String res = \"Count: \";\n        int count = 5;\n        res.concat(String.valueOf(count)); // BUG: Result is ignored\n        System.out.println(res);\n    }\n}",
+            "solution": {
+                "code": "public class LoopConcatenation {\n    public static void main(String[] args) {\n        String res = \"Count: \";\n        int count = 5;\n        res = res.concat(String.valueOf(count));\n        System.out.println(res);\n    }\n}",
+                "explanation": "Since String objects cannot be changed (immutable), 'concat()' returns a NEW string. You must assign that result back to the variable."
+            }
+        }
+    }
+}

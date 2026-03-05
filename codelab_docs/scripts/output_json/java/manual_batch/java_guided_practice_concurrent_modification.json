@@ -1,0 +1,17 @@
+{
+    "difficulty": "advanced",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Safe Removal",
+            "description": "Practice using an Iterator to safely remove elements from a list during iteration.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "import java.util.*;\n\npublic class ListModification {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3));\n        Iterator<Integer> it = nums.iterator();\n        while (it.hasNext()) {\n            if (it.next() == 2) it.remove();\n        }\n        System.out.println(nums.size());\n    }\n}",
+            "finalCode": "import java.util.*;\n\npublic class ListModification {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3));\n        Iterator<Integer> it = nums.iterator();\n        while (it.hasNext()) {\n            if (it.next() == 2) it.remove();\n        }\n        System.out.println(nums.size());\n    }\n}",
+            "validation": {
+                "pattern": "2"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Static Context",
+            "problemDescription": "Fix the access to 'count'. Static methods cannot access instance variables directly.",
+            "language": "java",
+            "buggyCode": "public class StaticContext {\n    private int count = 0;\n\n    public static void main(String[] args) {\n        count++;\n        System.out.println(\"Count: \" + count);\n    }\n}",
+            "solution": {
+                "code": "public class StaticContext {\n    private static int count = 0;\n\n    public static void main(String[] args) {\n        count++;\n        System.out.println(\"Count: \" + count);\n    }\n}",
+                "explanation": "Static methods belong to the class, not a specific object. To access a field from a static method without an object instance, the field must also be 'static'."
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Method Overloading",
+            "description": "Practice creating multiple methods with the same name but different parameter types.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class MethodOverloading {\n    static void show(int i) {\n        System.out.println(\"Int: \" + i);\n    }\n    \n    static void show(String s) {\n        System.out.println(\"Str: \" + s);\n    }\n\n    public static void main(String[] args) {\n        show(5);\n        show(\"Five\");\n    }\n}",
+            "finalCode": "public class MethodOverloading {\n    static void show(int i) {\n        System.out.println(\"Int: \" + i);\n    }\n    \n    static void show(String s) {\n        System.out.println(\"Str: \" + s);\n    }\n\n    public static void main(String[] args) {\n        show(5);\n        show(\"Five\");\n    }\n}",
+            "validation": {
+                "pattern": "Int: 5\nStr: Five"
+            }
+        }
+    }
+}

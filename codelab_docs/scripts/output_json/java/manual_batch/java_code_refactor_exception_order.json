@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Multi-Catch",
+            "problemDescription": "Refactor multiple catch blocks for related exceptions into a single multi-catch block (Java 7+).",
+            "language": "java",
+            "initialCode": "import java.io.*;\nimport java.sql.SQLException;\n\npublic class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Processing...\");\n        } catch (IOException e) {\n            e.printStackTrace();\n        } catch (SQLException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+            "solution": {
+                "code": "import java.io.*;\nimport java.sql.SQLException;\n\npublic class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Processing...\");\n        } catch (IOException | SQLException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+                "explanation": "Multi-catch reduces code duplication when multiple unrelated exception types are handled using the same logic."
+            }
+        }
+    }
+}

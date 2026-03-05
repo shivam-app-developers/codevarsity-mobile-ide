@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Static Instance Null",
+            "problemDescription": "Fix the Singleton implementation to ensure 'instance' is correctly assigned.",
+            "language": "java",
+            "buggyCode": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    private SingletonPattern() {}\n\n    public static SingletonPattern getInstance() {\n        if (instance == null) {\n             new SingletonPattern(); // BUG: New instance is not assigned to variable\n        }\n        return instance;\n    }\n}",
+            "solution": {
+                "code": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    private SingletonPattern() {}\n\n    public static SingletonPattern getInstance() {\n        if (instance == null) {\n            instance = new SingletonPattern();\n        }\n        return instance;\n    }\n}",
+                "explanation": "You must assign the newly created object to the 'instance' variable, otherwise 'getInstance()' will always return null or fail."
+            }
+        }
+    }
+}

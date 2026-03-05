@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Explicit Division",
+            "problemDescription": "Refactor the logic to use a float literal to force floating-point division without an explicit cast.",
+            "language": "java",
+            "initialCode": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 2;\n        double result = (double) a / b;\n        System.out.println(result);\n    }\n}",
+            "solution": {
+                "code": "public class IntegerDivision {\n    public static void main(String[] args) {\n        double result = 5.0 / 2;\n        System.out.println(result);\n    }\n}",
+                "explanation": "Using a floating-point literal (like 5.0) automatically promotes the operation to double precision, making the code cleaner than an explicit cast."
+            }
+        }
+    }
+}

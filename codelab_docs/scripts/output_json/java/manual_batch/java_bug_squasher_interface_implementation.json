@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Interface Signature",
+            "problemDescription": "Fix the compiler error. The class implementation must match the interface method exactly (visibility matters).",
+            "language": "java",
+            "buggyCode": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    void draw() { // BUG: Missing 'public' modifier\n        System.out.println(\"Drawing...\");\n    }\n}",
+            "solution": {
+                "code": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing...\");\n    }\n}",
+                "explanation": "Methods declared in an interface are implicitly 'public'. When implementing them, you MUST use the 'public' keyword, as you cannot reduce the visibility of a parent method."
+            }
+        }
+    }
+}

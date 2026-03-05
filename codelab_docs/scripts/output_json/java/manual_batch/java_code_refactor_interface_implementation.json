@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Default Interface",
+            "problemDescription": "Refactor the interface to provide a default implementation for a common task.",
+            "language": "java",
+            "initialCode": "interface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    public void draw() { System.out.println(\"Circle\"); }\n}",
+            "solution": {
+                "code": "interface Drawable {\n    void draw();\n    default void log() {\n        System.out.println(\"Performing draw operation...\");\n    }\n}\n\nclass Circle implements Drawable {\n    public void draw() {\n        log();\n        System.out.println(\"Circle\");\n    }\n}",
+                "explanation": "Default methods (introduced in Java 8) allow interfaces to provide common logic that implementing classes can use or override."
+            }
+        }
+    }
+}

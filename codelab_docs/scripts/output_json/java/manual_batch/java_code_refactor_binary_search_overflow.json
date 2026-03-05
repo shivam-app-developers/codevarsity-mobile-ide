@@ -1,0 +1,16 @@
+{
+    "difficulty": "advanced",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Unsigned Shift",
+            "problemDescription": "Refactor the midpoint logic to use the unsigned right shift operator (>>>) for safe overflow-proof math.",
+            "language": "java",
+            "initialCode": "public class BinarySearchMid {\n    public static int search(int[] arr, int target) {\n        int low = 0;\n        int high = arr.length - 1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (arr[mid] == target) return mid;\n            if (arr[mid] < target) low = mid + 1;\n            else high = mid - 1;\n        }\n        return -1;\n    }\n}",
+            "solution": {
+                "code": "public class BinarySearchMid {\n    public static int search(int[] arr, int target) {\n        int low = 0;\n        int high = arr.length - 1;\n        while (low <= high) {\n            int mid = (low + high) >>> 1;\n            if (arr[mid] == target) return mid;\n            if (arr[mid] < target) low = mid + 1;\n            else high = mid - 1;\n        }\n        return -1;\n    }\n}",
+                "explanation": "The '>>>' operator performs an unsigned bitwise right shift. Even if 'low + high' overflows into a negative value, the unsigned shift treats it as a positive number, correctly calculating the midpoint."
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "title": "Guided Practice: Using Switch",
+            "description": "Practice using switch statements to handle multiple discrete values efficiently.",
+            "language": "java",
+            "mode": "snippet",
+            "ghostCode": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int score = 1;\n        switch (score) {\n            case 1:\n                System.out.println(\"Gold\");\n                break;\n            case 2:\n                System.out.println(\"Silver\");\n                break;\n        }\n    }\n}",
+            "finalCode": "public class SwitchBreak {\n    public static void main(String[] args) {\n        int score = 1;\n        switch (score) {\n            case 1:\n                System.out.println(\"Gold\");\n                break;\n            case 2:\n                System.out.println(\"Silver\");\n                break;\n        }\n    }\n}",
+            "validation": {
+                "pattern": "Gold"
+            }
+        }
+    }
+}

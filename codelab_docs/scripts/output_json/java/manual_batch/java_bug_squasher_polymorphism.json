@@ -1,0 +1,16 @@
+{
+    "difficulty": "medium",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Polymorphism Logic",
+            "problemDescription": "Fix the method signature in the subclass to correctly override the parent method.",
+            "language": "java",
+            "buggyCode": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    void Sound() { // BUG: 'Sound' instead of 'sound' (case sensitivity)\n        System.out.println(\"Dog barks\");\n    }\n}",
+            "solution": {
+                "code": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}",
+                "explanation": "Java is case-sensitive. 'Sound()' is a new method and does not override 'sound()'. Use the '@Override' annotation to help catch these mistakes during compilation."
+            }
+        }
+    }
+}
