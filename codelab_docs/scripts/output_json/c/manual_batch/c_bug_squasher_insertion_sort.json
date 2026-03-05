@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Insertion Positioning",
+            "problemDescription": "The insertion sort is failing to place elements in the correct sorted order. Check the loop condition.",
+            "language": "c",
+            "buggyCode": "#include <stdio.h>\\n\\nvoid insertionSort(int arr[], int n) {\\n    for (int i = 1; i < n; i++) {\\n        int key = arr[i];\\n        int j = i - 1;\\n        while (j >= 0 && arr[j] < key) { // Bug: should be > key for ascending\\n            arr[j + 1] = arr[j];\\n            j = j - 1;\\n        }\\n        arr[j + 1] = key;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {3, 1, 2};\\n    insertionSort(a, 3);\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nvoid insertionSort(int arr[], int n) {\\n    for (int i = 1; i < n; i++) {\\n        int key = arr[i];\\n        int j = i - 1;\\n        while (j >= 0 && arr[j] > key) {\\n            arr[j + 1] = arr[j];\\n            j = j - 1;\\n        }\\n        arr[j + 1] = key;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {3, 1, 2};\\n    insertionSort(a, 3);\\n    return 0;\\n}",
+                "explanation": "To sort an array in ascending order using insertion sort, you move an element backwards as long as the previous element is *greater* than it."
+            }
+        }
+    }
+}

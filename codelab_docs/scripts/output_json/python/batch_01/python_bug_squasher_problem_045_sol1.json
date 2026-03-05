@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Triangular, Pentagonal, and Hexagonal",
+      "problemDescription": "Fix the logic to correctly identify numbers that are simultaneously triangular, pentagonal, and hexagonal.",
+      "language": "python",
+      "buggyCode": "import math\n\ndef is_pentagonal(n):\n    # BUG: Pentagonal formula is Pn = n(3n-1)/2, but check is incorrect\n    root = (1 + 12 * n) ** 0.5\n    return root.is_integer()\n\ndef solution():\n    # BUG: Checking triangle numbers is slow, all hexagonal numbers are triangular\n    n = 286\n    while True:\n        tri = n * (n + 1) // 2\n        # BUG: Missing hexagonal check or logic to skip steps\n        if is_pentagonal(tri):\n            return tri\n        n += 1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "import math\n\ndef is_pentagonal(n):\n    if n < 1: return False\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution():\n    # Every hexagonal number is a triangle number (H_n = T_{2n-1})\n    # So we only need to generate hexagonal numbers and check if they are pentagonal.\n    n = 144 # Start after H_143 = 40755\n    while True:\n        hex_num = n * (2 * n - 1)\n        if is_pentagonal(hex_num):\n            return hex_num\n        n += 1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

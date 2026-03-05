@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Ceiling Negative Number Bug",
+      "problemDescription": "The manual `ceil` implementation is failing for negative numbers. It seems to be rounding in the wrong direction for values like -1.1. Find and fix the logic bug.",
+      "language": "python",
+      "buggyCode": "def ceil(x):\n    if x - int(x) == 0: return int(x)\n    return int(x) + 1\n\nif __name__ == \"__main__\":\n    print(f\"ceil(-1.1): {ceil(-1.1)}\")",
+      "solution": {
+        "code": "def ceil(x):\n    if x - int(x) == 0: return int(x)\n    if x > 0: return int(x) + 1\n    return int(x)\n\nif __name__ == \"__main__\":\n    print(f\"ceil(-1.1): {ceil(-1.1)}\")",
+        "explanation": "For positive numbers, `ceil(x)` is `int(x) + 1`. However, for negative numbers like -1.1, `int(-1.1)` is -1, which is already the smallest integer greater than -1.1. Adding 1 would incorrectly result in 0. The function should only increment for positive non-integers."
+      }
+    }
+  }
+}

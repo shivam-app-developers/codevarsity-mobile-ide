@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Powerful Digit Sum",
+      "description": "Find the maximum digital sum for natural numbers of the form a^b where a, b < 100.",
+      "language": "python",
+      "ghostCode": "def solution(a_limit: int = 100, b_limit: int = 100) -> int:\n    \"\"\"\n    Returns the maximum sum of digits for a^b where a < a_limit and b < b_limit.\n    \"\"\"\n    max_sum = 0\n    for a in range(1, a_limit):\n        for b in range(1, b_limit):\n            # Calculate power and convert to string to sum digits\n            current_sum = sum(int(digit) for digit in str(a**b))\n            if current_sum > max_sum:\n                max_sum = current_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    # Project Euler Problem 56\n    print(f\"Maximum digital sum: {solution(100, 100)}\")",
+      "finalCode": "def solution(a_limit: int = 100, b_limit: int = 100) -> int:\n    \"\"\"\n    Returns the maximum sum of digits for a^b where a < a_limit and b < b_limit.\n    \"\"\"\n    max_sum = 0\n    for a in range(1, a_limit):\n        for b in range(1, b_limit):\n            # Calculate power and convert to string to sum digits\n            current_sum = sum(int(digit) for digit in str(a**b))\n            if current_sum > max_sum:\n                max_sum = current_sum\n    return max_sum\n\n\nif __name__ == \"__main__\":\n    # Project Euler Problem 56\n    print(f\"Maximum digital sum: {solution(100, 100)}\")"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Iterative Bitwise Addition",
+      "problemDescription": "The provided code uses recursion for bitwise addition. Refactor it to use an iterative `while` loop, which is often more memory-efficient in Python as it avoids creating new stack frames.",
+      "language": "python",
+      "initialCode": "def bitwise_add(a, b):\n    if b == 0: return a\n    return bitwise_add(a ^ b, (a & b) << 1)\n\nif __name__ == \"__main__\":\n    print(f\"Result: {bitwise_add(4, 5)}\")",
+      "solution": {
+        "code": "def bitwise_add(a, b):\n    while b != 0:\n        carry = (a & b) << 1\n        a = a ^ b\n        b = carry\n    return a\n\nif __name__ == \"__main__\":\n    print(f\"Result: {bitwise_add(4, 5)}\")",
+        "explanation": "The iterative version achieves the same result by repeatedly calculating the partial sum (XOR) and the carry (AND shifted left) until there are no more carries left. It is more robust for very large numbers that might exceed Python's recursion limit."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Binary AND Logic Bug",
+      "problemDescription": "The manual binary AND implementation is not producing correct results. It seems the bitwise comparison logic is wrong. Identify and fix the flaw.",
+      "language": "python",
+      "buggyCode": "def binary_and(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == '1' or cb == '1') else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 0: {binary_and(1, 0)}\")",
+      "solution": {
+        "code": "def binary_and(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca == '1' and cb == '1') else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"1 AND 0: {binary_and(1, 0)}\")",
+        "explanation": "The bitwise AND operation returns 1 only if BOTH corresponding bits are 1. The buggy code incorrectly used the `or` condition, which implements a bitwise OR instead of an AND."
+      }
+    }
+  }
+}

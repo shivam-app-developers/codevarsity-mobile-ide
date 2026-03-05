@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Boolean Return",
+            "problemDescription": "Use the <stdbool.h> library and return a boolean value from a function dedicated to the palindrome check.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n\\nint is_pal(int n) {\\n    int rev = 0, orig = n;\\n    while(n > 0) { rev = rev * 10 + n % 10; n /= 10; }\\n    if (rev == orig) return 1;\\n    return 0;\\n}\\n\\nint main() {\\n    if (is_pal(121)) printf(\\\"Yes\\\\n\\\");\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPalindrome(int n) {\\n    int reversed = 0, original = n;\\n    while (n > 0) {\\n        reversed = reversed * 10 + n % 10;\\n        n /= 10;\\n    }\\n    return reversed == original;\\n}\\n\\nint main() {\\n    if (isPalindrome(121)) printf(\\\"Yes\\\\n\\\");\\n    return 0;\\n}",
+                "explanation": "Using `stdbool.h` and the `bool` type makes the code's intention clearer and follows modern C standards."
+            }
+        }
+    }
+}

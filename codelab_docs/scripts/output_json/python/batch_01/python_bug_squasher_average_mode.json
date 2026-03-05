@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Mode Multi-Value Bug",
+      "problemDescription": "The mode calculation is failing for datasets with multiple modes. It only seems to be returning one of the most frequent values. Fix the logic to return all values with the maximum frequency.",
+      "language": "python",
+      "buggyCode": "from collections import Counter\n\ndef get_mode(data):\n    if not data: return []\n    counts = Counter(data)\n    return [counts.most_common(1)[0][0]]\n\nif __name__ == \"__main__\":\n    print(f\"Mode of [1, 1, 2, 2]: {get_mode([1, 1, 2, 2])}\")",
+      "solution": {
+        "code": "from collections import Counter\n\ndef get_mode(data):\n    if not data: return []\n    counts = Counter(data)\n    max_count = max(counts.values())\n    return sorted(val for val, count in counts.items() if count == max_count)\n\nif __name__ == \"__main__\":\n    print(f\"Mode of [1, 1, 2, 2]: {get_mode([1, 1, 2, 2])}\")",
+        "explanation": "The `most_common(1)` method only returns the single most frequent element. For datasets with multiple modes (e.g., [1, 1, 2, 2]), we must find the maximum frequency and identify all elements that share it."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Square Root Convergents",
+      "problemDescription": "Refactor the square root convergents to use a more concise loop and a generator for numerators and denominators.",
+      "language": "python",
+      "initialCode": "def solution(n: int = 1000):\n    count = 0\n    num, den = 3, 2\n    for _ in range(n):\n        if len(str(num)) > len(str(den)):\n            count += 1\n        num, den = num + 2 * den, num + den\n    return count",
+      "solution": {
+        "code": "def sqrt_2_convergents(n: int):\n    \"\"\"\n    Generator for the first n convergents of sqrt(2).\n    \"\"\"\n    num, den = 3, 2\n    for _ in range(n):\n        yield num, den\n        num, den = num + 2 * den, num + den\n\ndef solution(n: int = 1000) -> int:\n    \"\"\"\n    Calculates the count using the generator and a generator expression.\n    \"\"\"\n    return sum(1 for n, d in sqrt_2_convergents(n) if len(str(n)) > len(str(d)))\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+        "explanation": "Extracting the recurrence logic into a generator makes the solution more modular and easier to read, especially when combined with a generator expression for counting."
+      }
+    }
+  }
+}

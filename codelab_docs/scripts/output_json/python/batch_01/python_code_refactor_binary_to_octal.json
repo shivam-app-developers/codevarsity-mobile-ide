@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Binary to Octal with `format`",
+      "problemDescription": "The provided code manually pads and groups bits for octal conversion. Refactor it to use Python's built-in integer conversion and format strings, which can handle base conversion much more efficiently.",
+      "language": "python",
+      "initialCode": "def bin_to_oct(s):\n    while len(s) % 3 != 0: s = \"0\" + s\n    res = \"\"\n    for i in range(0, len(s), 3):\n        res += str(int(s[i:i+3], 2))\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'1111' -> {bin_to_oct('1111')}\")",
+      "solution": {
+        "code": "def bin_to_oct(s):\n    return format(int(s, 2), \"o\")\n\nif __name__ == \"__main__\":\n    print(f\"'1111' -> {bin_to_oct('1111')}\")",
+        "explanation": "Converting the binary string to an integer with `int(s, 2)` and then formatting that integer as an octal string using `format(n, 'o')` is the most direct and optimized way to perform this conversion in Python."
+      }
+    }
+  }
+}

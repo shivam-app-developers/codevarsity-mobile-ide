@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bisection Range Update Bug",
+      "problemDescription": "The bisection method is failing to converge to the root correctly. It seems the range update logic within the loop is flawed, preventing the interval from shrinking properly. Identify and fix the bug.",
+      "language": "python",
+      "buggyCode": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0: return None\n    while (b - a) / 2 > tol:\n        mid = (a + b) / 2\n        if f(mid) == 0: return mid\n        elif f(a) * f(mid) > 0: b = mid\n        else: a = mid\n    return (a + b) / 2\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")",
+      "solution": {
+        "code": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0: return None\n    while (b - a) / 2 > tol:\n        mid = (a + b) / 2\n        if f(mid) == 0: return mid\n        elif f(a) * f(mid) < 0: b = mid\n        else: a = mid\n    return (a + b) / 2\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")",
+        "explanation": "In the bisection method, if `f(a)` and `f(mid)` have opposite signs (`f(a) * f(mid) < 0`), the root must be in the interval `[a, mid]`, so we set `b = mid`. The buggy code incorrectly used `> 0` for this update."
+      }
+    }
+  }
+}

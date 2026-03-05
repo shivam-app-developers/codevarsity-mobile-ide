@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Exponentiation Operator",
+            "problemDescription": "ES2016 introduced the exponentiation operator `**`. Refactor `Math.pow()` to use this modern syntax.",
+            "language": "javascript",
+            "initialCode": "function isArmstrong(n) {\\n  const s = String(n);\\n  const p = s.length;\\n  return [...s].reduce((acc, d) => acc + Math.pow(Number(d), p), 0) === n;\\n}",
+            "solution": {
+                "code": "function isArmstrong(n) {\\n  const s = String(n);\\n  const p = s.length;\\n  return [...s].reduce((acc, d) => acc + Number(d) ** p, 0) === n;\\n}",
+                "explanation": "The `**` operator is a concise way to perform exponentiation in modern JavaScript, equivalent to `Math.pow()` but much shorter."
+            }
+        }
+    }
+}

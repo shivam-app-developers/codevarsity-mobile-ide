@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Base85 Null Padding Bug",
+      "problemDescription": "The Base85 encoding logic is failing when the input data length is not a multiple of 4 bytes. The padding and null handling seems to be incorrect. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def b85_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    binary = binary.ljust(32 * ((len(binary) // 32) + 1), \"0\")\n    chunks = [int(binary[i:i+32], 2) for i in range(0, len(binary), 32)]\n    def to_85(n):\n        return \"\".join(chr(n % 85 + 33)) + to_85(n // 85) if n > 0 else \"\"\n    res = \"\".join(to_85(c)[::-1] for c in chunks)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'base 85' -> {b85_encode('base 85')}\")",
+      "solution": {
+        "code": "def b85_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    nulls = (32 * ((len(binary) // 32) + 1) - len(binary)) // 8\n    binary = binary.ljust(32 * ((len(binary) // 32) + 1), \"0\")\n    chunks = [int(binary[i:i+32], 2) for i in range(0, len(binary), 32)]\n    def to_85(n):\n        return \"\".join(chr(n % 85 + 33)) + to_85(n // 85) if n > 0 else \"\"\n    res = \"\".join(to_85(c)[::-1] for c in chunks)\n    return res[:-nulls] if nulls % 4 != 0 else res\n\nif __name__ == \"__main__\":\n    print(f\"'base 85' -> {b85_encode('base 85')}\")",
+        "explanation": "In Base85, if the input is not a multiple of 4 bytes (32 bits), it's padded with zeros for the calculation, but the corresponding characters must be removed from the final result. The buggy code failed to remove these trailing null-related characters."
+      }
+    }
+  }
+}

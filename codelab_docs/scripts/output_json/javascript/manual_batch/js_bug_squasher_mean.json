@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Mean Division",
+            "problemDescription": "The mean calculation is returning NaN for empty arrays. Add a guard clause.",
+            "language": "javascript",
+            "buggyCode": "function mean(arr) {\\n  let sum = 0;\\n  for (let n of arr) sum += n;\\n  return sum / arr.length; // Bug: division by zero if arr is empty\\n}",
+            "solution": {
+                "code": "function mean(arr) {\\n  if (arr.length === 0) return 0;\\n  let sum = 0;\\n  for (let n of arr) sum += n;\\n  return sum / arr.length;\\n}",
+                "explanation": "Attempting to divide by the length of an empty array (`0`) results in `NaN` (Not a Number) in JavaScript. Always check if the array is empty first."
+            }
+        }
+    }
+}

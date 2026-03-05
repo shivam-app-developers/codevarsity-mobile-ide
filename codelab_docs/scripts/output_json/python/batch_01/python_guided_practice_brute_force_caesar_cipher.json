@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Caesar Cipher Brute Force",
+      "description": "Try every possible shift key to decrypt a Caesar cipher message.",
+      "language": "python",
+      "ghostCode": "import string\n\ndef brute_force_caesar(msg):\n    alpha = string.ascii_uppercase\n    for key in range(26):\n        res = \"\"\n        for char in msg.upper():\n            if char in alpha:\n                idx = (alpha.find(char) - key) % 26\n                res += alpha[idx]\n            else:\n                res += char\n        print(f\"Key #{key}: {res}\")\n\nif __name__ == \"__main__\":\n    brute_force_caesar(\"TMDETUX\")",
+      "finalCode": "import string\n\ndef brute_force_caesar(msg):\n    alpha = string.ascii_uppercase\n    for key in range(26):\n        res = \"\"\n        for char in msg.upper():\n            if char in alpha:\n                idx = (alpha.find(char) - key) % 26\n                res += alpha[idx]\n            else:\n                res += char\n        print(f\"Key #{key}: {res}\")\n\nif __name__ == \"__main__\":\n    brute_force_caesar(\"TMDETUX\")"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Selection Min Index",
+            "problemDescription": "The selection sort is not updating the minimum index correctly, resulting in an unsorted array. Fix the logic.",
+            "language": "c",
+            "buggyCode": "#include <stdio.h>\\n\\nvoid selectionSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        int min_idx = i;\\n        for (int j = i + 1; j < n; j++) {\\n            if (arr[j] < arr[i]) min_idx = j; // Bug: comparing to arr[i] instead of arr[min_idx]\\n        }\\n        int t = arr[min_idx]; arr[min_idx] = arr[i]; arr[i] = t;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {5, 2, 8, 1};\\n    selectionSort(a, 4);\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nvoid selectionSort(int arr[], int n) {\\n    for (int i = 0; i < n - 1; i++) {\\n        int min_idx = i;\\n        for (int j = i + 1; j < n; j++) {\\n            if (arr[j] < arr[min_idx]) min_idx = j;\\n        }\\n        int t = arr[min_idx]; arr[min_idx] = arr[i]; arr[i] = t;\\n    }\\n}\\n\\nint main() {\\n    int a[] = {5, 2, 8, 1};\\n    selectionSort(a, 4);\\n    return 0;\\n}",
+                "explanation": "In selection sort, within the inner loop, you must compare the current element with the element at the *current* `min_idx` found so far, not the element at index `i`."
+            }
+        }
+    }
+}

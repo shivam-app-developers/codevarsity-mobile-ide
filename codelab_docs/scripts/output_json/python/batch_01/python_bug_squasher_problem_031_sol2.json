@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Coin Sums",
+      "problemDescription": "Fix the dynamic programming logic to correctly count combinations for the coin sum problem.",
+      "language": "python",
+      "buggyCode": "def solution(pence: int = 200):\n    coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    # BUG: Initializing with 1 instead of 0 might double count or cause errors\n    ways = [1] * (pence + 1)\n    \n    for amount in range(1, pence + 1):\n        for coin in coins:\n            # BUG: This order of loops counts permutations (different orders), not combinations\n            if amount >= coin:\n                ways[amount] += ways[amount - coin]\n                \n    return ways[pence]\n\n\nif __name__ == \"__main__\":\n    print(solution(200))",
+      "solution": {
+        "code": "def solution(pence: int = 200):\n    coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    ways = [0] * (pence + 1)\n    ways[0] = 1 # One way to make 0p (using no coins)\n    \n    # Outer loop should be over coins to ensure we only count combinations\n    for coin in coins:\n        for amount in range(coin, pence + 1):\n            ways[amount] += ways[amount - coin]\n            \n    return ways[pence]\n\n\nif __name__ == \"__main__\":\n    print(solution(200))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

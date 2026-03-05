@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Anagram with Sorting",
+      "problemDescription": "The provided anagram checker uses `Counter` for frequency counting. Refactor it to use sorting, which can be more concise for simple anagram checks without needing to import from `collections`.",
+      "language": "python",
+      "initialCode": "from collections import Counter\n\ndef are_anagrams(s1, s2):\n    c1 = Counter(s1.lower().replace(' ', ''))\n    c2 = Counter(s2.lower().replace(' ', ''))\n    return c1 == c2\n\nif __name__ == \"__main__\":\n    print(f\"'Silent', 'Listen': {are_anagrams('Silent', 'Listen')}\")",
+      "solution": {
+        "code": "def are_anagrams(s1, s2):\n    clean1 = sorted(s1.lower().replace(' ', ''))\n    clean2 = sorted(s2.lower().replace(' ', ''))\n    return clean1 == clean2\n\nif __name__ == \"__main__\":\n    print(f\"'Silent', 'Listen': {are_anagrams('Silent', 'Listen')}\")",
+        "explanation": "Two strings are anagrams if and only if their sorted character sequences are identical. This approach is very clean and uses only Python's built-in functions, making the code more portable and easier to read."
+      }
+    }
+  }
+}

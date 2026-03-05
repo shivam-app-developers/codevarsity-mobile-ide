@@ -35,43 +35,45 @@ def generate_portfolio():
         catalog_path = OUTPUT_DIR / catalog_filename
 
         snippets = []
-        lang_dir = INPUT_DIR / lang / "test_batch"
+        lang_root = INPUT_DIR / lang
 
-        if not lang_dir.exists():
-            print(f"Skipping {lang}, test_batch dir not found.")
+        if not lang_root.exists() or not lang_root.is_dir():
             continue
 
-        for json_file in lang_dir.glob("*.json"):
-            with open(json_file, "r", encoding="utf-8") as f:
-                try:
-                    data = json.load(f)
-                    # Support the nested structure correctly
-                    inner_params = data.get("visualizerParams", {}).get(
-                        "visualizerParams", {}
-                    )
-                    title = inner_params.get(
-                        "title", json_file.stem.replace("_", " ").title()
-                    )
-                    difficulty = data.get("difficulty", "medium")
+        # Iterate through all subdirectories (batches)
+        for batch_dir in [d for d in lang_root.iterdir() if d.is_dir()]:
+            batch_name = batch_dir.name
+            for json_file in batch_dir.glob("*.json"):
+                with open(json_file, "r", encoding="utf-8") as f:
+                    try:
+                        data = json.load(f)
+                        # Support the nested structure correctly
+                        inner_params = data.get("visualizerParams", {}).get(
+                            "visualizerParams", {}
+                        )
+                        title = inner_params.get(
+                            "title", json_file.stem.replace("_", " ").title()
+                        )
+                        difficulty = data.get("difficulty", "medium")
 
-                    snippet_id = json_file.stem
-                    snippet_type = get_snippet_type(snippet_id)
+                        snippet_id = json_file.stem
+                        snippet_type = get_snippet_type(snippet_id)
 
-                    # URL: {BASE_GITHUB_URL}/{lang}/test_batch/{filename}
-                    url = f"{BASE_GITHUB_URL}/{lang}/test_batch/{json_file.name}"
+                        # URL: {BASE_GITHUB_URL}/{lang}/{batch_name}/{filename}
+                        url = f"{BASE_GITHUB_URL}/{lang}/{batch_name}/{json_file.name}"
 
-                    snippets.append(
-                        {
-                            "id": snippet_id,
-                            "type": snippet_type,
-                            "language": lang,
-                            "title": title,
-                            "url": url,
-                            "difficulty": difficulty,
-                        }
-                    )
-                except Exception as e:
-                    print(f"Error parsing {json_file}: {e}")
+                        snippets.append(
+                            {
+                                "id": snippet_id,
+                                "type": snippet_type,
+                                "language": lang,
+                                "title": title,
+                                "url": url,
+                                "difficulty": difficulty,
+                            }
+                        )
+                    except Exception as e:
+                        print(f"Error parsing {json_file}: {e}")
 
         if snippets:
             # Sort by difficulty or ID? Let's do ID for consistency

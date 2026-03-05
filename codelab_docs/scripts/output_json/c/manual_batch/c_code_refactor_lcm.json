@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: LCM Function Macro",
+            "problemDescription": "Write a concise macro for calculating LCM assuming a gcd function exists.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }\\nint lcm(int a, int b) { return (a / gcd(a, b)) * b; }\\nint main() { printf(\\\"%d\\\\n\\\", lcm(12, 18)); return 0; }",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }\\n\\n#define LCM(a, b) ((a && b) ? ((a / gcd(a, b)) * b) : 0)\\n\\nint main() {\\n    printf(\\\"%d\\\\n\\\", LCM(12, 18));\\n    return 0;\\n}",
+                "explanation": "A macro can provide a concise way to represent simple formulas, though functions are generally preferred for type safety. We also added a check for zero."
+            }
+        }
+    }
+}

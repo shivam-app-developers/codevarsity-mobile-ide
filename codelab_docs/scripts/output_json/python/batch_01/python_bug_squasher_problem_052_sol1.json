@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Permuted Multiples",
+      "problemDescription": "Fix the logic to correctly identify numbers whose multiples are permutations of their digits.",
+      "language": "python",
+      "buggyCode": "def solution():\n    i = 10\n    while True:\n        # BUG: This only checks if 2i and 3i have the same digits as i\n        if sorted(str(i)) == sorted(str(2*i)) == sorted(str(3*i)):\n            # BUG: The problem requires checking up to 6x\n            return i\n        i += 1\n        # BUG: Infinite loop risk if search space is not considered (though solution exists)\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "def solution():\n    i = 1\n    while True:\n        s_i = sorted(str(i))\n        # Check if multiples 2x, 3x, 4x, 5x, 6x all have the same digits\n        if all(sorted(str(i * m)) == s_i for m in range(2, 7)):\n            return i\n        i += 1\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: JS Binary to Decimal",
+            "description": "Convert a binary string to its decimal integer equivalent.",
+            "language": "javascript",
+            "ghostCode": "function binaryToDecimal(binaryString) {\\n  return parseInt(binaryString, 2);\\n}\\n\\nconsole.log(binaryToDecimal(\\\"1010\\\")); // 10",
+            "finalCode": "function binaryToDecimal(binaryString) {\\n  return parseInt(binaryString, 2);\\n}\\n\\nconsole.log(binaryToDecimal(\\\"1010\\\")); // 10"
+        }
+    }
+}

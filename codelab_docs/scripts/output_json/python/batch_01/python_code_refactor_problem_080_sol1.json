@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Square Root Digital Expansion",
+      "problemDescription": "Refactor the digital expansion sum to use a pure integer-based square root algorithm for perfect precision.",
+      "language": "python",
+      "initialCode": "from decimal import Decimal, getcontext\ndef solution():\n    getcontext().prec = 105\n    total = 0\n    for i in range(1, 101):\n        if (i**0.5).is_integer(): continue\n        root = Decimal(i).sqrt()\n        s = str(root).replace('.', '')\n        total += sum(int(d) for d in s[:100])\n    return total",
+      "solution": {
+        "code": "def solution() -> int:\n    \"\"\"\n    Uses the manual square root algorithm (digit-by-digit) for exact integer precision.\n    Calculates the sum of the first 100 digits.\n    \"\"\"\n    def digit_sum_sqrt(n, digits):\n        # Manual square root algorithm: a = 5n, b = 5\n        # Based on (10a + b)*b\n        a, b = 5 * n, 5\n        res_sum = 0\n        count = 0\n        \n        while count < digits:\n            if a >= b:\n                a -= b\n                b += 10\n            else:\n                # Record the digit (last digit of b divided by 10)\n                res_sum += (b // 10) % 10\n                a *= 100\n                b = (b // 10) * 100 + 5\n                count += 1\n        return res_sum\n\n    total_sum = 0\n    for i in range(1, 101):\n        if (i**0.5).is_integer(): continue\n        total_sum += digit_sum_sqrt(i, 100)\n    return total_sum\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "The manual digit-by-digit square root algorithm (based on Frazer Jarvis' method) uses only integers, avoiding any floating point or `Decimal` rounding issues entirely. It is extremely robust for this specific problem."
+      }
+    }
+  }
+}

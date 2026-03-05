@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Combination Calculation (nCr)",
+      "description": "Calculate the number of ways to choose k items from n items without regard to order.",
+      "language": "python",
+      "ghostCode": "def combinations(n, k):\n    if k < 0 or k > n: return 0\n    if k == 0 or k == n: return 1\n    if k > n // 2: k = n - k\n    res = 1\n    for i in range(k):\n        res = res * (n - i) // (i + 1)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"10 choose 5: {combinations(10, 5)}\")",
+      "finalCode": "def combinations(n, k):\n    if k < 0 or k > n: return 0\n    if k == 0 or k == n: return 1\n    if k > n // 2: k = n - k\n    res = 1\n    for i in range(k):\n        res = res * (n - i) // (i + 1)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"10 choose 5: {combinations(10, 5)}\")"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Recursive All Construct with Memoization",
+      "problemDescription": "The provided code uses a bottom-up (tabulation) approach. Refactor it to use a top-down (recursive) approach with memoization, which can be more intuitive for some problems.",
+      "language": "python",
+      "initialCode": "def all_construct(target, word_bank):\n    table = [[] for _ in range(len(target) + 1)]\n    table[0] = [[]]\n    for i in range(len(target) + 1):\n        if table[i]:\n            for word in word_bank:\n                if target[i : i + len(word)] == word:\n                    new_combos = [[*way, word] for way in table[i]]\n                    table[i + len(word)].extend(new_combos)\n    return table[len(target)]\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))",
+      "solution": {
+        "code": "def all_construct(target, word_bank, memo=None):\n    if memo is None: memo = {}\n    if target in memo: return memo[target]\n    if target == \"\": return [[]]\n    result = []\n    for word in word_bank:\n        if target.startswith(word):\n            suffix_ways = all_construct(target[len(word):], word_bank, memo)\n            target_ways = [[word, *way] for way in suffix_ways]\n            result.extend(target_ways)\n    memo[target] = result\n    return result\n\nif __name__ == \"__main__\":\n    print(all_construct(\"hello\", [\"he\", \"l\", \"o\"]))",
+        "explanation": "The recursive version uses a `memo` dictionary to store results for subproblems (different target suffixes). This avoids redundant calculations and achieves the same result as the tabulation approach while following a top-down logic."
+      }
+    }
+  }
+}

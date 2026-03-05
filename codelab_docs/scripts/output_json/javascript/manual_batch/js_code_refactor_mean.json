@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Arrow Mean",
+            "problemDescription": "Refactor the mean calculation to be a single concise arrow function using `reduce()`.",
+            "language": "javascript",
+            "initialCode": "function mean(arr) {\\n  if (arr.length === 0) return 0;\\n  let sum = 0;\\n  for (let n of arr) sum += n;\\n  return sum / arr.length;\\n}",
+            "solution": {
+                "code": "const mean = (arr) => arr.length === 0 ? 0 : arr.reduce((a, b) => a + b) / arr.length;",
+                "explanation": "Using a ternary operator and the `reduce` method allows for a very concise implementation of common mathematical aggregates like the mean."
+            }
+        }
+    }
+}

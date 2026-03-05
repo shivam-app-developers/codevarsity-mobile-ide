@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Power of Two Logic",
+            "problemDescription": "The function incorrectly returns true for 0 and negative numbers. Fix the boundary check.",
+            "language": "javascript",
+            "buggyCode": "function isPowerOfTwo(n) {\\n  // Missing check for n <= 0\\n  while (n > 1) {\\n    if (n % 2 !== 0) return false;\\n    n /= 2;\\n  }\\n  return true;\\n}",
+            "solution": {
+                "code": "function isPowerOfTwo(n) {\\n  if (n < 1) return false;\\n  while (n > 1) {\\n    if (n % 2 !== 0) return false;\\n    n /= 2;\\n  }\\n  return true;\\n}",
+                "explanation": "Powers of two must be positive integers (2^0 = 1, 2^1 = 2, etc.). The original code would loop indefinitely or return true for 0 if not checked."
+            }
+        }
+    }
+}

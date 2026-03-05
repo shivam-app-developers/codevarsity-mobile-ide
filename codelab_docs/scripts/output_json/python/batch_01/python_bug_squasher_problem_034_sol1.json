@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Digit Factorials",
+      "problemDescription": "Fix the logic to find all numbers equal to the sum of their digits' factorials.",
+      "language": "python",
+      "buggyCode": "from math import factorial\n\ndef solution():\n    total = 0\n    # BUG: Range should skip 1 and 2 as per problem statement\n    for i in range(1, 50000):\n        # BUG: Calculation logic for summing factorial of digits\n        fact_sum = factorial(sum(int(d) for d in str(i)))\n        if i == fact_sum:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "solution": {
+        "code": "from math import factorial\n\ndef solution():\n    # Pre-calculate factorials of digits 0-9\n    f = [factorial(i) for i in range(10)]\n    total = 0\n    # 9! * 7 is a safe upper bound\n    for i in range(10, 2540161):\n        s = 0\n        temp = i\n        while temp > 0:\n            s += f[temp % 10]\n            temp //= 10\n        if s == i:\n            total += i\n    return total\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

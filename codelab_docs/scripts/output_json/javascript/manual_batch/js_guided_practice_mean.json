@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Average Mean",
+            "description": "Calculate the average (mean) of an array of numbers.",
+            "language": "javascript",
+            "ghostCode": "function calculateMean(numbers) {\\n  if (numbers.length === 0) return 0;\\n  const sum = numbers.reduce((acc, curr) => acc + curr, 0);\\n  return sum / numbers.length;\\n}\\n\\nconsole.log(calculateMean([10, 20, 30, 40])); // 25",
+            "finalCode": "function calculateMean(numbers) {\\n  if (numbers.length === 0) return 0;\\n  const sum = numbers.reduce((acc, curr) => acc + curr, 0);\\n  return sum / numbers.length;\\n}\\n\\nconsole.log(calculateMean([10, 20, 30, 40])); // 25"
+        }
+    }
+}

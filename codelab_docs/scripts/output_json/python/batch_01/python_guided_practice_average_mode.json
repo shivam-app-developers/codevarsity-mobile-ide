@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Mode Calculation",
+      "description": "Find the mode of a list of data, which is the value(s) that appear most frequently.",
+      "language": "python",
+      "ghostCode": "from collections import Counter\n\ndef get_mode(data):\n    if not data: return []\n    counts = Counter(data)\n    max_count = max(counts.values())\n    return sorted(val for val, count in counts.items() if count == max_count)\n\nif __name__ == \"__main__\":\n    print(f\"Mode: {get_mode([2, 3, 4, 3, 2, 2])}\")",
+      "finalCode": "from collections import Counter\n\ndef get_mode(data):\n    if not data: return []\n    counts = Counter(data)\n    max_count = max(counts.values())\n    return sorted(val for val, count in counts.items() if count == max_count)\n\nif __name__ == \"__main__\":\n    print(f\"Mode: {get_mode([2, 3, 4, 3, 2, 2])}\")"
+    }
+  }
+}

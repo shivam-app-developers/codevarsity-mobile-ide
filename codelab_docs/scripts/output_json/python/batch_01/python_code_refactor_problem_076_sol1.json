@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Counting Summations",
+      "problemDescription": "Refactor the partition count to use the pentagonal number theorem for significantly better performance on large numbers.",
+      "language": "python",
+      "initialCode": "def solution(n: int = 100):\n    ways = [0] * (n + 1)\n    ways[0] = 1\n    for i in range(1, n):\n        for j in range(i, n + 1):\n            ways[j] += ways[j - i]\n    return ways[n]",
+      "solution": {
+        "code": "def solution(n: int = 100) -> int:\n    \"\"\"\n    Calculates partition count p(n) using the Pentagonal Number Theorem.\n    p(n) = sum_{k != 0} (-1)^(k-1) * p(n - k(3k-1)/2)\n    \"\"\"\n    partitions = [0] * (n + 1)\n    partitions[0] = 1\n    \n    for i in range(1, n + 1):\n        k = 1\n        while True:\n            # Generalized pentagonal numbers: k(3k-1)/2 for k = 1, -1, 2, -2, ...\n            for sign in [1, -1]:\n                gk = sign * k * (3 * sign * k - 1) // 2\n                if gk > i: break\n                \n                # Pentagonal number theorem recurrence\n                if k % 2 == 1:\n                    partitions[i] += partitions[i - gk]\n                else:\n                    partitions[i] -= partitions[i - gk]\n            else:\n                # Only break if both signs exceeded i\n                if gk > i: \n                    k += 1\n                    continue\n            break\n        \n    return partitions[n] - 1\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+        "explanation": "The Pentagonal Number Theorem provides a much faster recurrence for the partition function, reducing the complexity from O(n^2) to O(n * sqrt(n)). While not strictly necessary for n=100, it's the standard way to calculate large partition values."
+      }
+    }
+  }
+}

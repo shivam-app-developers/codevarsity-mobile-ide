@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Right Triangles with Integer Coordinates",
+      "problemDescription": "Fix the logic to correctly identify and count all right triangles with vertices at integer coordinates and origin.",
+      "language": "python",
+      "buggyCode": "def solution(limit=50):\n    count = 0\n    # BUG: product(range(limit), repeat=2) only checks x,y up to limit-1\n    from itertools import product, combinations\n    points = list(product(range(limit), repeat=2))\n    for p1, p2 in combinations(points, 2):\n        x1, y1 = p1\n        x2, y2 = p2\n        # Skip origin\n        if (x1 == 0 and y1 == 0) or (x2 == 0 and y2 == 0): continue\n        \n        # BUG: The is_right logic needs squared distances to avoid floating point issues\n        d1 = x1**2 + y1**2\n        d2 = x2**2 + y2**2\n        d3 = (x1-x2)**2 + (y1-y2)**2\n        if d1 + d2 == d3 or d1 + d3 == d2 or d2 + d3 == d1:\n            count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50))",
+      "solution": {
+        "code": "from itertools import product, combinations\n\ndef solution(limit=50):\n    count = 0\n    # Include limit in range\n    points = list(product(range(limit + 1), repeat=2))\n    # Remove origin from point set\n    points.remove((0, 0))\n    \n    for p1, p2 in combinations(points, 2):\n        x1, y1 = p1\n        x2, y2 = p2\n        \n        # a^2, b^2, c^2 (squared sides of triangle OPQ)\n        a2 = x1*x1 + y1*y1\n        b2 = x2*x2 + y2*y2\n        c2 = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)\n        \n        if a2 + b2 == c2 or a2 + c2 == b2 or b2 + c2 == a2:\n            count += 1\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution(50))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

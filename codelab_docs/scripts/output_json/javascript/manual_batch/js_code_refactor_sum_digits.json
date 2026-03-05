@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: String Conversion Sum",
+            "problemDescription": "Refactor the mathematical loop to a string-based approach using `toString()`, `split()`, and `reduce()`.",
+            "language": "javascript",
+            "initialCode": "function sumOfDigits(n) {\\n  let sum = 0;\\n  while (n > 0) {\\n    sum += n % 10; n = Math.floor(n / 10);\\n  }\\n  return sum;\\n}",
+            "solution": {
+                "code": "const sumOfDigits = (n) => \\n  n.toString().split('').reduce((acc, digit) => acc + Number(digit), 0);",
+                "explanation": "Converting a number to a string and iterating over its characters is a common but slightly less efficient way to process individual digits in JavaScript compared to mathematical extraction."
+            }
+        }
+    }
+}

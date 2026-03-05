@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Using `base64` for Base32",
+      "problemDescription": "The provided Base32 implementation is a manual, low-level binary manipulation. Refactor it to use Python's built-in `base64` module, which provides a highly optimized and standard way to perform Base32 encoding and decoding.",
+      "language": "python",
+      "initialCode": "CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n\ndef b32_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    binary = binary.ljust((len(binary) + 4) // 5 * 5, \"0\")\n    chunks = [binary[i:i+5] for i in range(0, len(binary), 5)]\n    res = \"\".join(CHARSET[int(c, 2)] for c in chunks)\n    return res.ljust((len(res) + 7) // 8 * 8, \"=\")\n\nif __name__ == \"__main__\":\n    print(f\"'Hello': {b32_encode('Hello')}\")",
+      "solution": {
+        "code": "import base64\n\ndef b32_encode(data):\n    if isinstance(data, str):\n        data = data.encode(\"utf-8\")\n    return base64.b32encode(data).decode(\"utf-8\")\n\nif __name__ == \"__main__\":\n    print(f\"'Hello': {b32_encode('Hello')}\")",
+        "explanation": "The `base64` module in Python is written in C and is extremely efficient. Using `base64.b32encode()` eliminates complex manual binary manipulation and ensures standard-compliant encoding with minimal code."
+      }
+    }
+  }
+}

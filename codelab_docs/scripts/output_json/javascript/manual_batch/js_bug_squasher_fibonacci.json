@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Fibonacci Swap",
+            "problemDescription": "The Fibonacci calculation is producing identical numbers in each step. Find the variable assignment error.",
+            "language": "javascript",
+            "buggyCode": "function fibonacci(n) {\\n  let a = 0, b = 1;\\n  for (let i = 2; i <= n; i++) {\\n    let temp = a + b;\\n    a = a; // Bug here\\n    b = temp;\\n  }\\n  return b;\\n}",
+            "solution": {
+                "code": "function fibonacci(n) {\\n  let a = 0, b = 1;\\n  for (let i = 2; i <= n; i++) {\\n    let temp = a + b;\\n    a = b;\\n    b = temp;\\n  }\\n  return b;\\n}",
+                "explanation": "In the Fibonacci sequence, each step shifts the previous value of `b` to `a`, and the new sum to `b`. Setting `a = a` prevented the sequence from progressing correctly."
+            }
+        }
+    }
+}

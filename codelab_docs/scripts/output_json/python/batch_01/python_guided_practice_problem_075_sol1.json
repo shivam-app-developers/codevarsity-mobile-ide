@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Singular Integer Right Triangles",
+      "description": "Find how many values of perimeter L <= 1,500,000 allow exactly one integer sided right angle triangle to be formed.",
+      "language": "python",
+      "ghostCode": "from math import gcd\n\ndef solution(limit: int = 1500000) -> int:\n    \"\"\"\n    Counts perimeters L <= limit with exactly one right triangle solution.\n    Uses Euclid's formula for generating Pythagorean triples.\n    \"\"\"\n    counts = [0] * (limit + 1)\n    \n    # Euclid's formula: a = m^2-n^2, b = 2mn, c = m^2+n^2\n    # Perimeter P = 2m(m+n)\n    m_limit = int((limit // 2)**0.5)\n    \n    for m in range(2, m_limit + 1):\n        for n in range(1, m):\n            # Conditions for primitive triples\n            if (m - n) % 2 == 1 and gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                # Update all multiples of the primitive perimeter\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n                    \n    return sum(1 for c in counts if c == 1)\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution(1500000)}\")",
+      "finalCode": "from math import gcd\n\ndef solution(limit: int = 1500000) -> int:\n    \"\"\"\n    Counts perimeters L <= limit with exactly one right triangle solution.\n    Uses Euclid's formula for generating Pythagorean triples.\n    \"\"\"\n    counts = [0] * (limit + 1)\n    \n    # Euclid's formula: a = m^2-n^2, b = 2mn, c = m^2+n^2\n    # Perimeter P = 2m(m+n)\n    m_limit = int((limit // 2)**0.5)\n    \n    for m in range(2, m_limit + 1):\n        for n in range(1, m):\n            # Conditions for primitive triples\n            if (m - n) % 2 == 1 and gcd(m, n) == 1:\n                p = 2 * m * (m + n)\n                # Update all multiples of the primitive perimeter\n                for multiple_p in range(p, limit + 1, p):\n                    counts[multiple_p] += 1\n                    \n    return sum(1 for c in counts if c == 1)\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution(1500000)}\")"
+    }
+  }
+}

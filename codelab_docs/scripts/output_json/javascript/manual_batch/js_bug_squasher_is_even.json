@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Is Even Assignment",
+            "problemDescription": "The function always returns true because of a common assignment error instead of comparison.",
+            "language": "javascript",
+            "buggyCode": "function isEven(number) {\\n  if (number % 2 = 0) { // Bug here\\n    return true;\\n  }\\n  return false;\\n}",
+            "solution": {
+                "code": "function isEven(number) {\\n  if (number % 2 === 0) {\\n    return true;\\n  }\\n  return false;\\n}",
+                "explanation": "The `=` operator is used for assignment. For comparison, you must use `===` (strict equality) or `==`."
+            }
+        }
+    }
+}

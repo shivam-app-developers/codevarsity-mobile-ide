@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Powerful Digit Sum",
+      "problemDescription": "Refactor the digital sum calculation using a list comprehension and max() for a more Pythonic approach.",
+      "language": "python",
+      "initialCode": "def solution(limit=100):\n    max_sum = 0\n    for a in range(limit):\n        for b in range(limit):\n            res = a**b\n            digit_sum = sum(int(d) for d in str(res))\n            if digit_sum > max_sum:\n                max_sum = digit_sum\n    return max_sum",
+      "solution": {
+        "code": "def solution(limit: int = 100) -> int:\n    \"\"\"\n    Returns the maximum digital sum using a nested generator expression.\n    \"\"\"\n    return max(\n        sum(map(int, str(a**b)))\n        for a in range(limit)\n        for b in range(limit)\n    )\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+        "explanation": "Using a nested generator expression with `max()` and `map(int, ...)` makes the code more compact and readable while remaining efficient for this problem size."
+      }
+    }
+  }
+}

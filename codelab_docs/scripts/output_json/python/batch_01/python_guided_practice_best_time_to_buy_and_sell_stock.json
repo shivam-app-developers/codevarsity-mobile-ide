@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Best Time to Buy and Sell Stock",
+      "description": "Find the maximum profit that can be made from a single buy and sell transaction of a stock.",
+      "language": "python",
+      "ghostCode": "def max_profit(prices):\n    if not prices: return 0\n    min_price = prices[0]\n    max_prof = 0\n    for price in prices:\n        min_price = min(min_price, price)\n        max_prof = max(max_prof, price - min_price)\n    return max_prof\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")",
+      "finalCode": "def max_profit(prices):\n    if not prices: return 0\n    min_price = prices[0]\n    max_prof = 0\n    for price in prices:\n        min_price = min(min_price, price)\n        max_prof = max(max_prof, price - min_price)\n    return max_prof\n\nif __name__ == \"__main__\":\n    prices = [7, 1, 5, 3, 6, 4]\n    print(f\"Max Profit: {max_profit(prices)}\")"
+    }
+  }
+}

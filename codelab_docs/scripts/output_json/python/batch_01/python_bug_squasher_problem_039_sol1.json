@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Integer Right Triangles",
+      "problemDescription": "Fix the logic to correctly count right triangles for each perimeter and find the maximum.",
+      "language": "python",
+      "buggyCode": "def solution(limit: int = 1000):\n    best_p = 0\n    max_solutions = 0\n    for p in range(2, limit + 1):\n        solutions = 0\n        # BUG: The loops for a and b are inefficient and might overcount\n        for a in range(1, p):\n            for b in range(1, p):\n                c = (a**2 + b**2)**0.5\n                # BUG: Summing a + b + c might not exactly match p due to floating point\n                if a + b + c == p:\n                    solutions += 1\n        \n        if solutions > max_solutions:\n            max_solutions = solutions\n            best_p = p\n    return best_p\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+      "solution": {
+        "code": "def solution(limit: int = 1000):\n    best_p = 0\n    max_solutions = 0\n    for p in range(2, limit + 1, 2): # p must be even for integer sides\n        solutions = 0\n        # optimization: a < p/3 because a < b < c and a+b+c=p\n        for a in range(1, p // 3):\n            # derived from a^2 + b^2 = (p-a-b)^2: \n            # b = (p^2 - 2pa) / (2p - 2a)\n            num = p*p - 2*p*a\n            den = 2*p - 2*a\n            if num % den == 0:\n                solutions += 1\n        \n        if solutions > max_solutions:\n            max_solutions = solutions\n            best_p = p\n    return best_p\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

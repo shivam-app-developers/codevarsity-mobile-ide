@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Using `math.comb` for Binomial",
+      "problemDescription": "The provided binomial distribution implementation manually calculates the coefficient using factorials. Refactor it to use Python 3.8+'s `math.comb` function, which is more concise and less prone to overflow during intermediate steps.",
+      "language": "python",
+      "initialCode": "from math import factorial\n\ndef binomial_dist(k, n, p):\n    coeff = factorial(n) / (factorial(k) * factorial(n - k))\n    return coeff * (p**k) * ((1 - p)**(n - k))\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
+      "solution": {
+        "code": "import math\n\ndef binomial_dist(k, n, p):\n    coeff = math.comb(n, k)\n    return coeff * (p**k) * ((1 - p)**(n - k))\n\nif __name__ == \"__main__\":\n    print(f\"Prob: {binomial_dist(2, 4, 0.5)}\")",
+        "explanation": "Python's `math.comb(n, k)` is the standard way to calculate binomial coefficients. It is more efficient than manual factorial division and avoids large intermediate numbers that could cause precision issues or overflows."
+      }
+    }
+  }
+}

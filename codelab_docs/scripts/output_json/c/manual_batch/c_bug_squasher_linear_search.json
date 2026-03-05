@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Search Return Type",
+            "problemDescription": "The search function always returns 0 even if the element is not found. Fix the default return value.",
+            "language": "c",
+            "buggyCode": "#include <stdio.h>\\n\\nint linearSearch(int arr[], int n, int target) {\\n    for (int i = 0; i < n; i++) {\\n        if (arr[i] == target) return i;\\n    }\\n    return 0; // Bug: should return something indicating failure\\n}\\n\\nint main() {\\n    int a[] = {1, 2, 3};\\n    if (linearSearch(a, 3, 99) == 0) printf(\\\"Found?\\\\n\\\");\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nint linearSearch(int arr[], int n, int target) {\\n    for (int i = 0; i < n; i++) {\\n        if (arr[i] == target) return i;\\n    }\\n    return -1;\\n}\\n\\nint main() {\\n    int a[] = {1, 2, 3};\\n    if (linearSearch(a, 3, 99) == -1) printf(\\\"Not Found\\\\n\\\");\\n    return 0;\\n}",
+                "explanation": "Conventionally, functions that return an index return -1 to signal that the item was not found, as 0 is a valid array index."
+            }
+        }
+    }
+}

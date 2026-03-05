@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Bubble Sort Optimization",
+            "problemDescription": "Optimize the bubble sort to exit early if the array is already sorted, and use a shorter variable swap syntax.",
+            "language": "javascript",
+            "initialCode": "function bubbleSort(arr) {\\n  for (let i = 0; i < arr.length - 1; i++) {\\n    for (let j = 0; j < arr.length - i - 1; j++) {\\n      if (arr[j] > arr[j + 1]) {\\n        let temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp;\\n      }\\n    }\\n  }\\n  return arr;\\n}",
+            "solution": {
+                "code": "function bubbleSort(arr) {\\n  let swapped;\\n  do {\\n    swapped = false;\\n    for (let i = 0; i < arr.length - 1; i++) {\\n      if (arr[i] > arr[i + 1]) {\\n        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];\\n        swapped = true;\\n      }\\n    }\\n  } while (swapped);\\n  return arr;\\n}",
+                "explanation": "A `do-while` loop combined with a `swapped` flag is a common way to optimize bubble sort. The array destructuring `[a, b] = [b, a]` is the modern JS way to swap variables."
+            }
+        }
+    }
+}

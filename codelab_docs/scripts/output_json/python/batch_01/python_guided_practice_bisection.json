@@ -1,0 +1,14 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Bisection Method for Roots",
+      "description": "Find the root of a continuous function using the Bisection method (Bolzano's theorem).",
+      "language": "python",
+      "ghostCode": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0:\n        return None\n    while (b - a) / 2 > tol:\n        mid = (a + b) / 2\n        if f(mid) == 0: return mid\n        elif f(a) * f(mid) < 0: b = mid\n        else: a = mid\n    return (a + b) / 2\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")",
+      "finalCode": "def bisection(f, a, b, tol=1e-7):\n    if f(a) * f(b) > 0:\n        return None\n    while (b - a) / 2 > tol:\n        mid = (a + b) / 2\n        if f(mid) == 0: return mid\n        elif f(a) * f(mid) < 0: b = mid\n        else: a = mid\n    return (a + b) / 2\n\nif __name__ == \"__main__\":\n    func = lambda x: x**3 - 1\n    print(f\"Root: {bisection(func, -5, 5)}\")"
+    }
+  }
+}

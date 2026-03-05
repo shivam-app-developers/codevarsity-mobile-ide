@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Longest Recurring Cycle",
+      "description": "Find the denominator d < limit for which 1/d has the longest recurring cycle in its decimal expansion.",
+      "language": "python",
+      "ghostCode": "def solution(limit: int = 1000) -> int:\n    \"\"\"Returns the denominator d < limit with the longest recurring decimal cycle.\"\"\"\n    max_cycle = 0\n    best_d = 1\n    \n    for d in range(2, limit):\n        remainders = {}\n        curr_rem = 1\n        pos = 0\n        \n        while curr_rem != 0 and curr_rem not in remainders:\n            remainders[curr_rem] = pos\n            curr_rem = (curr_rem * 10) % d\n            pos += 1\n            \n        if curr_rem != 0:\n            cycle_len = pos - remainders[curr_rem]\n            if cycle_len > max_cycle:\n                max_cycle = cycle_len\n                best_d = d\n                \n    return best_d\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))",
+      "finalCode": "def solution(limit: int = 1000) -> int:\n    \"\"\"Returns the denominator d < limit with the longest recurring decimal cycle.\"\"\"\n    max_cycle = 0\n    best_d = 1\n    \n    for d in range(2, limit):\n        remainders = {}\n        curr_rem = 1\n        pos = 0\n        \n        while curr_rem != 0 and curr_rem not in remainders:\n            remainders[curr_rem] = pos\n            curr_rem = (curr_rem * 10) % d\n            pos += 1\n            \n        if curr_rem != 0:\n            cycle_len = pos - remainders[curr_rem]\n            if cycle_len > max_cycle:\n                max_cycle = cycle_len\n                best_d = d\n                \n    return best_d\n\n\nif __name__ == \"__main__\":\n    print(solution(1000))"
+    }
+  }
+}

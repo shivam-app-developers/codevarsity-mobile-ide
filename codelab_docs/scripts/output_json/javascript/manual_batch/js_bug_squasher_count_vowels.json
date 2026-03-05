@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Regex Case Sensitivity",
+            "problemDescription": "The vowel counter with regex is missing capital letters. Fix the regex flags.",
+            "language": "javascript",
+            "buggyCode": "function countVowels(str) {\\n  const match = str.match(/[aeiou]/g); // Bug: only matches lowercase\\n  return match ? match.length : 0;\\n}",
+            "solution": {
+                "code": "function countVowels(str) {\\n  const match = str.match(/[aeiou]/gi);\\n  return match ? match.length : 0;\\n}",
+                "explanation": "The `i` flag in regular expressions stands for 'case-insensitive'. Adding it ensures that both 'A' and 'a' are matched as vowels."
+            }
+        }
+    }
+}

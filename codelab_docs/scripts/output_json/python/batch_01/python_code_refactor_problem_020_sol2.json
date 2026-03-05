@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Sum of Factorial Digits",
+      "problemDescription": "Refactor the factorial digit sum calculation for clarity or use alternative methods.",
+      "language": "python",
+      "initialCode": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    return sum(int(x) for x in str(factorial(num)))\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+      "solution": {
+        "code": "from math import factorial\n\n\ndef solution(num: int = 100) -> int:\n    \"\"\"\n    Returns the sum of the digits in the factorial of num using map and int.\n    \"\"\"\n    return sum(map(int, str(factorial(num))))\n\n\nif __name__ == \"__main__\":\n    n = 100\n    print(f\"Sum of digits in {n}! is {solution(n)}\")",
+        "explanation": "Using `map(int, str(factorial(num)))` is slightly more concise and idiomatic than a generator expression for simple type conversion before summing."
+      }
+    }
+  }
+}

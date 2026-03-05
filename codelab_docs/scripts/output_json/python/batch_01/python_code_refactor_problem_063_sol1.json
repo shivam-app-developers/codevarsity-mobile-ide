@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Powerful Digit Counts",
+      "problemDescription": "Refactor the powerful digit count to use a more efficient mathematical approach for the power limit.",
+      "language": "python",
+      "initialCode": "def solution():\n    count = 0\n    for base in range(1, 10):\n        n = 1\n        while True:\n            if len(str(base**n)) == n:\n                count += 1\n            elif len(str(base**n)) < n:\n                break\n            n += 1\n    return count",
+      "solution": {
+        "code": "import math\n\ndef solution() -> int:\n    \"\"\"\n    Calculates the count using the derived limit for n: \n    n <= 1 / (1 - log10(base))\n    \"\"\"\n    count = 0\n    for base in range(1, 10):\n        # For each base, the number of valid n's is the largest integer n\n        # satisfying base^n >= 10^(n-1)\n        # n*log10(base) >= n-1  => 1 >= n(1 - log10(base))\n        limit = int(1 / (1 - math.log10(base)))\n        count += limit\n    return count\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+        "explanation": "By solving the inequality `base^n >= 10^(n-1)`, we can directly calculate the number of valid `n` values for each `base` without any inner loop or string conversions, resulting in O(1) time complexity (relative to the number of digits)."
+      }
+    }
+  }
+}

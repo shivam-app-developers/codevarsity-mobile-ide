@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Digit Factorials",
+      "description": "Find the sum of all numbers which are equal to the sum of the factorial of their digits.",
+      "language": "python",
+      "ghostCode": "from math import factorial\n\n# Pre-calculate factorials for performance\nDIGIT_FACTORIAL = {str(d): factorial(d) for d in range(10)}\n\ndef solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the factorial of their digits.\n    Excluded: 1! = 1 and 2! = 2.\n    \"\"\"\n    # Upper bound calculation:\n    # 9! = 362,880. 7 * 9! = 2,540,160. \n    # A 7-digit number can't exceed this sum by much, so 2.5M is a safe limit.\n    grand_total = 0\n    for i in range(10, 2540161):\n        digit_fact_sum = sum(DIGIT_FACTORIAL[d] for d in str(i))\n        if i == digit_fact_sum:\n            grand_total += i\n    return grand_total\n\n\nif __name__ == \"__main__\":\n    print(f\"Sum of digit factorials: {solution()}\")",
+      "finalCode": "from math import factorial\n\n# Pre-calculate factorials for performance\nDIGIT_FACTORIAL = {str(d): factorial(d) for d in range(10)}\n\ndef solution() -> int:\n    \"\"\"\n    Finds the sum of all numbers equal to the sum of the factorial of their digits.\n    Excluded: 1! = 1 and 2! = 2.\n    \"\"\"\n    # Upper bound calculation:\n    # 9! = 362,880. 7 * 9! = 2,540,160. \n    # A 7-digit number can't exceed this sum by much, so 2.5M is a safe limit.\n    grand_total = 0\n    for i in range(10, 2540161):\n        digit_fact_sum = sum(DIGIT_FACTORIAL[d] for d in str(i))\n        if i == digit_fact_sum:\n            grand_total += i\n    return grand_total\n\n\nif __name__ == \"__main__\":\n    print(f\"Sum of digit factorials: {solution()}\")"
+    }
+  }
+}

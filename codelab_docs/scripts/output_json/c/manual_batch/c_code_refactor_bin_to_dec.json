@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Bitwise Conversion",
+            "problemDescription": "Refactor the decimal to binary conversion to use bitwise operators (shifts and AND) for potentially better efficiency.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n\\nvoid printBinary(int n) {\\n    if (n > 1) printBinary(n / 2);\\n    printf(\\\"%d\\\", n % 2);\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nvoid printBinary(int n) {\\n    for (int i = 31; i >= 0; i--) {\\n        int k = n >> i;\\n        if (k & 1) printf(\\\"1\\\");\\n        else printf(\\\"0\\\");\\n    }\\n}",
+                "explanation": "Bitwise shifts (`>>`) and logical AND (`&`) are much faster than division and modulo operations for binary manipulations on processors."
+            }
+        }
+    }
+}

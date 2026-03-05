@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Bubble Sort Indices",
+            "problemDescription": "The bubble sort algorithm is causing an out-of-bounds error. Find the index mistake.",
+            "language": "c",
+            "buggyCode": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {5, 1, 4, 2, 8};\\n    int n = 5;\\n    for (int i = 0; i < n; i++) {\\n        for (int j = 0; j < n; j++) { // Potential issue here\\n            if (arr[j] > arr[j+1]) {\\n                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\\n            }\\n        }\\n    }\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {5, 1, 4, 2, 8};\\n    int n = 5;\\n    for (int i = 0; i < n - 1; i++) {\\n        for (int j = 0; j < n - i - 1; j++) {\\n            if (arr[j] > arr[j+1]) {\\n                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\\n            }\\n        }\\n    }\\n    return 0;\\n}",
+                "explanation": "The inner loop condition `j < n` would cause `arr[j+1]` to access `arr[5]` when `j` is 4, which is out of bounds for an array of size 5. The correct limit is `n - i - 1`."
+            }
+        }
+    }
+}

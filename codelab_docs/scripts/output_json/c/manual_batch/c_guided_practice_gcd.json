@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Euclid's GCD",
+            "description": "Calculate the Greatest Common Divisor using Euclid's algorithm.",
+            "language": "c",
+            "ghostCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    while (b != 0) {\\n        int temp = b;\\n        b = a % b;\\n        a = temp;\\n    }\\n    return a;\\n}\\n\\nint main() {\\n    printf(\\\"GCD: %d\\\\n\\\", gcd(48, 18));\\n    return 0;\\n}",
+            "finalCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    while (b != 0) {\\n        int temp = b;\\n        b = a % b;\\n        a = temp;\\n    }\\n    return a;\\n}\\n\\nint main() {\\n    printf(\\\"GCD: %d\\\\n\\\", gcd(48, 18));\\n    return 0;\\n}"
+        }
+    }
+}

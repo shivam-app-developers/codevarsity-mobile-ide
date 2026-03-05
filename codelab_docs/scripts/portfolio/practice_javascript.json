@@ -2,12 +2,44 @@
   "version": 1,
   "snippets": [
     {
+      "id": "js_bug_squasher_anagram",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Anagram Case Sensitivity",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_anagram.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_armstrong",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Armstrong Power",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_bin_to_dec",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Radix Parameter",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_bin_to_dec.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_bug_squasher_binarysearch",
       "type": "bug_squasher",
       "language": "javascript",
       "title": "Bug Squasher: JS Binary Search",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/test_batch/js_bug_squasher_binarysearch.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "js_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Sort Mutation",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_bubble_sort.json",
+      "difficulty": "beginner"
     },
     {
       "id": "js_bug_squasher_bubblesort",
@@ -18,11 +50,123 @@
       "difficulty": "medium"
     },
     {
+      "id": "js_bug_squasher_count_vowels",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Regex Case Sensitivity",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_count_vowels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Factorial Base Case",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_bug_squasher_factorial",
       "type": "bug_squasher",
       "language": "javascript",
       "title": "Bug Squasher: JS Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/test_batch/js_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_fibonacci",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Fibonacci Swap",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_is_even",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Is Even Assignment",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_is_even.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_is_odd",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Is Odd Not Operator",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_is_odd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_is_power_of_two",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Power of Two Logic",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_is_power_of_two.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_linear_search",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Search Return",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_mean",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Mean Division",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_mean.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_palindrome",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Palindrome Reverse",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_reverse_string",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Reverse Loop Index",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_bug_squasher_sum_digits",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Digits Division",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_bug_squasher_sum_digits.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_anagram",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Frequency Map Anagram",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_anagram.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_armstrong",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Exponentiation Operator",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_bin_to_dec",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Manual Binary Conversion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_bin_to_dec.json",
       "difficulty": "beginner"
     },
     {
@@ -34,6 +178,14 @@
       "difficulty": "medium"
     },
     {
+      "id": "js_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Bubble Sort Optimization",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_code_refactor_bubblesort",
       "type": "refactor",
       "language": "javascript",
@@ -42,11 +194,123 @@
       "difficulty": "medium"
     },
     {
+      "id": "js_code_refactor_count_vowels",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Function One-Liner",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_count_vowels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_factorial",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Declarative Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_code_refactor_factorial",
       "type": "refactor",
       "language": "javascript",
       "title": "JS Refactor: Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/test_batch/js_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_fibonacci",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Destructuring Fibonacci",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_is_even",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Arrow Function",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_is_even.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_is_odd",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Boolean Coercion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_is_odd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_is_power_of_two",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Bitwise Power of Two",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_is_power_of_two.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_linear_search",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: findIndex Method",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_mean",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Arrow Mean",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_mean.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_palindrome",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Two-Pointer Palindrome",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_reverse_string",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Spread Reversal",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_code_refactor_sum_digits",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: String Conversion Sum",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_code_refactor_sum_digits.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_anagram",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Anagram Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_anagram.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_armstrong",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Armstrong Number",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_bin_to_dec",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Binary to Decimal",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_bin_to_dec.json",
       "difficulty": "beginner"
     },
     {
@@ -58,6 +322,14 @@
       "difficulty": "medium"
     },
     {
+      "id": "js_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_guided_practice_bubblesort",
       "type": "guided",
       "language": "javascript",
@@ -66,11 +338,99 @@
       "difficulty": "medium"
     },
     {
+      "id": "js_guided_practice_count_vowels",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Count Vowels",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_count_vowels.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_factorial",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Factorial Loop",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "js_guided_practice_factorial",
       "type": "guided",
       "language": "javascript",
       "title": "JavaScript Factorial (Recursive)",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/test_batch/js_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_fibonacci",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Fibonacci Number",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_fibonacci.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_is_even",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Even",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_is_even.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_is_odd",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Odd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_is_odd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_is_power_of_two",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Power of Two",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_is_power_of_two.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_linear_search",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Linear Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_mean",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Average Mean",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_mean.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_palindrome",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Palindrome Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_reverse_string",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Reverse String",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_reverse_string.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "js_guided_practice_sum_digits",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Sum of Digits",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/javascript/manual_batch/js_guided_practice_sum_digits.json",
       "difficulty": "beginner"
     }
   ],

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Alternative String Arrangement",
+      "problemDescription": "The current `arrange_alt` function uses an explicit loop and index checking. Refactor it to use more Pythonic techniques like `itertools.zip_longest` and string `join()` for a more elegant implementation.",
+      "language": "python",
+      "initialCode": "def arrange_alt(str1, str2):\n    max_len = max(len(str1), len(str2))\n    result = []\n    for i in range(max_len):\n        if i < len(str1):\n            result.append(str1[i])\n        if i < len(str2):\n            result.append(str2[i])\n    return \"\".join(result)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))",
+      "solution": {
+        "code": "from itertools import zip_longest\n\ndef arrange_alt(str1, str2):\n    return \"\".join(char for pair in zip_longest(str1, str2, fillvalue=\"\") for char in pair)\n\nif __name__ == \"__main__\":\n    print(arrange_alt(\"ABCD\", \"XY\"))",
+        "explanation": "By using `itertools.zip_longest` with a `fillvalue=\"\"`, we can seamlessly pair characters from strings of unequal length. The nested generator expression then joins these pairs into a single string efficiently."
+      }
+    }
+  }
+}

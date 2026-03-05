@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Trailing Zero Counting Logic Bug",
+      "problemDescription": "The bitwise trailing zero count is intended to isolate the lowest set bit. However, it seems to be failing for certain inputs, possibly due to an incorrect bitwise operation. Find and fix the logic bug.",
+      "language": "python",
+      "buggyCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    return int(math.log2(n | -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 8 (1000): {count_trailing_zeros(8)}\")",
+      "solution": {
+        "code": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 8 (1000): {count_trailing_zeros(8)}\")",
+        "explanation": "The expression `n & -n` (using bitwise AND and two's complement) isolates the lowest set bit (e.g., for 12, bin 1100, `1100 & 0100` is `0100`, which is 4). Taking `log2` of this value gives the count of trailing zeros. The buggy code incorrectly used the `|` (OR) operator."
+      }
+    }
+  }
+}

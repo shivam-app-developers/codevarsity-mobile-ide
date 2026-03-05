@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Recursive GCD",
+            "problemDescription": "Convert the iterative GCD implementation to a concise recursive one.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    while (b != 0) {\\n        int t = b; b = a % b; a = t;\\n    }\\n    return a;\\n}\\n\\nint main() {\\n    printf(\\\"%d\\\\n\\\", gcd(48, 18));\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nint gcd(int a, int b) {\\n    return b == 0 ? a : gcd(b, a % b);\\n}\\n\\nint main() {\\n    printf(\\\"%d\\\\n\\\", gcd(48, 18));\\n    return 0;\\n}",
+                "explanation": "A recursive ternary expression makes the Euclidean algorithm extremely concise and readable."
+            }
+        }
+    }
+}

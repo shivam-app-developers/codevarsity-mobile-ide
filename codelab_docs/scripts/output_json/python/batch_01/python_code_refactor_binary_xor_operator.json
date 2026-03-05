@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Binary XOR with `^`",
+      "problemDescription": "The provided code manually performs bitwise XOR by iterating over strings. Refactor it to use Python's built-in `^` operator, which is the standard and most efficient way to perform bitwise operations.",
+      "language": "python",
+      "initialCode": "def binary_xor(a, b):\n    a_bin = format(a, 'b')\n    b_bin = format(b, 'b')\n    max_len = max(len(a_bin), len(b_bin))\n    a_bin, b_bin = a_bin.zfill(max_len), b_bin.zfill(max_len)\n    return '0b' + ''.join('1' if (ca != cb) else '0' for ca, cb in zip(a_bin, b_bin))\n\nif __name__ == \"__main__\":\n    print(f\"25 XOR 32: {binary_xor(25, 32)}\")",
+      "solution": {
+        "code": "def binary_xor(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a ^ b)\n\nif __name__ == \"__main__\":\n    print(f\"25 XOR 32: {binary_xor(25, 32)}\")",
+        "explanation": "Python's `^` operator performs bitwise XOR directly on integers at the hardware level. This is significantly faster than manual string-based processing and is the idiomatic way to handle bitwise logic."
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Armstrong Number",
+            "description": "Check if a 3-digit number is an Armstrong number (sum of cubes of digits equals the number).",
+            "language": "c",
+            "ghostCode": "#include <stdio.h>\\n\\nint main() {\\n    int num = 153, originalNum, remainder, result = 0;\\n    originalNum = num;\\n    while (originalNum != 0) {\\n        remainder = originalNum % 10;\\n        result += remainder * remainder * remainder;\\n        originalNum /= 10;\\n    }\\n    if (result == num) printf(\\\"%d is Armstrong\\\\n\\\", num);\\n    else printf(\\\"%d is not Armstrong\\\\n\\\", num);\\n    return 0;\\n}",
+            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int num = 153, originalNum, remainder, result = 0;\\n    originalNum = num;\\n    while (originalNum != 0) {\\n        remainder = originalNum % 10;\\n        result += remainder * remainder * remainder;\\n        originalNum /= 10;\\n    }\\n    if (result == num) printf(\\\"%d is Armstrong\\\\n\\\", num);\\n    else printf(\\\"%d is not Armstrong\\\\n\\\", num);\\n    return 0;\\n}"
+        }
+    }
+}

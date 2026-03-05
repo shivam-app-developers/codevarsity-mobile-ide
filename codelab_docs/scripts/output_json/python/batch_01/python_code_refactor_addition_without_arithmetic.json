@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Recursive Bitwise Addition",
+      "problemDescription": "The provided code uses an iterative approach for bitwise addition. Refactor the `add` function to use a recursive approach instead of a `while` loop.",
+      "language": "python",
+      "initialCode": "def add(first, second):\n    while second != 0:\n        carry = first & second\n        first ^= second\n        second = carry << 1\n    return first\n\nif __name__ == \"__main__\":\n    print(f\"Result: {add(13, 5)}\")",
+      "solution": {
+        "code": "def add(first, second):\n    if second == 0:\n        return first\n    return add(first ^ second, (first & second) << 1)\n\nif __name__ == \"__main__\":\n    print(f\"Result: {add(13, 5)}\")",
+        "explanation": "The recursive version of bitwise addition provides a more functional programming approach. It handles the base case when the carry (`second`) is 0, and recursively calls itself with the partial sum and the shifted carry."
+      }
+    }
+  }
+}

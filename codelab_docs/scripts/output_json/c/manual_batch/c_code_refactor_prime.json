@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Function for Prime",
+            "problemDescription": "Encapsulate the prime check logic into a function to make the main function cleaner.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n\\nint main() {\\n    int n = 17, is_p = 1;\\n    for (int i = 2; i < n; i++) if (n % i == 0) is_p = 0;\\n    if (is_p) printf(\\\"Prime\\\\n\\\");\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPrime(int n) {\\n    if (n < 2) return false;\\n    for (int i = 2; i * i <= n; i++) {\\n        if (n % i == 0) return false;\\n    }\\n    return true;\\n}\\n\\nint main() {\\n    if (isPrime(17)) printf(\\\"Prime\\\\n\\\");\\n    return 0;\\n}",
+                "explanation": "Moving logic to a function clearly separates the 'what' (check if prime) from the 'how' (algorithm details), improving code readability."
+            }
+        }
+    }
+}

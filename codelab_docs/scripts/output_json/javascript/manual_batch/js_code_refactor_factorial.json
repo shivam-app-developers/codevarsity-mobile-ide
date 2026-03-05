@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Declarative Factorial",
+            "problemDescription": "Refactor the iterative loop to use a more declarative approach using an array of numbers and the `reduce()` method.",
+            "language": "javascript",
+            "initialCode": "function factorial(n) {\\n  let result = 1;\\n  for (let i = 2; i <= n; i++) result *= i;\\n  return result;\\n}",
+            "solution": {
+                "code": "const factorial = (n) => \\n  n <= 1 ? 1 : Array.from({ length: n }, (_, i) => i + 1).reduce((acc, val) => acc * val, 1);",
+                "explanation": "Functional programming patterns like `reduce()` can make code more declarative and expressive, though for simple math loops, a standard for-loop is often more performance-efficient."
+            }
+        }
+    }
+}

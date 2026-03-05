@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Distinct Powers",
+      "problemDescription": "Refactor the distinct powers calculation using a set comprehension for more concise code.",
+      "language": "python",
+      "initialCode": "def solution(n: int = 100) -> int:\n    results = set()\n    for a in range(2, n + 1):\n        for b in range(2, n + 1):\n            results.add(a**b)\n    return len(results)",
+      "solution": {
+        "code": "def solution(n: int = 100) -> int:\n    \"\"\"\n    Returns the number of distinct terms using a set comprehension for conciseness.\n    \"\"\"\n    return len({a**b for a in range(2, n + 1) for b in range(2, n + 1)})\n\n\nif __name__ == \"__main__\":\n    print(solution(100))",
+        "explanation": "Set comprehension provides a more concise and Pythonic way to generate the set of unique power results in a single line."
+      }
+    }
+  }
+}

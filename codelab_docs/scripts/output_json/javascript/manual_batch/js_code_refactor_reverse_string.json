@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Spread Reversal",
+            "problemDescription": "Refactor the `split('')` call to use the modern spread operator `[...]` for splitting strings into characters.",
+            "language": "javascript",
+            "initialCode": "function reverse(str) {\\n  return str.split('').reverse().join('');\\n}",
+            "solution": {
+                "code": "const reverse = (str) => [...str].reverse().join('');",
+                "explanation": "The spread operator `[...]` is a clean, modern way to convert a string (or any iterable) into an array of its constituent elements."
+            }
+        }
+    }
+}

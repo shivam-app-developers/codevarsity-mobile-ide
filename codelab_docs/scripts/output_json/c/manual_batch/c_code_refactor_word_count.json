@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Standard Library Word Count",
+            "problemDescription": "Refactor the custom word counting logic to use standard library functions like `strtok` for tokenization.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nint countWords(char *str) {\\n    int count = 0; bool inW = false;\\n    while (*str) {\\n        if (*str == ' ') inW = false;\\n        else if (!inW) { inW = true; count++; }\\n        str++;\\n    }\\n    return count;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n#include <string.h>\\n\\nint countWords(char *str) {\\n    int count = 0;\\n    char *token = strtok(str, \\\" \\\\n\\\\t\\\");\\n    while (token != NULL) {\\n        count++;\\n        token = strtok(NULL, \\\" \\\\n\\\\t\\\");\\n    }\\n    return count;\\n}",
+                "explanation": "`strtok` is a powerful standard library function for splitting strings into tokens based on delimiters, making common tasks like word counting much simpler."
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Bead Sort Difference Bug",
+      "problemDescription": "The bead sort algorithm is failing to correctly swap or balance the 'beads' between adjacent rods. It seems the difference calculation or update logic is flawed. Find and fix the bug.",
+      "language": "python",
+      "buggyCode": "def bead_sort(seq):\n    for _ in range(len(seq)):\n        for i in range(len(seq) - 1):\n            if seq[i] > seq[i+1]:\n                seq[i] -= 1\n                seq[i+1] += 1\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted [3, 1]: {bead_sort([3, 1])}\")",
+      "solution": {
+        "code": "def bead_sort(seq):\n    for _ in range(len(seq)):\n        for i in range(len(seq) - 1):\n            if seq[i] > seq[i+1]:\n                diff = seq[i] - seq[i+1]\n                seq[i] -= diff\n                seq[i+1] += diff\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted [3, 1]: {bead_sort([3, 1])}\")",
+        "explanation": "In bead sort, when a Rod i has more beads than Rod i+1, the beads 'fall' to the lower rod. The entire difference `seq[i] - seq[i+1]` should be moved. The buggy code only moved one bead at a time, which is inefficient and incorrect in this implementation's logic."
+      }
+    }
+  }
+}

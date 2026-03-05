@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Radix Parameter",
+            "problemDescription": "The `parseInt` function is behaving unexpectedly because the radix (base) is not explicitly specified. Fix the call for base 2.",
+            "language": "javascript",
+            "buggyCode": "function toDecimal(bin) {\\n  return parseInt(bin); // Bug: potentially defaults to base 10\\n}",
+            "solution": {
+                "code": "function toDecimal(bin) {\\n  return parseInt(bin, 2);\\n}",
+                "explanation": "It's always a best practice to specify the 'radix' (the second argument to `parseInt`) to avoid ambiguity, especially when working with binary strings."
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Set Bit Counting Logic Bug",
+      "problemDescription": "The set bit counting function using bitwise manipulation is not producing correct counts. It seems the loop is terminating incorrectly or the bit update is wrong. Identify and fix the logic bug.",
+      "language": "python",
+      "buggyCode": "def count_set_bits(n):\n    count = 0\n    while n > 0:\n        n = n & (n + 1)\n        count += 1\n    return count\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 7 (111): {count_set_bits(7)}\")",
+      "solution": {
+        "code": "def count_set_bits(n):\n    count = 0\n    while n > 0:\n        n = n & (n - 1)\n        count += 1\n    return count\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 7 (111): {count_set_bits(7)}\")",
+        "explanation": "Brian Kernighan's algorithm works by using `n & (n - 1)` to clear the lowest set bit at each step. The buggy code incorrectly used `n & (n + 1)`, which does not properly clear set bits for the purpose of counting them."
+      }
+    }
+  }
+}

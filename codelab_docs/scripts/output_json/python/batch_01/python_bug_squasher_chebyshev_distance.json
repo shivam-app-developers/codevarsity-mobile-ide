@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Chebyshev Distance Metric Bug",
+      "problemDescription": "The Chebyshev distance calculation is incorrect. It seems to be calculating the Euclidean distance or some other metric instead of the maximum coordinate difference. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def chebyshev_dist(p1, p2):\n    return sum(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist [0,0] to [1,5]: {chebyshev_dist([0,0], [1,5])}\")",
+      "solution": {
+        "code": "def chebyshev_dist(p1, p2):\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist [0,0] to [1,5]: {chebyshev_dist([0,0], [1,5])}\")",
+        "explanation": "Chebyshev distance is defined as the MAXIMUM absolute difference between any coordinate of two points (`max(|x1-x2|, |y1-y2|, ...)`). The buggy code used `sum()`, which implements the Manhattan (L1) distance."
+      }
+    }
+  }
+}

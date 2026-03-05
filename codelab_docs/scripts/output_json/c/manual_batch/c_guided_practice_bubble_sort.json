@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Bubble Sort",
+            "description": "Sort an array of integers using the basic Bubble Sort algorithm.",
+            "language": "c",
+            "ghostCode": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\\n    int n = 7;\\n    for (int i = 0; i < n-1; i++) {\\n        for (int j = 0; j < n-i-1; j++) {\\n            if (arr[j] > arr[j+1]) {\\n                int temp = arr[j];\\n                arr[j] = arr[j+1];\\n                arr[j+1] = temp;\\n            }\\n        }\\n    }\\n    for (int i = 0; i < n; i++) printf(\\\"%d \\\", arr[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}",
+            "finalCode": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\\n    int n = 7;\\n    for (int i = 0; i < n-1; i++) {\\n        for (int j = 0; j < n-i-1; j++) {\\n            if (arr[j] > arr[j+1]) {\\n                int temp = arr[j];\\n                arr[j] = arr[j+1];\\n                arr[j+1] = temp;\\n            }\\n        }\\n    }\\n    for (int i = 0; i < n; i++) printf(\\\"%d \\\", arr[i]);\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}"
+        }
+    }
+}

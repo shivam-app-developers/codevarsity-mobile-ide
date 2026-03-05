@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Bead Sort rod movement",
+      "problemDescription": "The provided bead sort implementation uses nested loops to manually shift beads. Refactor it to use a more efficient approach, perhaps by using zip or built-ins to handle rod comparison and updates more cleanly.",
+      "language": "python",
+      "initialCode": "def bead_sort(seq):\n    for _ in range(len(seq)):\n        for i in range(len(seq) - 1):\n            if seq[i] > seq[i+1]:\n                diff = seq[i] - seq[i+1]\n                seq[i] -= diff\n                seq[i+1] += diff\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bead_sort([5, 4, 3, 2, 1])}\")",
+      "solution": {
+        "code": "def bead_sort(seq):\n    for _ in range(len(seq)):\n        for i, (upper, lower) in enumerate(zip(seq, seq[1:])):\n            if upper > lower:\n                diff = upper - lower\n                seq[i] -= diff\n                seq[i+1] += diff\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bead_sort([5, 4, 3, 2, 1])}\")",
+        "explanation": "Using `enumerate(zip(seq, seq[1:]))` is a more Pythonic way to iterate through adjacent pairs in a list. It eliminates the need for manual indexing and makes the code slightly more readable while performing the same physical 'falling bead' logic."
+      }
+    }
+  }
+}

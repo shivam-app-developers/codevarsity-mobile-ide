@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Binary Tree Mirror",
+      "description": "Transform a binary tree into its mirror image by swapping left and right children.",
+      "language": "python",
+      "ghostCode": "def mirror_tree(tree, root):\n    if not root or root not in tree:\n        return\n    left, right = tree[root][:2]\n    tree[root] = [right, left]\n    mirror_tree(tree, left)\n    mirror_tree(tree, right)\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5], 3: [6, 7]}\n    mirror_tree(tree, 1)\n    print(f\"Mirrored: {tree}\")",
+      "finalCode": "def mirror_tree(tree, root):\n    if not root or root not in tree:\n        return\n    left, right = tree[root][:2]\n    tree[root] = [right, left]\n    mirror_tree(tree, left)\n    mirror_tree(tree, right)\n\nif __name__ == \"__main__\":\n    tree = {1: [2, 3], 2: [4, 5], 3: [6, 7]}\n    mirror_tree(tree, 1)\n    print(f\"Mirrored: {tree}\")"
+    }
+  }
+}

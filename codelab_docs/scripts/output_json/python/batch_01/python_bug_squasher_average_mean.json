@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Arithmetic Mean Integer Division Bug",
+      "problemDescription": "The mean calculation seems to be producing incorrect, whole number results when the average should be a fraction. In older versions of Python, this was a common issue. Ensure it works correctly in Python 3. Fix the potential bug.",
+      "language": "python",
+      "buggyCode": "def get_mean(nums):\n    if not nums: return 0\n    return sum(nums) // len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean of [1, 2]: {get_mean([1, 2])}\")",
+      "solution": {
+        "code": "def get_mean(nums):\n    if not nums: return 0.0\n    return sum(nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean of [1, 2]: {get_mean([1, 2])}\")",
+        "explanation": "The buggy code used floor division (`//`), which truncates the result to an integer (e.g., 3/2 becomes 1). For an accurate mean, standard float division (`/`) should be used to preserve fractional parts."
+      }
+    }
+  }
+}

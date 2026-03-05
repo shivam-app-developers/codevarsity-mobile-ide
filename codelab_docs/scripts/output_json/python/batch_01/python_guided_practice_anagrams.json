@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Anagram Signature Calculation",
+      "description": "Create a frequency-based signature for a word to identify its anagrams.",
+      "language": "python",
+      "ghostCode": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word.lower())\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")\n    print(f\"'silent' -> {get_signature('silent')}\")",
+      "finalCode": "from collections import Counter\n\ndef get_signature(word):\n    freq = Counter(word.lower())\n    return \"\".join(f\"{c}{f}\" for c, f in sorted(freq.items()))\n\nif __name__ == \"__main__\":\n    print(f\"'listen' -> {get_signature('listen')}\")\n    print(f\"'silent' -> {get_signature('silent')}\")"
+    }
+  }
+}

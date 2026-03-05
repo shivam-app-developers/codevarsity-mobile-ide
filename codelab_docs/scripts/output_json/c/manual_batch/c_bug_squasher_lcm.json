@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: LCM Formula",
+            "problemDescription": "The LCM calculation is yielding negative numbers or incorrect results for large values due to overflow. Find the better order of operations.",
+            "language": "c",
+            "buggyCode": "#include <stdio.h>\\n\\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }\\n\\nint lcm(int a, int b) {\\n    return (a * b) / gcd(a, b); // Potential overflow before division\\n}\\n\\nint main() {\\n    printf(\\\"LCM: %d\\\\n\\\", lcm(10000, 20000));\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }\\n\\nint lcm(int a, int b) {\\n    if (a == 0 || b == 0) return 0;\\n    return (a / gcd(a, b)) * b;\\n}\\n\\nint main() {\\n    printf(\\\"LCM: %d\\\\n\\\", lcm(10000, 20000));\\n    return 0;\\n}",
+                "explanation": "Dividing before multiplying (`(a / gcd) * b`) helps prevent intermediate integer overflow that can occur if you multiply `a` and `b` first."
+            }
+        }
+    }
+}

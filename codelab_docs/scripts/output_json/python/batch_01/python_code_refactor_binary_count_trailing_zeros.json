@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Trailing Zeros Counting",
+      "problemDescription": "The provided `count_trailing_zeros` function uses `math.log2`. Refactor it to use Python 3.10's built-in `int.bit_count()` or `int.bit_length()` related methods if applicable, or a more direct bit manipulation approach for a cleaner implementation.",
+      "language": "python",
+      "initialCode": "import math\n\ndef count_trailing_zeros(n):\n    if n == 0: return 0\n    return int(math.log2(n & -n))\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36: {count_trailing_zeros(36)}\")",
+      "solution": {
+        "code": "def count_trailing_zeros(n):\n    if n == 0: return 0\n    return (n & -n).bit_length() - 1\n\nif __name__ == \"__main__\":\n    print(f\"Trailing zeros of 36: {count_trailing_zeros(36)}\")",
+        "explanation": "Using `(n & -n).bit_length() - 1` is a very clean and efficient way to count trailing zeros in Python. `n & -n` isolates the lowest bit, and its `bit_length()` tells us its position. Subtracting 1 gives the count of zeros preceding that bit."
+      }
+    }
+  }
+}

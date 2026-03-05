@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Counting Fractions",
+      "problemDescription": "Fix the sieve implementation for Euler's Totient function to count reduced proper fractions correctly.",
+      "language": "python",
+      "buggyCode": "def solution(limit: int = 1000000):\n    phi = list(range(limit + 1))\n    count = 0\n    for i in range(2, limit + 1):\n        # BUG: The sieve logic is incomplete or incorrect\n        if phi[i] == i:\n            for j in range(i, limit + 1, i):\n                # BUG: Multiplying or subtracting incorrectly\n                phi[j] *= (1 - 1/i)\n        count += phi[i]\n    return int(count)\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
+      "solution": {
+        "code": "def solution(limit: int = 1000000):\n    phi = list(range(limit + 1))\n    for i in range(2, limit + 1):\n        if phi[i] == i: # i is prime\n            for j in range(i, limit + 1, i):\n                # Correct integer-only update for phi\n                phi[j] -= phi[j] // i\n    return sum(phi[2:])\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
+        "explanation": "Fix the logic bug."
+      }
+    }
+  }
+}

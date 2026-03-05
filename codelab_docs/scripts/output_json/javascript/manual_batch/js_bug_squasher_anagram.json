@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Anagram Case Sensitivity",
+            "problemDescription": "The anagram check fails when strings have different casing (e.g., 'Listen' and 'Silent'). Fix the logic to be case-insensitive.",
+            "language": "javascript",
+            "buggyCode": "function isAnagram(s1, s2) {\\n  return s1.split('').sort().join('') === s2.split('').sort().join('');\\n}\\n\\nconsole.log(isAnagram(\\\"Listen\\\", \\\"silent\\\")); // false, but should be true",
+            "solution": {
+                "code": "function isAnagram(s1, s2) {\\n  const format = (s) => s.toLowerCase().split('').sort().join('');\\n  return format(s1) === format(s2);\\n}",
+                "explanation": "To perform a case-insensitive comparison, both strings should be converted to the same case (lowercase or uppercase) before sorting and comparing."
+            }
+        }
+    }
+}

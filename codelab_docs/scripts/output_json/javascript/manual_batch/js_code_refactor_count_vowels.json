@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Function One-Liner",
+            "problemDescription": "Refactor the vowel count function to be a single concise arrow function using short-circuiting.",
+            "language": "javascript",
+            "initialCode": "function countVowels(str) {\\n  const match = str.match(/[aeiou]/gi);\\n  return match ? match.length : 0;\\n}",
+            "solution": {
+                "code": "const countVowels = (s) => (s.match(/[aeiou]/gi) || []).length;",
+                "explanation": "Using the logical OR (`||`) operator allows you to provide a default value (empty array) if `match` returns `null`, making the code much more concise."
+            }
+        }
+    }
+}

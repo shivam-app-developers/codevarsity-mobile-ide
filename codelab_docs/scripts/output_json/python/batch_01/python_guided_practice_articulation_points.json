@@ -1,0 +1,14 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Articulation Points In Undirected Graphs",
+      "description": "Find articulation points in an undirected graph using Tarjan's algorithm with Depth-First Search.",
+      "language": "python",
+      "ghostCode": "def compute_ap(graph):\n    n = len(graph)\n    time = 0\n    low = [-1] * n\n    disc = [-1] * n\n    ap = [False] * n\n    def dfs(u, p):\n        nonlocal time\n        disc[u] = low[u] = time\n        time += 1\n        children = 0\n        for v in graph[u]:\n            if v == p: continue\n            if disc[v] == -1:\n                children += 1\n                dfs(v, u)\n                low[u] = min(low[u], low[v])\n                if p != -1 and low[v] >= disc[u]:\n                    ap[u] = True\n            else:\n                low[u] = min(low[u], disc[v])\n        if p == -1 and children > 1:\n            ap[u] = True\n    for i in range(n):\n        if disc[i] == -1: dfs(i, -1)\n    return [i for i, x in enumerate(ap) if x]\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [0, 2], 2: [0, 1, 3], 3: [2, 4], 4: [3]}\n    print(f\"APs: {compute_ap(graph)}\")",
+      "finalCode": "def compute_ap(graph):\n    n = len(graph)\n    time = 0\n    low = [-1] * n\n    disc = [-1] * n\n    ap = [False] * n\n    def dfs(u, p):\n        nonlocal time\n        disc[u] = low[u] = time\n        time += 1\n        children = 0\n        for v in graph[u]:\n            if v == p: continue\n            if disc[v] == -1:\n                children += 1\n                dfs(v, u)\n                low[u] = min(low[u], low[v])\n                if p != -1 and low[v] >= disc[u]:\n                    ap[u] = True\n            else:\n                low[u] = min(low[u], disc[v])\n        if p == -1 and children > 1:\n            ap[u] = True\n    for i in range(n):\n        if disc[i] == -1: dfs(i, -1)\n    return [i for i, x in enumerate(ap) if x]\n\nif __name__ == \"__main__\":\n    graph = {0: [1, 2], 1: [0, 2], 2: [0, 1, 3], 3: [2, 4], 4: [3]}\n    print(f\"APs: {compute_ap(graph)}\")"
+    }
+  }
+}

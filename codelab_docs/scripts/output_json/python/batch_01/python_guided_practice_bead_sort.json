@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Bead Sort Implementation",
+      "description": "Implement Bead Sort, a natural sorting algorithm that works for sequences of non-negative integers.",
+      "language": "python",
+      "ghostCode": "def bead_sort(seq):\n    if any(not isinstance(x, int) or x < 0 for x in seq):\n        return []\n    for _ in range(len(seq)):\n        for i in range(len(seq) - 1):\n            if seq[i] > seq[i+1]:\n                diff = seq[i] - seq[i+1]\n                seq[i] -= diff\n                seq[i+1] += diff\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bead_sort([5, 4, 3, 2, 1])}\")",
+      "finalCode": "def bead_sort(seq):\n    if any(not isinstance(x, int) or x < 0 for x in seq):\n        return []\n    for _ in range(len(seq)):\n        for i in range(len(seq) - 1):\n            if seq[i] > seq[i+1]:\n                diff = seq[i] - seq[i+1]\n                seq[i] -= diff\n                seq[i+1] += diff\n    return seq\n\nif __name__ == \"__main__\":\n    print(f\"Sorted: {bead_sort([5, 4, 3, 2, 1])}\")"
+    }
+  }
+}

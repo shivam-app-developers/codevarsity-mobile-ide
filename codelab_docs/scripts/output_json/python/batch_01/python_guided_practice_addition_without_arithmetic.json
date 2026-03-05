@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Addition Without Arithmetic",
+      "description": "Add two integers using bitwise operations without arithmetic operators.",
+      "language": "python",
+      "ghostCode": "def add(first, second):\n    while second != 0:\n        carry = first & second\n        first ^= second\n        second = carry << 1\n    return first\n\nif __name__ == \"__main__\":\n    print(f\"Result: {add(13, 5)}\")",
+      "finalCode": "def add(first, second):\n    while second != 0:\n        carry = first & second\n        first ^= second\n        second = carry << 1\n    return first\n\nif __name__ == \"__main__\":\n    print(f\"Result: {add(13, 5)}\")"
+    }
+  }
+}

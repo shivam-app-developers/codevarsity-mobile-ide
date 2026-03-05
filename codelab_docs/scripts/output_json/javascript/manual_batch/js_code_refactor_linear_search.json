@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: findIndex Method",
+            "problemDescription": "Refactor the custom for-loop search to use the built-in `Array.prototype.findIndex()` method.",
+            "language": "javascript",
+            "initialCode": "function search(arr, target) {\\n  for (let i = 0; i < arr.length; i++) {\\n    if (arr[i] === target) return i;\\n  }\\n  return -1;\\n}",
+            "solution": {
+                "code": "const search = (arr, target) => arr.findIndex(item => item === target);",
+                "explanation": "JavaScript arrays provide powerful built-in methods like `findIndex()` that are more declarative and less prone to off-by-one errors than manual for-loops."
+            }
+        }
+    }
+}

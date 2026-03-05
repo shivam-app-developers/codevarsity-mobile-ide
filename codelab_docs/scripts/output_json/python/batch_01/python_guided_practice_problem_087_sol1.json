@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Prime Power Triples",
+      "description": "Count how many numbers below 50 million can be expressed as the sum of a prime square, prime cube, and prime fourth power.",
+      "language": "python",
+      "ghostCode": "def get_primes(limit: int) -> list[int]:\n    \"\"\"Standard Sieve of Eratosthenes to get primes up to limit.\"\"\"\n    sieve = [True] * (limit + 1)\n    sieve[0] = sieve[1] = False\n    for p in range(2, int(limit**0.5) + 1):\n        if sieve[p]:\n            for i in range(p * p, limit + 1, p):\n                sieve[i] = False\n    return [p for p, is_prime in enumerate(sieve) if is_prime]\n\ndef solution(limit: int = 50000000) -> int:\n    \"\"\"\n    Counts numbers < limit such that n = p1^2 + p2^3 + p3^4.\n    \"\"\"\n    # Maximum possible primes:\n    # p1^2 < 50M => p1 < 7071\n    # p2^3 < 50M => p2 < 368\n    # p3^4 < 50M => p3 < 84\n    primes = get_primes(7100)\n    \n    # Use a set to avoid counting the same number multiple times\n    found_numbers = set()\n    \n    for p4 in primes:\n        v4 = p4**4\n        if v4 >= limit: break\n        for p3 in primes:\n            v3 = p3**3\n            if v4 + v3 >= limit: break\n            for p2 in primes:\n                v2 = p2**2\n                val = v4 + v3 + v2\n                if val >= limit: break\n                found_numbers.add(val)\n                \n    return len(found_numbers)\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution(50000000)}\")",
+      "finalCode": "def get_primes(limit: int) -> list[int]:\n    \"\"\"Standard Sieve of Eratosthenes to get primes up to limit.\"\"\"\n    sieve = [True] * (limit + 1)\n    sieve[0] = sieve[1] = False\n    for p in range(2, int(limit**0.5) + 1):\n        if sieve[p]:\n            for i in range(p * p, limit + 1, p):\n                sieve[i] = False\n    return [p for p, is_prime in enumerate(sieve) if is_prime]\n\ndef solution(limit: int = 50000000) -> int:\n    \"\"\"\n    Counts numbers < limit such that n = p1^2 + p2^3 + p3^4.\n    \"\"\"\n    # Maximum possible primes:\n    # p1^2 < 50M => p1 < 7071\n    # p2^3 < 50M => p2 < 368\n    # p3^4 < 50M => p3 < 84\n    primes = get_primes(7100)\n    \n    # Use a set to avoid counting the same number multiple times\n    found_numbers = set()\n    \n    for p4 in primes:\n        v4 = p4**4\n        if v4 >= limit: break\n        for p3 in primes:\n            v3 = p3**3\n            if v4 + v3 >= limit: break\n            for p2 in primes:\n                v2 = p2**2\n                val = v4 + v3 + v2\n                if val >= limit: break\n                found_numbers.add(val)\n                \n    return len(found_numbers)\n\n\nif __name__ == \"__main__\":\n    print(f\"Result: {solution(50000000)}\")"
+    }
+  }
+}

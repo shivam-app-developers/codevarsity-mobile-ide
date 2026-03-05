@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Millionth Lexicographic Permutation",
+      "description": "Find the millionth lexicographic permutation of the digits 0 through 9.",
+      "language": "python",
+      "ghostCode": "from itertools import permutations\n\n\ndef solution() -> str:\n    \"\"\"Returns the millionth lexicographic permutation of the digits 0-9.\"\"\"\n    # itertools.permutations generates permutations in lexicographical order\n    # if the input is sorted.\n    digits = \"0123456789\"\n    # We use islice to efficiently skip to the millionth element\n    from itertools import islice\n    target_index = 999999  # 1,000,000th element (0-indexed)\n    \n    mill_perm = next(islice(permutations(digits), target_index, None))\n    return \"\".join(mill_perm)\n\n\nif __name__ == \"__main__\":\n    print(solution())",
+      "finalCode": "from itertools import permutations\n\n\ndef solution() -> str:\n    \"\"\"Returns the millionth lexicographic permutation of the digits 0-9.\"\"\"\n    # itertools.permutations generates permutations in lexicographical order\n    # if the input is sorted.\n    digits = \"0123456789\"\n    # We use islice to efficiently skip to the millionth element\n    from itertools import islice\n    target_index = 999999  # 1,000,000th element (0-indexed)\n    \n    mill_perm = next(islice(permutations(digits), target_index, None))\n    return \"\".join(mill_perm)\n\n\nif __name__ == \"__main__\":\n    print(solution())"
+    }
+  }
+}

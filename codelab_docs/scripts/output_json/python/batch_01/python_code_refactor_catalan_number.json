@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Recursive Catalan with Memoization",
+      "problemDescription": "The provided code uses an iterative approach. Refactor it to use a recursive approach with memoization based on the recurrence relation `C(n+1) = Σ C(i) * C(n-i)` for `i` from 0 to `n`.",
+      "language": "python",
+      "initialCode": "def catalan(n):\n    res = 1\n    for i in range(1, n): \n        res = res * (4 * i - 2) // (i + 1)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")",
+      "solution": {
+        "code": "def catalan(n, memo={0: 1, 1: 1}):\n    if n in memo: return memo[n]\n    res = 0\n    for i in range(n):\n        res += catalan(i, memo) * catalan(n - 1 - i, memo)\n    memo[n] = res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(4)}\") # Note: C(4) is 14",
+        "explanation": "The recursive version uses the fundamental definition of Catalan numbers. By using a `memo` dictionary, we avoid the exponential time complexity of pure recursion and achieve a efficient O(n^2) solution that clearly shows the underlying combinatorial structure."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Millionth Lexicographic Permutation",
+      "problemDescription": "Refactor the permutation calculation using a mathematical approach (factorial number system) for near-instant results.",
+      "language": "python",
+      "initialCode": "from itertools import permutations, islice\n\ndef solution():\n    digits = \"0123456789\"\n    target = islice(permutations(digits), 999999, 1000000)\n    return \"\".join(next(target))",
+      "solution": {
+        "code": "import math\n\ndef solution(n: int = 1000000, digits: str = \"0123456789\") -> str:\n    \"\"\"\n    Finds the n-th permutation using the factoradic (factorial number system).\n    This avoids generating any permutations at all.\n    \"\"\"\n    res = \"\"\n    candidates = list(digits)\n    # Convert n to 0-indexed\n    n -= 1\n    \n    for i in range(len(digits) - 1, -1, -1):\n        fact = math.factorial(i)\n        idx = n // fact\n        res += candidates.pop(idx)\n        n %= fact\n        \n    return res\n\n\nif __name__ == \"__main__\":\n    print(solution(1000000))",
+        "explanation": "The mathematical approach using the factorial number system (factoradic) is O(k^2) where k is the number of digits, making it vastly faster and more efficient than iterating through 1,000,000 permutations."
+      }
+    }
+  }
+}

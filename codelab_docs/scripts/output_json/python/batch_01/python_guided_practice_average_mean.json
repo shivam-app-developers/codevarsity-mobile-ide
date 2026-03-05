@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Arithmetic Mean Calculation",
+      "description": "Calculate the arithmetic mean (average) of a list of numbers.",
+      "language": "python",
+      "ghostCode": "def get_mean(nums):\n    if not nums: return 0.0\n    return sum(nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")",
+      "finalCode": "def get_mean(nums):\n    if not nums: return 0.0\n    return sum(nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"Mean: {get_mean([3, 6, 9])}\")"
+    }
+  }
+}

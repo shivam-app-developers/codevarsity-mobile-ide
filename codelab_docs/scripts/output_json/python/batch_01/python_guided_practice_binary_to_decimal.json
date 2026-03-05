@@ -1,0 +1,14 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Binary to Decimal Conversion",
+      "description": "Convert a binary string representation of a number into its decimal integer equivalent.",
+      "language": "python",
+      "ghostCode": "def bin_to_dec(s):\n    s = s.strip().replace(\"0b\", \"\")\n    neg = s.startswith(\"-\")\n    if neg: s = s[1:]\n    res = 0\n    for char in s:\n        res = res * 2 + int(char)\n    return -res if neg else res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")\n    print(f\"'-11': {bin_to_dec('-11')}\")",
+      "finalCode": "def bin_to_dec(s):\n    s = s.strip().replace(\"0b\", \"\")\n    neg = s.startswith(\"-\")\n    if neg: s = s[1:]\n    res = 0\n    for char in s:\n        res = res * 2 + int(char)\n    return -res if neg else res\n\nif __name__ == \"__main__\":\n    print(f\"'101': {bin_to_dec('101')}\")\n    print(f\"'-11': {bin_to_dec('-11')}\")"
+    }
+  }
+}

@@ -2,12 +2,36 @@
   "version": 1,
   "snippets": [
     {
+      "id": "c_bug_squasher_armstrong",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Armstrong Comparison",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_bin_to_dec",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Power of 2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_bin_to_dec.json",
+      "difficulty": "beginner"
+    },
+    {
       "id": "c_bug_squasher_binary_search",
       "type": "bug_squasher",
       "language": "c",
       "title": "Bug Squasher: Binary Search",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_bug_squasher_binary_search.json",
       "difficulty": "medium"
+    },
+    {
+      "id": "c_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Bubble Sort Indices",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_bubble_sort.json",
+      "difficulty": "beginner"
     },
     {
       "id": "c_bug_squasher_bubble_sort",
@@ -21,8 +45,120 @@
       "id": "c_bug_squasher_factorial",
       "type": "bug_squasher",
       "language": "c",
+      "title": "Bug Squasher: Factorial Initialization",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "c",
       "title": "Bug Squasher: Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_bug_squasher_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_gcd",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: GCD Loop Condition",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_gcd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_hello_world",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Hello World Syntax",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_insertion_sort",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Insertion Positioning",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_insertion_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_lcm",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: LCM Formula",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_linear_search",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Search Return Type",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_palindrome",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Palindrome Logic",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_prime",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Prime Check Boundary",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_prime.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_selection_sort",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Selection Min Index",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_selection_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_strong_number",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Strong Number Loop",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_strong_number.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_temp_conv",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Integer Division",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_temp_conv.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_bug_squasher_word_count",
+      "type": "bug_squasher",
+      "language": "c",
+      "title": "Bug Squasher: Word Count Boundary",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_bug_squasher_word_count.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_armstrong",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Function Extraction",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_bin_to_dec",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Bitwise Conversion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_bin_to_dec.json",
       "difficulty": "beginner"
     },
     {
@@ -37,6 +173,14 @@
       "id": "c_code_refactor_bubble_sort",
       "type": "refactor",
       "language": "c",
+      "title": "Code Refactor: Optimized Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "c",
       "title": "C Refactor: Bubble Sort",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_code_refactor_bubble_sort.json",
       "difficulty": "medium"
@@ -45,8 +189,120 @@
       "id": "c_code_refactor_factorial",
       "type": "refactor",
       "language": "c",
+      "title": "Code Refactor: Recursive Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_factorial",
+      "type": "refactor",
+      "language": "c",
       "title": "C Refactor: Factorial",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_code_refactor_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_gcd",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Recursive GCD",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_gcd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_hello_world",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Explicit Return",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_insertion_sort",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Function Documentation",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_insertion_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_lcm",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: LCM Function Macro",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_linear_search",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Pointer Arithmetic",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_palindrome",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Boolean Return",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_prime",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Function for Prime",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_prime.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_selection_sort",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Pointer Swap",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_selection_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_strong_number",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Function Pointers?",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_strong_number.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_temp_conv",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Conversion Macros",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_temp_conv.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_code_refactor_word_count",
+      "type": "refactor",
+      "language": "c",
+      "title": "Code Refactor: Standard Library Word Count",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_code_refactor_word_count.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_armstrong",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Armstrong Number",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_armstrong.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_bin_to_dec",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Binary to Decimal",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_bin_to_dec.json",
       "difficulty": "beginner"
     },
     {
@@ -61,6 +317,14 @@
       "id": "c_guided_practice_bubble_sort",
       "type": "guided",
       "language": "c",
+      "title": "Guided Practice: Bubble Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_bubble_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "c",
       "title": "C Bubble Sort",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_guided_practice_bubble_sort.json",
       "difficulty": "medium"
@@ -69,8 +333,104 @@
       "id": "c_guided_practice_factorial",
       "type": "guided",
       "language": "c",
+      "title": "Guided Practice: Simple Factorial",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_factorial",
+      "type": "guided",
+      "language": "c",
       "title": "C Factorial (Recursive)",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/test_batch/c_guided_practice_factorial.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_gcd",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Euclid's GCD",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_gcd.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_hello_world",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Hello World",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_hello_world.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_insertion_sort",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Insertion Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_insertion_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_lcm",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Simple LCM",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_lcm.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_linear_search",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Linear Search",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_linear_search.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_palindrome",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Palindrome Number",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_palindrome.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_prime",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Prime Number Check",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_prime.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_selection_sort",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Selection Sort",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_selection_sort.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_strong_number",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Strong Number",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_strong_number.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_temp_conv",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Temperature Conversion",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_temp_conv.json",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "c_guided_practice_word_count",
+      "type": "guided",
+      "language": "c",
+      "title": "Guided Practice: Simple Word Count",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/output_json/c/manual_batch/c_guided_practice_word_count.json",
       "difficulty": "beginner"
     }
   ],

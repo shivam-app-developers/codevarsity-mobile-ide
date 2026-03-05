@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Palindrome Reverse",
+            "problemDescription": "The palindrome check is failing because the `reverse()` method is being used in-place on the original array, modifying it before comparison.",
+            "language": "javascript",
+            "buggyCode": "function isPalindrome(str) {\\n  const chars = str.split('');\\n  const reversed = chars.reverse().join(''); // Bug: reverse() modifies chars in-place\\n  return str === reversed;\\n}",
+            "solution": {
+                "code": "function isPalindrome(str) {\\n  const reversed = str.split('').reverse().join('');\\n  return str === reversed;\\n}",
+                "explanation": "`reverse()` modifies the array in-place. While `split('').reverse()` works fine because it's a new array, understanding in-place modifications is crucial in JS."
+            }
+        }
+    }
+}

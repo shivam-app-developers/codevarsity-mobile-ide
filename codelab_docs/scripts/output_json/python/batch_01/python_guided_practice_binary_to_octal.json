@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Binary to Octal Conversion",
+      "description": "Convert a binary string into its octal representation by grouping bits into triplets.",
+      "language": "python",
+      "ghostCode": "def bin_to_oct(s):\n    if not s: return \"\"\n    while len(s) % 3 != 0: s = \"0\" + s\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        val = int(triplet, 2)\n        res += str(val)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'1111' -> {bin_to_oct('1111')}\")",
+      "finalCode": "def bin_to_oct(s):\n    if not s: return \"\"\n    while len(s) % 3 != 0: s = \"0\" + s\n    res = \"\"\n    for i in range(0, len(s), 3):\n        triplet = s[i:i+3]\n        val = int(triplet, 2)\n        res += str(val)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'1111' -> {bin_to_oct('1111')}\")"
+    }
+  }
+}

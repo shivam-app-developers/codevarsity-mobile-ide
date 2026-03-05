@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "BugSquasherScenario",
+        "visualizerParams": {
+            "title": "Bug Squasher: Digits Division",
+            "problemDescription": "The sum of digits is producing huge decimal numbers or incorrect results. Find the operation error.",
+            "language": "javascript",
+            "buggyCode": "function sumDigits(n) {\\n  let sum = 0;\\n  while (n > 0) {\\n    sum += n % 10;\\n    n = n / 10; // Bug: JavaScript division results in decimals\\n  }\\n  return sum;\\n}",
+            "solution": {
+                "code": "function sumDigits(n) {\\n  let sum = 0;\\n  while (n > 0) {\\n    sum += n % 10;\\n    n = Math.floor(n / 10);\\n  }\\n  return sum;\\n}",
+                "explanation": "In JavaScript, `/` performs floating-point division. To perform integer division for digit extraction, you must use `Math.floor()` or an equivalent rounding method."
+            }
+        }
+    }
+}

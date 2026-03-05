@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Conversion Macros",
+            "problemDescription": "Use a macro or a constant for the conversion formula components to improve maintainability.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\n\\nint main() {\\n    float c = 25.0;\\n    float f = (c * 9.0 / 5.0) + 32;\\n    printf(\\\"%.2f\\\\n\\\", f);\\n    return 0;\\n}",
+            "solution": {
+                "code": "#include <stdio.h>\\n\\n#define C_TO_F(c) ((c * 9.0 / 5.0) + 32)\\n\\nint main() {\\n    float c = 25.0;\\n    float f = C_TO_F(c);\\n    printf(\\\"%.2f\\\\n\\\", f);\\n    return 0;\\n}",
+                "explanation": "Using a macro for the formula makes the code more readable and allows you to update the formula in one place if needed."
+            }
+        }
+    }
+}

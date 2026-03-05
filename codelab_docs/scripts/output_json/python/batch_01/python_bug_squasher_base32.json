@@ -1,0 +1,16 @@
+{
+  "difficulty": "advanced",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Base32 Binary Padding Bug",
+      "problemDescription": "The Base32 encoding logic is failing because the binary data is not properly padded to a multiple of 5 bits before being split into chunks. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n\ndef b32_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    chunks = [binary[i:i+5] for i in range(0, len(binary), 5)]\n    res = \"\".join(CHARSET[int(c, 2)] for c in chunks)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'H': {b32_encode('H')}\")",
+      "solution": {
+        "code": "CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n\ndef b32_encode(data):\n    binary = \"\".join(bin(ord(c))[2:].zfill(8) for c in data)\n    padded_len = (len(binary) + 4) // 5 * 5\n    binary = binary.ljust(padded_len, \"0\")\n    chunks = [binary[i:i+5] for i in range(0, len(binary), 5)]\n    res = \"\".join(CHARSET[int(c, 2)] for c in chunks)\n    return res.ljust((len(res) + 7) // 8 * 8, \"=\")\n\nif __name__ == \"__main__\":\n    print(f\"'H': {b32_encode('H')}\")",
+        "explanation": "Base32 requires binary data to be split into 5-bit chunks. If the data isn't a multiple of 5 bits, it must be right-padded with zeros. Additionally, the final encoded string is usually padded with '=' to a multiple of 8 characters. The buggy code lacked both types of padding."
+      }
+    }
+  }
+}

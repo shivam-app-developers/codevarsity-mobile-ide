@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Palindrome Check",
+            "description": "Check if a string is a palindrome using built-in string and array methods.",
+            "language": "javascript",
+            "ghostCode": "function isPalindrome(str) {\\n  const reversed = str.split('').reverse().join('');\\n  return str === reversed;\\n}\\n\\nconsole.log(isPalindrome(\\\"racecar\\\")); // true\\nconsole.log(isPalindrome(\\\"hello\\\")); // false",
+            "finalCode": "function isPalindrome(str) {\\n  const reversed = str.split('').reverse().join('');\\n  return str === reversed;\\n}\\n\\nconsole.log(isPalindrome(\\\"racecar\\\")); // true\\nconsole.log(isPalindrome(\\\"hello\\\")); // false"
+        }
+    }
+}

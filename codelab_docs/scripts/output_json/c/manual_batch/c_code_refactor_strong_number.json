@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Function Pointers?",
+            "problemDescription": "Actually, let's keep it simple: refactor to use a pre-calculated factorial array for digits 0-9 to improve performance.",
+            "language": "c",
+            "initialCode": "#include <stdio.h>\\nint f(int n) { int r=1; for(int i=1;i<=n;i++) r*=i; return r; }\\nbool isS(int n) { int s=0, t=n; while(t>0){ s+=f(t%10); t/=10;} return s==n; }",
+            "solution": {
+                "code": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isStrong(int n) {\\n    static const int fact[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};\\n    int sum = 0, temp = n;\\n    while (temp > 0) {\\n        sum += fact[temp % 10];\\n        temp /= 10;\\n    }\\n    return sum == n;\\n}",
+                "explanation": "Since we only care about factorials of digits (0-9), using a pre-calculated lookup table is much more efficient than recalculating the factorial every time."
+            }
+        }
+    }
+}

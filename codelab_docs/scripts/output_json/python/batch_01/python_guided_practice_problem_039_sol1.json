@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Integer Right Triangles",
+      "description": "Find the perimeter p <= limit for which the number of right angle triangles with integral sides {a, b, c} is maximized.",
+      "language": "python",
+      "ghostCode": "def solution(limit: int = 1000) -> int:\n    \"\"\"\n    Returns the perimeter p <= limit with the maximum number of integral right triangles.\n    a^2 + b^2 = c^2 and a + b + c = p.\n    \"\"\"\n    counts = [0] * (limit + 1)\n    \n    # p = a + b + sqrt(a^2 + b^2)\n    # a^2 + b^2 = (p - a - b)^2\n    # a^2 + b^2 = p^2 + a^2 + b^2 - 2pa - 2pb + 2ab\n    # 0 = p^2 - 2pa - 2pb + 2ab\n    # b = (p^2 - 2pa) / (2p - 2a)\n    \n    for p in range(2, limit + 1, 2):\n        for a in range(1, p // 3):\n            # Derived formula for b given p and a\n            if (p * p - 2 * p * a) % (2 * p - 2 * a) == 0:\n                counts[p] += 1\n                \n    max_val = max(counts)\n    return counts.index(max_val)\n\n\nif __name__ == \"__main__\":\n    print(f\"Best perimeter: {solution(1000)}\")",
+      "finalCode": "def solution(limit: int = 1000) -> int:\n    \"\"\"\n    Returns the perimeter p <= limit with the maximum number of integral right triangles.\n    a^2 + b^2 = c^2 and a + b + c = p.\n    \"\"\"\n    counts = [0] * (limit + 1)\n    \n    # p = a + b + sqrt(a^2 + b^2)\n    # a^2 + b^2 = (p - a - b)^2\n    # a^2 + b^2 = p^2 + a^2 + b^2 - 2pa - 2pb + 2ab\n    # 0 = p^2 - 2pa - 2pb + 2ab\n    # b = (p^2 - 2pa) / (2p - 2a)\n    \n    for p in range(2, limit + 1, 2):\n        for a in range(1, p // 3):\n            # Derived formula for b given p and a\n            if (p * p - 2 * p * a) % (2 * p - 2 * a) == 0:\n                counts[p] += 1\n                \n    max_val = max(counts)\n    return counts.index(max_val)\n\n\nif __name__ == \"__main__\":\n    print(f\"Best perimeter: {solution(1000)}\")"
+    }
+  }
+}

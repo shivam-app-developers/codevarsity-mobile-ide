@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Barometric Formula Bug",
+      "problemDescription": "The altitude calculation seems off. The exponent in the Barometric formula might be incorrect, leading to significant errors. Identify and fix the logic flaw.",
+      "language": "python",
+      "buggyCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.5255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
+      "solution": {
+        "code": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
+        "explanation": "The bug was a typo in the exponent. The correct value is `1 / 5.255`, but the buggy code used `1 / 5.5255`. This small error could lead to significant altitude estimation inaccuracies."
+      }
+    }
+  }
+}

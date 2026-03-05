@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "BugSquasherScenario",
+    "visualizerParams": {
+      "title": "Arc Length Calculation Bug",
+      "problemDescription": "The arc length calculation is producing values that are far too large. It seems the relationship between the angle and the full circle is being handled incorrectly. Find and fix the error.",
+      "language": "python",
+      "buggyCode": "from math import pi\n\ndef arc_length(angle, radius):\n    return 2 * pi * radius * (360 / angle)\n\nif __name__ == \"__main__\":\n    print(f\"Arc Length (90 deg): {arc_length(90, 10)}\")",
+      "solution": {
+        "code": "from math import pi\n\ndef arc_length(angle, radius):\n    return 2 * pi * radius * (angle / 360)\n\nif __name__ == \"__main__\":\n    print(f\"Arc Length (90 deg): {arc_length(90, 10)}\")",
+        "explanation": "To calculate the arc length, we must multiply the full circumference (`2πr`) by the fraction of the circle represented by the angle (`angle / 360`). The buggy code incorrectly used `360 / angle`, which resulted in an incorrect scaling factor."
+      }
+    }
+  }
+}

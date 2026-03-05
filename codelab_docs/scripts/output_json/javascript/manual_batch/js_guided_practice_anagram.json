@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Anagram Check",
+            "description": "Check if two strings are anagrams of each other (contain the same characters in any order).",
+            "language": "javascript",
+            "ghostCode": "function isAnagram(str1, str2) {\\n  if (str1.length !== str2.length) return false;\\n  const s1 = str1.split('').sort().join('');\\n  const s2 = str2.split('').sort().join('');\\n  return s1 === s2;\\n}\\n\\nconsole.log(isAnagram(\\\"listen\\\", \\\"silent\\\")); // true",
+            "finalCode": "function isAnagram(str1, str2) {\\n  if (str1.length !== str2.length) return false;\\n  const s1 = str1.split('').sort().join('');\\n  const s2 = str2.split('').sort().join('');\\n  return s1 === s2;\\n}\\n\\nconsole.log(isAnagram(\\\"listen\\\", \\\"silent\\\")); // true"
+        }
+    }
+}

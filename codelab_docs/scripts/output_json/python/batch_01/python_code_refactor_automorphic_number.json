@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Clean Automorphic Check via Strings",
+      "problemDescription": "The provided `is_automorphic` function uses a while loop and modulo arithmetic to compare digits. Refactor it to use Python's string methods for a more intuitive and readable check.",
+      "language": "python",
+      "initialCode": "def is_automorphic(n):\n    if n < 0: return False\n    sq = n * n\n    while n > 0:\n        if n % 10 != sq % 10: return False\n        n //= 10\n        sq //= 10\n    return True\n\nif __name__ == \"__main__\":\n    print(f\"25: {is_automorphic(25)}\")",
+      "solution": {
+        "code": "def is_automorphic(n):\n    if n < 0: return False\n    n_str = str(n)\n    sq_str = str(n * n)\n    return sq_str.endswith(n_str)\n\nif __name__ == \"__main__\":\n    print(f\"25: {is_automorphic(25)}\")",
+        "explanation": "Refactoring to use strings makes the logic much more intuitive: we're checking if the string representation of the square ends with the string representation of the number itself. This eliminates the need for manual digit manipulation using modulo and floor division."
+      }
+    }
+  }
+}

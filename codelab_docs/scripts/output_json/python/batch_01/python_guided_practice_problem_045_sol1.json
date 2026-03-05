@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Triangular, Pentagonal, and Hexagonal",
+      "description": "Find the next number after 40755 that is simultaneously triangular, pentagonal, and hexagonal.",
+      "language": "python",
+      "ghostCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number is pentagonal.\"\"\"\n    # n = k(3k-1)/2 => 3k^2 - k - 2n = 0\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution(start_n: int = 144) -> int:\n    \"\"\"\n    All hexagonal numbers are triangular. So we only need to check\n    hexagonal numbers for pentagonal properties.\n    \"\"\"\n    n = start_n\n    while True:\n        # H_n = n(2n-1)\n        hex_num = n * (2 * n - 1)\n        if is_pentagonal(hex_num):\n            return hex_num\n        n += 1\n\n\nif __name__ == \"__main__\":\n    # The problem asks for the next number after T(285) = P(165) = H(143) = 40755.\n    # So we start checking from H(144).\n    print(f\"Next number: {solution(144)}\")",
+      "finalCode": "import math\n\ndef is_pentagonal(n: int) -> bool:\n    \"\"\"Checks if a number is pentagonal.\"\"\"\n    # n = k(3k-1)/2 => 3k^2 - k - 2n = 0\n    val = (math.sqrt(24 * n + 1) + 1) / 6\n    return val.is_integer()\n\ndef solution(start_n: int = 144) -> int:\n    \"\"\"\n    All hexagonal numbers are triangular. So we only need to check\n    hexagonal numbers for pentagonal properties.\n    \"\"\"\n    n = start_n\n    while True:\n        # H_n = n(2n-1)\n        hex_num = n * (2 * n - 1)\n        if is_pentagonal(hex_num):\n            return hex_num\n        n += 1\n\n\nif __name__ == \"__main__\":\n    # The problem asks for the next number after T(285) = P(165) = H(143) = 40755.\n    # So we start checking from H(144).\n    print(f\"Next number: {solution(144)}\")"
+    }
+  }
+}

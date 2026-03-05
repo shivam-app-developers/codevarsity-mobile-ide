@@ -1,0 +1,14 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "GuidedPractice",
+        "visualizerParams": {
+            "mode": "snippet",
+            "title": "Guided Practice: Strong Number",
+            "description": "A Strong Number is a number where the sum of factorials of its digits equals the number itself (e.g., 145 = 1! + 4! + 5!).",
+            "language": "c",
+            "ghostCode": "#include <stdio.h>\\n\\nint factorial(int n) {\\n    int res = 1;\\n    for (int i = 1; i <= n; i++) res *= i;\\n    return res;\\n}\\n\\nint main() {\\n    int n = 145, original = n, sum = 0;\\n    while (n > 0) {\\n        sum += factorial(n % 10);\\n        n /= 10;\\n    }\\n    if (sum == original) printf(\\\"%d is Strong\\\\n\\\", original);\\n    else printf(\\\"%d is not Strong\\\\n\\\", original);\\n    return 0;\\n}",
+            "finalCode": "#include <stdio.h>\\n\\nint factorial(int n) {\\n    int res = 1;\\n    for (int i = 1; i <= n; i++) res *= i;\\n    return res;\\n}\\n\\nint main() {\\n    int n = 145, original = n, sum = 0;\\n    while (n > 0) {\\n        sum += factorial(n % 10);\\n        n /= 10;\\n    }\\n    if (sum == original) printf(\\\"%d is Strong\\\\n\\\", original);\\n    else printf(\\\"%d is not Strong\\\\n\\\", original);\\n    return 0;\\n}"
+        }
+    }
+}

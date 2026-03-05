@@ -1,0 +1,16 @@
+{
+    "difficulty": "beginner",
+    "visualizerParams": {
+        "visualizerType": "CodeRefactorChallenge",
+        "visualizerParams": {
+            "title": "Code Refactor: Boolean Coercion",
+            "problemDescription": "Refactor the function to use a more implicit boolean check for truthiness.",
+            "language": "javascript",
+            "initialCode": "function isOdd(number) {\\n  return number % 2 !== 0;\\n}",
+            "solution": {
+                "code": "const isOdd = (number) => !!(number % 2);",
+                "explanation": "In JavaScript, 0 is falsy and 1 (or -1) is truthy. The double-NOT (`!!`) operator explicitly converts the result to a boolean."
+            }
+        }
+    }
+}

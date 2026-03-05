@@ -1,0 +1,16 @@
+{
+  "difficulty": "beginner",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Optimizing Binary Conversion with `int()`",
+      "problemDescription": "The provided code manually converts a binary string to decimal using a loop. Refactor it to use Python's built-in `int()` function with the appropriate base, which is the most efficient and standard way to perform this conversion.",
+      "language": "python",
+      "initialCode": "def bin_to_dec(s):\n    res = 0\n    for char in s:\n        res = res * 2 + int(char)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"'1010': {bin_to_dec('1010')}\")",
+      "solution": {
+        "code": "def bin_to_dec(s):\n    return int(s, 2)\n\nif __name__ == \"__main__\":\n    print(f\"'1010': {bin_to_dec('1010')}\")",
+        "explanation": "Python's `int(string, base)` function is extremely powerful and optimized. Passing 2 as the base allows it to parse binary strings directly into their decimal integer representation, handling all the bit weighting logic internally."
+      }
+    }
+  }
+}

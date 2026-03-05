@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Apparent Power Calculation",
+      "description": "Calculate the apparent power in a single-phase AC circuit using complex numbers.",
+      "language": "python",
+      "ghostCode": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rad = math.radians(v_ang)\n    i_rad = math.radians(i_ang)\n    v_rect = cmath.rect(v, v_rad)\n    i_rect = cmath.rect(i, i_rad)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")",
+      "finalCode": "import cmath, math\n\ndef get_apparent_power(v, i, v_ang, i_ang):\n    v_rad = math.radians(v_ang)\n    i_rad = math.radians(i_ang)\n    v_rect = cmath.rect(v, v_rad)\n    i_rect = cmath.rect(i, i_rad)\n    return v_rect * i_rect\n\nif __name__ == \"__main__\":\n    print(f\"Power: {get_apparent_power(100, 5, 0, 0)}\")"
+    }
+  }
+}

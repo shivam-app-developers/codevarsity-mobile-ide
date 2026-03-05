@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Regex Snake Case Conversion",
+      "problemDescription": "The provided snake_case converter uses a manual loop. Refactor it to use Python's `re` (regular expression) module, which can handle this pattern replacement in a much more concise and robust way.",
+      "language": "python",
+      "initialCode": "def to_snake_case(s):\n    res = \"\"\n    for i, char in enumerate(s):\n        if char.isupper() and i > 0: res += \"_\"\n        res += char.lower()\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"someString -> {to_snake_case('someString')}\")",
+      "solution": {
+        "code": "import re\n\ndef to_snake_case(s):\n    s = re.sub('(.)([A-Z][a-z]+)', r'\\1_\\2', s)\n    return re.sub('([a-z0-9])([A-Z])', r'\\1_\\2', s).lower()\n\nif __name__ == \"__main__\":\n    print(f\"someString -> {to_snake_case('someString')}\")",
+        "explanation": "Using regular expressions allows us to define complex patterns for where underscores should be inserted (e.g., between lowercase and uppercase letters). This is much more concise and handles edge cases like acronyms or mixed numbers better than simple character iteration."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "CodeRefactorChallenge",
+    "visualizerParams": {
+      "title": "Using `statistics` for Average Deviation",
+      "problemDescription": "The provided `avg_abs_dev` function calculates the mean and deviations manually. Refactor it to use Python's built-in `statistics.mean` for cleaner and more standardized code.",
+      "language": "python",
+      "initialCode": "def avg_abs_dev(nums):\n    if not nums: return 0.0\n    mean = sum(nums) / len(nums)\n    return sum(abs(x - mean) for x in nums) / len(nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
+      "solution": {
+        "code": "import statistics\n\ndef avg_abs_dev(nums):\n    if not nums: return 0.0\n    mean_val = statistics.mean(nums)\n    return statistics.mean(abs(x - mean_val) for x in nums)\n\nif __name__ == \"__main__\":\n    print(f\"AAD: {avg_abs_dev([4, 1, 3, 2])}\")",
+        "explanation": "By using `statistics.mean()`, we improve the code's readability and rely on standard library functions for statistical calculations. It handles both the initial mean calculation and the final average of the absolute deviations."
+      }
+    }
+  }
+}

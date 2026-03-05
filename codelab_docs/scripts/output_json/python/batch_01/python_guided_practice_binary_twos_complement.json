@@ -1,0 +1,14 @@
+{
+  "difficulty": "medium",
+  "visualizerParams": {
+    "visualizerType": "GuidedPractice",
+    "visualizerParams": {
+      "mode": "snippet",
+      "title": "Two's Complement Representation",
+      "description": "Calculate the two's complement binary representation of a negative integer.",
+      "language": "python",
+      "ghostCode": "def twos_complement(n):\n    if n >= 0: return bin(n)\n    width = len(bin(n)) - 3\n    val = bin(abs(n) - (1 << width))[3:]\n    res = \"1\" + \"0\" * (width - len(val)) + val\n    return \"0b\" + res\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 2's complement: {twos_complement(-5)}\")",
+      "finalCode": "def twos_complement(n):\n    if n >= 0: return bin(n)\n    width = len(bin(n)) - 3\n    val = bin(abs(n) - (1 << width))[3:]\n    res = \"1\" + \"0\" * (width - len(val)) + val\n    return \"0b\" + res\n\nif __name__ == \"__main__\":\n    print(f\"-5 in 2's complement: {twos_complement(-5)}\")"
+    }
+  }
+}
