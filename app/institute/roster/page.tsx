@@ -21,11 +21,16 @@ export default function RosterPage() {
 
     useEffect(() => {
         if (user) {
-            getInstituteGroups(user.uid).then(data => {
-                setGroups(data);
-                if (data.length > 0) setActiveGroupId(data[0].id);
-                else setActiveGroupId('');
-            });
+            getInstituteGroups(user.uid)
+                .then(data => {
+                    setGroups(data);
+                    if (data.length > 0) setActiveGroupId(data[0].id);
+                    else setActiveGroupId('');
+                })
+                .catch(err => {
+                    console.error("Failed to load groups:", err);
+                    setUploadStatus({ message: "Failed to load groups.", isError: true });
+                });
         }
     }, [user]);
 
@@ -35,12 +40,25 @@ export default function RosterPage() {
 
         try {
             const lines = csvText.split('\n').filter(l => l.trim().length > 0);
-            const students = lines.map(line => {
-                const parts = line.split(',');
-                return {
-                    name: parts[0]?.trim() || 'Unknown',
-                    rollNumber: parts[1]?.trim() || 'N/A'
-                };
+            const rollNumbers = new Set<string>();
+
+            const students = lines.map((line, index) => {
+                const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+
+                let name = parts[0]?.trim() || 'Unknown';
+                let rollNumber = parts[1]?.trim() || 'N/A';
+
+                name = name.replace(/^"(.*)"$/, '$1').trim();
+                rollNumber = rollNumber.replace(/^"(.*)"$/, '$1').trim();
+
+                if (rollNumber !== 'N/A') {
+                    if (rollNumbers.has(rollNumber)) {
+                        throw new Error(`Duplicate roll number detected: ${rollNumber} at row ${index + 1}`);
+                    }
+                    rollNumbers.add(rollNumber);
+                }
+
+                return { name, rollNumber };
             });
 
             if (students.length === 0) {
@@ -151,9 +169,9 @@ export default function RosterPage() {
                                         <tbody className="bg-white divide-y divide-gray-200">
                                             {previewStudents.map((student, idx) => (
                                                 <tr key={idx} className="hover:bg-gray-50">
-                                                    <td className="px-6 py-3 whitespace-nowrap text-gray-500 font-mono">{idx + 1}</td>
-                                                    <td className="px-6 py-3 whitespace-nowrap font-medium text-gray-900">{student.name}</td>
-                                                    <td className="px-6 py-3 whitespace-nowrap text-gray-500 font-mono">{student.rollNumber}</td>
+                                                    <td className="px-6 py-3 whitespace-nowrap text-gray-500 font-mono truncate max-w-[80px]">{idx + 1}</td>
+                                                    <td className="px-6 py-3 whitespace-nowrap font-medium text-gray-900 truncate max-w-xs">{student.name}</td>
+                                                    <td className="px-6 py-3 whitespace-nowrap text-gray-500 font-mono truncate max-w-xs">{student.rollNumber}</td>
                                                 </tr>
                                             ))}
                                         </tbody>

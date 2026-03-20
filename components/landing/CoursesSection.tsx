@@ -369,8 +369,8 @@ export default function CoursesSection() {
             </div>
           </Link>
 
-          {/* Groovy */}
-          <Link href="/tracks/groovy" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
+          {/* Groovy — HIDDEN */}
+          {false && <Link href="/tracks/groovy" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -421,10 +421,10 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </Link>
+          </Link>}
 
-          {/* Clojure */}
-          <Link href="/tracks/clojure" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
+          {/* Clojure — HIDDEN */}
+          {false && <Link href="/tracks/clojure" className="group relative bg-white/70 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
             <div className="absolute inset-0 premium-grid pointer-events-none"></div>
 
@@ -475,16 +475,11 @@ export default function CoursesSection() {
                 <i className="fa-solid fa-chevron-right text-[8px] text-brand-primary/20 group-hover:translate-x-1 transition-transform"></i>
               </div>
             </div>
-          </Link>
+          </Link>}
         </div>
 
-        {/* Desktop Tracks */}
-        <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-          <i className="fa-solid fa-laptop-code text-brand-secondary"></i> Desktop Tracks (VS Code Extension)
-        </h3>
-        <p className="text-gray-500 text-sm mb-8 font-semibold">Exclusively available for desktop power users. Integrated with our custom VS Code extension.</p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* Desktop Tracks — HIDDEN (desktop courses removed from product) */}
+        {false && <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {/* C++ */}
           <Link href="/tracks/cpp" className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-brand-primary/5 premium-shadow premium-card-hover block">
             {/* Pattern Overlay */}
@@ -724,7 +719,7 @@ export default function CoursesSection() {
               </div>
             </div>
           </Link>
-        </div>
+        </div>}
       </div>
     </section>
   );

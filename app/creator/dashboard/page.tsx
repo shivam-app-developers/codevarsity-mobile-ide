@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import { CreatorHub, CreatorLesson, getCreatorProfile, saveCreatorProfile, updateCreatorLessons } from '@/lib/instituteApi';
+import { CreatorHub, CreatorLesson, getCreatorProfile, saveCreatorProfile, updateCreatorLessons, getCreatorByVanityCode } from '@/lib/instituteApi';
 
 export default function CreatorHubPage() {
     const { user } = useAuth();
@@ -47,6 +47,15 @@ export default function CreatorHubPage() {
         if (!user) return;
         setSaving(true);
         try {
+            if (vanityCode && vanityCode !== profile?.vanityCode) {
+                const existing = await getCreatorByVanityCode(vanityCode);
+                if (existing && existing.id !== user.uid) {
+                    alert('That Vanity Code is already taken. Please choose another one.');
+                    setSaving(false);
+                    return;
+                }
+            }
+
             const updated = await saveCreatorProfile(user.uid, {
                 displayName,
                 vanityCode,
@@ -55,18 +64,18 @@ export default function CreatorHubPage() {
             });
             setProfile(updated);
             alert('Creator Profile saved successfully!');
-        } catch (error) {
+        } catch (error: any) {
             console.error("Error saving profile:", error);
-            alert('Failed to save profile. Vanity code might be taken.');
+            alert('Failed to save profile: ' + error.message);
         } finally {
             setSaving(false);
         }
     };
 
     const extractYouTubeId = (url: string) => {
-        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const regExp = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/i;
         const match = url.match(regExp);
-        return (match && match[2].length === 11) ? match[2] : null;
+        return match ? match[1] : null;
     };
 
     const handleAddLesson = async () => {
@@ -89,15 +98,18 @@ export default function CreatorHubPage() {
         };
 
         const updatedLessons = [...lessons, newLesson];
-        setLessons(updatedLessons);
 
-        // Clear inputs
-        setNewVideoUrl('');
-        setNewVideoTitle('');
-
-        // Save immediately to Firestore
-        if (user) {
-            await updateCreatorLessons(user.uid, updatedLessons);
+        try {
+            if (user) {
+                await updateCreatorLessons(user.uid, updatedLessons);
+            }
+            setLessons(updatedLessons);
+            // Clear inputs
+            setNewVideoUrl('');
+            setNewVideoTitle('');
+        } catch (error) {
+            console.error("Failed to add lesson:", error);
+            alert('Failed to add lesson.');
         }
     };
 
@@ -106,10 +118,14 @@ export default function CreatorHubPage() {
         // Update order
         updatedLessons.forEach((l, idx) => l.order = idx);
 
-        setLessons(updatedLessons);
-
-        if (user) {
-            await updateCreatorLessons(user.uid, updatedLessons);
+        try {
+            if (user) {
+                await updateCreatorLessons(user.uid, updatedLessons);
+            }
+            setLessons(updatedLessons);
+        } catch (error) {
+            console.error("Failed to remove lesson:", error);
+            alert('Failed to remove lesson.');
         }
     };
 
@@ -236,14 +252,6 @@ export default function CreatorHubPage() {
                                     <div className="flex-1 flex flex-col justify-center">
                                         <h4 className="font-bold text-gray-900 line-clamp-1">{lesson.title}</h4>
                                         <p className="text-sm text-gray-500 mt-1">Video ID: {lesson.youtubeVideoId}</p>
-                                        <div className="mt-2 flex items-center gap-2">
-                                            <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">
-                                                No Starter Template Attached
-                                            </span>
-                                            <button className="text-xs text-purple-600 hover:text-purple-800 font-medium">
-                                                Attach Template
-                                            </button>
-                                        </div>
                                     </div>
                                     <div className="flex flex-col justify-center border-l border-gray-100 pl-4 ml-2">
                                         <button

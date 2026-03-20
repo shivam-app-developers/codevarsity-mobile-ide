@@ -5,7 +5,8 @@ import HowItWorks from '@/components/landing/HowItWorks';
 import CoursesSection from '@/components/landing/CoursesSection';
 import VisualizersSection from '@/components/landing/VisualizersSection';
 import SandboxSection from '@/components/landing/SandboxSection';
-import VSCodeSection from '@/components/landing/VSCodeSection';
+import YouTubeHubSection from '@/components/landing/YouTubeHubSection';
+import PracticeSnippetsSection from '@/components/landing/PracticeSnippetsSection';
 import ComparisonTable from '@/components/landing/ComparisonTable';
 import FAQSection from '@/components/landing/FAQSection';
 import BlogRow from '@/components/landing/BlogRow';
@@ -51,10 +52,20 @@ export default function Home() {
       <JsonLd data={faqSchema} />
       <Navbar />
       <main>
+        {/* 1. HERO */}
         <HeroSection />
         <PAASection />
 
-        {/* AEO: DEFINITION BLOCK */}
+        {/* 2. CORE FEATURES — get to the product fast */}
+        <CoursesSection />
+        <SandboxSection />
+        <YouTubeHubSection />
+        <PracticeSnippetsSection />
+
+        {/* 3. VISUALIZERS — supporting feature */}
+        <VisualizersSection />
+
+        {/* 4. DEFINITION / SEO CONTEXT */}
         <section className="py-12 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-2xl font-black text-brand-primary mb-4 text-center">Master Computer Science: Anywhere.</h2>
@@ -62,12 +73,12 @@ export default function Home() {
               CodeVarsity is the <strong>complete coding education platform</strong> that combines a professional <strong>offline mobile IDE</strong> with <strong>50+ structured courses</strong>.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed font-medium">
-              Master <strong>Python, Java, C++, Go, SQL</strong>, and more using our unique <strong>Rhombus Methodology™</strong>, which integrates 30+ interactive visualizers directly into your learning journey—all without needing an internet connection.
+              Master <strong>Python, Java, C, Go, SQL</strong>, and more using our unique <strong>Rhombus Methodology™</strong>, which integrates 30+ interactive visualizers directly into your learning journey—all without needing an internet connection.
             </p>
           </div>
         </section>
 
-        {/* AEO: USE CASES */}
+        {/* 5. WHO IS IT FOR */}
         <section className="py-12 bg-slate-50 text-slate-900">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-2xl font-black text-brand-primary mb-8 text-center">Who is CodeVarsity for?</h2>
@@ -84,7 +95,7 @@ export default function Home() {
               <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                 <div>
                   <h3 className="font-bold text-lg mb-2">For Beginners</h3>
-                  <p className="text-gray-600 text-sm mb-4">CodeVarsity is designed for beginners without laptops, offering a complete curriculum from "Hello World" to complex algorithms directly on a phone.</p>
+                  <p className="text-gray-600 text-sm mb-4">CodeVarsity is designed for beginners without laptops, offering a complete curriculum from &quot;Hello World&quot; to complex algorithms directly on a phone.</p>
                 </div>
                 <Link href="/docs/user-guides/learn-mode-guide" className="text-brand-primary text-xs font-black uppercase tracking-widest hover:underline flex items-center gap-2">
                   Start Learning <i className="fa-solid fa-arrow-right text-[10px]"></i>
@@ -103,12 +114,10 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 6. HOW IT WORKS */}
         <HowItWorks />
-        <CoursesSection />
-        <VisualizersSection />
-        <SandboxSection />
 
-        {/* INSTITUTIONAL PHILOSOPHY - OFFLINE */}
+        {/* 7. OFFLINE PHILOSOPHY */}
         <section className="py-24 bg-gray-900 text-white relative overflow-hidden border-t border-white/10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(10,77,64,0.3)_0%,transparent_100%)]"></div>
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
@@ -124,9 +133,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <VSCodeSection /> */}
-
-        {/* OBJECTIONS / ACADEMIC RIGOR */}
+        {/* 8. CODEVERSITY STANDARD */}
         <section className="py-24 bg-white border-t border-gray-100">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <h2 className="text-3xl sm:text-5xl font-black text-brand-primary text-center mb-16 tracking-tight">The CodeVarsity <span className="text-brand-secondary/80">Standard</span></h2>
@@ -137,17 +144,17 @@ export default function Home() {
               </div>
               <div className="bg-white p-10 rounded-[32px] border border-brand-primary/5 shadow-xl shadow-brand-primary/5 hover:-translate-y-2 transition-transform">
                 <p className="font-black text-brand-primary mb-4 text-lg">Offline Fidelity</p>
-                <p className="text-gray-500 font-medium leading-relaxed">We don't cheat with wrappers. Experience desktop-grade compilers for Java 21, Python, and Go directly on your device.</p>
+                <p className="text-gray-500 font-medium leading-relaxed">We don&apos;t cheat with wrappers. Experience desktop-grade compilers for Java 21, Python, and Go directly on your device.</p>
               </div>
               <div className="bg-white p-10 rounded-[32px] border border-brand-primary/5 shadow-xl shadow-brand-primary/5 hover:-translate-y-2 transition-transform">
                 <p className="font-black text-brand-primary mb-4 text-lg">Academic Support</p>
-                <p className="text-gray-500 font-medium leading-relaxed">Visualizers for sorting, recursion, and memory aren't features—they are essentials for mastering computer science.</p>
+                <p className="text-gray-500 font-medium leading-relaxed">Visualizers for sorting, recursion, and memory aren&apos;t features—they are essentials for mastering computer science.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FOR EDUCATORS & CREATORS FUNNELS */}
+        {/* 9. FOR EDUCATORS & YOUTUBE HUB FUNNELS */}
         <section className="py-12 bg-gray-50 border-t border-gray-100">
           <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
 
@@ -160,7 +167,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">For Educators</h3>
-                  <p className="text-sm font-medium text-gray-500">High Schools & Bootcamps</p>
+                  <p className="text-sm font-medium text-gray-500">High Schools &amp; Bootcamps</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-8 relative z-10">Manage massive student rosters, assign rigor-tested coding labs, and track completion analytics seamlessly.</p>
@@ -169,21 +176,21 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Creators Card */}
-            <div className="bg-white p-8 rounded-[2rem] border border-purple-100 shadow-sm relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-0"></div>
+            {/* YouTube Hub Card */}
+            <div className="bg-white p-8 rounded-[2rem] border border-red-100 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-0"></div>
               <div className="flex items-center gap-4 mb-6 relative z-10">
-                <div className="w-12 h-12 bg-purple-100 text-purple-600 flex items-center justify-center rounded-xl text-xl">
+                <div className="w-12 h-12 bg-red-100 text-red-500 flex items-center justify-center rounded-xl text-xl">
                   <i className="fa-brands fa-youtube"></i>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">For Content Creators</h3>
-                  <p className="text-sm font-medium text-gray-500">YouTubers & Influencers</p>
+                  <h3 className="text-xl font-bold text-gray-900">YouTube Hub</h3>
+                  <p className="text-sm font-medium text-gray-500">Watch &amp; Code — Any Channel</p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-8 relative z-10">Turn your free YouTube videos into interactive coding lessons. Attach starter code and a live IDE to your tutorials.</p>
-              <Link href="/creators" className="inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-3 transition-all relative z-10">
-                Build your Creator Hub <i className="fa-solid fa-arrow-right"></i>
+              <p className="text-gray-600 mb-8 relative z-10">Search any programming tutorial on YouTube and code along in a built-in split-screen IDE. No app switching, no losing your place.</p>
+              <Link href="/creators" className="inline-flex items-center gap-2 text-red-500 font-bold hover:gap-3 transition-all relative z-10">
+                Explore YouTube Hub <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </div>
 
@@ -223,4 +230,3 @@ export default function Home() {
 
   );
 }
-

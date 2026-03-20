@@ -33,7 +33,7 @@ export default function InstitutionsLandingPage() {
                                     Empower your students with a true offline compiler. Track progress, enforce rigorous practice with Ghost Code™, and manage massive rosters directly from your web dashboard.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <Link href="/admin/login" className="bg-white text-brand-primary px-8 py-4 rounded-xl font-black flex justify-center items-center gap-2 hover:bg-gray-100 transition-colors shadow-xl shadow-black/20">
+                                    <Link href="/login" className="bg-white text-brand-primary px-8 py-4 rounded-xl font-black flex justify-center items-center gap-2 hover:bg-gray-100 transition-colors shadow-xl shadow-black/20">
                                         Go to Admin Dashboard
                                     </Link>
                                     <a href="#features" className="bg-brand-primary-dark/50 border border-white/20 text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-brand-primary-dark transition-colors">
@@ -103,7 +103,7 @@ export default function InstitutionsLandingPage() {
                         </div>
                         <h2 className="text-4xl font-black text-brand-primary mb-6 tracking-tight">Take Control of Your Curriculum</h2>
                         <p className="text-xl text-gray-500 mb-10 leading-relaxed">Join innovative bootcamps and universities upgrading their mobile learning infrastructure.</p>
-                        <Link href="/admin/login" className="bg-brand-primary text-white px-10 py-4 rounded-xl font-black text-lg hover:bg-brand-primary-dark hover:-translate-y-1 transition-all shadow-xl shadow-brand-primary/20 inline-block">
+                        <Link href="/login" className="bg-brand-primary text-white px-10 py-4 rounded-xl font-black text-lg hover:bg-brand-primary-dark hover:-translate-y-1 transition-all shadow-xl shadow-brand-primary/20 inline-block">
                             Login to Admin Portal
                         </Link>
                     </div>
