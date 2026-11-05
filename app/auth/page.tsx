@@ -100,9 +100,9 @@ function AuthContent() {
 
                         <p className="text-gray-400 text-[11px] text-center leading-relaxed font-bold uppercase tracking-wider">
                             By continuing, you agree to our <br className="hidden sm:block" />
-                            <Link href="/terms" className="text-brand-primary hover:text-brand-secondary transition-colors underline decoration-brand-primary/20">Terms</Link>
+                            <a href="https://shivamappstudio.com/codevarsity/terms" className="text-brand-primary hover:text-brand-secondary transition-colors underline decoration-brand-primary/20">Terms</a>
                             {' '}and{' '}
-                            <Link href="/privacy" className="text-brand-primary hover:text-brand-secondary transition-colors underline decoration-brand-primary/20">Privacy</Link>
+                            <a href="https://shivamappstudio.com/codevarsity/privacy-policy" className="text-brand-primary hover:text-brand-secondary transition-colors underline decoration-brand-primary/20">Privacy</a>
                         </p>
                     </div>
                 </div>

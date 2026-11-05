@@ -10,6 +10,18 @@ const nextConfig = {
                 destination: '/',
                 permanent: true,
             },
+            // The app's legal pages live on the studio site
+            // (shivam_app_studio repo, tool/gen_app_pages.py).
+            {
+                source: '/privacy',
+                destination: 'https://shivamappstudio.com/codevarsity/privacy-policy',
+                permanent: true,
+            },
+            {
+                source: '/terms',
+                destination: 'https://shivamappstudio.com/codevarsity/terms',
+                permanent: true,
+            },
         ];
     },
 };

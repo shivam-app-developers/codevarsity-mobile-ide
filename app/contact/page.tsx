@@ -105,7 +105,7 @@ export default function ContactPage() {
                                 <Link href="/faq" className="text-brand-primary hover:underline text-sm">FAQ</Link>
                                 <Link href="/docs" className="text-brand-primary hover:underline text-sm">Documentation</Link>
                                 <Link href="/refund" className="text-brand-primary hover:underline text-sm">Refund Policy</Link>
-                                <Link href="/terms" className="text-brand-primary hover:underline text-sm">Terms of Service</Link>
+                                <a href="https://shivamappstudio.com/codevarsity/terms" className="text-brand-primary hover:underline text-sm">Terms of Service</a>
                             </div>
                         </div>
                     </div>

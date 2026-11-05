@@ -63,8 +63,8 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-black uppercase tracking-widest">
           <p>© 2026 Shivam App Studio. All Rights Reserved.</p>
           <div className="flex gap-8">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Charter</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <a href="https://shivamappstudio.com/codevarsity/privacy-policy" className="hover:text-white transition-colors">Privacy Charter</a>
+            <a href="https://shivamappstudio.com/codevarsity/terms" className="hover:text-white transition-colors">Terms of Service</a>
             <Link href="/refund" className="hover:text-white transition-colors">Financial Policy</Link>
           </div>
         </div>
