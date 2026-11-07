@@ -10,7 +10,10 @@
       "explanation": "The HTML uses a class 'loading-text', but the script tries to select it as an ID '#loading-text'."
     },
     "validation": {
-      "type": "run_code"
+      "type": "contains",
+      "lines": [
+        "const loadText = document.querySelector('.loading-text');"
+      ]
     }
   }
 }
