@@ -18,7 +18,7 @@
       "title": "Bug Squasher: Accordion",
       "difficulty": "beginner",
       "order": 1,
-      "rev": "5f59e2b6aa4c",
+      "rev": "f20745343be4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_accordion.json"
     },
     {
@@ -38,7 +38,7 @@
       "title": "Bug Squasher: Button Animations",
       "difficulty": "beginner",
       "order": 3,
-      "rev": "a1f986bb65c1",
+      "rev": "df9adb034e32",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_button_animations.json"
     },
     {
@@ -58,7 +58,7 @@
       "title": "Bug Squasher: Calculator",
       "difficulty": "beginner",
       "order": 5,
-      "rev": "46cf217031e3",
+      "rev": "6b0a7402a3c3",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_calculator.json"
     },
     {
@@ -78,7 +78,7 @@
       "title": "Bug Squasher: Dark Mode Toggle",
       "difficulty": "beginner",
       "order": 7,
-      "rev": "dbda13c34b7c",
+      "rev": "45941e6b2c41",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dark_mode_toggle.json"
     },
     {
@@ -98,7 +98,7 @@
       "title": "Bug Squasher: Digital Clock",
       "difficulty": "beginner",
       "order": 9,
-      "rev": "47fc0bc11f21",
+      "rev": "0c4c1a35febf",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_digital_clock.json"
     },
     {
@@ -118,7 +118,7 @@
       "title": "Bug Squasher: Dynamic List",
       "difficulty": "beginner",
       "order": 11,
-      "rev": "d031036e63e9",
+      "rev": "e96d64b2f3ac",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dynamic_list.json"
     },
     {
@@ -138,7 +138,7 @@
       "title": "Bug Squasher: Flexbox Layout",
       "difficulty": "beginner",
       "order": 13,
-      "rev": "5738b3448560",
+      "rev": "42e0d4d51480",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flexbox_layout.json"
     },
     {
@@ -158,7 +158,7 @@
       "title": "Bug Squasher: Form Validation",
       "difficulty": "beginner",
       "order": 15,
-      "rev": "969e24c33548",
+      "rev": "e8aaaef6167b",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_form_validation.json"
     },
     {
@@ -178,7 +178,7 @@
       "title": "Bug Squasher: Grid Layout",
       "difficulty": "beginner",
       "order": 17,
-      "rev": "fe95143858ea",
+      "rev": "6adbae551a1e",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_grid_layout.json"
     },
     {
@@ -198,7 +198,7 @@
       "title": "Bug Squasher: Image Slider",
       "difficulty": "beginner",
       "order": 19,
-      "rev": "9053f5b74db7",
+      "rev": "556f1408a623",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_image_slider.json"
     },
     {
@@ -218,7 +218,7 @@
       "title": "Bug Squasher: Modal Window",
       "difficulty": "beginner",
       "order": 21,
-      "rev": "3c00515fe399",
+      "rev": "f9d5d4168b39",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_modal_window.json"
     },
     {
@@ -238,7 +238,7 @@
       "title": "Bug Squasher: Profile Card",
       "difficulty": "beginner",
       "order": 23,
-      "rev": "ae9ca1064641",
+      "rev": "45c51011144d",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_profile_card.json"
     },
     {
@@ -258,7 +258,7 @@
       "title": "Bug Squasher: Progress Bar",
       "difficulty": "beginner",
       "order": 25,
-      "rev": "e33b765c8e6a",
+      "rev": "de8cb1a1c4f7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_progress_bar.json"
     },
     {
@@ -278,7 +278,7 @@
       "title": "Bug Squasher: Responsive Navbar",
       "difficulty": "beginner",
       "order": 27,
-      "rev": "18858d7ca62f",
+      "rev": "ba02b6ff4752",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_responsive_navbar.json"
     },
     {
@@ -298,7 +298,7 @@
       "title": "Bug Squasher: Scroll To Top",
       "difficulty": "beginner",
       "order": 29,
-      "rev": "874d3a51f2a7",
+      "rev": "82749f1abb51",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_scroll_to_top.json"
     },
     {
@@ -318,7 +318,7 @@
       "title": "Bug Squasher: Search Filter",
       "difficulty": "beginner",
       "order": 31,
-      "rev": "6737cfc61831",
+      "rev": "d3f56e89f039",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_search_filter.json"
     },
     {
@@ -338,7 +338,7 @@
       "title": "Bug Squasher: Tabs",
       "difficulty": "beginner",
       "order": 33,
-      "rev": "fa9d565c85aa",
+      "rev": "e8c89c79df4b",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_tabs.json"
     },
     {
@@ -358,7 +358,7 @@
       "title": "Bug Squasher: Todo List",
       "difficulty": "beginner",
       "order": 35,
-      "rev": "b71b4bc195ba",
+      "rev": "c846baf26561",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_todo_list.json"
     },
     {
@@ -378,7 +378,7 @@
       "title": "Bug Squasher: Tooltip",
       "difficulty": "beginner",
       "order": 37,
-      "rev": "65366e8a85f5",
+      "rev": "9b4ce4cfd5fe",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_tooltip.json"
     },
     {
@@ -398,7 +398,7 @@
       "title": "Bug Squasher: Weather Widget",
       "difficulty": "beginner",
       "order": 39,
-      "rev": "7346ce144b6c",
+      "rev": "f64d80c03427",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_weather_widget.json"
     },
     {
@@ -418,7 +418,7 @@
       "title": "Bug Squasher: Blurry Loading",
       "difficulty": "medium",
       "order": 41,
-      "rev": "ef8add420471",
+      "rev": "68b9832e44e4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_blurry_loading.json"
     },
     {
@@ -448,7 +448,7 @@
       "title": "Bug Squasher: Expanding Cards",
       "difficulty": "medium",
       "order": 44,
-      "rev": "8cf4cafabff8",
+      "rev": "4ca516c5b2ef",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_expanding_cards.json"
     },
     {
@@ -478,7 +478,7 @@
       "title": "Bug Squasher: Progress Steps",
       "difficulty": "medium",
       "order": 47,
-      "rev": "44c9533e7645",
+      "rev": "fca6aff5e7f7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/web/web_bug_squasher_progress_steps.json"
     },
     {

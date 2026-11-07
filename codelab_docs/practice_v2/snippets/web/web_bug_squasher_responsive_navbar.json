@@ -10,7 +10,10 @@
       "explanation": "Fixed the incorrect method call or syntax error."
     },
     "validation": {
-      "type": "run_code"
+      "type": "contains",
+      "lines": [
+        "const menuToggle = document.getElementById('mobile-menu');"
+      ]
     }
   }
 }

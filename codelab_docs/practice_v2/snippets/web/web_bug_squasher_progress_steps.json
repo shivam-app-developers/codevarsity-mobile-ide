@@ -10,7 +10,10 @@
       "explanation": "querySelectorAll('circle') looks for <circle> tags. To find elements with the class 'circle', use '.circle'."
     },
     "validation": {
-      "type": "run_code"
+      "type": "contains",
+      "lines": [
+        "const circles = document.querySelectorAll('.circle');"
+      ]
     }
   }
 }
