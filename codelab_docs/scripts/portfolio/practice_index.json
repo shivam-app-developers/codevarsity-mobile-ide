@@ -6,10 +6,6 @@
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_c.json"
     },
     {
-      "language": "go",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_go.json"
-    },
-    {
       "language": "java",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/scripts/portfolio/practice_java.json"
     },
