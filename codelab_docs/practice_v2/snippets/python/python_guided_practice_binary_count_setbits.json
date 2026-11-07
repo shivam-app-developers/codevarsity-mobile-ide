@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Binary Count Set Bits",
+    "language": "python",
+    "description": "Count the number of 1 bits in the binary representation of an integer.",
+    "ghostCode": "def count_set_bits(n):\n    if n < 0: return 0\n    return bin(n).count('1')\n\nif __name__ == \"__main__\":\n    print(f\"Set bits of 25: {count_set_bits(25)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Set bits of 25: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

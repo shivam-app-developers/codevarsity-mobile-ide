@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Factorial Base Case",
+    "language": "javascript",
+    "problemDescription": "The recursive factorial function is missing a termination condition, leading to a stack overflow. Add the base case.",
+    "buggyCode": "function factorial(n) {\n  return n * factorial(n - 1); // Bug: missing base case\n}\n\nconsole.log(factorial(3));",
+    "solution": {
+      "code": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(3));\n",
+      "explanation": "Recursion must always have a 'base case' to stop the recursive calls. For factorials, 0! and 1! are both 1."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

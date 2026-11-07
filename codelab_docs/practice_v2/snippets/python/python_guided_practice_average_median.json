@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Median Calculation",
+    "language": "python",
+    "description": "Find the median of a list of numbers, which is the middle value when the list is sorted.",
+    "ghostCode": "def get_median(nums):\n    if not nums: return 0\n    s = sorted(nums)\n    n = len(s)\n    mid = n // 2\n    if n % 2 == 0:\n        return (s[mid - 1] + s[mid]) / 2\n    return s[mid]\n\nif __name__ == \"__main__\":\n    print(f\"Median [4, 1, 2, 3]: {get_median([4, 1, 2, 3])}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Median \\[4, 1, 2, 3\\]: 2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Is Even Assignment",
+    "language": "javascript",
+    "problemDescription": "The function always returns true because of a common assignment error instead of comparison.",
+    "buggyCode": "function isEven(number) {\n  if (number % 2 = 0) { // Bug here\n    return true;\n  }\n  return false;\n}\n\nconsole.log(isEven(4));\nconsole.log(isEven(7));\n",
+    "solution": {
+      "code": "function isEven(number) {\n  if (number % 2 === 0) {\n    return true;\n  }\n  return false;\n}\n\nconsole.log(isEven(4));\nconsole.log(isEven(7));\n",
+      "explanation": "The `=` operator is used for assignment. For comparison, you must use `===` (strict equality) or `==`."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

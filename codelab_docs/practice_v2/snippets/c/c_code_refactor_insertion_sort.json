@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Function Documentation",
+    "language": "c",
+    "problemDescription": "Add proper Doxygen-style comments to document the insertion sort function's parameters and purpose for better maintainability.",
+    "initialCode": "#include <stdio.h>\n\nvoid insertionSort(int arr[], int n) {\n    for (int i = 1; i < n; i++) {\n        int key = arr[i];\n        int j = i - 1;\n        while (j >= 0 && arr[j] > key) {\n            arr[j + 1] = arr[j];\n            j = j - 1;\n        }\n        arr[j + 1] = key;\n    }\n}\n\nint main() {\n    int a[] = {12, 11, 13, 5, 6};\n    insertionSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+    "solution": {
+      "code": "#include <stdio.h>\n\n/**\n * @brief Sorts an array using the insertion sort algorithm.\n * @param arr The array of integers to be sorted.\n * @param n The number of elements in the array.\n */\nvoid insertionSort(int arr[], int n) {\n    for (int i = 1; i < n; i++) {\n        int key = arr[i];\n        int j = i - 1;\n        while (j >= 0 && arr[j] > key) {\n            arr[j + 1] = arr[j];\n            j = j - 1;\n        }\n        arr[j + 1] = key;\n    }\n}\n\nint main() {\n    int a[] = {12, 11, 13, 5, 6};\n    insertionSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "explanation": "Standardized documentation (like Doxygen) makes code bases significantly easier to navigate and understand for other developers."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5 6 11 12 13\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

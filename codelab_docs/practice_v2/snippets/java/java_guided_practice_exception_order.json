@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Try-Catch Block",
+    "language": "java",
+    "description": "Practice catching and handling specific exceptions thrown by Java methods.",
+    "ghostCode": "public class ExceptionOrder {\n    public static void main(String[] args) {\n        try {\n            int x = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Division by zero error\");\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Division by zero error\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

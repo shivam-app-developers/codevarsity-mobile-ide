@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Map Entry",
+    "language": "java",
+    "description": "Practice storing and retrieving key-value pairs using the Java HashMap.",
+    "ghostCode": "import java.util.*;\n\npublic class MapContains {\n    public static void main(String[] args) {\n        Map<String, Integer> items = new HashMap<>();\n        items.put(\"Java\", 100);\n        System.out.println(\"Score: \" + items.get(\"Java\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Score: 100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

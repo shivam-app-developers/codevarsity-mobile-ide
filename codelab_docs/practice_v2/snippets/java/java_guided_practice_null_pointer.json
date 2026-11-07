@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Null Safety",
+    "language": "java",
+    "description": "Learn to write defensive code by checking for null before accessing object members.",
+    "ghostCode": "public class NullPointer {\n    public static void main(String[] args) {\n        String text = null;\n        if (text != null) {\n            System.out.println(\"Length: \" + text.length());\n        } else {\n            System.out.println(\"Text is null\");\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Text is null\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

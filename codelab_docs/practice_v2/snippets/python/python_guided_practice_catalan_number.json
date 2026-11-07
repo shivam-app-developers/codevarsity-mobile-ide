@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Catalan Number Calculation",
+    "language": "python",
+    "description": "Calculate the nth Catalan number using an iterative formula.",
+    "ghostCode": "def catalan(n):\n    if not isinstance(n, int) or n < 1: return 0\n    res = 1\n    for i in range(1, n):\n        res *= 4 * i - 2\n        res //= i + 1\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"5th Catalan: {catalan(5)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5th Catalan: 14\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

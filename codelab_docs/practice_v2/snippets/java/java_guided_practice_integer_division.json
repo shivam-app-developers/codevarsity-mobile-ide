@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Math Operations",
+    "language": "java",
+    "description": "Practice performing division between different numeric types in Java.",
+    "ghostCode": "public class IntegerDivision {\n    public static void main(String[] args) {\n        int x = 10;\n        double y = 4.0;\n        double result = x / y;\n        System.out.println(\"Result: \" + result);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Result: 2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

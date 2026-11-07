@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Anagram Verification",
+    "language": "python",
+    "description": "Determine if two strings are anagrams by comparing their character frequencies, ignoring case and spaces.",
+    "ghostCode": "from collections import Counter\n\ndef are_anagrams(s1, s2):\n    def clean(s):\n        return [c for c in s.lower() if c.isalnum()]\n    return Counter(clean(s1)) == Counter(clean(s2))\n\nif __name__ == \"__main__\":\n    print(f\"'Silent', 'Listen': {are_anagrams('Silent', 'Listen')}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*'Silent', 'Listen': True\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

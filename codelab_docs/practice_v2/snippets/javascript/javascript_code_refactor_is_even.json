@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Arrow Function",
+    "language": "javascript",
+    "problemDescription": "Refactor the function to use a concise ES6 arrow function syntax.",
+    "initialCode": "function isEven(number) {\n  return number % 2 === 0;\n}\n\nconsole.log(isEven(4));\nconsole.log(isEven(7));\n",
+    "solution": {
+      "code": "const isEven = (number) => number % 2 === 0;\n\nconsole.log(isEven(4));\nconsole.log(isEven(7));\n",
+      "explanation": "Arrow functions provide a more concise syntax for writing function expressions, especially for simple one-liners."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

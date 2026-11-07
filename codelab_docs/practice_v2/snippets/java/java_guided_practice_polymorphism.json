@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Simple Polymorphism",
+    "language": "java",
+    "description": "Learn how a subclass can provide its own implementation of a method defined in a parent class.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat();\n        a.sound();\n    }\n}\n\nclass Animal {\n    void sound() { System.out.println(\"Generic sound\"); }\n}\n\nclass Cat extends Animal {\n    @Override\n    void sound() { System.out.println(\"Meow\"); }\n}\n",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Meow\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

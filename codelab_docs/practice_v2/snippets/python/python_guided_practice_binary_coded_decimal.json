@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Binary Coded Decimal (BCD)",
+    "language": "python",
+    "description": "Convert a decimal integer into its Binary Coded Decimal representation, where each digit is mapped to a 4-bit binary sequence.",
+    "ghostCode": "def to_bcd(n):\n    if n < 0: n = 0\n    digits = [int(d) for d in str(n)]\n    return \"0b\" + \"\".join(bin(d)[2:].zfill(4) for d in digits)\n\nif __name__ == \"__main__\":\n    print(f\"987 in BCD: {to_bcd(987)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*987 in BCD: 0b100110000111\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

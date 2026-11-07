@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Pointer Swap",
+    "language": "c",
+    "problemDescription": "Refactor the swap logic in selection sort to use a dedicated function that takes pointers, improving clarity.",
+    "initialCode": "#include <stdio.h>\n\nvoid selectionSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int m = i;\n        for (int j = i+1; j < n; j++) if(arr[j]<arr[m]) m=j;\n        int t = arr[m]; arr[m] = arr[i]; arr[i] = t;\n    }\n}\n\nint main() {\n    int a[] = {64, 25, 12, 22, 11};\n    selectionSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\n\nvoid selectionSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int min_idx = i;\n        for (int j = i + 1; j < n; j++) {\n            if (arr[j] < arr[min_idx]) min_idx = j;\n        }\n        if (min_idx != i) swap(&arr[min_idx], &arr[i]);\n    }\n}\n\nint main() {\n    int a[] = {64, 25, 12, 22, 11};\n    selectionSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "explanation": "Extracting the swap logic into its own function makes the main algorithm quieter and demonstrates good usage of C pointers for modifying values in-place."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*11 12 22 25 64\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

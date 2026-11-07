@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Singleton Pattern",
+    "language": "java",
+    "description": "Implement the Singleton design pattern to ensure a class has only one instance.",
+    "ghostCode": "public class SingletonPattern {\n    private static SingletonPattern instance;\n\n    private SingletonPattern() {}\n\n    public static SingletonPattern getInstance() {\n        if (instance == null) {\n            instance = new SingletonPattern();\n        }\n        return instance;\n    }\n\n    public static void main(String[] args) {\n        SingletonPattern a = getInstance();\n        SingletonPattern b = getInstance();\n        System.out.println(\"Same object: \" + (a == b));\n    }\n}\n",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Same object: true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

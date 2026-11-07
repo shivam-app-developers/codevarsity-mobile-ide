@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Two-Pointer Palindrome",
+    "language": "javascript",
+    "problemDescription": "Refactor the palindrome check to use two pointers (start and end) instead of creating and reversing a new array. This is more memory-efficient.",
+    "initialCode": "function isPalindrome(str) {\n  return str === str.split('').reverse().join('');\n}\n\nconsole.log(isPalindrome('racecar'));\nconsole.log(isPalindrome('rocket'));\n",
+    "solution": {
+      "code": "function isPalindrome(str) {\n  let left = 0;\n  let right = str.length - 1;\n  while (left < right) {\n    if (str[left] !== str[right]) return false;\n    left++;\n    right--;\n  }\n  return true;\n}\n\nconsole.log(isPalindrome('racecar'));\nconsole.log(isPalindrome('rocket'));\n",
+      "explanation": "The two-pointer approach avoids creating a new array and joining it, leading to O(1) extra space complexity (besides the input string)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

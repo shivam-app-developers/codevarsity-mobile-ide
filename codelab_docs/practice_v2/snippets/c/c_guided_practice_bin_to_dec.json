@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Binary to Decimal",
+    "language": "c",
+    "description": "Convert a binary number (represented as an integer base-10) to its decimal equivalent.",
+    "ghostCode": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n    long long n = 1101;\n    int decimal = 0, i = 0, rem;\n    while (n != 0) {\n        rem = n % 10;\n        n /= 10;\n        decimal += rem * pow(2, i);\n        ++i;\n    }\n    printf(\"Decimal: %d\\n\", decimal);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Decimal: 13\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

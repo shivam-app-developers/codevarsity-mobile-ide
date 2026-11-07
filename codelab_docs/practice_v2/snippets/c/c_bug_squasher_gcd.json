@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: GCD Loop Condition",
+    "language": "c",
+    "problemDescription": "The GCD function is failing to compute the correct value or potentially looping incorrectly. Fix the condition.",
+    "buggyCode": "#include <stdio.h>\n\nint gcd(int a, int b) {\n    while (a != b) {\n        if (a > b) a = a - b;\n        else b = b - a;\n    }\n    return a;\n}\n\nint main() {\n    // What if one number is 0?\n    printf(\"GCD: %d\\n\", gcd(48, 0));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint gcd(int a, int b) {\n    if (a == 0) return b;\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nint main() {\n    printf(\"GCD: %d\\n\", gcd(48, 0));\n    return 0;\n}",
+      "explanation": "Euclid's algorithm using modulo is more efficient and handles cases where one of the numbers is zero more robustly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*GCD: 48\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

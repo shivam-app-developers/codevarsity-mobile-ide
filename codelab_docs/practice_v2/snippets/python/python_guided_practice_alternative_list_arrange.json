@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Alternative List Arrangement",
+    "language": "python",
+    "description": "Combine two lists by alternating their elements into a single new list.",
+    "ghostCode": "def arrange_alt(list1, list2):\n    max_len = max(len(list1), len(list2))\n    result = []\n    for i in range(max_len):\n        if i < len(list1):\n            result.append(list1[i])\n        if i < len(list2):\n            result.append(list2[i])\n    return result\n\nif __name__ == \"__main__\":\n    print(arrange_alt([1, 2, 3], ['A', 'B']))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 'A', 2, 'B', 3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

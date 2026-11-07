@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Reverse Loop Index",
+    "language": "javascript",
+    "problemDescription": "The manual string reversal loop is producing an undefined character at the start. Fix the index boundary.",
+    "buggyCode": "function reverse(s) {\n  let res = '';\n  for (let i = s.length; i >= 0; i--) { // Bug: starts at s.length\n    res += s[i];\n  }\n  return res;\n}\n\nconsole.log(reverse('code'));\n",
+    "solution": {
+      "code": "function reverse(s) {\n  let res = '';\n  for (let i = s.length - 1; i >= 0; i--) {\n    res += s[i];\n  }\n  return res;\n}\n\nconsole.log(reverse('code'));\n",
+      "explanation": "Array and string indices in JavaScript are zero-based. The last valid index is `length - 1`. Starting at `length` accesses an undefined character."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*edoc\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

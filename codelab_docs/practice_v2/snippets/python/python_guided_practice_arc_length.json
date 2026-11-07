@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Arc Length Calculation",
+    "language": "python",
+    "description": "Calculate the length of an arc given its central angle and the radius of the circle.",
+    "ghostCode": "from math import pi\n\ndef arc_length(angle, radius):\n    return 2 * pi * radius * (angle / 360)\n\nif __name__ == \"__main__\":\n    print(f\"Arc Length: {arc_length(90, 10)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Arc Length: 15\\.707963267948966\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

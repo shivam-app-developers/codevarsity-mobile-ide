@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "catalogs": [
+    {
+      "language": "c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/practice_c.json"
+    },
+    {
+      "language": "java",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/practice_java.json"
+    },
+    {
+      "language": "javascript",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/practice_javascript.json"
+    },
+    {
+      "language": "python",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/practice_python.json"
+    },
+    {
+      "language": "web",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/practice_web.json"
+    }
+  ]
+}

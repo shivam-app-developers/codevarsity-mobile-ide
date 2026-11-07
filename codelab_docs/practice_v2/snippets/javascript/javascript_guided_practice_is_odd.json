@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Is Odd",
+    "language": "javascript",
+    "description": "Check if a number is odd.",
+    "ghostCode": "function isOdd(number) {\n  return number % 2 !== 0;\n}\n\nconsole.log(isOdd(5)); // true\nconsole.log(isOdd(8)); // false",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

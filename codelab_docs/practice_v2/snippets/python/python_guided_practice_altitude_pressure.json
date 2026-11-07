@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Altitude from Pressure",
+    "language": "python",
+    "description": "Approximate altitude using the Barometric formula based on measured atmospheric pressure.",
+    "ghostCode": "def get_altitude(pressure):\n    if pressure > 101325 or pressure < 0:\n        return 0.0\n    p0 = 101325\n    return 44330 * (1 - (pressure / p0)**(1 / 5.255))\n\nif __name__ == \"__main__\":\n    print(f\"Altitude: {get_altitude(100000)} m\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Altitude: 110\\.90104538806403 m\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

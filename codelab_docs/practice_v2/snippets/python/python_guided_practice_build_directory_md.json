@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Directory Index Generator",
+    "language": "python",
+    "description": "Generate a Markdown index for a directory structure, excluding specific files and folders.",
+    "ghostCode": "import os\n\ndef print_dir_md(path):\n    for root, dirs, files in os.walk(path):\n        dirs[:] = [d for d in dirs if not d.startswith(('.', '_')) and d != 'venv']\n        for f in sorted(files):\n            if f.endswith('.py') and f != '__init__.py':\n                depth = root.count(os.sep)\n                prefix = '  ' * depth + '* '\n                print(f\"{prefix}[{f}]({os.path.join(root, f)})\")\n\nif __name__ == \"__main__\":\n    print_dir_md(\".\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\* \\[boot\\.py\\]\\(\\.\\\\boot\\.py\\)[ \\t]*\\r?\\n\\* \\[main\\.py\\]\\(\\.\\\\main\\.py\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

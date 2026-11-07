@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Adler-32 Checksum",
+    "language": "python",
+    "description": "Calculate the Adler-32 checksum of a string using modular arithmetic and bitwise operations.",
+    "ghostCode": "MOD_ADLER = 65521\n\ndef adler32(text):\n    a = 1\n    b = 0\n    for char in text:\n        a = (a + ord(char)) % MOD_ADLER\n        b = (b + a) % MOD_ADLER\n    return (b << 16) | a\n\nif __name__ == \"__main__\":\n    print(f\"Checksum: {adler32('Algorithms')}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Checksum: 363791387\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

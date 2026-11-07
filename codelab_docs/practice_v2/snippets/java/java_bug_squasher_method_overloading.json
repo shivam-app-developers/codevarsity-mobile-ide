@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Overloading Confusion",
+    "language": "java",
+    "problemDescription": "Fix the method call to ensure the double version is explicitly targeted with correct syntax.",
+    "buggyCode": "public class MethodOverloading {\n    static void display(int i) {\n        System.out.println(\"Integer: \" + i);\n    }\n\n    static void display(double d) {\n        System.out.println(\"Double: \" + d);\n    }\n\n    public static void main(String[] args) {\n        display((int) 10.5);\n    }\n}",
+    "solution": {
+      "code": "public class MethodOverloading {\n    static void display(int i) {\n        System.out.println(\"Integer: \" + i);\n    }\n\n    static void display(double d) {\n        System.out.println(\"Double: \" + d);\n    }\n\n    public static void main(String[] args) {\n        display(10.5);\n    }\n}",
+      "explanation": "Casting '10.5' to an 'int' forces Java to call the integer version of the method. To use the double version, pass the floating-point literal directly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Double: 10\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

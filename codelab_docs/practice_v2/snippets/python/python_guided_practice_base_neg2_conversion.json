@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Decimal to Negabinary Conversion",
+    "language": "python",
+    "description": "Convert a decimal integer to its negabinary (base -2) representation.",
+    "ghostCode": "def to_negabinary(n):\n    if n == 0: return \"0\"\n    res = \"\"\n    while n != 0:\n        n, rem = divmod(n, -2)\n        if rem < 0:\n            rem += 2\n            n += 1\n        res = str(rem) + res\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"7 in base -2: {to_negabinary(7)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7 in base -2: 11011\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Interface Usage",
+    "language": "java",
+    "description": "Learn how to define and implement a basic Interface in Java.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Drawable d = new Circle();\n        d.draw();\n    }\n}\n\ninterface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    @Override\n    public void draw() {\n        System.out.println(\"Drawing a Circle\");\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Drawing a Circle\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

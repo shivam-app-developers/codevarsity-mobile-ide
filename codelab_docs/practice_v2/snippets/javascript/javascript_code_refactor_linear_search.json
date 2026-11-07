@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: findIndex Method",
+    "language": "javascript",
+    "problemDescription": "Refactor the custom for-loop search to use the built-in `Array.prototype.findIndex()` method.",
+    "initialCode": "function search(arr, target) {\n  for (let i = 0; i < arr.length; i++) {\n    if (arr[i] === target) return i;\n  }\n  return -1;\n}\n\nconsole.log(search([4, 8, 15, 16], 15));\nconsole.log(search([4, 8, 15, 16], 23));\n",
+    "solution": {
+      "code": "const search = (arr, target) => arr.findIndex(item => item === target);\n\nconsole.log(search([4, 8, 15, 16], 15));\nconsole.log(search([4, 8, 15, 16], 23));\n",
+      "explanation": "JavaScript arrays provide powerful built-in methods like `findIndex()` that are more declarative and less prone to off-by-one errors than manual for-loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

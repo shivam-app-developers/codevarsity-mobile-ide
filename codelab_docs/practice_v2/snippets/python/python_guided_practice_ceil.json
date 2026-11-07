@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Manual Ceil Function",
+    "language": "python",
+    "description": "Implement the ceiling function, which returns the smallest integer greater than or equal to a number, without using math.ceil.",
+    "ghostCode": "def ceil(x):\n    if x == int(x):\n        return int(x)\n    if x > 0:\n        return int(x) + 1\n    return int(x)\n\nif __name__ == \"__main__\":\n    print(f\"ceil(1.1): {ceil(1.1)}\")\n    print(f\"ceil(-1.1): {ceil(-1.1)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ceil\\(1\\.1\\): 2[ \\t]*\\r?\\nceil\\(-1\\.1\\): -1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

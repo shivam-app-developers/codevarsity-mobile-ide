@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Optimized Bubble Sort",
+    "language": "c",
+    "problemDescription": "Optimize the bubble sort to stop early if the array is already sorted.",
+    "initialCode": "#include <stdio.h>\n#include <stdbool.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j+1]) {\n                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\n            }\n        }\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 5, 4};\n    bubbleSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdbool.h>\n\nvoid bubbleSort(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        bool swapped = false;\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j+1]) {\n                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;\n                swapped = true;\n            }\n        }\n        if (!swapped) break;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 5, 4};\n    bubbleSort(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "explanation": "Using a `swapped` flag allows the algorithm to exit the outer loop early if no swaps occurred in a pass, indicating the array is already sorted."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

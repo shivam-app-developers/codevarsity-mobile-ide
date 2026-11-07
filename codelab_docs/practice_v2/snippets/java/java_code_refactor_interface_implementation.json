@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Default Interface",
+    "language": "java",
+    "problemDescription": "Every shape logs a line before drawing. Move that line into a default method log() in the interface and call it from draw(), so other shapes can reuse it.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Drawable d = new Circle();\n        d.draw();\n    }\n}\n\ninterface Drawable {\n    void draw();\n}\n\nclass Circle implements Drawable {\n    public void draw() {\n        System.out.println(\"Performing draw operation...\");\n        System.out.println(\"Circle\");\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Drawable d = new Circle();\n        d.draw();\n    }\n}\n\ninterface Drawable {\n    void draw();\n    default void log() {\n        System.out.println(\"Performing draw operation...\");\n    }\n}\n\nclass Circle implements Drawable {\n    public void draw() {\n        log();\n        System.out.println(\"Circle\");\n    }\n}",
+      "explanation": "Default methods (introduced in Java 8) allow interfaces to provide common logic that implementing classes can use or override."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Performing draw operation\\.\\.\\.[ \\t]*\\r?\\nCircle\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}
