@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Armstrong Comparison",
+    "language": "c",
+    "problemDescription": "The Armstrong number check is failing because the original number is lost during calculation.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int num = 370, remainder, result = 0;\n    while (num != 0) {\n        remainder = num % 10;\n        result += remainder * remainder * remainder;\n        num /= 10;\n    }\n    if (result == num) printf(\"Armstrong\\n\");\n    else printf(\"Not Armstrong\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int num = 370, originalNum, remainder, result = 0;\n    originalNum = num;\n    while (originalNum != 0) {\n        remainder = originalNum % 10;\n        result += remainder * remainder * remainder;\n        originalNum /= 10;\n    }\n    if (result == num) printf(\"Armstrong\\n\");\n    else printf(\"Not Armstrong\\n\");\n    return 0;\n}",
+      "explanation": "The loop modifies the variable used for calculation. You should store the original value in a separate variable to perform the final comparison correctly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Armstrong\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Manual Binary Conversion",
+    "language": "javascript",
+    "problemDescription": "Refactor the built-in `parseInt` to a manual calculation using `reduce()` to demonstrate how binary positioning works.",
+    "initialCode": "const toDec = (b) => parseInt(b, 2);\n\nconsole.log(toDec('1011'));\nconsole.log(toDec('100000'));\n",
+    "solution": {
+      "code": "const toDec = (b) => \n  b.split('').reduce((acc, digit) => (acc << 1) + Number(digit), 0);\n\nconsole.log(toDec('1011'));\nconsole.log(toDec('100000'));\n",
+      "explanation": "The manual calculation using bitwise shift (`<< 1`) and adding the current digit is a clever way to convert binary strings without relying on `parseInt`."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*11[ \\t]*\\r?\\n32\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

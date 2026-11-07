@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Array Bounds",
+    "language": "java",
+    "problemDescription": "Fix the loop condition to avoid an ArrayIndexOutOfBoundsException.",
+    "buggyCode": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int i = 0; i <= numbers.length; i++) {\n            System.out.println(numbers[i]);\n        }\n    }\n}",
+    "solution": {
+      "code": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int i = 0; i < numbers.length; i++) {\n            System.out.println(numbers[i]);\n        }\n    }\n}",
+      "explanation": "Arrays in Java are zero-indexed, meaning the last valid index is 'length - 1'. Using '<=' causes the loop to try and access an index equal to the length."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3[ \\t]*\\r?\\n4[ \\t]*\\r?\\n5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

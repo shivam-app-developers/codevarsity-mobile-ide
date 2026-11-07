@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Static vs Instance",
+    "language": "java",
+    "description": "Practice accessing static variables from a static method correctly.",
+    "ghostCode": "public class StaticContext {\n    static String appName = \"CodeVarsity\";\n\n    public static void main(String[] args) {\n        System.out.println(\"App: \" + appName);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*App: CodeVarsity\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

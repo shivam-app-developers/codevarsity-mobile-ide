@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Recursion Base Case",
+    "language": "java",
+    "problemDescription": "Fix the recursion base case to properly handle 0!",
+    "buggyCode": "public class FactorialRecursion {\n    public static int factorial(int n) {\n        if (n == 1) return 1;\n        return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5));\n        System.out.println(factorial(0));\n    }\n}\n",
+    "solution": {
+      "code": "public class FactorialRecursion {\n    public static int factorial(int n) {\n        if (n <= 0) return 1;\n        return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5));\n        System.out.println(factorial(0));\n    }\n}\n",
+      "explanation": "The factorial of 0 is defined as 1. Without checking for 'n <= 0', calling factorial(0) would result in a StackOverflowError."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*120[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

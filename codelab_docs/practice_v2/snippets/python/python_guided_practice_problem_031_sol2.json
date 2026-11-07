@@ -1,0 +1,19 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Coin Sums",
+    "language": "python",
+    "description": "Calculate the number of ways to make a given amount of pence using eight standard coins.",
+    "ghostCode": "def solution(pence: int = 200) -> int:\n    \"\"\"\n    Returns the number of different ways to make pence using 1, 2, 5, 10, 20, 50, 100, 200p coins.\n    Uses dynamic programming.\n    \"\"\"\n    coins = [1, 2, 5, 10, 20, 50, 100, 200]\n    ways = [0] * (pence + 1)\n    ways[0] = 1 # Base case: 1 way to make 0p (using no coins)\n    \n    for coin in coins:\n        for amount in range(coin, pence + 1):\n            ways[amount] += ways[amount - coin]\n            \n    return ways[pence]\n\n\nif __name__ == \"__main__\":\n    target = int(input(\"Enter target amount in pence: \").strip())\n    print(f\"Ways to make {target}p: {solution(target)}\")",
+    "testInput": "20",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "20",
+          "pattern": "(?<![\\s\\S])\\s*Enter target amount in pence: 20[ \\t]*\\r?\\nWays to make 20p: 41\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

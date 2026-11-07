@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Java Factorial (Recursive)",
+    "language": "java",
+    "description": "Learn to calculate the factorial of a number using recursion in Java.",
+    "ghostCode": "public class Factorial {\n    static long factorial(int n) {\n        if (n <= 1) return 1;\n        return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        int num = 5;\n        System.out.println(\"Factorial of \" + num + \" is \" + factorial(num));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Factorial of 5 is 120\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Armstrong Number",
+    "language": "javascript",
+    "description": "An Armstrong number equals the sum of its digits raised to the power of the number of digits (e.g., 153 = 1^3 + 5^3 + 3^3).",
+    "ghostCode": "function isArmstrong(num) {\n  const digits = String(num).split('');\n  const power = digits.length;\n  const sum = digits.reduce((acc, d) => acc + Math.pow(parseInt(d), power), 0);\n  return sum === num;\n}\n\nconsole.log(isArmstrong(153)); // true\nconsole.log(isArmstrong(123)); // false",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

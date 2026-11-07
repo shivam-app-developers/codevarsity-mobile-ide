@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Is Odd Not Operator",
+    "language": "javascript",
+    "problemDescription": "The function correctly identifies even numbers but is missing a logical negation for odd numbers.",
+    "buggyCode": "function isOdd(number) {\n  return number % 2 === 0; // Bug: this checks if even\n}\n\nconsole.log(isOdd(7));\nconsole.log(isOdd(4));\n",
+    "solution": {
+      "code": "function isOdd(number) {\n  return number % 2 !== 0;\n}\n\nconsole.log(isOdd(7));\nconsole.log(isOdd(4));\n",
+      "explanation": "To check if a number is odd, you check if the remainder when divided by 2 is NOT zero."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

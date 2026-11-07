@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Explicit Return",
+    "language": "c",
+    "problemDescription": "Ensure the main function explicitly returns an exit status.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+      "explanation": "While modern C compilers might handle a missing return in main, it is best practice to explicitly return 0 to indicate successful execution."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, World!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

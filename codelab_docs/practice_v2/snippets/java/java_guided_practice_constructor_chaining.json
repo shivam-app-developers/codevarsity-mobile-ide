@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Constructor Chaining",
+    "language": "java",
+    "description": "Learn how to use 'this()' to call one constructor from another within the same class.",
+    "ghostCode": "public class ConstructorChaining {\n    private String name;\n    private int age;\n\n    public ConstructorChaining() {\n        this(\"Unknown\", 0);\n    }\n\n    public ConstructorChaining(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    public static void main(String[] args) {\n        ConstructorChaining a = new ConstructorChaining();\n        ConstructorChaining b = new ConstructorChaining(\"Asha\", 21);\n        System.out.println(a.name + \" \" + a.age);\n        System.out.println(b.name + \" \" + b.age);\n    }\n}\n",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Unknown 0[ \\t]*\\r?\\nAsha 21\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

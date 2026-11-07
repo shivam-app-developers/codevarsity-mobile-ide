@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Centripetal Force Calculation",
+    "language": "python",
+    "description": "Calculate the centripetal force acting on an object in circular motion given its mass, velocity, and radius.",
+    "ghostCode": "def get_centripetal_force(m, v, r):\n    if r <= 0: return 0.0\n    return (m * v**2) / r\n\nif __name__ == \"__main__\":\n    print(f\"Force: {get_centripetal_force(10, 15, 5)} N\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Force: 450\\.0 N\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

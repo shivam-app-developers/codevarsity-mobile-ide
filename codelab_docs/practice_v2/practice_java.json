@@ -1,0 +1,676 @@
+{
+  "version": 2,
+  "snippets": [
+    {
+      "id": "java_guided_practice_array_bounds",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Array Iteration",
+      "difficulty": "beginner",
+      "order": 0,
+      "rev": "9b1b8560aa53",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_array_bounds.json"
+    },
+    {
+      "id": "java_bug_squasher_array_bounds",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Array Bounds",
+      "difficulty": "beginner",
+      "order": 1,
+      "rev": "307079a8f659",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_array_bounds.json"
+    },
+    {
+      "id": "java_code_refactor_array_bounds",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Enhanced For Loop",
+      "difficulty": "beginner",
+      "order": 2,
+      "rev": "2599d5deadd2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_array_bounds.json"
+    },
+    {
+      "id": "java_guided_practice_final_variable",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Final Keyword",
+      "difficulty": "beginner",
+      "order": 3,
+      "rev": "47baaeacfbac",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_final_variable.json"
+    },
+    {
+      "id": "java_bug_squasher_final_variable",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Final Variable",
+      "difficulty": "beginner",
+      "order": 4,
+      "rev": "f218fee98ee1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_final_variable.json"
+    },
+    {
+      "id": "java_code_refactor_final_variable",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Constant Class",
+      "difficulty": "beginner",
+      "order": 5,
+      "rev": "ddd380f8acc0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_final_variable.json"
+    },
+    {
+      "id": "java_guided_practice_integer_division",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Math Operations",
+      "difficulty": "beginner",
+      "order": 6,
+      "rev": "ff422a230501",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_integer_division.json"
+    },
+    {
+      "id": "java_bug_squasher_integer_division",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Integer Division",
+      "difficulty": "beginner",
+      "order": 7,
+      "rev": "b27c57770813",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_integer_division.json"
+    },
+    {
+      "id": "java_code_refactor_integer_division",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Explicit Division",
+      "difficulty": "beginner",
+      "order": 8,
+      "rev": "2bc79f5ae829",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_integer_division.json"
+    },
+    {
+      "id": "java_guided_practice_null_pointer",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Null Safety",
+      "difficulty": "beginner",
+      "order": 9,
+      "rev": "80ee2adef106",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_null_pointer.json"
+    },
+    {
+      "id": "java_bug_squasher_null_pointer",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Null Pointer Exception",
+      "difficulty": "beginner",
+      "order": 10,
+      "rev": "e701fd9f8def",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_null_pointer.json"
+    },
+    {
+      "id": "java_code_refactor_null_pointer",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Optional Class",
+      "difficulty": "beginner",
+      "order": 11,
+      "rev": "9aa6d2183ad6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_null_pointer.json"
+    },
+    {
+      "id": "java_guided_practice_static_context",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Static vs Instance",
+      "difficulty": "beginner",
+      "order": 12,
+      "rev": "ed295fc4dd90",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_static_context.json"
+    },
+    {
+      "id": "java_bug_squasher_static_context",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Static Context",
+      "difficulty": "beginner",
+      "order": 13,
+      "rev": "1fa5c13d10ca",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_static_context.json"
+    },
+    {
+      "id": "java_code_refactor_static_context",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Instance Method",
+      "difficulty": "beginner",
+      "order": 14,
+      "rev": "2f55af661b77",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_static_context.json"
+    },
+    {
+      "id": "java_guided_practice_string_comparison",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: String Methods",
+      "difficulty": "beginner",
+      "order": 15,
+      "rev": "9b462129e0c0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_string_comparison.json"
+    },
+    {
+      "id": "java_bug_squasher_string_comparison",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: String Comparison",
+      "difficulty": "beginner",
+      "order": 16,
+      "rev": "c775115591be",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_string_comparison.json"
+    },
+    {
+      "id": "java_code_refactor_string_comparison",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: String Equality",
+      "difficulty": "beginner",
+      "order": 17,
+      "rev": "9b0dc7b7cb1e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_string_comparison.json"
+    },
+    {
+      "id": "java_guided_practice_switch_break",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Using Switch",
+      "difficulty": "beginner",
+      "order": 18,
+      "rev": "d2f85cb621c4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_switch_break.json"
+    },
+    {
+      "id": "java_bug_squasher_switch_break",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Switch-Case Fall-through",
+      "difficulty": "beginner",
+      "order": 19,
+      "rev": "4bd0e3777d35",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_switch_break.json"
+    },
+    {
+      "id": "java_code_refactor_switch_break",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Switch Expressions",
+      "difficulty": "beginner",
+      "order": 20,
+      "rev": "70ef6b519ff5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_switch_break.json"
+    },
+    {
+      "id": "java_guided_practice_factorial",
+      "type": "guided",
+      "language": "java",
+      "title": "Java Factorial (Recursive)",
+      "difficulty": "beginner",
+      "order": 21,
+      "rev": "ffae9f3f7af9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_factorial.json"
+    },
+    {
+      "id": "java_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Java Factorial",
+      "difficulty": "beginner",
+      "order": 22,
+      "rev": "1a2c83e05f9b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_factorial.json"
+    },
+    {
+      "id": "java_code_refactor_factorial",
+      "type": "refactor",
+      "language": "java",
+      "title": "Java Refactor: Factorial",
+      "difficulty": "beginner",
+      "order": 23,
+      "rev": "def1aa11c7b1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_factorial.json"
+    },
+    {
+      "id": "java_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Bubble Sort",
+      "difficulty": "medium",
+      "order": 24,
+      "rev": "b76f8a68f5fc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_bubble_sort.json"
+    },
+    {
+      "id": "java_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Sort Direction",
+      "difficulty": "medium",
+      "order": 25,
+      "rev": "5623b3c83143",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_bubble_sort.json"
+    },
+    {
+      "id": "java_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Early Exit Sort",
+      "difficulty": "medium",
+      "order": 26,
+      "rev": "2904eb552d54",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_bubble_sort.json"
+    },
+    {
+      "id": "java_guided_practice_constructor_chaining",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Constructor Chaining",
+      "difficulty": "medium",
+      "order": 27,
+      "rev": "73dc267c7b93",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_constructor_chaining.json"
+    },
+    {
+      "id": "java_bug_squasher_constructor_chaining",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Chaining Error",
+      "difficulty": "medium",
+      "order": 28,
+      "rev": "0eec09c6c517",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_constructor_chaining.json"
+    },
+    {
+      "id": "java_code_refactor_constructor_chaining",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Builder Pattern",
+      "difficulty": "medium",
+      "order": 29,
+      "rev": "4220c3e16566",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_constructor_chaining.json"
+    },
+    {
+      "id": "java_guided_practice_interface_implementation",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Interface Usage",
+      "difficulty": "medium",
+      "order": 30,
+      "rev": "bcb8343e9c93",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_interface_implementation.json"
+    },
+    {
+      "id": "java_bug_squasher_interface_implementation",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Interface Signature",
+      "difficulty": "medium",
+      "order": 31,
+      "rev": "00073d562cf5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_interface_implementation.json"
+    },
+    {
+      "id": "java_code_refactor_interface_implementation",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Default Interface",
+      "difficulty": "medium",
+      "order": 32,
+      "rev": "6ba4aaec330e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_interface_implementation.json"
+    },
+    {
+      "id": "java_guided_practice_map_access",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Map Entry",
+      "difficulty": "medium",
+      "order": 33,
+      "rev": "6534f18a2542",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_map_access.json"
+    },
+    {
+      "id": "java_bug_squasher_map_access",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Safe Map Access",
+      "difficulty": "medium",
+      "order": 34,
+      "rev": "486977f0abfe",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_map_access.json"
+    },
+    {
+      "id": "java_code_refactor_map_access",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: getOrDefault()",
+      "difficulty": "medium",
+      "order": 35,
+      "rev": "fd78bdf557ca",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_map_access.json"
+    },
+    {
+      "id": "java_guided_practice_method_overloading",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Method Overloading",
+      "difficulty": "medium",
+      "order": 36,
+      "rev": "f362b7338b6d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_method_overloading.json"
+    },
+    {
+      "id": "java_bug_squasher_method_overloading",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Overloading Confusion",
+      "difficulty": "medium",
+      "order": 37,
+      "rev": "c3100ed88078",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_method_overloading.json"
+    },
+    {
+      "id": "java_code_refactor_method_overloading",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Varargs Support",
+      "difficulty": "medium",
+      "order": 38,
+      "rev": "f0fb4ddc321c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_method_overloading.json"
+    },
+    {
+      "id": "java_guided_practice_prime_checker",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Prime Checker",
+      "difficulty": "medium",
+      "order": 39,
+      "rev": "85358558ffb4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_prime_checker.json"
+    },
+    {
+      "id": "java_code_refactor_prime_checker",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Stream Integration",
+      "difficulty": "medium",
+      "order": 40,
+      "rev": "9de87ceaeaba",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_prime_checker.json"
+    },
+    {
+      "id": "java_guided_practice_factorial_recursion",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Recursion Basics",
+      "difficulty": "medium",
+      "order": 41,
+      "rev": "b23d6e6c97e7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_factorial_recursion.json"
+    },
+    {
+      "id": "java_bug_squasher_factorial_recursion",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Recursion Base Case",
+      "difficulty": "medium",
+      "order": 42,
+      "rev": "d724dc1d7687",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_factorial_recursion.json"
+    },
+    {
+      "id": "java_code_refactor_factorial_recursion",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Iterative Factorial",
+      "difficulty": "medium",
+      "order": 43,
+      "rev": "43d8a69c78bf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_factorial_recursion.json"
+    },
+    {
+      "id": "java_guided_practice_polymorphism",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Simple Polymorphism",
+      "difficulty": "medium",
+      "order": 44,
+      "rev": "9beb1c5f6fba",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_polymorphism.json"
+    },
+    {
+      "id": "java_bug_squasher_polymorphism",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Polymorphism Logic",
+      "difficulty": "medium",
+      "order": 45,
+      "rev": "62b61be42c7c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_polymorphism.json"
+    },
+    {
+      "id": "java_code_refactor_polymorphism",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Upcasting Usage",
+      "difficulty": "medium",
+      "order": 46,
+      "rev": "7a7d76eed830",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_polymorphism.json"
+    },
+    {
+      "id": "java_guided_practice_singleton_pattern",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Singleton Pattern",
+      "difficulty": "medium",
+      "order": 47,
+      "rev": "101d58c748bf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_singleton_pattern.json"
+    },
+    {
+      "id": "java_bug_squasher_singleton_pattern",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Static Instance Null",
+      "difficulty": "medium",
+      "order": 48,
+      "rev": "77e5aa1d4168",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_singleton_pattern.json"
+    },
+    {
+      "id": "java_code_refactor_singleton_pattern",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Thread-Safe Singleton",
+      "difficulty": "medium",
+      "order": 49,
+      "rev": "37254f5af59b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_singleton_pattern.json"
+    },
+    {
+      "id": "java_guided_practice_loop_concatenation",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: StringBuilder Class",
+      "difficulty": "medium",
+      "order": 50,
+      "rev": "0a8c01e3dde7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_loop_concatenation.json"
+    },
+    {
+      "id": "java_bug_squasher_loop_concatenation",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Immutable Concatenation",
+      "difficulty": "medium",
+      "order": 51,
+      "rev": "0167ead8887b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_loop_concatenation.json"
+    },
+    {
+      "id": "java_code_refactor_loop_concatenation",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: String Builder",
+      "difficulty": "medium",
+      "order": 52,
+      "rev": "72b4861ab811",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_loop_concatenation.json"
+    },
+    {
+      "id": "java_guided_practice_exception_order",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Try-Catch Block",
+      "difficulty": "medium",
+      "order": 53,
+      "rev": "edfb84459a35",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_exception_order.json"
+    },
+    {
+      "id": "java_bug_squasher_exception_order",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Exception Hierarchy",
+      "difficulty": "medium",
+      "order": 54,
+      "rev": "af7055821a18",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_exception_order.json"
+    },
+    {
+      "id": "java_code_refactor_exception_order",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Multi-Catch",
+      "difficulty": "medium",
+      "order": 55,
+      "rev": "4c5e8309bdf9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_exception_order.json"
+    },
+    {
+      "id": "java_guided_practice_binarysearch",
+      "type": "guided",
+      "language": "java",
+      "title": "Java Binary Search",
+      "difficulty": "medium",
+      "order": 56,
+      "rev": "c3cf9f55f498",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_binarysearch.json"
+    },
+    {
+      "id": "java_bug_squasher_binarysearch",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Java Binary Search",
+      "difficulty": "medium",
+      "order": 57,
+      "rev": "e16797268fce",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_binarysearch.json"
+    },
+    {
+      "id": "java_code_refactor_binarysearch",
+      "type": "refactor",
+      "language": "java",
+      "title": "Java Refactor: Binary Search",
+      "difficulty": "medium",
+      "order": 58,
+      "rev": "736159fd391b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_binarysearch.json"
+    },
+    {
+      "id": "java_guided_practice_bubblesort",
+      "type": "guided",
+      "language": "java",
+      "title": "Java Bubble Sort",
+      "difficulty": "medium",
+      "order": 59,
+      "rev": "2b40f09139b7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_bubblesort.json"
+    },
+    {
+      "id": "java_bug_squasher_bubblesort",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Java Bubble Sort",
+      "difficulty": "medium",
+      "order": 60,
+      "rev": "afb992dd7361",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_bubblesort.json"
+    },
+    {
+      "id": "java_code_refactor_bubblesort",
+      "type": "refactor",
+      "language": "java",
+      "title": "Java Refactor: Bubble Sort",
+      "difficulty": "medium",
+      "order": 61,
+      "rev": "74ea7822d317",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_bubblesort.json"
+    },
+    {
+      "id": "java_guided_practice_binary_search_overflow",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Binary Search",
+      "difficulty": "advanced",
+      "order": 62,
+      "rev": "794a3906deef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_binary_search_overflow.json"
+    },
+    {
+      "id": "java_code_refactor_binary_search_overflow",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: Unsigned Shift",
+      "difficulty": "advanced",
+      "order": 63,
+      "rev": "e228a36d9442",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_binary_search_overflow.json"
+    },
+    {
+      "id": "java_guided_practice_concurrent_modification",
+      "type": "guided",
+      "language": "java",
+      "title": "Guided Practice: Safe Removal",
+      "difficulty": "advanced",
+      "order": 64,
+      "rev": "76d596d6af37",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_guided_practice_concurrent_modification.json"
+    },
+    {
+      "id": "java_bug_squasher_concurrent_modification",
+      "type": "bug_squasher",
+      "language": "java",
+      "title": "Bug Squasher: Concurrent Modification",
+      "difficulty": "advanced",
+      "order": 65,
+      "rev": "d8ba4f3b7288",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_bug_squasher_concurrent_modification.json"
+    },
+    {
+      "id": "java_code_refactor_concurrent_modification",
+      "type": "refactor",
+      "language": "java",
+      "title": "Code Refactor: removeIf() Method",
+      "difficulty": "advanced",
+      "order": 66,
+      "rev": "a11b5cfef653",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/java/java_code_refactor_concurrent_modification.json"
+    }
+  ],
+  "projects": []
+}

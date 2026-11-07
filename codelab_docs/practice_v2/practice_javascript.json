@@ -1,0 +1,436 @@
+{
+  "version": 2,
+  "snippets": [
+    {
+      "id": "javascript_guided_practice_anagram",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Anagram Check",
+      "difficulty": "beginner",
+      "order": 0,
+      "rev": "f73a5b72f20a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_anagram.json"
+    },
+    {
+      "id": "javascript_bug_squasher_anagram",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Anagram Case Sensitivity",
+      "difficulty": "beginner",
+      "order": 1,
+      "rev": "e71a394befed",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_anagram.json"
+    },
+    {
+      "id": "javascript_code_refactor_anagram",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Frequency Map Anagram",
+      "difficulty": "beginner",
+      "order": 2,
+      "rev": "147892b3760d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_anagram.json"
+    },
+    {
+      "id": "javascript_guided_practice_armstrong",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Armstrong Number",
+      "difficulty": "beginner",
+      "order": 3,
+      "rev": "4b8edead3f2c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_armstrong.json"
+    },
+    {
+      "id": "javascript_bug_squasher_armstrong",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Armstrong Power",
+      "difficulty": "beginner",
+      "order": 4,
+      "rev": "b1c0cd75bf19",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_armstrong.json"
+    },
+    {
+      "id": "javascript_guided_practice_mean",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Average Mean",
+      "difficulty": "beginner",
+      "order": 5,
+      "rev": "5529c51f3efd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_mean.json"
+    },
+    {
+      "id": "javascript_bug_squasher_mean",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Mean Division",
+      "difficulty": "beginner",
+      "order": 6,
+      "rev": "14968fa939f6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_mean.json"
+    },
+    {
+      "id": "javascript_code_refactor_mean",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Arrow Mean",
+      "difficulty": "beginner",
+      "order": 7,
+      "rev": "245c5c193a8c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_mean.json"
+    },
+    {
+      "id": "javascript_guided_practice_count_vowels",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Count Vowels",
+      "difficulty": "beginner",
+      "order": 8,
+      "rev": "e0fa9c5e2e11",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_count_vowels.json"
+    },
+    {
+      "id": "javascript_bug_squasher_count_vowels",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Regex Case Sensitivity",
+      "difficulty": "beginner",
+      "order": 9,
+      "rev": "1c5789b94b86",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_count_vowels.json"
+    },
+    {
+      "id": "javascript_code_refactor_count_vowels",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Function One-Liner",
+      "difficulty": "beginner",
+      "order": 10,
+      "rev": "09c0d5136f91",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_count_vowels.json"
+    },
+    {
+      "id": "javascript_guided_practice_factorial",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Factorial Loop",
+      "difficulty": "beginner",
+      "order": 11,
+      "rev": "d29f7a52d74d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_factorial.json"
+    },
+    {
+      "id": "javascript_bug_squasher_factorial",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Factorial Base Case",
+      "difficulty": "beginner",
+      "order": 12,
+      "rev": "6534614611a5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_factorial.json"
+    },
+    {
+      "id": "javascript_guided_practice_fibonacci",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Fibonacci Number",
+      "difficulty": "beginner",
+      "order": 13,
+      "rev": "837494afc61a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_fibonacci.json"
+    },
+    {
+      "id": "javascript_bug_squasher_fibonacci",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Fibonacci Swap",
+      "difficulty": "beginner",
+      "order": 14,
+      "rev": "ec31e424bb57",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_fibonacci.json"
+    },
+    {
+      "id": "javascript_guided_practice_is_even",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Even",
+      "difficulty": "beginner",
+      "order": 15,
+      "rev": "4bcce9f1fc45",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_even.json"
+    },
+    {
+      "id": "javascript_bug_squasher_is_even",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Is Even Assignment",
+      "difficulty": "beginner",
+      "order": 16,
+      "rev": "f214226f09d4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_even.json"
+    },
+    {
+      "id": "javascript_code_refactor_is_even",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Arrow Function",
+      "difficulty": "beginner",
+      "order": 17,
+      "rev": "487882446153",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_even.json"
+    },
+    {
+      "id": "javascript_guided_practice_is_odd",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Odd",
+      "difficulty": "beginner",
+      "order": 18,
+      "rev": "48a98465867b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_odd.json"
+    },
+    {
+      "id": "javascript_bug_squasher_is_odd",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Is Odd Not Operator",
+      "difficulty": "beginner",
+      "order": 19,
+      "rev": "9c19439c83c9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_odd.json"
+    },
+    {
+      "id": "javascript_code_refactor_is_odd",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Boolean Coercion",
+      "difficulty": "beginner",
+      "order": 20,
+      "rev": "2b7ce877ab24",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_odd.json"
+    },
+    {
+      "id": "javascript_guided_practice_is_power_of_two",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Is Power of Two",
+      "difficulty": "beginner",
+      "order": 21,
+      "rev": "ff36eb0c221e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_power_of_two.json"
+    },
+    {
+      "id": "javascript_bug_squasher_is_power_of_two",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Power of Two Logic",
+      "difficulty": "beginner",
+      "order": 22,
+      "rev": "06da6557d5b4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_power_of_two.json"
+    },
+    {
+      "id": "javascript_code_refactor_is_power_of_two",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Bitwise Power of Two",
+      "difficulty": "beginner",
+      "order": 23,
+      "rev": "939226a7fc11",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_power_of_two.json"
+    },
+    {
+      "id": "javascript_guided_practice_bin_to_dec",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Binary to Decimal",
+      "difficulty": "beginner",
+      "order": 24,
+      "rev": "d472c577dcc6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bin_to_dec.json"
+    },
+    {
+      "id": "javascript_bug_squasher_bin_to_dec",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Radix Parameter",
+      "difficulty": "beginner",
+      "order": 25,
+      "rev": "5edc24d9b4a8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bin_to_dec.json"
+    },
+    {
+      "id": "javascript_code_refactor_bin_to_dec",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Manual Binary Conversion",
+      "difficulty": "beginner",
+      "order": 26,
+      "rev": "dd3f39bd6db0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bin_to_dec.json"
+    },
+    {
+      "id": "javascript_guided_practice_bubble_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Bubble Sort",
+      "difficulty": "beginner",
+      "order": 27,
+      "rev": "2a43f6ba9e6f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bubble_sort.json"
+    },
+    {
+      "id": "javascript_bug_squasher_bubble_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Sort Mutation",
+      "difficulty": "beginner",
+      "order": 28,
+      "rev": "5e718e09c8b6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bubble_sort.json"
+    },
+    {
+      "id": "javascript_code_refactor_bubble_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Bubble Sort Optimization",
+      "difficulty": "beginner",
+      "order": 29,
+      "rev": "d167029b1c9d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bubble_sort.json"
+    },
+    {
+      "id": "javascript_guided_practice_linear_search",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JS Linear Search",
+      "difficulty": "beginner",
+      "order": 30,
+      "rev": "c51bdd6dd24c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_linear_search.json"
+    },
+    {
+      "id": "javascript_bug_squasher_linear_search",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Search Return",
+      "difficulty": "beginner",
+      "order": 31,
+      "rev": "695c9dd3e675",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_linear_search.json"
+    },
+    {
+      "id": "javascript_code_refactor_linear_search",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: findIndex Method",
+      "difficulty": "beginner",
+      "order": 32,
+      "rev": "3873e72cb75c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_linear_search.json"
+    },
+    {
+      "id": "javascript_guided_practice_palindrome",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Palindrome Check",
+      "difficulty": "beginner",
+      "order": 33,
+      "rev": "c81b09c9f798",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_palindrome.json"
+    },
+    {
+      "id": "javascript_code_refactor_palindrome",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Two-Pointer Palindrome",
+      "difficulty": "beginner",
+      "order": 34,
+      "rev": "f6cd0a9ac4cd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_palindrome.json"
+    },
+    {
+      "id": "javascript_guided_practice_reverse_string",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Reverse String",
+      "difficulty": "beginner",
+      "order": 35,
+      "rev": "ef2bf8ad3b70",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_reverse_string.json"
+    },
+    {
+      "id": "javascript_bug_squasher_reverse_string",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Reverse Loop Index",
+      "difficulty": "beginner",
+      "order": 36,
+      "rev": "295eb26c8b91",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_reverse_string.json"
+    },
+    {
+      "id": "javascript_guided_practice_sum_digits",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Sum of Digits",
+      "difficulty": "beginner",
+      "order": 37,
+      "rev": "86adac770bf4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_sum_digits.json"
+    },
+    {
+      "id": "javascript_bug_squasher_sum_digits",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Digits Division",
+      "difficulty": "beginner",
+      "order": 38,
+      "rev": "db5af48a5785",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_sum_digits.json"
+    },
+    {
+      "id": "javascript_code_refactor_sum_digits",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: String Conversion Sum",
+      "difficulty": "beginner",
+      "order": 39,
+      "rev": "682f97f98012",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_sum_digits.json"
+    },
+    {
+      "id": "javascript_guided_practice_binarysearch",
+      "type": "guided",
+      "language": "javascript",
+      "title": "JavaScript Binary Search",
+      "difficulty": "medium",
+      "order": 40,
+      "rev": "257c7f95523f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_binarysearch.json"
+    },
+    {
+      "id": "javascript_bug_squasher_binarysearch",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: JS Binary Search",
+      "difficulty": "medium",
+      "order": 41,
+      "rev": "110dd964163f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_binarysearch.json"
+    },
+    {
+      "id": "javascript_code_refactor_binarysearch",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "JS Refactor: Binary Search",
+      "difficulty": "medium",
+      "order": 42,
+      "rev": "cd325f626d42",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v2/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_binarysearch.json"
+    }
+  ],
+  "projects": []
+}

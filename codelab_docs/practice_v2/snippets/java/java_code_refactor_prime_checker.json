@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Stream Integration",
+    "language": "java",
+    "problemDescription": "Refactor the prime check logic to use Java 8 Streams for a more functional approach.",
+    "initialCode": "import java.util.stream.IntStream;\n\npublic class PrimeNumber {\n    public static boolean isPrime(int n) {\n        if (n <= 1) return false;\n        for (int i = 2; i <= Math.sqrt(n); i++) {\n            if (n % i == 0) return false;\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPrime(2));\n        System.out.println(isPrime(9));\n        System.out.println(isPrime(17));\n    }\n}\n",
+    "solution": {
+      "code": "import java.util.stream.IntStream;\n\npublic class PrimeNumber {\n    public static boolean isPrime(int n) {\n        return n > 1 && IntStream.rangeClosed(2, (int) Math.sqrt(n))\n                 .noneMatch(i -> n % i == 0);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPrime(2));\n        System.out.println(isPrime(9));\n        System.out.println(isPrime(17));\n    }\n}\n",
+      "explanation": "IntStream allows for a declarative way to express a range of numbers and check a condition across all of them using 'noneMatch'."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\ntrue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

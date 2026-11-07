@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Climbing Stairs Problem",
+    "language": "python",
+    "description": "Find the number of distinct ways to climb a staircase of n steps, where you can take 1 or 2 steps at a time.",
+    "ghostCode": "def climb_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b\n\nif __name__ == \"__main__\":\n    print(f\"Ways for 3 steps: {climb_stairs(3)}\")\n    print(f\"Ways for 5 steps: {climb_stairs(5)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Ways for 3 steps: 3[ \\t]*\\r?\\nWays for 5 steps: 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

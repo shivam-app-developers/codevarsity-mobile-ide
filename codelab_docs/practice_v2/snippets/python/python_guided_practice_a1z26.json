@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "A1Z26 Cipher Encoder",
+    "language": "python",
+    "description": "Practice typing a simple A1Z26 cipher encoder that converts a word into its alphabetical position numbers.",
+    "ghostCode": "def encode(plain):\n    return [ord(elem) - 96 for elem in plain]\n\nif __name__ == \"__main__\":\n    encoded = encode(\"hello\")\n    print(\"Encoded:\", encoded)",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Encoded: \\[8, 5, 12, 12, 15\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

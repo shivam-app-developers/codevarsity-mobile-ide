@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Function One-Liner",
+    "language": "javascript",
+    "problemDescription": "Refactor the vowel count function to be a single concise arrow function using short-circuiting.",
+    "initialCode": "function countVowels(str) {\n  const match = str.match(/[aeiou]/gi);\n  return match ? match.length : 0;\n}\n\nconsole.log(countVowels('Hello World'));\nconsole.log(countVowels('rhythm'));\n",
+    "solution": {
+      "code": "const countVowels = (s) => (s.match(/[aeiou]/gi) || []).length;\n\nconsole.log(countVowels('Hello World'));\nconsole.log(countVowels('rhythm'));\n",
+      "explanation": "Using the logical OR (`||`) operator allows you to provide a default value (empty array) if `match` returns `null`, making the code much more concise."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3[ \\t]*\\r?\\n0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

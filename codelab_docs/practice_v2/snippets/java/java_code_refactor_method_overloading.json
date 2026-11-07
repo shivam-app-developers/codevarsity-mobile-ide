@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Varargs Support",
+    "language": "java",
+    "problemDescription": "Refactor the overloaded methods into a single method using Java varargs for multiple arguments.",
+    "initialCode": "public class MethodOverloading {\n    static void printItems(String a) {\n        System.out.println(a);\n    }\n\n    static void printItems(String a, String b) {\n        System.out.println(a + \" \" + b);\n    }\n\n    static void printItems(String a, String b, String c) {\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n\n    public static void main(String[] args) {\n        printItems(\"A\", \"B\");\n        printItems(\"One\", \"Two\", \"Three\");\n    }\n}\n",
+    "solution": {
+      "code": "public class MethodOverloading {\n    static void printItems(String... items) {\n        System.out.println(String.join(\" \", items));\n    }\n\n    public static void main(String[] args) {\n        printItems(\"A\", \"B\");\n        printItems(\"One\", \"Two\", \"Three\");\n    }\n}\n",
+      "explanation": "The '...' syntax denotes variable-length arguments (varargs), allowing a single method to accept any number of arguments of a specific type."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A B[ \\t]*\\r?\\nOne Two Three\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

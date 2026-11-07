@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Chebyshev Distance",
+    "language": "python",
+    "description": "Calculate the Chebyshev distance (Chessboard distance) between two n-dimensional points.",
+    "ghostCode": "def chebyshev_dist(p1, p2):\n    if len(p1) != len(p2):\n        return 0.0\n    return max(abs(a - b) for a, b in zip(p1, p2))\n\nif __name__ == \"__main__\":\n    print(f\"Dist: {chebyshev_dist([1, 1], [2, 2])}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Dist: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

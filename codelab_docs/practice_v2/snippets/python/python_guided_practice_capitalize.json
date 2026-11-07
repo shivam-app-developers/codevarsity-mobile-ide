@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "String Capitalization",
+    "language": "python",
+    "description": "Capitalize the first character of a string while leaving the rest of the characters unchanged.",
+    "ghostCode": "def capitalize(s):\n    if not s: return \"\"\n    return s[0].upper() + s[1:]\n\nif __name__ == \"__main__\":\n    print(f\"'hello' -> {capitalize('hello')}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*'hello' -> Hello\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

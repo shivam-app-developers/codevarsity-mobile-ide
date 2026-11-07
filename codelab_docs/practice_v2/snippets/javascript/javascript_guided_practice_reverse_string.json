@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse String",
+    "language": "javascript",
+    "description": "Reverse a string using built-in methods.",
+    "ghostCode": "function reverseString(str) {\n  return str.split('').reverse().join('');\n}\n\nconsole.log(reverseString(\"hello\")); // \"olleh\"",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*olleh\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

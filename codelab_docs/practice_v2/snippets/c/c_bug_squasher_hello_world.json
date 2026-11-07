@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Hello World Syntax",
+    "language": "c",
+    "problemDescription": "A simple print statement is failing due to a missing symbol.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\")\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+      "explanation": "In C, every statement must end with a semicolon (`;`)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, World!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

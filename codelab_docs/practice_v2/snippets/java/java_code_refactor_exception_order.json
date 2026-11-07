@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Multi-Catch",
+    "language": "java",
+    "problemDescription": "Both catch blocks do the same thing. Combine them into one multi-catch block (Java 7+).",
+    "initialCode": "public class ExceptionOrder {\n    public static void main(String[] args) {\n        String[] inputs = {\"4\", \"x\", \"0\"};\n        for (String s : inputs) {\n            try {\n                int n = Integer.parseInt(s);\n                System.out.println(100 / n);\n            } catch (NumberFormatException e) {\n                System.out.println(\"Bad input: \" + s);\n            } catch (ArithmeticException e) {\n                System.out.println(\"Bad input: \" + s);\n            }\n        }\n    }\n}\n",
+    "solution": {
+      "code": "public class ExceptionOrder {\n    public static void main(String[] args) {\n        String[] inputs = {\"4\", \"x\", \"0\"};\n        for (String s : inputs) {\n            try {\n                int n = Integer.parseInt(s);\n                System.out.println(100 / n);\n            } catch (NumberFormatException | ArithmeticException e) {\n                System.out.println(\"Bad input: \" + s);\n            }\n        }\n    }\n}\n",
+      "explanation": "Multi-catch reduces code duplication when multiple unrelated exception types are handled using the same logic."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25[ \\t]*\\r?\\nBad input: x[ \\t]*\\r?\\nBad input: 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

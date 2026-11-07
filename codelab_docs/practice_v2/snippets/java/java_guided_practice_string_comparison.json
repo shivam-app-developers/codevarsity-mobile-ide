@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: String Methods",
+    "language": "java",
+    "description": "Practice comparing strings using the .equals() method instead of the == operator.",
+    "ghostCode": "public class StringComparison {\n    public static void main(String[] args) {\n        String s1 = \"java\";\n        String s2 = \"java\";\n        \n        if (s1.equals(s2)) {\n            System.out.println(\"Match Found\");\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Match Found\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

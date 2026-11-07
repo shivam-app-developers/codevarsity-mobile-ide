@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Array Iteration",
+    "language": "java",
+    "description": "Practice iterating through an array correctly using its length property.",
+    "ghostCode": "public class ArrayBounds {\n    public static void main(String[] args) {\n        int[] data = {10, 20, 30};\n        for (int i = 0; i < data.length; i++) {\n            System.out.println(data[i]);\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10[ \\t]*\\r?\\n20[ \\t]*\\r?\\n30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

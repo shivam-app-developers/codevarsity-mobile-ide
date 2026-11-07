@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Standard Library Word Count",
+    "language": "c",
+    "problemDescription": "Refactor the custom word counting logic to use standard library functions like `strtok` for tokenization.",
+    "initialCode": "#include <stdio.h>\n#include <stdbool.h>\n\nint countWords(char *str) {\n    int count = 0; bool inW = false;\n    while (*str) {\n        if (*str == ' ') inW = false;\n        else if (!inW) { inW = true; count++; }\n        str++;\n    }\n    return count;\n}\n\nint main() {\n    char text[] = \"the quick  brown fox\";\n    printf(\"Words: %d\\n\", countWords(text));\n    return 0;\n}\n",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint countWords(char *str) {\n    int count = 0;\n    char *token = strtok(str, \" \\n\\t\");\n    while (token != NULL) {\n        count++;\n        token = strtok(NULL, \" \\n\\t\");\n    }\n    return count;\n}\n\nint main() {\n    char text[] = \"the quick  brown fox\";\n    printf(\"Words: %d\\n\", countWords(text));\n    return 0;\n}\n",
+      "explanation": "`strtok` is a powerful standard library function for splitting strings into tokens based on delimiters, making common tasks like word counting much simpler."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Words: 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

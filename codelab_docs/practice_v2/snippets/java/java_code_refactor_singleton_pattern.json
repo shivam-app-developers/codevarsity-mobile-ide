@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Thread-Safe Singleton",
+    "language": "java",
+    "problemDescription": "Refactor the Singleton pattern to use synchronized initialization for thread safety.",
+    "initialCode": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    public static SingletonPattern getInstance() {\n        if (instance == null) instance = new SingletonPattern();\n        return instance;\n    }\n\n    public static void main(String[] args) {\n        SingletonPattern a = getInstance();\n        SingletonPattern b = getInstance();\n        System.out.println(\"Same object: \" + (a == b));\n    }\n}\n",
+    "solution": {
+      "code": "public class SingletonPattern {\n    private static SingletonPattern instance;\n    public static synchronized SingletonPattern getInstance() {\n        if (instance == null) {\n            instance = new SingletonPattern();\n        }\n        return instance;\n    }\n\n    public static void main(String[] args) {\n        SingletonPattern a = getInstance();\n        SingletonPattern b = getInstance();\n        System.out.println(\"Same object: \" + (a == b));\n    }\n}\n",
+      "explanation": "Using 'synchronized' on the 'getInstance()' method ensures that only one thread can execute the initialization logic at a time, preventing multiple instances from being created."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Same object: true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

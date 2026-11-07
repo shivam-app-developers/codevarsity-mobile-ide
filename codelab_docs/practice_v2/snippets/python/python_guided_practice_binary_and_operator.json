@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Binary AND Operation",
+    "language": "python",
+    "description": "Perform a bitwise AND operation on two integers and return the result as a binary string.",
+    "ghostCode": "def binary_and(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    res = bin(a & b)\n    return res\n\nif __name__ == \"__main__\":\n    print(f\"25 AND 32: {binary_and(25, 32)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25 AND 32: 0b0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

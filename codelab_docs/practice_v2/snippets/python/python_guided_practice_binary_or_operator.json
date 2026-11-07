@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Binary OR Operation",
+    "language": "python",
+    "description": "Perform a bitwise OR operation on two integers and return the result as a binary string.",
+    "ghostCode": "def binary_or(a, b):\n    if a < 0 or b < 0: return \"0b0\"\n    return bin(a | b)\n\nif __name__ == \"__main__\":\n    print(f\"25 OR 32: {binary_or(25, 32)}\")",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25 OR 32: 0b111001\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

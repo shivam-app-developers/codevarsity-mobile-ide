@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Simple Factorial",
+    "language": "c",
+    "description": "Calculate the factorial of a number using a loop.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 5, fact = 1;\n    for (int i = 1; i <= n; i++) {\n        fact *= i;\n    }\n    printf(\"Factorial of %d is %d\\n\", n, fact);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Factorial of 5 is 120\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Upcasting Usage",
+    "language": "java",
+    "problemDescription": "Refactor the usage of subclasses to target the parent class (upcasting) for better polymorphism.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.sound();\n    }\n}\n\nclass Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Animal animal = new Dog(); // Upcasting\n        animal.sound();\n    }\n}\n\nclass Animal {\n    void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\n",
+      "explanation": "Programming to an interface/parent class (upcasting) makes the code more flexible and allows you to swap implementations easily."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Dog barks\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

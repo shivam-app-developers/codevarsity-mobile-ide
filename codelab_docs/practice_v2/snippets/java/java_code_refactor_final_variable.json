@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Constant Class",
+    "language": "java",
+    "problemDescription": "Refactor local final variables into a dedicated constants class for better organization.",
+    "initialCode": "public class FinalVariable {\n    public static void main(String[] args) {\n        final int MAX_USERS = 100;\n        System.out.println(MAX_USERS);\n    }\n}",
+    "solution": {
+      "code": "public class FinalVariable {\n    public static void main(String[] args) {\n        System.out.println(Config.MAX_USERS);\n    }\n}\n\nfinal class Config {\n    public static final int MAX_USERS = 100;\n    private Config() {} // Prevent instantiation\n}\n",
+      "explanation": "Using a final class with static final fields is a common pattern for managing global constants in Java projects."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

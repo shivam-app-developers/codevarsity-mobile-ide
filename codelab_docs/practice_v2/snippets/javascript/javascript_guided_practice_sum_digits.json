@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sum of Digits",
+    "language": "javascript",
+    "description": "Calculate the sum of all digits in a number using a loop.",
+    "ghostCode": "function sumOfDigits(num) {\n  let sum = 0;\n  let n = Math.abs(num);\n  while (n > 0) {\n    sum += n % 10;\n    n = Math.floor(n / 10);\n  }\n  return sum;\n}\n\nconsole.log(sumOfDigits(123)); // 6 (1 + 2 + 3)",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}
