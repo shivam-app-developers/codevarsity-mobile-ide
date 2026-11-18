@@ -2242,32 +2242,12 @@
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_base_neg2_conversion.json"
     },
     {
-      "id": "python_guided_practice_build_directory_md",
-      "type": "guided",
-      "language": "python",
-      "title": "Directory Index Generator",
-      "difficulty": "advanced",
-      "order": 224,
-      "rev": "7427cd28ee08",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_build_directory_md.json"
-    },
-    {
-      "id": "python_code_refactor_build_directory_md",
-      "type": "refactor",
-      "language": "python",
-      "title": "Recursive Directory Generator",
-      "difficulty": "advanced",
-      "order": 225,
-      "rev": "0cb1b9a28584",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_build_directory_md.json"
-    },
-    {
       "id": "python_guided_practice_all_construct",
       "type": "guided",
       "language": "python",
       "title": "String Reconstruction (All Construct)",
       "difficulty": "advanced",
-      "order": 226,
+      "order": 224,
       "rev": "977b2fe65440",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_all_construct.json"
     },
@@ -2277,7 +2257,7 @@
       "language": "python",
       "title": "All Construct Index Bug",
       "difficulty": "advanced",
-      "order": 227,
+      "order": 225,
       "rev": "ec1b467e83b3",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_all_construct.json"
     },
@@ -2287,7 +2267,7 @@
       "language": "python",
       "title": "Recursive All Construct with Memoization",
       "difficulty": "advanced",
-      "order": 228,
+      "order": 226,
       "rev": "ae566fe66130",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_all_construct.json"
     }
