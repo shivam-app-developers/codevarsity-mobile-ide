@@ -372,22 +372,12 @@
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_word_count.json"
     },
     {
-      "id": "c_code_refactor_word_count",
-      "type": "refactor",
-      "language": "c",
-      "title": "Code Refactor: Standard Library Word Count",
-      "difficulty": "beginner",
-      "order": 37,
-      "rev": "de83d1617237",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_word_count.json"
-    },
-    {
       "id": "c_guided_practice_strong_number",
       "type": "guided",
       "language": "c",
       "title": "Guided Practice: Strong Number",
       "difficulty": "beginner",
-      "order": 38,
+      "order": 37,
       "rev": "0301dac46cda",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_strong_number.json"
     },
@@ -397,7 +387,7 @@
       "language": "c",
       "title": "Bug Squasher: Strong Number Loop",
       "difficulty": "beginner",
-      "order": 39,
+      "order": 38,
       "rev": "6820888bfb3b",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_strong_number.json"
     },
@@ -407,7 +397,7 @@
       "language": "c",
       "title": "Code Refactor: Factorial Lookup Table",
       "difficulty": "beginner",
-      "order": 40,
+      "order": 39,
       "rev": "2c54803786a2",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_strong_number.json"
     },
@@ -417,7 +407,7 @@
       "language": "c",
       "title": "Guided Practice: Temperature Conversion",
       "difficulty": "beginner",
-      "order": 41,
+      "order": 40,
       "rev": "f3ab4ad68667",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_temp_conv.json"
     },
@@ -427,7 +417,7 @@
       "language": "c",
       "title": "Bug Squasher: Integer Division",
       "difficulty": "beginner",
-      "order": 42,
+      "order": 41,
       "rev": "3ff7c6ef91d7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_temp_conv.json"
     },
@@ -437,7 +427,7 @@
       "language": "c",
       "title": "Code Refactor: Conversion Macros",
       "difficulty": "beginner",
-      "order": 43,
+      "order": 42,
       "rev": "3d1c89333355",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_temp_conv.json"
     },
@@ -447,7 +437,7 @@
       "language": "c",
       "title": "C Binary Search",
       "difficulty": "medium",
-      "order": 44,
+      "order": 43,
       "rev": "e61331de835f",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_binary_search.json"
     },
@@ -457,7 +447,7 @@
       "language": "c",
       "title": "Bug Squasher: Binary Search",
       "difficulty": "medium",
-      "order": 45,
+      "order": 44,
       "rev": "ed6577cf17a9",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_binary_search.json"
     },
@@ -467,7 +457,7 @@
       "language": "c",
       "title": "C Refactor: Binary Search",
       "difficulty": "medium",
-      "order": 46,
+      "order": 45,
       "rev": "f25283d60279",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_binary_search.json"
     }
