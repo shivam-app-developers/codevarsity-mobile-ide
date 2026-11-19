@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: A Stack Class",
+    "language": "javascript",
+    "description": "A stack is last-in, first-out. Wrap an array in a constructor with push, pop, peek and isEmpty methods on the prototype.",
+    "ghostCode": "function Stack() {\n  this.items = [];\n}\n\nStack.prototype.push = function (x) {\n  this.items.push(x);\n};\n\nStack.prototype.pop = function () {\n  return this.items.pop();\n};\n\nStack.prototype.peek = function () {\n  return this.items[this.items.length - 1];\n};\n\nStack.prototype.isEmpty = function () {\n  return this.items.length === 0;\n};\n\nvar s = new Stack();\ns.push(1);\ns.push(2);\ns.push(3);\nconsole.log(s.pop(), s.peek(), s.isEmpty());",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 2 false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only the First Letter Is Compared",
+    "language": "c",
+    "problemDescription": "peach should come before pear, but the sorted list puts pear first.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *fruits[] = {\"pear\", \"peach\", \"plum\", \"apple\"};\n    int n = 4;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (fruits[j][0] > fruits[j + 1][0]) {\n                const char *temp = fruits[j];\n                fruits[j] = fruits[j + 1];\n                fruits[j + 1] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < n; i++) {\n        printf(\"%s\\n\", fruits[i]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *fruits[] = {\"pear\", \"peach\", \"plum\", \"apple\"};\n    int n = 4;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (strcmp(fruits[j], fruits[j + 1]) > 0) {\n                const char *temp = fruits[j];\n                fruits[j] = fruits[j + 1];\n                fruits[j + 1] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < n; i++) {\n        printf(\"%s\\n\", fruits[i]);\n    }\n    return 0;\n}",
+      "explanation": "Comparing only the first characters treats pear, peach and plum as equal, so their order never changes. strcmp compares the whole strings and finds that peach comes before pear."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apple[ \\t]*\\r?\\npeach[ \\t]*\\r?\\npear[ \\t]*\\r?\\nplum\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

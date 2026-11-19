@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Sort and Compare Instead of Deleting Letters",
+    "language": "java",
+    "problemDescription": "Each letter of the first word is searched in a StringBuilder copy of the second word and deleted from it. Sort both char arrays and compare them with Arrays.equals. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String a = \"dusty\";\n        String b = \"study\";\n        StringBuilder rest = new StringBuilder(b);\n        boolean ok = a.length() == b.length();\n        for (int i = 0; i < a.length() && ok; i++) {\n            int found = rest.indexOf(String.valueOf(a.charAt(i)));\n            if (found == -1) {\n                ok = false;\n            } else {\n                rest.deleteCharAt(found);\n            }\n        }\n        System.out.println(ok);\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static boolean isAnagram(String a, String b) {\n        char[] x = a.toCharArray();\n        char[] y = b.toCharArray();\n        Arrays.sort(x);\n        Arrays.sort(y);\n        return Arrays.equals(x, y);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isAnagram(\"dusty\", \"study\"));\n    }\n}",
+      "explanation": "The old approach is a search and a delete for every letter. Sorting both words makes anagrams identical, so the whole check is one comparison, and it says what an anagram is."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

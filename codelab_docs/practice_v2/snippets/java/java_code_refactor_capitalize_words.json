@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Split into Words and Capitalise Each",
+    "language": "java",
+    "problemDescription": "A flag and a character loop capitalise the words. Split the sentence into words, capitalise the first letter of each, and join them again. The output must stay the same.",
+    "initialCode": "public class Main {\n    static String capitalize(String s) {\n        StringBuilder sb = new StringBuilder();\n        boolean newWord = true;\n        for (char c : s.toCharArray()) {\n            if (c == ' ') {\n                newWord = true;\n                sb.append(c);\n            } else if (newWord) {\n                sb.append(Character.toUpperCase(c));\n                newWord = false;\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(capitalize(\"red green blue\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String capitalize(String sentence) {\n        String[] words = sentence.split(\" \");\n        for (int i = 0; i < words.length; i++) {\n            words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1);\n        }\n        return String.join(\" \", words);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(capitalize(\"red green blue\"));\n    }\n}",
+      "explanation": "Working word by word matches how people think about the task and removes the state flag. String.join puts the words back together with single spaces."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Red Green Blue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

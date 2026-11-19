@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: split and map Instead of a Character Loop",
+    "language": "javascript",
+    "problemDescription": "A loop with a flag goes through every character to find the starts of words. Split into words and map. The output must stay the same.",
+    "initialCode": "var text = \"red green blue\";\nvar result = \"\";\nvar newWord = true;\nfor (var i = 0; i < text.length; i++) {\n  var c = text.charAt(i);\n  if (newWord) {\n    result += c.toUpperCase();\n  } else {\n    result += c;\n  }\n  newWord = c === \" \";\n}\nconsole.log(result);",
+    "solution": {
+      "code": "var text = \"red green blue\";\nvar result = text\n  .split(\" \")\n  .map(function (word) {\n    return word.charAt(0).toUpperCase() + word.slice(1);\n  })\n  .join(\" \");\nconsole.log(result);",
+      "explanation": "Working word by word matches how people think about the task, and the state flag disappears."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Red Green Blue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

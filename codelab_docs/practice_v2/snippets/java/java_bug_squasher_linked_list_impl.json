@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Size Is Never Updated",
+    "language": "java",
+    "problemDescription": "After adding three values the list should report size 3, but it prints size 0.",
+    "buggyCode": "public class Main {\n    static class Node {\n        int value;\n        Node next;\n\n        Node(int value) {\n            this.value = value;\n        }\n    }\n\n    static class LinkedList {\n        private Node head;\n        private int size;\n\n        void addLast(int value) {\n            Node node = new Node(value);\n            if (head == null) {\n                head = node;\n            } else {\n                Node current = head;\n                while (current.next != null) {\n                    current = current.next;\n                }\n                current.next = node;\n            }\n        }\n\n        int size() {\n            return size;\n        }\n    }\n\n    public static void main(String[] args) {\n        LinkedList list = new LinkedList();\n        list.addLast(10);\n        list.addLast(20);\n        list.addLast(30);\n        System.out.println(\"Size: \" + list.size());\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static class Node {\n        int value;\n        Node next;\n\n        Node(int value) {\n            this.value = value;\n        }\n    }\n\n    static class LinkedList {\n        private Node head;\n        private int size;\n\n        void addLast(int value) {\n            Node node = new Node(value);\n            if (head == null) {\n                head = node;\n            } else {\n                Node current = head;\n                while (current.next != null) {\n                    current = current.next;\n                }\n                current.next = node;\n            }\n            size++;\n        }\n\n        int size() {\n            return size;\n        }\n    }\n\n    public static void main(String[] args) {\n        LinkedList list = new LinkedList();\n        list.addLast(10);\n        list.addLast(20);\n        list.addLast(30);\n        System.out.println(\"Size: \" + list.size());\n    }\n}",
+      "explanation": "Linking the node into the chain does not change the size field. The counter has to be incremented once per added node, whichever branch (empty list or not) was taken."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Size: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

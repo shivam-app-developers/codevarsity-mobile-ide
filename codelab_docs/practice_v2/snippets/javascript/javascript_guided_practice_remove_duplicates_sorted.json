@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Remove Duplicates from a Sorted Array",
+    "language": "javascript",
+    "description": "In a sorted array duplicates sit next to each other. Copy an item forward only when it differs from the last one kept, then cut the array to the new length.",
+    "ghostCode": "function removeDuplicates(list) {\n  if (list.length === 0) {\n    return 0;\n  }\n  var write = 1;\n  for (var read = 1; read < list.length; read++) {\n    if (list[read] !== list[write - 1]) {\n      list[write++] = list[read];\n    }\n  }\n  list.length = write;\n  return write;\n}\n\nvar data = [1, 1, 2, 3, 3, 3, 4];\nconsole.log(removeDuplicates(data));\nconsole.log(data);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4[ \\t]*\\r?\\n\\[1,2,3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

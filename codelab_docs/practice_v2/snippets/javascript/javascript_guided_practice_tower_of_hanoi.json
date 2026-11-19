@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Tower of Hanoi",
+    "language": "javascript",
+    "description": "To move n disks, move n - 1 disks out of the way, move the biggest disk, then move the n - 1 disks back on top of it.",
+    "ghostCode": "function hanoi(n, from, to, via, moves) {\n  if (n === 0) {\n    return;\n  }\n  hanoi(n - 1, from, via, to, moves);\n  moves.push(from + \"->\" + to);\n  hanoi(n - 1, via, to, from, moves);\n}\n\nvar moves = [];\nhanoi(3, \"A\", \"C\", \"B\", moves);\nconsole.log(moves.length);\nconsole.log(moves.join(\" \"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7[ \\t]*\\r?\\nA->C A->B C->B A->C B->A B->C A->C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

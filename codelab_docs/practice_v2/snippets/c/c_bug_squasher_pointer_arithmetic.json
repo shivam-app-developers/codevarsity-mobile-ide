@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Missing Parentheses Around p + i",
+    "language": "c",
+    "problemDescription": "The elements 5, 10, 15 and 20 add up to 50, but the program prints sum = 26.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {5, 10, 15, 20};\n    int *p = a;\n    int sum = 0;\n    for (int i = 0; i < 4; i++) {\n        sum += *p + i;\n    }\n    printf(\"sum = %d\\n\", sum);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {5, 10, 15, 20};\n    int *p = a;\n    int sum = 0;\n    for (int i = 0; i < 4; i++) {\n        sum += *(p + i);\n    }\n    printf(\"sum = %d\\n\", sum);\n    return 0;\n}",
+      "explanation": "The * operator binds tighter than +, so *p + i reads the first element and adds i to the value. The parentheses in *(p + i) move the address first and then read that element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*sum = 50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

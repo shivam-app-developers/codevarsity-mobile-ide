@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Running Counter Instead of a Formula",
+    "language": "c",
+    "problemDescription": "Each number is computed from the row and column with a formula inside two while loops. Use for loops and a counter that simply increases. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int r = 1;\n    while (r <= 4) {\n        int c = 1;\n        while (c <= r) {\n            printf(\"%d \", (r * (r - 1)) / 2 + c);\n            c = c + 1;\n        }\n        printf(\"\\n\");\n        r = r + 1;\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int next = 1;\n    for (int row = 1; row <= 4; row++) {\n        for (int col = 1; col <= row; col++) {\n            printf(\"%d \", next++);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Counting upwards is simpler than deriving each number from its position, and for loops keep the initialisation, test and update of the counters in one place."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2 3[ \\t]*\\r?\\n4 5 6[ \\t]*\\r?\\n7 8 9 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

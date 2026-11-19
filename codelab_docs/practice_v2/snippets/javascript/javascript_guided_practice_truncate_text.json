@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Truncate Long Text",
+    "language": "javascript",
+    "description": "Return the text unchanged if it fits. Otherwise cut it so that the text plus the three dots is exactly the maximum length.",
+    "ghostCode": "function truncate(text, max) {\n  if (text.length <= max) {\n    return text;\n  }\n  return text.slice(0, max - 3) + \"...\";\n}\n\nconsole.log(truncate(\"Hello, world\", 20));\nconsole.log(truncate(\"The quick brown fox\", 10));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, world[ \\t]*\\r?\\nThe qui\\.\\.\\.\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

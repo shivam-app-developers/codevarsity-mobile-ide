@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Last Digit Is Skipped",
+    "language": "c",
+    "problemDescription": "The digits of 305 add up to 8, but the program prints 5. One digit never gets added.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int n = 305;\n    int sum = 0;\n    while (n > 9) {\n        sum += n % 10;\n        n /= 10;\n    }\n    printf(\"Digit sum: %d\\n\", sum);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int n = 305;\n    int sum = 0;\n    while (n > 0) {\n        sum += n % 10;\n        n /= 10;\n    }\n    printf(\"Digit sum: %d\\n\", sum);\n    return 0;\n}",
+      "explanation": "With n > 9 the loop stops as soon as one digit is left, so the first digit (3) is never added. The loop must run while any digit remains, which is n > 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Digit sum: 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

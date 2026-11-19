@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Give hashCode a Real Value",
+    "language": "java",
+    "problemDescription": "hashCode returns the constant 1 for every point. That is valid but puts every object in the same bucket. Compute it from x and y. The output must stay the same.",
+    "initialCode": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Set<Point> set = new HashSet<>();\n        for (int i = 0; i < 5; i++) {\n            set.add(new Point(i % 3, 0));\n        }\n        System.out.println(set.size());\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public boolean equals(Object o) {\n        if (!(o instanceof Point)) {\n            return false;\n        }\n        Point p = (Point) o;\n        return x == p.x && y == p.y;\n    }\n\n    @Override\n    public int hashCode() {\n        return 1;\n    }\n}",
+    "solution": {
+      "code": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Set<Point> set = new HashSet<>();\n        for (int i = 0; i < 5; i++) {\n            set.add(new Point(i % 3, 0));\n        }\n        System.out.println(set.size());\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public boolean equals(Object o) {\n        if (!(o instanceof Point)) {\n            return false;\n        }\n        Point p = (Point) o;\n        return x == p.x && y == p.y;\n    }\n\n    @Override\n    public int hashCode() {\n        return 31 * x + y;\n    }\n}",
+      "explanation": "A constant hashCode is legal but turns every lookup into a linear scan of one giant bucket. Spreading the hashes with the fields used by equals keeps lookups fast."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

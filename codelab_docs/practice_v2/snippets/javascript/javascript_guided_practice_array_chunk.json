@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Split an Array into Chunks",
+    "language": "javascript",
+    "description": "Step through the array in jumps of the chunk size and take a slice at each stop. slice does not include its end index.",
+    "ghostCode": "function chunk(list, size) {\n  var chunks = [];\n  for (var i = 0; i < list.length; i += size) {\n    chunks.push(list.slice(i, i + size));\n  }\n  return chunks;\n}\n\nconsole.log(chunk([1, 2, 3, 4, 5, 6, 7], 3));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,2,3\\],\\[4,5,6\\],\\[7\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

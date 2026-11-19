@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Constructor Functions and new",
+    "language": "javascript",
+    "description": "A constructor function is called with new, which creates an object and makes this point to it. Shared methods go on the prototype.",
+    "ghostCode": "function Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\nPerson.prototype.describe = function () {\n  return this.name + \" is \" + this.age;\n};\n\nvar p = new Person(\"Asha\", 30);\nconsole.log(p.describe());\nconsole.log(p instanceof Person);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha is 30[ \\t]*\\r?\\ntrue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

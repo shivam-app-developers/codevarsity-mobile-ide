@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Rule for Every Position",
+    "language": "c",
+    "problemDescription": "The first character gets special handling, and the loop then checks the previous character with magic number 32. Write a capitalize function with one rule that covers every position. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"red green blue\";\n    if (s[0] >= 'a' && s[0] <= 'z') {\n        s[0] = s[0] - 32;\n    }\n    for (int i = 1; s[i] != '\\0'; i++) {\n        if (s[i - 1] == ' ') {\n            if (s[i] >= 'a' && s[i] <= 'z') {\n                s[i] = s[i] - 32;\n            }\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <ctype.h>\n\nvoid capitalize(char *s) {\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (i == 0 || s[i - 1] == ' ') {\n            s[i] = toupper(s[i]);\n        }\n    }\n}\n\nint main() {\n    char s[] = \"red green blue\";\n    capitalize(s);\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+      "explanation": "A character starts a word when it is first or follows a space. One condition covers both cases, toupper leaves non-letters alone, and the logic is packaged in a reusable function."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Red Green Blue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

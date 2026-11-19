@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse the Order of Words",
+    "language": "javascript",
+    "description": "Split the sentence at the spaces, reverse the array of words and join it with spaces again.",
+    "ghostCode": "function reverseWords(sentence) {\n  return sentence.split(\" \").reverse().join(\" \");\n}\n\nconsole.log(reverseWords(\"one two three\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*three two one\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

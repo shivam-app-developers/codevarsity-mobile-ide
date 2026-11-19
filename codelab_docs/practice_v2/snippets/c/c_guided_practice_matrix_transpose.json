@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Transpose a Matrix",
+    "language": "c",
+    "description": "The transpose swaps rows and columns: element (i, j) moves to (j, i). A 2 x 3 matrix becomes 3 x 2.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int m[2][3] = {{1, 2, 3}, {4, 5, 6}};\n    int t[3][2];\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 3; j++) {\n            t[j][i] = m[i][j];\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d\\n\", t[i][0], t[i][1]);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 4[ \\t]*\\r?\\n2 5[ \\t]*\\r?\\n3 6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

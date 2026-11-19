@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Move Goes to the Wrong Peg",
+    "language": "c",
+    "problemDescription": "With 2 disks the last move should be disk 1 from B to C, but the program prints disk 1 from B to A.",
+    "buggyCode": "#include <stdio.h>\n\nvoid hanoi(int n, char from, char to, char via) {\n    if (n == 0) {\n        return;\n    }\n    hanoi(n - 1, from, via, to);\n    printf(\"Move disk %d from %c to %c\\n\", n, from, to);\n    hanoi(n - 1, via, from, to);\n}\n\nint main() {\n    hanoi(2, 'A', 'C', 'B');\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid hanoi(int n, char from, char to, char via) {\n    if (n == 0) {\n        return;\n    }\n    hanoi(n - 1, from, via, to);\n    printf(\"Move disk %d from %c to %c\\n\", n, from, to);\n    hanoi(n - 1, via, to, from);\n}\n\nint main() {\n    hanoi(2, 'A', 'C', 'B');\n    return 0;\n}",
+      "explanation": "After the big disk reaches the target peg, the smaller tower must travel from the helper peg to the target, so the arguments are (via, to, from). Swapping to and from sends the small tower back to where it started."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Move disk 1 from A to B[ \\t]*\\r?\\nMove disk 2 from A to C[ \\t]*\\r?\\nMove disk 1 from B to C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

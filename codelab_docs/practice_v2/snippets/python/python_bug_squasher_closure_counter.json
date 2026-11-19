@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Assigning Without nonlocal",
+    "language": "python",
+    "problemDescription": "Calling the counter should print 1 and then 2, but the program crashes with an UnboundLocalError.",
+    "buggyCode": "def make_counter():\n    count = 0\n\n    def increment():\n\n        count += 1\n        return count\n\n    return increment\n\n\ncounter = make_counter()\nprint(counter())\nprint(counter())",
+    "solution": {
+      "code": "def make_counter():\n    count = 0\n\n    def increment():\n        nonlocal count\n        count += 1\n        return count\n\n    return increment\n\n\ncounter = make_counter()\nprint(counter())\nprint(counter())",
+      "explanation": "count += 1 assigns to count, so Python treats count as a local variable of increment, which has no value yet. nonlocal count says it is the variable of the enclosing function."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

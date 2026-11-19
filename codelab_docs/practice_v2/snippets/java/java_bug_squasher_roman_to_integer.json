@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Subtractive Pairs Are Added",
+    "language": "java",
+    "problemDescription": "IV is 4, but the program prints 6, and MCMXCIV prints 2216 instead of 1994.",
+    "buggyCode": "public class Main {\n    static int value(char c) {\n        int[] values = {1, 5, 10, 50, 100, 500, 1000};\n        return values[\"IVXLCDM\".indexOf(c)];\n    }\n\n    static int romanToInt(String s) {\n        int total = 0;\n        for (int i = 0; i < s.length(); i++) {\n            int current = value(s.charAt(i));\n            if (i + 1 < s.length() && current < value(s.charAt(i + 1))) {\n                total += current;\n            } else {\n                total += current;\n            }\n        }\n        return total;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(romanToInt(\"IV\"));\n        System.out.println(romanToInt(\"MCMXCIV\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int value(char c) {\n        int[] values = {1, 5, 10, 50, 100, 500, 1000};\n        return values[\"IVXLCDM\".indexOf(c)];\n    }\n\n    static int romanToInt(String s) {\n        int total = 0;\n        for (int i = 0; i < s.length(); i++) {\n            int current = value(s.charAt(i));\n            if (i + 1 < s.length() && current < value(s.charAt(i + 1))) {\n                total -= current;\n            } else {\n                total += current;\n            }\n        }\n        return total;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(romanToInt(\"IV\"));\n        System.out.println(romanToInt(\"MCMXCIV\"));\n    }\n}",
+      "explanation": "When a smaller symbol stands in front of a bigger one, it is subtracted: IV is 5 - 1. Adding every symbol turns IV into 1 + 5 = 6."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4[ \\t]*\\r?\\n1994\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

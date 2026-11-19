@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Function Runs Every Time",
+    "language": "javascript",
+    "problemDescription": "initializing should be printed only once, but it is printed on both calls.",
+    "buggyCode": "function once(fn) {\n  var called = false;\n  var result;\n  return function () {\n    if (!called) {\n\n      result = fn.apply(this, arguments);\n    }\n    return result;\n  };\n}\n\nvar init = once(function () {\n  console.log(\"initializing\");\n  return 42;\n});\ninit();\ninit();",
+    "solution": {
+      "code": "function once(fn) {\n  var called = false;\n  var result;\n  return function () {\n    if (!called) {\n      called = true;\n      result = fn.apply(this, arguments);\n    }\n    return result;\n  };\n}\n\nvar init = once(function () {\n  console.log(\"initializing\");\n  return 42;\n});\ninit();\ninit();",
+      "explanation": "Nothing records that the function has run, because the flag called is never set. The flag must be set to true the first time, so later calls skip the body."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*initializing\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

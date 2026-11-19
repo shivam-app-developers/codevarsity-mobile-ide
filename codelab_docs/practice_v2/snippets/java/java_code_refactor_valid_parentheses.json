@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Stack Instead of Repeated Replacing",
+    "language": "java",
+    "problemDescription": "The method deletes the pairs () [] {} again and again until nothing changes, copying the string every round. Use a stack instead. The output must stay the same.",
+    "initialCode": "public class Main {\n    static boolean isValid(String s) {\n        while (s.contains(\"()\") || s.contains(\"[]\") || s.contains(\"{}\")) {\n            s = s.replace(\"()\", \"\");\n            s = s.replace(\"[]\", \"\");\n            s = s.replace(\"{}\", \"\");\n        }\n        return s.length() == 0;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isValid(\"({[]})\"));\n        System.out.println(isValid(\"([)]\"));\n        System.out.println(isValid(\"(((\"));\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    static boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') {\n                stack.push(c);\n            } else {\n                if (stack.isEmpty()) {\n                    return false;\n                }\n                char open = stack.pop();\n                if ((c == ')' && open != '(') || (c == ']' && open != '[')\n                        || (c == '}' && open != '{')) {\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isValid(\"({[]})\"));\n        System.out.println(isValid(\"([)]\"));\n        System.out.println(isValid(\"(((\"));\n    }\n}",
+      "explanation": "Repeated replacing can take n squared steps and copies the string each time. A stack checks the text in a single pass and also reports the first wrong bracket immediately."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

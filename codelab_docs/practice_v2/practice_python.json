@@ -9,7 +9,7 @@
       "difficulty": "beginner",
       "order": 0,
       "rev": "9748538da110",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_a1z26.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_a1z26.json"
     },
     {
       "id": "python_bug_squasher_a1z26",
@@ -19,7 +19,7 @@
       "difficulty": "beginner",
       "order": 1,
       "rev": "fbd9d1c77197",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_a1z26.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_a1z26.json"
     },
     {
       "id": "python_code_refactor_a1z26",
@@ -29,7 +29,7 @@
       "difficulty": "beginner",
       "order": 2,
       "rev": "f60cf464ad1f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_a1z26.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_a1z26.json"
     },
     {
       "id": "python_guided_practice_aliquot_sum",
@@ -39,7 +39,7 @@
       "difficulty": "beginner",
       "order": 3,
       "rev": "8e77dab13b4e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_aliquot_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_aliquot_sum.json"
     },
     {
       "id": "python_bug_squasher_aliquot_sum",
@@ -49,7 +49,7 @@
       "difficulty": "medium",
       "order": 4,
       "rev": "948e94d2773a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_aliquot_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_aliquot_sum.json"
     },
     {
       "id": "python_code_refactor_aliquot_sum",
@@ -59,7 +59,7 @@
       "difficulty": "advanced",
       "order": 5,
       "rev": "0471d495c464",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_aliquot_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_aliquot_sum.json"
     },
     {
       "id": "python_guided_practice_alternative_list_arrange",
@@ -69,7 +69,7 @@
       "difficulty": "beginner",
       "order": 6,
       "rev": "c3d48e9a98c8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_alternative_list_arrange.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_alternative_list_arrange.json"
     },
     {
       "id": "python_bug_squasher_alternative_list_arrange",
@@ -79,7 +79,7 @@
       "difficulty": "beginner",
       "order": 7,
       "rev": "cccd2aa5b29b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_alternative_list_arrange.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_alternative_list_arrange.json"
     },
     {
       "id": "python_guided_practice_alternative_string_arrange",
@@ -89,7 +89,7 @@
       "difficulty": "beginner",
       "order": 8,
       "rev": "59aca7997671",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_alternative_string_arrange.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_alternative_string_arrange.json"
     },
     {
       "id": "python_code_refactor_alternative_string_arrange",
@@ -99,7 +99,7 @@
       "difficulty": "medium",
       "order": 9,
       "rev": "b96000e2e3fb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_alternative_string_arrange.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_alternative_string_arrange.json"
     },
     {
       "id": "python_guided_practice_and_gate",
@@ -109,7 +109,7 @@
       "difficulty": "beginner",
       "order": 10,
       "rev": "160770553051",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_and_gate.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_and_gate.json"
     },
     {
       "id": "python_bug_squasher_and_gate",
@@ -119,7 +119,7 @@
       "difficulty": "beginner",
       "order": 11,
       "rev": "75be1477d68e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_and_gate.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_and_gate.json"
     },
     {
       "id": "python_code_refactor_and_gate",
@@ -129,7 +129,7 @@
       "difficulty": "medium",
       "order": 12,
       "rev": "fe92de45245b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_and_gate.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_and_gate.json"
     },
     {
       "id": "python_guided_practice_arc_length",
@@ -139,7 +139,7 @@
       "difficulty": "beginner",
       "order": 13,
       "rev": "698aaca10156",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_arc_length.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_arc_length.json"
     },
     {
       "id": "python_bug_squasher_arc_length",
@@ -149,7 +149,7 @@
       "difficulty": "beginner",
       "order": 14,
       "rev": "a8240ef44f1a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_arc_length.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_arc_length.json"
     },
     {
       "id": "python_guided_practice_average_mean",
@@ -159,7 +159,7 @@
       "difficulty": "beginner",
       "order": 15,
       "rev": "69cfdd4d20cc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_mean.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_mean.json"
     },
     {
       "id": "python_bug_squasher_average_mean",
@@ -169,7 +169,7 @@
       "difficulty": "beginner",
       "order": 16,
       "rev": "4fa6fa6d7f93",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_mean.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_mean.json"
     },
     {
       "id": "python_guided_practice_average_absolute_deviation",
@@ -179,7 +179,7 @@
       "difficulty": "beginner",
       "order": 17,
       "rev": "9d700e58b1fc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_absolute_deviation.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_absolute_deviation.json"
     },
     {
       "id": "python_bug_squasher_average_absolute_deviation",
@@ -189,7 +189,7 @@
       "difficulty": "beginner",
       "order": 18,
       "rev": "6d0c50133d74",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_absolute_deviation.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_absolute_deviation.json"
     },
     {
       "id": "python_code_refactor_average_absolute_deviation",
@@ -199,7 +199,7 @@
       "difficulty": "medium",
       "order": 19,
       "rev": "046713c91c5e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_absolute_deviation.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_absolute_deviation.json"
     },
     {
       "id": "python_guided_practice_binary_count_setbits",
@@ -209,7 +209,7 @@
       "difficulty": "beginner",
       "order": 20,
       "rev": "b53668a11069",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_count_setbits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_count_setbits.json"
     },
     {
       "id": "python_bug_squasher_binary_count_setbits",
@@ -219,7 +219,7 @@
       "difficulty": "medium",
       "order": 21,
       "rev": "c6f3222ad0d0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_count_setbits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_count_setbits.json"
     },
     {
       "id": "python_code_refactor_binary_count_setbits",
@@ -229,7 +229,7 @@
       "difficulty": "medium",
       "order": 22,
       "rev": "993c73e5b3cb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_count_setbits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_count_setbits.json"
     },
     {
       "id": "python_guided_practice_binary_step",
@@ -239,7 +239,7 @@
       "difficulty": "beginner",
       "order": 23,
       "rev": "dfc3ddf12cbe",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_step.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_step.json"
     },
     {
       "id": "python_bug_squasher_binary_step",
@@ -249,7 +249,7 @@
       "difficulty": "beginner",
       "order": 24,
       "rev": "1c343053f436",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_step.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_step.json"
     },
     {
       "id": "python_guided_practice_binary_to_decimal",
@@ -259,7 +259,7 @@
       "difficulty": "beginner",
       "order": 25,
       "rev": "55e4cbcc0fa3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_to_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_to_decimal.json"
     },
     {
       "id": "python_bug_squasher_binary_to_decimal",
@@ -269,7 +269,7 @@
       "difficulty": "beginner",
       "order": 26,
       "rev": "9f503351f195",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_to_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_to_decimal.json"
     },
     {
       "id": "python_code_refactor_binary_to_decimal",
@@ -279,7 +279,7 @@
       "difficulty": "beginner",
       "order": 27,
       "rev": "99a70d39b849",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_to_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_to_decimal.json"
     },
     {
       "id": "python_guided_practice_butterfly_pattern",
@@ -289,7 +289,7 @@
       "difficulty": "beginner",
       "order": 28,
       "rev": "61a7fc39b970",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_butterfly_pattern.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_butterfly_pattern.json"
     },
     {
       "id": "python_bug_squasher_butterfly_pattern",
@@ -299,7 +299,7 @@
       "difficulty": "beginner",
       "order": 29,
       "rev": "1aa93d83bd86",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_butterfly_pattern.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_butterfly_pattern.json"
     },
     {
       "id": "python_code_refactor_butterfly_pattern",
@@ -309,7 +309,7 @@
       "difficulty": "medium",
       "order": 30,
       "rev": "8a537704f3a1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_butterfly_pattern.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_butterfly_pattern.json"
     },
     {
       "id": "python_guided_practice_capacitor_equivalence",
@@ -319,7 +319,7 @@
       "difficulty": "beginner",
       "order": 31,
       "rev": "588660779072",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_capacitor_equivalence.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_capacitor_equivalence.json"
     },
     {
       "id": "python_bug_squasher_capacitor_equivalence",
@@ -329,7 +329,7 @@
       "difficulty": "beginner",
       "order": 32,
       "rev": "66ad9363759d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_capacitor_equivalence.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_capacitor_equivalence.json"
     },
     {
       "id": "python_code_refactor_capacitor_equivalence",
@@ -339,7 +339,7 @@
       "difficulty": "medium",
       "order": 33,
       "rev": "a13492853f6f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_capacitor_equivalence.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_capacitor_equivalence.json"
     },
     {
       "id": "python_guided_practice_centripetal_force",
@@ -349,7 +349,7 @@
       "difficulty": "beginner",
       "order": 34,
       "rev": "88ff7d997626",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_centripetal_force.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_centripetal_force.json"
     },
     {
       "id": "python_bug_squasher_centripetal_force",
@@ -359,7 +359,7 @@
       "difficulty": "beginner",
       "order": 35,
       "rev": "06662ae97ee4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_centripetal_force.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_centripetal_force.json"
     },
     {
       "id": "python_guided_practice_problem_040_sol1",
@@ -369,7 +369,7 @@
       "difficulty": "beginner",
       "order": 36,
       "rev": "372b64c46e49",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_040_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_040_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_040_sol1",
@@ -379,7 +379,7 @@
       "difficulty": "beginner",
       "order": 37,
       "rev": "8a200a563b4c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_040_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_040_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_040_sol1",
@@ -389,7 +389,7 @@
       "difficulty": "medium",
       "order": 38,
       "rev": "18f8c26d82f3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_040_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_040_sol1.json"
     },
     {
       "id": "python_guided_practice_check_polygon",
@@ -399,7 +399,7 @@
       "difficulty": "beginner",
       "order": 39,
       "rev": "cdfc3034c80b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_polygon.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_polygon.json"
     },
     {
       "id": "python_bug_squasher_check_polygon",
@@ -409,7 +409,7 @@
       "difficulty": "beginner",
       "order": 40,
       "rev": "05cea081ee90",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_polygon.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_polygon.json"
     },
     {
       "id": "python_code_refactor_check_polygon",
@@ -419,7 +419,7 @@
       "difficulty": "medium",
       "order": 41,
       "rev": "12021b9024d6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_check_polygon.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_check_polygon.json"
     },
     {
       "id": "python_guided_practice_problem_053_sol1",
@@ -429,7 +429,7 @@
       "difficulty": "beginner",
       "order": 42,
       "rev": "02f58443304b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_053_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_053_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_053_sol1",
@@ -439,7 +439,7 @@
       "difficulty": "medium",
       "order": 43,
       "rev": "fa4fc1abae9b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_053_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_053_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_029_sol1",
@@ -449,7 +449,7 @@
       "difficulty": "beginner",
       "order": 44,
       "rev": "fa0a7cf3c923",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_029_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_029_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_029_sol1",
@@ -459,7 +459,7 @@
       "difficulty": "beginner",
       "order": 45,
       "rev": "e86955ea4b6b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_029_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_029_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_029_sol1",
@@ -469,7 +469,97 @@
       "difficulty": "beginner",
       "order": 46,
       "rev": "d6b0e854eb21",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_029_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_029_sol1.json"
+    },
+    {
+      "id": "python_guided_practice_counter_words",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Counting with Counter",
+      "difficulty": "beginner",
+      "order": 47,
+      "rev": "6d9874ecb307",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_counter_words.json"
+    },
+    {
+      "id": "python_bug_squasher_counter_words",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Letters Are Counted Instead of Words",
+      "difficulty": "beginner",
+      "order": 48,
+      "rev": "d4a48218e275",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_counter_words.json"
+    },
+    {
+      "id": "python_code_refactor_counter_words",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Counter Instead of a Dictionary and a Sort",
+      "difficulty": "beginner",
+      "order": 49,
+      "rev": "584b6d2704f6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_counter_words.json"
+    },
+    {
+      "id": "python_guided_practice_fizzbuzz",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: FizzBuzz",
+      "difficulty": "beginner",
+      "order": 50,
+      "rev": "fd37aaf1239b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_fizzbuzz.json"
+    },
+    {
+      "id": "python_bug_squasher_fizzbuzz",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Combined Case Is Checked Last",
+      "difficulty": "beginner",
+      "order": 51,
+      "rev": "823a6409d8dd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_fizzbuzz.json"
+    },
+    {
+      "id": "python_code_refactor_fizzbuzz",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Build the Word from Parts",
+      "difficulty": "beginner",
+      "order": 52,
+      "rev": "ab7688e6baaf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_fizzbuzz.json"
+    },
+    {
+      "id": "python_guided_practice_comprehensions",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: List, Dict and Set Comprehensions",
+      "difficulty": "beginner",
+      "order": 53,
+      "rev": "b66a99c171c1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_comprehensions.json"
+    },
+    {
+      "id": "python_bug_squasher_comprehensions",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The for Clauses Are in the Wrong Order",
+      "difficulty": "beginner",
+      "order": 54,
+      "rev": "ba5c65b8b0f8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_comprehensions.json"
+    },
+    {
+      "id": "python_code_refactor_comprehensions",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Comprehension Instead of a Loop with append",
+      "difficulty": "beginner",
+      "order": 55,
+      "rev": "2728411daeb0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_comprehensions.json"
     },
     {
       "id": "python_guided_practice_problem_097_sol1",
@@ -477,9 +567,9 @@
       "language": "python",
       "title": "Large Non-Mersenne Prime",
       "difficulty": "beginner",
-      "order": 47,
+      "order": 56,
       "rev": "29d731deb0ff",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_097_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_097_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_097_sol1",
@@ -487,9 +577,9 @@
       "language": "python",
       "title": "Large Non-Mersenne Prime",
       "difficulty": "beginner",
-      "order": 48,
+      "order": 57,
       "rev": "2a558c762fc4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_097_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_097_sol1.json"
     },
     {
       "id": "python_guided_practice_ceil",
@@ -497,9 +587,9 @@
       "language": "python",
       "title": "Manual Ceil Function",
       "difficulty": "beginner",
-      "order": 49,
+      "order": 58,
       "rev": "523333e505a2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_ceil.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_ceil.json"
     },
     {
       "id": "python_bug_squasher_ceil",
@@ -507,9 +597,9 @@
       "language": "python",
       "title": "Ceiling Negative Number Bug",
       "difficulty": "beginner",
-      "order": 50,
+      "order": 59,
       "rev": "6bd55e4d1db8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_ceil.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_ceil.json"
     },
     {
       "id": "python_code_refactor_ceil",
@@ -517,9 +607,9 @@
       "language": "python",
       "title": "Using `math.ceil()` Built-in",
       "difficulty": "beginner",
-      "order": 51,
+      "order": 60,
       "rev": "287f12247c21",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_ceil.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_ceil.json"
     },
     {
       "id": "python_guided_practice_problem_052_sol1",
@@ -527,9 +617,9 @@
       "language": "python",
       "title": "Permuted Multiples",
       "difficulty": "beginner",
-      "order": 52,
+      "order": 61,
       "rev": "b4c9f833dc65",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_052_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_052_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_052_sol1",
@@ -537,9 +627,9 @@
       "language": "python",
       "title": "Permuted Multiples",
       "difficulty": "beginner",
-      "order": 53,
+      "order": 62,
       "rev": "752858e31333",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_052_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_052_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_056_sol1",
@@ -547,9 +637,9 @@
       "language": "python",
       "title": "Powerful Digit Sum",
       "difficulty": "beginner",
-      "order": 54,
+      "order": 63,
       "rev": "1ba087ffd3f4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_056_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_056_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_056_sol1",
@@ -557,9 +647,9 @@
       "language": "python",
       "title": "Powerful Digit Sum",
       "difficulty": "beginner",
-      "order": 55,
+      "order": 64,
       "rev": "7b255f55f6c1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_056_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_056_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_048_sol1",
@@ -567,9 +657,9 @@
       "language": "python",
       "title": "Self Powers",
       "difficulty": "beginner",
-      "order": 56,
+      "order": 65,
       "rev": "870b2e468de3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_048_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_048_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_048_sol1",
@@ -577,9 +667,9 @@
       "language": "python",
       "title": "Self Powers",
       "difficulty": "beginner",
-      "order": 57,
+      "order": 66,
       "rev": "bf1f35a6a986",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_048_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_048_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_048_sol1",
@@ -587,9 +677,9 @@
       "language": "python",
       "title": "Self Powers",
       "difficulty": "beginner",
-      "order": 58,
+      "order": 67,
       "rev": "f89adc0e96ff",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_048_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_048_sol1.json"
     },
     {
       "id": "python_guided_practice_capitalize",
@@ -597,9 +687,9 @@
       "language": "python",
       "title": "String Capitalization",
       "difficulty": "beginner",
-      "order": 59,
+      "order": 68,
       "rev": "aa6349d4d608",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_capitalize.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_capitalize.json"
     },
     {
       "id": "python_bug_squasher_capitalize",
@@ -607,9 +697,9 @@
       "language": "python",
       "title": "Capitalization Empty String Bug",
       "difficulty": "beginner",
-      "order": 60,
+      "order": 69,
       "rev": "704bc15c0652",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_capitalize.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_capitalize.json"
     },
     {
       "id": "python_code_refactor_capitalize",
@@ -617,9 +707,9 @@
       "language": "python",
       "title": "Using `str.capitalize()` Built-in",
       "difficulty": "beginner",
-      "order": 61,
+      "order": 70,
       "rev": "b44f70e2ab72",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_capitalize.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_capitalize.json"
     },
     {
       "id": "python_guided_practice_addition_without_arithmetic",
@@ -627,9 +717,9 @@
       "language": "python",
       "title": "Addition Without Arithmetic",
       "difficulty": "medium",
-      "order": 62,
+      "order": 71,
       "rev": "0212510aa40a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_addition_without_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_addition_without_arithmetic.json"
     },
     {
       "id": "python_bug_squasher_addition_without_arithmetic",
@@ -637,9 +727,9 @@
       "language": "python",
       "title": "Bitwise Addition Logic Bug",
       "difficulty": "medium",
-      "order": 63,
+      "order": 72,
       "rev": "83ffd341eca5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_addition_without_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_addition_without_arithmetic.json"
     },
     {
       "id": "python_code_refactor_addition_without_arithmetic",
@@ -647,9 +737,9 @@
       "language": "python",
       "title": "Recursive Bitwise Addition",
       "difficulty": "advanced",
-      "order": 64,
+      "order": 73,
       "rev": "c9f4b54e4770",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_addition_without_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_addition_without_arithmetic.json"
     },
     {
       "id": "python_guided_practice_adler32",
@@ -657,9 +747,9 @@
       "language": "python",
       "title": "Adler-32 Checksum",
       "difficulty": "medium",
-      "order": 65,
+      "order": 74,
       "rev": "7cce93889b1e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_adler32.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_adler32.json"
     },
     {
       "id": "python_code_refactor_adler32",
@@ -667,9 +757,9 @@
       "language": "python",
       "title": "Optimizing Adler-32 with `functools`",
       "difficulty": "advanced",
-      "order": 66,
+      "order": 75,
       "rev": "447e3b5114c4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_adler32.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_adler32.json"
     },
     {
       "id": "python_guided_practice_problem_094_sol1",
@@ -677,9 +767,9 @@
       "language": "python",
       "title": "Almost Equilateral Triangles",
       "difficulty": "medium",
-      "order": 67,
+      "order": 76,
       "rev": "085fd132cea4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_094_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_094_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_094_sol1",
@@ -687,9 +777,9 @@
       "language": "python",
       "title": "Almost Equilateral Triangles",
       "difficulty": "medium",
-      "order": 68,
+      "order": 77,
       "rev": "cd4abffe80f0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_094_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_094_sol1.json"
     },
     {
       "id": "python_guided_practice_altitude_pressure",
@@ -697,9 +787,9 @@
       "language": "python",
       "title": "Altitude from Pressure",
       "difficulty": "medium",
-      "order": 69,
+      "order": 78,
       "rev": "c6c37826f4c6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_altitude_pressure.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_altitude_pressure.json"
     },
     {
       "id": "python_bug_squasher_altitude_pressure",
@@ -707,9 +797,9 @@
       "language": "python",
       "title": "Barometric Formula Bug",
       "difficulty": "medium",
-      "order": 70,
+      "order": 79,
       "rev": "c5ec69abb013",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_altitude_pressure.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_altitude_pressure.json"
     },
     {
       "id": "python_code_refactor_altitude_pressure",
@@ -717,9 +807,9 @@
       "language": "python",
       "title": "Clean Barometric Formula Constants",
       "difficulty": "medium",
-      "order": 71,
+      "order": 80,
       "rev": "824e20931ebe",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_altitude_pressure.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_altitude_pressure.json"
     },
     {
       "id": "python_guided_practice_problem_021_sol1",
@@ -727,9 +817,9 @@
       "language": "python",
       "title": "Amicable Numbers",
       "difficulty": "medium",
-      "order": 72,
+      "order": 81,
       "rev": "fff67bf1867b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_021_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_021_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_021_sol1",
@@ -737,9 +827,9 @@
       "language": "python",
       "title": "Amicable Numbers",
       "difficulty": "medium",
-      "order": 73,
+      "order": 82,
       "rev": "4e32f23a448f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_021_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_021_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_021_sol1",
@@ -747,9 +837,9 @@
       "language": "python",
       "title": "Amicable Numbers",
       "difficulty": "medium",
-      "order": 74,
+      "order": 83,
       "rev": "84251527a708",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_021_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_021_sol1.json"
     },
     {
       "id": "python_guided_practice_anagrams",
@@ -757,9 +847,9 @@
       "language": "python",
       "title": "Anagram Signature Calculation",
       "difficulty": "medium",
-      "order": 75,
+      "order": 84,
       "rev": "25971a0ae9c3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_anagrams.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_anagrams.json"
     },
     {
       "id": "python_bug_squasher_anagrams",
@@ -767,9 +857,9 @@
       "language": "python",
       "title": "Anagram Signature Case Bug",
       "difficulty": "medium",
-      "order": 76,
+      "order": 85,
       "rev": "e238467a57df",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_anagrams.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_anagrams.json"
     },
     {
       "id": "python_guided_practice_check_anagrams",
@@ -777,9 +867,9 @@
       "language": "python",
       "title": "Anagram Verification",
       "difficulty": "medium",
-      "order": 77,
+      "order": 86,
       "rev": "03c1ae410629",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_anagrams.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_anagrams.json"
     },
     {
       "id": "python_bug_squasher_check_anagrams",
@@ -787,9 +877,9 @@
       "language": "python",
       "title": "Anagram Space Handling Bug",
       "difficulty": "medium",
-      "order": 78,
+      "order": 87,
       "rev": "09f30a0fd001",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_anagrams.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_anagrams.json"
     },
     {
       "id": "python_code_refactor_check_anagrams",
@@ -797,9 +887,9 @@
       "language": "python",
       "title": "Optimizing Anagram with Sorting",
       "difficulty": "medium",
-      "order": 79,
+      "order": 88,
       "rev": "7228ca9db11e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_check_anagrams.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_check_anagrams.json"
     },
     {
       "id": "python_guided_practice_apparent_power",
@@ -807,9 +897,9 @@
       "language": "python",
       "title": "Apparent Power Calculation",
       "difficulty": "medium",
-      "order": 80,
+      "order": 89,
       "rev": "fbd57e998294",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_apparent_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_apparent_power.json"
     },
     {
       "id": "python_bug_squasher_apparent_power",
@@ -817,9 +907,9 @@
       "language": "python",
       "title": "AC Power Angle Bug",
       "difficulty": "medium",
-      "order": 81,
+      "order": 90,
       "rev": "16308e6a7726",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_apparent_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_apparent_power.json"
     },
     {
       "id": "python_code_refactor_apparent_power",
@@ -827,9 +917,9 @@
       "language": "python",
       "title": "Optimizing AC Rectangular Conversion",
       "difficulty": "medium",
-      "order": 82,
+      "order": 91,
       "rev": "fc33467b891f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_apparent_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_apparent_power.json"
     },
     {
       "id": "python_guided_practice_atbash",
@@ -837,9 +927,9 @@
       "language": "python",
       "title": "Atbash Cipher",
       "difficulty": "medium",
-      "order": 83,
+      "order": 92,
       "rev": "098b7643ec66",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_atbash.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_atbash.json"
     },
     {
       "id": "python_bug_squasher_atbash",
@@ -847,9 +937,9 @@
       "language": "python",
       "title": "Atbash Cipher Offset Bug",
       "difficulty": "medium",
-      "order": 84,
+      "order": 93,
       "rev": "8e9469a99e08",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_atbash.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_atbash.json"
     },
     {
       "id": "python_code_refactor_atbash",
@@ -857,9 +947,9 @@
       "language": "python",
       "title": "Optimizing Atbash with `maketrans`",
       "difficulty": "medium",
-      "order": 85,
+      "order": 94,
       "rev": "cb84f2b9dc2d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_atbash.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_atbash.json"
     },
     {
       "id": "python_guided_practice_automorphic_number",
@@ -867,9 +957,9 @@
       "language": "python",
       "title": "Automorphic Number Identification",
       "difficulty": "medium",
-      "order": 86,
+      "order": 95,
       "rev": "9857754ae378",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_automorphic_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_automorphic_number.json"
     },
     {
       "id": "python_bug_squasher_automorphic_number",
@@ -877,9 +967,9 @@
       "language": "python",
       "title": "Automorphic Number Square Bug",
       "difficulty": "medium",
-      "order": 87,
+      "order": 96,
       "rev": "fc305b9145ed",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_automorphic_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_automorphic_number.json"
     },
     {
       "id": "python_code_refactor_automorphic_number",
@@ -887,9 +977,9 @@
       "language": "python",
       "title": "Clean Automorphic Check via Strings",
       "difficulty": "medium",
-      "order": 88,
+      "order": 97,
       "rev": "c1d65db089ff",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_automorphic_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_automorphic_number.json"
     },
     {
       "id": "python_guided_practice_bead_sort",
@@ -897,9 +987,9 @@
       "language": "python",
       "title": "Bead Sort Implementation",
       "difficulty": "medium",
-      "order": 89,
+      "order": 98,
       "rev": "495d62873769",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_bead_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_bead_sort.json"
     },
     {
       "id": "python_bug_squasher_bead_sort",
@@ -907,9 +997,9 @@
       "language": "python",
       "title": "Bead Sort Difference Bug",
       "difficulty": "medium",
-      "order": 90,
+      "order": 99,
       "rev": "d7d1e29278c7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bead_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bead_sort.json"
     },
     {
       "id": "python_code_refactor_bead_sort",
@@ -917,9 +1007,9 @@
       "language": "python",
       "title": "Optimizing Bead Sort rod movement",
       "difficulty": "medium",
-      "order": 91,
+      "order": 100,
       "rev": "986d17a4e833",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_bead_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_bead_sort.json"
     },
     {
       "id": "python_guided_practice_best_time_to_buy_and_sell_stock",
@@ -927,9 +1017,9 @@
       "language": "python",
       "title": "Best Time to Buy and Sell Stock",
       "difficulty": "medium",
-      "order": 92,
+      "order": 101,
       "rev": "e06ccf68eff3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_best_time_to_buy_and_sell_stock.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_best_time_to_buy_and_sell_stock.json"
     },
     {
       "id": "python_bug_squasher_best_time_to_buy_and_sell_stock",
@@ -937,9 +1027,9 @@
       "language": "python",
       "title": "Stock Profit Buy Order Bug",
       "difficulty": "medium",
-      "order": 93,
+      "order": 102,
       "rev": "d4e30ea30c47",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_best_time_to_buy_and_sell_stock.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_best_time_to_buy_and_sell_stock.json"
     },
     {
       "id": "python_code_refactor_best_time_to_buy_and_sell_stock",
@@ -947,9 +1037,9 @@
       "language": "python",
       "title": "Optimizing Stock Profit with O(n)",
       "difficulty": "medium",
-      "order": 94,
+      "order": 103,
       "rev": "b5a1c42c426e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_best_time_to_buy_and_sell_stock.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_best_time_to_buy_and_sell_stock.json"
     },
     {
       "id": "python_guided_practice_binary_and_operator",
@@ -957,9 +1047,9 @@
       "language": "python",
       "title": "Binary AND Operation",
       "difficulty": "medium",
-      "order": 95,
+      "order": 104,
       "rev": "d08c90fcbbf9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_and_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_and_operator.json"
     },
     {
       "id": "python_bug_squasher_binary_and_operator",
@@ -967,9 +1057,9 @@
       "language": "python",
       "title": "Binary AND Logic Bug",
       "difficulty": "medium",
-      "order": 96,
+      "order": 105,
       "rev": "4c7e86688bf1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_and_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_and_operator.json"
     },
     {
       "id": "python_guided_practice_binary_coded_decimal",
@@ -977,9 +1067,9 @@
       "language": "python",
       "title": "Binary Coded Decimal (BCD)",
       "difficulty": "medium",
-      "order": 97,
+      "order": 106,
       "rev": "5432ce7f814c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_coded_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_coded_decimal.json"
     },
     {
       "id": "python_bug_squasher_binary_coded_decimal",
@@ -987,9 +1077,9 @@
       "language": "python",
       "title": "BCD Bit Width Bug",
       "difficulty": "medium",
-      "order": 98,
+      "order": 107,
       "rev": "6cf3a523bdce",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_coded_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_coded_decimal.json"
     },
     {
       "id": "python_code_refactor_binary_coded_decimal",
@@ -997,9 +1087,9 @@
       "language": "python",
       "title": "Optimizing BCD with `format`",
       "difficulty": "medium",
-      "order": 99,
+      "order": 108,
       "rev": "0a1411af4246",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_coded_decimal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_coded_decimal.json"
     },
     {
       "id": "python_guided_practice_binary_count_trailing_zeros",
@@ -1007,9 +1097,9 @@
       "language": "python",
       "title": "Binary Count Trailing Zeros",
       "difficulty": "medium",
-      "order": 100,
+      "order": 109,
       "rev": "e8ec52e0a1b0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_count_trailing_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_count_trailing_zeros.json"
     },
     {
       "id": "python_bug_squasher_binary_count_trailing_zeros",
@@ -1017,9 +1107,9 @@
       "language": "python",
       "title": "Trailing Zero Counting Logic Bug",
       "difficulty": "medium",
-      "order": 101,
+      "order": 110,
       "rev": "ffd6785bcf36",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_count_trailing_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_count_trailing_zeros.json"
     },
     {
       "id": "python_code_refactor_binary_count_trailing_zeros",
@@ -1027,9 +1117,9 @@
       "language": "python",
       "title": "Optimizing Trailing Zeros Counting",
       "difficulty": "medium",
-      "order": 102,
+      "order": 111,
       "rev": "1e69506dd38f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_count_trailing_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_count_trailing_zeros.json"
     },
     {
       "id": "python_guided_practice_binary_or_operator",
@@ -1037,9 +1127,9 @@
       "language": "python",
       "title": "Binary OR Operation",
       "difficulty": "medium",
-      "order": 103,
+      "order": 112,
       "rev": "8350b67773ac",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_or_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_or_operator.json"
     },
     {
       "id": "python_bug_squasher_binary_or_operator",
@@ -1047,9 +1137,9 @@
       "language": "python",
       "title": "Binary OR Logic Bug",
       "difficulty": "medium",
-      "order": 104,
+      "order": 113,
       "rev": "401f32a8c3a7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_or_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_or_operator.json"
     },
     {
       "id": "python_code_refactor_binary_or_operator",
@@ -1057,9 +1147,9 @@
       "language": "python",
       "title": "Optimizing Binary OR with `|`",
       "difficulty": "medium",
-      "order": 105,
+      "order": 114,
       "rev": "37f735a0c643",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_or_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_or_operator.json"
     },
     {
       "id": "python_guided_practice_binary_search_matrix",
@@ -1067,9 +1157,9 @@
       "language": "python",
       "title": "Binary Search in a Matrix",
       "difficulty": "medium",
-      "order": 106,
+      "order": 115,
       "rev": "0bc3ef62e295",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_search_matrix.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_search_matrix.json"
     },
     {
       "id": "python_code_refactor_binary_search_matrix",
@@ -1077,9 +1167,9 @@
       "language": "python",
       "title": "Using `bisect` for Matrix Search",
       "difficulty": "medium",
-      "order": 107,
+      "order": 116,
       "rev": "b792b7a09502",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_search_matrix.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_search_matrix.json"
     },
     {
       "id": "python_guided_practice_binary_to_octal",
@@ -1087,9 +1177,9 @@
       "language": "python",
       "title": "Binary to Octal Conversion",
       "difficulty": "medium",
-      "order": 108,
+      "order": 117,
       "rev": "9edc5d36fdcb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_to_octal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_to_octal.json"
     },
     {
       "id": "python_code_refactor_binary_to_octal",
@@ -1097,9 +1187,9 @@
       "language": "python",
       "title": "Optimizing Binary to Octal with `format`",
       "difficulty": "medium",
-      "order": 109,
+      "order": 118,
       "rev": "e5035be62004",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_to_octal.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_to_octal.json"
     },
     {
       "id": "python_guided_practice_binary_tree_mirror",
@@ -1107,9 +1197,9 @@
       "language": "python",
       "title": "Binary Tree Mirror",
       "difficulty": "medium",
-      "order": 110,
+      "order": 119,
       "rev": "fcb4fa2c9c78",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_tree_mirror.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_tree_mirror.json"
     },
     {
       "id": "python_bug_squasher_binary_tree_mirror",
@@ -1117,9 +1207,9 @@
       "language": "python",
       "title": "Tree Mirror Recursion Bug",
       "difficulty": "medium",
-      "order": 111,
+      "order": 120,
       "rev": "de324b3d43f1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_tree_mirror.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_tree_mirror.json"
     },
     {
       "id": "python_code_refactor_binary_tree_mirror",
@@ -1127,9 +1217,9 @@
       "language": "python",
       "title": "Iterative Tree Mirroring",
       "difficulty": "medium",
-      "order": 112,
+      "order": 121,
       "rev": "01cde1bfef98",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_tree_mirror.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_tree_mirror.json"
     },
     {
       "id": "python_guided_practice_binary_xor_operator",
@@ -1137,9 +1227,9 @@
       "language": "python",
       "title": "Binary XOR Operation",
       "difficulty": "medium",
-      "order": 113,
+      "order": 122,
       "rev": "ee7d9cdc34fa",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_xor_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_xor_operator.json"
     },
     {
       "id": "python_bug_squasher_binary_xor_operator",
@@ -1147,9 +1237,9 @@
       "language": "python",
       "title": "Binary XOR Logic Bug",
       "difficulty": "medium",
-      "order": 114,
+      "order": 123,
       "rev": "2df13e68a848",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_xor_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_xor_operator.json"
     },
     {
       "id": "python_code_refactor_binary_xor_operator",
@@ -1157,9 +1247,9 @@
       "language": "python",
       "title": "Optimizing Binary XOR with `^`",
       "difficulty": "medium",
-      "order": 115,
+      "order": 124,
       "rev": "07d9820235a5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_xor_operator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_xor_operator.json"
     },
     {
       "id": "python_guided_practice_binomial_distribution",
@@ -1167,9 +1257,9 @@
       "language": "python",
       "title": "Binomial Distribution",
       "difficulty": "medium",
-      "order": 116,
+      "order": 125,
       "rev": "e358dfc4a9d3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binomial_distribution.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binomial_distribution.json"
     },
     {
       "id": "python_bug_squasher_binomial_distribution",
@@ -1177,9 +1267,9 @@
       "language": "python",
       "title": "Binomial Coefficient Bug",
       "difficulty": "medium",
-      "order": 117,
+      "order": 126,
       "rev": "27a99783910e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binomial_distribution.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binomial_distribution.json"
     },
     {
       "id": "python_code_refactor_binomial_distribution",
@@ -1187,9 +1277,9 @@
       "language": "python",
       "title": "Using `math.comb` for Binomial",
       "difficulty": "advanced",
-      "order": 118,
+      "order": 127,
       "rev": "c7027c38fd21",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binomial_distribution.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binomial_distribution.json"
     },
     {
       "id": "python_guided_practice_bogo_sort",
@@ -1197,9 +1287,9 @@
       "language": "python",
       "title": "Bogo Sort (Stupid Sort)",
       "difficulty": "medium",
-      "order": 119,
+      "order": 128,
       "rev": "76f7620e76c9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_bogo_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_bogo_sort.json"
     },
     {
       "id": "python_bug_squasher_bogo_sort",
@@ -1207,9 +1297,9 @@
       "language": "python",
       "title": "Bogo Sort Infinite Loop Bug",
       "difficulty": "medium",
-      "order": 120,
+      "order": 129,
       "rev": "e8ed169936e9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bogo_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bogo_sort.json"
     },
     {
       "id": "python_code_refactor_bogo_sort",
@@ -1217,9 +1307,9 @@
       "language": "python",
       "title": "Clean Bogo Sort Check",
       "difficulty": "medium",
-      "order": 121,
+      "order": 130,
       "rev": "fd456479ba07",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_bogo_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_bogo_sort.json"
     },
     {
       "id": "python_guided_practice_allocation_number",
@@ -1227,9 +1317,9 @@
       "language": "python",
       "title": "Byte Allocation (Multi-threading)",
       "difficulty": "medium",
-      "order": 122,
+      "order": 131,
       "rev": "c29276360ec2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_allocation_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_allocation_number.json"
     },
     {
       "id": "python_bug_squasher_allocation_number",
@@ -1237,9 +1327,9 @@
       "language": "python",
       "title": "Byte Allocation Off-by-One Bug",
       "difficulty": "medium",
-      "order": 123,
+      "order": 132,
       "rev": "7f2392fe2763",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_allocation_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_allocation_number.json"
     },
     {
       "id": "python_code_refactor_allocation_number",
@@ -1247,9 +1337,9 @@
       "language": "python",
       "title": "Optimizing Byte Allocation Loops",
       "difficulty": "medium",
-      "order": 124,
+      "order": 133,
       "rev": "01131752cd01",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_allocation_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_allocation_number.json"
     },
     {
       "id": "python_guided_practice_camel_case_to_snake_case",
@@ -1257,9 +1347,9 @@
       "language": "python",
       "title": "CamelCase to snake_case",
       "difficulty": "medium",
-      "order": 125,
+      "order": 134,
       "rev": "75176e4ca2e2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_camel_case_to_snake_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_camel_case_to_snake_case.json"
     },
     {
       "id": "python_bug_squasher_camel_case_to_snake_case",
@@ -1267,9 +1357,9 @@
       "language": "python",
       "title": "Snake Case Underscore Bug",
       "difficulty": "medium",
-      "order": 126,
+      "order": 135,
       "rev": "4a3c2c38b4e6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_camel_case_to_snake_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_camel_case_to_snake_case.json"
     },
     {
       "id": "python_code_refactor_camel_case_to_snake_case",
@@ -1277,9 +1367,9 @@
       "language": "python",
       "title": "Regex Snake Case Conversion",
       "difficulty": "medium",
-      "order": 127,
+      "order": 136,
       "rev": "443367a6a87f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_camel_case_to_snake_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_camel_case_to_snake_case.json"
     },
     {
       "id": "python_guided_practice_catalan_number",
@@ -1287,9 +1377,9 @@
       "language": "python",
       "title": "Catalan Number Calculation",
       "difficulty": "medium",
-      "order": 128,
+      "order": 137,
       "rev": "4d1b02527a78",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_catalan_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_catalan_number.json"
     },
     {
       "id": "python_bug_squasher_catalan_number",
@@ -1297,9 +1387,9 @@
       "language": "python",
       "title": "Catalan Number Iteration Bug",
       "difficulty": "medium",
-      "order": 129,
+      "order": 138,
       "rev": "582f86614091",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_catalan_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_catalan_number.json"
     },
     {
       "id": "python_code_refactor_catalan_number",
@@ -1307,9 +1397,9 @@
       "language": "python",
       "title": "Recursive Catalan with Memoization",
       "difficulty": "advanced",
-      "order": 130,
+      "order": 139,
       "rev": "b733116b92ee",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_catalan_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_catalan_number.json"
     },
     {
       "id": "python_guided_practice_chebyshev_distance",
@@ -1317,9 +1407,9 @@
       "language": "python",
       "title": "Chebyshev Distance",
       "difficulty": "medium",
-      "order": 131,
+      "order": 140,
       "rev": "a70c5004bcb3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_chebyshev_distance.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_chebyshev_distance.json"
     },
     {
       "id": "python_bug_squasher_chebyshev_distance",
@@ -1327,9 +1417,9 @@
       "language": "python",
       "title": "Chebyshev Distance Metric Bug",
       "difficulty": "medium",
-      "order": 132,
+      "order": 141,
       "rev": "2436f1085e1c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_chebyshev_distance.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_chebyshev_distance.json"
     },
     {
       "id": "python_code_refactor_chebyshev_distance",
@@ -1337,9 +1427,9 @@
       "language": "python",
       "title": "Vectorized Chebyshev with NumPy",
       "difficulty": "medium",
-      "order": 133,
+      "order": 142,
       "rev": "92b549a77b26",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_chebyshev_distance.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_chebyshev_distance.json"
     },
     {
       "id": "python_guided_practice_climbing_stairs",
@@ -1347,9 +1437,9 @@
       "language": "python",
       "title": "Climbing Stairs Problem",
       "difficulty": "medium",
-      "order": 134,
+      "order": 143,
       "rev": "f3810ab7e67a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_climbing_stairs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_climbing_stairs.json"
     },
     {
       "id": "python_bug_squasher_climbing_stairs",
@@ -1357,9 +1447,9 @@
       "language": "python",
       "title": "Climbing Stairs Fibonacci Bug",
       "difficulty": "medium",
-      "order": 135,
+      "order": 144,
       "rev": "d6da09f2192a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_climbing_stairs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_climbing_stairs.json"
     },
     {
       "id": "python_code_refactor_climbing_stairs",
@@ -1367,9 +1457,9 @@
       "language": "python",
       "title": "Recursive Climbing Stairs",
       "difficulty": "medium",
-      "order": 136,
+      "order": 145,
       "rev": "dda98142ad9e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_climbing_stairs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_climbing_stairs.json"
     },
     {
       "id": "python_guided_practice_problem_031_sol2",
@@ -1377,9 +1467,9 @@
       "language": "python",
       "title": "Coin Sums",
       "difficulty": "medium",
-      "order": 137,
+      "order": 146,
       "rev": "b215843a1573",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_031_sol2.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_031_sol2.json"
     },
     {
       "id": "python_bug_squasher_problem_031_sol2",
@@ -1387,9 +1477,9 @@
       "language": "python",
       "title": "Coin Sums",
       "difficulty": "medium",
-      "order": 138,
+      "order": 147,
       "rev": "6e92970f7981",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_031_sol2.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_031_sol2.json"
     },
     {
       "id": "python_code_refactor_problem_031_sol2",
@@ -1397,9 +1487,9 @@
       "language": "python",
       "title": "Coin Sums",
       "difficulty": "medium",
-      "order": 139,
+      "order": 148,
       "rev": "3e7d416c5abf",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_031_sol2.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_031_sol2.json"
     },
     {
       "id": "python_guided_practice_combinations",
@@ -1407,9 +1497,9 @@
       "language": "python",
       "title": "Combination Calculation (nCr)",
       "difficulty": "medium",
-      "order": 140,
+      "order": 149,
       "rev": "5f31a5d56e56",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_combinations.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_combinations.json"
     },
     {
       "id": "python_bug_squasher_combinations",
@@ -1417,9 +1507,9 @@
       "language": "python",
       "title": "Combination Formula Bug",
       "difficulty": "medium",
-      "order": 141,
+      "order": 150,
       "rev": "38fdb4058f59",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_combinations.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_combinations.json"
     },
     {
       "id": "python_code_refactor_combinations",
@@ -1427,9 +1517,9 @@
       "language": "python",
       "title": "Using `math.comb` for nCr",
       "difficulty": "medium",
-      "order": 142,
+      "order": 151,
       "rev": "e686d31a817c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_combinations.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_combinations.json"
     },
     {
       "id": "python_guided_practice_problem_073_sol1",
@@ -1437,9 +1527,9 @@
       "language": "python",
       "title": "Counting Fractions in a Range",
       "difficulty": "medium",
-      "order": 143,
+      "order": 152,
       "rev": "d54fd891ccc4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_073_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_073_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_073_sol1",
@@ -1447,9 +1537,9 @@
       "language": "python",
       "title": "Counting Fractions in a Range",
       "difficulty": "medium",
-      "order": 144,
+      "order": 153,
       "rev": "fe7abaf3c115",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_073_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_073_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_076_sol1",
@@ -1457,9 +1547,9 @@
       "language": "python",
       "title": "Counting Summations",
       "difficulty": "medium",
-      "order": 145,
+      "order": 154,
       "rev": "ef03bbe1a5dc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_076_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_076_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_076_sol1",
@@ -1467,9 +1557,9 @@
       "language": "python",
       "title": "Counting Summations",
       "difficulty": "medium",
-      "order": 146,
+      "order": 155,
       "rev": "322aa0fec954",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_076_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_076_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_034_sol1",
@@ -1477,9 +1567,9 @@
       "language": "python",
       "title": "Digit Factorials",
       "difficulty": "medium",
-      "order": 147,
+      "order": 156,
       "rev": "dcb409ad6258",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_034_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_034_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_034_sol1",
@@ -1487,9 +1577,9 @@
       "language": "python",
       "title": "Digit Factorials",
       "difficulty": "medium",
-      "order": 148,
+      "order": 157,
       "rev": "8f06855a1033",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_034_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_034_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_034_sol1",
@@ -1497,9 +1587,9 @@
       "language": "python",
       "title": "Digit Factorials",
       "difficulty": "medium",
-      "order": 149,
+      "order": 158,
       "rev": "d51cddd411a9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_034_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_034_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_025_sol3",
@@ -1507,9 +1597,9 @@
       "language": "python",
       "title": "First Fibonacci with N Digits",
       "difficulty": "medium",
-      "order": 150,
+      "order": 159,
       "rev": "366badaaac92",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_025_sol3.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_025_sol3.json"
     },
     {
       "id": "python_bug_squasher_problem_025_sol3",
@@ -1517,9 +1607,9 @@
       "language": "python",
       "title": "First Fibonacci with N Digits",
       "difficulty": "medium",
-      "order": 151,
+      "order": 160,
       "rev": "ab2f94a7e657",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_025_sol3.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_025_sol3.json"
     },
     {
       "id": "python_code_refactor_problem_025_sol3",
@@ -1527,9 +1617,429 @@
       "language": "python",
       "title": "First Fibonacci with N Digits",
       "difficulty": "medium",
-      "order": 152,
+      "order": 161,
       "rev": "bf720b72d4e3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_025_sol3.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_025_sol3.json"
+    },
+    {
+      "id": "python_guided_practice_list_copy_alias",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Aliasing and Copying Lists",
+      "difficulty": "medium",
+      "order": 162,
+      "rev": "ea11081d4271",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_list_copy_alias.json"
+    },
+    {
+      "id": "python_bug_squasher_list_copy_alias",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: All Rows of the Grid Are the Same List",
+      "difficulty": "medium",
+      "order": 163,
+      "rev": "d030aac2c5bd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_list_copy_alias.json"
+    },
+    {
+      "id": "python_code_refactor_list_copy_alias",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Nested Comprehension Instead of Loops with append",
+      "difficulty": "medium",
+      "order": 164,
+      "rev": "80c60396d757",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_list_copy_alias.json"
+    },
+    {
+      "id": "python_guided_practice_closure_counter",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Closures and nonlocal",
+      "difficulty": "medium",
+      "order": 165,
+      "rev": "efffa3216b40",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_closure_counter.json"
+    },
+    {
+      "id": "python_bug_squasher_closure_counter",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Assigning Without nonlocal",
+      "difficulty": "medium",
+      "order": 166,
+      "rev": "cd0d93fcd3bd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_closure_counter.json"
+    },
+    {
+      "id": "python_code_refactor_closure_counter",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Counter Factory Instead of Global Variables",
+      "difficulty": "medium",
+      "order": 167,
+      "rev": "6fb4e5c76103",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_closure_counter.json"
+    },
+    {
+      "id": "python_guided_practice_decorator_basics",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Decorators",
+      "difficulty": "medium",
+      "order": 168,
+      "rev": "915200c0987e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_decorator_basics.json"
+    },
+    {
+      "id": "python_bug_squasher_decorator_basics",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Wrapper Forgets to Return",
+      "difficulty": "medium",
+      "order": 169,
+      "rev": "95a75da7f9c0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_decorator_basics.json"
+    },
+    {
+      "id": "python_code_refactor_decorator_basics",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Decorator Instead of Counting by Hand in Every Function",
+      "difficulty": "medium",
+      "order": 170,
+      "rev": "14813267b56c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_decorator_basics.json"
+    },
+    {
+      "id": "python_guided_practice_generator_basics",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Generators",
+      "difficulty": "medium",
+      "order": 171,
+      "rev": "ed59ef24be4c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_generator_basics.json"
+    },
+    {
+      "id": "python_bug_squasher_generator_basics",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: yield Placed After the Update",
+      "difficulty": "medium",
+      "order": 172,
+      "rev": "8a692c3a2dc3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_generator_basics.json"
+    },
+    {
+      "id": "python_code_refactor_generator_basics",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Generator Instead of Building a List",
+      "difficulty": "medium",
+      "order": 173,
+      "rev": "8f23a9e3c113",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_generator_basics.json"
+    },
+    {
+      "id": "python_guided_practice_group_anagrams",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Group Anagrams",
+      "difficulty": "medium",
+      "order": 174,
+      "rev": "64d036c23527",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_group_anagrams.json"
+    },
+    {
+      "id": "python_bug_squasher_group_anagrams",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Word Itself Is Used as the Key",
+      "difficulty": "medium",
+      "order": 175,
+      "rev": "d0b4ecfb8221",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_group_anagrams.json"
+    },
+    {
+      "id": "python_code_refactor_group_anagrams",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: defaultdict Instead of Checking for the Key",
+      "difficulty": "medium",
+      "order": 176,
+      "rev": "8e6cf00739d9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_group_anagrams.json"
+    },
+    {
+      "id": "python_guided_practice_longest_common_prefix",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Longest Common Prefix",
+      "difficulty": "medium",
+      "order": 177,
+      "rev": "038885566152",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_longest_common_prefix.json"
+    },
+    {
+      "id": "python_bug_squasher_longest_common_prefix",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Test Stops at the First Matching Column",
+      "difficulty": "medium",
+      "order": 178,
+      "rev": "dd6fc0672959",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_longest_common_prefix.json"
+    },
+    {
+      "id": "python_code_refactor_longest_common_prefix",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: zip Instead of Index Arithmetic",
+      "difficulty": "medium",
+      "order": 179,
+      "rev": "3725939e653a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_longest_common_prefix.json"
+    },
+    {
+      "id": "python_guided_practice_max_subarray",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Maximum Subarray (Kadane)",
+      "difficulty": "medium",
+      "order": 180,
+      "rev": "9b688df31177",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_max_subarray.json"
+    },
+    {
+      "id": "python_bug_squasher_max_subarray",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: All-Negative Input Gives Zero",
+      "difficulty": "medium",
+      "order": 181,
+      "rev": "ca47e8137aed",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_max_subarray.json"
+    },
+    {
+      "id": "python_code_refactor_max_subarray",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: One Loop Instead of Two",
+      "difficulty": "medium",
+      "order": 182,
+      "rev": "31369c941101",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_max_subarray.json"
+    },
+    {
+      "id": "python_guided_practice_merge_intervals",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Merge Overlapping Intervals",
+      "difficulty": "medium",
+      "order": 183,
+      "rev": "0f62ce139a14",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_merge_intervals.json"
+    },
+    {
+      "id": "python_bug_squasher_merge_intervals",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Touching Intervals Are Not Merged",
+      "difficulty": "medium",
+      "order": 184,
+      "rev": "132670efd77e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_merge_intervals.json"
+    },
+    {
+      "id": "python_code_refactor_merge_intervals",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Tuple Unpacking Instead of Index Chains",
+      "difficulty": "medium",
+      "order": 185,
+      "rev": "0579f32e2801",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_merge_intervals.json"
+    },
+    {
+      "id": "python_guided_practice_sort_key",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Sorting with a key Function",
+      "difficulty": "medium",
+      "order": 186,
+      "rev": "c1bcf497e716",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_sort_key.json"
+    },
+    {
+      "id": "python_bug_squasher_sort_key",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Marks Are Sorted in Ascending Order",
+      "difficulty": "medium",
+      "order": 187,
+      "rev": "34d744f25817",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_sort_key.json"
+    },
+    {
+      "id": "python_code_refactor_sort_key",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: sorted with a key Instead of a Hand-Written Sort",
+      "difficulty": "medium",
+      "order": 188,
+      "rev": "96ed4a94f80b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_sort_key.json"
+    },
+    {
+      "id": "python_guided_practice_dunder_methods",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Special Methods",
+      "difficulty": "medium",
+      "order": 189,
+      "rev": "d65523430cec",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_dunder_methods.json"
+    },
+    {
+      "id": "python_bug_squasher_dunder_methods",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: __add__ Returns a Number",
+      "difficulty": "medium",
+      "order": 190,
+      "rev": "4eb5587d4eef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_dunder_methods.json"
+    },
+    {
+      "id": "python_code_refactor_dunder_methods",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Operators Instead of Named Methods",
+      "difficulty": "medium",
+      "order": 191,
+      "rev": "a98660f2de30",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_dunder_methods.json"
+    },
+    {
+      "id": "python_guided_practice_mutable_default",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: The Mutable Default Argument",
+      "difficulty": "medium",
+      "order": 192,
+      "rev": "175e75fedb10",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_mutable_default.json"
+    },
+    {
+      "id": "python_bug_squasher_mutable_default",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Default List Is Shared Between Calls",
+      "difficulty": "medium",
+      "order": 193,
+      "rev": "147c4b7e8259",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_mutable_default.json"
+    },
+    {
+      "id": "python_code_refactor_mutable_default",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Compare with is None and Drop the Empty else",
+      "difficulty": "medium",
+      "order": 194,
+      "rev": "6274e2006663",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_mutable_default.json"
+    },
+    {
+      "id": "python_guided_practice_exception_flow",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: try, except, else and finally",
+      "difficulty": "medium",
+      "order": 195,
+      "rev": "b0623f14adf4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_exception_flow.json"
+    },
+    {
+      "id": "python_bug_squasher_exception_flow",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Wrong Exception Is Caught",
+      "difficulty": "medium",
+      "order": 196,
+      "rev": "f874d250c53c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_exception_flow.json"
+    },
+    {
+      "id": "python_code_refactor_exception_flow",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Exceptions Instead of Checking First",
+      "difficulty": "medium",
+      "order": 197,
+      "rev": "25fc167ef5d0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_exception_flow.json"
+    },
+    {
+      "id": "python_guided_practice_two_sum",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Two Sum",
+      "difficulty": "medium",
+      "order": 198,
+      "rev": "a5d77cca199a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_two_sum.json"
+    },
+    {
+      "id": "python_bug_squasher_two_sum",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: A Number Pairs with Itself",
+      "difficulty": "medium",
+      "order": 199,
+      "rev": "0bb1dd7124ac",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_two_sum.json"
+    },
+    {
+      "id": "python_code_refactor_two_sum",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Dictionary Instead of Nested Loops",
+      "difficulty": "medium",
+      "order": 200,
+      "rev": "227b87240cec",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_two_sum.json"
+    },
+    {
+      "id": "python_guided_practice_valid_parentheses",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Valid Parentheses",
+      "difficulty": "medium",
+      "order": 201,
+      "rev": "9093d4f90c5b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_valid_parentheses.json"
+    },
+    {
+      "id": "python_bug_squasher_valid_parentheses",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+      "difficulty": "medium",
+      "order": 202,
+      "rev": "17a3bca5830e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_valid_parentheses.json"
+    },
+    {
+      "id": "python_code_refactor_valid_parentheses",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Stack Instead of Repeated Replacing",
+      "difficulty": "medium",
+      "order": 203,
+      "rev": "39a6c0cae2f0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_valid_parentheses.json"
     },
     {
       "id": "python_guided_practice_problem_039_sol1",
@@ -1537,9 +2047,9 @@
       "language": "python",
       "title": "Integer Right Triangles",
       "difficulty": "medium",
-      "order": 153,
+      "order": 204,
       "rev": "ec70f3b75acf",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_039_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_039_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_039_sol1",
@@ -1547,9 +2057,9 @@
       "language": "python",
       "title": "Integer Right Triangles",
       "difficulty": "medium",
-      "order": 154,
+      "order": 205,
       "rev": "6790381db6bd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_039_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_039_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_039_sol1",
@@ -1557,9 +2067,9 @@
       "language": "python",
       "title": "Integer Right Triangles",
       "difficulty": "medium",
-      "order": 155,
+      "order": 206,
       "rev": "0384d65886bb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_039_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_039_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_026_sol1",
@@ -1567,9 +2077,9 @@
       "language": "python",
       "title": "Longest Recurring Cycle",
       "difficulty": "medium",
-      "order": 156,
+      "order": 207,
       "rev": "95978f08e05c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_026_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_026_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_026_sol1",
@@ -1577,9 +2087,9 @@
       "language": "python",
       "title": "Longest Recurring Cycle",
       "difficulty": "medium",
-      "order": 157,
+      "order": 208,
       "rev": "da7105413118",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_026_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_026_sol1.json"
     },
     {
       "id": "python_guided_practice_average_median",
@@ -1587,9 +2097,9 @@
       "language": "python",
       "title": "Median Calculation",
       "difficulty": "medium",
-      "order": 158,
+      "order": 209,
       "rev": "883f61ccd252",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_median.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_median.json"
     },
     {
       "id": "python_bug_squasher_average_median",
@@ -1597,9 +2107,9 @@
       "language": "python",
       "title": "Median Sorting Bug",
       "difficulty": "medium",
-      "order": 159,
+      "order": 210,
       "rev": "236da355d8c1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_median.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_median.json"
     },
     {
       "id": "python_code_refactor_average_median",
@@ -1607,9 +2117,9 @@
       "language": "python",
       "title": "Optimizing Median Calculation",
       "difficulty": "medium",
-      "order": 160,
+      "order": 211,
       "rev": "6c0f0bf0fd2f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_median.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_median.json"
     },
     {
       "id": "python_guided_practice_problem_024_sol1",
@@ -1617,9 +2127,9 @@
       "language": "python",
       "title": "Millionth Lexicographic Permutation",
       "difficulty": "medium",
-      "order": 161,
+      "order": 212,
       "rev": "491004887fe1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_024_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_024_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_024_sol1",
@@ -1627,9 +2137,9 @@
       "language": "python",
       "title": "Millionth Lexicographic Permutation",
       "difficulty": "medium",
-      "order": 162,
+      "order": 213,
       "rev": "84a5f6c76216",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_024_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_024_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_081_sol1",
@@ -1637,9 +2147,9 @@
       "language": "python",
       "title": "Minimal Path Sum: Two Ways",
       "difficulty": "medium",
-      "order": 163,
+      "order": 214,
       "rev": "80f04014e9b2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_081_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_081_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_081_sol1",
@@ -1647,9 +2157,9 @@
       "language": "python",
       "title": "Minimal Path Sum: Two Ways",
       "difficulty": "medium",
-      "order": 164,
+      "order": 215,
       "rev": "dbeb8059c2a5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_081_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_081_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_081_sol1",
@@ -1657,9 +2167,9 @@
       "language": "python",
       "title": "Minimal Path Sum: Two Ways",
       "difficulty": "medium",
-      "order": 165,
+      "order": 216,
       "rev": "4e8db3db6bf7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_081_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_081_sol1.json"
     },
     {
       "id": "python_guided_practice_average_mode",
@@ -1667,9 +2177,9 @@
       "language": "python",
       "title": "Mode Calculation",
       "difficulty": "medium",
-      "order": 166,
+      "order": 217,
       "rev": "fc9e914e3ab1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_mode.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_average_mode.json"
     },
     {
       "id": "python_bug_squasher_average_mode",
@@ -1677,9 +2187,9 @@
       "language": "python",
       "title": "Mode Multi-Value Bug",
       "difficulty": "medium",
-      "order": 167,
+      "order": 218,
       "rev": "a696c481d7fd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_mode.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_average_mode.json"
     },
     {
       "id": "python_code_refactor_average_mode",
@@ -1687,9 +2197,9 @@
       "language": "python",
       "title": "Optimizing Mode Calculation",
       "difficulty": "medium",
-      "order": 168,
+      "order": 219,
       "rev": "8fa0000a44a3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_mode.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_average_mode.json"
     },
     {
       "id": "python_guided_practice_problem_028_sol1",
@@ -1697,9 +2207,9 @@
       "language": "python",
       "title": "Number Spiral Diagonals",
       "difficulty": "medium",
-      "order": 169,
+      "order": 220,
       "rev": "f5c0a94259e5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_028_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_028_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_028_sol1",
@@ -1707,9 +2217,9 @@
       "language": "python",
       "title": "Number Spiral Diagonals",
       "difficulty": "medium",
-      "order": 170,
+      "order": 221,
       "rev": "7be386be5473",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_028_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_028_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_028_sol1",
@@ -1717,9 +2227,9 @@
       "language": "python",
       "title": "Number Spiral Diagonals",
       "difficulty": "medium",
-      "order": 171,
+      "order": 222,
       "rev": "784e304d382e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_028_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_028_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_071_sol1",
@@ -1727,9 +2237,9 @@
       "language": "python",
       "title": "Ordered Fractions",
       "difficulty": "medium",
-      "order": 172,
+      "order": 223,
       "rev": "98aef932ed4a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_071_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_071_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_071_sol1",
@@ -1737,9 +2247,9 @@
       "language": "python",
       "title": "Ordered Fractions",
       "difficulty": "medium",
-      "order": 173,
+      "order": 224,
       "rev": "3feb30973241",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_071_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_071_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_044_sol1",
@@ -1747,9 +2257,9 @@
       "language": "python",
       "title": "Pentagon Numbers",
       "difficulty": "medium",
-      "order": 174,
+      "order": 225,
       "rev": "335f028a9ee9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_044_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_044_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_044_sol1",
@@ -1757,9 +2267,9 @@
       "language": "python",
       "title": "Pentagon Numbers",
       "difficulty": "medium",
-      "order": 175,
+      "order": 226,
       "rev": "6d6e08afd0bb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_044_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_044_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_044_sol1",
@@ -1767,9 +2277,9 @@
       "language": "python",
       "title": "Pentagon Numbers",
       "difficulty": "medium",
-      "order": 176,
+      "order": 227,
       "rev": "684f22d05602",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_044_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_044_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_063_sol1",
@@ -1777,9 +2287,9 @@
       "language": "python",
       "title": "Powerful Digit Counts",
       "difficulty": "medium",
-      "order": 177,
+      "order": 228,
       "rev": "5c77fcf6546f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_063_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_063_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_063_sol1",
@@ -1787,9 +2297,9 @@
       "language": "python",
       "title": "Powerful Digit Counts",
       "difficulty": "medium",
-      "order": 178,
+      "order": 229,
       "rev": "d2e382aea946",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_063_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_063_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_087_sol1",
@@ -1797,9 +2307,9 @@
       "language": "python",
       "title": "Prime Power Triples",
       "difficulty": "medium",
-      "order": 179,
+      "order": 230,
       "rev": "306ad9eab2e8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_087_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_087_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_087_sol1",
@@ -1807,9 +2317,9 @@
       "language": "python",
       "title": "Prime Power Triples",
       "difficulty": "medium",
-      "order": 180,
+      "order": 231,
       "rev": "7f4337701296",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_087_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_087_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_087_sol1",
@@ -1817,9 +2327,9 @@
       "language": "python",
       "title": "Prime Power Triples",
       "difficulty": "medium",
-      "order": 181,
+      "order": 232,
       "rev": "1c38a4214e7b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_087_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_087_sol1.json"
     },
     {
       "id": "python_guided_practice_bitwise_addition_recursive",
@@ -1827,9 +2337,9 @@
       "language": "python",
       "title": "Recursive Bitwise Addition",
       "difficulty": "medium",
-      "order": 182,
+      "order": 233,
       "rev": "e47a5bef5123",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_bitwise_addition_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_bitwise_addition_recursive.json"
     },
     {
       "id": "python_bug_squasher_bitwise_addition_recursive",
@@ -1837,9 +2347,9 @@
       "language": "python",
       "title": "Recursive Bitwise Addition Carry Bug",
       "difficulty": "medium",
-      "order": 183,
+      "order": 234,
       "rev": "a2420fd66f8c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bitwise_addition_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bitwise_addition_recursive.json"
     },
     {
       "id": "python_code_refactor_bitwise_addition_recursive",
@@ -1847,9 +2357,9 @@
       "language": "python",
       "title": "Iterative Bitwise Addition",
       "difficulty": "advanced",
-      "order": 184,
+      "order": 235,
       "rev": "7ec2d14a55c5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_bitwise_addition_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_bitwise_addition_recursive.json"
     },
     {
       "id": "python_guided_practice_problem_091_sol1",
@@ -1857,9 +2367,9 @@
       "language": "python",
       "title": "Right Triangles with Integer Coordinates",
       "difficulty": "medium",
-      "order": 185,
+      "order": 236,
       "rev": "bcde45f5f714",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_091_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_091_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_091_sol1",
@@ -1867,9 +2377,9 @@
       "language": "python",
       "title": "Right Triangles with Integer Coordinates",
       "difficulty": "medium",
-      "order": 186,
+      "order": 237,
       "rev": "5e93e0ca7293",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_091_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_091_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_091_sol1",
@@ -1877,9 +2387,9 @@
       "language": "python",
       "title": "Right Triangles with Integer Coordinates",
       "difficulty": "medium",
-      "order": 187,
+      "order": 238,
       "rev": "543f437b4b9c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_091_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_091_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_075_sol1",
@@ -1887,9 +2397,9 @@
       "language": "python",
       "title": "Singular Integer Right Triangles",
       "difficulty": "medium",
-      "order": 188,
+      "order": 239,
       "rev": "5714f893377d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_075_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_075_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_075_sol1",
@@ -1897,9 +2407,9 @@
       "language": "python",
       "title": "Singular Integer Right Triangles",
       "difficulty": "medium",
-      "order": 189,
+      "order": 240,
       "rev": "75a81a3271c5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_075_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_075_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_075_sol1",
@@ -1907,9 +2417,9 @@
       "language": "python",
       "title": "Singular Integer Right Triangles",
       "difficulty": "medium",
-      "order": 190,
+      "order": 241,
       "rev": "0e33926caa83",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_075_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_075_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_057_sol1",
@@ -1917,9 +2427,9 @@
       "language": "python",
       "title": "Square Root Convergents",
       "difficulty": "medium",
-      "order": 191,
+      "order": 242,
       "rev": "6543f4784a9e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_057_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_057_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_057_sol1",
@@ -1927,9 +2437,9 @@
       "language": "python",
       "title": "Square Root Convergents",
       "difficulty": "medium",
-      "order": 192,
+      "order": 243,
       "rev": "dc38795fa762",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_057_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_057_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_057_sol1",
@@ -1937,9 +2447,9 @@
       "language": "python",
       "title": "Square Root Convergents",
       "difficulty": "medium",
-      "order": 193,
+      "order": 244,
       "rev": "750c07f21ddd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_057_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_057_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_080_sol1",
@@ -1947,9 +2457,9 @@
       "language": "python",
       "title": "Square Root Digital Expansion",
       "difficulty": "medium",
-      "order": 194,
+      "order": 245,
       "rev": "21164a45f2a6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_080_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_080_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_080_sol1",
@@ -1957,9 +2467,9 @@
       "language": "python",
       "title": "Square Root Digital Expansion",
       "difficulty": "medium",
-      "order": 195,
+      "order": 246,
       "rev": "cff7a398737b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_080_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_080_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_080_sol1",
@@ -1967,9 +2477,9 @@
       "language": "python",
       "title": "Square Root Digital Expansion",
       "difficulty": "medium",
-      "order": 196,
+      "order": 247,
       "rev": "eb7c25217536",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_080_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_080_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_023_sol1",
@@ -1977,9 +2487,9 @@
       "language": "python",
       "title": "Sum of Non-Abundant Sums",
       "difficulty": "medium",
-      "order": 197,
+      "order": 248,
       "rev": "fad0c9a8315e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_023_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_023_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_023_sol1",
@@ -1987,9 +2497,9 @@
       "language": "python",
       "title": "Sum of Non-Abundant Sums",
       "difficulty": "medium",
-      "order": 198,
+      "order": 249,
       "rev": "7c67d78d3938",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_023_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_023_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_023_sol1",
@@ -1997,9 +2507,9 @@
       "language": "python",
       "title": "Sum of Non-Abundant Sums",
       "difficulty": "medium",
-      "order": 199,
+      "order": 250,
       "rev": "f9093d931ece",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_023_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_023_sol1.json"
     },
     {
       "id": "python_guided_practice_problem_045_sol1",
@@ -2007,9 +2517,9 @@
       "language": "python",
       "title": "Triangular, Pentagonal, and Hexagonal",
       "difficulty": "medium",
-      "order": 200,
+      "order": 251,
       "rev": "36d8dd419b8f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_045_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_problem_045_sol1.json"
     },
     {
       "id": "python_bug_squasher_problem_045_sol1",
@@ -2017,9 +2527,9 @@
       "language": "python",
       "title": "Triangular, Pentagonal, and Hexagonal",
       "difficulty": "medium",
-      "order": 201,
+      "order": 252,
       "rev": "57dfd5ff9f49",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_045_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_problem_045_sol1.json"
     },
     {
       "id": "python_code_refactor_problem_045_sol1",
@@ -2027,9 +2537,9 @@
       "language": "python",
       "title": "Triangular, Pentagonal, and Hexagonal",
       "difficulty": "medium",
-      "order": 202,
+      "order": 253,
       "rev": "fdbcf788dfa3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_045_sol1.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_problem_045_sol1.json"
     },
     {
       "id": "python_guided_practice_binary_twos_complement",
@@ -2037,9 +2547,9 @@
       "language": "python",
       "title": "Two's Complement Representation",
       "difficulty": "medium",
-      "order": 203,
+      "order": 254,
       "rev": "10c6f8be63ce",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_twos_complement.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_binary_twos_complement.json"
     },
     {
       "id": "python_bug_squasher_binary_twos_complement",
@@ -2047,9 +2557,9 @@
       "language": "python",
       "title": "Two's Complement Width Bug",
       "difficulty": "medium",
-      "order": 204,
+      "order": 255,
       "rev": "b5d868da5a8b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_twos_complement.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_binary_twos_complement.json"
     },
     {
       "id": "python_code_refactor_binary_twos_complement",
@@ -2057,9 +2567,9 @@
       "language": "python",
       "title": "Clean Two's Complement with Bitwise",
       "difficulty": "medium",
-      "order": 205,
+      "order": 256,
       "rev": "3da721dcc4b6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_twos_complement.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_binary_twos_complement.json"
     },
     {
       "id": "python_guided_practice_abbreviation",
@@ -2067,9 +2577,9 @@
       "language": "python",
       "title": "Abbreviation Subsequence DP",
       "difficulty": "advanced",
-      "order": 206,
+      "order": 257,
       "rev": "f213d874aa7d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_abbreviation.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_abbreviation.json"
     },
     {
       "id": "python_code_refactor_abbreviation",
@@ -2077,9 +2587,9 @@
       "language": "python",
       "title": "Optimizing Abbreviation DP",
       "difficulty": "advanced",
-      "order": 207,
+      "order": 258,
       "rev": "e4447d702f22",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_abbreviation.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_abbreviation.json"
     },
     {
       "id": "python_guided_practice_base32",
@@ -2087,9 +2597,9 @@
       "language": "python",
       "title": "Base32 Encoding",
       "difficulty": "advanced",
-      "order": 208,
+      "order": 259,
       "rev": "8522b334336d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_base32.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_base32.json"
     },
     {
       "id": "python_bug_squasher_base32",
@@ -2097,9 +2607,9 @@
       "language": "python",
       "title": "Base32 Binary Padding Bug",
       "difficulty": "advanced",
-      "order": 209,
+      "order": 260,
       "rev": "2fe664015497",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base32.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base32.json"
     },
     {
       "id": "python_code_refactor_base32",
@@ -2107,9 +2617,9 @@
       "language": "python",
       "title": "Using `base64` for Base32",
       "difficulty": "advanced",
-      "order": 210,
+      "order": 261,
       "rev": "e797f800e9ab",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_base32.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_base32.json"
     },
     {
       "id": "python_guided_practice_base85",
@@ -2117,9 +2627,9 @@
       "language": "python",
       "title": "Base85 (Ascii85) Encoding",
       "difficulty": "advanced",
-      "order": 211,
+      "order": 262,
       "rev": "ad88ae837bcb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_base85.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_base85.json"
     },
     {
       "id": "python_bug_squasher_base85",
@@ -2127,9 +2637,9 @@
       "language": "python",
       "title": "Base85 Null Padding Bug",
       "difficulty": "advanced",
-      "order": 212,
+      "order": 263,
       "rev": "eafd0b233d71",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base85.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base85.json"
     },
     {
       "id": "python_code_refactor_base85",
@@ -2137,9 +2647,9 @@
       "language": "python",
       "title": "Using `base64` for Base85",
       "difficulty": "advanced",
-      "order": 213,
+      "order": 264,
       "rev": "de1316957d1e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_base85.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_base85.json"
     },
     {
       "id": "python_guided_practice_bisection",
@@ -2147,9 +2657,9 @@
       "language": "python",
       "title": "Bisection Method for Roots",
       "difficulty": "advanced",
-      "order": 214,
+      "order": 265,
       "rev": "74918602cf22",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_bisection.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_bisection.json"
     },
     {
       "id": "python_bug_squasher_bisection",
@@ -2157,9 +2667,9 @@
       "language": "python",
       "title": "Bisection Range Update Bug",
       "difficulty": "advanced",
-      "order": 215,
+      "order": 266,
       "rev": "7b5e9857e511",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bisection.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bisection.json"
     },
     {
       "id": "python_code_refactor_bisection",
@@ -2167,9 +2677,9 @@
       "language": "python",
       "title": "Recursive Bisection Method",
       "difficulty": "advanced",
-      "order": 216,
+      "order": 267,
       "rev": "836c7771aaeb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_bisection.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_bisection.json"
     },
     {
       "id": "python_guided_practice_chudnovsky_algorithm",
@@ -2177,9 +2687,9 @@
       "language": "python",
       "title": "Chudnovsky PI Algorithm",
       "difficulty": "advanced",
-      "order": 217,
+      "order": 268,
       "rev": "a356b72247fa",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_chudnovsky_algorithm.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_chudnovsky_algorithm.json"
     },
     {
       "id": "python_bug_squasher_chudnovsky_algorithm",
@@ -2187,9 +2697,9 @@
       "language": "python",
       "title": "Chudnovsky PI Precision Bug",
       "difficulty": "advanced",
-      "order": 218,
+      "order": 269,
       "rev": "1a6b9970befc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_chudnovsky_algorithm.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_chudnovsky_algorithm.json"
     },
     {
       "id": "python_guided_practice_check_cycle",
@@ -2197,9 +2707,9 @@
       "language": "python",
       "title": "Cycle Detection in Graphs",
       "difficulty": "advanced",
-      "order": 219,
+      "order": 270,
       "rev": "17e89022c3af",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_cycle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_check_cycle.json"
     },
     {
       "id": "python_bug_squasher_check_cycle",
@@ -2207,9 +2717,9 @@
       "language": "python",
       "title": "Cycle Detection DFS Bug",
       "difficulty": "advanced",
-      "order": 220,
+      "order": 271,
       "rev": "c5ab459de88c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_cycle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_check_cycle.json"
     },
     {
       "id": "python_guided_practice_base_neg2_conversion",
@@ -2217,9 +2727,9 @@
       "language": "python",
       "title": "Decimal to Negabinary Conversion",
       "difficulty": "advanced",
-      "order": 221,
+      "order": 272,
       "rev": "00fe9bdf208b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_base_neg2_conversion.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_base_neg2_conversion.json"
     },
     {
       "id": "python_bug_squasher_base_neg2_conversion",
@@ -2227,9 +2737,9 @@
       "language": "python",
       "title": "Negabinary Remainder Bug",
       "difficulty": "advanced",
-      "order": 222,
+      "order": 273,
       "rev": "18f1d049699d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base_neg2_conversion.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_base_neg2_conversion.json"
     },
     {
       "id": "python_code_refactor_base_neg2_conversion",
@@ -2237,9 +2747,99 @@
       "language": "python",
       "title": "Recursive Negabinary Conversion",
       "difficulty": "advanced",
-      "order": 223,
+      "order": 274,
       "rev": "19984706973e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_base_neg2_conversion.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_base_neg2_conversion.json"
+    },
+    {
+      "id": "python_guided_practice_bst_inorder",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Binary Search Tree In-Order",
+      "difficulty": "advanced",
+      "order": 275,
+      "rev": "d25770d96559",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_bst_inorder.json"
+    },
+    {
+      "id": "python_bug_squasher_bst_inorder",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Keys Inserted on the Wrong Side",
+      "difficulty": "advanced",
+      "order": 276,
+      "rev": "77f25feec24e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_bst_inorder.json"
+    },
+    {
+      "id": "python_code_refactor_bst_inorder",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: A Generator Instead of an Output List Parameter",
+      "difficulty": "advanced",
+      "order": 277,
+      "rev": "9e2bf2da4f1e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_bst_inorder.json"
+    },
+    {
+      "id": "python_guided_practice_lru_cache_class",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: LRU Cache with OrderedDict",
+      "difficulty": "advanced",
+      "order": 278,
+      "rev": "c784ec798f31",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_lru_cache_class.json"
+    },
+    {
+      "id": "python_bug_squasher_lru_cache_class",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: Reading Does Not Refresh the Entry",
+      "difficulty": "advanced",
+      "order": 279,
+      "rev": "ffb66fb24c72",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_lru_cache_class.json"
+    },
+    {
+      "id": "python_code_refactor_lru_cache_class",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: OrderedDict Instead of a Dict plus an Order List",
+      "difficulty": "advanced",
+      "order": 280,
+      "rev": "f69ed293f513",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_lru_cache_class.json"
+    },
+    {
+      "id": "python_guided_practice_linked_list_reverse",
+      "type": "guided",
+      "language": "python",
+      "title": "Guided Practice: Reverse a Linked List",
+      "difficulty": "advanced",
+      "order": 281,
+      "rev": "1723f3162092",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_linked_list_reverse.json"
+    },
+    {
+      "id": "python_bug_squasher_linked_list_reverse",
+      "type": "bug_squasher",
+      "language": "python",
+      "title": "Bug Squasher: The Rest of the List Is Lost",
+      "difficulty": "advanced",
+      "order": 282,
+      "rev": "bffffa396813",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_linked_list_reverse.json"
+    },
+    {
+      "id": "python_code_refactor_linked_list_reverse",
+      "type": "refactor",
+      "language": "python",
+      "title": "Code Refactor: Relink Pointers Instead of Copying Values",
+      "difficulty": "advanced",
+      "order": 283,
+      "rev": "ed82fa7dca1a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_linked_list_reverse.json"
     },
     {
       "id": "python_guided_practice_all_construct",
@@ -2247,9 +2847,9 @@
       "language": "python",
       "title": "String Reconstruction (All Construct)",
       "difficulty": "advanced",
-      "order": 224,
+      "order": 284,
       "rev": "977b2fe65440",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_guided_practice_all_construct.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_guided_practice_all_construct.json"
     },
     {
       "id": "python_bug_squasher_all_construct",
@@ -2257,9 +2857,9 @@
       "language": "python",
       "title": "All Construct Index Bug",
       "difficulty": "advanced",
-      "order": 225,
+      "order": 285,
       "rev": "ec1b467e83b3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_bug_squasher_all_construct.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_bug_squasher_all_construct.json"
     },
     {
       "id": "python_code_refactor_all_construct",
@@ -2267,9 +2867,9 @@
       "language": "python",
       "title": "Recursive All Construct with Memoization",
       "difficulty": "advanced",
-      "order": 226,
+      "order": 286,
       "rev": "ae566fe66130",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/python/python_code_refactor_all_construct.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/python/python_code_refactor_all_construct.json"
     }
   ],
   "projects": []

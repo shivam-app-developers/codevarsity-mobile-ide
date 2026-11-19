@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Binary Search Tree In-Order",
+    "language": "python",
+    "description": "Smaller keys go left and larger keys go right. An in-order walk (left, node, right) yields the keys in sorted order; yield from passes on the values of the recursive calls.",
+    "ghostCode": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n\n\ndef insert(root, key):\n    if root is None:\n        return Node(key)\n    if key < root.key:\n        root.left = insert(root.left, key)\n    elif key > root.key:\n        root.right = insert(root.right, key)\n    return root\n\n\ndef inorder(root):\n    if root:\n        yield from inorder(root.left)\n        yield root.key\n        yield from inorder(root.right)\n\n\nroot = None\nfor key in [50, 30, 70, 20, 40, 60, 80]:\n    root = insert(root, key)\nprint(list(inorder(root)))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[20, 30, 40, 50, 60, 70, 80\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

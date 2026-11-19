@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Closures in a Loop",
+    "language": "javascript",
+    "description": "With var, all closures created in a loop share one variable. Wrapping the body in an immediately invoked function gives each closure its own copy.",
+    "ghostCode": "var callbacks = [];\nfor (var i = 0; i < 3; i++) {\n  callbacks.push((function (n) {\n    return function () {\n      return n;\n    };\n  })(i));\n}\nconsole.log(callbacks[0](), callbacks[1](), callbacks[2]());",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

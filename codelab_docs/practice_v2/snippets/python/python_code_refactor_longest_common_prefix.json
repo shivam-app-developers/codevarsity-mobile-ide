@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: zip Instead of Index Arithmetic",
+    "language": "python",
+    "problemDescription": "Nested loops compare the words letter by letter with indexes, a flag and a break. Use zip(*words). The output must stay the same.",
+    "initialCode": "words = [\"cascade\", \"cast\", \"castle\"]\nresult = \"\"\nfor i in range(len(words[0])):\n    letter = words[0][i]\n    same = True\n    for w in words:\n        if i >= len(w) or w[i] != letter:\n            same = False\n    if not same:\n        break\n    result += letter\nprint(result)",
+    "solution": {
+      "code": "words = [\"cascade\", \"cast\", \"castle\"]\nresult = \"\"\nfor letters in zip(*words):\n    if len(set(letters)) != 1:\n        break\n    result += letters[0]\nprint(result)",
+      "explanation": "zip stops at the shortest word by itself, so the length check, the index and the flag are not needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cas\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

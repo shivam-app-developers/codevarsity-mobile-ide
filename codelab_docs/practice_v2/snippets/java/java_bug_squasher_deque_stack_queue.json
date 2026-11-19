@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Queue Is Filled with push",
+    "language": "java",
+    "problemDescription": "The queue should hand out 1 first and then 2, but the program prints 3 2.",
+    "buggyCode": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> queue = new ArrayDeque<>();\n        queue.push(1);\n        queue.push(2);\n        queue.push(3);\n        System.out.println(queue.poll() + \" \" + queue.peek());\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> queue = new ArrayDeque<>();\n        queue.offer(1);\n        queue.offer(2);\n        queue.offer(3);\n        System.out.println(queue.poll() + \" \" + queue.peek());\n    }\n}",
+      "explanation": "push inserts at the front of a Deque, while poll takes from the front, so the newest element comes out first, which is stack behaviour. A queue adds at the back (offer or add) and polls from the front."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

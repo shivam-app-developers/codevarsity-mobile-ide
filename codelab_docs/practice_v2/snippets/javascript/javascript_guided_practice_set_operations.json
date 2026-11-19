@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Set Operations",
+    "language": "javascript",
+    "description": "Sets answer \"is it in there?\" quickly with has. Combine them with filter to find the common items or the items in only one of them.",
+    "ghostCode": "var a = new Set([1, 2, 3, 4]);\nvar b = new Set([3, 4, 5]);\nvar union = new Set(Array.from(a).concat(Array.from(b)));\nvar common = Array.from(a).filter(function (x) {\n  return b.has(x);\n});\nvar onlyA = Array.from(a).filter(function (x) {\n  return !b.has(x);\n});\nconsole.log(union.size, common, onlyA);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5 \\[3,4\\] \\[1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

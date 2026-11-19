@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last of Equal Words Wins",
+    "language": "javascript",
+    "problemDescription": "In blue sky wins the first longest word is blue, but the program returns wins.",
+    "buggyCode": "function longestWord(sentence) {\n  var words = sentence.split(\" \");\n  var longest = \"\";\n  words.forEach(function (w) {\n    if (w.length >= longest.length) {\n      longest = w;\n    }\n  });\n  return longest;\n}\n\nconsole.log(longestWord(\"blue sky wins\"));",
+    "solution": {
+      "code": "function longestWord(sentence) {\n  var words = sentence.split(\" \");\n  var longest = \"\";\n  words.forEach(function (w) {\n    if (w.length > longest.length) {\n      longest = w;\n    }\n  });\n  return longest;\n}\n\nconsole.log(longestWord(\"blue sky wins\"));",
+      "explanation": "With >= a word of equal length replaces the current one, so a later word wins every tie. A strict > keeps the first longest word."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*blue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

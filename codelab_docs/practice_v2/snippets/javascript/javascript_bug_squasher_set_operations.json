@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Difference Forgets the Negation",
+    "language": "javascript",
+    "problemDescription": "The items only in the first set should be [1,2], but the program prints [3,4].",
+    "buggyCode": "var a = new Set([1, 2, 3, 4]);\nvar b = new Set([3, 4, 5]);\nvar onlyA = Array.from(a).filter(function (x) {\n  return b.has(x);\n});\nconsole.log(onlyA);",
+    "solution": {
+      "code": "var a = new Set([1, 2, 3, 4]);\nvar b = new Set([3, 4, 5]);\nvar onlyA = Array.from(a).filter(function (x) {\n  return !b.has(x);\n});\nconsole.log(onlyA);",
+      "explanation": "Keeping the items for which b.has(x) is true gives the intersection. The difference is the items that are not in the other set, so the condition needs the negation !b.has(x)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

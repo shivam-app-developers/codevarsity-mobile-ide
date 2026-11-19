@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Old Values Stay at the End",
+    "language": "c",
+    "problemDescription": "The result for 4 0 5 0 0 6 should be 4 5 6 0 0 0, but the program prints 4 5 6 0 0 6.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {4, 0, 5, 0, 0, 6};\n    int n = 6;\n    int pos = 0;\n    for (int i = 0; i < n; i++) {\n        if (a[i] != 0) {\n            a[pos++] = a[i];\n        }\n    }\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {4, 0, 5, 0, 0, 6};\n    int n = 6;\n    int pos = 0;\n    for (int i = 0; i < n; i++) {\n        if (a[i] != 0) {\n            a[pos++] = a[i];\n        }\n    }\n    while (pos < n) {\n        a[pos++] = 0;\n    }\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Copying the non-zero values forward overwrites the front of the array but leaves the old values behind them. The positions from pos to the end must be set to 0 explicitly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 5 6 0 0 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Each Group Keeps Only Its Last Item",
+    "language": "javascript",
+    "problemDescription": "Words of length 3 are bat, cat and eel and should end up together, but the group for 3 holds only eel.",
+    "buggyCode": "function groupBy(list, keyFn) {\n  var groups = {};\n  list.forEach(function (item) {\n    var key = keyFn(item);\n    groups[key] = [];\n    groups[key].push(item);\n  });\n  return groups;\n}\n\nvar words = [\"apple\", \"bat\", \"cat\", \"dragon\", \"eel\"];\nconsole.log(groupBy(words, function (w) {\n  return w.length;\n}));",
+    "solution": {
+      "code": "function groupBy(list, keyFn) {\n  var groups = {};\n  list.forEach(function (item) {\n    var key = keyFn(item);\n    if (!groups[key]) {\n      groups[key] = [];\n    }\n    groups[key].push(item);\n  });\n  return groups;\n}\n\nvar words = [\"apple\", \"bat\", \"cat\", \"dragon\", \"eel\"];\nconsole.log(groupBy(words, function (w) {\n  return w.length;\n}));",
+      "explanation": "The empty array must be created only when the key is new. Creating it every time replaces the group with a fresh empty array, throwing away the items collected so far."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"3\":\\[\"bat\",\"cat\",\"eel\"\\],\"5\":\\[\"apple\"\\],\"6\":\\[\"dragon\"\\]\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Merge Two Sorted Arrays",
+    "language": "c",
+    "description": "Walk through both arrays with one index each and always copy the smaller front element. Then copy whatever is left.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 4, 7};\n    int b[] = {2, 3, 9, 10};\n    int merged[7];\n    int i = 0, j = 0, k = 0;\n    while (i < 3 && j < 4) {\n        if (a[i] <= b[j]) merged[k++] = a[i++];\n        else merged[k++] = b[j++];\n    }\n    while (i < 3) merged[k++] = a[i++];\n    while (j < 4) merged[k++] = b[j++];\n    for (int x = 0; x < k; x++) printf(\"%d \", merged[x]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4 7 9 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

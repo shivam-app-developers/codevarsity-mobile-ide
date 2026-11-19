@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Reading Does Not Refresh the Entry",
+    "language": "java",
+    "problemDescription": "After a is read, b should be the entry that gets evicted and the cache should hold [a, c], but it holds [b, c].",
+    "buggyCode": "import java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class Main {\n    static class LRUCache<K, V> extends LinkedHashMap<K, V> {\n        private final int capacity;\n\n        LRUCache(int capacity) {\n            super(16, 0.75f, false);\n            this.capacity = capacity;\n        }\n\n        @Override\n        protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {\n            return size() > capacity;\n        }\n    }\n\n    public static void main(String[] args) {\n        LRUCache<String, Integer> cache = new LRUCache<>(2);\n        cache.put(\"a\", 1);\n        cache.put(\"b\", 2);\n        cache.get(\"a\");\n        cache.put(\"c\", 3);\n        System.out.println(cache.keySet());\n    }\n}",
+    "solution": {
+      "code": "import java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class Main {\n    static class LRUCache<K, V> extends LinkedHashMap<K, V> {\n        private final int capacity;\n\n        LRUCache(int capacity) {\n            super(16, 0.75f, true);\n            this.capacity = capacity;\n        }\n\n        @Override\n        protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {\n            return size() > capacity;\n        }\n    }\n\n    public static void main(String[] args) {\n        LRUCache<String, Integer> cache = new LRUCache<>(2);\n        cache.put(\"a\", 1);\n        cache.put(\"b\", 2);\n        cache.get(\"a\");\n        cache.put(\"c\", 3);\n        System.out.println(cache.keySet());\n    }\n}",
+      "explanation": "The third constructor argument selects access order. With false the map keeps insertion order, so reading a does not count as a use, and a (inserted first) is evicted instead of b."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[a, c\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

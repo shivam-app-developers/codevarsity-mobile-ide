@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Reversal Starts Too Late",
+    "language": "java",
+    "problemDescription": "Rotating 1 to 7 right by 3 should give [5, 6, 7, 1, 2, 3, 4], but the program prints [5, 6, 7, 4, 1, 2, 3].",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    static void reverse(int[] a, int from, int to) {\n        while (from < to) {\n            int t = a[from];\n            a[from++] = a[to];\n            a[to--] = t;\n        }\n    }\n\n    static void rotateRight(int[] a, int k) {\n        k %= a.length;\n        reverse(a, 0, a.length - 1);\n        reverse(a, 0, k - 1);\n        reverse(a, k + 1, a.length - 1);\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 2, 3, 4, 5, 6, 7};\n        rotateRight(a, 3);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static void reverse(int[] a, int from, int to) {\n        while (from < to) {\n            int t = a[from];\n            a[from++] = a[to];\n            a[to--] = t;\n        }\n    }\n\n    static void rotateRight(int[] a, int k) {\n        k %= a.length;\n        reverse(a, 0, a.length - 1);\n        reverse(a, 0, k - 1);\n        reverse(a, k, a.length - 1);\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 2, 3, 4, 5, 6, 7};\n        rotateRight(a, 3);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+      "explanation": "After reversing the first k elements, the remaining part starts exactly at index k. Starting at k + 1 leaves the element at index k out of the reversal, so it stays in the wrong place."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5, 6, 7, 1, 2, 3, 4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

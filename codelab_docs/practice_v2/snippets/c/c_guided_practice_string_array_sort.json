@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sort a List of Words",
+    "language": "c",
+    "description": "Use strcmp to compare words and swap the pointers in the array when two are out of order.",
+    "ghostCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *names[] = {\"mango\", \"apple\", \"cherry\", \"banana\"};\n    int n = 4;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (strcmp(names[j], names[j + 1]) > 0) {\n                const char *temp = names[j];\n                names[j] = names[j + 1];\n                names[j + 1] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < n; i++) {\n        printf(\"%s\\n\", names[i]);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apple[ \\t]*\\r?\\nbanana[ \\t]*\\r?\\ncherry[ \\t]*\\r?\\nmango\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

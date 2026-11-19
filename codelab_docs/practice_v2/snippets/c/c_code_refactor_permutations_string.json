@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Recursion Instead of Nested Loops",
+    "language": "c",
+    "problemDescription": "Three nested loops generate the permutations of exactly three letters. Write a recursive version with a used[] array that works for any length. The output must stay the same, in the same order.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"abc\";\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            for (int k = 0; k < 3; k++) {\n                if (i != j && j != k && i != k) {\n                    printf(\"%c%c%c\\n\", s[i], s[j], s[k]);\n                }\n            }\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid build(const char *letters, char *current, int used[], int depth, int n) {\n    if (depth == n) {\n        current[n] = '\\0';\n        printf(\"%s\\n\", current);\n        return;\n    }\n    for (int i = 0; i < n; i++) {\n        if (!used[i]) {\n            used[i] = 1;\n            current[depth] = letters[i];\n            build(letters, current, used, depth + 1, n);\n            used[i] = 0;\n        }\n    }\n}\n\nint main() {\n    char current[10];\n    int used[3] = {0};\n    build(\"abc\", current, used, 0, 3);\n    return 0;\n}",
+      "explanation": "Nested loops hard-wire the length: four letters would need a fourth loop. The recursive version adds one letter per level and un-marks it on the way back, so one function handles any length."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abc[ \\t]*\\r?\\nacb[ \\t]*\\r?\\nbac[ \\t]*\\r?\\nbca[ \\t]*\\r?\\ncab[ \\t]*\\r?\\ncba\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

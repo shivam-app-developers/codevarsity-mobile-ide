@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Insertion Sort",
+    "language": "javascript",
+    "description": "Take each item in turn and shift the larger items of the sorted front part one place right until the item fits.",
+    "ghostCode": "function insertionSort(a) {\n  for (var i = 1; i < a.length; i++) {\n    var key = a[i];\n    var j = i - 1;\n    while (j >= 0 && a[j] > key) {\n      a[j + 1] = a[j];\n      j--;\n    }\n    a[j + 1] = key;\n  }\n  return a;\n}\n\nconsole.log(insertionSort([12, 11, 13, 5, 6]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5,6,11,12,13\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

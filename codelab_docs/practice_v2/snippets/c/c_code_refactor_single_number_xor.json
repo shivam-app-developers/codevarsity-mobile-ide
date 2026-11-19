@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: XOR Instead of Counting Occurrences",
+    "language": "c",
+    "problemDescription": "Every element is compared with every other element to count its occurrences. Use a single XOR pass. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {9, 5, 9, 7, 5};\n    int n = 5;\n    for (int i = 0; i < n; i++) {\n        int count = 0;\n        for (int j = 0; j < n; j++) {\n            if (a[i] == a[j]) {\n                count++;\n            }\n        }\n        if (count == 1) {\n            printf(\"%d\\n\", a[i]);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {9, 5, 9, 7, 5};\n    int single = 0;\n    for (int i = 0; i < 5; i++) {\n        single ^= a[i];\n    }\n    printf(\"%d\\n\", single);\n    return 0;\n}",
+      "explanation": "The counting version takes n squared comparisons and prints every value that occurs once. XOR takes n steps, uses one variable, and relies on the guarantee that exactly one value is single."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

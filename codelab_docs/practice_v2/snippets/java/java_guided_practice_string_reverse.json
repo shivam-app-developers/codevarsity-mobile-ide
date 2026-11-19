@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse a String",
+    "language": "java",
+    "description": "Swap characters from both ends of a char array until the two indexes meet in the middle.",
+    "ghostCode": "public class Main {\n    static String reverse(String s) {\n        char[] chars = s.toCharArray();\n        int left = 0, right = chars.length - 1;\n        while (left < right) {\n            char temp = chars[left];\n            chars[left++] = chars[right];\n            chars[right--] = temp;\n        }\n        return new String(chars);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(reverse(\"interview\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*weivretni\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

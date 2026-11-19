@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The First Letter Is Lost",
+    "language": "java",
+    "problemDescription": "Reversing hello should print olleh, but the program prints olle.",
+    "buggyCode": "public class Main {\n    static String reverse(String s) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = s.length() - 1; i > 0; i--) {\n            sb.append(s.charAt(i));\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(reverse(\"hello\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String reverse(String s) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = s.length() - 1; i >= 0; i--) {\n            sb.append(s.charAt(i));\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(reverse(\"hello\"));\n    }\n}",
+      "explanation": "Index 0 is the first character, and it is the last one to be appended in a reversed string. The loop condition must include 0 (i >= 0). With i > 0 the loop stops one step early."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*olleh\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

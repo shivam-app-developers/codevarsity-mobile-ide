@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Rows Have an Even Number of Stars",
+    "language": "c",
+    "problemDescription": "The pyramid rows should have 1, 3 and 5 stars, but they have 2, 4 and 6 so the shape is lopsided.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 3; i++) {\n        for (int s = 0; s < 3 - i; s++) printf(\" \");\n        for (int k = 0; k < 2 * i; k++) printf(\"*\");\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 3; i++) {\n        for (int s = 0; s < 3 - i; s++) printf(\" \");\n        for (int k = 0; k < 2 * i - 1; k++) printf(\"*\");\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "The widths of a centered pyramid are the odd numbers 1, 3, 5, which is 2 * i - 1. Using 2 * i gives even widths, which can never be centered on a single star."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*  \\*[ \\t]*\\r?\\n \\*\\*\\*[ \\t]*\\r?\\n\\*\\*\\*\\*\\*\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

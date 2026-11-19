@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Picked Item Is Not Added",
+    "language": "javascript",
+    "problemDescription": "Every permutation of 1, 2, 3 should contain three numbers, but the program prints arrays with one number each.",
+    "buggyCode": "function permutations(items) {\n  if (items.length <= 1) {\n    return [items];\n  }\n  var result = [];\n  items.forEach(function (item, i) {\n    var rest = items.slice(0, i).concat(items.slice(i + 1));\n    permutations(rest).forEach(function (p) {\n      result.push(p);\n    });\n  });\n  return result;\n}\n\nconsole.log(permutations([1, 2, 3]));",
+    "solution": {
+      "code": "function permutations(items) {\n  if (items.length <= 1) {\n    return [items];\n  }\n  var result = [];\n  items.forEach(function (item, i) {\n    var rest = items.slice(0, i).concat(items.slice(i + 1));\n    permutations(rest).forEach(function (p) {\n      result.push([item].concat(p));\n    });\n  });\n  return result;\n}\n\nconsole.log(permutations([1, 2, 3]));",
+      "explanation": "Each recursive result arranges only the remaining items. The item that was picked first has to be put in front of it, otherwise it is lost at every level."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,2,3\\],\\[1,3,2\\],\\[2,1,3\\],\\[2,3,1\\],\\[3,1,2\\],\\[3,2,1\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

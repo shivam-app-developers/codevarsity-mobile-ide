@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Count Vowels and Consonants",
+    "language": "c",
+    "description": "Convert each letter to lower case so both 'A' and 'a' are recognised, then count vowels and other letters separately.",
+    "ghostCode": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    char text[] = \"Hello World\";\n    int vowels = 0, consonants = 0;\n    for (int i = 0; text[i] != '\\0'; i++) {\n        char c = tolower(text[i]);\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {\n            vowels++;\n        } else if (isalpha(c)) {\n            consonants++;\n        }\n    }\n    printf(\"Vowels: %d\\nConsonants: %d\\n\", vowels, consonants);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Vowels: 3[ \\t]*\\r?\\nConsonants: 7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

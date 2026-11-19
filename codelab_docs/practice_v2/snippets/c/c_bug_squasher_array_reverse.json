@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Array Comes Out Unchanged",
+    "language": "c",
+    "problemDescription": "The array 1 2 3 4 5 should print as 5 4 3 2 1, but it prints 1 2 3 4 5 again.",
+    "buggyCode": "#include <stdio.h>\n\nvoid reverse(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5};\n    reverse(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid reverse(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5};\n    reverse(a, 5);\n    for (int i = 0; i < 5; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Each swap fixes two positions, so only half of the array needs visiting. Looping to n swaps every pair twice, which puts every element back where it started."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5 4 3 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

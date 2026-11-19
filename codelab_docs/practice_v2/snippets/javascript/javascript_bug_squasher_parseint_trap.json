@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: parseInt Receives the Index as Its Radix",
+    "language": "javascript",
+    "problemDescription": "Converting the strings 1, 2 and 3 should give [1,2,3], but the program prints [1,null,null].",
+    "buggyCode": "var strings = [\"1\", \"2\", \"3\"];\nconsole.log(strings.map(parseInt));",
+    "solution": {
+      "code": "var strings = [\"1\", \"2\", \"3\"];\nconsole.log(strings.map(function (s) {\n  return parseInt(s, 10);\n}));",
+      "explanation": "map calls parseInt(value, index, array), so the index is used as the radix: parseInt(\"2\", 1) is NaN because radix 1 is invalid. Wrap the call in a function that passes only the value and an explicit radix of 10."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

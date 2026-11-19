@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the Recursion with a Loop",
+    "language": "c",
+    "problemDescription": "The recursion does nothing a loop cannot, and every call uses stack space. Rewrite the reversal with a while loop. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s, int left, int right) {\n    if (left < right) {\n        char temp = s[left];\n        s[left] = s[right];\n        s[right] = temp;\n        reverse(s, left + 1, right - 1);\n    }\n}\n\nint main() {\n    char text[] = \"stack frames\";\n    reverse(text, 0, strlen(text) - 1);\n    printf(\"%s\\n\", text);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s) {\n    int left = 0, right = strlen(s) - 1;\n    while (left < right) {\n        char temp = s[left];\n        s[left++] = s[right];\n        s[right--] = temp;\n    }\n}\n\nint main() {\n    char text[] = \"stack frames\";\n    reverse(text);\n    printf(\"%s\\n\", text);\n    return 0;\n}",
+      "explanation": "This recursion adds one stack frame per two characters and gains nothing over a loop. The loop uses constant memory, and the function no longer asks the caller to pass the indexes."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*semarf kcats\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

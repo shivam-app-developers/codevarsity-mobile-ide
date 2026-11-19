@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Base Case Instead of Nested Checks",
+    "language": "c",
+    "problemDescription": "The inorder function checks for NULL at three levels before recursing. Use one early return for an empty tree. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nvoid inorder(struct Node *root) {\n    if (root != NULL) {\n        if (root->left != NULL) {\n            inorder(root->left);\n        }\n        printf(\"%d \", root->key);\n        if (root->right != NULL) {\n            inorder(root->right);\n        }\n    }\n}\n\nint main() {\n    struct Node *root = new_node(4);\n    root->left = new_node(2);\n    root->right = new_node(6);\n    root->left->left = new_node(1);\n    root->left->right = new_node(3);\n    inorder(root);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nvoid inorder(struct Node *root) {\n    if (root == NULL) {\n        return;\n    }\n    inorder(root->left);\n    printf(\"%d \", root->key);\n    inorder(root->right);\n}\n\nint main() {\n    struct Node *root = new_node(4);\n    root->left = new_node(2);\n    root->right = new_node(6);\n    root->left->left = new_node(1);\n    root->left->right = new_node(3);\n    inorder(root);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Letting the recursive call handle NULL means the check is written once, at the top, instead of before each call. This is the standard shape for every tree recursion."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4 6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

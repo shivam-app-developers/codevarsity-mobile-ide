@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Second Largest Element",
+    "language": "c",
+    "description": "Track the largest and second largest in one pass. A new value either becomes the largest (pushing the old one down) or beats only the second.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {12, 35, 1, 10, 34, 1};\n    int first = -1, second = -1;\n    for (int i = 0; i < 6; i++) {\n        if (a[i] > first) {\n            second = first;\n            first = a[i];\n        } else if (a[i] > second && a[i] != first) {\n            second = a[i];\n        }\n    }\n    printf(\"Largest: %d\\nSecond largest: %d\\n\", first, second);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Largest: 35[ \\t]*\\r?\\nSecond largest: 34\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

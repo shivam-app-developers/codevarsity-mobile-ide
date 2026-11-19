@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Rest of the List Is Lost",
+    "language": "python",
+    "problemDescription": "The list 1, 2, 3, 4 should be printed as [4, 3, 2, 1] after reversing, but the program prints [1].",
+    "buggyCode": "class Node:\n    def __init__(self, value, next=None):\n        self.value = value\n        self.next = next\n\n\ndef reverse(head):\n    prev = None\n    while head is not None:\n        head.next = prev\n        nxt = head.next\n        prev = head\n        head = nxt\n    return prev\n\n\nhead = Node(1, Node(2, Node(3, Node(4))))\nnode = reverse(head)\nvalues = []\nwhile node is not None:\n    values.append(node.value)\n    node = node.next\nprint(values)",
+    "solution": {
+      "code": "class Node:\n    def __init__(self, value, next=None):\n        self.value = value\n        self.next = next\n\n\ndef reverse(head):\n    prev = None\n    while head is not None:\n        nxt = head.next\n        head.next = prev\n        prev = head\n        head = nxt\n    return prev\n\n\nhead = Node(1, Node(2, Node(3, Node(4))))\nnode = reverse(head)\nvalues = []\nwhile node is not None:\n    values.append(node.value)\n    node = node.next\nprint(values)",
+      "explanation": "Saving the next node after head.next has been overwritten just saves prev. The pointer to the rest of the list is gone, the loop ends after the first node, and the other nodes are lost. Save first, then relink."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[4, 3, 2, 1\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

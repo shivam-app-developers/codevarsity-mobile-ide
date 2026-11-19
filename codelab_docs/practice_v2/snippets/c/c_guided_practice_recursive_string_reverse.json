@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Recursive String Reversal",
+    "language": "c",
+    "description": "Swap the outer two characters, then reverse the part in between by calling the function again on a smaller range. Stop when the range is empty.",
+    "ghostCode": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s, int left, int right) {\n    if (left >= right) {\n        return;\n    }\n    char temp = s[left];\n    s[left] = s[right];\n    s[right] = temp;\n    reverse(s, left + 1, right - 1);\n}\n\nint main() {\n    char word[] = \"recursion\";\n    reverse(word, 0, strlen(word) - 1);\n    printf(\"%s\\n\", word);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*noisrucer\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

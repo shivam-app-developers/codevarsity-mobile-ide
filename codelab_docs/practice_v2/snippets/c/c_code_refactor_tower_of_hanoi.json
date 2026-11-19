@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Name the Pegs by Their Role",
+    "language": "c",
+    "problemDescription": "The pegs are called a, b and c, and the base case is written for n == 1. Rename them from, via and to, and use the simpler base case n == 0. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nvoid hanoi(int n, char a, char b, char c) {\n    if (n == 1) {\n        printf(\"%c->%c\\n\", a, c);\n    } else {\n        hanoi(n - 1, a, c, b);\n        printf(\"%c->%c\\n\", a, c);\n        hanoi(n - 1, b, a, c);\n    }\n}\n\nint main() {\n    hanoi(3, 'A', 'B', 'C');\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid hanoi(int disks, char from, char via, char to) {\n    if (disks == 0) {\n        return;\n    }\n    hanoi(disks - 1, from, to, via);\n    printf(\"%c->%c\\n\", from, to);\n    hanoi(disks - 1, via, from, to);\n}\n\nint main() {\n    hanoi(3, 'A', 'B', 'C');\n    return 0;\n}",
+      "explanation": "Descriptive parameter names make the three roles obvious, and a base case of zero disks removes the duplicated print statement."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A->C[ \\t]*\\r?\\nA->B[ \\t]*\\r?\\nC->B[ \\t]*\\r?\\nA->C[ \\t]*\\r?\\nB->A[ \\t]*\\r?\\nB->C[ \\t]*\\r?\\nA->C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

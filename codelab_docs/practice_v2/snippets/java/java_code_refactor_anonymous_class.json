@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Let the Library Sort",
+    "language": "java",
+    "problemDescription": "A hand-written bubble sort orders the words by length. Use Arrays.sort with an anonymous Comparator. The output must stay the same.",
+    "initialCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"banana\", \"kiwi\", \"apple\"};\n        for (int i = 0; i < words.length; i++) {\n            for (int j = 0; j < words.length - 1 - i; j++) {\n                if (words[j].length() > words[j + 1].length()) {\n                    String temp = words[j];\n                    words[j] = words[j + 1];\n                    words[j + 1] = temp;\n                }\n            }\n        }\n        System.out.println(Arrays.toString(words));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\nimport java.util.Comparator;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"banana\", \"kiwi\", \"apple\"};\n        Arrays.sort(words, new Comparator<String>() {\n            @Override\n            public int compare(String a, String b) {\n                return a.length() - b.length();\n            }\n        });\n        System.out.println(Arrays.toString(words));\n    }\n}",
+      "explanation": "Describing only how two items compare lets the library's sorting algorithm do the rest, and it is faster than a hand-written bubble sort. The comparison rule is now separate from the sorting mechanics."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[kiwi, apple, banana\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

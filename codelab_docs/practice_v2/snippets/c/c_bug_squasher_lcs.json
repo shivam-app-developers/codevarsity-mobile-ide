@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Match Does Not Add One",
+    "language": "c",
+    "problemDescription": "The longest common subsequence of AGGTAB and GXTXAYB is GTAB with length 4, but the program prints 0.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *a = \"AGGTAB\";\n    const char *b = \"GXTXAYB\";\n    int n = strlen(a), m = strlen(b);\n    int dp[7][8] = {{0}};\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= m; j++) {\n            if (a[i - 1] == b[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1];\n            } else {\n                dp[i][j] = dp[i - 1][j] > dp[i][j - 1] ? dp[i - 1][j] : dp[i][j - 1];\n            }\n        }\n    }\n    printf(\"%d\\n\", dp[n][m]);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *a = \"AGGTAB\";\n    const char *b = \"GXTXAYB\";\n    int n = strlen(a), m = strlen(b);\n    int dp[7][8] = {{0}};\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= m; j++) {\n            if (a[i - 1] == b[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1] + 1;\n            } else {\n                dp[i][j] = dp[i - 1][j] > dp[i][j - 1] ? dp[i - 1][j] : dp[i][j - 1];\n            }\n        }\n    }\n    printf(\"%d\\n\", dp[n][m]);\n    return 0;\n}",
+      "explanation": "When two letters match, the common subsequence grows by one letter. Without the + 1 the value just copies the diagonal, which starts at 0, so no matter how many letters match the length stays 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

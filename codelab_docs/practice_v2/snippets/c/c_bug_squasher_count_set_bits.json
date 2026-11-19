@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Highest Bit Is Never Counted",
+    "language": "c",
+    "problemDescription": "7 is 111 in binary and has three 1 bits, but the program prints 2.",
+    "buggyCode": "#include <stdio.h>\n\nint count_bits(unsigned int n) {\n    int count = 0;\n    while (n > 1) {\n        count += n & 1;\n        n >>= 1;\n    }\n    return count;\n}\n\nint main() {\n    printf(\"%d\\n\", count_bits(7));\n    printf(\"%d\\n\", count_bits(12));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint count_bits(unsigned int n) {\n    int count = 0;\n    while (n > 0) {\n        count += n & 1;\n        n >>= 1;\n    }\n    return count;\n}\n\nint main() {\n    printf(\"%d\\n\", count_bits(7));\n    printf(\"%d\\n\", count_bits(12));\n    return 0;\n}",
+      "explanation": "The last iteration happens when n is exactly 1: that is the top bit, and it still has to be counted. Stopping at n > 1 leaves it out, so the answer is always one too low for odd results."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

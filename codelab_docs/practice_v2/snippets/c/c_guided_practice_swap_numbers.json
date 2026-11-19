@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Swap Two Numbers",
+    "language": "c",
+    "description": "Swap two variables with a temporary third variable, then print them before and after.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a = 5, b = 9;\n    printf(\"Before: a=%d b=%d\\n\", a, b);\n    int temp = a;\n    a = b;\n    b = temp;\n    printf(\"After: a=%d b=%d\\n\", a, b);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Before: a=5 b=9[ \\t]*\\r?\\nAfter: a=9 b=5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

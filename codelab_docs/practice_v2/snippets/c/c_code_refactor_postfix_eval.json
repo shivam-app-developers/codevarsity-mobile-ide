@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Separate the Arithmetic",
+    "language": "c",
+    "problemDescription": "Four almost identical if blocks each do their own stack bookkeeping. Move the arithmetic into an apply function so the loop pushes one result. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    const char *expr = \"95+2*\";\n    int st[10];\n    int t = 0;\n    for (int i = 0; expr[i] != '\\0'; i++) {\n        if (expr[i] >= '0' && expr[i] <= '9') {\n            st[t] = expr[i] - '0';\n            t = t + 1;\n        } else {\n            int y = st[t - 1];\n            int x = st[t - 2];\n            t = t - 2;\n            if (expr[i] == '+') {\n                st[t] = x + y;\n                t = t + 1;\n            }\n            if (expr[i] == '-') {\n                st[t] = x - y;\n                t = t + 1;\n            }\n            if (expr[i] == '*') {\n                st[t] = x * y;\n                t = t + 1;\n            }\n            if (expr[i] == '/') {\n                st[t] = x / y;\n                t = t + 1;\n            }\n        }\n    }\n    printf(\"%d\\n\", st[0]);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint apply(char op, int a, int b) {\n    switch (op) {\n        case '+': return a + b;\n        case '-': return a - b;\n        case '*': return a * b;\n        default: return a / b;\n    }\n}\n\nint main() {\n    const char *expr = \"95+2*\";\n    int stack[10];\n    int top = -1;\n    for (int i = 0; expr[i] != '\\0'; i++) {\n        char c = expr[i];\n        if (c >= '0' && c <= '9') {\n            stack[++top] = c - '0';\n        } else {\n            int b = stack[top--];\n            int a = stack[top--];\n            stack[++top] = apply(c, a, b);\n        }\n    }\n    printf(\"%d\\n\", stack[top]);\n    return 0;\n}",
+      "explanation": "The arithmetic lives in one small function, so the loop only manages the stack. A new operator is one more case in the switch instead of another copy of the stack bookkeeping."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*28\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

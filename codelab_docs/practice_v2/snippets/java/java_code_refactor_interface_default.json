@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Default Method Instead of Copied Code",
+    "language": "java",
+    "problemDescription": "Two classes implement the same farewell method with identical code. Turn it into a default method of the interface. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Greeter a = new Alice();\n        Greeter b = new Bob();\n        a.greet();\n        a.farewell();\n        b.greet();\n        b.farewell();\n    }\n}\n\ninterface Greeter {\n    void greet();\n\n    void farewell();\n}\n\nclass Alice implements Greeter {\n    public void greet() {\n        System.out.println(\"Hi from Alice\");\n    }\n\n    public void farewell() {\n        System.out.println(\"Bye\");\n    }\n}\n\nclass Bob implements Greeter {\n    public void greet() {\n        System.out.println(\"Hi from Bob\");\n    }\n\n    public void farewell() {\n        System.out.println(\"Bye\");\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Greeter a = new Alice();\n        Greeter b = new Bob();\n        a.greet();\n        a.farewell();\n        b.greet();\n        b.farewell();\n    }\n}\n\ninterface Greeter {\n    void greet();\n\n    default void farewell() {\n        System.out.println(\"Bye\");\n    }\n}\n\nclass Alice implements Greeter {\n    public void greet() {\n        System.out.println(\"Hi from Alice\");\n    }\n}\n\nclass Bob implements Greeter {\n    public void greet() {\n        System.out.println(\"Hi from Bob\");\n    }\n}",
+      "explanation": "A default method is written once and inherited by every implementer, which can still override it when it needs different behaviour."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hi from Alice[ \\t]*\\r?\\nBye[ \\t]*\\r?\\nHi from Bob[ \\t]*\\r?\\nBye\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

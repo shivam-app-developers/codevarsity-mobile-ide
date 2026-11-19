@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Find the Missing Number",
+    "language": "javascript",
+    "description": "The array holds the numbers 0 to n with one missing. The expected sum is n * (n + 1) / 2, so the missing number is the expected sum minus the actual sum.",
+    "ghostCode": "function missing(nums) {\n  var n = nums.length;\n  var expected = n * (n + 1) / 2;\n  var actual = nums.reduce(function (a, b) {\n    return a + b;\n  }, 0);\n  return expected - actual;\n}\n\nconsole.log(missing([3, 0, 1]), missing([9, 6, 4, 2, 3, 5, 7, 0, 1]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

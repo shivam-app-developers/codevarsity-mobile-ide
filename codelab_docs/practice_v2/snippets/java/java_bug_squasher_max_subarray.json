@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: All-Negative Input Gives Zero",
+    "language": "java",
+    "problemDescription": "For -4 -1 -8 the best subarray is just -1, but the program prints 0 for it.",
+    "buggyCode": "public class Main {\n    static int maxSubarray(int[] a) {\n        int best = 0, current = a[0];\n        for (int i = 1; i < a.length; i++) {\n            current = Math.max(a[i], current + a[i]);\n            best = Math.max(best, current);\n        }\n        return best;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(maxSubarray(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}));\n        System.out.println(maxSubarray(new int[] {-4, -1, -8}));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int maxSubarray(int[] a) {\n        int best = a[0], current = a[0];\n        for (int i = 1; i < a.length; i++) {\n            current = Math.max(a[i], current + a[i]);\n            best = Math.max(best, current);\n        }\n        return best;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(maxSubarray(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}));\n        System.out.println(maxSubarray(new int[] {-4, -1, -8}));\n    }\n}",
+      "explanation": "Starting best at 0 silently allows an empty subarray with sum 0, which beats every negative sum. A subarray must contain at least one element, so best starts from the first element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Regular Expression Instead of a Character Loop",
+    "language": "javascript",
+    "problemDescription": "A function checks every character to see whether the text consists only of digits. Replace the loop with one regular expression. The output must stay the same.",
+    "initialCode": "function isDigits(s) {\n  if (s.length === 0) {\n    return false;\n  }\n  for (var i = 0; i < s.length; i++) {\n    var c = s.charAt(i);\n    if (c < \"0\" || c > \"9\") {\n      return false;\n    }\n  }\n  return true;\n}\n\nconsole.log(isDigits(\"12345\"), isDigits(\"12a45\"), isDigits(\"\"));",
+    "solution": {
+      "code": "function isDigits(s) {\n  return /^\\d+$/.test(s);\n}\n\nconsole.log(isDigits(\"12345\"), isDigits(\"12a45\"), isDigits(\"\"));",
+      "explanation": "^\\d+$ says \"one or more digits and nothing else\", so the empty-text check, the loop and the character comparisons are all covered by the pattern."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true false false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

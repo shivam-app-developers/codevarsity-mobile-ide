@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Enum Instead of int Constants",
+    "language": "java",
+    "problemDescription": "Colours are int constants and describe() has a default branch for numbers that are not colours. Use an enum so only real colours can be passed. The output must stay the same.",
+    "initialCode": "public class Main {\n    static final int RED = 0;\n    static final int GREEN = 1;\n    static final int BLUE = 2;\n\n    static String describe(int color) {\n        switch (color) {\n            case RED: return \"warm\";\n            case GREEN: return \"natural\";\n            case BLUE: return \"cool\";\n            default: return \"unknown\";\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(describe(RED));\n        System.out.println(describe(GREEN));\n        System.out.println(describe(BLUE));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    enum Color { RED, GREEN, BLUE }\n\n    static String describe(Color color) {\n        switch (color) {\n            case RED: return \"warm\";\n            case GREEN: return \"natural\";\n            default: return \"cool\";\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(describe(Color.RED));\n        System.out.println(describe(Color.GREEN));\n        System.out.println(describe(Color.BLUE));\n    }\n}",
+      "explanation": "With int constants describe(7) compiles and returns \"unknown\". An enum parameter can only be one of the three colours, and a typo in a constant name is a compile error."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*warm[ \\t]*\\r?\\nnatural[ \\t]*\\r?\\ncool\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

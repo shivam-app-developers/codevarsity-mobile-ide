@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Money Added as Floating-Point Numbers",
+    "language": "javascript",
+    "problemDescription": "Adding prices of 0.1 and 0.2 should give 0.3, but the program prints 0.30000000000000004.",
+    "buggyCode": "function sumPrices(prices) {\n  var total = 0;\n  for (var i = 0; i < prices.length; i++) {\n    total += prices[i];\n  }\n  return total;\n}\n\nconsole.log(sumPrices([0.1, 0.2]));",
+    "solution": {
+      "code": "function sumPrices(prices) {\n  var cents = 0;\n  for (var i = 0; i < prices.length; i++) {\n    cents += Math.round(prices[i] * 100);\n  }\n  return cents / 100;\n}\n\nconsole.log(sumPrices([0.1, 0.2]));",
+      "explanation": "Adding binary fractions accumulates tiny errors. For money, add whole cents (integers) and divide by 100 only at the end, so the sums are exact."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0\\.3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

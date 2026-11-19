@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Starting with No Subsets at All",
+    "language": "javascript",
+    "problemDescription": "The list of subsets of 1, 2, 3 should have 8 entries, but the program prints an empty list.",
+    "buggyCode": "function subsets(items) {\n  var result = [];\n  items.forEach(function (item) {\n    var size = result.length;\n    for (var i = 0; i < size; i++) {\n      result.push(result[i].concat([item]));\n    }\n  });\n  return result;\n}\n\nconsole.log(subsets([1, 2, 3]));",
+    "solution": {
+      "code": "function subsets(items) {\n  var result = [[]];\n  items.forEach(function (item) {\n    var size = result.length;\n    for (var i = 0; i < size; i++) {\n      result.push(result[i].concat([item]));\n    }\n  });\n  return result;\n}\n\nconsole.log(subsets([1, 2, 3]));",
+      "explanation": "The empty set is itself a subset, so the result must start with one entry, an empty array. Starting with an empty list of subsets leaves nothing to extend."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[\\],\\[1\\],\\[2\\],\\[1,2\\],\\[3\\],\\[1,3\\],\\[2,3\\],\\[1,2,3\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

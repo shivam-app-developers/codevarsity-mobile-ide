@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Quick Sort",
+    "language": "c",
+    "description": "Pick the last element as the pivot, move smaller elements to its left (partition), then sort the two sides recursively.",
+    "ghostCode": "#include <stdio.h>\n\nint partition(int a[], int low, int high) {\n    int pivot = a[high];\n    int i = low - 1;\n    for (int j = low; j < high; j++) {\n        if (a[j] < pivot) {\n            i++;\n            int t = a[i];\n            a[i] = a[j];\n            a[j] = t;\n        }\n    }\n    int t = a[i + 1];\n    a[i + 1] = a[high];\n    a[high] = t;\n    return i + 1;\n}\n\nvoid quick_sort(int a[], int low, int high) {\n    if (low < high) {\n        int p = partition(a, low, high);\n        quick_sort(a, low, p - 1);\n        quick_sort(a, p + 1, high);\n    }\n}\n\nint main() {\n    int a[] = {10, 7, 8, 9, 1, 5};\n    quick_sort(a, 0, 5);\n    for (int i = 0; i < 6; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 5 7 8 9 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

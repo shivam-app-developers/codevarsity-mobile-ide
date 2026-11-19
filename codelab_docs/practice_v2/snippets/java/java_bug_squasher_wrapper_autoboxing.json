@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Comparing Boxed Numbers with ==",
+    "language": "java",
+    "problemDescription": "Both numbers are 1000, so the program should print equal, but it prints different.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Integer x = 1000, y = 1000;\n        System.out.println(x == y ? \"equal\" : \"different\");\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Integer x = 1000, y = 1000;\n        System.out.println(x.equals(y) ? \"equal\" : \"different\");\n    }\n}",
+      "explanation": "== on two Integer objects compares references. Values from -128 to 127 are cached and share one object, but 1000 creates two separate objects, so == is false. equals compares the numbers."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*equal\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

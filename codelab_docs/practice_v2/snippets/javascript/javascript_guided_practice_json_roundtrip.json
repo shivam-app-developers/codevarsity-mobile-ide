@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: JSON stringify and parse",
+    "language": "javascript",
+    "description": "JSON.stringify turns a value into text and JSON.parse turns text back into a value. Functions and undefined values are left out of the text.",
+    "ghostCode": "var user = { name: \"Asha\", langs: [\"JS\", \"C\"], active: true };\nvar text = JSON.stringify(user);\nconsole.log(text);\nvar back = JSON.parse(text);\nconsole.log(back.langs[1]);\nconsole.log(JSON.stringify({ a: undefined, b: function () {}, c: null }));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"name\":\"Asha\",\"langs\":\\[\"JS\",\"C\"\\],\"active\":true\\}[ \\t]*\\r?\\nC[ \\t]*\\r?\\n\\{\"c\":null\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

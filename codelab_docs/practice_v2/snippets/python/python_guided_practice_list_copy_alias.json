@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Aliasing and Copying Lists",
+    "language": "python",
+    "description": "Assigning a list to another name does not copy it. copy() makes a shallow copy (inner lists are still shared), and a comprehension that copies each row makes a deeper copy.",
+    "ghostCode": "original = [[1, 2], [3, 4]]\nalias = original\nshallow = original.copy()\ndeep = [row[:] for row in original]\noriginal[0][0] = 99\nprint(alias[0][0], shallow[0][0], deep[0][0])\noriginal.append([5, 6])\nprint(len(alias), len(shallow), len(deep))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*99 99 1[ \\t]*\\r?\\n3 2 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

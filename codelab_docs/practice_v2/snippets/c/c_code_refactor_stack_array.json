@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Bundle the Stack into a Struct",
+    "language": "c",
+    "problemDescription": "Loose global variables and repeated index updates implement a stack. Put the array and size in a struct and write push and pop functions that take a pointer to it. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint data[10];\nint t = 0;\n\nint main() {\n    data[t] = 5;\n    t = t + 1;\n    data[t] = 8;\n    t = t + 1;\n    data[t] = 13;\n    t = t + 1;\n    while (t > 0) {\n        t = t - 1;\n        printf(\"%d\\n\", data[t]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\ntypedef struct {\n    int items[10];\n    int size;\n} Stack;\n\nvoid push(Stack *s, int value) {\n    s->items[s->size++] = value;\n}\n\nint pop(Stack *s) {\n    return s->items[--s->size];\n}\n\nint main() {\n    Stack stack = {{0}, 0};\n    push(&stack, 5);\n    push(&stack, 8);\n    push(&stack, 13);\n    while (stack.size > 0) {\n        printf(\"%d\\n\", pop(&stack));\n    }\n    return 0;\n}",
+      "explanation": "The stack's data and its size now travel together, the operations have names, and you can create as many stacks as you like instead of being limited to one global one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*13[ \\t]*\\r?\\n8[ \\t]*\\r?\\n5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

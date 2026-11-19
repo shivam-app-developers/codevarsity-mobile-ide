@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: One Side of the Swap Is Missing",
+    "language": "c",
+    "problemDescription": "order(&a, &b) should put the smaller number first and print 4 9, but the program prints 9 9.",
+    "buggyCode": "#include <stdio.h>\n\nvoid order(int *low, int *high) {\n    if (*low > *high) {\n        int temp = *low;\n        low = high;\n        *high = temp;\n    }\n}\n\nint main() {\n    int a = 9, b = 4;\n    order(&a, &b);\n    printf(\"%d %d\\n\", a, b);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid order(int *low, int *high) {\n    if (*low > *high) {\n        int temp = *low;\n        *low = *high;\n        *high = temp;\n    }\n}\n\nint main() {\n    int a = 9, b = 4;\n    order(&a, &b);\n    printf(\"%d %d\\n\", a, b);\n    return 0;\n}",
+      "explanation": "low = high copies the pointer, not the number it points to, so the caller's variable keeps its old value while *high is overwritten with temp. Both variables end up holding 9. Assign through the pointer: *low = *high."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

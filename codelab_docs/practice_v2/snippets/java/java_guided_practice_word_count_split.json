@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Counting Words with split",
+    "language": "java",
+    "description": "split takes a regular expression. \"\\\\s+\" matches one or more whitespace characters, so repeated spaces do not create empty words.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        String text = \"  the quick  brown fox jumps   over the lazy dog \";\n        String[] words = text.trim().split(\"\\\\s+\");\n        System.out.println(\"Words: \" + words.length);\n        System.out.println(\"First: \" + words[0]);\n        System.out.println(\"Last: \" + words[words.length - 1]);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Words: 9[ \\t]*\\r?\\nFirst: the[ \\t]*\\r?\\nLast: dog\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

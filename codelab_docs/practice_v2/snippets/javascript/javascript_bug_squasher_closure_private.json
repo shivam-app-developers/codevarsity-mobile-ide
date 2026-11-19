@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: deposit Changes the Wrong Variable",
+    "language": "javascript",
+    "problemDescription": "After depositing 50 into an account with 100, getBalance should print 150, but it prints 100.",
+    "buggyCode": "function createAccount(balance) {\n  return {\n    deposit: function (amount) {\n      this.balance += amount;\n      return balance;\n    },\n    getBalance: function () {\n      return balance;\n    }\n  };\n}\n\nvar account = createAccount(100);\naccount.deposit(50);\nconsole.log(account.getBalance());",
+    "solution": {
+      "code": "function createAccount(balance) {\n  return {\n    deposit: function (amount) {\n      balance += amount;\n      return balance;\n    },\n    getBalance: function () {\n      return balance;\n    }\n  };\n}\n\nvar account = createAccount(100);\naccount.deposit(50);\nconsole.log(account.getBalance());",
+      "explanation": "The money is kept in the closure variable balance. this.balance creates a different property on the returned object, which getBalance never reads, so the deposit is lost. Use the closure variable directly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*150\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

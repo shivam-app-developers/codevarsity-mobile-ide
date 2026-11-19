@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The for Clauses Are in the Wrong Order",
+    "language": "python",
+    "problemDescription": "Flattening [[1, 2], [3, 4], [5, 6]] should give [1, 2, 3, 4, 5, 6], but the program crashes with a NameError.",
+    "buggyCode": "matrix = [[1, 2], [3, 4], [5, 6]]\nflat = [x for x in row for row in matrix]\nprint(flat)",
+    "solution": {
+      "code": "matrix = [[1, 2], [3, 4], [5, 6]]\nflat = [x for row in matrix for x in row]\nprint(flat)",
+      "explanation": "The for clauses of a comprehension run in the same order as nested loops: first the outer loop (for row in matrix), then the inner loop (for x in row). If the inner clause comes first, row does not exist yet."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3, 4, 5, 6\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

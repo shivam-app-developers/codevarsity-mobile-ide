@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Merge Sort Instead of Bubble Sort",
+    "language": "javascript",
+    "problemDescription": "Nested loops compare neighbours again and again, taking about n squared steps. Sort with merge sort. The output must stay the same.",
+    "initialCode": "var a = [5, 2, 9, 1, 7, 3];\nfor (var i = 0; i < a.length; i++) {\n  for (var j = 0; j < a.length - 1; j++) {\n    if (a[j] > a[j + 1]) {\n      var t = a[j];\n      a[j] = a[j + 1];\n      a[j + 1] = t;\n    }\n  }\n}\nconsole.log(a);",
+    "solution": {
+      "code": "function mergeSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var mid = Math.floor(a.length / 2);\n  var left = mergeSort(a.slice(0, mid));\n  var right = mergeSort(a.slice(mid));\n  var result = [];\n  var i = 0;\n  var j = 0;\n  while (i < left.length && j < right.length) {\n    if (left[i] <= right[j]) {\n      result.push(left[i++]);\n    } else {\n      result.push(right[j++]);\n    }\n  }\n  return result.concat(left.slice(i), right.slice(j));\n}\n\nconsole.log(mergeSort([5, 2, 9, 1, 7, 3]));",
+      "explanation": "Merge sort halves the problem log2(n) times and does about n work per level, so it needs about n log n steps. Bubble sort needs n squared, which is tens of thousands of times slower for a million items."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,5,7,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

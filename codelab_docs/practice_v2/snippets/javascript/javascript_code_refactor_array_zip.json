@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Index Instead of Two",
+    "language": "javascript",
+    "problemDescription": "Two index variables are advanced together in a while loop. Use one index and a for loop up to the shorter length, inside a zip function. The output must stay the same.",
+    "initialCode": "var a = [1, 2, 3];\nvar b = [\"x\", \"y\"];\nvar result = [];\nvar i = 0;\nvar j = 0;\nwhile (i < a.length && j < b.length) {\n  result.push([a[i], b[j]]);\n  i = i + 1;\n  j = j + 1;\n}\nconsole.log(result);",
+    "solution": {
+      "code": "function zip(a, b) {\n  var pairs = [];\n  var length = Math.min(a.length, b.length);\n  for (var i = 0; i < length; i++) {\n    pairs.push([a[i], b[i]]);\n  }\n  return pairs;\n}\n\nconsole.log(zip([1, 2, 3], [\"x\", \"y\"]));",
+      "explanation": "Both indexes always had the same value, so one is enough. Computing the length up front makes the stopping rule clear, and the function can be reused."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,\"x\"\\],\\[2,\"y\"\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

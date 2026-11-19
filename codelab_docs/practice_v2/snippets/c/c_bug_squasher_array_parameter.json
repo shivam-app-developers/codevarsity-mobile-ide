@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Changes Go to a Copy",
+    "language": "c",
+    "problemDescription": "Every element should double and print 2 4 6, but the array prints 1 2 3 unchanged.",
+    "buggyCode": "#include <stdio.h>\n\nvoid double_all(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        int copy = a[i];\n        copy *= 2;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3};\n    double_all(a, 3);\n    for (int i = 0; i < 3; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid double_all(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        a[i] *= 2;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3};\n    double_all(a, 3);\n    for (int i = 0; i < 3; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "The array parameter is a pointer, so writing to a[i] changes the caller's data. Doubling a local copy never touches the array, so nothing visible changes. Assign the result back into a[i]."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 4 6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

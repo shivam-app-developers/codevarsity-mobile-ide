@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace Copy-Pasted Steps with a Loop",
+    "language": "c",
+    "problemDescription": "The same three statements are repeated by hand for every number. Replace them with a loop. The program must print the same six numbers.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a = 0;\n    int b = 1;\n    int c = a + b;\n    printf(\"%d\\n\", a);\n    printf(\"%d\\n\", b);\n    printf(\"%d\\n\", c);\n    a = b;\n    b = c;\n    c = a + b;\n    printf(\"%d\\n\", c);\n    a = b;\n    b = c;\n    c = a + b;\n    printf(\"%d\\n\", c);\n    a = b;\n    b = c;\n    c = a + b;\n    printf(\"%d\\n\", c);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int current = 0, next = 1;\n    for (int i = 0; i < 6; i++) {\n        printf(\"%d\\n\", current);\n        int sum = current + next;\n        current = next;\n        next = sum;\n    }\n    return 0;\n}",
+      "explanation": "Repeating a block by hand is error-prone and cannot grow. A loop runs the same step as many times as needed; changing 6 to 20 is a one-character edit."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0[ \\t]*\\r?\\n1[ \\t]*\\r?\\n1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3[ \\t]*\\r?\\n5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

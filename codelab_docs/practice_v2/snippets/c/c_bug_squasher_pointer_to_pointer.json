@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Caller's Pointer Never Changes",
+    "language": "c",
+    "problemDescription": "pick_larger should leave larger pointing at y and print 30, but the program prints 12.",
+    "buggyCode": "#include <stdio.h>\n\nvoid pick_larger(int *result, int *a, int *b) {\n    result = (*a >= *b) ? a : b;\n}\n\nint main() {\n    int x = 12, y = 30;\n    int *larger = &x;\n    pick_larger(larger, &x, &y);\n    printf(\"larger = %d\\n\", *larger);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid pick_larger(int **result, int *a, int *b) {\n    *result = (*a >= *b) ? a : b;\n}\n\nint main() {\n    int x = 12, y = 30;\n    int *larger = &x;\n    pick_larger(&larger, &x, &y);\n    printf(\"larger = %d\\n\", *larger);\n    return 0;\n}",
+      "explanation": "Passing larger by value gives the function its own copy of the pointer. Changing that copy does not affect the caller's pointer, which still points at x. To change a pointer you must pass its address (int **) and assign through it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*larger = 30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

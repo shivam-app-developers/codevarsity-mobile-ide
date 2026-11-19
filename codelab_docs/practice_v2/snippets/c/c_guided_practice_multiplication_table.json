@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Multiplication Table",
+    "language": "c",
+    "description": "Print the table of a number with a for loop and a formatted line for every step.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 7;\n    for (int i = 1; i <= 10; i++) {\n        printf(\"%d x %d = %d\\n\", n, i, n * i);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7 x 1 = 7[ \\t]*\\r?\\n7 x 2 = 14[ \\t]*\\r?\\n7 x 3 = 21[ \\t]*\\r?\\n7 x 4 = 28[ \\t]*\\r?\\n7 x 5 = 35[ \\t]*\\r?\\n7 x 6 = 42[ \\t]*\\r?\\n7 x 7 = 49[ \\t]*\\r?\\n7 x 8 = 56[ \\t]*\\r?\\n7 x 9 = 63[ \\t]*\\r?\\n7 x 10 = 70\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

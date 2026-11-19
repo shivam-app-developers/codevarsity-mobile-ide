@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Search Always Starts at Index 0",
+    "language": "java",
+    "problemDescription": "The array 64 25 12 22 11 should be sorted to [11, 12, 22, 25, 64], but the program prints [12, 11, 22, 25, 64].",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    static void selectionSort(int[] a) {\n        for (int i = 0; i < a.length - 1; i++) {\n            int min = 0;\n            for (int j = i + 1; j < a.length; j++) {\n                if (a[j] < a[min]) {\n                    min = j;\n                }\n            }\n            int temp = a[i];\n            a[i] = a[min];\n            a[min] = temp;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {64, 25, 12, 22, 11};\n        selectionSort(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static void selectionSort(int[] a) {\n        for (int i = 0; i < a.length - 1; i++) {\n            int min = i;\n            for (int j = i + 1; j < a.length; j++) {\n                if (a[j] < a[min]) {\n                    min = j;\n                }\n            }\n            int temp = a[i];\n            a[i] = a[min];\n            a[min] = temp;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {64, 25, 12, 22, 11};\n        selectionSort(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+      "explanation": "In each round the minimum is searched only in the unsorted part, so the candidate must start at the first unsorted index i. Starting at 0 compares against the already-sorted front and swaps a sorted element back into the unsorted part."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[11, 12, 22, 25, 64\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

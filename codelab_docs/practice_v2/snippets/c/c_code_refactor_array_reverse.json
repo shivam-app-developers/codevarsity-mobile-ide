@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Reverse In Place with Two Indices",
+    "language": "c",
+    "problemDescription": "This code copies the array into a second one, then copies it back. Reverse it in place with a left and a right index instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[6] = {10, 20, 30, 40, 50, 60};\n    int b[6];\n    for (int i = 0; i < 6; i++) {\n        b[i] = a[5 - i];\n    }\n    for (int i = 0; i < 6; i++) {\n        a[i] = b[i];\n    }\n    for (int i = 0; i < 6; i++) {\n        printf(\"%d\\n\", a[i]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {10, 20, 30, 40, 50, 60};\n    int left = 0, right = 5;\n    while (left < right) {\n        int temp = a[left];\n        a[left++] = a[right];\n        a[right--] = temp;\n    }\n    for (int i = 0; i < 6; i++) {\n        printf(\"%d\\n\", a[i]);\n    }\n    return 0;\n}",
+      "explanation": "Two indices walking towards each other swap the elements in place, so no second array and no copy-back loop are needed. This is the two-pointer technique used in many interview problems."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*60[ \\t]*\\r?\\n50[ \\t]*\\r?\\n40[ \\t]*\\r?\\n30[ \\t]*\\r?\\n20[ \\t]*\\r?\\n10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

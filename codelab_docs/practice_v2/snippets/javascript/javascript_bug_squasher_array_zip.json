@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Pairs with Missing Values",
+    "language": "javascript",
+    "problemDescription": "Zipping [1,2,3] with [\"x\"] should give [[1,\"x\"]], but the program also prints pairs containing null.",
+    "buggyCode": "function zip(a, b) {\n  var length = Math.max(a.length, b.length);\n  var pairs = [];\n  for (var i = 0; i < length; i++) {\n    pairs.push([a[i], b[i]]);\n  }\n  return pairs;\n}\n\nconsole.log(zip([1, 2, 3], [\"x\"]));",
+    "solution": {
+      "code": "function zip(a, b) {\n  var length = Math.min(a.length, b.length);\n  var pairs = [];\n  for (var i = 0; i < length; i++) {\n    pairs.push([a[i], b[i]]);\n  }\n  return pairs;\n}\n\nconsole.log(zip([1, 2, 3], [\"x\"]));",
+      "explanation": "Looping up to the longer length reads positions that do not exist in the shorter array, giving undefined (shown as null). The number of pairs is limited by the shorter array."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,\"x\"\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

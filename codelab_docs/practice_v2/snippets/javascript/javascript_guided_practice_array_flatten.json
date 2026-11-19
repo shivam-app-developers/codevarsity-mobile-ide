@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Flatten a Nested Array",
+    "language": "javascript",
+    "description": "A recursive function flattens arrays of any depth: arrays are flattened again, everything else is added to the result.",
+    "ghostCode": "function flatten(list) {\n  var result = [];\n  list.forEach(function (item) {\n    if (Array.isArray(item)) {\n      result = result.concat(flatten(item));\n    } else {\n      result.push(item);\n    }\n  });\n  return result;\n}\n\nconsole.log(flatten([1, [2, [3, [4]], 5]]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4,5\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

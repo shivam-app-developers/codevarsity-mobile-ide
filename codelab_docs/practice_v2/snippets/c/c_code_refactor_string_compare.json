@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use strcmp",
+    "language": "c",
+    "problemDescription": "A manual loop with a flag and a break checks two strings for equality. Replace it with strcmp. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char x[] = \"orange\";\n    char y[] = \"orange\";\n    int same = 1;\n    int i = 0;\n    while (x[i] != '\\0' || y[i] != '\\0') {\n        if (x[i] != y[i]) {\n            same = 0;\n            break;\n        }\n        i++;\n    }\n    if (same == 1) {\n        printf(\"equal\\n\");\n    } else {\n        printf(\"different\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char x[] = \"orange\";\n    char y[] = \"orange\";\n    printf(\"%s\\n\", strcmp(x, y) == 0 ? \"equal\" : \"different\");\n    return 0;\n}",
+      "explanation": "strcmp is the standard, tested way to compare strings: it returns 0 for equal strings. Never compare strings with ==, which would compare addresses."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*equal\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

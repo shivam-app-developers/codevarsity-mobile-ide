@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Dictionary Order Is Reversed",
+    "language": "c",
+    "problemDescription": "cat comes after car in dictionary order, but the program says it comes before.",
+    "buggyCode": "#include <stdio.h>\n\nint compare(const char *a, const char *b) {\n    int i = 0;\n    while (a[i] != '\\0' && a[i] == b[i]) {\n        i++;\n    }\n    return b[i] - a[i];\n}\n\nint main() {\n    const char *words[] = {\"cat\", \"car\", \"cab\"};\n    for (int i = 0; i < 2; i++) {\n        int r = compare(words[i], words[i + 1]);\n        const char *verdict = r > 0 ? \"after\" : r < 0 ? \"before\" : \"same\";\n        printf(\"%s vs %s: %s\\n\", words[i], words[i + 1], verdict);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint compare(const char *a, const char *b) {\n    int i = 0;\n    while (a[i] != '\\0' && a[i] == b[i]) {\n        i++;\n    }\n    return a[i] - b[i];\n}\n\nint main() {\n    const char *words[] = {\"cat\", \"car\", \"cab\"};\n    for (int i = 0; i < 2; i++) {\n        int r = compare(words[i], words[i + 1]);\n        const char *verdict = r > 0 ? \"after\" : r < 0 ? \"before\" : \"same\";\n        printf(\"%s vs %s: %s\\n\", words[i], words[i + 1], verdict);\n    }\n    return 0;\n}",
+      "explanation": "A positive result must mean the first string is bigger (comes later). Subtracting in the wrong order flips the sign, so every comparison gives the opposite answer."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cat vs car: after[ \\t]*\\r?\\ncar vs cab: after\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

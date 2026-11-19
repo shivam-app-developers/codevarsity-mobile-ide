@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Closure Counter",
+    "language": "javascript",
+    "description": "A function remembers the variables of the place where it was created. Each call to makeCounter creates a new private count.",
+    "ghostCode": "function makeCounter() {\n  var count = 0;\n  return function () {\n    count += 1;\n    return count;\n  };\n}\n\nvar counterA = makeCounter();\nvar counterB = makeCounter();\nconsole.log(counterA());\nconsole.log(counterA());\nconsole.log(counterB());",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

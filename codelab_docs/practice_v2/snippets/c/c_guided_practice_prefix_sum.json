@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Prefix Sums for Range Queries",
+    "language": "c",
+    "description": "Precompute running totals once; then the sum of any range is the difference of two prefix values.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {3, 1, 4, 1, 5, 9};\n    int prefix[7] = {0};\n    for (int i = 0; i < 6; i++) {\n        prefix[i + 1] = prefix[i] + a[i];\n    }\n    int left = 1, right = 4;\n    printf(\"Sum of a[%d..%d] = %d\\n\", left, right, prefix[right + 1] - prefix[left]);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Sum of a\\[1\\.\\.4\\] = 11\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

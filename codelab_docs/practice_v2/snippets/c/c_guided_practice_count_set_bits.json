@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Count the 1 Bits",
+    "language": "c",
+    "description": "Check the lowest bit with & 1, then shift right to bring the next bit down. Repeat until no bits are left.",
+    "ghostCode": "#include <stdio.h>\n\nint count_bits(unsigned int n) {\n    int count = 0;\n    while (n > 0) {\n        count += n & 1;\n        n >>= 1;\n    }\n    return count;\n}\n\nint main() {\n    printf(\"%d\\n\", count_bits(13));\n    printf(\"%d\\n\", count_bits(255));\n    printf(\"%d\\n\", count_bits(1024));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3[ \\t]*\\r?\\n8[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

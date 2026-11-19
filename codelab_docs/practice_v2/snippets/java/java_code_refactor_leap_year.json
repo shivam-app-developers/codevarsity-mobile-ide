@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Return the Condition Directly",
+    "language": "java",
+    "problemDescription": "A boolean variable is set inside three nested ifs and returned at the end. Return the condition as a single expression. The output must stay the same.",
+    "initialCode": "public class Main {\n    static boolean isLeap(int year) {\n        boolean leap = false;\n        if (year % 4 == 0) {\n            if (year % 100 == 0) {\n                if (year % 400 == 0) {\n                    leap = true;\n                } else {\n                    leap = false;\n                }\n            } else {\n                leap = true;\n            }\n        } else {\n            leap = false;\n        }\n        return leap;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isLeap(1900) + \" \" + isLeap(2000) + \" \" + isLeap(2024));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isLeap(int year) {\n        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isLeap(1900) + \" \" + isLeap(2000) + \" \" + isLeap(2024));\n    }\n}",
+      "explanation": "An if that only sets a boolean to true or false can almost always be replaced by returning the condition itself. The one-line version mirrors the rule as it is written in the calendar definition."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*false true true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Find It in One Pass Without Sorting",
+    "language": "c",
+    "problemDescription": "The array is sorted with nested loops just to read the second largest value. Replace the sort with a single pass. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {7, 3, 9, 1, 8};\n    int n = 5;\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n - 1; j++) {\n            if (a[j] > a[j + 1]) {\n                int t = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = t;\n            }\n        }\n    }\n    printf(\"%d\\n\", a[n - 2]);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {7, 3, 9, 1, 8};\n    int first = a[0], second = -1;\n    for (int i = 1; i < 5; i++) {\n        if (a[i] > first) {\n            second = first;\n            first = a[i];\n        } else if (a[i] > second) {\n            second = a[i];\n        }\n    }\n    printf(\"%d\\n\", second);\n    return 0;\n}",
+      "explanation": "Sorting does far more work than the question needs and rearranges the caller's data. Remembering only the two best values takes one pass over the array and leaves it untouched."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

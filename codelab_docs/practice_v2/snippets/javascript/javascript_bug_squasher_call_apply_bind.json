@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: call Used with an Array of Arguments",
+    "language": "javascript",
+    "problemDescription": "The greeting should print Hi, Ravi?, but the program prints Hi,?, Raviundefined.",
+    "buggyCode": "function introduce(greeting, punctuation) {\n  return greeting + \", \" + this.name + punctuation;\n}\n\nvar user = { name: \"Ravi\" };\nconsole.log(introduce.call(user, [\"Hi\", \"?\"]));",
+    "solution": {
+      "code": "function introduce(greeting, punctuation) {\n  return greeting + \", \" + this.name + punctuation;\n}\n\nvar user = { name: \"Ravi\" };\nconsole.log(introduce.apply(user, [\"Hi\", \"?\"]));",
+      "explanation": "call expects the arguments one by one. Passing an array to call makes the whole array the first argument (which turns into the text Hi,?) and leaves the second argument undefined. apply is the one that unpacks an array."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hi, Ravi\\?\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

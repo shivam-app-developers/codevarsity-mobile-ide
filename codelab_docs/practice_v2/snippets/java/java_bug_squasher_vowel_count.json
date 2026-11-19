@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Letter a Is Not Counted",
+    "language": "java",
+    "problemDescription": "Education has 5 vowels, but the program counts only 4 because the letter a is missed.",
+    "buggyCode": "public class Main {\n    static boolean isVowel(char c) {\n        return \"aeiou\".indexOf(Character.toLowerCase(c)) > 0;\n    }\n\n    public static void main(String[] args) {\n        int count = 0;\n        for (char c : \"Education\".toCharArray()) {\n            if (isVowel(c)) {\n                count++;\n            }\n        }\n        System.out.println(count);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isVowel(char c) {\n        return \"aeiou\".indexOf(Character.toLowerCase(c)) >= 0;\n    }\n\n    public static void main(String[] args) {\n        int count = 0;\n        for (char c : \"Education\".toCharArray()) {\n            if (isVowel(c)) {\n                count++;\n            }\n        }\n        System.out.println(count);\n    }\n}",
+      "explanation": "indexOf returns the position of the character, and the position of 'a' in \"aeiou\" is 0. Testing > 0 treats position 0 as \"not found\", so only -1 should mean \"not found\": the test is >= 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Bike Is Not a Separate Object",
+    "language": "javascript",
+    "problemDescription": "The car should keep the default 4 wheels, but it reports 2 wheels.",
+    "buggyCode": "var vehicle = {\n  wheels: 4,\n  describe: function () {\n    return this.name + \" has \" + this.wheels + \" wheels\";\n  }\n};\n\nvar bike = vehicle;\nbike.name = \"Bike\";\nbike.wheels = 2;\nvar car = Object.create(vehicle);\ncar.name = \"Car\";\nconsole.log(car.describe());",
+    "solution": {
+      "code": "var vehicle = {\n  wheels: 4,\n  describe: function () {\n    return this.name + \" has \" + this.wheels + \" wheels\";\n  }\n};\n\nvar bike = Object.create(vehicle);\nbike.name = \"Bike\";\nbike.wheels = 2;\nvar car = Object.create(vehicle);\ncar.name = \"Car\";\nconsole.log(car.describe());",
+      "explanation": "Without Object.create, bike is just another name for vehicle, so setting bike.wheels = 2 changes the shared prototype that every other object, including car, inherits from."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Car has 4 wheels\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

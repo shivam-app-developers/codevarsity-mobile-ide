@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Discount Can Make the Price Negative",
+    "language": "java",
+    "problemDescription": "A 30 rupee item with 50 off should cost 0, but the program prints -20.",
+    "buggyCode": "public class Main {\n    interface Discount {\n        int apply(int price);\n    }\n\n    static class Flat50 implements Discount {\n        public int apply(int price) {\n            return price - 50;\n        }\n    }\n\n    static int checkout(int price, Discount discount) {\n        return discount.apply(price);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(checkout(30, new Flat50()));\n        System.out.println(checkout(200, new Flat50()));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    interface Discount {\n        int apply(int price);\n    }\n\n    static class Flat50 implements Discount {\n        public int apply(int price) {\n            return Math.max(0, price - 50);\n        }\n    }\n\n    static int checkout(int price, Discount discount) {\n        return discount.apply(price);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(checkout(30, new Flat50()));\n        System.out.println(checkout(200, new Flat50()));\n    }\n}",
+      "explanation": "A flat discount larger than the price would make the total negative. Math.max(0, ...) keeps the result at zero, so the shop never owes the customer money."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0[ \\t]*\\r?\\n150\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

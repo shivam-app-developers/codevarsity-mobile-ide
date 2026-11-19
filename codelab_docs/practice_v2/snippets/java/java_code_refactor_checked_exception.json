@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Unchecked Exception for a Bad Argument",
+    "language": "java",
+    "problemDescription": "setAge declares throws Exception for a plain invalid argument, forcing every caller to catch Exception. Throw IllegalArgumentException instead and catch only that. The output must stay the same.",
+    "initialCode": "public class Main {\n    static void setAge(int age) throws Exception {\n        if (age < 0) {\n            throw new Exception(\"negative\");\n        }\n        System.out.println(\"Age set to \" + age);\n    }\n\n    public static void main(String[] args) {\n        try {\n            setAge(30);\n            setAge(-1);\n        } catch (Exception e) {\n            System.out.println(\"Invalid age\");\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static void setAge(int age) {\n        if (age < 0) {\n            throw new IllegalArgumentException(\"negative\");\n        }\n        System.out.println(\"Age set to \" + age);\n    }\n\n    public static void main(String[] args) {\n        try {\n            setAge(30);\n            setAge(-1);\n        } catch (IllegalArgumentException e) {\n            System.out.println(\"Invalid age\");\n        }\n    }\n}",
+      "explanation": "A caller bug (passing -1) is a programming error and belongs to the unchecked family. Catching the specific IllegalArgumentException instead of Exception avoids hiding unrelated failures."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Age set to 30[ \\t]*\\r?\\nInvalid age\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

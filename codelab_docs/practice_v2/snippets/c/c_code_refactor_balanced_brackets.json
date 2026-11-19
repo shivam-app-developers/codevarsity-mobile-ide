@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a Stack Instead of Counters",
+    "language": "c",
+    "problemDescription": "One counter per bracket type is used, which ignores nesting order. Rewrite it with a stack inside an is_balanced function. The output must stay the same for these inputs.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    const char *tests[] = {\"(a+b)*[c]\", \"((x)\", \"{[]}\"};\n    for (int t = 0; t < 3; t++) {\n        int round = 0, square = 0, curly = 0;\n        for (int i = 0; tests[t][i] != '\\0'; i++) {\n            char c = tests[t][i];\n            if (c == '(') round++;\n            if (c == ')') round--;\n            if (c == '[') square++;\n            if (c == ']') square--;\n            if (c == '{') curly++;\n            if (c == '}') curly--;\n        }\n        printf(\"%s: %d\\n\", tests[t], round == 0 && square == 0 && curly == 0);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint is_balanced(const char *s) {\n    char stack[100];\n    int top = -1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        char c = s[i];\n        if (c == '(' || c == '[' || c == '{') {\n            stack[++top] = c;\n        } else if (c == ')' || c == ']' || c == '}') {\n            if (top < 0) {\n                return 0;\n            }\n            char open = stack[top--];\n            if ((c == ')' && open != '(') ||\n                (c == ']' && open != '[') ||\n                (c == '}' && open != '{')) {\n                return 0;\n            }\n        }\n    }\n    return top == -1;\n}\n\nint main() {\n    const char *tests[] = {\"(a+b)*[c]\", \"((x)\", \"{[]}\"};\n    for (int t = 0; t < 3; t++) {\n        printf(\"%s: %d\\n\", tests[t], is_balanced(tests[t]));\n    }\n    return 0;\n}",
+      "explanation": "Counters cannot tell that ([)] is wrong, because each type balances on its own. A stack remembers the order in which brackets were opened, so it is the correct tool, and a function makes it reusable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\(a\\+b\\)\\*\\[c\\]: 1[ \\t]*\\r?\\n\\(\\(x\\): 0[ \\t]*\\r?\\n\\{\\[\\]\\}: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Explicit Values Are Missing",
+    "language": "c",
+    "problemDescription": "MEDIUM should be 5 and HIGH should be 10, but they are printed as 1 and 2.",
+    "buggyCode": "#include <stdio.h>\n\nenum Level { LOW, MEDIUM, HIGH };\n\nint main() {\n    enum Level level = MEDIUM;\n    printf(\"MEDIUM=%d HIGH=%d\\n\", MEDIUM, HIGH);\n    printf(\"Double: %d\\n\", level * 2);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nenum Level { LOW = 1, MEDIUM = 5, HIGH = 10 };\n\nint main() {\n    enum Level level = MEDIUM;\n    printf(\"MEDIUM=%d HIGH=%d\\n\", MEDIUM, HIGH);\n    printf(\"Double: %d\\n\", level * 2);\n    return 0;\n}",
+      "explanation": "Without = the names are numbered automatically: LOW is 0, MEDIUM is 1 and HIGH is 2. When the numbers matter (for example as thresholds), set them explicitly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*MEDIUM=5 HIGH=10[ \\t]*\\r?\\nDouble: 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

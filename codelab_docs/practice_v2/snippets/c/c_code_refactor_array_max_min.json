@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Pass Instead of Two",
+    "language": "c",
+    "problemDescription": "Two separate loops scan the array, one for the largest and one for the smallest. Put the logic in one function that finds both in a single pass. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int v[] = {9, 2, 14, 7, 3};\n    int big = v[0];\n    int small = v[0];\n    for (int i = 0; i < 5; i++) {\n        if (v[i] > big) {\n            big = v[i];\n        }\n    }\n    for (int i = 0; i < 5; i++) {\n        if (v[i] < small) {\n            small = v[i];\n        }\n    }\n    printf(\"%d %d\\n\", big, small);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid min_max(const int values[], int count, int *min, int *max) {\n    *min = *max = values[0];\n    for (int i = 1; i < count; i++) {\n        if (values[i] < *min) *min = values[i];\n        if (values[i] > *max) *max = values[i];\n    }\n}\n\nint main() {\n    int v[] = {9, 2, 14, 7, 3};\n    int lowest, highest;\n    min_max(v, 5, &lowest, &highest);\n    printf(\"%d %d\\n\", highest, lowest);\n    return 0;\n}",
+      "explanation": "A C function can return only one value, so two results are passed back through pointers. The array is now read once, and the loop starts at index 1 because index 0 already seeded both values."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*14 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

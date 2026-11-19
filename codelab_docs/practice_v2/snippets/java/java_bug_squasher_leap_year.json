@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: AND and OR Mixed Up",
+    "language": "java",
+    "problemDescription": "2024 is a leap year, but the program says it is not.",
+    "buggyCode": "public class Main {\n    static boolean isLeap(int year) {\n        return (year % 4 == 0 || year % 100 != 0) && year % 400 == 0;\n    }\n\n    public static void main(String[] args) {\n        int[] years = {1900, 2000, 2023, 2024};\n        for (int y : years) {\n            System.out.println(y + \" \" + isLeap(y));\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isLeap(int year) {\n        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;\n    }\n\n    public static void main(String[] args) {\n        int[] years = {1900, 2000, 2023, 2024};\n        for (int y : years) {\n            System.out.println(y + \" \" + isLeap(y));\n        }\n    }\n}",
+      "explanation": "The rule is: (divisible by 4 and not by 100) or divisible by 400. Swapping the operators demands divisibility by 400 for every year, so ordinary leap years like 2024 are rejected."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1900 false[ \\t]*\\r?\\n2000 true[ \\t]*\\r?\\n2023 false[ \\t]*\\r?\\n2024 true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

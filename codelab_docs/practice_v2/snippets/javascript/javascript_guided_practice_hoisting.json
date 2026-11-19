@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Hoisting",
+    "language": "javascript",
+    "description": "Declarations are moved to the top of their scope. A function declaration is available everywhere in its scope, but a var is only declared there: its value arrives when the assignment runs.",
+    "ghostCode": "console.log(typeof greet);\nconsole.log(message);\nvar message = \"hello\";\nfunction greet() {\n  return \"hi\";\n}\nconsole.log(greet());\nconsole.log(message);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*function[ \\t]*\\r?\\nundefined[ \\t]*\\r?\\nhi[ \\t]*\\r?\\nhello\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

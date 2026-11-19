@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: == versus ===",
+    "language": "javascript",
+    "description": "== converts the operands to a common type before comparing, which gives surprising results. === compares without converting. Prefer ===.",
+    "ghostCode": "console.log(\"5\" + 1);\nconsole.log(\"5\" - 1);\nconsole.log(0 == \"\");\nconsole.log(0 === \"\");\nconsole.log(null == undefined);\nconsole.log(NaN == NaN);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*51[ \\t]*\\r?\\n4[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

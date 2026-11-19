@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Looping Over an Object",
+    "language": "javascript",
+    "description": "for...in visits the keys of an object. Read the value with the bracket form scores[name], and use hasOwnProperty to skip inherited keys.",
+    "ghostCode": "var scores = { asha: 90, ravi: 72, meena: 85 };\nvar total = 0;\nfor (var name in scores) {\n  if (scores.hasOwnProperty(name)) {\n    total += scores[name];\n    console.log(name + \": \" + scores[name]);\n  }\n}\nconsole.log(\"total: \" + total);\nconsole.log(Object.keys(scores).length);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*asha: 90[ \\t]*\\r?\\nravi: 72[ \\t]*\\r?\\nmeena: 85[ \\t]*\\r?\\ntotal: 247[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

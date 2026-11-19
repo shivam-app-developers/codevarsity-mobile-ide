@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Triple Loop Instead of Unrolled Formulas",
+    "language": "c",
+    "problemDescription": "Each entry of the 2 x 2 product is written out as its own formula. Use the three-loop algorithm with a named size. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[2][2] = {{1, 2}, {3, 4}};\n    int b[2][2] = {{2, 0}, {1, 2}};\n    int c00 = a[0][0] * b[0][0] + a[0][1] * b[1][0];\n    int c01 = a[0][0] * b[0][1] + a[0][1] * b[1][1];\n    int c10 = a[1][0] * b[0][0] + a[1][1] * b[1][0];\n    int c11 = a[1][0] * b[0][1] + a[1][1] * b[1][1];\n    printf(\"%d %d\\n\", c00, c01);\n    printf(\"%d %d\\n\", c10, c11);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define N 2\n\nint main() {\n    int a[N][N] = {{1, 2}, {3, 4}};\n    int b[N][N] = {{2, 0}, {1, 2}};\n    for (int i = 0; i < N; i++) {\n        for (int j = 0; j < N; j++) {\n            int sum = 0;\n            for (int k = 0; k < N; k++) {\n                sum += a[i][k] * b[k][j];\n            }\n            printf(\"%d \", sum);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "The formula for one entry is the same everywhere, only the indexes change, so the loops express it once. Changing N switches to any square size."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 4[ \\t]*\\r?\\n10 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

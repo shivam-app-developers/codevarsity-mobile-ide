@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Cached Zero Counts as Missing",
+    "language": "javascript",
+    "problemDescription": "Calling square(0) twice should compute only once (calls: 1), but it computes twice.",
+    "buggyCode": "function memoize(fn) {\n  var cache = {};\n  return function (n) {\n    if (!cache[n]) {\n      cache[n] = fn(n);\n    }\n    return cache[n];\n  };\n}\n\nvar calls = 0;\nvar square = memoize(function (n) {\n  calls += 1;\n  return n * n;\n});\nsquare(0);\nsquare(0);\nconsole.log(\"calls: \" + calls);",
+    "solution": {
+      "code": "function memoize(fn) {\n  var cache = {};\n  return function (n) {\n    if (!(n in cache)) {\n      cache[n] = fn(n);\n    }\n    return cache[n];\n  };\n}\n\nvar calls = 0;\nvar square = memoize(function (n) {\n  calls += 1;\n  return n * n;\n});\nsquare(0);\nsquare(0);\nconsole.log(\"calls: \" + calls);",
+      "explanation": "The stored result for 0 is 0, which is falsy, so !cache[n] says \"not cached\" even though it is. Test whether the key exists with the in operator instead of testing whether the value is truthy."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*calls: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

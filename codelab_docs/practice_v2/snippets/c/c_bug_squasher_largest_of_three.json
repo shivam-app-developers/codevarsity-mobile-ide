@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong When the First Is Largest",
+    "language": "c",
+    "problemDescription": "For the numbers 50, 20 and 10 the program prints 20, but the largest is 50.",
+    "buggyCode": "#include <stdio.h>\n\nint max_of_three(int a, int b, int c) {\n    if (a >= b || a >= c) return b;\n    if (b >= c) return b;\n    return c;\n}\n\nint main() {\n    printf(\"%d\\n\", max_of_three(50, 20, 10));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint max_of_three(int a, int b, int c) {\n    if (a >= b && a >= c) return a;\n    if (b >= c) return b;\n    return c;\n}\n\nint main() {\n    printf(\"%d\\n\", max_of_three(50, 20, 10));\n    return 0;\n}",
+      "explanation": "The first branch was changed so that it returns b even when a is the winner, and the || makes the test true too often. Each branch must return the same variable it has proven to be largest."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

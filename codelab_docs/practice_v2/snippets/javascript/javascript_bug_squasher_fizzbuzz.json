@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Combined Case Is Checked Last",
+    "language": "javascript",
+    "problemDescription": "15 should give FizzBuzz, but the program gives Fizz for it.",
+    "buggyCode": "var out = [];\nfor (var i = 1; i <= 15; i++) {\n  if (i % 3 === 0) {\n    out.push(\"Fizz\");\n  } else if (i % 5 === 0) {\n    out.push(\"Buzz\");\n  } else if (i % 15 === 0) {\n    out.push(\"FizzBuzz\");\n  } else {\n    out.push(i);\n  }\n}\nconsole.log(out.join(\" \"));",
+    "solution": {
+      "code": "var out = [];\nfor (var i = 1; i <= 15; i++) {\n  if (i % 15 === 0) {\n    out.push(\"FizzBuzz\");\n  } else if (i % 3 === 0) {\n    out.push(\"Fizz\");\n  } else if (i % 5 === 0) {\n    out.push(\"Buzz\");\n  } else {\n    out.push(i);\n  }\n}\nconsole.log(out.join(\" \"));",
+      "explanation": "An else-if chain stops at the first true condition. Every multiple of 15 is also a multiple of 3, so the Fizz branch catches it first. Test the most specific condition first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

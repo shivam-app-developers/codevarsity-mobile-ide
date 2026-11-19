@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: filter",
+    "language": "javascript",
+    "description": "filter keeps the items for which the callback returns a truthy value, and returns them as a new array.",
+    "ghostCode": "var ages = [12, 18, 25, 9, 40];\nvar adults = ages.filter(function (age) {\n  return age >= 18;\n});\nconsole.log(adults);\nconsole.log(adults.length);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[18,25,40\\][ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

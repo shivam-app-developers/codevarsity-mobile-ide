@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Count Is Reset to 1",
+    "language": "java",
+    "problemDescription": "The word the appears 3 times, but the program reports every word exactly once.",
+    "buggyCode": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"the cat and the hat and the bat\";\n        Map<String, Integer> counts = new HashMap<>();\n        for (String word : text.split(\" \")) {\n            counts.put(word, 1);\n        }\n        for (Map.Entry<String, Integer> e : new TreeMap<>(counts).entrySet()) {\n            System.out.println(e.getKey() + \": \" + e.getValue());\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"the cat and the hat and the bat\";\n        Map<String, Integer> counts = new HashMap<>();\n        for (String word : text.split(\" \")) {\n            counts.put(word, counts.getOrDefault(word, 0) + 1);\n        }\n        for (Map.Entry<String, Integer> e : new TreeMap<>(counts).entrySet()) {\n            System.out.println(e.getKey() + \": \" + e.getValue());\n        }\n    }\n}",
+      "explanation": "put replaces the old value for the key. Storing the constant 1 each time throws away the earlier count. The new value has to be the old count plus one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*and: 2[ \\t]*\\r?\\nbat: 1[ \\t]*\\r?\\ncat: 1[ \\t]*\\r?\\nhat: 1[ \\t]*\\r?\\nthe: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

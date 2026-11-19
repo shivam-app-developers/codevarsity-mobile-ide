@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: finally and return",
+    "language": "java",
+    "description": "finally runs after the return value has been decided but before the method really returns. A return inside finally would replace that value.",
+    "ghostCode": "public class Main {\n    static String test() {\n        try {\n            System.out.println(\"in try\");\n            return \"from try\";\n        } finally {\n            System.out.println(\"in finally\");\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(test());\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*in try[ \\t]*\\r?\\nin finally[ \\t]*\\r?\\nfrom try\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

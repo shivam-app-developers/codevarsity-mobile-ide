@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shrink the Prefix Instead of Comparing Letters",
+    "language": "javascript",
+    "problemDescription": "Nested loops compare the words letter by letter with a flag and a break. Shrink a candidate prefix with indexOf instead, inside a commonPrefix function. The output must stay the same.",
+    "initialCode": "var words = [\"cascade\", \"cast\", \"castle\"];\nvar result = \"\";\nfor (var i = 0; i < words[0].length; i++) {\n  var c = words[0].charAt(i);\n  var same = true;\n  for (var w = 1; w < words.length; w++) {\n    if (words[w].charAt(i) !== c) {\n      same = false;\n    }\n  }\n  if (!same) {\n    break;\n  }\n  result += c;\n}\nconsole.log(result);",
+    "solution": {
+      "code": "function commonPrefix(words) {\n  var prefix = words[0];\n  for (var i = 1; i < words.length; i++) {\n    while (words[i].indexOf(prefix) !== 0) {\n      prefix = prefix.slice(0, -1);\n    }\n  }\n  return prefix;\n}\n\nconsole.log(commonPrefix([\"cascade\", \"cast\", \"castle\"]));",
+      "explanation": "indexOf does the comparison and the length handling, so the index arithmetic and the flag disappear, and the logic becomes a reusable function."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cas\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

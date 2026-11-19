@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: instanceof Instead of Comparing Class Names",
+    "language": "java",
+    "problemDescription": "The type of each object is found by comparing the text of its class name. Use instanceof, which is checked by the compiler. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Object[] items = {\"hello\", 42, \"world\", 7};\n        int total = 0, texts = 0;\n        for (Object o : items) {\n            if (o.getClass().getName().equals(\"java.lang.Integer\")) {\n                total += ((Integer) o).intValue();\n            } else if (o.getClass().getName().equals(\"java.lang.String\")) {\n                texts++;\n            }\n        }\n        System.out.println(\"Total: \" + total + \" Texts: \" + texts);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Object[] items = {\"hello\", 42, \"world\", 7};\n        int total = 0, texts = 0;\n        for (Object o : items) {\n            if (o instanceof Integer) {\n                total += (Integer) o;\n            } else if (o instanceof String) {\n                texts++;\n            }\n        }\n        System.out.println(\"Total: \" + total + \" Texts: \" + texts);\n    }\n}",
+      "explanation": "A misspelt class-name string compiles fine and just never matches, while a misspelt type in instanceof is a compile error. instanceof also accepts subclasses, which the name comparison does not."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Total: 49 Texts: 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

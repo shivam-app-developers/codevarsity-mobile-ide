@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Observer Pattern",
+    "language": "java",
+    "description": "A subject keeps a list of listeners and notifies every one of them when something changes. New listeners can be added without changing the subject.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface Listener {\n        void onPriceChange(String stock, int price);\n    }\n\n    static class Market {\n        private final List<Listener> listeners = new ArrayList<>();\n\n        void subscribe(Listener listener) {\n            listeners.add(listener);\n        }\n\n        void setPrice(String stock, int price) {\n            for (Listener listener : listeners) {\n                listener.onPriceChange(stock, price);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        Market market = new Market();\n        market.subscribe(new Listener() {\n            public void onPriceChange(String stock, int price) {\n                System.out.println(\"Alice sees \" + stock + \" at \" + price);\n            }\n        });\n        market.subscribe(new Listener() {\n            public void onPriceChange(String stock, int price) {\n                System.out.println(\"Bob sees \" + stock + \" at \" + price);\n            }\n        });\n        market.setPrice(\"ACME\", 120);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Alice sees ACME at 120[ \\t]*\\r?\\nBob sees ACME at 120\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

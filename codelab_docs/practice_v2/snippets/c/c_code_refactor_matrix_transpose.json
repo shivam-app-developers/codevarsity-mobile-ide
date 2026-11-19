@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Transpose In Place",
+    "language": "c",
+    "problemDescription": "A second matrix receives the transposed values and then they are copied back. Swap the mirrored elements in place instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    int t[3][3];\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            t[i][j] = m[j][i];\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            m[i][j] = t[i][j];\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = i + 1; j < 3; j++) {\n            int temp = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = temp;\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+      "explanation": "For a square matrix the transpose only needs the elements above the diagonal swapped with their mirror image. That halves the work and needs no second matrix and no copy loop."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 4 7[ \\t]*\\r?\\n2 5 8[ \\t]*\\r?\\n3 6 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

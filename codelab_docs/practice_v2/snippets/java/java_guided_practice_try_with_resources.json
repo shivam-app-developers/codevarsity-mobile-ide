@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: try-with-resources",
+    "language": "java",
+    "description": "A class that implements AutoCloseable can be opened in try ( ... ). Java closes the resources automatically at the end, in reverse order of opening.",
+    "ghostCode": "public class Main {\n    static class Resource implements AutoCloseable {\n        private final String name;\n\n        Resource(String name) {\n            this.name = name;\n            System.out.println(\"Open \" + name);\n        }\n\n        void use() {\n            System.out.println(\"Using \" + name);\n        }\n\n        @Override\n        public void close() {\n            System.out.println(\"Close \" + name);\n        }\n    }\n\n    public static void main(String[] args) {\n        try (Resource a = new Resource(\"A\"); Resource b = new Resource(\"B\")) {\n            a.use();\n            b.use();\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Open A[ \\t]*\\r?\\nOpen B[ \\t]*\\r?\\nUsing A[ \\t]*\\r?\\nUsing B[ \\t]*\\r?\\nClose B[ \\t]*\\r?\\nClose A\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

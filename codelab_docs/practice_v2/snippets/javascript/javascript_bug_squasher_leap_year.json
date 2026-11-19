@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Century Rule Is Inverted",
+    "language": "javascript",
+    "problemDescription": "1900 is not a leap year and 2024 is, but the program says the opposite for both.",
+    "buggyCode": "function isLeap(year) {\n  return (year % 4 === 0 && year % 100 === 0) || year % 400 === 0;\n}\n\nconsole.log(isLeap(1900), isLeap(2000), isLeap(2023), isLeap(2024));",
+    "solution": {
+      "code": "function isLeap(year) {\n  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;\n}\n\nconsole.log(isLeap(1900), isLeap(2000), isLeap(2023), isLeap(2024));",
+      "explanation": "The first rule is \"divisible by 4 and NOT divisible by 100\". With === 0 it demands that the year is a century year, which flips the answer for ordinary leap years like 2024 and for centuries like 1900."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*false true false true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

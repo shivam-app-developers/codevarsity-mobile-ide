@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compare In Place Instead of Building Copies",
+    "language": "java",
+    "problemDescription": "A cleaned copy and a reversed copy of the sentence are built with string concatenation and then compared. Write an isPalindrome method that walks two pointers over the original text. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String s = \"No lemon, no melon\";\n        String cleaned = \"\";\n        for (int i = 0; i < s.length(); i++) {\n            char c = s.charAt(i);\n            if (Character.isLetter(c)) {\n                cleaned = cleaned + Character.toLowerCase(c);\n            }\n        }\n        String reversed = \"\";\n        for (int i = cleaned.length() - 1; i >= 0; i--) {\n            reversed = reversed + cleaned.charAt(i);\n        }\n        System.out.println(cleaned.equals(reversed));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isPalindrome(String s) {\n        int left = 0, right = s.length() - 1;\n        while (left < right) {\n            if (!Character.isLetter(s.charAt(left))) {\n                left++;\n            } else if (!Character.isLetter(s.charAt(right))) {\n                right--;\n            } else if (Character.toLowerCase(s.charAt(left))\n                    != Character.toLowerCase(s.charAt(right))) {\n                return false;\n            } else {\n                left++;\n                right--;\n            }\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(\"No lemon, no melon\"));\n    }\n}",
+      "explanation": "Two pointers compare the characters in place, so no extra strings are created, and the method stops at the first mismatch. The old version always built two full copies."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

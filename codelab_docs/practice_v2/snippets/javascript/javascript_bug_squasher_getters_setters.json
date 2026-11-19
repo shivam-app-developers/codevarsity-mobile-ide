@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong Formula in the Setter",
+    "language": "javascript",
+    "problemDescription": "Setting 212 degrees Fahrenheit should give 100 degrees Celsius, but the program prints 324.",
+    "buggyCode": "var temperature = {\n  celsius: 0,\n  set fahrenheit(value) {\n    this.celsius = (value - 32) * 9 / 5;\n  }\n};\n\ntemperature.fahrenheit = 212;\nconsole.log(temperature.celsius);",
+    "solution": {
+      "code": "var temperature = {\n  celsius: 0,\n  set fahrenheit(value) {\n    this.celsius = (value - 32) * 5 / 9;\n  }\n};\n\ntemperature.fahrenheit = 212;\nconsole.log(temperature.celsius);",
+      "explanation": "To convert Fahrenheit to Celsius you multiply by 5/9. Multiplying by 9/5 is the opposite conversion (Celsius to Fahrenheit), which gives 324 instead of 100."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: map",
+    "language": "javascript",
+    "description": "map calls a function on every item and returns a new array of the results. The original array is not changed.",
+    "ghostCode": "var prices = [10, 20, 30];\nvar withTax = prices.map(function (p) {\n  return p * 1.5;\n});\nconsole.log(withTax);\n\nvar names = [\"asha\", \"ravi\"];\nconsole.log(names.map(function (n) {\n  return n.charAt(0).toUpperCase() + n.slice(1);\n}));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[15,30,45\\][ \\t]*\\r?\\n\\[\"Asha\",\"Ravi\"\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

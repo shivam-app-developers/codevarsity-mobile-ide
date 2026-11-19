@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Caesar Cipher",
+    "language": "javascript",
+    "description": "Shift each letter by a fixed amount and wrap around the alphabet with % 26. Use charCodeAt to get the character code and String.fromCharCode to turn it back.",
+    "ghostCode": "function encrypt(text, shift) {\n  var out = \"\";\n  for (var i = 0; i < text.length; i++) {\n    var code = text.charCodeAt(i);\n    if (code >= 97 && code <= 122) {\n      out += String.fromCharCode((code - 97 + shift) % 26 + 97);\n    } else if (code >= 65 && code <= 90) {\n      out += String.fromCharCode((code - 65 + shift) % 26 + 65);\n    } else {\n      out += text.charAt(i);\n    }\n  }\n  return out;\n}\n\nconsole.log(encrypt(\"Hello, World!\", 3));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Khoor, Zruog!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

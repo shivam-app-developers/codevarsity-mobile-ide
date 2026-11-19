@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Word Itself Is Used as the Key",
+    "language": "python",
+    "problemDescription": "eat, tea and ate are anagrams and belong in one group, but every word ends up in its own group.",
+    "buggyCode": "from collections import defaultdict\n\n\ndef group_anagrams(words):\n    groups = defaultdict(list)\n    for word in words:\n        groups[word].append(word)\n    return list(groups.values())\n\n\nprint(group_anagrams([\"eat\", \"tea\", \"ate\", \"bat\"]))",
+    "solution": {
+      "code": "from collections import defaultdict\n\n\ndef group_anagrams(words):\n    groups = defaultdict(list)\n    for word in words:\n        groups[\"\".join(sorted(word))].append(word)\n    return list(groups.values())\n\n\nprint(group_anagrams([\"eat\", \"tea\", \"ate\", \"bat\"]))",
+      "explanation": "Anagrams must map to the same key. The word itself is different for each anagram, but its letters in sorted order are identical, so the key has to be built from the sorted letters."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\['eat', 'tea', 'ate'\\], \\['bat'\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

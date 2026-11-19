@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Fields Overwrite Each Other",
+    "language": "c",
+    "problemDescription": "After setting id to 7 and score to 2.5 the program should print id=7 score=2.5, but id is printed as 0.",
+    "buggyCode": "#include <stdio.h>\n\nunion Pair {\n    int id;\n    double score;\n};\n\nint main() {\n    union Pair p;\n    p.id = 7;\n    p.score = 2.5;\n    printf(\"id=%d score=%.1f\\n\", p.id, p.score);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Pair {\n    int id;\n    double score;\n};\n\nint main() {\n    struct Pair p;\n    p.id = 7;\n    p.score = 2.5;\n    printf(\"id=%d score=%.1f\\n\", p.id, p.score);\n    return 0;\n}",
+      "explanation": "In a union both fields occupy the same bytes, so storing the double overwrites the bits that held the int. Use a struct when every field must keep its own value, and a union only when just one field is in use at a time."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*id=7 score=2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

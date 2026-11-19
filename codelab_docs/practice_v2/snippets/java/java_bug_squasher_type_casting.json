@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Average Computed with Integer Division",
+    "language": "java",
+    "problemDescription": "The average of 3 and 4 should be 3.5, but the program prints 3.0.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        int a = 3, b = 4;\n        double average = (a + b) / 2;\n        System.out.println(\"Average: \" + average);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int a = 3, b = 4;\n        double average = (a + b) / 2.0;\n        System.out.println(\"Average: \" + average);\n    }\n}",
+      "explanation": "When both operands are ints, the division is an integer division: 7 / 2 is 3, and the result is only then widened to double 3.0. Making one operand a double (2.0) switches to floating-point division."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Average: 3\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

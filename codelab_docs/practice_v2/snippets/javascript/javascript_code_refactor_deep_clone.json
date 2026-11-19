@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Clone with JSON Instead of Copying Every Level",
+    "language": "javascript",
+    "problemDescription": "Each level of the order is copied by hand, and a new level would need more code. Clone it with JSON. The output must stay the same.",
+    "initialCode": "var order = { id: 1, customer: { name: \"Asha\", city: \"Pune\" }, items: [1, 2] };\nvar copy = {\n  id: order.id,\n  customer: { name: order.customer.name, city: order.customer.city },\n  items: order.items.slice()\n};\ncopy.customer.city = \"Delhi\";\nconsole.log(order.customer.city, copy.customer.city);",
+    "solution": {
+      "code": "var order = { id: 1, customer: { name: \"Asha\", city: \"Pune\" }, items: [1, 2] };\nvar copy = JSON.parse(JSON.stringify(order));\ncopy.customer.city = \"Delhi\";\nconsole.log(order.customer.city, copy.customer.city);",
+      "explanation": "The JSON round trip copies whatever the structure contains, so new properties need no extra copying code. (It only works for plain data: functions and undefined values are lost.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Pune Delhi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

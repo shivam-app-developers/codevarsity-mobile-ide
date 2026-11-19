@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Binary Search Instead of a Linear Scan",
+    "language": "javascript",
+    "problemDescription": "A loop scans from the start until it finds the first 2. Use a binary search that moves left after each hit. The output must stay the same.",
+    "initialCode": "var a = [1, 2, 2, 2, 3, 5];\nvar index = -1;\nfor (var i = 0; i < a.length; i++) {\n  if (a[i] === 2) {\n    index = i;\n    break;\n  }\n}\nconsole.log(index);",
+    "solution": {
+      "code": "var a = [1, 2, 2, 2, 3, 5];\nvar low = 0;\nvar high = a.length - 1;\nvar index = -1;\nwhile (low <= high) {\n  var mid = Math.floor((low + high) / 2);\n  if (a[mid] === 2) {\n    index = mid;\n    high = mid - 1;\n  } else if (a[mid] < 2) {\n    low = mid + 1;\n  } else {\n    high = mid - 1;\n  }\n}\nconsole.log(index);",
+      "explanation": "On a sorted array a binary search needs about log2(n) comparisons instead of up to n, which for a million items is 20 steps instead of a million."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

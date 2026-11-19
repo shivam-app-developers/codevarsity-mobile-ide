@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Build the Word from Parts",
+    "language": "javascript",
+    "problemDescription": "Nested if / else blocks and two booleans decide what to print. Build the text from Fizz and Buzz pieces and use the number only when the text is empty. The output must stay the same.",
+    "initialCode": "for (var i = 1; i <= 15; i++) {\n  var three = i % 3 === 0;\n  var five = i % 5 === 0;\n  if (three && five) {\n    console.log(\"FizzBuzz\");\n  } else {\n    if (three) {\n      console.log(\"Fizz\");\n    } else {\n      if (five) {\n        console.log(\"Buzz\");\n      } else {\n        console.log(i);\n      }\n    }\n  }\n}",
+    "solution": {
+      "code": "for (var i = 1; i <= 15; i++) {\n  var word = \"\";\n  if (i % 3 === 0) {\n    word += \"Fizz\";\n  }\n  if (i % 5 === 0) {\n    word += \"Buzz\";\n  }\n  console.log(word || i);\n}",
+      "explanation": "FizzBuzz is just Fizz followed by Buzz, so no combined case is needed, and the || default prints the number when the word is empty. A new rule is one more if."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n4[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n7[ \\t]*\\r?\\n8[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\n11[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n13[ \\t]*\\r?\\n14[ \\t]*\\r?\\nFizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

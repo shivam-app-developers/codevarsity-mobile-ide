@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Fill a Table Instead of Recursing",
+    "language": "c",
+    "problemDescription": "A plain recursive function computes the LCS and repeats the same sub-problems many times. Fill a table of sub-results. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint lcs(const char *a, const char *b, int i, int j) {\n    if (i == 0 || j == 0) {\n        return 0;\n    }\n    if (a[i - 1] == b[j - 1]) {\n        return 1 + lcs(a, b, i - 1, j - 1);\n    }\n    int x = lcs(a, b, i - 1, j);\n    int y = lcs(a, b, i, j - 1);\n    return x > y ? x : y;\n}\n\nint main() {\n    printf(\"%d\\n\", lcs(\"AGGTAB\", \"GXTXAYB\", 6, 7));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *a = \"AGGTAB\";\n    const char *b = \"GXTXAYB\";\n    int n = strlen(a), m = strlen(b);\n    int dp[7][8] = {{0}};\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= m; j++) {\n            if (a[i - 1] == b[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1] + 1;\n            } else {\n                dp[i][j] = dp[i - 1][j] > dp[i][j - 1] ? dp[i - 1][j] : dp[i][j - 1];\n            }\n        }\n    }\n    printf(\"%d\\n\", dp[n][m]);\n    return 0;\n}",
+      "explanation": "The recursion branches twice at every mismatch, so its running time is exponential in the string lengths. The table solves each pair of prefixes once, which takes n times m steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

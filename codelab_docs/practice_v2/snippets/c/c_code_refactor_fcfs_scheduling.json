@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Running Total Instead of Re-Adding",
+    "language": "c",
+    "problemDescription": "Each waiting time is computed by adding up all earlier bursts again with a nested loop. Keep a running total instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int burst[] = {4, 2, 6};\n    for (int i = 0; i < 3; i++) {\n        int wait = 0;\n        for (int j = 0; j < i; j++) {\n            wait = wait + burst[j];\n        }\n        printf(\"P%d waits %d\\n\", i + 1, wait);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int burst[] = {4, 2, 6};\n    int wait = 0;\n    for (int i = 0; i < 3; i++) {\n        printf(\"P%d waits %d\\n\", i + 1, wait);\n        wait += burst[i];\n    }\n    return 0;\n}",
+      "explanation": "A process waits as long as everything before it ran, which is the previous process's wait plus the previous burst. A running total gets each value from the last one in constant time."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*P1 waits 0[ \\t]*\\r?\\nP2 waits 4[ \\t]*\\r?\\nP3 waits 6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

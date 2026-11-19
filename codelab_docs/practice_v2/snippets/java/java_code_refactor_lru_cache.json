@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: removeEldestEntry Instead of Manual Eviction",
+    "language": "java",
+    "problemDescription": "After every put, a helper checks the size and removes the eldest key by hand. Let the map do it by overriding removeEldestEntry in a small subclass. The output must stay the same.",
+    "initialCode": "import java.util.LinkedHashMap;\n\npublic class Main {\n    static void store(LinkedHashMap<String, Integer> cache, String key, int value) {\n        cache.put(key, value);\n        if (cache.size() > 2) {\n            String eldest = cache.keySet().iterator().next();\n            cache.remove(eldest);\n        }\n    }\n\n    public static void main(String[] args) {\n        LinkedHashMap<String, Integer> cache = new LinkedHashMap<>(16, 0.75f, true);\n        store(cache, \"a\", 1);\n        store(cache, \"b\", 2);\n        cache.get(\"a\");\n        store(cache, \"c\", 3);\n        System.out.println(cache.keySet());\n    }\n}",
+    "solution": {
+      "code": "import java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class Main {\n    static class Cache extends LinkedHashMap<String, Integer> {\n        Cache() {\n            super(16, 0.75f, true);\n        }\n\n        @Override\n        protected boolean removeEldestEntry(Map.Entry<String, Integer> eldest) {\n            return size() > 2;\n        }\n    }\n\n    public static void main(String[] args) {\n        Cache cache = new Cache();\n        cache.put(\"a\", 1);\n        cache.put(\"b\", 2);\n        cache.get(\"a\");\n        cache.put(\"c\", 3);\n        System.out.println(cache.keySet());\n    }\n}",
+      "explanation": "removeEldestEntry is the hook the map calls after every insertion, so the eviction rule is part of the cache itself. Callers just use put, and nobody can forget to call the helper."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[a, c\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

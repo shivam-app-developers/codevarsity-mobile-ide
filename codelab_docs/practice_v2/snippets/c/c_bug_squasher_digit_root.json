@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only One Round of Adding",
+    "language": "c",
+    "problemDescription": "The digital root of 9875 is 2, but the program prints 29.",
+    "buggyCode": "#include <stdio.h>\n\nint digit_root(int n) {\n    if (n >= 10) {\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n /= 10;\n        }\n        n = sum;\n    }\n    return n;\n}\n\nint main() {\n    printf(\"%d\\n\", digit_root(9875));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint digit_root(int n) {\n    while (n >= 10) {\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n /= 10;\n        }\n        n = sum;\n    }\n    return n;\n}\n\nint main() {\n    printf(\"%d\\n\", digit_root(9875));\n    return 0;\n}",
+      "explanation": "Adding the digits once is not always enough: 9875 gives 29, which still has two digits. The outer loop must repeat until the number drops below 10, which an if cannot do."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

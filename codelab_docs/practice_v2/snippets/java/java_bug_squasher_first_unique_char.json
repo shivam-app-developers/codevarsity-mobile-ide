@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Index Confused with the Letter",
+    "language": "java",
+    "problemDescription": "In leetcode the first unique letter l is at index 0, but the program prints 2.",
+    "buggyCode": "public class Main {\n    static int firstUnique(String s) {\n        int[] counts = new int[26];\n        for (int i = 0; i < s.length(); i++) {\n            counts[s.charAt(i) - 'a']++;\n        }\n        for (int i = 0; i < s.length(); i++) {\n            if (counts[i] == 1) {\n                return i;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(firstUnique(\"leetcode\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int firstUnique(String s) {\n        int[] counts = new int[26];\n        for (int i = 0; i < s.length(); i++) {\n            counts[s.charAt(i) - 'a']++;\n        }\n        for (int i = 0; i < s.length(); i++) {\n            if (counts[s.charAt(i) - 'a'] == 1) {\n                return i;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(firstUnique(\"leetcode\"));\n    }\n}",
+      "explanation": "counts is indexed by letter (0 for a, 1 for b, ...), not by position in the text. counts[i] asks about the i-th letter of the alphabet, so the loop finds the first letter of the alphabet that occurs once (c, index 2)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

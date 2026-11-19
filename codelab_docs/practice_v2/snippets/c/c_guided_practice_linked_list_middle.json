@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Middle of a Linked List",
+    "language": "c",
+    "description": "Use two pointers: slow moves one node at a time and fast moves two. When fast reaches the end, slow is at the middle.",
+    "ghostCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nstruct Node *middle(struct Node *head) {\n    struct Node *slow = head, *fast = head;\n    while (fast != NULL && fast->next != NULL) {\n        slow = slow->next;\n        fast = fast->next->next;\n    }\n    return slow;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 5; v >= 1; v--) {\n        list = push(list, v);\n    }\n    printf(\"Middle: %d\\n\", middle(list)->value);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Middle: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

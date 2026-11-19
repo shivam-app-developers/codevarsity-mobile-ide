@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Property Syntax Does Not Fill the Map",
+    "language": "javascript",
+    "problemDescription": "The map should hold one entry and print 30 1, but it prints undefined 0.",
+    "buggyCode": "var ages = new Map();\nages[\"Asha\"] = 30;\nconsole.log(ages.get(\"Asha\"), ages.size);",
+    "solution": {
+      "code": "var ages = new Map();\nages.set(\"Asha\", 30);\nconsole.log(ages.get(\"Asha\"), ages.size);",
+      "explanation": "ages[\"Asha\"] = 30 adds an ordinary property to the Map object, not an entry in the map's storage, so get and size cannot see it. Entries must be added with set."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*30 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

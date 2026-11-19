@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Count Once, Subtract for the Rest",
+    "language": "c",
+    "problemDescription": "Both counters are updated with separate if statements that repeat the same test. Count only the evens and derive the odds. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n[8] = {1, 2, 3, 4, 5, 6, 7, 8};\n    int e = 0;\n    int o = 0;\n    for (int i = 0; i < 8; i++) {\n        if (n[i] % 2 == 0) {\n            e = e + 1;\n        }\n        if (n[i] % 2 != 0) {\n            o = o + 1;\n        }\n    }\n    printf(\"%d %d\\n\", e, o);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8};\n    int total = sizeof(numbers) / sizeof(numbers[0]);\n    int evens = 0;\n    for (int i = 0; i < total; i++) {\n        if (numbers[i] % 2 == 0) {\n            evens++;\n        }\n    }\n    printf(\"%d %d\\n\", evens, total - evens);\n    return 0;\n}",
+      "explanation": "Every element is either even or odd, so odds = total - evens. That removes the duplicated test, the magic number 8 and the unclear single-letter names."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

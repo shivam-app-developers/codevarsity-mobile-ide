@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Append with the Pointer Idiom",
+    "language": "c",
+    "problemDescription": "Two loops with separate indices join the strings. Write an append function that walks a pointer to the end and copies until the terminator. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char a[] = \"Hello\";\n    char b[] = \", World\";\n    char c[30];\n    int i, j;\n    for (i = 0; a[i] != '\\0'; i++) {\n        c[i] = a[i];\n    }\n    for (j = 0; b[j] != '\\0'; j++) {\n        c[i + j] = b[j];\n    }\n    c[i + j] = '\\0';\n    printf(\"%s\\n\", c);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nchar *append(char *dest, const char *src) {\n    char *p = dest;\n    while (*p) {\n        p++;\n    }\n    while ((*p++ = *src++) != '\\0') {\n    }\n    return dest;\n}\n\nint main() {\n    char c[30] = \"Hello\";\n    append(c, \", World\");\n    printf(\"%s\\n\", c);\n    return 0;\n}",
+      "explanation": "The assignment *p++ = *src++ copies one character and moves both pointers; the loop stops after copying the '\\0', so the terminator is written for free. Returning dest allows chaining calls."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, World\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

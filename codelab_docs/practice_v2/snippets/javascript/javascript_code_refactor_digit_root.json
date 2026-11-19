@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: The Modulo-9 Formula",
+    "language": "javascript",
+    "problemDescription": "Nested loops add the digits again and again. Use the closed form: the digital root of n is 1 + (n - 1) % 9 for n greater than 0. The output must stay the same.",
+    "initialCode": "function root(n) {\n  while (n > 9) {\n    var s = 0;\n    while (n !== 0) {\n      s = s + n % 10;\n      n = Math.floor(n / 10);\n    }\n    n = s;\n  }\n  return n;\n}\n\nconsole.log(root(9875), root(6789));",
+    "solution": {
+      "code": "function root(n) {\n  return n === 0 ? 0 : 1 + (n - 1) % 9;\n}\n\nconsole.log(root(9875), root(6789));",
+      "explanation": "A number and its digit sum leave the same remainder when divided by 9, so repeating the digit sum ends at the remainder mod 9 (with 9 instead of 0). The formula needs no loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

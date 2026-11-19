@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Bundle Coordinates in a Point",
+    "language": "c",
+    "problemDescription": "Four loose coordinates and a long formula are repeated for each measurement. Use a Point type and one distance function. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int x1 = 0, y1 = 0, x2 = 3, y2 = 4;\n    int d = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);\n    printf(\"%d\\n\", d);\n    int x3 = 6, y3 = 8;\n    int e = (x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1);\n    printf(\"%d\\n\", e);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\ntypedef struct {\n    int x;\n    int y;\n} Point;\n\nint distance_squared(Point a, Point b) {\n    int dx = a.x - b.x;\n    int dy = a.y - b.y;\n    return dx * dx + dy * dy;\n}\n\nint main() {\n    Point origin = {0, 0};\n    Point a = {3, 4};\n    Point b = {6, 8};\n    printf(\"%d\\n\", distance_squared(origin, a));\n    printf(\"%d\\n\", distance_squared(origin, b));\n    return 0;\n}",
+      "explanation": "A point is a single idea, and the distance formula now exists once. The long expressions with six copies of the same subtraction are gone."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25[ \\t]*\\r?\\n100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

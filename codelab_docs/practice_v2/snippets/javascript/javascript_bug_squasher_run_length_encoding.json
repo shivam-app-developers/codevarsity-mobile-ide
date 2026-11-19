@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Run Is One Too Long",
+    "language": "javascript",
+    "problemDescription": "aaabccdddd should encode to a3b1c2d4, but the program prints a4b2c3d5.",
+    "buggyCode": "function encode(s) {\n  var out = \"\";\n  var i = 0;\n  while (i < s.length) {\n    var c = s.charAt(i);\n    var run = 1;\n    while (i < s.length && s.charAt(i) === c) {\n      run++;\n      i++;\n    }\n    out += c + run;\n  }\n  return out;\n}\n\nconsole.log(encode(\"aaabccdddd\"));",
+    "solution": {
+      "code": "function encode(s) {\n  var out = \"\";\n  var i = 0;\n  while (i < s.length) {\n    var c = s.charAt(i);\n    var run = 0;\n    while (i < s.length && s.charAt(i) === c) {\n      run++;\n      i++;\n    }\n    out += c + run;\n  }\n  return out;\n}\n\nconsole.log(encode(\"aaabccdddd\"));",
+      "explanation": "The inner loop already counts the first character of the run, because it starts at that character. Starting the counter at 1 counts it twice."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a3b1c2d4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

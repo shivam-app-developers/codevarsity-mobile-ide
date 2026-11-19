@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Zero Equals the Empty String",
+    "language": "javascript",
+    "problemDescription": "isEmpty(0) should be false because 0 is not an empty string, but it returns true.",
+    "buggyCode": "function isEmpty(value) {\n  return value == \"\";\n}\n\nconsole.log(isEmpty(\"\"));\nconsole.log(isEmpty(0));\nconsole.log(isEmpty(\"a\"));",
+    "solution": {
+      "code": "function isEmpty(value) {\n  return value === \"\";\n}\n\nconsole.log(isEmpty(\"\"));\nconsole.log(isEmpty(0));\nconsole.log(isEmpty(\"a\"));",
+      "explanation": "With == the number 0 is converted to the empty string before the comparison, so 0 == \"\" is true. === compares type and value, so only a real empty string matches."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

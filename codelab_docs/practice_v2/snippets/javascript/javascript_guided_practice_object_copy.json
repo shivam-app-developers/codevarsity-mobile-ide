@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Copying Objects",
+    "language": "javascript",
+    "description": "Assigning an object to another variable only copies the reference. Object.assign({}, obj) makes a shallow copy: nested objects and arrays are still shared.",
+    "ghostCode": "var original = { name: \"Asha\", tags: [\"a\"] };\nvar copy = Object.assign({}, original);\ncopy.name = \"Ravi\";\ncopy.tags.push(\"b\");\nconsole.log(original.name);\nconsole.log(original.tags);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha[ \\t]*\\r?\\n\\[\"a\",\"b\"\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

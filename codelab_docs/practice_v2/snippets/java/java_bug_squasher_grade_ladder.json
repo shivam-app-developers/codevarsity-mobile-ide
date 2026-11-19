@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Boundary Mark Misses the Grade",
+    "language": "java",
+    "problemDescription": "90 marks should earn an A, but the program gives it a B.",
+    "buggyCode": "public class Main {\n    static char grade(int marks) {\n        if (marks > 90) {\n            return 'A';\n        } else if (marks >= 75) {\n            return 'B';\n        } else if (marks >= 60) {\n            return 'C';\n        } else if (marks >= 40) {\n            return 'D';\n        }\n        return 'F';\n    }\n\n    public static void main(String[] args) {\n        int[] marks = {90, 89, 75, 60, 40, 39};\n        for (int m : marks) {\n            System.out.println(m + \" \" + grade(m));\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static char grade(int marks) {\n        if (marks >= 90) {\n            return 'A';\n        } else if (marks >= 75) {\n            return 'B';\n        } else if (marks >= 60) {\n            return 'C';\n        } else if (marks >= 40) {\n            return 'D';\n        }\n        return 'F';\n    }\n\n    public static void main(String[] args) {\n        int[] marks = {90, 89, 75, 60, 40, 39};\n        for (int m : marks) {\n            System.out.println(m + \" \" + grade(m));\n        }\n    }\n}",
+      "explanation": "A grade boundary belongs to the higher grade, so the comparison must include the boundary value itself: >= 90. With > 90 exactly 90 marks falls through to the next branch. Always test the exact boundary values."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*90 A[ \\t]*\\r?\\n89 B[ \\t]*\\r?\\n75 B[ \\t]*\\r?\\n60 C[ \\t]*\\r?\\n40 D[ \\t]*\\r?\\n39 F\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

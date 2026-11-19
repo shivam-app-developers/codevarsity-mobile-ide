@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: try-with-resources Instead of try/finally",
+    "language": "java",
+    "problemDescription": "A try / finally with a null check closes the resource by hand. Use try-with-resources. The output must stay the same.",
+    "initialCode": "public class Main {\n    static class Resource implements AutoCloseable {\n        private final String name;\n\n        Resource(String name) {\n            this.name = name;\n            System.out.println(\"Open \" + name);\n        }\n\n        void use() {\n            System.out.println(\"Using \" + name);\n        }\n\n        @Override\n        public void close() {\n            System.out.println(\"Close \" + name);\n        }\n    }\n\n    public static void main(String[] args) {\n        Resource r = null;\n        try {\n            r = new Resource(\"R\");\n            r.use();\n        } finally {\n            if (r != null) {\n                r.close();\n            }\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static class Resource implements AutoCloseable {\n        private final String name;\n\n        Resource(String name) {\n            this.name = name;\n            System.out.println(\"Open \" + name);\n        }\n\n        void use() {\n            System.out.println(\"Using \" + name);\n        }\n\n        @Override\n        public void close() {\n            System.out.println(\"Close \" + name);\n        }\n    }\n\n    public static void main(String[] args) {\n        try (Resource r = new Resource(\"R\")) {\n            r.use();\n        }\n    }\n}",
+      "explanation": "try-with-resources closes the resource even when the body throws, skips the null check, and, unlike a hand-written finally, does not lose the original exception if close() fails too."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Open R[ \\t]*\\r?\\nUsing R[ \\t]*\\r?\\nClose R\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

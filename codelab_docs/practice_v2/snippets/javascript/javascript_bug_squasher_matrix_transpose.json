@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Column Is Missing",
+    "language": "javascript",
+    "problemDescription": "Transposing a 2 by 3 matrix should give 3 rows, [[1,4],[2,5],[3,6]], but the program prints only 2 rows.",
+    "buggyCode": "function transpose(m) {\n  var result = [];\n  for (var j = 0; j < m.length; j++) {\n    var row = [];\n    for (var i = 0; i < m.length; i++) {\n      row.push(m[i][j]);\n    }\n    result.push(row);\n  }\n  return result;\n}\n\nconsole.log(transpose([[1, 2, 3], [4, 5, 6]]));",
+    "solution": {
+      "code": "function transpose(m) {\n  var result = [];\n  for (var j = 0; j < m[0].length; j++) {\n    var row = [];\n    for (var i = 0; i < m.length; i++) {\n      row.push(m[i][j]);\n    }\n    result.push(row);\n  }\n  return result;\n}\n\nconsole.log(transpose([[1, 2, 3], [4, 5, 6]]));",
+      "explanation": "The new matrix has one row for every column of the old one, so the outer loop runs up to the length of a row (m[0].length), not the number of rows. The two only agree for square matrices."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,4\\],\\[2,5\\],\\[3,6\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

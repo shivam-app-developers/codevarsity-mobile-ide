@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Counter Factory Instead of Global Variables",
+    "language": "javascript",
+    "problemDescription": "Each counter is a global variable with its own copy of the increment function. Write a makeCounter function that returns a new counter with private state. The output must stay the same.",
+    "initialCode": "var countA = 0;\nvar countB = 0;\n\nfunction incrementA() {\n  countA = countA + 1;\n  return countA;\n}\n\nfunction incrementB() {\n  countB = countB + 1;\n  return countB;\n}\n\nconsole.log(incrementA());\nconsole.log(incrementA());\nconsole.log(incrementB());",
+    "solution": {
+      "code": "function makeCounter() {\n  var count = 0;\n  return function () {\n    count += 1;\n    return count;\n  };\n}\n\nvar incrementA = makeCounter();\nvar incrementB = makeCounter();\nconsole.log(incrementA());\nconsole.log(incrementA());\nconsole.log(incrementB());",
+      "explanation": "A closure gives every counter its own private state, so adding a third counter needs no new variable or function, and no other code can change the count by accident."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

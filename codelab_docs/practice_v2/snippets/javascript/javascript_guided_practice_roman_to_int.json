@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Roman Numeral to Number",
+    "language": "javascript",
+    "description": "Add each symbol's value, but subtract it when the next symbol is bigger (as in IV or CM).",
+    "ghostCode": "var values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };\n\nfunction romanToInt(s) {\n  var total = 0;\n  for (var i = 0; i < s.length; i++) {\n    var current = values[s.charAt(i)];\n    var next = values[s.charAt(i + 1)];\n    if (next > current) {\n      total -= current;\n    } else {\n      total += current;\n    }\n  }\n  return total;\n}\n\nconsole.log(romanToInt(\"III\"), romanToInt(\"IV\"), romanToInt(\"MCMXCIV\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 4 1994\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

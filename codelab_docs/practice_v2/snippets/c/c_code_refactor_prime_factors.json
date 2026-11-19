@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Stop at the Square Root",
+    "language": "c",
+    "problemDescription": "The loop tries every divisor up to n. Stop at the square root and print the leftover prime afterwards. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 60;\n    for (int i = 2; i <= n; i++) {\n        while (n % i == 0) {\n            printf(\"%d \", i);\n            n = n / i;\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int n = 60;\n    for (int p = 2; p * p <= n; p++) {\n        while (n % p == 0) {\n            printf(\"%d \", p);\n            n /= p;\n        }\n    }\n    if (n > 1) {\n        printf(\"%d \", n);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "A composite number always has a factor no bigger than its square root. For a large prime n the old loop ran n times; the new one runs about the square root of n times."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 2 3 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

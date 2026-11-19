@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: finally Overrides the Returned Value",
+    "language": "java",
+    "problemDescription": "test() should return the text from the try block, but the program prints the text from finally instead.",
+    "buggyCode": "public class Main {\n    static String test() {\n        try {\n            System.out.println(\"in try\");\n            return \"from try\";\n        } finally {\n            System.out.println(\"in finally\");\n            return \"from finally\";\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(test());\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String test() {\n        try {\n            System.out.println(\"in try\");\n            return \"from try\";\n        } finally {\n            System.out.println(\"in finally\");\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(test());\n    }\n}",
+      "explanation": "A return statement in finally replaces whatever the try block was returning (and would even swallow an exception). Keep finally for cleanup only, and never return from it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*in try[ \\t]*\\r?\\nin finally[ \\t]*\\r?\\nfrom try\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Perfect Numbers",
+    "language": "javascript",
+    "description": "A perfect number equals the sum of its proper divisors (all divisors except itself). 6 is perfect because 1 + 2 + 3 = 6.",
+    "ghostCode": "function isPerfect(n) {\n  var sum = 0;\n  for (var d = 1; d < n; d++) {\n    if (n % d === 0) {\n      sum += d;\n    }\n  }\n  return sum === n;\n}\n\nvar found = [];\nfor (var n = 2; n <= 500; n++) {\n  if (isPerfect(n)) {\n    found.push(n);\n  }\n}\nconsole.log(found);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[6,28,496\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

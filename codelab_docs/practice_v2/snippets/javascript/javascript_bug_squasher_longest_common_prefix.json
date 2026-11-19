@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Prefix Is Cut from the Front",
+    "language": "javascript",
+    "problemDescription": "The common prefixes should be fl and inter, but the program prints two empty lines.",
+    "buggyCode": "function commonPrefix(words) {\n  var prefix = words[0];\n  for (var i = 1; i < words.length; i++) {\n    while (words[i].indexOf(prefix) !== 0) {\n      prefix = prefix.slice(1);\n    }\n  }\n  return prefix;\n}\n\nconsole.log(commonPrefix([\"flower\", \"flow\", \"flight\"]));\nconsole.log(commonPrefix([\"interview\", \"internet\", \"interval\"]));",
+    "solution": {
+      "code": "function commonPrefix(words) {\n  var prefix = words[0];\n  for (var i = 1; i < words.length; i++) {\n    while (words[i].indexOf(prefix) !== 0) {\n      prefix = prefix.slice(0, -1);\n    }\n  }\n  return prefix;\n}\n\nconsole.log(commonPrefix([\"flower\", \"flow\", \"flight\"]));\nconsole.log(commonPrefix([\"interview\", \"internet\", \"interval\"]));",
+      "explanation": "A prefix keeps its beginning, so a candidate that fails is shortened from the end (slice(0, -1) drops the last letter). slice(1) drops the first letter, which can never produce a prefix of the words."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fl[ \\t]*\\r?\\ninter\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

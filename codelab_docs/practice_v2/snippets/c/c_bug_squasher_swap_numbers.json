@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Both Variables End Up Equal",
+    "language": "c",
+    "problemDescription": "After the swap both variables hold 9 instead of x=9 and y=5.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int x = 5, y = 9;\n    int temp = x;\n    x = y;\n    y = x;\n    printf(\"x=%d y=%d\\n\", x, y);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int x = 5, y = 9;\n    int temp = x;\n    x = y;\n    y = temp;\n    printf(\"x=%d y=%d\\n\", x, y);\n    return 0;\n}",
+      "explanation": "x was already overwritten with y's value before it was copied to y, so the original x is lost. The saved copy in temp must be assigned to y."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*x=9 y=5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

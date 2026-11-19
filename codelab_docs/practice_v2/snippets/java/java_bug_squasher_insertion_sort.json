@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The First Element Is Never Compared",
+    "language": "java",
+    "problemDescription": "The array 12 11 13 5 6 should be sorted to [5, 6, 11, 12, 13], but the program prints [12, 5, 6, 11, 13].",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    static void insertionSort(int[] a) {\n        for (int i = 1; i < a.length; i++) {\n            int key = a[i];\n            int j = i - 1;\n            while (j > 0 && a[j] > key) {\n                a[j + 1] = a[j];\n                j--;\n            }\n            a[j + 1] = key;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {12, 11, 13, 5, 6};\n        insertionSort(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static void insertionSort(int[] a) {\n        for (int i = 1; i < a.length; i++) {\n            int key = a[i];\n            int j = i - 1;\n            while (j >= 0 && a[j] > key) {\n                a[j + 1] = a[j];\n                j--;\n            }\n            a[j + 1] = key;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {12, 11, 13, 5, 6};\n        insertionSort(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+      "explanation": "Index 0 is a valid element that may have to move too. The condition must allow j to reach 0 (j >= 0); with j > 0 the first element is never compared and never shifted."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5, 6, 11, 12, 13\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

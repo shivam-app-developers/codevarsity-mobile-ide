@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sum of Digits",
+    "language": "c",
+    "description": "Add up the digits of a number by peeling off the last digit with % 10 and shrinking the number with / 10.",
+    "ghostCode": "#include <stdio.h>\n\nint sum_of_digits(int n) {\n    int sum = 0;\n    while (n > 0) {\n        sum += n % 10;\n        n /= 10;\n    }\n    return sum;\n}\n\nint main() {\n    printf(\"Sum of digits of 4821 = %d\\n\", sum_of_digits(4821));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Sum of digits of 4821 = 15\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

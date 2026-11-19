@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Loop Instead of Needless Recursion",
+    "language": "c",
+    "problemDescription": "This recursive version has an if/else and three temporary variables. A simple loop is clearer for this job. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint ds(int n) {\n    if (n < 10) {\n        return n;\n    } else {\n        int last = n % 10;\n        int rest = n / 10;\n        int r = ds(rest);\n        return last + r;\n    }\n}\n\nint main() {\n    printf(\"%d\\n\", ds(9045));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint digit_sum(int n) {\n    int sum = 0;\n    for (; n > 0; n /= 10) {\n        sum += n % 10;\n    }\n    return sum;\n}\n\nint main() {\n    printf(\"%d\\n\", digit_sum(9045));\n    return 0;\n}",
+      "explanation": "Recursion is elegant for trees and divide-and-conquer, but a loop avoids the call stack and the temporary variables when each step simply continues the same job."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*18\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

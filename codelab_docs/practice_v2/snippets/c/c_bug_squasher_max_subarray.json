@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: All-Negative Input Returns Zero",
+    "language": "c",
+    "problemDescription": "For -4 -1 -8 the best subarray is just -1, but the program prints 0.",
+    "buggyCode": "#include <stdio.h>\n\nint max_subarray(const int a[], int n) {\n    int best = 0, current = a[0];\n    for (int i = 1; i < n; i++) {\n        int extend = current + a[i];\n        current = extend > a[i] ? extend : a[i];\n        if (current > best) best = current;\n    }\n    return best;\n}\n\nint main() {\n    int a[] = {-4, -1, -8};\n    printf(\"%d\\n\", max_subarray(a, 3));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint max_subarray(const int a[], int n) {\n    int best = a[0], current = a[0];\n    for (int i = 1; i < n; i++) {\n        int extend = current + a[i];\n        current = extend > a[i] ? extend : a[i];\n        if (current > best) best = current;\n    }\n    return best;\n}\n\nint main() {\n    int a[] = {-4, -1, -8};\n    printf(\"%d\\n\", max_subarray(a, 3));\n    return 0;\n}",
+      "explanation": "Starting best at 0 means the empty subarray is treated as a candidate, and nothing negative can beat it. A subarray must contain at least one element, so best starts from the first element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

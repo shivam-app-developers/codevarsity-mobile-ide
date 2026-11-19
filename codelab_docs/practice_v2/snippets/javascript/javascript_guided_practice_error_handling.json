@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: try, catch and finally",
+    "language": "javascript",
+    "description": "Code that may fail goes in try. throw creates an error, catch handles it, and finally always runs afterwards.",
+    "ghostCode": "function parseAge(text) {\n  var age = Number(text);\n  if (isNaN(age)) {\n    throw new Error(\"Not a number: \" + text);\n  }\n  return age;\n}\n\ntry {\n  console.log(parseAge(\"42\"));\n  console.log(parseAge(\"abc\"));\n} catch (e) {\n  console.log(\"Caught: \" + e.message);\n} finally {\n  console.log(\"done\");\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*42[ \\t]*\\r?\\nCaught: Not a number: abc[ \\t]*\\r?\\ndone\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

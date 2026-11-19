@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Loop and Function Instead of Repetition",
+    "language": "c",
+    "problemDescription": "Each element is added by hand and the count is a magic number. Use a loop inside a reusable average function. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[5] = {4, 8, 15, 16, 23};\n    int s = 0;\n    s = s + a[0];\n    s = s + a[1];\n    s = s + a[2];\n    s = s + a[3];\n    s = s + a[4];\n    printf(\"%.1f\\n\", s / 5.0);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\ndouble average(const int values[], int count) {\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += values[i];\n    }\n    return (double)sum / count;\n}\n\nint main() {\n    int numbers[] = {4, 8, 15, 16, 23};\n    int count = sizeof(numbers) / sizeof(numbers[0]);\n    printf(\"%.1f\\n\", average(numbers, count));\n    return 0;\n}",
+      "explanation": "The loop works for any array size, sizeof computes the count so it can never go out of date, and the function can be reused for any list of numbers."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*13\\.2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

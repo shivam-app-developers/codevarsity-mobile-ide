@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Frequency of Each Value",
+    "language": "c",
+    "description": "When values are small non-negative numbers, use them as indexes into a counting array. Increment counts[value] for every element.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int data[] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};\n    int counts[10] = {0};\n    for (int i = 0; i < 11; i++) {\n        counts[data[i]]++;\n    }\n    for (int d = 0; d < 10; d++) {\n        if (counts[d] > 0) {\n            printf(\"%d appears %d time(s)\\n\", d, counts[d]);\n        }\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 appears 2 time\\(s\\)[ \\t]*\\r?\\n2 appears 1 time\\(s\\)[ \\t]*\\r?\\n3 appears 2 time\\(s\\)[ \\t]*\\r?\\n4 appears 1 time\\(s\\)[ \\t]*\\r?\\n5 appears 3 time\\(s\\)[ \\t]*\\r?\\n6 appears 1 time\\(s\\)[ \\t]*\\r?\\n9 appears 1 time\\(s\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

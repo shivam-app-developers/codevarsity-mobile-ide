@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use this Instead of the Object's Name",
+    "language": "javascript",
+    "problemDescription": "The method refers to its own object by the variable name counter, which breaks if the object is copied or renamed. Use this. The output must stay the same.",
+    "initialCode": "var counter = {\n  count: 0,\n  increment: function () {\n    counter.count += 1;\n    return counter.count;\n  }\n};\n\nconsole.log(counter.increment());\nconsole.log(counter.increment());",
+    "solution": {
+      "code": "var counter = {\n  count: 0,\n  increment: function () {\n    this.count += 1;\n    return this.count;\n  }\n};\n\nconsole.log(counter.increment());\nconsole.log(counter.increment());",
+      "explanation": "this refers to whichever object the method was called on, so the same method works if the object is copied, renamed or shared through a prototype."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

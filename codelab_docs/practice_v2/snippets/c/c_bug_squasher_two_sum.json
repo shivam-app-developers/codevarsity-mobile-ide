@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Same Element Used Twice",
+    "language": "c",
+    "problemDescription": "With target 8, only 3 + 5 (indices 0 and 1) is valid, but the program also reports the number 4 added to itself.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int nums[] = {3, 5, 4, 8};\n    int n = 4, target = 8;\n    for (int i = 0; i < n; i++) {\n        for (int j = i; j < n; j++) {\n            if (nums[i] + nums[j] == target) {\n                printf(\"%d + %d = %d (indices %d, %d)\\n\", nums[i], nums[j], target, i, j);\n            }\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int nums[] = {3, 5, 4, 8};\n    int n = 4, target = 8;\n    for (int i = 0; i < n; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (nums[i] + nums[j] == target) {\n                printf(\"%d + %d = %d (indices %d, %d)\\n\", nums[i], nums[j], target, i, j);\n            }\n        }\n    }\n    return 0;\n}",
+      "explanation": "Starting the inner loop at i lets an element pair with itself (4 + 4 = 8). Starting at i + 1 pairs each element only with later ones, so no element is used twice and no pair is reported twice."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 \\+ 5 = 8 \\(indices 0, 1\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

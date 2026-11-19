@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Shallow Copy Shares the Address",
+    "language": "javascript",
+    "problemDescription": "Changing the city in the copy should leave the original in Pune, but the original city changes too.",
+    "buggyCode": "var original = { name: \"Asha\", address: { city: \"Pune\" } };\nvar copy = Object.assign({}, original);\ncopy.address.city = \"Delhi\";\nconsole.log(original.address.city);",
+    "solution": {
+      "code": "var original = { name: \"Asha\", address: { city: \"Pune\" } };\nvar copy = JSON.parse(JSON.stringify(original));\ncopy.address.city = \"Delhi\";\nconsole.log(original.address.city);",
+      "explanation": "Object.assign copies only the top level: copy.address is the same object as original.address. A change inside it shows up in both. The JSON round trip builds new nested objects as well."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Pune\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

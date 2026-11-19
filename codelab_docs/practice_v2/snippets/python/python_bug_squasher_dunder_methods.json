@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: __add__ Returns a Number",
+    "language": "python",
+    "problemDescription": "Adding two Money objects should print 120 INR, but the program prints 120.",
+    "buggyCode": "class Money:\n    def __init__(self, amount):\n        self.amount = amount\n\n    def __str__(self):\n        return str(self.amount) + \" INR\"\n\n    def __add__(self, other):\n        return self.amount + other.amount\n\n\nprint(Money(50) + Money(70))",
+    "solution": {
+      "code": "class Money:\n    def __init__(self, amount):\n        self.amount = amount\n\n    def __str__(self):\n        return str(self.amount) + \" INR\"\n\n    def __add__(self, other):\n        return Money(self.amount + other.amount)\n\n\nprint(Money(50) + Money(70))",
+      "explanation": "__add__ should return a new object of the same class, so that the result still prints with __str__ and can be added again. Returning the plain number loses the type."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*120 INR\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

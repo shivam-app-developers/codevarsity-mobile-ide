@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Maximum of Negative Numbers",
+    "language": "c",
+    "problemDescription": "All temperatures are below zero and the highest is -3, but the program prints 0.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int temps[] = {-8, -3, -15, -6};\n    int n = 4;\n    int max = 0;\n    for (int i = 1; i < n; i++) {\n        if (temps[i] > max) {\n            max = temps[i];\n        }\n    }\n    printf(\"Highest: %d\\n\", max);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int temps[] = {-8, -3, -15, -6};\n    int n = 4;\n    int max = temps[0];\n    for (int i = 1; i < n; i++) {\n        if (temps[i] > max) {\n            max = temps[i];\n        }\n    }\n    printf(\"Highest: %d\\n\", max);\n    return 0;\n}",
+      "explanation": "Starting the maximum at 0 assumes there is at least one value above 0. When every element is negative, nothing beats 0 and the wrong answer survives. Start from the first element of the array instead."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Highest: -3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

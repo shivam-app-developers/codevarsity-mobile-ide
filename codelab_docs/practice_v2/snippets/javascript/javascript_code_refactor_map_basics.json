@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Map Instead of an Object Used as a Dictionary",
+    "language": "javascript",
+    "problemDescription": "An object with hasOwnProperty checks counts the words, and its size is found with Object.keys. Use a Map. The output must stay the same.",
+    "initialCode": "var counts = {};\nvar words = [\"a\", \"b\", \"a\", \"c\", \"a\"];\nfor (var i = 0; i < words.length; i++) {\n  if (counts.hasOwnProperty(words[i])) {\n    counts[words[i]] += 1;\n  } else {\n    counts[words[i]] = 1;\n  }\n}\nconsole.log(counts.a, Object.keys(counts).length);",
+    "solution": {
+      "code": "var counts = new Map();\nvar words = [\"a\", \"b\", \"a\", \"c\", \"a\"];\nwords.forEach(function (w) {\n  counts.set(w, (counts.get(w) || 0) + 1);\n});\nconsole.log(counts.get(\"a\"), counts.size);",
+      "explanation": "A Map has no inherited keys to guard against (an object would misbehave for a word like constructor), and size is a property instead of a computation."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

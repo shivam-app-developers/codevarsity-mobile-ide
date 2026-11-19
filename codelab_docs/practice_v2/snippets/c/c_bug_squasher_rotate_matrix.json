@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Rows Are Not Reversed",
+    "language": "c",
+    "problemDescription": "Rotating clockwise should give 7 4 1 as the first row, but the program prints 1 4 7, which is only the transpose.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = i + 1; j < 3; j++) {\n            int t = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = t;\n        }\n    }\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = i + 1; j < 3; j++) {\n            int t = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = t;\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        int t = m[i][0];\n        m[i][0] = m[i][2];\n        m[i][2] = t;\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+      "explanation": "Transposing mirrors the matrix over its diagonal, which is a reflection. Reversing each row afterwards turns that reflection into a clockwise rotation. Without the second step the matrix is only transposed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7 4 1[ \\t]*\\r?\\n8 5 2[ \\t]*\\r?\\n9 6 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

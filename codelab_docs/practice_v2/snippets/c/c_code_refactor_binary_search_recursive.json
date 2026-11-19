@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Binary Search Instead of a Full Scan",
+    "language": "c",
+    "problemDescription": "A loop looks at every element of a sorted array. Replace it with a binary search that halves the range each time. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {3, 9, 14, 21, 35, 47, 60};\n    int target = 35;\n    int found = -1;\n    for (int i = 0; i < 7; i++) {\n        if (a[i] == target) {\n            found = i;\n        }\n    }\n    printf(\"%d\\n\", found);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {3, 9, 14, 21, 35, 47, 60};\n    int target = 35;\n    int low = 0, high = 6, found = -1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (a[mid] == target) {\n            found = mid;\n            break;\n        }\n        if (a[mid] < target) {\n            low = mid + 1;\n        } else {\n            high = mid - 1;\n        }\n    }\n    printf(\"%d\\n\", found);\n    return 0;\n}",
+      "explanation": "Because the array is sorted, each comparison discards half of the remaining candidates. For a million elements that is about 20 comparisons instead of a million."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

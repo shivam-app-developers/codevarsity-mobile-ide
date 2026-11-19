@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Adjacency Lists Instead of a Matrix",
+    "language": "java",
+    "problemDescription": "A 5 by 5 matrix stores every possible edge and each node scans all five columns. Store only the real neighbours of each node in lists. The visiting order and output must stay the same.",
+    "initialCode": "import java.util.ArrayDeque;\nimport java.util.Queue;\n\npublic class Main {\n    public static void main(String[] args) {\n        int n = 5;\n        int[][] matrix = new int[n][n];\n        int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {2, 3}, {2, 4}};\n        for (int[] e : edges) {\n            matrix[e[0]][e[1]] = 1;\n            matrix[e[1]][e[0]] = 1;\n        }\n        boolean[] seen = new boolean[n];\n        Queue<Integer> queue = new ArrayDeque<>();\n        queue.add(0);\n        seen[0] = true;\n        StringBuilder order = new StringBuilder();\n        while (!queue.isEmpty()) {\n            int node = queue.poll();\n            order.append(node).append(' ');\n            for (int other = 0; other < n; other++) {\n                if (matrix[node][other] == 1 && !seen[other]) {\n                    seen[other] = true;\n                    queue.add(other);\n                }\n            }\n        }\n        System.out.println(order.toString().trim());\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Queue;\n\npublic class Main {\n    public static void main(String[] args) {\n        int n = 5;\n        List<List<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            graph.add(new ArrayList<>());\n        }\n        int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {2, 3}, {2, 4}};\n        for (int[] e : edges) {\n            graph.get(e[0]).add(e[1]);\n            graph.get(e[1]).add(e[0]);\n        }\n        boolean[] seen = new boolean[n];\n        Queue<Integer> queue = new ArrayDeque<>();\n        queue.add(0);\n        seen[0] = true;\n        StringBuilder order = new StringBuilder();\n        while (!queue.isEmpty()) {\n            int node = queue.poll();\n            order.append(node).append(' ');\n            for (int other : graph.get(node)) {\n                if (!seen[other]) {\n                    seen[other] = true;\n                    queue.add(other);\n                }\n            }\n        }\n        System.out.println(order.toString().trim());\n    }\n}",
+      "explanation": "For a sparse graph an adjacency list stores and scans only the edges that exist, instead of n squared matrix cells. The neighbours are added in ascending order, so the visiting order stays the same."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

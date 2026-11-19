@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Touching Intervals Are Not Merged",
+    "language": "python",
+    "problemDescription": "The intervals [1, 4] and [4, 5] touch at 4 and should merge into [[1, 5]], but the program keeps them apart.",
+    "buggyCode": "def merge(intervals):\n    intervals = sorted(intervals)\n    merged = [intervals[0]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start < last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged\n\n\nprint(merge([[1, 4], [4, 5]]))",
+    "solution": {
+      "code": "def merge(intervals):\n    intervals = sorted(intervals)\n    merged = [intervals[0]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged\n\n\nprint(merge([[1, 4], [4, 5]]))",
+      "explanation": "An interval that starts exactly where the previous one ends still touches it, so the test must include equality (<=). With < the boundary case is treated as a gap."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1, 5\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Generic Box Instead of Two Copies",
+    "language": "java",
+    "problemDescription": "StringBox and IntBox are the same class with a different field type. Replace them with one generic Box<T>. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        StringBox name = new StringBox(\"Asha\");\n        IntBox age = new IntBox(30);\n        System.out.println(name.get().toUpperCase());\n        System.out.println(age.get() + 1);\n    }\n}\n\nclass StringBox {\n    private final String value;\n\n    StringBox(String value) {\n        this.value = value;\n    }\n\n    String get() {\n        return value;\n    }\n}\n\nclass IntBox {\n    private final int value;\n\n    IntBox(int value) {\n        this.value = value;\n    }\n\n    int get() {\n        return value;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Box<String> name = new Box<>(\"Asha\");\n        Box<Integer> age = new Box<>(30);\n        System.out.println(name.get().toUpperCase());\n        System.out.println(age.get() + 1);\n    }\n}\n\nclass Box<T> {\n    private final T value;\n\n    Box(T value) {\n        this.value = value;\n    }\n\n    T get() {\n        return value;\n    }\n}",
+      "explanation": "Generics remove the copy-and-paste: one class works for every type, and the compiler still checks each use. Add a method once and every Box gets it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ASHA[ \\t]*\\r?\\n31\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

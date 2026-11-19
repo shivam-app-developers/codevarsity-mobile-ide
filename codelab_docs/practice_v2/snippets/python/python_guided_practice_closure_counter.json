@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Closures and nonlocal",
+    "language": "python",
+    "description": "An inner function can read the variables of the function around it. To assign to one, declare it nonlocal, otherwise Python creates a new local variable.",
+    "ghostCode": "def make_counter():\n    count = 0\n\n    def increment():\n        nonlocal count\n        count += 1\n        return count\n\n    return increment\n\n\na = make_counter()\nb = make_counter()\nprint(a(), a(), b())",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

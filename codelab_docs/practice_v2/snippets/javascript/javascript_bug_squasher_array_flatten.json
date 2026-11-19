@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Result of concat Is Thrown Away",
+    "language": "javascript",
+    "problemDescription": "Flattening [1,[2,[3,[4]],5]] should give [1,2,3,4,5], but the program prints only [1].",
+    "buggyCode": "function flatten(list) {\n  var result = [];\n  list.forEach(function (item) {\n    if (Array.isArray(item)) {\n      result.concat(flatten(item));\n    } else {\n      result.push(item);\n    }\n  });\n  return result;\n}\n\nconsole.log(flatten([1, [2, [3, [4]], 5]]));",
+    "solution": {
+      "code": "function flatten(list) {\n  var result = [];\n  list.forEach(function (item) {\n    if (Array.isArray(item)) {\n      result = result.concat(flatten(item));\n    } else {\n      result.push(item);\n    }\n  });\n  return result;\n}\n\nconsole.log(flatten([1, [2, [3, [4]], 5]]));",
+      "explanation": "concat does not change the array it is called on; it returns a new array. If the returned array is not assigned to something, the flattened inner items are lost."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4,5\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

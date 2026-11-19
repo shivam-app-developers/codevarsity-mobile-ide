@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Immutable Classes",
+    "language": "java",
+    "description": "An immutable object never changes after construction. Make the class final, the fields private and final, and have \"modifying\" methods return a new object.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Money a = new Money(100, \"INR\");\n        Money b = a.plus(50);\n        System.out.println(a);\n        System.out.println(b);\n    }\n}\n\nfinal class Money {\n    private final int amount;\n    private final String currency;\n\n    Money(int amount, String currency) {\n        this.amount = amount;\n        this.currency = currency;\n    }\n\n    Money plus(int extra) {\n        return new Money(amount + extra, currency);\n    }\n\n    @Override\n    public String toString() {\n        return amount + \" \" + currency;\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*100 INR[ \\t]*\\r?\\n150 INR\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

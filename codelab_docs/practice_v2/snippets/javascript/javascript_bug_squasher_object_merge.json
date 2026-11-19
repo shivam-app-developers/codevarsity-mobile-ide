@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Defaults Override the Options",
+    "language": "javascript",
+    "problemDescription": "The options should override the defaults and give size L and count 5, but the defaults win.",
+    "buggyCode": "var defaults = { color: \"blue\", size: \"M\", count: 1 };\nvar options = { size: \"L\", count: 5 };\nvar config = Object.assign({}, options, defaults);\nconsole.log(config);",
+    "solution": {
+      "code": "var defaults = { color: \"blue\", size: \"M\", count: 1 };\nvar options = { size: \"L\", count: 5 };\nvar config = Object.assign({}, defaults, options);\nconsole.log(config);",
+      "explanation": "When two sources have the same property, the one copied last wins. The options must come after the defaults, otherwise the defaults overwrite the user's choices."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"color\":\"blue\",\"size\":\"L\",\"count\":5\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Stops at Any Match",
+    "language": "java",
+    "problemDescription": "The first 2 is at index 1, but the program prints 2, the index of the middle 2.",
+    "buggyCode": "public class Main {\n    static int firstIndex(int[] a, int target) {\n        int low = 0, high = a.length - 1, answer = -1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (a[mid] == target) {\n                return mid;\n            } else if (a[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n        return answer;\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 2, 2, 2, 3, 5};\n        System.out.println(firstIndex(a, 2));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int firstIndex(int[] a, int target) {\n        int low = 0, high = a.length - 1, answer = -1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (a[mid] == target) {\n                answer = mid;\n                high = mid - 1;\n            } else if (a[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n        return answer;\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 2, 2, 2, 3, 5};\n        System.out.println(firstIndex(a, 2));\n    }\n}",
+      "explanation": "A plain binary search returns as soon as it hits the target, which may be any of the equal values. To find the first one, record the hit and keep searching the left half for an earlier one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

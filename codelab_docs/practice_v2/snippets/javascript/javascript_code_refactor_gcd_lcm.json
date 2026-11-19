@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Euclid Instead of Trying Every Divisor",
+    "language": "javascript",
+    "problemDescription": "A loop tests every number up to the smaller value. Replace it with Euclid's algorithm. The output must stay the same.",
+    "initialCode": "var a = 84;\nvar b = 36;\nvar result = 1;\nfor (var i = 1; i <= a && i <= b; i++) {\n  if (a % i === 0 && b % i === 0) {\n    result = i;\n  }\n}\nconsole.log(result);",
+    "solution": {
+      "code": "function gcd(a, b) {\n  return b === 0 ? a : gcd(b, a % b);\n}\n\nconsole.log(gcd(84, 36));",
+      "explanation": "Euclid's algorithm needs only a few steps even for huge numbers, because every step at least halves one of them, while trying every divisor needs as many steps as the smaller number."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

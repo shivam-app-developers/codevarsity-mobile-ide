@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: StringBuilder.reverse Instead of Concatenation in a Loop",
+    "language": "java",
+    "problemDescription": "A String is built one character at a time with +, which copies the text on every step. Use StringBuilder's reverse. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String word = \"stressed\";\n        String result = \"\";\n        for (int i = word.length() - 1; i >= 0; i--) {\n            result = result + word.charAt(i);\n        }\n        System.out.println(result);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String word = \"stressed\";\n        System.out.println(new StringBuilder(word).reverse());\n    }\n}",
+      "explanation": "Strings are immutable, so each + creates a new String and copies everything built so far, which makes the loop slow for long text. StringBuilder works on a single buffer, and reverse() does the whole job."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*desserts\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

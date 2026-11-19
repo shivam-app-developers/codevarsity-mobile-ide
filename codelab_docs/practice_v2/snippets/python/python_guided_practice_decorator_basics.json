@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Decorators",
+    "language": "python",
+    "description": "A decorator is a function that takes a function and returns a wrapper around it. The wrapper must call the original and return its result.",
+    "ghostCode": "def count_calls(func):\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return func(*args, **kwargs)\n\n    wrapper.calls = 0\n    return wrapper\n\n\n@count_calls\ndef greet(name):\n    return \"Hello, \" + name\n\n\nprint(greet(\"Asha\"))\nprint(greet(\"Ravi\"))\nprint(greet.calls)",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Asha[ \\t]*\\r?\\nHello, Ravi[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

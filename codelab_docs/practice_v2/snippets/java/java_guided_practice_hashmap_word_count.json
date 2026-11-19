@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Word Count with HashMap",
+    "language": "java",
+    "description": "Count words with a HashMap: look up the current count (default 0) and store it back plus one. Copy it into a TreeMap to print in alphabetical order.",
+    "ghostCode": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"the cat and the hat and the bat\";\n        Map<String, Integer> counts = new HashMap<>();\n        for (String word : text.split(\" \")) {\n            counts.put(word, counts.getOrDefault(word, 0) + 1);\n        }\n        for (Map.Entry<String, Integer> e : new TreeMap<>(counts).entrySet()) {\n            System.out.println(e.getKey() + \": \" + e.getValue());\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*and: 2[ \\t]*\\r?\\nbat: 1[ \\t]*\\r?\\ncat: 1[ \\t]*\\r?\\nhat: 1[ \\t]*\\r?\\nthe: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Default List Is Shared Between Calls",
+    "language": "python",
+    "problemDescription": "Each call without a list should start fresh and print ['a'] and then ['b'], but the second call prints ['a', 'b'].",
+    "buggyCode": "def add_item(item, items=[]):\n    items.append(item)\n    return items\n\n\nprint(add_item(\"a\"))\nprint(add_item(\"b\"))",
+    "solution": {
+      "code": "def add_item(item, items=None):\n    if items is None:\n        items = []\n    items.append(item)\n    return items\n\n\nprint(add_item(\"a\"))\nprint(add_item(\"b\"))",
+      "explanation": "items=[] is evaluated once, so every call that omits the argument appends to the same list object. Using None as the default and creating a new list inside the function gives each call its own list."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['a'\\][ \\t]*\\r?\\n\\['b'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

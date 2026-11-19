@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Letters Are Counted Instead of Words",
+    "language": "python",
+    "problemDescription": "The two most common words are the (3 times) and and (2 times), but the program counts single characters.",
+    "buggyCode": "from collections import Counter\n\ntext = \"the cat and the hat and the bat\"\ncounts = Counter(text)\nprint(counts.most_common(2))",
+    "solution": {
+      "code": "from collections import Counter\n\ntext = \"the cat and the hat and the bat\"\ncounts = Counter(text.split())\nprint(counts.most_common(2))",
+      "explanation": "Counter counts the items of whatever iterable it is given. A string is an iterable of characters, so Counter(text) counts letters and spaces. split() first turns the text into a list of words."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('the', 3\\), \\('and', 2\\)\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

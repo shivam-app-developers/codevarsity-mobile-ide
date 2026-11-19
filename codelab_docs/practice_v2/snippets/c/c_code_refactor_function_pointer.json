@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the if Chain with a Function Table",
+    "language": "c",
+    "problemDescription": "An if/else-if chain picks the arithmetic operation. Use an array of function pointers indexed in step with the symbols. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char ops[] = {'+', '-', '*'};\n    for (int i = 0; i < 3; i++) {\n        int a = 9, b = 3, r = 0;\n        if (ops[i] == '+') {\n            r = a + b;\n        } else if (ops[i] == '-') {\n            r = a - b;\n        } else if (ops[i] == '*') {\n            r = a * b;\n        }\n        printf(\"9 %c 3 = %d\\n\", ops[i], r);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint add(int a, int b) { return a + b; }\nint sub(int a, int b) { return a - b; }\nint mul(int a, int b) { return a * b; }\n\nint main() {\n    char symbols[] = {'+', '-', '*'};\n    int (*functions[])(int, int) = {add, sub, mul};\n    for (int i = 0; i < 3; i++) {\n        printf(\"9 %c 3 = %d\\n\", symbols[i], functions[i](9, 3));\n    }\n    return 0;\n}",
+      "explanation": "Each operation is now its own small function, and the loop calls them through the table instead of branching. Adding an operation means adding one function and one table entry."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9 \\+ 3 = 12[ \\t]*\\r?\\n9 - 3 = 6[ \\t]*\\r?\\n9 \\* 3 = 27\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

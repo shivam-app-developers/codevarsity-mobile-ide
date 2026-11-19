@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Capitalize Each Word",
+    "language": "c",
+    "description": "Keep a flag that says \"the next letter starts a word\". A space sets it, and the first non-space after that is turned into a capital.",
+    "ghostCode": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    char s[] = \"learn to code every day\";\n    int new_word = 1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (isspace(s[i])) {\n            new_word = 1;\n        } else if (new_word) {\n            s[i] = toupper(s[i]);\n            new_word = 0;\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Learn To Code Every Day\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Small Tower Goes to the Wrong Peg",
+    "language": "javascript",
+    "problemDescription": "With 2 disks the moves should be A->B A->C B->C, but the last move goes back to A.",
+    "buggyCode": "function hanoi(n, from, to, via, moves) {\n  if (n === 0) {\n    return;\n  }\n  hanoi(n - 1, from, via, to, moves);\n  moves.push(from + \"->\" + to);\n  hanoi(n - 1, via, from, to, moves);\n}\n\nvar moves = [];\nhanoi(2, \"A\", \"C\", \"B\", moves);\nconsole.log(moves.join(\" \"));",
+    "solution": {
+      "code": "function hanoi(n, from, to, via, moves) {\n  if (n === 0) {\n    return;\n  }\n  hanoi(n - 1, from, via, to, moves);\n  moves.push(from + \"->\" + to);\n  hanoi(n - 1, via, to, from, moves);\n}\n\nvar moves = [];\nhanoi(2, \"A\", \"C\", \"B\", moves);\nconsole.log(moves.join(\" \"));",
+      "explanation": "After the big disk has reached the target peg, the smaller tower must go from the helper peg to the target, so the arguments are (via, to, from). Swapping to and from sends it back to where it started."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A->B A->C B->C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

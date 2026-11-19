@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Binary Search Tree Insert",
+    "language": "c",
+    "description": "A binary search tree keeps smaller keys on the left and larger keys on the right, so an in-order walk visits the keys in sorted order.",
+    "ghostCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *insert(struct Node *root, int key) {\n    if (root == NULL) {\n        struct Node *node = malloc(sizeof(struct Node));\n        node->key = key;\n        node->left = node->right = NULL;\n        return node;\n    }\n    if (key < root->key) {\n        root->left = insert(root->left, key);\n    } else if (key > root->key) {\n        root->right = insert(root->right, key);\n    }\n    return root;\n}\n\nvoid inorder(struct Node *root) {\n    if (root == NULL) {\n        return;\n    }\n    inorder(root->left);\n    printf(\"%d \", root->key);\n    inorder(root->right);\n}\n\nint main() {\n    int keys[] = {50, 30, 70, 20, 40, 60, 80};\n    struct Node *root = NULL;\n    for (int i = 0; i < 7; i++) {\n        root = insert(root, keys[i]);\n    }\n    inorder(root);\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*20 30 40 50 60 70 80\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

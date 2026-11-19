@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only the First Match Is Replaced",
+    "language": "javascript",
+    "problemDescription": "Every o in Hello World should become a zero, giving Hell0 W0rld, but the program prints Hell0 World.",
+    "buggyCode": "console.log(\"Hello World\".replace(\"o\", \"0\"));",
+    "solution": {
+      "code": "console.log(\"Hello World\".replace(/o/g, \"0\"));",
+      "explanation": "When the first argument of replace is a plain string, only its first occurrence is replaced. A regular expression with the global flag g replaces every occurrence."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hell0 W0rld\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

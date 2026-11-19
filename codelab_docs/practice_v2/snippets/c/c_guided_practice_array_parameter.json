@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Arrays Passed to Functions",
+    "language": "c",
+    "description": "An array argument is passed as a pointer to its first element, so a function can change the caller's array. Pass the length as a separate argument.",
+    "ghostCode": "#include <stdio.h>\n\nvoid double_all(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        a[i] *= 2;\n    }\n}\n\nint main() {\n    int values[] = {1, 2, 3, 4};\n    double_all(values, 4);\n    for (int i = 0; i < 4; i++) {\n        printf(\"%d \", values[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 4 6 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

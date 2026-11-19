@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Lookup Instead of Ten Comparisons",
+    "language": "java",
+    "problemDescription": "Ten separate comparisons check whether a letter is a vowel, upper and lower case. Write an isVowel helper that lower-cases the letter and looks it up. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String s = \"Programming Language\";\n        int count = 0;\n        for (int i = 0; i < s.length(); i++) {\n            char c = s.charAt(i);\n            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'\n                    || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {\n                count++;\n            }\n        }\n        System.out.println(count);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isVowel(char c) {\n        return \"aeiou\".indexOf(Character.toLowerCase(c)) >= 0;\n    }\n\n    public static void main(String[] args) {\n        String s = \"Programming Language\";\n        int count = 0;\n        for (char c : s.toCharArray()) {\n            if (isVowel(c)) {\n                count++;\n            }\n        }\n        System.out.println(count);\n    }\n}",
+      "explanation": "The set of vowels is written once, lower-casing removes the duplicate upper-case comparisons, and the helper gives the idea a name."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

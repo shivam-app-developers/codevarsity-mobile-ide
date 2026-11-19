@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Remove Needless Aliases",
+    "language": "c",
+    "problemDescription": "Two pointers to the same variable are used to do simple arithmetic. Rewrite it with the variable itself. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int total = 10;\n    int *p = &total;\n    int *q = p;\n    *q = *q + 5;\n    *p = *p * 2;\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int total = 10;\n    total = (total + 5) * 2;\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+      "explanation": "Pointers are for sharing or changing data across functions, not for simple arithmetic in one place. Every extra alias makes the reader track which name changes what."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Other Items Do Not Cancel the Candidate",
+    "language": "javascript",
+    "problemDescription": "The majority element of 1, 2, 2 is 2, but the program prints 1.",
+    "buggyCode": "function majority(nums) {\n  var candidate = null;\n  var count = 0;\n  nums.forEach(function (n) {\n    if (count === 0) {\n      candidate = n;\n    }\n    count += n === candidate ? 1 : 0;\n  });\n  return candidate;\n}\n\nconsole.log(majority([1, 2, 2]));",
+    "solution": {
+      "code": "function majority(nums) {\n  var candidate = null;\n  var count = 0;\n  nums.forEach(function (n) {\n    if (count === 0) {\n      candidate = n;\n    }\n    count += n === candidate ? 1 : -1;\n  });\n  return candidate;\n}\n\nconsole.log(majority([1, 2, 2]));",
+      "explanation": "Each different item must cancel one vote of the candidate (subtract 1). If it adds 0, the candidate is never replaced, and the first item stays the answer."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

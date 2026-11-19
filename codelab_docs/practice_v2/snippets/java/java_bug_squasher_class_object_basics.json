@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Constructor Assigns the Parameter to Itself",
+    "language": "java",
+    "problemDescription": "The book should print Java Basics: 350 pages, but the program prints 0 pages.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Book book = new Book(\"Java Basics\", 350);\n        System.out.println(book.title + \": \" + book.pages + \" pages\");\n    }\n}\n\nclass Book {\n    String title;\n    int pages;\n\n    Book(String title, int pages) {\n        this.title = title;\n        pages = pages;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Book book = new Book(\"Java Basics\", 350);\n        System.out.println(book.title + \": \" + book.pages + \" pages\");\n    }\n}\n\nclass Book {\n    String title;\n    int pages;\n\n    Book(String title, int pages) {\n        this.title = title;\n        this.pages = pages;\n    }\n}",
+      "explanation": "Inside the constructor the name pages refers to the parameter, which hides the field of the same name. pages = pages assigns the parameter to itself and the field keeps its default value 0. this.pages names the field."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Java Basics: 350 pages\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

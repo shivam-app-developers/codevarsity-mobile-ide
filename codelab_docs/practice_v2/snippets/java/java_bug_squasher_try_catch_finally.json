@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Wrong Exception Type Is Caught",
+    "language": "java",
+    "problemDescription": "parse(\"4x2\") should print Not a number: 4x2 and return -1, but the program crashes with a NumberFormatException.",
+    "buggyCode": "public class Main {\n    static int parse(String text) {\n        try {\n            return Integer.parseInt(text);\n        } catch (ArithmeticException e) {\n            System.out.println(\"Not a number: \" + text);\n            return -1;\n        } finally {\n            System.out.println(\"Done parsing \" + text);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\"));\n        System.out.println(parse(\"4x2\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int parse(String text) {\n        try {\n            return Integer.parseInt(text);\n        } catch (NumberFormatException e) {\n            System.out.println(\"Not a number: \" + text);\n            return -1;\n        } finally {\n            System.out.println(\"Done parsing \" + text);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\"));\n        System.out.println(parse(\"4x2\"));\n    }\n}",
+      "explanation": "A catch block only handles the exception type it names (and its subclasses). parseInt throws NumberFormatException, which is not an ArithmeticException, so it escapes uncaught. Note that finally still ran before the crash."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Done parsing 42[ \\t]*\\r?\\n42[ \\t]*\\r?\\nNot a number: 4x2[ \\t]*\\r?\\nDone parsing 4x2[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

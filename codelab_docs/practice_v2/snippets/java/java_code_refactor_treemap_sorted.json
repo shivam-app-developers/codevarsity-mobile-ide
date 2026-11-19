@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Let a TreeMap Do the Sorting",
+    "language": "java",
+    "problemDescription": "The keys of a HashMap are copied into a list, sorted and looked up one by one. Use a TreeMap, which is already sorted. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> stock = new HashMap<>();\n        stock.put(\"pear\", 4);\n        stock.put(\"apple\", 10);\n        stock.put(\"mango\", 7);\n        List<String> keys = new ArrayList<>(stock.keySet());\n        Collections.sort(keys);\n        for (String k : keys) {\n            System.out.println(k + \"=\" + stock.get(k));\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> stock = new TreeMap<>();\n        stock.put(\"pear\", 4);\n        stock.put(\"apple\", 10);\n        stock.put(\"mango\", 7);\n        for (Map.Entry<String, Integer> e : stock.entrySet()) {\n            System.out.println(e.getKey() + \"=\" + e.getValue());\n        }\n    }\n}",
+      "explanation": "A TreeMap is always iterated in key order, so the copy, the sort and the extra get call per key disappear. (A HashMap has no guaranteed order at all.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apple=10[ \\t]*\\r?\\nmango=7[ \\t]*\\r?\\npear=4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

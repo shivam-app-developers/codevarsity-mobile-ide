@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: toString(2) Instead of Dividing by Hand",
+    "language": "javascript",
+    "problemDescription": "A loop divides by 2 and builds the binary text one bit at a time. Use toString(2). The output must stay the same.",
+    "initialCode": "var n = 37;\nvar bits = \"\";\nwhile (n > 0) {\n  bits = (n % 2) + bits;\n  n = Math.floor(n / 2);\n}\nconsole.log(bits);",
+    "solution": {
+      "code": "console.log((37).toString(2));",
+      "explanation": "The standard method is shorter and handles 0 (the loop prints an empty text for it) and every base from 2 to 36."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*100101\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

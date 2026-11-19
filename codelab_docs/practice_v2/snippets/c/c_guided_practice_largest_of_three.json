@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Largest of Three Numbers",
+    "language": "c",
+    "description": "Find the biggest of three numbers by keeping the largest seen so far and comparing it with each of the others.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a = 14, b = 27, c = 9;\n    int largest = a;\n    if (b > largest) {\n        largest = b;\n    }\n    if (c > largest) {\n        largest = c;\n    }\n    printf(\"Largest: %d\\n\", largest);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Largest: 27\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

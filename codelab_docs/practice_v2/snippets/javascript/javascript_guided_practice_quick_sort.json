@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Quick Sort",
+    "language": "javascript",
+    "description": "Pick a pivot, put the smaller items on its left and the others on its right, and sort both sides recursively.",
+    "ghostCode": "function quickSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var pivot = a[0];\n  var rest = a.slice(1);\n  var smaller = rest.filter(function (x) {\n    return x < pivot;\n  });\n  var larger = rest.filter(function (x) {\n    return x >= pivot;\n  });\n  return quickSort(smaller).concat([pivot], quickSort(larger));\n}\n\nconsole.log(quickSort([10, 7, 8, 9, 1, 5]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,5,7,8,9,10\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

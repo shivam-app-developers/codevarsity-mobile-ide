@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: XOR Instead of Searching for Every Number",
+    "language": "java",
+    "problemDescription": "Each candidate number is searched in the whole array with a nested loop. Use XOR: values that appear twice cancel out, leaving the missing number. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {1, 4, 0, 2};\n        for (int v = 0; v <= a.length; v++) {\n            boolean found = false;\n            for (int x : a) {\n                if (x == v) {\n                    found = true;\n                }\n            }\n            if (!found) {\n                System.out.println(v);\n            }\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {1, 4, 0, 2};\n        int result = a.length;\n        for (int i = 0; i < a.length; i++) {\n            result ^= i ^ a[i];\n        }\n        System.out.println(result);\n    }\n}",
+      "explanation": "x ^ x is 0 and x ^ 0 is x. XOR-ing every index and every value (plus n) cancels each present number twice and leaves the missing one. It needs one pass and no overflow-prone sums."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

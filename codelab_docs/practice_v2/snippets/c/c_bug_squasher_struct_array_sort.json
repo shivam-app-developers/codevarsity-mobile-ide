@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Scores Move but Names Stay",
+    "language": "c",
+    "problemDescription": "Tigers have the most points (30), but the table shows Lions in first place with 30.",
+    "buggyCode": "#include <stdio.h>\n\nstruct Team {\n    const char *name;\n    int points;\n};\n\nint main() {\n    struct Team t[] = {{\"Lions\", 12}, {\"Tigers\", 30}, {\"Bears\", 21}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2 - i; j++) {\n            if (t[j].points < t[j + 1].points) {\n                int temp = t[j].points;\n                t[j].points = t[j + 1].points;\n                t[j + 1].points = temp;\n            }\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s %d\\n\", t[i].name, t[i].points);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Team {\n    const char *name;\n    int points;\n};\n\nint main() {\n    struct Team t[] = {{\"Lions\", 12}, {\"Tigers\", 30}, {\"Bears\", 21}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2 - i; j++) {\n            if (t[j].points < t[j + 1].points) {\n                struct Team temp = t[j];\n                t[j] = t[j + 1];\n                t[j + 1] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s %d\\n\", t[i].name, t[i].points);\n    }\n    return 0;\n}",
+      "explanation": "Swapping only the points leaves every name where it was, so the names no longer match their scores. Swap the whole struct (t[j] with t[j + 1]) so all fields travel together."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Tigers 30[ \\t]*\\r?\\nBears 21[ \\t]*\\r?\\nLions 12\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

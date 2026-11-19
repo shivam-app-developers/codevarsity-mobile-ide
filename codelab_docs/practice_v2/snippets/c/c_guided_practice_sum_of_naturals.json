@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sum of First N Numbers",
+    "language": "c",
+    "description": "Add the numbers 1 to N with a loop, then compare with the formula N * (N + 1) / 2.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 100;\n    int sum = 0;\n    for (int i = 1; i <= n; i++) {\n        sum += i;\n    }\n    printf(\"Loop: %d\\n\", sum);\n    printf(\"Formula: %d\\n\", n * (n + 1) / 2);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Loop: 5050[ \\t]*\\r?\\nFormula: 5050\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

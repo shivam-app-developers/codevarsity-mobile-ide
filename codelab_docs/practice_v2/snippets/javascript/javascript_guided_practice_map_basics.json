@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Map",
+    "language": "javascript",
+    "description": "A Map stores key/value pairs with any kind of key, remembers insertion order and knows its size. Use set, get and has instead of property syntax.",
+    "ghostCode": "var ages = new Map();\nages.set(\"Asha\", 30);\nages.set(\"Ravi\", 25);\nages.set(\"Asha\", 31);\nconsole.log(ages.get(\"Asha\"));\nconsole.log(ages.size);\nconsole.log(ages.has(\"Meena\"));\nages.forEach(function (value, key) {\n  console.log(key + \"=\" + value);\n});",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*31[ \\t]*\\r?\\n2[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\nAsha=31[ \\t]*\\r?\\nRavi=25\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

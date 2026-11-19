@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Maximum Subarray (Kadane)",
+    "language": "javascript",
+    "description": "At each number choose between extending the current run and starting a new one, and keep the best run seen so far.",
+    "ghostCode": "function maxSubarray(nums) {\n  var best = nums[0];\n  var current = nums[0];\n  for (var i = 1; i < nums.length; i++) {\n    current = Math.max(nums[i], current + nums[i]);\n    best = Math.max(best, current);\n  }\n  return best;\n}\n\nconsole.log(maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));\nconsole.log(maxSubarray([-4, -1, -8]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

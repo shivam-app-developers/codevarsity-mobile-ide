@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Whole Balance Cannot Be Withdrawn",
+    "language": "java",
+    "problemDescription": "Withdrawing the full balance of 100 should leave 0, but the balance stays at 100.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        BankAccount account = new BankAccount(100);\n        account.withdraw(100);\n        System.out.println(\"Balance: \" + account.getBalance());\n    }\n}\n\nclass BankAccount {\n    private int balance;\n\n    BankAccount(int opening) {\n        balance = opening;\n    }\n\n    void withdraw(int amount) {\n        if (amount > 0 && amount < balance) {\n            balance -= amount;\n        }\n    }\n\n    int getBalance() {\n        return balance;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        BankAccount account = new BankAccount(100);\n        account.withdraw(100);\n        System.out.println(\"Balance: \" + account.getBalance());\n    }\n}\n\nclass BankAccount {\n    private int balance;\n\n    BankAccount(int opening) {\n        balance = opening;\n    }\n\n    void withdraw(int amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n        }\n    }\n\n    int getBalance() {\n        return balance;\n    }\n}",
+      "explanation": "Taking out exactly the amount that is available is allowed, so the check must accept equality: amount <= balance. With < the withdrawal of the full balance is silently refused."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Balance: 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

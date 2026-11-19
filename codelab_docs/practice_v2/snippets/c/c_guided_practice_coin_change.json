@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Minimum Coin Change",
+    "language": "c",
+    "description": "Dynamic programming: dp[a] is the fewest coins that make amount a. Try every coin as the last one and keep the best.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int coins[] = {1, 3, 4};\n    int amount = 6;\n    int dp[7];\n    dp[0] = 0;\n    for (int a = 1; a <= amount; a++) {\n        dp[a] = 1000;\n        for (int c = 0; c < 3; c++) {\n            if (coins[c] <= a && dp[a - coins[c]] + 1 < dp[a]) {\n                dp[a] = dp[a - coins[c]] + 1;\n            }\n        }\n    }\n    printf(\"Minimum coins for %d: %d\\n\", amount, dp[amount]);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Minimum coins for 6: 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

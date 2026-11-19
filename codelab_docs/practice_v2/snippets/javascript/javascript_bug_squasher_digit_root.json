@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only One Round of Adding",
+    "language": "javascript",
+    "problemDescription": "The digital root of 9875 is 2, but the program prints 29.",
+    "buggyCode": "function digitRoot(n) {\n  if (n >= 10) {\n    var sum = 0;\n    while (n > 0) {\n      sum += n % 10;\n      n = Math.floor(n / 10);\n    }\n    n = sum;\n  }\n  return n;\n}\n\nconsole.log(digitRoot(9875));",
+    "solution": {
+      "code": "function digitRoot(n) {\n  while (n >= 10) {\n    var sum = 0;\n    while (n > 0) {\n      sum += n % 10;\n      n = Math.floor(n / 10);\n    }\n    n = sum;\n  }\n  return n;\n}\n\nconsole.log(digitRoot(9875));",
+      "explanation": "One round of adding is not always enough: 9875 gives 29, which still has two digits. The outer loop must repeat until the number is below 10, which an if cannot do."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

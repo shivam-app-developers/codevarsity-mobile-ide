@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: filter Instead of a Loop with an if",
+    "language": "javascript",
+    "problemDescription": "A loop with an if collects the even numbers. Use filter. The output must stay the same.",
+    "initialCode": "var numbers = [1, 2, 3, 4, 5, 6];\nvar evens = [];\nfor (var i = 0; i < numbers.length; i++) {\n  if (numbers[i] % 2 === 0) {\n    evens.push(numbers[i]);\n  }\n}\nconsole.log(evens);",
+    "solution": {
+      "code": "var numbers = [1, 2, 3, 4, 5, 6];\nvar evens = numbers.filter(function (n) {\n  return n % 2 === 0;\n});\nconsole.log(evens);",
+      "explanation": "filter states the rule (keep the even ones) in one place and builds the result array itself."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,4,6\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

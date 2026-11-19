@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Early Return Instead of a Result Variable",
+    "language": "javascript",
+    "problemDescription": "A result variable is set in both branches of an if / else and returned at the end, with extra temporary variables. Return early instead. The output must stay the same.",
+    "initialCode": "function truncate(text, max) {\n  var result;\n  if (text.length > max) {\n    var cut = max - 3;\n    var part = text.substring(0, cut);\n    result = part + \"...\";\n  } else {\n    result = text;\n  }\n  return result;\n}\n\nconsole.log(truncate(\"Hello, world\", 20));\nconsole.log(truncate(\"The quick brown fox\", 10));",
+    "solution": {
+      "code": "function truncate(text, max) {\n  if (text.length <= max) {\n    return text;\n  }\n  return text.slice(0, max - 3) + \"...\";\n}\n\nconsole.log(truncate(\"Hello, world\", 20));\nconsole.log(truncate(\"The quick brown fox\", 10));",
+      "explanation": "Returning as soon as the answer is known removes the result variable and the else branch, and the temporary variables that were used once."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, world[ \\t]*\\r?\\nThe qui\\.\\.\\.\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

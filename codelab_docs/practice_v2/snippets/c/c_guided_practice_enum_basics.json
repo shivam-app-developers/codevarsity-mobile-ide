@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Enums with Explicit Values",
+    "language": "c",
+    "description": "An enum gives names to integer constants. Values count up from 0 unless you set them yourself.",
+    "ghostCode": "#include <stdio.h>\n\nenum Day { MON, TUE, WED, THU, FRI, SAT, SUN };\n\nint main() {\n    enum Day today = WED;\n    printf(\"Day number: %d\\n\", today);\n    if (today == SAT || today == SUN) {\n        printf(\"Weekend\\n\");\n    } else {\n        printf(\"Weekday\\n\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Day number: 2[ \\t]*\\r?\\nWeekday\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

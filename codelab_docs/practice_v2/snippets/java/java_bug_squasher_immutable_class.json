@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Changing a final Field",
+    "language": "java",
+    "problemDescription": "The program does not compile: plus tries to change a field that was declared final.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Money a = new Money(100, \"INR\");\n        Money b = a.plus(50);\n        System.out.println(a + \" / \" + b);\n    }\n}\n\nfinal class Money {\n    private final int amount;\n    private final String currency;\n\n    Money(int amount, String currency) {\n        this.amount = amount;\n        this.currency = currency;\n    }\n\n    Money plus(int extra) {\n        amount += extra;\n        return this;\n    }\n\n    @Override\n    public String toString() {\n        return amount + \" \" + currency;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Money a = new Money(100, \"INR\");\n        Money b = a.plus(50);\n        System.out.println(a + \" / \" + b);\n    }\n}\n\nfinal class Money {\n    private final int amount;\n    private final String currency;\n\n    Money(int amount, String currency) {\n        this.amount = amount;\n        this.currency = currency;\n    }\n\n    Money plus(int extra) {\n        return new Money(amount + extra, currency);\n    }\n\n    @Override\n    public String toString() {\n        return amount + \" \" + currency;\n    }\n}",
+      "explanation": "A final field can be assigned only once, in the constructor, so amount += extra is rejected by the compiler. To get a different amount, create a new Money. That is what makes the class immutable and safe to share."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*100 INR \\/ 150 INR\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

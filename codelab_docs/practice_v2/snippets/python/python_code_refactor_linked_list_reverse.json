@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Relink Pointers Instead of Copying Values",
+    "language": "python",
+    "problemDescription": "The values are copied into a list and written back in reverse order. Reverse the list by changing the next pointers instead. The output must stay the same.",
+    "initialCode": "class Node:\n    def __init__(self, value, next=None):\n        self.value = value\n        self.next = next\n\n\nhead = Node(1, Node(2, Node(3, Node(4))))\nvalues = []\nnode = head\nwhile node is not None:\n    values.append(node.value)\n    node = node.next\nnode = head\nfor value in reversed(values):\n    node.value = value\n    node = node.next\nout = []\nnode = head\nwhile node is not None:\n    out.append(node.value)\n    node = node.next\nprint(out)",
+    "solution": {
+      "code": "class Node:\n    def __init__(self, value, next=None):\n        self.value = value\n        self.next = next\n\n\ndef reverse(head):\n    prev = None\n    while head is not None:\n        nxt = head.next\n        head.next = prev\n        prev = head\n        head = nxt\n    return prev\n\n\nnode = reverse(Node(1, Node(2, Node(3, Node(4)))))\nout = []\nwhile node is not None:\n    out.append(node.value)\n    node = node.next\nprint(out)",
+      "explanation": "Relinking uses three pointers and no extra memory, while the copy needs space proportional to the list length. It is also the answer interviewers expect."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[4, 3, 2, 1\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

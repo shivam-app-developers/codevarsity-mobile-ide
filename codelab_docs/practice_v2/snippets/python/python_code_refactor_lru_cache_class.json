@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: OrderedDict Instead of a Dict plus an Order List",
+    "language": "python",
+    "problemDescription": "A dictionary stores the values and a separate list tracks the order of use, which has to be kept in step by hand. Use one OrderedDict. The output must stay the same.",
+    "initialCode": "data = {}\norder = []\n\n\ndef use(key):\n    if key in order:\n        order.remove(key)\n    order.append(key)\n\n\ndef put(key, value, capacity):\n    data[key] = value\n    use(key)\n    if len(order) > capacity:\n        oldest = order.pop(0)\n        del data[oldest]\n\n\nput(\"a\", 1, 2)\nput(\"b\", 2, 2)\nuse(\"a\")\nput(\"c\", 3, 2)\nprint(order)",
+    "solution": {
+      "code": "from collections import OrderedDict\n\ncache = OrderedDict()\n\n\ndef put(key, value, capacity):\n    cache[key] = value\n    cache.move_to_end(key)\n    if len(cache) > capacity:\n        cache.popitem(last=False)\n\n\nput(\"a\", 1, 2)\nput(\"b\", 2, 2)\ncache.move_to_end(\"a\")\nput(\"c\", 3, 2)\nprint(list(cache))",
+      "explanation": "One structure holds both the values and their order, so the two can never get out of step, and move_to_end and popitem do the list juggling."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['a', 'c'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

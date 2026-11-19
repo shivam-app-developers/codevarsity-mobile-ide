@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A once Wrapper Instead of a Global Flag",
+    "language": "javascript",
+    "problemDescription": "A global flag guards the function so it prints only once. Wrap the function with a reusable once helper instead. The output must stay the same.",
+    "initialCode": "var started = false;\n\nfunction start() {\n  if (started) {\n    return;\n  }\n  started = true;\n  console.log(\"started\");\n}\n\nstart();\nstart();\nstart();",
+    "solution": {
+      "code": "function once(fn) {\n  var called = false;\n  var result;\n  return function () {\n    if (!called) {\n      called = true;\n      result = fn.apply(this, arguments);\n    }\n    return result;\n  };\n}\n\nvar start = once(function () {\n  console.log(\"started\");\n});\n\nstart();\nstart();\nstart();",
+      "explanation": "The guard logic is written once and can protect any function, and the flag is private instead of a global that other code could reset."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*started\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

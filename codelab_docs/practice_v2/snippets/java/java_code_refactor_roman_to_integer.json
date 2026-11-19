@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Lookup Table Instead of an if-Chain",
+    "language": "java",
+    "problemDescription": "A long if / else-if chain returns the value of each symbol. Use two parallel tables: a string of symbols and an array of values. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int value(char c) {\n        if (c == 'I') {\n            return 1;\n        } else if (c == 'V') {\n            return 5;\n        } else if (c == 'X') {\n            return 10;\n        } else if (c == 'L') {\n            return 50;\n        } else if (c == 'C') {\n            return 100;\n        } else if (c == 'D') {\n            return 500;\n        } else if (c == 'M') {\n            return 1000;\n        }\n        return 0;\n    }\n\n    public static void main(String[] args) {\n        String numeral = \"XLII\";\n        int total = 0;\n        for (int i = 0; i < numeral.length(); i++) {\n            int current = value(numeral.charAt(i));\n            if (i + 1 < numeral.length() && current < value(numeral.charAt(i + 1))) {\n                total -= current;\n            } else {\n                total += current;\n            }\n        }\n        System.out.println(total);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int value(char c) {\n        int[] values = {1, 5, 10, 50, 100, 500, 1000};\n        return values[\"IVXLCDM\".indexOf(c)];\n    }\n\n    public static void main(String[] args) {\n        String numeral = \"XLII\";\n        int total = 0;\n        for (int i = 0; i < numeral.length(); i++) {\n            int current = value(numeral.charAt(i));\n            if (i + 1 < numeral.length() && current < value(numeral.charAt(i + 1))) {\n                total -= current;\n            } else {\n                total += current;\n            }\n        }\n        System.out.println(total);\n    }\n}",
+      "explanation": "Data in a table replaces a chain of seven near-identical branches, and the symbol and its value sit at the same index. (This version assumes the input holds only valid Roman letters.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

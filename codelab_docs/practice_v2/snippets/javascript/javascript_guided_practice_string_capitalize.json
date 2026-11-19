@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Capitalize Each Word",
+    "language": "javascript",
+    "description": "Split the sentence into words, capitalise the first letter of each with charAt and slice, and join the words back together.",
+    "ghostCode": "function capitalize(sentence) {\n  return sentence\n    .split(\" \")\n    .map(function (word) {\n      return word.charAt(0).toUpperCase() + word.slice(1);\n    })\n    .join(\" \");\n}\n\nconsole.log(capitalize(\"learn to code every day\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Learn To Code Every Day\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

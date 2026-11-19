@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: map and parseInt",
+    "language": "javascript",
+    "description": "map passes the value, the index and the array to its callback. Number ignores the extra arguments, so it is safe to pass directly; parseInt is not.",
+    "ghostCode": "var strings = [\"1\", \"2\", \"3\"];\nconsole.log(strings.map(Number));\nconsole.log(strings.map(function (s) {\n  return parseInt(s, 10);\n}));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3\\][ \\t]*\\r?\\n\\[1,2,3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

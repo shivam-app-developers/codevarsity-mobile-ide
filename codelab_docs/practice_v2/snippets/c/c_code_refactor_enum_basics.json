@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Name the Magic Numbers with an Enum",
+    "language": "c",
+    "problemDescription": "The numbers 0, 1 and 2 stand for machine states. Give them names with an enum and use a switch. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int state = 2;\n    if (state == 0) {\n        printf(\"Idle\\n\");\n    } else if (state == 1) {\n        printf(\"Running\\n\");\n    } else if (state == 2) {\n        printf(\"Stopped\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nenum State { IDLE, RUNNING, STOPPED };\n\nint main() {\n    enum State state = STOPPED;\n    switch (state) {\n        case IDLE:\n            printf(\"Idle\\n\");\n            break;\n        case RUNNING:\n            printf(\"Running\\n\");\n            break;\n        case STOPPED:\n            printf(\"Stopped\\n\");\n            break;\n    }\n    return 0;\n}",
+      "explanation": "STOPPED is readable where 2 is a mystery, and a typo in an enum name is a compile error while a wrong number is silently accepted."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Stopped\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

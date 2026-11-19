@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: FizzBuzz",
+    "language": "java",
+    "description": "The classic warm-up question: print 1 to 15, but Fizz for multiples of 3, Buzz for multiples of 5 and FizzBuzz for both.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 15; i++) {\n            if (i % 15 == 0) {\n                System.out.println(\"FizzBuzz\");\n            } else if (i % 3 == 0) {\n                System.out.println(\"Fizz\");\n            } else if (i % 5 == 0) {\n                System.out.println(\"Buzz\");\n            } else {\n                System.out.println(i);\n            }\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n4[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n7[ \\t]*\\r?\\n8[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\n11[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n13[ \\t]*\\r?\\n14[ \\t]*\\r?\\nFizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

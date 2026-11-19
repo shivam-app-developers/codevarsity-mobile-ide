@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Leftover Elements Are Lost",
+    "language": "c",
+    "problemDescription": "Merging 1 5 8 with 2 3 4 20 30 should end with 20 30, but the program prints zeros in those places.",
+    "buggyCode": "#include <stdio.h>\n\nvoid merge(const int a[], int n, const int b[], int m, int out[]) {\n    int i = 0, j = 0, k = 0;\n    while (i < n && j < m) {\n        out[k++] = a[i] <= b[j] ? a[i++] : b[j++];\n    }\n}\n\nint main() {\n    int a[] = {1, 5, 8};\n    int b[] = {2, 3, 4, 20, 30};\n    int out[8] = {0};\n    merge(a, 3, b, 5, out);\n    for (int i = 0; i < 8; i++) printf(\"%d \", out[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid merge(const int a[], int n, const int b[], int m, int out[]) {\n    int i = 0, j = 0, k = 0;\n    while (i < n && j < m) {\n        out[k++] = a[i] <= b[j] ? a[i++] : b[j++];\n    }\n    while (i < n) out[k++] = a[i++];\n    while (j < m) out[k++] = b[j++];\n}\n\nint main() {\n    int a[] = {1, 5, 8};\n    int b[] = {2, 3, 4, 20, 30};\n    int out[8] = {0};\n    merge(a, 3, b, 5, out);\n    for (int i = 0; i < 8; i++) printf(\"%d \", out[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "The main loop stops as soon as one array runs out, and the other array may still hold elements. Those leftovers are already sorted, so each array needs its own loop that copies the remainder."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4 5 8 20 30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

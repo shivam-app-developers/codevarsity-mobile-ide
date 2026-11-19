@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Immutable Range with a shift Method",
+    "language": "java",
+    "problemDescription": "A Range with public mutable fields is filled in by hand and shifted by copying the fields. Make it immutable: final fields, a constructor, a shift method that returns a new Range, and toString. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Range r = new Range();\n        r.low = 3;\n        r.high = 9;\n        Range shifted = new Range();\n        shifted.low = r.low + 10;\n        shifted.high = r.high + 10;\n        System.out.println(r.low + \"..\" + r.high);\n        System.out.println(shifted.low + \"..\" + shifted.high);\n    }\n}\n\nclass Range {\n    int low;\n    int high;\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Range r = new Range(3, 9);\n        Range shifted = r.shift(10);\n        System.out.println(r);\n        System.out.println(shifted);\n    }\n}\n\nfinal class Range {\n    private final int low;\n    private final int high;\n\n    Range(int low, int high) {\n        this.low = low;\n        this.high = high;\n    }\n\n    Range shift(int by) {\n        return new Range(low + by, high + by);\n    }\n\n    @Override\n    public String toString() {\n        return low + \"..\" + high;\n    }\n}",
+      "explanation": "Immutable objects can be shared freely, because nobody can change them behind your back. The shift method expresses the intent, and the original range is guaranteed to be unchanged."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\.\\.9[ \\t]*\\r?\\n13\\.\\.19\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

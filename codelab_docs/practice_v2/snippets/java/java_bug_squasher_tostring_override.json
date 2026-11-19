@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: toString Is Not Public",
+    "language": "java",
+    "problemDescription": "The program does not compile: the toString method is declared without public.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Book b = new Book(\"Clean Code\");\n        System.out.println(b);\n    }\n}\n\nclass Book {\n    private final String title;\n\n    Book(String title) {\n        this.title = title;\n    }\n\n    @Override\n    String toString() {\n        return \"Book: \" + title;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Book b = new Book(\"Clean Code\");\n        System.out.println(b);\n    }\n}\n\nclass Book {\n    private final String title;\n\n    Book(String title) {\n        this.title = title;\n    }\n\n    @Override\n    public String toString() {\n        return \"Book: \" + title;\n    }\n}",
+      "explanation": "toString is declared public in Object, and an overriding method may not reduce visibility. Without public the class does not compile; with it, println can print the object as text."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Book: Clean Code\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

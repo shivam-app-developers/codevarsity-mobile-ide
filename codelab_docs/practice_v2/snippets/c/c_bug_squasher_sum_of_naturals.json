@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Sum Starts at the Wrong Value",
+    "language": "c",
+    "problemDescription": "The sum of 1 to 10 should be 55, but the program prints 56.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int sum = 1;\n    for (int i = 1; i <= 10; i++) {\n        sum += i;\n    }\n    printf(\"Sum = %d\\n\", sum);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int sum = 0;\n    for (int i = 1; i <= 10; i++) {\n        sum += i;\n    }\n    printf(\"Sum = %d\\n\", sum);\n    return 0;\n}",
+      "explanation": "The accumulator must start at 0, the neutral value for addition. Starting at 1 adds an extra 1 to the final answer."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Sum = 55\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

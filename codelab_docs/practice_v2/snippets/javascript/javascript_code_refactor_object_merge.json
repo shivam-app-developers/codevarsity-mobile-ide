@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Object.assign Instead of Checking Each Option",
+    "language": "javascript",
+    "problemDescription": "Each option is checked for undefined one by one. Use a defaults object and Object.assign. The output must stay the same.",
+    "initialCode": "function makeConfig(options) {\n  var config = {};\n  config.color = options.color !== undefined ? options.color : \"blue\";\n  config.size = options.size !== undefined ? options.size : \"M\";\n  config.count = options.count !== undefined ? options.count : 1;\n  return config;\n}\n\nconsole.log(makeConfig({ size: \"L\", count: 5 }));",
+    "solution": {
+      "code": "function makeConfig(options) {\n  var defaults = { color: \"blue\", size: \"M\", count: 1 };\n  return Object.assign({}, defaults, options);\n}\n\nconsole.log(makeConfig({ size: \"L\", count: 5 }));",
+      "explanation": "The defaults are listed once as data. Adding a new setting means adding one line to the defaults, not another conditional expression."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"color\":\"blue\",\"size\":\"L\",\"count\":5\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

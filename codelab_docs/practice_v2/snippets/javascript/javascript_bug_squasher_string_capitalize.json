@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The First Letter Appears Twice",
+    "language": "javascript",
+    "problemDescription": "hello big world should become Hello Big World, but the program prints Hhello Bbig Wworld.",
+    "buggyCode": "function capitalize(sentence) {\n  return sentence\n    .split(\" \")\n    .map(function (word) {\n      return word.charAt(0).toUpperCase() + word.slice(0);\n    })\n    .join(\" \");\n}\n\nconsole.log(capitalize(\"hello big world\"));",
+    "solution": {
+      "code": "function capitalize(sentence) {\n  return sentence\n    .split(\" \")\n    .map(function (word) {\n      return word.charAt(0).toUpperCase() + word.slice(1);\n    })\n    .join(\" \");\n}\n\nconsole.log(capitalize(\"hello big world\"));",
+      "explanation": "The capital letter replaces the first letter, so the rest of the word must start from index 1. slice(0) returns the whole word again, including its first letter."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello Big World\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

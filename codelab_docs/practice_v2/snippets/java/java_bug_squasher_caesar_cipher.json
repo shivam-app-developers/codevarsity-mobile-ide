@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: No Wrap-Around at the End of the Alphabet",
+    "language": "java",
+    "problemDescription": "Shifting xyz by 3 should give abc, but the program prints the symbols {|}.",
+    "buggyCode": "public class Main {\n    static String encrypt(String text, int shift) {\n        StringBuilder sb = new StringBuilder();\n        for (char c : text.toCharArray()) {\n            if (Character.isLowerCase(c)) {\n                sb.append((char) ('a' + (c - 'a' + shift)));\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(encrypt(\"xyz\", 3));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String encrypt(String text, int shift) {\n        StringBuilder sb = new StringBuilder();\n        for (char c : text.toCharArray()) {\n            if (Character.isLowerCase(c)) {\n                sb.append((char) ('a' + (c - 'a' + shift) % 26));\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(encrypt(\"xyz\", 3));\n    }\n}",
+      "explanation": "Adding the shift to a letter near the end of the alphabet goes past 'z' into other characters. The % 26 brings the offset back into the range 0 to 25 so the alphabet wraps around."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abc\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

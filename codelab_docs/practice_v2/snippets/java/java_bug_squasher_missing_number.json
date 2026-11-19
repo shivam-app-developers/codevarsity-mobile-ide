@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Expected Sum Overflows",
+    "language": "java",
+    "problemDescription": "For the numbers 0 to 100000 with 77777 missing, the program should print 77777 but prints -4294889519.",
+    "buggyCode": "public class Main {\n    static long missing(int[] a) {\n        int n = a.length;\n        long expected = n * (n + 1) / 2;\n        long actual = 0;\n        for (int x : a) {\n            actual += x;\n        }\n        return expected - actual;\n    }\n\n    public static void main(String[] args) {\n        int[] a = new int[100000];\n        int index = 0;\n        for (int v = 0; v <= 100000; v++) {\n            if (v != 77777) {\n                a[index++] = v;\n            }\n        }\n        System.out.println(missing(a));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static long missing(int[] a) {\n        int n = a.length;\n        long expected = (long) n * (n + 1) / 2;\n        long actual = 0;\n        for (int x : a) {\n            actual += x;\n        }\n        return expected - actual;\n    }\n\n    public static void main(String[] args) {\n        int[] a = new int[100000];\n        int index = 0;\n        for (int v = 0; v <= 100000; v++) {\n            if (v != 77777) {\n                a[index++] = v;\n            }\n        }\n        System.out.println(missing(a));\n    }\n}",
+      "explanation": "n * (n + 1) is calculated with ints, and 100000 * 100001 is larger than the biggest int, so it wraps around before the result is widened to long. Casting one operand to long first makes the multiplication use 64 bits."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*77777\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

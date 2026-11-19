@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Middle Class Forgets super",
+    "language": "java",
+    "problemDescription": "The path through three classes should print A>B>C, but the program prints B>C.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(new C().path());\n    }\n}\n\nclass A {\n    String path() {\n        return \"A\";\n    }\n}\n\nclass B extends A {\n    @Override\n    String path() {\n        return \"B\";\n    }\n}\n\nclass C extends B {\n    @Override\n    String path() {\n        return super.path() + \">C\";\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(new C().path());\n    }\n}\n\nclass A {\n    String path() {\n        return \"A\";\n    }\n}\n\nclass B extends A {\n    @Override\n    String path() {\n        return super.path() + \">B\";\n    }\n}\n\nclass C extends B {\n    @Override\n    String path() {\n        return super.path() + \">C\";\n    }\n}",
+      "explanation": "C's super.path() calls B's method, but B no longer calls A's, so the chain is cut and A never contributes. Each override has to call super.path() for the whole chain to be included."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A>B>C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Pass Instead of Sorting",
+    "language": "java",
+    "problemDescription": "The array is sorted and then scanned backwards past duplicates. Find the second largest distinct value in one pass without changing the array. The output must stay the same.",
+    "initialCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {7, 3, 9, 1, 8, 9};\n        Arrays.sort(a);\n        int index = a.length - 2;\n        while (index >= 0 && a[index] == a[a.length - 1]) {\n            index--;\n        }\n        System.out.println(a[index]);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {7, 3, 9, 1, 8, 9};\n        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;\n        for (int x : a) {\n            if (x > first) {\n                second = first;\n                first = x;\n            } else if (x > second && x != first) {\n                second = x;\n            }\n        }\n        System.out.println(second);\n    }\n}",
+      "explanation": "Sorting costs n log n and rearranges the caller's data just to read one value. Two variables find the answer in a single pass and leave the array untouched."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

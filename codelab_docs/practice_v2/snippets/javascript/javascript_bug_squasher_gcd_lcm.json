@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Wrong Variable Is Returned",
+    "language": "javascript",
+    "problemDescription": "The gcd of 48 and 18 is 6, but the program prints 0.",
+    "buggyCode": "function gcd(a, b) {\n  while (b !== 0) {\n    var temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return b;\n}\n\nconsole.log(gcd(48, 18));",
+    "solution": {
+      "code": "function gcd(a, b) {\n  while (b !== 0) {\n    var temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\n\nconsole.log(gcd(48, 18));",
+      "explanation": "The loop ends when b becomes 0, and at that moment a holds the last non-zero remainder, which is the gcd. Returning b returns the 0 that stopped the loop."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

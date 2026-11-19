@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Wrapper Classes and ==",
+    "language": "java",
+    "description": "Integer objects between -128 and 127 are cached, so == can seem to work for small values and fail for big ones. Compare wrapper objects with equals.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Integer a = 127, b = 127;\n        Integer c = 1000, d = 1000;\n        System.out.println(a == b);\n        System.out.println(c == d);\n        System.out.println(c.equals(d));\n        int sum = c + d;\n        System.out.println(sum);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\n2000\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

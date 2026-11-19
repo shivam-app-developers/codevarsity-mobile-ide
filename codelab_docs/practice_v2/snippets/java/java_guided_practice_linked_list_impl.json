@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Build a Linked List",
+    "language": "java",
+    "description": "Each node holds a value and a reference to the next node. addLast walks to the end of the chain and links the new node there.",
+    "ghostCode": "public class Main {\n    static class Node {\n        int value;\n        Node next;\n\n        Node(int value) {\n            this.value = value;\n        }\n    }\n\n    static class LinkedList {\n        private Node head;\n        private int size;\n\n        void addLast(int value) {\n            Node node = new Node(value);\n            if (head == null) {\n                head = node;\n            } else {\n                Node current = head;\n                while (current.next != null) {\n                    current = current.next;\n                }\n                current.next = node;\n            }\n            size++;\n        }\n\n        void print() {\n            StringBuilder sb = new StringBuilder();\n            for (Node n = head; n != null; n = n.next) {\n                sb.append(n.value).append(\" -> \");\n            }\n            System.out.println(sb + \"null (size \" + size + \")\");\n        }\n    }\n\n    public static void main(String[] args) {\n        LinkedList list = new LinkedList();\n        list.addLast(10);\n        list.addLast(20);\n        list.addLast(30);\n        list.print();\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10 -> 20 -> 30 -> null \\(size 3\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Hide the Balance Behind Functions",
+    "language": "javascript",
+    "problemDescription": "The balance is a public property that any code can overwrite, and the rules are repeated at the call site. Wrap it in a closure with deposit and withdraw functions. The output must stay the same.",
+    "initialCode": "var account = { balance: 100 };\naccount.balance = account.balance + 50;\nif (account.balance >= 20) {\n  account.balance = account.balance - 20;\n}\nconsole.log(account.balance);",
+    "solution": {
+      "code": "function createAccount(balance) {\n  return {\n    deposit: function (amount) {\n      balance += amount;\n    },\n    withdraw: function (amount) {\n      if (balance >= amount) {\n        balance -= amount;\n      }\n    },\n    getBalance: function () {\n      return balance;\n    }\n  };\n}\n\nvar account = createAccount(100);\naccount.deposit(50);\naccount.withdraw(20);\nconsole.log(account.getBalance());",
+      "explanation": "Outside code can no longer set the balance to a nonsense value, because the only ways to change it are the deposit and withdraw functions, and the withdrawal rule lives in one place."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*130\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

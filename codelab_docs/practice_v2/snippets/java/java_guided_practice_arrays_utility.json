@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: The Arrays Utility Class",
+    "language": "java",
+    "description": "java.util.Arrays has ready-made helpers: toString, sort, copyOf, binarySearch, equals and fill.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {5, 3, 9, 1};\n        int[] copy = Arrays.copyOf(a, a.length);\n        Arrays.sort(a);\n        System.out.println(Arrays.toString(a));\n        System.out.println(Arrays.toString(copy));\n        System.out.println(Arrays.binarySearch(a, 9));\n        System.out.println(Arrays.equals(a, copy));\n        int[] sevens = new int[3];\n        Arrays.fill(sevens, 7);\n        System.out.println(Arrays.toString(sevens));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 3, 5, 9\\][ \\t]*\\r?\\n\\[5, 3, 9, 1\\][ \\t]*\\r?\\n3[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\n\\[7, 7, 7\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

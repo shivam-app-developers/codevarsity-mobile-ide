@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Variable Arguments",
+    "language": "java",
+    "description": "A parameter declared as int... accepts any number of ints, including none. Inside the method it is an ordinary array.",
+    "ghostCode": "public class Main {\n    static int sum(int... numbers) {\n        int total = 0;\n        for (int n : numbers) {\n            total += n;\n        }\n        return total;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sum());\n        System.out.println(sum(5));\n        System.out.println(sum(1, 2, 3, 4));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0[ \\t]*\\r?\\n5[ \\t]*\\r?\\n10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

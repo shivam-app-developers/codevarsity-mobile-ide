@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse a Linked List",
+    "language": "python",
+    "description": "Walk the list once and turn each next pointer around. Remember the next node before overwriting the pointer, or the rest of the list is lost.",
+    "ghostCode": "class Node:\n    def __init__(self, value, next=None):\n        self.value = value\n        self.next = next\n\n\ndef reverse(head):\n    prev = None\n    while head is not None:\n        nxt = head.next\n        head.next = prev\n        prev = head\n        head = nxt\n    return prev\n\n\nhead = Node(1, Node(2, Node(3, Node(4))))\nnode = reverse(head)\nvalues = []\nwhile node is not None:\n    values.append(node.value)\n    node = node.next\nprint(values)",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[4, 3, 2, 1\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

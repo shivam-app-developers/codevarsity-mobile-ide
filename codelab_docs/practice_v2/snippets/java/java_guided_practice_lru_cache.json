@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: LRU Cache with LinkedHashMap",
+    "language": "java",
+    "description": "A LinkedHashMap in access order moves each read entry to the end. Overriding removeEldestEntry evicts the least recently used entry when the cache is full.",
+    "ghostCode": "import java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class Main {\n    static class LRUCache<K, V> extends LinkedHashMap<K, V> {\n        private final int capacity;\n\n        LRUCache(int capacity) {\n            super(16, 0.75f, true);\n            this.capacity = capacity;\n        }\n\n        @Override\n        protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {\n            return size() > capacity;\n        }\n    }\n\n    public static void main(String[] args) {\n        LRUCache<String, Integer> cache = new LRUCache<>(2);\n        cache.put(\"a\", 1);\n        cache.put(\"b\", 2);\n        cache.get(\"a\");\n        cache.put(\"c\", 3);\n        System.out.println(cache.keySet());\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[a, c\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

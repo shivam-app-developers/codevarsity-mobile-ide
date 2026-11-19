@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: String Length by Hand",
+    "language": "c",
+    "description": "A C string ends with the character '\\0'. Count characters until you reach it.",
+    "ghostCode": "#include <stdio.h>\n\nint length(const char *s) {\n    int n = 0;\n    while (s[n] != '\\0') {\n        n++;\n    }\n    return n;\n}\n\nint main() {\n    printf(\"Length of \\\"CodeVarsity\\\" = %d\\n\", length(\"CodeVarsity\"));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Length of \"CodeVarsity\" = 11\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

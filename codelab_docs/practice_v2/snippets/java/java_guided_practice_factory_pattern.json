@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Factory Pattern",
+    "language": "java",
+    "description": "A factory method creates the right object for a given type name, so callers depend on the interface and never on the concrete classes.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(NotifierFactory.create(\"email\").send(\"Hello\"));\n        System.out.println(NotifierFactory.create(\"sms\").send(\"Hi\"));\n    }\n}\n\ninterface Notifier {\n    String send(String message);\n}\n\nclass EmailNotifier implements Notifier {\n    public String send(String message) {\n        return \"Email: \" + message;\n    }\n}\n\nclass SmsNotifier implements Notifier {\n    public String send(String message) {\n        return \"SMS: \" + message;\n    }\n}\n\nclass NotifierFactory {\n    static Notifier create(String type) {\n        switch (type) {\n            case \"email\":\n                return new EmailNotifier();\n            case \"sms\":\n                return new SmsNotifier();\n            default:\n                throw new IllegalArgumentException(\"Unknown type \" + type);\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Email: Hello[ \\t]*\\r?\\nSMS: Hi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Group Anagrams",
+    "language": "java",
+    "description": "Words that are anagrams have the same letters when sorted. Use the sorted letters as a map key and collect the words in a list per key.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"};\n        Map<String, List<String>> groups = new TreeMap<>();\n        for (String w : words) {\n            char[] letters = w.toCharArray();\n            Arrays.sort(letters);\n            String key = new String(letters);\n            if (!groups.containsKey(key)) {\n                groups.put(key, new ArrayList<>());\n            }\n            groups.get(key).add(w);\n        }\n        for (List<String> group : groups.values()) {\n            System.out.println(group);\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[bat\\][ \\t]*\\r?\\n\\[eat, tea, ate\\][ \\t]*\\r?\\n\\[tan, nat\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

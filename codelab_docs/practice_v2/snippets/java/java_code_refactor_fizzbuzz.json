@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Build the Word from Parts",
+    "language": "java",
+    "problemDescription": "Nested if/else blocks and two boolean variables decide what to print. Build the word from \"Fizz\" and \"Buzz\" pieces and print the number only when the word is empty. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 15; i++) {\n            boolean three = i % 3 == 0;\n            boolean five = i % 5 == 0;\n            if (three && five) {\n                System.out.println(\"FizzBuzz\");\n            } else {\n                if (three) {\n                    System.out.println(\"Fizz\");\n                } else {\n                    if (five) {\n                        System.out.println(\"Buzz\");\n                    } else {\n                        System.out.println(i);\n                    }\n                }\n            }\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 15; i++) {\n            String word = \"\";\n            if (i % 3 == 0) {\n                word += \"Fizz\";\n            }\n            if (i % 5 == 0) {\n                word += \"Buzz\";\n            }\n            System.out.println(word.isEmpty() ? String.valueOf(i) : word);\n        }\n    }\n}",
+      "explanation": "FizzBuzz is simply Fizz followed by Buzz. Building the word from pieces needs no combined case, and a new rule (for example Bazz for 7) is one more if instead of doubling the branches."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n4[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n7[ \\t]*\\r?\\n8[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\n11[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n13[ \\t]*\\r?\\n14[ \\t]*\\r?\\nFizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

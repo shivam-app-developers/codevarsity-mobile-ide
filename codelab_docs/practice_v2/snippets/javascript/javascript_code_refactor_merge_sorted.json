@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Merge in One Pass Instead of Concatenating and Sorting",
+    "language": "javascript",
+    "problemDescription": "The two arrays are joined and sorted again, which ignores that both are already sorted. Merge them with two indexes. The output must stay the same.",
+    "initialCode": "var a = [2, 6, 9];\nvar b = [1, 3, 4, 8];\nvar merged = a.concat(b).sort(function (x, y) {\n  return x - y;\n});\nconsole.log(merged);",
+    "solution": {
+      "code": "var a = [2, 6, 9];\nvar b = [1, 3, 4, 8];\nvar merged = [];\nvar i = 0;\nvar j = 0;\nwhile (i < a.length && j < b.length) {\n  merged.push(a[i] <= b[j] ? a[i++] : b[j++]);\n}\nconsole.log(merged.concat(a.slice(i), b.slice(j)));",
+      "explanation": "Merging takes about n + m steps because it uses the existing order. Sorting the joined array takes (n + m) log (n + m) steps and throws that knowledge away."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4,6,8,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Pop Decrements Before Reading",
+    "language": "c",
+    "problemDescription": "After pushing 10, 20 and 30 the first pop should return 30, but the program prints 20.",
+    "buggyCode": "#include <stdio.h>\n\nint stack[10];\nint top = -1;\n\nvoid push(int value) {\n    stack[++top] = value;\n}\n\nint pop() {\n    return stack[--top];\n}\n\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    printf(\"%d\\n\", pop());\n    printf(\"%d\\n\", pop());\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint stack[10];\nint top = -1;\n\nvoid push(int value) {\n    stack[++top] = value;\n}\n\nint pop() {\n    return stack[top--];\n}\n\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    printf(\"%d\\n\", pop());\n    printf(\"%d\\n\", pop());\n    return 0;\n}",
+      "explanation": "top points at the newest element. top-- reads it first and then moves down; --top moves down first and reads the element below it. The newest value is skipped, and the stack ends up reading below the bottom."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*30[ \\t]*\\r?\\n20\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

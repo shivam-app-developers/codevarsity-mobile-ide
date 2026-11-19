@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Perfect Numbers",
+    "language": "c",
+    "description": "A perfect number equals the sum of its proper divisors (all divisors except itself). 6 = 1 + 2 + 3.",
+    "ghostCode": "#include <stdio.h>\n\nint is_perfect(int n) {\n    int sum = 0;\n    for (int d = 1; d < n; d++) {\n        if (n % d == 0) {\n            sum += d;\n        }\n    }\n    return sum == n;\n}\n\nint main() {\n    for (int n = 2; n <= 500; n++) {\n        if (is_perfect(n)) {\n            printf(\"%d is perfect\\n\", n);\n        }\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6 is perfect[ \\t]*\\r?\\n28 is perfect[ \\t]*\\r?\\n496 is perfect\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

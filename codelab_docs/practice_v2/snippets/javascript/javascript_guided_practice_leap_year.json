@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Leap Year",
+    "language": "javascript",
+    "description": "A year is a leap year if it is divisible by 4, except century years, which must be divisible by 400.",
+    "ghostCode": "function isLeap(year) {\n  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;\n}\n\n[1900, 2000, 2023, 2024].forEach(function (y) {\n  console.log(y + \": \" + isLeap(y));\n});",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1900: false[ \\t]*\\r?\\n2000: true[ \\t]*\\r?\\n2023: false[ \\t]*\\r?\\n2024: true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Recursion Instead of Nested Loops",
+    "language": "javascript",
+    "problemDescription": "Three nested loops generate the permutations of exactly three items. Write a recursive function that works for any number of items and gives the same order. The output must stay the same.",
+    "initialCode": "var items = [1, 2, 3];\nvar result = [];\nfor (var i = 0; i < 3; i++) {\n  for (var j = 0; j < 3; j++) {\n    for (var k = 0; k < 3; k++) {\n      if (i !== j && j !== k && i !== k) {\n        result.push([items[i], items[j], items[k]]);\n      }\n    }\n  }\n}\nconsole.log(result);",
+    "solution": {
+      "code": "function permutations(items) {\n  if (items.length <= 1) {\n    return [items];\n  }\n  var result = [];\n  items.forEach(function (item, i) {\n    var rest = items.slice(0, i).concat(items.slice(i + 1));\n    permutations(rest).forEach(function (p) {\n      result.push([item].concat(p));\n    });\n  });\n  return result;\n}\n\nconsole.log(permutations([1, 2, 3]));",
+      "explanation": "Nested loops hard-wire the number of items: four items would need a fourth loop. The recursion adds one level per item and handles any length."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,2,3\\],\\[1,3,2\\],\\[2,1,3\\],\\[2,3,1\\],\\[3,1,2\\],\\[3,2,1\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Shared Prototype Pitfall",
+    "language": "javascript",
+    "description": "Objects created by the same constructor share the prototype. Put methods there, but keep per-object data, like an array of items, in the constructor.",
+    "ghostCode": "function Basket() {\n  this.items = [];\n}\n\nBasket.prototype.add = function (item) {\n  this.items.push(item);\n};\n\nvar a = new Basket();\nvar b = new Basket();\na.add(\"apple\");\nb.add(\"pear\");\nconsole.log(a.items, b.items);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\"apple\"\\] \\[\"pear\"\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

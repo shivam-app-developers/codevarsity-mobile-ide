@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Number Bases",
+    "language": "javascript",
+    "description": "toString(base) writes a number in another base, and parseInt(text, base) reads one back. Always pass the base to parseInt.",
+    "ghostCode": "console.log((255).toString(16));\nconsole.log((10).toString(2));\nconsole.log(parseInt(\"ff\", 16));\nconsole.log(parseInt(\"1010\", 2));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ff[ \\t]*\\r?\\n1010[ \\t]*\\r?\\n255[ \\t]*\\r?\\n10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

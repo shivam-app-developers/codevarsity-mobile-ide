@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Cannot Assign a String to an Array",
+    "language": "c",
+    "problemDescription": "The program does not compile: it assigns a string with = to the title field of the struct.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nstruct Book {\n    char title[30];\n    int pages;\n};\n\nint main() {\n    struct Book b;\n    b.title = \"C Primer\";\n    b.pages = 420;\n    printf(\"%s has %d pages\\n\", b.title, b.pages);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nstruct Book {\n    char title[30];\n    int pages;\n};\n\nint main() {\n    struct Book b;\n    strcpy(b.title, \"C Primer\");\n    b.pages = 420;\n    printf(\"%s has %d pages\\n\", b.title, b.pages);\n    return 0;\n}",
+      "explanation": "An array name is not a modifiable variable, so a string cannot be assigned to it with =. strcpy copies the characters into the array (and adds the '\\0'). Alternatively declare the field as const char *title."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*C Primer has 420 pages\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

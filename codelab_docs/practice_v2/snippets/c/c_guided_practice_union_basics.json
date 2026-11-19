@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Unions Share Memory",
+    "language": "c",
+    "description": "All members of a union share the same memory. Writing one member overwrites the others, and the union is as big as its biggest member.",
+    "ghostCode": "#include <stdio.h>\n\nunion Value {\n    int number;\n    char letter;\n};\n\nint main() {\n    union Value v;\n    v.number = 65;\n    printf(\"As number: %d\\n\", v.number);\n    printf(\"As letter: %c\\n\", v.letter);\n    printf(\"Big enough for an int: %d\\n\", (int)sizeof(union Value) >= (int)sizeof(int));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*As number: 65[ \\t]*\\r?\\nAs letter: A[ \\t]*\\r?\\nBig enough for an int: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

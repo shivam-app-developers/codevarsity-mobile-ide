@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Height Uses the Shorter Subtree",
+    "language": "c",
+    "problemDescription": "The tree has four levels along its longest path (10, 5, 3, 1), but the program prints a height of 2.",
+    "buggyCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nint height(struct Node *root) {\n    if (root == NULL) {\n        return 0;\n    }\n    int l = height(root->left);\n    int r = height(root->right);\n    return 1 + (l > r ? r : l);\n}\n\nint main() {\n    struct Node *root = new_node(10);\n    root->left = new_node(5);\n    root->right = new_node(20);\n    root->left->left = new_node(3);\n    root->left->left->left = new_node(1);\n    printf(\"%d\\n\", height(root));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nint height(struct Node *root) {\n    if (root == NULL) {\n        return 0;\n    }\n    int l = height(root->left);\n    int r = height(root->right);\n    return 1 + (l > r ? l : r);\n}\n\nint main() {\n    struct Node *root = new_node(10);\n    root->left = new_node(5);\n    root->right = new_node(20);\n    root->left->left = new_node(3);\n    root->left->left->left = new_node(1);\n    printf(\"%d\\n\", height(root));\n    return 0;\n}",
+      "explanation": "Height is the length of the longest path down, so the larger of the two subtree heights must be taken. Choosing the smaller one measures the shortest path to a missing child instead."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

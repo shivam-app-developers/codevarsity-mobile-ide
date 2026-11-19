@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Struct Pointers and the Arrow",
+    "language": "c",
+    "description": "Pass a pointer to a struct so the function can change the original. Use p->field, which is shorthand for (*p).field.",
+    "ghostCode": "#include <stdio.h>\n\nstruct Point {\n    int x;\n    int y;\n};\n\nvoid move(struct Point *p, int dx, int dy) {\n    p->x += dx;\n    p->y += dy;\n}\n\nint main() {\n    struct Point p = {2, 3};\n    move(&p, 5, -1);\n    printf(\"(%d, %d)\\n\", p.x, p.y);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\(7, 2\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

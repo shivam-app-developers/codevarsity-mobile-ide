@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace Bubble Sort with Merge Sort",
+    "language": "c",
+    "problemDescription": "Nested loops compare neighbours again and again, which takes about n squared steps. Sort with merge sort instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {5, 2, 9, 1, 7, 3};\n    int n = 6;\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n - 1; j++) {\n            if (a[j] > a[j + 1]) {\n                int t = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = t;\n            }\n        }\n    }\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid merge(int a[], int left, int mid, int right) {\n    int temp[20];\n    int i = left, j = mid + 1, k = 0;\n    while (i <= mid && j <= right) {\n        temp[k++] = a[i] <= a[j] ? a[i++] : a[j++];\n    }\n    while (i <= mid) temp[k++] = a[i++];\n    while (j <= right) temp[k++] = a[j++];\n    for (int x = 0; x < k; x++) a[left + x] = temp[x];\n}\n\nvoid merge_sort(int a[], int left, int right) {\n    if (left >= right) return;\n    int mid = (left + right) / 2;\n    merge_sort(a, left, mid);\n    merge_sort(a, mid + 1, right);\n    merge(a, left, mid, right);\n}\n\nint main() {\n    int a[] = {5, 2, 9, 1, 7, 3};\n    merge_sort(a, 0, 5);\n    for (int i = 0; i < 6; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Merge sort halves the array about log2(n) times and does about n work per level, so it needs about n log n steps against n squared for bubble sort. For a million items that is roughly 20 million steps instead of a trillion."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 5 7 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Tower of Hanoi",
+    "language": "c",
+    "description": "To move n disks from one peg to another: move n - 1 disks out of the way, move the biggest disk, then move the n - 1 disks on top of it.",
+    "ghostCode": "#include <stdio.h>\n\nvoid hanoi(int n, char from, char to, char via) {\n    if (n == 0) {\n        return;\n    }\n    hanoi(n - 1, from, via, to);\n    printf(\"Move disk %d from %c to %c\\n\", n, from, to);\n    hanoi(n - 1, via, to, from);\n}\n\nint main() {\n    hanoi(3, 'A', 'C', 'B');\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Move disk 1 from A to C[ \\t]*\\r?\\nMove disk 2 from A to B[ \\t]*\\r?\\nMove disk 1 from C to B[ \\t]*\\r?\\nMove disk 3 from A to C[ \\t]*\\r?\\nMove disk 1 from B to A[ \\t]*\\r?\\nMove disk 2 from B to C[ \\t]*\\r?\\nMove disk 1 from A to C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

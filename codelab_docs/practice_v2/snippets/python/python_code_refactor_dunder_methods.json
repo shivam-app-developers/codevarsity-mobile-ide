@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Operators Instead of Named Methods",
+    "language": "python",
+    "problemDescription": "The class has add and text methods, which callers must know about. Use __add__ and __str__ so that a + b and print work. The output must stay the same.",
+    "initialCode": "class Money:\n    def __init__(self, amount):\n        self.amount = amount\n\n    def add(self, other):\n        return Money(self.amount + other.amount)\n\n    def text(self):\n        return str(self.amount) + \" INR\"\n\n\na = Money(50)\nb = Money(70)\nprint(a.add(b).text())",
+    "solution": {
+      "code": "class Money:\n    def __init__(self, amount):\n        self.amount = amount\n\n    def __add__(self, other):\n        return Money(self.amount + other.amount)\n\n    def __str__(self):\n        return str(self.amount) + \" INR\"\n\n\na = Money(50)\nb = Money(70)\nprint(a + b)",
+      "explanation": "With special methods the object behaves like a built-in type: a + b reads naturally, and print(a) works without calling a method by name."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*120 INR\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Stack with an Array",
+    "language": "c",
+    "description": "A stack is last-in, first-out. Keep an index to the top element; push increments it before storing, pop reads and then decrements it.",
+    "ghostCode": "#include <stdio.h>\n\n#define MAX 5\n\nint stack[MAX];\nint top = -1;\n\nvoid push(int value) {\n    if (top == MAX - 1) {\n        printf(\"Stack overflow\\n\");\n        return;\n    }\n    stack[++top] = value;\n}\n\nint pop() {\n    if (top == -1) {\n        printf(\"Stack underflow\\n\");\n        return -1;\n    }\n    return stack[top--];\n}\n\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    printf(\"%d\\n\", pop());\n    printf(\"%d\\n\", pop());\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*30[ \\t]*\\r?\\n20\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

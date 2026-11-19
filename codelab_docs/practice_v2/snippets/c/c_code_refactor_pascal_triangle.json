@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Add the Two Entries Above",
+    "language": "c",
+    "problemDescription": "Every entry is computed with three factorial calls. Build the triangle in a 2D array where each entry is the sum of the two above it. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint fact(int n) {\n    int f = 1;\n    for (int i = 2; i <= n; i++) {\n        f *= i;\n    }\n    return f;\n}\n\nint main() {\n    for (int n = 0; n < 5; n++) {\n        for (int k = 0; k <= n; k++) {\n            printf(\"%d \", fact(n) / (fact(k) * fact(n - k)));\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int triangle[5][5] = {{0}};\n    for (int n = 0; n < 5; n++) {\n        triangle[n][0] = 1;\n        for (int k = 1; k <= n; k++) {\n            triangle[n][k] = triangle[n - 1][k - 1] + (k < n ? triangle[n - 1][k] : 0);\n        }\n        for (int k = 0; k <= n; k++) {\n            printf(\"%d \", triangle[n][k]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Each entry is the sum of the two entries above it, which is the definition of Pascal's triangle. It uses only additions, while the factorial version overflows an int once n passes 12."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n1 1[ \\t]*\\r?\\n1 2 1[ \\t]*\\r?\\n1 3 3 1[ \\t]*\\r?\\n1 4 6 4 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

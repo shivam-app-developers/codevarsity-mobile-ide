@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Function Pointers",
+    "language": "c",
+    "description": "A function pointer stores the address of a function, so you can pass behaviour as an argument. Its type lists the return type and the parameter types.",
+    "ghostCode": "#include <stdio.h>\n\nint add(int a, int b) { return a + b; }\nint multiply(int a, int b) { return a * b; }\n\nint apply(int (*operation)(int, int), int x, int y) {\n    return operation(x, y);\n}\n\nint main() {\n    printf(\"add: %d\\n\", apply(add, 6, 7));\n    printf(\"multiply: %d\\n\", apply(multiply, 6, 7));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*add: 13[ \\t]*\\r?\\nmultiply: 42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Generator Instead of Building a List",
+    "language": "python",
+    "problemDescription": "The function collects every Fibonacci number in a list before returning it. Make it a generator with yield. The output must stay the same.",
+    "initialCode": "def fibonacci(limit):\n    result = []\n    a, b = 0, 1\n    while a < limit:\n        result.append(a)\n        a, b = b, a + b\n    return result\n\n\nprint(fibonacci(50))",
+    "solution": {
+      "code": "def fibonacci(limit):\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\n\nprint(list(fibonacci(50)))",
+      "explanation": "A generator produces one value at a time, so the caller can stop early or loop over huge ranges without storing them. list() collects the values when a list is really needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0, 1, 1, 2, 3, 5, 8, 13, 21, 34\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

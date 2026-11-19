@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Turnaround Ignores the Burst Time",
+    "language": "c",
+    "problemDescription": "The average turnaround time should be 12.75, but the program prints 7.25, which is just the average waiting time.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int burst[] = {5, 3, 8, 6};\n    int n = 4;\n    int waiting = 0, total_wait = 0, total_turnaround = 0;\n    for (int i = 0; i < n; i++) {\n        int turnaround = waiting;\n        total_wait += waiting;\n        total_turnaround += turnaround;\n        waiting += burst[i];\n    }\n    printf(\"Average wait: %.2f\\n\", (double)total_wait / n);\n    printf(\"Average turnaround: %.2f\\n\", (double)total_turnaround / n);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int burst[] = {5, 3, 8, 6};\n    int n = 4;\n    int waiting = 0, total_wait = 0, total_turnaround = 0;\n    for (int i = 0; i < n; i++) {\n        int turnaround = waiting + burst[i];\n        total_wait += waiting;\n        total_turnaround += turnaround;\n        waiting += burst[i];\n    }\n    printf(\"Average wait: %.2f\\n\", (double)total_wait / n);\n    printf(\"Average turnaround: %.2f\\n\", (double)total_turnaround / n);\n    return 0;\n}",
+      "explanation": "Turnaround time is the time from arrival until completion, which includes the process's own run time. It equals the waiting time plus the burst time, so leaving out the burst makes it identical to the waiting time."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Average wait: 7\\.25[ \\t]*\\r?\\nAverage turnaround: 12\\.75\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

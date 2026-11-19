@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: New Item Overwrites an Existing One",
+    "language": "c",
+    "problemDescription": "After removing 1 and adding 4, the queue should return 2, 3 and 4. The program returns 2, 4 and 1 because 3 is overwritten.",
+    "buggyCode": "#include <stdio.h>\n\n#define SIZE 3\n\nint items[SIZE];\nint front = 0, count = 0;\n\nvoid enqueue(int value) {\n    items[count % SIZE] = value;\n    count++;\n}\n\nint dequeue() {\n    int value = items[front];\n    front = (front + 1) % SIZE;\n    count--;\n    return value;\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d \", dequeue());\n    enqueue(4);\n    printf(\"%d \", dequeue());\n    printf(\"%d \", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define SIZE 3\n\nint items[SIZE];\nint front = 0, count = 0;\n\nvoid enqueue(int value) {\n    items[(front + count) % SIZE] = value;\n    count++;\n}\n\nint dequeue() {\n    int value = items[front];\n    front = (front + 1) % SIZE;\n    count--;\n    return value;\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d \", dequeue());\n    enqueue(4);\n    printf(\"%d \", dequeue());\n    printf(\"%d \", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+      "explanation": "The first free slot is count positions after the front, wrapped around: (front + count) % SIZE. Ignoring front places the new item at slot count % SIZE, which is already occupied once the front has moved."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

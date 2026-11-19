@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Removing by Index Skips Elements",
+    "language": "java",
+    "problemDescription": "Removing the even numbers from 1 2 4 6 7 should leave [1, 7], but the program leaves [1, 4, 7].",
+    "buggyCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 4, 6, 7));\n        for (int i = 0; i < nums.size(); i++) {\n            if (nums.get(i) % 2 == 0) {\n                nums.remove(i);\n            }\n        }\n        System.out.println(nums);\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Iterator;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 4, 6, 7));\n        Iterator<Integer> it = nums.iterator();\n        while (it.hasNext()) {\n            if (it.next() % 2 == 0) {\n                it.remove();\n            }\n        }\n        System.out.println(nums);\n    }\n}",
+      "explanation": "When an element is removed, the next one slides into its index, but the loop then moves on to the next index and never looks at it. An Iterator keeps track of the position itself, so iterator.remove() is safe."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 7\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: getOrDefault Instead of containsKey Branches",
+    "language": "java",
+    "problemDescription": "A TreeMap counts the letters with an if/else that checks containsKey first. Use getOrDefault to do it in one line. The output must stay the same.",
+    "initialCode": "import java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"banana\";\n        TreeMap<Character, Integer> counts = new TreeMap<>();\n        for (int i = 0; i < text.length(); i++) {\n            char c = text.charAt(i);\n            if (counts.containsKey(c)) {\n                counts.put(c, counts.get(c) + 1);\n            } else {\n                counts.put(c, 1);\n            }\n        }\n        for (char c : counts.keySet()) {\n            System.out.println(c + \"=\" + counts.get(c));\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"banana\";\n        TreeMap<Character, Integer> counts = new TreeMap<>();\n        for (char c : text.toCharArray()) {\n            counts.put(c, counts.getOrDefault(c, 0) + 1);\n        }\n        for (char c : counts.keySet()) {\n            System.out.println(c + \"=\" + counts.get(c));\n        }\n    }\n}",
+      "explanation": "getOrDefault supplies 0 for a letter not seen yet, so the \"first time or not\" branch disappears, and the map is looked up fewer times. A TreeMap keeps the letters sorted."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a=3[ \\t]*\\r?\\nb=1[ \\t]*\\r?\\nn=2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

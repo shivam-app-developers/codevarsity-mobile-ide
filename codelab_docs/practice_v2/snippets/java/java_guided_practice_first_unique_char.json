@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: First Non-Repeating Character",
+    "language": "java",
+    "description": "Count every letter first, then walk the string again and return the index of the first letter whose count is 1.",
+    "ghostCode": "public class Main {\n    static int firstUnique(String s) {\n        int[] counts = new int[26];\n        for (int i = 0; i < s.length(); i++) {\n            counts[s.charAt(i) - 'a']++;\n        }\n        for (int i = 0; i < s.length(); i++) {\n            if (counts[s.charAt(i) - 'a'] == 1) {\n                return i;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(firstUnique(\"leetcode\"));\n        System.out.println(firstUnique(\"loveleetcode\"));\n        System.out.println(firstUnique(\"aabb\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0[ \\t]*\\r?\\n2[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

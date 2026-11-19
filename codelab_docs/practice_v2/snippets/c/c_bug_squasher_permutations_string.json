@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Base Case Fires Too Early",
+    "language": "c",
+    "problemDescription": "abc has 6 permutations, but the program prints only 3 of them.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nvoid permute(char *s, int start) {\n    int n = strlen(s);\n    if (start == n - 2) {\n        printf(\"%s\\n\", s);\n        return;\n    }\n    for (int i = start; i < n; i++) {\n        char t = s[start];\n        s[start] = s[i];\n        s[i] = t;\n        permute(s, start + 1);\n        t = s[start];\n        s[start] = s[i];\n        s[i] = t;\n    }\n}\n\nint main() {\n    char word[] = \"abc\";\n    permute(word, 0);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nvoid permute(char *s, int start) {\n    int n = strlen(s);\n    if (start == n - 1) {\n        printf(\"%s\\n\", s);\n        return;\n    }\n    for (int i = start; i < n; i++) {\n        char t = s[start];\n        s[start] = s[i];\n        s[i] = t;\n        permute(s, start + 1);\n        t = s[start];\n        s[start] = s[i];\n        s[i] = t;\n    }\n}\n\nint main() {\n    char word[] = \"abc\";\n    permute(word, 0);\n    return 0;\n}",
+      "explanation": "A permutation is complete only when every position has been fixed, which is when start reaches the last index n - 1. Printing at n - 2 stops one level too early and never arranges the last two letters."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abc[ \\t]*\\r?\\nacb[ \\t]*\\r?\\nbac[ \\t]*\\r?\\nbca[ \\t]*\\r?\\ncba[ \\t]*\\r?\\ncab\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Overriding toString",
+    "language": "java",
+    "description": "println and string concatenation call toString(). Override it to give your objects a readable text form.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Point p = new Point(3, 4);\n        System.out.println(p);\n        System.out.println(\"Point is \" + p);\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public String toString() {\n        return \"(\" + x + \", \" + y + \")\";\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\(3, 4\\)[ \\t]*\\r?\\nPoint is \\(3, 4\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

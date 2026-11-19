@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Average Loses Its Decimals",
+    "language": "c",
+    "problemDescription": "The average of 7, 8 and 8 should print 7.67, but the program prints 7.00.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int values[] = {7, 8, 8};\n    int n = 3;\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        sum += values[i];\n    }\n    double average = (double)(sum / n);\n    printf(\"Average: %.2f\\n\", average);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int values[] = {7, 8, 8};\n    int n = 3;\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        sum += values[i];\n    }\n    double average = (double)sum / n;\n    printf(\"Average: %.2f\\n\", average);\n    return 0;\n}",
+      "explanation": "sum / n is an integer division (23 / 3 = 7), so the .67 is already gone when the result is converted to double. Convert one operand to double before dividing: (double)sum / n."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Average: 7\\.67\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

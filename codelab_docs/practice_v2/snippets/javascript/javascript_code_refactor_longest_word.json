@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Pass Instead of Two",
+    "language": "javascript",
+    "problemDescription": "The longest length is found in one loop and the word with that length in a second loop. Find the word in a single pass with reduce. The output must stay the same.",
+    "initialCode": "var words = \"the quick brown fox jumped\".split(\" \");\nvar maxLength = 0;\nfor (var i = 0; i < words.length; i++) {\n  if (words[i].length > maxLength) {\n    maxLength = words[i].length;\n  }\n}\nvar longest = \"\";\nfor (var j = 0; j < words.length; j++) {\n  if (words[j].length === maxLength) {\n    longest = words[j];\n    break;\n  }\n}\nconsole.log(longest);",
+    "solution": {
+      "code": "var words = \"the quick brown fox jumped\".split(\" \");\nvar longest = words.reduce(function (best, w) {\n  return w.length > best.length ? w : best;\n}, \"\");\nconsole.log(longest);",
+      "explanation": "reduce carries the best word so far, so the length does not need to be remembered separately, and the data is only walked once."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*jumped\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+    "language": "python",
+    "problemDescription": "The text (( has brackets that are never closed, but is_valid returns True for it.",
+    "buggyCode": "def is_valid(text):\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for ch in text:\n        if ch in \"([{\":\n            stack.append(ch)\n        elif not stack or stack.pop() != pairs[ch]:\n            return False\n    return True\n\n\nprint(is_valid(\"()\"), is_valid(\"((\"))",
+    "solution": {
+      "code": "def is_valid(text):\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for ch in text:\n        if ch in \"([{\":\n            stack.append(ch)\n        elif not stack or stack.pop() != pairs[ch]:\n            return False\n    return not stack\n\n\nprint(is_valid(\"()\"), is_valid(\"((\"))",
+      "explanation": "Reaching the end without a mismatch is not enough: brackets left on the stack were opened and never closed. The text is valid only when the stack is empty."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*True False\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

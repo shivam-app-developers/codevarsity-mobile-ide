@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Node Is Not Visited",
+    "language": "javascript",
+    "problemDescription": "The list 10, 20, 30 should be printed completely, but the last value 30 is missing.",
+    "buggyCode": "function Node(value) {\n  this.value = value;\n  this.next = null;\n}\n\nfunction LinkedList() {\n  this.head = null;\n}\n\nLinkedList.prototype.add = function (value) {\n  var node = new Node(value);\n  if (this.head === null) {\n    this.head = node;\n    return;\n  }\n  var current = this.head;\n  while (current.next !== null) {\n    current = current.next;\n  }\n  current.next = node;\n};\n\nLinkedList.prototype.toArray = function () {\n  var out = [];\n  for (var cur = this.head; cur.next !== null; cur = cur.next) {\n    out.push(cur.value);\n  }\n  return out;\n};\n\nvar list = new LinkedList();\nlist.add(10);\nlist.add(20);\nlist.add(30);\nconsole.log(list.toArray());",
+    "solution": {
+      "code": "function Node(value) {\n  this.value = value;\n  this.next = null;\n}\n\nfunction LinkedList() {\n  this.head = null;\n}\n\nLinkedList.prototype.add = function (value) {\n  var node = new Node(value);\n  if (this.head === null) {\n    this.head = node;\n    return;\n  }\n  var current = this.head;\n  while (current.next !== null) {\n    current = current.next;\n  }\n  current.next = node;\n};\n\nLinkedList.prototype.toArray = function () {\n  var out = [];\n  for (var cur = this.head; cur !== null; cur = cur.next) {\n    out.push(cur.value);\n  }\n  return out;\n};\n\nvar list = new LinkedList();\nlist.add(10);\nlist.add(20);\nlist.add(30);\nconsole.log(list.toArray());",
+      "explanation": "To visit every node the loop must continue while the current node itself exists. Testing cur.next stops at the last node before its value is read. (That test is the right one when you want to stop at the last node, as add does.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[10,20,30\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

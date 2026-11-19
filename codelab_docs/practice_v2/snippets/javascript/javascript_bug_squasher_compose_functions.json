@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Functions Run in the Wrong Order",
+    "language": "javascript",
+    "problemDescription": "compose(twice, addOne)(5) should print 12 (add one, then double), but the program prints 11.",
+    "buggyCode": "function compose(f, g) {\n  return function (x) {\n    return g(f(x));\n  };\n}\n\nfunction addOne(x) {\n  return x + 1;\n}\n\nfunction twice(x) {\n  return x * 2;\n}\n\nconsole.log(compose(twice, addOne)(5));",
+    "solution": {
+      "code": "function compose(f, g) {\n  return function (x) {\n    return f(g(x));\n  };\n}\n\nfunction addOne(x) {\n  return x + 1;\n}\n\nfunction twice(x) {\n  return x * 2;\n}\n\nconsole.log(compose(twice, addOne)(5));",
+      "explanation": "Composition follows maths notation: f(g(x)) applies g first. Swapping them applies f first, which gives a different result whenever the two operations do not commute (2 * (5 + 1) is not (2 * 5) + 1)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

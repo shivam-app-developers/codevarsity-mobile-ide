@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: TreeMap Keeps Keys Sorted",
+    "language": "java",
+    "description": "A TreeMap keeps its keys in sorted order and offers firstKey, lastKey and headMap (the keys before a given key).",
+    "ghostCode": "import java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        TreeMap<String, Integer> marks = new TreeMap<>();\n        marks.put(\"Meena\", 91);\n        marks.put(\"Asha\", 85);\n        marks.put(\"Ravi\", 72);\n        for (Map.Entry<String, Integer> e : marks.entrySet()) {\n            System.out.println(e.getKey() + \" \" + e.getValue());\n        }\n        System.out.println(marks.firstKey() + \" \" + marks.lastKey());\n        System.out.println(marks.headMap(\"Ravi\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha 85[ \\t]*\\r?\\nMeena 91[ \\t]*\\r?\\nRavi 72[ \\t]*\\r?\\nAsha Ravi[ \\t]*\\r?\\n\\{Asha=85, Meena=91\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

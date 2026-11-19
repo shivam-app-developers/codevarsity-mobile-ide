@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Build the Word from Parts",
+    "language": "python",
+    "problemDescription": "Nested if / else blocks and two flags decide what to print. Build the text from Fizz and Buzz pieces and print the number only when the text is empty. The output must stay the same.",
+    "initialCode": "for i in range(1, 16):\n    three = i % 3 == 0\n    five = i % 5 == 0\n    if three and five:\n        print(\"FizzBuzz\")\n    else:\n        if three:\n            print(\"Fizz\")\n        else:\n            if five:\n                print(\"Buzz\")\n            else:\n                print(i)",
+    "solution": {
+      "code": "for i in range(1, 16):\n    word = \"\"\n    if i % 3 == 0:\n        word += \"Fizz\"\n    if i % 5 == 0:\n        word += \"Buzz\"\n    print(word or i)",
+      "explanation": "FizzBuzz is just Fizz followed by Buzz, so no combined case is needed, and \"word or i\" prints the number when the word is empty. A new rule is one more if."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n4[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n7[ \\t]*\\r?\\n8[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\nBuzz[ \\t]*\\r?\\n11[ \\t]*\\r?\\nFizz[ \\t]*\\r?\\n13[ \\t]*\\r?\\n14[ \\t]*\\r?\\nFizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

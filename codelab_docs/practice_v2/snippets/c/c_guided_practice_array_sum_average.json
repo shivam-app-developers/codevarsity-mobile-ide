@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Array Sum and Average",
+    "language": "c",
+    "description": "Add up the elements of an array in a loop, then divide as double to get an average with decimals.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int marks[] = {72, 85, 90, 64, 79};\n    int count = sizeof(marks) / sizeof(marks[0]);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += marks[i];\n    }\n    printf(\"Sum: %d\\n\", sum);\n    printf(\"Average: %.2f\\n\", (double)sum / count);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Sum: 390[ \\t]*\\r?\\nAverage: 78\\.00\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

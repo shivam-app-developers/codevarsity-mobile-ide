@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Map Lookup Instead of Comparing Every Pair",
+    "language": "java",
+    "problemDescription": "Every word is compared with every group's first word using a sorted-letters comparison. Use a LinkedHashMap keyed by the sorted letters, which keeps the groups in first-seen order. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class Main {\n    static String sorted(String s) {\n        char[] c = s.toCharArray();\n        Arrays.sort(c);\n        return new String(c);\n    }\n\n    public static void main(String[] args) {\n        String[] words = {\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"};\n        List<List<String>> groups = new ArrayList<>();\n        for (String w : words) {\n            boolean placed = false;\n            for (List<String> g : groups) {\n                if (sorted(g.get(0)).equals(sorted(w))) {\n                    g.add(w);\n                    placed = true;\n                    break;\n                }\n            }\n            if (!placed) {\n                List<String> g = new ArrayList<>();\n                g.add(w);\n                groups.add(g);\n            }\n        }\n        for (List<String> g : groups) {\n            System.out.println(g);\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.LinkedHashMap;\nimport java.util.List;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"};\n        Map<String, List<String>> groups = new LinkedHashMap<>();\n        for (String w : words) {\n            char[] c = w.toCharArray();\n            Arrays.sort(c);\n            String key = new String(c);\n            if (!groups.containsKey(key)) {\n                groups.put(key, new ArrayList<>());\n            }\n            groups.get(key).add(w);\n        }\n        for (List<String> g : groups.values()) {\n            System.out.println(g);\n        }\n    }\n}",
+      "explanation": "The map finds the right group in one lookup instead of re-sorting and comparing with every existing group. It scales to thousands of words, while the nested loops re-sort the same strings over and over."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[eat, tea, ate\\][ \\t]*\\r?\\n\\[tan, nat\\][ \\t]*\\r?\\n\\[bat\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

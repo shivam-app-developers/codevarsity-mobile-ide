@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Wrap with Modulo",
+    "language": "c",
+    "problemDescription": "The head and tail indexes are wrapped by hand with if statements and a magic number 3. Use a SIZE constant and the modulo operator. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint items[3];\nint head = 0;\nint tail = 0;\nint size = 0;\n\nvoid add(int v) {\n    items[tail] = v;\n    tail = tail + 1;\n    if (tail == 3) {\n        tail = 0;\n    }\n    size = size + 1;\n}\n\nint take() {\n    int v = items[head];\n    head = head + 1;\n    if (head == 3) {\n        head = 0;\n    }\n    size = size - 1;\n    return v;\n}\n\nint main() {\n    add(1);\n    add(2);\n    printf(\"%d\\n\", take());\n    add(3);\n    add(4);\n    printf(\"%d\\n\", take());\n    printf(\"%d\\n\", take());\n    printf(\"%d\\n\", take());\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define SIZE 3\n\nint items[SIZE];\nint head = 0;\nint tail = 0;\n\nvoid add(int v) {\n    items[tail] = v;\n    tail = (tail + 1) % SIZE;\n}\n\nint take() {\n    int v = items[head];\n    head = (head + 1) % SIZE;\n    return v;\n}\n\nint main() {\n    add(1);\n    add(2);\n    printf(\"%d\\n\", take());\n    add(3);\n    add(4);\n    printf(\"%d\\n\", take());\n    printf(\"%d\\n\", take());\n    printf(\"%d\\n\", take());\n    return 0;\n}",
+      "explanation": "(index + 1) % SIZE is the standard wrap-around idiom, and SIZE appears once instead of three times. The unused size counter is dropped too."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3[ \\t]*\\r?\\n4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

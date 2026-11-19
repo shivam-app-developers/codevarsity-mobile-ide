@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Loop Instead of Two",
+    "language": "java",
+    "problemDescription": "Every start and end position is tried with a nested loop, adding the numbers one by one. Use Kadane's single loop. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {3, -2, 5, -1, 2, -6, 4};\n        int best = a[0];\n        for (int i = 0; i < a.length; i++) {\n            int sum = 0;\n            for (int j = i; j < a.length; j++) {\n                sum += a[j];\n                if (sum > best) {\n                    best = sum;\n                }\n            }\n        }\n        System.out.println(best);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {3, -2, 5, -1, 2, -6, 4};\n        int best = a[0], current = a[0];\n        for (int i = 1; i < a.length; i++) {\n            current = Math.max(a[i], current + a[i]);\n            best = Math.max(best, current);\n        }\n        System.out.println(best);\n    }\n}",
+      "explanation": "The nested loops try about n squared / 2 ranges. Kadane's algorithm remembers the best sum ending at the current element, so one pass of n steps is enough."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

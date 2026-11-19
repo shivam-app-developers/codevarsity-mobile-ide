@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Kernighan's Trick",
+    "language": "javascript",
+    "problemDescription": "The number is converted to a text of 0s and 1s and the 1s are counted one by one. Use n &= n - 1, which clears the lowest set bit each time. The output must stay the same.",
+    "initialCode": "var bits = (61).toString(2).split(\"\");\nvar ones = 0;\nbits.forEach(function (b) {\n  if (b === \"1\") {\n    ones++;\n  }\n});\nconsole.log(ones);",
+    "solution": {
+      "code": "var n = 61;\nvar ones = 0;\nwhile (n) {\n  n &= n - 1;\n  ones++;\n}\nconsole.log(ones);",
+      "explanation": "Subtracting 1 flips the lowest set bit and the zeros below it, so n & (n - 1) removes exactly one 1 bit. The loop runs once per set bit and needs no string."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

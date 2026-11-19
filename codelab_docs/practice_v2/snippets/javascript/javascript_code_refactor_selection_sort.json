@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Swap per Pass",
+    "language": "javascript",
+    "problemDescription": "Items are swapped every time a smaller one is found. Remember the index of the smallest and swap once at the end of the pass. The output must stay the same.",
+    "initialCode": "var a = [29, 10, 14, 37, 13];\nfor (var i = 0; i < a.length; i++) {\n  for (var j = i + 1; j < a.length; j++) {\n    if (a[j] < a[i]) {\n      var temp = a[i];\n      a[i] = a[j];\n      a[j] = temp;\n    }\n  }\n}\nconsole.log(a);",
+    "solution": {
+      "code": "var a = [29, 10, 14, 37, 13];\nfor (var i = 0; i < a.length - 1; i++) {\n  var min = i;\n  for (var j = i + 1; j < a.length; j++) {\n    if (a[j] < a[min]) {\n      min = j;\n    }\n  }\n  var temp = a[i];\n  a[i] = a[min];\n  a[min] = temp;\n}\nconsole.log(a);",
+      "explanation": "Selection sort makes at most n - 1 swaps in total, while swapping inside the inner loop can swap many times per pass."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[10,13,14,29,37\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

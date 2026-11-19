@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Pair Is Swapped Twice",
+    "language": "c",
+    "problemDescription": "The transpose of 1 2 3 / 4 5 6 / 7 8 9 should start with 1 4 7, but the matrix prints unchanged.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            int temp = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = temp;\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = i + 1; j < 3; j++) {\n            int temp = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = temp;\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+      "explanation": "Swapping in place must visit each pair of mirrored elements once, so only the part above the diagonal (j > i) is looped over. Starting j at 0 visits every pair twice, and the second swap undoes the first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 4 7[ \\t]*\\r?\\n2 5 8[ \\t]*\\r?\\n3 6 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

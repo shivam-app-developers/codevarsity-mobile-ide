@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong Expected Sum",
+    "language": "c",
+    "problemDescription": "The numbers 0 to 9 are present except 8, but the program prints -1 instead of 8.",
+    "buggyCode": "#include <stdio.h>\n\nint missing(const int a[], int n) {\n    int expected = n * (n - 1) / 2;\n    int actual = 0;\n    for (int i = 0; i < n; i++) {\n        actual += a[i];\n    }\n    return expected - actual;\n}\n\nint main() {\n    int a[] = {9, 6, 4, 2, 3, 5, 7, 0, 1};\n    printf(\"%d\\n\", missing(a, 9));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint missing(const int a[], int n) {\n    int expected = n * (n + 1) / 2;\n    int actual = 0;\n    for (int i = 0; i < n; i++) {\n        actual += a[i];\n    }\n    return expected - actual;\n}\n\nint main() {\n    int a[] = {9, 6, 4, 2, 3, 5, 7, 0, 1};\n    printf(\"%d\\n\", missing(a, 9));\n    return 0;\n}",
+      "explanation": "The numbers run from 0 to n, so their sum is n * (n + 1) / 2 (45 for n = 9). n * (n - 1) / 2 is the sum up to n - 1, which is off by n, and the difference no longer points at the missing value."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

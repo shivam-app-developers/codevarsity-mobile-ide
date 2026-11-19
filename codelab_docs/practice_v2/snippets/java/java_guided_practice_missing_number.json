@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Find the Missing Number",
+    "language": "java",
+    "description": "The array holds the numbers 0 to n with one missing. The expected sum is n * (n + 1) / 2, so the missing number is the expected sum minus the actual sum.",
+    "ghostCode": "public class Main {\n    static int missing(int[] a) {\n        int n = a.length;\n        int expected = n * (n + 1) / 2;\n        int actual = 0;\n        for (int x : a) {\n            actual += x;\n        }\n        return expected - actual;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(missing(new int[] {3, 0, 1}));\n        System.out.println(missing(new int[] {9, 6, 4, 2, 3, 5, 7, 0, 1}));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2[ \\t]*\\r?\\n8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

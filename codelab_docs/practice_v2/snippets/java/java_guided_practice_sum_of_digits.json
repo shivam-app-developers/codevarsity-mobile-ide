@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sum of Digits",
+    "language": "java",
+    "description": "Peel off the last digit with % 10, add it, and shrink the number with / 10 until nothing is left.",
+    "ghostCode": "public class Main {\n    static int sumOfDigits(int n) {\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n /= 10;\n        }\n        return sum;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(\"Sum of digits of 4821 = \" + sumOfDigits(4821));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Sum of digits of 4821 = 15\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

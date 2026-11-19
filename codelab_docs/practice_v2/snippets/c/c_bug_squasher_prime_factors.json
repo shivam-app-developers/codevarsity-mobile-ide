@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Largest Factor Is Missing",
+    "language": "c",
+    "problemDescription": "The prime factors of 84 are 2 2 3 7, but the program prints only 2 2 3.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int n = 84;\n    for (int p = 2; p * p <= n; p++) {\n        while (n % p == 0) {\n            printf(\"%d \", p);\n            n /= p;\n        }\n    }\n\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int n = 84;\n    for (int p = 2; p * p <= n; p++) {\n        while (n % p == 0) {\n            printf(\"%d \", p);\n            n /= p;\n        }\n    }\n    if (n > 1) {\n        printf(\"%d \", n);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "The loop stops once p * p exceeds what is left of n. At that point the remainder (7 here) is a prime that was never divided out, so it has to be printed after the loop."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 2 3 7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

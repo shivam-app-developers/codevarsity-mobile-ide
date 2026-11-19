@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Constructor with a Prototype Method",
+    "language": "javascript",
+    "problemDescription": "A factory function creates a new copy of the describe function for every person. Use a constructor function and put describe on the prototype. The output must stay the same.",
+    "initialCode": "function makePerson(name, age) {\n  return {\n    name: name,\n    age: age,\n    describe: function () {\n      return name + \" is \" + age;\n    }\n  };\n}\n\nvar p = makePerson(\"Asha\", 30);\nconsole.log(p.describe());",
+    "solution": {
+      "code": "function Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\nPerson.prototype.describe = function () {\n  return this.name + \" is \" + this.age;\n};\n\nvar p = new Person(\"Asha\", 30);\nconsole.log(p.describe());",
+      "explanation": "Methods on the prototype exist once and are shared by every person, instead of one function object per person, and instanceof Person works for the created objects."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha is 30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

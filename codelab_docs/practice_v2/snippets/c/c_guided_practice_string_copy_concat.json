@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Copy and Concatenate by Hand",
+    "language": "c",
+    "description": "Re-implement strcpy and strcat. Both must end the result with '\\0'. Concatenation first walks to the end of the destination.",
+    "ghostCode": "#include <stdio.h>\n\nvoid my_strcpy(char *dest, const char *src) {\n    int i = 0;\n    while (src[i] != '\\0') {\n        dest[i] = src[i];\n        i++;\n    }\n    dest[i] = '\\0';\n}\n\nvoid my_strcat(char *dest, const char *src) {\n    int end = 0;\n    while (dest[end] != '\\0') {\n        end++;\n    }\n    my_strcpy(dest + end, src);\n}\n\nint main() {\n    char buffer[50];\n    my_strcpy(buffer, \"Code\");\n    my_strcat(buffer, \"Varsity\");\n    printf(\"%s\\n\", buffer);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*CodeVarsity\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

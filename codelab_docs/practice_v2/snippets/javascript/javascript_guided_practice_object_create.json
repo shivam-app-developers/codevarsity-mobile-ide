@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Object.create",
+    "language": "javascript",
+    "description": "Object.create(proto) makes a new object whose prototype is proto. Missing properties are looked up on the prototype, and assigning creates the property on the new object only.",
+    "ghostCode": "var vehicle = {\n  wheels: 4,\n  describe: function () {\n    return this.name + \" has \" + this.wheels + \" wheels\";\n  }\n};\n\nvar bike = Object.create(vehicle);\nbike.name = \"Bike\";\nbike.wheels = 2;\nvar car = Object.create(vehicle);\ncar.name = \"Car\";\nconsole.log(bike.describe());\nconsole.log(car.describe());\nconsole.log(vehicle.isPrototypeOf(car));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Bike has 2 wheels[ \\t]*\\r?\\nCar has 4 wheels[ \\t]*\\r?\\ntrue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

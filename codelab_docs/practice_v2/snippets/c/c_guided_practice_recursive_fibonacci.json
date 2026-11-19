@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Recursive Fibonacci",
+    "language": "c",
+    "description": "fib(n) is n for n of 0 or 1, and otherwise the sum of the two previous values. Each call branches into two more calls.",
+    "ghostCode": "#include <stdio.h>\n\nint fib(int n) {\n    if (n <= 1) {\n        return n;\n    }\n    return fib(n - 1) + fib(n - 2);\n}\n\nint main() {\n    for (int i = 0; i < 10; i++) {\n        printf(\"%d \", fib(i));\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 1 2 3 5 8 13 21 34\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

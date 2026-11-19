@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shift and Mask Instead of Building a Number",
+    "language": "c",
+    "problemDescription": "The binary digits are assembled into a decimal-looking number with a place counter. Use shifts and masks to print the bits directly. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 10;\n    int r = 0;\n    int place = 1;\n    while (n != 0) {\n        int bit = n % 2;\n        r = r + bit * place;\n        place = place * 10;\n        n = n / 2;\n    }\n    printf(\"%d\\n\", r);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int n = 10;\n    int started = 0;\n    for (int i = 31; i >= 0; i--) {\n        int bit = (n >> i) & 1;\n        if (bit) {\n            started = 1;\n        }\n        if (started) {\n            printf(\"%d\", bit);\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "(n >> i) & 1 reads bit i directly. The old version stored the binary digits inside an int, which overflows for larger numbers: a 32-bit value needs 32 decimal digits. Printing the bits has no such limit."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1010\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

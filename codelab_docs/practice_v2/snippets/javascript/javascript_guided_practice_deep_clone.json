@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Deep Copy with JSON",
+    "language": "javascript",
+    "description": "A shallow copy shares nested objects with the original. Converting to JSON text and back creates a completely independent deep copy of plain data.",
+    "ghostCode": "var original = { name: \"Asha\", address: { city: \"Pune\" } };\nvar deep = JSON.parse(JSON.stringify(original));\ndeep.address.city = \"Delhi\";\nconsole.log(original.address.city);\nvar shallow = Object.assign({}, original);\nshallow.address.city = \"Mumbai\";\nconsole.log(original.address.city);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Pune[ \\t]*\\r?\\nMumbai\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

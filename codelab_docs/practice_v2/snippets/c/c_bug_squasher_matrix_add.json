@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Second Matrix Read Transposed",
+    "language": "c",
+    "problemDescription": "Adding the matrix 1 2 3 / 4 5 6 / 7 8 9 to itself should give 2 4 6 in the first row, but the program prints 2 6 10.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    int b[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            printf(\"%d \", a[i][j] + b[j][i]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    int b[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            printf(\"%d \", a[i][j] + b[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Matrix addition pairs equal positions: row i, column j of one matrix with row i, column j of the other. Swapping the indexes of the second matrix reads its transpose instead."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 4 6[ \\t]*\\r?\\n8 10 12[ \\t]*\\r?\\n14 16 18\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

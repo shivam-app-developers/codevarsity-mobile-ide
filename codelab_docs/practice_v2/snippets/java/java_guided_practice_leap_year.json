@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Leap Year",
+    "language": "java",
+    "description": "A year is a leap year if it is divisible by 4, except century years, which must be divisible by 400.",
+    "ghostCode": "public class Main {\n    static boolean isLeap(int year) {\n        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;\n    }\n\n    public static void main(String[] args) {\n        int[] years = {1900, 2000, 2023, 2024};\n        for (int y : years) {\n            System.out.println(y + (isLeap(y) ? \" is a leap year\" : \" is not a leap year\"));\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1900 is not a leap year[ \\t]*\\r?\\n2000 is a leap year[ \\t]*\\r?\\n2023 is not a leap year[ \\t]*\\r?\\n2024 is a leap year\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

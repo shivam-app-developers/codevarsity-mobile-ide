@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Clearing Keeps Only That Bit",
+    "language": "c",
+    "problemDescription": "Clearing bit 2 of 255 should give 251, but the program prints 4.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    unsigned int value = 0xFF;\n    value &= (1u << 2);\n    printf(\"%u\\n\", value);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    unsigned int value = 0xFF;\n    value &= ~(1u << 2);\n    printf(\"%u\\n\", value);\n    return 0;\n}",
+      "explanation": "AND with a single-bit mask keeps only that bit and wipes the rest. To clear one bit you AND with the inverted mask ~(1u << 2), which keeps everything except that bit."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*251\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

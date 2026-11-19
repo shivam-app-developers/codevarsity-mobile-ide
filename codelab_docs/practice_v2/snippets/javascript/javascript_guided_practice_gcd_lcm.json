@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: GCD and LCM",
+    "language": "javascript",
+    "description": "Euclid's algorithm replaces (a, b) by (b, a % b) until b is 0. The least common multiple is a / gcd * b.",
+    "ghostCode": "function gcd(a, b) {\n  while (b !== 0) {\n    var temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\n\nfunction lcm(a, b) {\n  return a / gcd(a, b) * b;\n}\n\nconsole.log(gcd(48, 18), lcm(48, 18));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6 144\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

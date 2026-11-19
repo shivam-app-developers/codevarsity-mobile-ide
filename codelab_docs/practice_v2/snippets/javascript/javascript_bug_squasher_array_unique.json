@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Filter Keeps Every Item",
+    "language": "javascript",
+    "problemDescription": "Removing duplicates from [3,1,3,2,1,5] should give [3,1,2,5], but the program prints the array unchanged.",
+    "buggyCode": "function unique(list) {\n  return list.filter(function (item, index) {\n    return list.indexOf(item) !== -1;\n  });\n}\n\nconsole.log(unique([3, 1, 3, 2, 1, 5]));",
+    "solution": {
+      "code": "function unique(list) {\n  return list.filter(function (item, index) {\n    return list.indexOf(item) === index;\n  });\n}\n\nconsole.log(unique([3, 1, 3, 2, 1, 5]));",
+      "explanation": "indexOf returns the position of the first occurrence. An item is a first occurrence when that position equals its own index. Testing indexOf !== -1 is true for every item, because every item is in the list."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,1,2,5\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

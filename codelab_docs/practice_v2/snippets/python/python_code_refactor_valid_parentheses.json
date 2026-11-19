@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Stack Instead of Repeated Replacing",
+    "language": "python",
+    "problemDescription": "The function keeps deleting the pairs () [] {} until nothing changes, copying the string every round. Use a stack. The output must stay the same.",
+    "initialCode": "def is_valid(text):\n    while \"()\" in text or \"[]\" in text or \"{}\" in text:\n        text = text.replace(\"()\", \"\").replace(\"[]\", \"\").replace(\"{}\", \"\")\n    return text == \"\"\n\n\nprint(is_valid(\"({[]})\"), is_valid(\"([)]\"), is_valid(\"(((\"))",
+    "solution": {
+      "code": "def is_valid(text):\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for ch in text:\n        if ch in \"([{\":\n            stack.append(ch)\n        elif not stack or stack.pop() != pairs[ch]:\n            return False\n    return not stack\n\n\nprint(is_valid(\"({[]})\"), is_valid(\"([)]\"), is_valid(\"(((\"))",
+      "explanation": "The stack checks the text in one pass and stops at the first wrong bracket, while repeated replacing can take n squared steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*True False False\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

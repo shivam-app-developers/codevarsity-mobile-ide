@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Missing break Falls Through",
+    "language": "c",
+    "problemDescription": "Adding 6 and 3 should print 9, but the program prints 3 because more than one case runs.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a = 6, b = 3;\n    int result = 0;\n    char op = '+';\n    switch (op) {\n        case '+':\n            result = a + b;\n        case '-':\n            result = a - b;\n            break;\n        case '*':\n            result = a * b;\n            break;\n    }\n    printf(\"Result: %d\\n\", result);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a = 6, b = 3;\n    int result = 0;\n    char op = '+';\n    switch (op) {\n        case '+':\n            result = a + b;\n            break;\n        case '-':\n            result = a - b;\n            break;\n        case '*':\n            result = a * b;\n            break;\n    }\n    printf(\"Result: %d\\n\", result);\n    return 0;\n}",
+      "explanation": "Without break, execution falls through into the next case label and keeps running. After result = a + b the code also ran case '-' (result = a - b = 3) and only stopped at that case's break. End every case with break."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Result: 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

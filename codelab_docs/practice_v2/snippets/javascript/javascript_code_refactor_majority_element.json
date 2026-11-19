@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Boyer-Moore Instead of Counting Everything",
+    "language": "javascript",
+    "problemDescription": "Every value is counted in an object and then the highest count is searched. Use the Boyer-Moore voting method, which needs no object. The output must stay the same.",
+    "initialCode": "var nums = [2, 2, 1, 1, 1, 2, 2];\nvar counts = {};\nnums.forEach(function (n) {\n  counts[n] = (counts[n] || 0) + 1;\n});\nvar best = null;\nvar bestCount = 0;\nfor (var key in counts) {\n  if (counts[key] > bestCount) {\n    best = Number(key);\n    bestCount = counts[key];\n  }\n}\nconsole.log(best);",
+    "solution": {
+      "code": "var nums = [2, 2, 1, 1, 1, 2, 2];\nvar candidate = null;\nvar count = 0;\nnums.forEach(function (n) {\n  if (count === 0) {\n    candidate = n;\n  }\n  count += n === candidate ? 1 : -1;\n});\nconsole.log(candidate);",
+      "explanation": "Boyer-Moore uses constant extra memory and one pass. The counting object needs space for every distinct value and a second step to find the largest count."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

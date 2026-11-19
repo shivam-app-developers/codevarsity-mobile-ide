@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Evaluate a Postfix Expression",
+    "language": "c",
+    "description": "In postfix notation operators come after their operands. Push digits on a stack; an operator pops two values, computes, and pushes the result.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    const char *expr = \"23*54*+9-\";\n    int stack[20];\n    int top = -1;\n    for (int i = 0; expr[i] != '\\0'; i++) {\n        char c = expr[i];\n        if (c >= '0' && c <= '9') {\n            stack[++top] = c - '0';\n        } else {\n            int b = stack[top--];\n            int a = stack[top--];\n            if (c == '+') stack[++top] = a + b;\n            else if (c == '-') stack[++top] = a - b;\n            else if (c == '*') stack[++top] = a * b;\n            else if (c == '/') stack[++top] = a / b;\n        }\n    }\n    printf(\"Result: %d\\n\", stack[top]);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Result: 17\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

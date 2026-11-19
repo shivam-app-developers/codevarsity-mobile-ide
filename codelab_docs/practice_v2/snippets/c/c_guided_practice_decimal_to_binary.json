@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Decimal to Binary",
+    "language": "c",
+    "description": "Divide by 2 repeatedly and collect the remainders. The first remainder is the lowest bit, so print them in reverse.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 37;\n    int bits[32];\n    int count = 0;\n    while (n > 0) {\n        bits[count++] = n % 2;\n        n /= 2;\n    }\n    printf(\"Binary: \");\n    for (int i = count - 1; i >= 0; i--) {\n        printf(\"%d\", bits[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Binary: 100101\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

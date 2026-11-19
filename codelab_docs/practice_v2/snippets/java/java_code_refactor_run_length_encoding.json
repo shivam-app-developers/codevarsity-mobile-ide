@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Process Each Run in One Place",
+    "language": "java",
+    "problemDescription": "A loop compares each character with the previous one and has to flush the last run after the loop ends. Put the run counting into an encode method that handles each run as a unit. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String s = \"wwwwbbbw\";\n        String result = \"\";\n        int count = 1;\n        for (int i = 1; i <= s.length(); i++) {\n            if (i < s.length() && s.charAt(i) == s.charAt(i - 1)) {\n                count = count + 1;\n            } else {\n                result = result + s.charAt(i - 1) + count;\n                count = 1;\n            }\n        }\n        System.out.println(result);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String encode(String s) {\n        StringBuilder sb = new StringBuilder();\n        int i = 0;\n        while (i < s.length()) {\n            char c = s.charAt(i);\n            int run = 0;\n            while (i < s.length() && s.charAt(i) == c) {\n                run++;\n                i++;\n            }\n            sb.append(c).append(run);\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(encode(\"wwwwbbbw\"));\n    }\n}",
+      "explanation": "The old loop runs one step past the end of the string and mixes \"extend the run\" with \"write the run\". The nested loops separate the two jobs, and the StringBuilder avoids repeated copying."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*w4b3w1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

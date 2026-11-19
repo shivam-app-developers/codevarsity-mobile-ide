@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Return the Condition Directly",
+    "language": "javascript",
+    "problemDescription": "A boolean variable is set inside three nested ifs and returned at the end. Return the condition as one expression. The output must stay the same.",
+    "initialCode": "function isLeap(year) {\n  var leap = false;\n  if (year % 4 === 0) {\n    if (year % 100 === 0) {\n      if (year % 400 === 0) {\n        leap = true;\n      } else {\n        leap = false;\n      }\n    } else {\n      leap = true;\n    }\n  } else {\n    leap = false;\n  }\n  return leap;\n}\n\nconsole.log(isLeap(1900), isLeap(2000), isLeap(2024));",
+    "solution": {
+      "code": "function isLeap(year) {\n  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;\n}\n\nconsole.log(isLeap(1900), isLeap(2000), isLeap(2024));",
+      "explanation": "An if that only sets a boolean can be replaced by the condition itself. The one-line version mirrors the rule as it is written in the calendar definition."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*false true true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

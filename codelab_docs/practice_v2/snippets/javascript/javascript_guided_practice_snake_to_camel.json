@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: snake_case to camelCase",
+    "language": "javascript",
+    "description": "A capture group in the regular expression remembers the letter after the underscore. The replacement function receives the whole match followed by the groups.",
+    "ghostCode": "function snakeToCamel(name) {\n  return name.replace(/_([a-z])/g, function (match, letter) {\n    return letter.toUpperCase();\n  });\n}\n\nconsole.log(snakeToCamel(\"user_first_name\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*userFirstName\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

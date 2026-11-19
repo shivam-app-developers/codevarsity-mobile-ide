@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Result Starts at Zero",
+    "language": "c",
+    "problemDescription": "3 to the power of 4 should be 81, but the program prints 0.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int base = 3, exponent = 4;\n    int result = 0;\n    for (int i = 0; i < exponent; i++) {\n        result *= base;\n    }\n    printf(\"%d^%d = %d\\n\", base, exponent, result);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int base = 3, exponent = 4;\n    int result = 1;\n    for (int i = 0; i < exponent; i++) {\n        result *= base;\n    }\n    printf(\"%d^%d = %d\\n\", base, exponent, result);\n    return 0;\n}",
+      "explanation": "Multiplying by anything starting from 0 stays 0. The neutral value for multiplication is 1, so the product must start at 1."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\^4 = 81\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

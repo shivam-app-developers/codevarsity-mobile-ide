@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Arithmetic Instead of an Alphabet Lookup",
+    "language": "javascript",
+    "problemDescription": "Each letter is looked up in an alphabet string with indexOf. Use character codes with arithmetic. The output must stay the same.",
+    "initialCode": "var alphabet = \"abcdefghijklmnopqrstuvwxyz\";\nvar text = \"attack at dawn\";\nvar result = \"\";\nfor (var i = 0; i < text.length; i++) {\n  var pos = alphabet.indexOf(text.charAt(i));\n  result += pos === -1 ? text.charAt(i) : alphabet.charAt((pos + 5) % 26);\n}\nconsole.log(result);",
+    "solution": {
+      "code": "var text = \"attack at dawn\";\nvar result = \"\";\nfor (var i = 0; i < text.length; i++) {\n  var code = text.charCodeAt(i);\n  if (code >= 97 && code <= 122) {\n    result += String.fromCharCode((code - 97 + 5) % 26 + 97);\n  } else {\n    result += text.charAt(i);\n  }\n}\nconsole.log(result);",
+      "explanation": "A letter's position is just its code minus the code of a, so no lookup string or search is needed for each character."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fyyfhp fy ifbs\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Capital Vowels Counted as Consonants",
+    "language": "c",
+    "problemDescription": "Education has 5 vowels and 4 consonants, but the program prints vowels=4 consonants=5.",
+    "buggyCode": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    const char *word = \"Education\";\n    int vowels = 0, consonants = 0;\n    for (int i = 0; word[i] != '\\0'; i++) {\n        char c = word[i];\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {\n            vowels++;\n        } else if (isalpha(c)) {\n            consonants++;\n        }\n    }\n    printf(\"vowels=%d consonants=%d\\n\", vowels, consonants);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    const char *word = \"Education\";\n    int vowels = 0, consonants = 0;\n    for (int i = 0; word[i] != '\\0'; i++) {\n        char c = tolower(word[i]);\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {\n            vowels++;\n        } else if (isalpha(c)) {\n            consonants++;\n        }\n    }\n    printf(\"vowels=%d consonants=%d\\n\", vowels, consonants);\n    return 0;\n}",
+      "explanation": "The comparisons only list lower-case vowels, so the capital E of Education fails them and falls into the consonant branch. Convert each character with tolower before comparing."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*vowels=5 consonants=4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

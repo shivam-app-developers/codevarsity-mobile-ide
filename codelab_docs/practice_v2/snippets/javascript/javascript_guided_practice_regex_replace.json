@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Replacing with Regular Expressions",
+    "language": "javascript",
+    "description": "replace with a string pattern changes only the first match. A regular expression with the g flag changes all of them, and $1, $2 insert capture groups.",
+    "ghostCode": "console.log(\"a1b22c333\".replace(/\\d+/g, \"#\"));\nconsole.log(\"2024-05-17\".replace(/(\\d+)-(\\d+)-(\\d+)/, \"$3/$2/$1\"));\nconsole.log(\"  too   many    spaces \".trim().replace(/\\s+/g, \" \"));\nconsole.log(\"Hello World\".replace(/o/g, \"0\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a#b#c#[ \\t]*\\r?\\n17\\/05\\/2024[ \\t]*\\r?\\ntoo many spaces[ \\t]*\\r?\\nHell0 W0rld\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

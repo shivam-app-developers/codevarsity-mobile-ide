@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Stack Object Instead of a Loose Array and Index",
+    "language": "javascript",
+    "problemDescription": "A global array and a manual top index implement the stack. Wrap them in a Stack constructor with push, pop, peek and isEmpty. The output must stay the same.",
+    "initialCode": "var items = [];\nvar top = -1;\nitems[++top] = 1;\nitems[++top] = 2;\nitems[++top] = 3;\nvar popped = items[top--];\nconsole.log(popped, items[top], top === -1);",
+    "solution": {
+      "code": "function Stack() {\n  this.items = [];\n}\n\nStack.prototype.push = function (x) {\n  this.items.push(x);\n};\n\nStack.prototype.pop = function () {\n  return this.items.pop();\n};\n\nStack.prototype.peek = function () {\n  return this.items[this.items.length - 1];\n};\n\nStack.prototype.isEmpty = function () {\n  return this.items.length === 0;\n};\n\nvar s = new Stack();\ns.push(1);\ns.push(2);\ns.push(3);\nconsole.log(s.pop(), s.peek(), s.isEmpty());",
+      "explanation": "The array and its top position are kept together and updated only by the methods, so the index cannot get out of step with the contents."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 2 false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Prefix Is Cut from the Wrong End",
+    "language": "java",
+    "problemDescription": "The common prefixes should be fl and inter, but the program prints two empty lines.",
+    "buggyCode": "public class Main {\n    static String commonPrefix(String[] words) {\n        String prefix = words[0];\n        for (int i = 1; i < words.length; i++) {\n            while (!words[i].startsWith(prefix)) {\n                prefix = prefix.substring(1);\n            }\n        }\n        return prefix;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(commonPrefix(new String[] {\"flower\", \"flow\", \"flight\"}));\n        System.out.println(commonPrefix(new String[] {\"interview\", \"internet\", \"interval\"}));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String commonPrefix(String[] words) {\n        String prefix = words[0];\n        for (int i = 1; i < words.length; i++) {\n            while (!words[i].startsWith(prefix)) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n            }\n        }\n        return prefix;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(commonPrefix(new String[] {\"flower\", \"flow\", \"flight\"}));\n        System.out.println(commonPrefix(new String[] {\"interview\", \"internet\", \"interval\"}));\n    }\n}",
+      "explanation": "A prefix must keep its beginning, so a failed candidate is shortened from the end. substring(1) removes the first letter, which turns the prefix into a suffix that never matches until it is empty."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fl[ \\t]*\\r?\\ninter\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

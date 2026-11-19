@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Century Years Are Misjudged",
+    "language": "c",
+    "problemDescription": "1900 is not a leap year and 2000 is, but the program calls 1900 a leap year.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int years[] = {1900, 2000, 2100, 2400};\n    for (int i = 0; i < 4; i++) {\n        int y = years[i];\n        int leap = y % 4 == 0;\n        printf(\"%d %s\\n\", y, leap ? \"leap\" : \"common\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int years[] = {1900, 2000, 2100, 2400};\n    for (int i = 0; i < 4; i++) {\n        int y = years[i];\n        int leap = (y % 4 == 0 && y % 100 != 0) || y % 400 == 0;\n        printf(\"%d %s\\n\", y, leap ? \"leap\" : \"common\");\n    }\n    return 0;\n}",
+      "explanation": "Divisible by 4 is only the first rule. Years divisible by 100 are not leap years unless they are also divisible by 400, so 1900 and 2100 are common years while 2000 and 2400 are leap years."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1900 common[ \\t]*\\r?\\n2000 leap[ \\t]*\\r?\\n2100 common[ \\t]*\\r?\\n2400 leap\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

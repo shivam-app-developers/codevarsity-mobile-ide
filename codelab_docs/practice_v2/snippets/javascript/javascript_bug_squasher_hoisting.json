@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Calling a Function Expression Too Early",
+    "language": "javascript",
+    "problemDescription": "The program should print hi, but it crashes with a TypeError because greet is not yet a function when it is called.",
+    "buggyCode": "console.log(greet());\nvar greet = function () {\n  return \"hi\";\n};",
+    "solution": {
+      "code": "var greet = function () {\n  return \"hi\";\n};\nconsole.log(greet());",
+      "explanation": "For var greet = function () {...} only the name greet is hoisted, with the value undefined. The function is assigned when that line runs, so calling greet() earlier calls undefined. A function declaration, function greet() {...}, is hoisted with its body."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*hi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

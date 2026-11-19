@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Run-Length Encoding",
+    "language": "javascript",
+    "description": "Compress repeated characters into the character followed by its run length: aaabcc becomes a3b1c2.",
+    "ghostCode": "function encode(s) {\n  var out = \"\";\n  var i = 0;\n  while (i < s.length) {\n    var c = s.charAt(i);\n    var run = 0;\n    while (i < s.length && s.charAt(i) === c) {\n      run++;\n      i++;\n    }\n    out += c + run;\n  }\n  return out;\n}\n\nconsole.log(encode(\"aaabccdddd\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a3b1c2d4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

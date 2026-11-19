@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Extract a swap Function",
+    "language": "c",
+    "problemDescription": "The same three-line swap is written out three times. Move it into a swap function that uses pointers. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a = 30, b = 10, c = 20;\n    if (a > b) {\n        int t = a;\n        a = b;\n        b = t;\n    }\n    if (b > c) {\n        int t = b;\n        b = c;\n        c = t;\n    }\n    if (a > b) {\n        int t = a;\n        a = b;\n        b = t;\n    }\n    printf(\"%d %d %d\\n\", a, b, c);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid swap(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid order(int *x, int *y) {\n    if (*x > *y) {\n        swap(x, y);\n    }\n}\n\nint main() {\n    int a = 30, b = 10, c = 20;\n    order(&a, &b);\n    order(&b, &c);\n    order(&a, &b);\n    printf(\"%d %d %d\\n\", a, b, c);\n    return 0;\n}",
+      "explanation": "Each helper does one small job: swap exchanges two values and order calls it only when needed. The main function now reads like the algorithm: order the first pair, the second pair, then the first pair again."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10 20 30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

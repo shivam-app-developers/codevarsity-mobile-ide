@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Collections.max and min Instead of Hand-Written Loops",
+    "language": "java",
+    "problemDescription": "Two loops written by hand find the largest and smallest numbers of a list. Use Collections.max and Collections.min. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        Collections.addAll(nums, 4, 9, 1, 7);\n        int max = nums.get(0);\n        int min = nums.get(0);\n        for (int n : nums) {\n            if (n > max) {\n                max = n;\n            }\n            if (n < min) {\n                min = n;\n            }\n        }\n        System.out.println(max + \" \" + min);\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        Collections.addAll(nums, 4, 9, 1, 7);\n        System.out.println(Collections.max(nums) + \" \" + Collections.min(nums));\n    }\n}",
+      "explanation": "The standard library already handles this, including an empty-list error, so the code states what is wanted instead of how to compute it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

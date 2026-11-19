@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Stack Instead of Repeated Replacing",
+    "language": "javascript",
+    "problemDescription": "The function keeps deleting the pairs () [] {} until nothing changes, which copies the string many times. Use a stack. The output must stay the same.",
+    "initialCode": "function isValid(s) {\n  while (s.indexOf(\"()\") !== -1 || s.indexOf(\"[]\") !== -1 || s.indexOf(\"{}\") !== -1) {\n    s = s.replace(\"()\", \"\").replace(\"[]\", \"\").replace(\"{}\", \"\");\n  }\n  return s.length === 0;\n}\n\nconsole.log(isValid(\"({[]})\"), isValid(\"([)]\"), isValid(\"(((\"));",
+    "solution": {
+      "code": "function isValid(s) {\n  var stack = [];\n  var pairs = { \")\": \"(\", \"]\": \"[\", \"}\": \"{\" };\n  for (var i = 0; i < s.length; i++) {\n    var c = s.charAt(i);\n    if (c === \"(\" || c === \"[\" || c === \"{\") {\n      stack.push(c);\n    } else if (stack.pop() !== pairs[c]) {\n      return false;\n    }\n  }\n  return stack.length === 0;\n}\n\nconsole.log(isValid(\"({[]})\"), isValid(\"([)]\"), isValid(\"(((\"));",
+      "explanation": "The stack checks the string in one pass and stops at the first wrong bracket, while repeated replacing can take n squared steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true false false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

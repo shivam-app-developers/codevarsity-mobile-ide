@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Roman Numeral to Integer",
+    "language": "java",
+    "description": "Add the value of each symbol, but when a symbol is smaller than the one after it (as in IV or CM), subtract it instead.",
+    "ghostCode": "public class Main {\n    static int value(char c) {\n        switch (c) {\n            case 'I': return 1;\n            case 'V': return 5;\n            case 'X': return 10;\n            case 'L': return 50;\n            case 'C': return 100;\n            case 'D': return 500;\n            case 'M': return 1000;\n            default: return 0;\n        }\n    }\n\n    static int romanToInt(String s) {\n        int total = 0;\n        for (int i = 0; i < s.length(); i++) {\n            int current = value(s.charAt(i));\n            if (i + 1 < s.length() && current < value(s.charAt(i + 1))) {\n                total -= current;\n            } else {\n                total += current;\n            }\n        }\n        return total;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(romanToInt(\"III\"));\n        System.out.println(romanToInt(\"IV\"));\n        System.out.println(romanToInt(\"MCMXCIV\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3[ \\t]*\\r?\\n4[ \\t]*\\r?\\n1994\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

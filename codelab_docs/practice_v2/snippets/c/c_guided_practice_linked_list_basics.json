@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Linked List Basics",
+    "language": "c",
+    "description": "Each node holds a value and a pointer to the next node; the last node points to NULL. Build the list by linking new nodes in front of the head, then walk it.",
+    "ghostCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nint main() {\n    struct Node *head = NULL;\n    for (int v = 3; v >= 1; v--) {\n        struct Node *node = malloc(sizeof(struct Node));\n        node->value = v * 10;\n        node->next = head;\n        head = node;\n    }\n    for (struct Node *p = head; p != NULL; p = p->next) {\n        printf(\"%d -> \", p->value);\n    }\n    printf(\"NULL\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10 -> 20 -> 30 -> NULL\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: equals and hashCode",
+    "language": "java",
+    "description": "By default two objects are equal only if they are the same object. Override equals to compare values, and hashCode so equal objects land in the same hash bucket.",
+    "ghostCode": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Point a = new Point(1, 2);\n        Point b = new Point(1, 2);\n        System.out.println(a == b);\n        System.out.println(a.equals(b));\n        Set<Point> set = new HashSet<>();\n        set.add(a);\n        set.add(b);\n        System.out.println(set.size());\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public boolean equals(Object o) {\n        if (this == o) {\n            return true;\n        }\n        if (!(o instanceof Point)) {\n            return false;\n        }\n        Point p = (Point) o;\n        return x == p.x && y == p.y;\n    }\n\n    @Override\n    public int hashCode() {\n        return 31 * x + y;\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*false[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

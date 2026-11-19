@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: find Instead of a Loop with break",
+    "language": "javascript",
+    "problemDescription": "A loop with a variable and a break looks for the first user who is at least 18. Use find. The output must stay the same.",
+    "initialCode": "var users = [\n  { name: \"Asha\", age: 17 },\n  { name: \"Ravi\", age: 25 },\n  { name: \"Meena\", age: 31 }\n];\nvar found = null;\nfor (var i = 0; i < users.length; i++) {\n  if (users[i].age >= 18) {\n    found = users[i];\n    break;\n  }\n}\nconsole.log(found.name);",
+    "solution": {
+      "code": "var users = [\n  { name: \"Asha\", age: 17 },\n  { name: \"Ravi\", age: 25 },\n  { name: \"Meena\", age: 31 }\n];\nvar found = users.find(function (u) {\n  return u.age >= 18;\n});\nconsole.log(found.name);",
+      "explanation": "find stops at the first match by itself and returns undefined when there is none, so no flag variable or break statement is needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Ravi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

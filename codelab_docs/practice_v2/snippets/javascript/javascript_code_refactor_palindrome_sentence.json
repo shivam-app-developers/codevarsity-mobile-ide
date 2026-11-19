@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Clean and Reverse Instead of Two Pointers with Regex Tests",
+    "language": "javascript",
+    "problemDescription": "Two pointers skip non-letters one step at a time, using a regular expression test on each character. Clean the text once, then compare it with its reverse. The output must stay the same.",
+    "initialCode": "var text = \"No lemon, no melon\";\nvar left = 0;\nvar right = text.length - 1;\nvar ok = true;\nwhile (left < right) {\n  if (!/[a-z]/i.test(text.charAt(left))) {\n    left++;\n  } else if (!/[a-z]/i.test(text.charAt(right))) {\n    right--;\n  } else {\n    if (text.charAt(left).toLowerCase() !== text.charAt(right).toLowerCase()) {\n      ok = false;\n    }\n    left++;\n    right--;\n  }\n}\nconsole.log(ok);",
+    "solution": {
+      "code": "var text = \"No lemon, no melon\";\nvar cleaned = text.toLowerCase().replace(/[^a-z]/g, \"\");\nconsole.log(cleaned === cleaned.split(\"\").reverse().join(\"\"));",
+      "explanation": "Cleaning first separates \"what counts as a letter\" from \"is it symmetric\", and the result reads like the definition of a palindrome."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

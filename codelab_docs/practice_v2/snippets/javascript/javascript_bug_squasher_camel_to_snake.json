@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only the First Capital Is Replaced",
+    "language": "javascript",
+    "problemDescription": "userFirstName should become user_first_name, but the program prints user_firstName.",
+    "buggyCode": "function camelToSnake(name) {\n  return name.replace(/[A-Z]/, function (letter) {\n    return \"_\" + letter.toLowerCase();\n  });\n}\n\nconsole.log(camelToSnake(\"userFirstName\"));",
+    "solution": {
+      "code": "function camelToSnake(name) {\n  return name.replace(/[A-Z]/g, function (letter) {\n    return \"_\" + letter.toLowerCase();\n  });\n}\n\nconsole.log(camelToSnake(\"userFirstName\"));",
+      "explanation": "Without the g (global) flag, replace stops after the first match. The flag makes it replace every match in the string."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*user_first_name\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Memoization",
+    "language": "javascript",
+    "description": "A memoized function remembers the result for each argument, so calling it again with the same argument skips the work.",
+    "ghostCode": "function memoize(fn) {\n  var cache = {};\n  return function (n) {\n    if (!(n in cache)) {\n      cache[n] = fn(n);\n    }\n    return cache[n];\n  };\n}\n\nvar calls = 0;\nvar square = memoize(function (n) {\n  calls += 1;\n  return n * n;\n});\nconsole.log(square(4), square(4), square(5));\nconsole.log(\"calls: \" + calls);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*16 16 25[ \\t]*\\r?\\ncalls: 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

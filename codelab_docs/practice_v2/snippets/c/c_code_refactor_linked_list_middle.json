@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Pass with Two Pointers",
+    "language": "c",
+    "problemDescription": "The list is walked once to count its nodes and a second time to walk half the count. Find the middle in a single pass with a slow and a fast pointer. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 7; v >= 1; v--) {\n        list = push(list, v * 10);\n    }\n    int length = 0;\n    for (struct Node *p = list; p != NULL; p = p->next) {\n        length++;\n    }\n    struct Node *mid = list;\n    for (int i = 0; i < length / 2; i++) {\n        mid = mid->next;\n    }\n    printf(\"%d\\n\", mid->value);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 7; v >= 1; v--) {\n        list = push(list, v * 10);\n    }\n    struct Node *slow = list, *fast = list;\n    while (fast != NULL && fast->next != NULL) {\n        slow = slow->next;\n        fast = fast->next->next;\n    }\n    printf(\"%d\\n\", slow->value);\n    return 0;\n}",
+      "explanation": "Two pointers find the middle in one pass without counting first. This slow and fast pointer idea also detects cycles in a list."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*40\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

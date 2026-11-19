@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Multiple Says FizzBuzz",
+    "language": "c",
+    "problemDescription": "3 should print Fizz and 5 should print Buzz, but the program prints FizzBuzz for both.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 15; i++) {\n        if (i % 3 == 0 || i % 5 == 0) {\n            printf(\"FizzBuzz \");\n        } else if (i % 3 == 0) {\n            printf(\"Fizz \");\n        } else if (i % 5 == 0) {\n            printf(\"Buzz \");\n        } else {\n            printf(\"%d \", i);\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 15; i++) {\n        if (i % 3 == 0 && i % 5 == 0) {\n            printf(\"FizzBuzz \");\n        } else if (i % 3 == 0) {\n            printf(\"Fizz \");\n        } else if (i % 5 == 0) {\n            printf(\"Buzz \");\n        } else {\n            printf(\"%d \", i);\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "FizzBuzz is for numbers divisible by both 3 and 5, which needs &&. With || the first branch catches every number divisible by either one, so the Fizz and Buzz branches are never reached."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

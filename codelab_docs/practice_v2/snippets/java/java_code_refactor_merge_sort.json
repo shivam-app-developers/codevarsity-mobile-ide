@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Merge Sort Instead of Bubble Sort",
+    "language": "java",
+    "problemDescription": "Nested loops compare neighbours repeatedly, taking about n squared steps. Sort with merge sort instead. The output must stay the same.",
+    "initialCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {5, 2, 9, 1, 7, 3};\n        for (int i = 0; i < a.length; i++) {\n            for (int j = 0; j < a.length - 1; j++) {\n                if (a[j] > a[j + 1]) {\n                    int t = a[j];\n                    a[j] = a[j + 1];\n                    a[j + 1] = t;\n                }\n            }\n        }\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static void mergeSort(int[] a, int left, int right) {\n        if (left >= right) {\n            return;\n        }\n        int mid = (left + right) / 2;\n        mergeSort(a, left, mid);\n        mergeSort(a, mid + 1, right);\n        int[] merged = new int[right - left + 1];\n        int i = left, j = mid + 1, k = 0;\n        while (i <= mid && j <= right) {\n            merged[k++] = a[i] <= a[j] ? a[i++] : a[j++];\n        }\n        while (i <= mid) {\n            merged[k++] = a[i++];\n        }\n        while (j <= right) {\n            merged[k++] = a[j++];\n        }\n        System.arraycopy(merged, 0, a, left, merged.length);\n    }\n\n    public static void main(String[] args) {\n        int[] a = {5, 2, 9, 1, 7, 3};\n        mergeSort(a, 0, a.length - 1);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+      "explanation": "Merge sort halves the problem log2(n) times and does about n work per level, so it needs about n log n steps. Bubble sort needs n squared, which is tens of thousands of times slower for a million elements."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3, 5, 7, 9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Swap In Place, No Second Array",
+    "language": "c",
+    "problemDescription": "A second array holds the result, then a loop fills in the zeros. Do the same job in place by swapping each non-zero value into the next free position. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {0, 2, 0, 4, 5};\n    int b[5];\n    int k = 0;\n    for (int i = 0; i < 5; i++) {\n        if (a[i] != 0) {\n            b[k] = a[i];\n            k++;\n        }\n    }\n    for (int i = k; i < 5; i++) {\n        b[i] = 0;\n    }\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", b[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {0, 2, 0, 4, 5};\n    int pos = 0;\n    for (int i = 0; i < 5; i++) {\n        if (a[i] != 0) {\n            int temp = a[pos];\n            a[pos] = a[i];\n            a[i] = temp;\n            pos++;\n        }\n    }\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", a[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Swapping each non-zero value with the element at pos pushes the zeros back as a side effect, so no extra array and no fill loop are needed. It uses constant extra memory."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 4 5 0 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

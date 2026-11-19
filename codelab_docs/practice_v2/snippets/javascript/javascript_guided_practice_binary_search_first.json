@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: First Occurrence with Binary Search",
+    "language": "javascript",
+    "description": "When a value occurs several times, keep searching to the left after each hit and remember the best index found so far.",
+    "ghostCode": "function firstIndex(a, target) {\n  var low = 0;\n  var high = a.length - 1;\n  var answer = -1;\n  while (low <= high) {\n    var mid = Math.floor((low + high) / 2);\n    if (a[mid] === target) {\n      answer = mid;\n      high = mid - 1;\n    } else if (a[mid] < target) {\n      low = mid + 1;\n    } else {\n      high = mid - 1;\n    }\n  }\n  return answer;\n}\n\nvar data = [1, 2, 2, 2, 3, 5];\nconsole.log(firstIndex(data, 2), firstIndex(data, 4));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 -1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

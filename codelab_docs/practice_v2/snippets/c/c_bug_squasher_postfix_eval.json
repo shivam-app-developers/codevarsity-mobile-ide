@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Operands Popped in the Wrong Order",
+    "language": "c",
+    "problemDescription": "The expression 23*54*+9- equals 17, but the program prints -17.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    const char *expr = \"23*54*+9-\";\n    int stack[20];\n    int top = -1;\n    for (int i = 0; expr[i] != '\\0'; i++) {\n        char c = expr[i];\n        if (c >= '0' && c <= '9') {\n            stack[++top] = c - '0';\n        } else {\n            int a = stack[top--];\n            int b = stack[top--];\n            if (c == '+') stack[++top] = a + b;\n            else if (c == '-') stack[++top] = a - b;\n            else if (c == '*') stack[++top] = a * b;\n            else if (c == '/') stack[++top] = a / b;\n        }\n    }\n    printf(\"%d\\n\", stack[top]);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    const char *expr = \"23*54*+9-\";\n    int stack[20];\n    int top = -1;\n    for (int i = 0; expr[i] != '\\0'; i++) {\n        char c = expr[i];\n        if (c >= '0' && c <= '9') {\n            stack[++top] = c - '0';\n        } else {\n            int b = stack[top--];\n            int a = stack[top--];\n            if (c == '+') stack[++top] = a + b;\n            else if (c == '-') stack[++top] = a - b;\n            else if (c == '*') stack[++top] = a * b;\n            else if (c == '/') stack[++top] = a / b;\n        }\n    }\n    printf(\"%d\\n\", stack[top]);\n    return 0;\n}",
+      "explanation": "The right operand was pushed last, so it is popped first. Popping into a first swaps the roles of the two operands, which does not matter for + and * but turns 26 - 9 into 9 - 26."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*17\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Table Stops One Row Early",
+    "language": "c",
+    "problemDescription": "The table of 5 should run from 5 x 1 up to 5 x 10, but the last row (5 x 10 = 50) is missing.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i < 10; i++) {\n        printf(\"5 x %d = %d\\n\", i, 5 * i);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 10; i++) {\n        printf(\"5 x %d = %d\\n\", i, 5 * i);\n    }\n    return 0;\n}",
+      "explanation": "i < 10 stops when i reaches 10, so the tenth row is never printed. To include the last value the loop condition has to be i <= 10."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5 x 1 = 5[ \\t]*\\r?\\n5 x 2 = 10[ \\t]*\\r?\\n5 x 3 = 15[ \\t]*\\r?\\n5 x 4 = 20[ \\t]*\\r?\\n5 x 5 = 25[ \\t]*\\r?\\n5 x 6 = 30[ \\t]*\\r?\\n5 x 7 = 35[ \\t]*\\r?\\n5 x 8 = 40[ \\t]*\\r?\\n5 x 9 = 45[ \\t]*\\r?\\n5 x 10 = 50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

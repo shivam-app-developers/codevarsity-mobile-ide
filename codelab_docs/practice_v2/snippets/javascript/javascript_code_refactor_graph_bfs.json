@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A visited Object Instead of Searching an Array",
+    "language": "javascript",
+    "problemDescription": "The visited nodes are kept in an array and each neighbour is looked up with indexOf, which scans the array every time. Use an object for the visited marks and a separate result list. The output must stay the same.",
+    "initialCode": "var graph = { 0: [1, 2], 1: [0, 3], 2: [0, 3, 4], 3: [1, 2], 4: [2] };\nvar visited = [0];\nvar queue = [0];\nwhile (queue.length > 0) {\n  var node = queue.shift();\n  graph[node].forEach(function (next) {\n    if (visited.indexOf(next) === -1) {\n      visited.push(next);\n      queue.push(next);\n    }\n  });\n}\nconsole.log(visited);",
+    "solution": {
+      "code": "var graph = { 0: [1, 2], 1: [0, 3], 2: [0, 3, 4], 3: [1, 2], 4: [2] };\nvar seen = { 0: true };\nvar queue = [0];\nvar order = [];\nwhile (queue.length > 0) {\n  var node = queue.shift();\n  order.push(node);\n  graph[node].forEach(function (next) {\n    if (!seen[next]) {\n      seen[next] = true;\n      queue.push(next);\n    }\n  });\n}\nconsole.log(order);",
+      "explanation": "Looking a key up in an object takes constant time, while indexOf scans the array, so the check no longer slows down on big graphs. Keeping the visiting order in its own list makes that purpose clear."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0,1,2,3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

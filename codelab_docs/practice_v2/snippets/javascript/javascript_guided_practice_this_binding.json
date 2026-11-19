@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: What this Points To",
+    "language": "javascript",
+    "description": "Inside a method, this is the object the method was called on. If you pull the method out of its object, this is lost, unless you bind it.",
+    "ghostCode": "var person = {\n  name: \"Asha\",\n  greet: function () {\n    return \"Hi, I am \" + this.name;\n  }\n};\n\nconsole.log(person.greet());\nvar greet = person.greet.bind(person);\nconsole.log(greet());",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hi, I am Asha[ \\t]*\\r?\\nHi, I am Asha\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

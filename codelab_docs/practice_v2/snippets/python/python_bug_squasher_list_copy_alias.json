@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: All Rows of the Grid Are the Same List",
+    "language": "python",
+    "problemDescription": "Setting the first cell of the grid to 1 should change only the first row, but all three rows change.",
+    "buggyCode": "grid = [[0] * 3] * 3\ngrid[0][0] = 1\nprint(grid)",
+    "solution": {
+      "code": "grid = [[0] * 3 for _ in range(3)]\ngrid[0][0] = 1\nprint(grid)",
+      "explanation": "[row] * 3 repeats a reference to the same row list three times, so a change through one row shows up in all of them. A comprehension creates a new list for every row."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1, 0, 0\\], \\[0, 0, 0\\], \\[0, 0, 0\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Explicit Conversions Instead of Tricks",
+    "language": "javascript",
+    "problemDescription": "The conversions use the unary plus, an empty string and a double negation. Write them with Number, String and Boolean. The output must stay the same.",
+    "initialCode": "var a = +\"42\";\nvar b = \"\" + 7;\nvar c = !!\"hello\";\nconsole.log(a + 1, b + 1, c);",
+    "solution": {
+      "code": "var a = Number(\"42\");\nvar b = String(7);\nvar c = Boolean(\"hello\");\nconsole.log(a + 1, b + 1, c);",
+      "explanation": "Number(\"42\") says what it does, while +\"42\" has to be recognised as a conversion. Readable code avoids relying on the coercion rules of operators."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*43 71 true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

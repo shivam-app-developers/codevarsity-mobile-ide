@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Two Sum",
+    "language": "c",
+    "description": "A classic interview question: find two different elements whose sum equals the target. Check every pair with two nested loops.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int nums[] = {2, 7, 11, 15};\n    int target = 9;\n    for (int i = 0; i < 4; i++) {\n        for (int j = i + 1; j < 4; j++) {\n            if (nums[i] + nums[j] == target) {\n                printf(\"Indices: %d and %d\\n\", i, j);\n            }\n        }\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Indices: 0 and 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

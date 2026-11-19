@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Handle Each Run as a Unit",
+    "language": "javascript",
+    "problemDescription": "A loop compares each character with the previous one and has to write the last run after the loop ends. Use nested loops that handle one whole run at a time inside an encode function. The output must stay the same.",
+    "initialCode": "var s = \"wwwwbbbw\";\nvar result = \"\";\nvar count = 1;\nfor (var i = 1; i <= s.length; i++) {\n  if (i < s.length && s.charAt(i) === s.charAt(i - 1)) {\n    count = count + 1;\n  } else {\n    result = result + s.charAt(i - 1) + count;\n    count = 1;\n  }\n}\nconsole.log(result);",
+    "solution": {
+      "code": "function encode(s) {\n  var out = \"\";\n  var i = 0;\n  while (i < s.length) {\n    var c = s.charAt(i);\n    var run = 0;\n    while (i < s.length && s.charAt(i) === c) {\n      run++;\n      i++;\n    }\n    out += c + run;\n  }\n  return out;\n}\n\nconsole.log(encode(\"wwwwbbbw\"));",
+      "explanation": "The old loop runs one step past the end of the string to flush the last run. Handling a run at a time separates \"count the run\" from \"write the run\"."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*w4b3w1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

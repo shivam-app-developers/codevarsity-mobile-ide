@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use ctype Instead of Magic Numbers",
+    "language": "c",
+    "problemDescription": "The code compares against the numbers 97, 122, 65, 90 and 32. Rewrite it with isalpha, toupper and tolower from ctype.h. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"Code 4 Fun\";\n    for (int i = 0; s[i] != 0; i++) {\n        if (s[i] >= 97 && s[i] <= 122) {\n            s[i] = s[i] - 32;\n        } else if (s[i] >= 65 && s[i] <= 90) {\n            s[i] = s[i] + 32;\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    char s[] = \"Code 4 Fun\";\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (isalpha(s[i])) {\n            s[i] = (s[i] >= 'a' && s[i] <= 'z') ? toupper(s[i]) : tolower(s[i]);\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+      "explanation": "Character literals like 'a' and library helpers name what they mean, while 97 and 32 are magic numbers nobody can read at a glance."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cODE 4 fUN\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

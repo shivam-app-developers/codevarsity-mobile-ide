@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Queue with an Array",
+    "language": "c",
+    "description": "A queue is first-in, first-out. Items are added at the rear and removed from the front, so keep two indexes that only move forward.",
+    "ghostCode": "#include <stdio.h>\n\n#define MAX 5\n\nint queue[MAX];\nint front = 0, rear = 0;\n\nvoid enqueue(int value) {\n    if (rear == MAX) {\n        printf(\"Queue full\\n\");\n        return;\n    }\n    queue[rear++] = value;\n}\n\nint dequeue() {\n    if (front == rear) {\n        printf(\"Queue empty\\n\");\n        return -1;\n    }\n    return queue[front++];\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d\\n\", dequeue());\n    printf(\"%d\\n\", dequeue());\n    enqueue(4);\n    printf(\"%d\\n\", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3[ \\t]*\\r?\\n4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

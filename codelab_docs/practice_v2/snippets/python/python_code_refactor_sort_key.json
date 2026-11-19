@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: sorted with a key Instead of a Hand-Written Sort",
+    "language": "python",
+    "problemDescription": "A bubble sort with a compound comparison orders the students by marks (high first) and then by name. Use sorted with a key. The output must stay the same.",
+    "initialCode": "students = [(\"Ravi\", 72), (\"Meena\", 91), (\"Kiran\", 72), (\"Asha\", 91)]\nitems = list(students)\nfor i in range(len(items)):\n    for j in range(len(items) - 1 - i):\n        a, b = items[j], items[j + 1]\n        if a[1] < b[1] or (a[1] == b[1] and a[0] > b[0]):\n            items[j], items[j + 1] = items[j + 1], items[j]\nprint(items)",
+    "solution": {
+      "code": "students = [(\"Ravi\", 72), (\"Meena\", 91), (\"Kiran\", 72), (\"Asha\", 91)]\nitems = sorted(students, key=lambda s: (-s[1], s[0]))\nprint(items)",
+      "explanation": "The key function states the ordering rule in one line. sorted is faster than a bubble sort and cannot get the compound comparison wrong."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('Asha', 91\\), \\('Meena', 91\\), \\('Kiran', 72\\), \\('Ravi', 72\\)\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Calling super in an Overriding Method",
+    "language": "java",
+    "description": "An overriding method can build on the parent's version by calling super.method() and adding to the result.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Vehicle car = new Car();\n        System.out.println(car.describe());\n    }\n}\n\nclass Vehicle {\n    String describe() {\n        return \"A vehicle\";\n    }\n}\n\nclass Car extends Vehicle {\n    @Override\n    String describe() {\n        return super.describe() + \" with 4 wheels\";\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A vehicle with 4 wheels\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

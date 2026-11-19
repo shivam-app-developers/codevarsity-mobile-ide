@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Extract the Membership Test",
+    "language": "c",
+    "problemDescription": "A flag and an inner loop are tangled into the main loop. Move the search into a helper function. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {5, 5, 6, 6, 6, 7, 5};\n    int u[7];\n    int c = 0;\n    for (int i = 0; i < 7; i++) {\n        int f = 0;\n        for (int j = 0; j < c; j++) {\n            if (u[j] == a[i]) {\n                f = 1;\n            }\n        }\n        if (f == 0) {\n            u[c] = a[i];\n            c = c + 1;\n        }\n    }\n    for (int i = 0; i < c; i++) {\n        printf(\"%d\\n\", u[i]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint contains(const int values[], int count, int target) {\n    for (int i = 0; i < count; i++) {\n        if (values[i] == target) {\n            return 1;\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int numbers[] = {5, 5, 6, 6, 6, 7, 5};\n    int unique[7];\n    int count = 0;\n    for (int i = 0; i < 7; i++) {\n        if (!contains(unique, count, numbers[i])) {\n            unique[count++] = numbers[i];\n        }\n    }\n    for (int i = 0; i < count; i++) {\n        printf(\"%d\\n\", unique[i]);\n    }\n    return 0;\n}",
+      "explanation": "contains returns as soon as it finds the value, so the flag variable disappears. main now reads like the idea: add the number if the result does not contain it yet."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5[ \\t]*\\r?\\n6[ \\t]*\\r?\\n7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

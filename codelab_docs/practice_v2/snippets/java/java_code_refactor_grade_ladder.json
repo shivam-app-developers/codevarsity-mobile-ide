@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Else-If Ladder Instead of Range Checks",
+    "language": "java",
+    "problemDescription": "Each grade is a separate if with a lower and an upper bound, and the result is stored in a variable. Use an else-if ladder with early returns, where the upper bounds are implied. The output must stay the same.",
+    "initialCode": "public class Main {\n    static char grade(int marks) {\n        char g = 'F';\n        if (marks >= 90) {\n            g = 'A';\n        }\n        if (marks >= 75 && marks < 90) {\n            g = 'B';\n        }\n        if (marks >= 60 && marks < 75) {\n            g = 'C';\n        }\n        if (marks >= 40 && marks < 60) {\n            g = 'D';\n        }\n        return g;\n    }\n\n    public static void main(String[] args) {\n        int[] marks = {95, 82, 60, 41, 12};\n        for (int m : marks) {\n            System.out.println(m + \" \" + grade(m));\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static char grade(int marks) {\n        if (marks >= 90) {\n            return 'A';\n        } else if (marks >= 75) {\n            return 'B';\n        } else if (marks >= 60) {\n            return 'C';\n        } else if (marks >= 40) {\n            return 'D';\n        }\n        return 'F';\n    }\n\n    public static void main(String[] args) {\n        int[] marks = {95, 82, 60, 41, 12};\n        for (int m : marks) {\n            System.out.println(m + \" \" + grade(m));\n        }\n    }\n}",
+      "explanation": "Because the ladder stops at the first match, each branch only needs its lower bound; the upper bound is already covered by the branches above. There is no way to leave a gap or overlap between ranges."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*95 A[ \\t]*\\r?\\n82 B[ \\t]*\\r?\\n60 C[ \\t]*\\r?\\n41 D[ \\t]*\\r?\\n12 F\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

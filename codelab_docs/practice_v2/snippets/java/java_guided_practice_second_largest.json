@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Second Largest Element",
+    "language": "java",
+    "description": "Track the largest and the second largest in one pass. A new value either becomes the largest (pushing the old one down) or only beats the second.",
+    "ghostCode": "public class Main {\n    static int secondLargest(int[] a) {\n        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;\n        for (int x : a) {\n            if (x > first) {\n                second = first;\n                first = x;\n            } else if (x > second && x != first) {\n                second = x;\n            }\n        }\n        return second;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(secondLargest(new int[] {12, 35, 1, 10, 34, 1}));\n        System.out.println(secondLargest(new int[] {5, 5, 4}));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*34[ \\t]*\\r?\\n4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

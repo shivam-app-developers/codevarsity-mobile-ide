@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Enum Compared with a String",
+    "language": "java",
+    "problemDescription": "The level HIGH should print Alert!, but the program prints Fine.",
+    "buggyCode": "public class Main {\n    enum Level { LOW, MEDIUM, HIGH }\n\n    public static void main(String[] args) {\n        Level level = Level.valueOf(\"HIGH\");\n        if (level.equals(\"HIGH\")) {\n            System.out.println(\"Alert!\");\n        } else {\n            System.out.println(\"Fine\");\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    enum Level { LOW, MEDIUM, HIGH }\n\n    public static void main(String[] args) {\n        Level level = Level.valueOf(\"HIGH\");\n        if (level == Level.HIGH) {\n            System.out.println(\"Alert!\");\n        } else {\n            System.out.println(\"Fine\");\n        }\n    }\n}",
+      "explanation": "An enum constant is an object of the enum type, never equal to a String, so equals(\"HIGH\") is always false (and the compiler does not warn). Compare enum constants with Level.HIGH, using == or equals."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Alert!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

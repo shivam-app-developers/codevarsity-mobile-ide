@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Object.keys and forEach",
+    "language": "javascript",
+    "problemDescription": "The keys are first collected into an array with a for...in loop and then printed with an index loop. Use Object.keys with forEach. The output must stay the same.",
+    "initialCode": "var stock = { apple: 3, pear: 0, mango: 7 };\nvar keys = [];\nfor (var k in stock) {\n  keys.push(k);\n}\nfor (var i = 0; i < keys.length; i++) {\n  console.log(keys[i] + \" -> \" + stock[keys[i]]);\n}",
+    "solution": {
+      "code": "var stock = { apple: 3, pear: 0, mango: 7 };\nObject.keys(stock).forEach(function (key) {\n  console.log(key + \" -> \" + stock[key]);\n});",
+      "explanation": "Object.keys returns only the object's own keys, so no hasOwnProperty check is needed, and forEach removes the extra array and the index variable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apple -> 3[ \\t]*\\r?\\npear -> 0[ \\t]*\\r?\\nmango -> 7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

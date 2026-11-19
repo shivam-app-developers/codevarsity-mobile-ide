@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: One Exception Type Is Not Handled",
+    "language": "java",
+    "problemDescription": "Index 5 should print Caught ArrayIndexOutOfBoundsException, but the program crashes there.",
+    "buggyCode": "public class Main {\n    static void run(int[] data, int index, int divisor) {\n        try {\n            System.out.println(data[index] / divisor);\n        } catch (ArithmeticException e) {\n            System.out.println(\"Caught \" + e.getClass().getSimpleName());\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] data = {10, 20, 30};\n        run(data, 1, 2);\n        run(data, 5, 2);\n        run(data, 0, 0);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static void run(int[] data, int index, int divisor) {\n        try {\n            System.out.println(data[index] / divisor);\n        } catch (ArrayIndexOutOfBoundsException | ArithmeticException e) {\n            System.out.println(\"Caught \" + e.getClass().getSimpleName());\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] data = {10, 20, 30};\n        run(data, 1, 2);\n        run(data, 5, 2);\n        run(data, 0, 0);\n    }\n}",
+      "explanation": "Each exception type that can occur needs a matching catch. The array access at index 5 throws ArrayIndexOutOfBoundsException, which a catch for ArithmeticException alone does not cover."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10[ \\t]*\\r?\\nCaught ArrayIndexOutOfBoundsException[ \\t]*\\r?\\nCaught ArithmeticException\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

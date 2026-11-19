@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: All Callbacks Return the Same Number",
+    "language": "javascript",
+    "problemDescription": "The callbacks should return 0, 1 and 2, but all three return 3.",
+    "buggyCode": "var callbacks = [];\nfor (var i = 0; i < 3; i++) {\n  callbacks.push(function () {\n    return i;\n  });\n}\nconsole.log(callbacks[0](), callbacks[1](), callbacks[2]());",
+    "solution": {
+      "code": "var callbacks = [];\nfor (var i = 0; i < 3; i++) {\n  callbacks.push((function (n) {\n    return function () {\n      return n;\n    };\n  })(i));\n}\nconsole.log(callbacks[0](), callbacks[1](), callbacks[2]());",
+      "explanation": "All three functions refer to the same variable i, which is 3 when the loop has finished. The immediately invoked function copies the current value into its own parameter n for each closure."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

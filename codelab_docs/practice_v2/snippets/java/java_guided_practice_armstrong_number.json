@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Armstrong Numbers",
+    "language": "java",
+    "description": "An Armstrong number equals the sum of its digits, each raised to the power of the number of digits. 153 = 1 cubed + 5 cubed + 3 cubed.",
+    "ghostCode": "public class Main {\n    static boolean isArmstrong(int n) {\n        int digits = String.valueOf(n).length();\n        int sum = 0;\n        int rest = n;\n        while (rest > 0) {\n            int d = rest % 10;\n            int power = 1;\n            for (int i = 0; i < digits; i++) {\n                power *= d;\n            }\n            sum += power;\n            rest /= 10;\n        }\n        return sum == n;\n    }\n\n    public static void main(String[] args) {\n        for (int n = 100; n < 1000; n++) {\n            if (isArmstrong(n)) {\n                System.out.println(n);\n            }\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*153[ \\t]*\\r?\\n370[ \\t]*\\r?\\n371[ \\t]*\\r?\\n407\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

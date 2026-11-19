@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Adjacency List Instead of a Full Matrix",
+    "language": "c",
+    "problemDescription": "A 5 by 5 matrix stores every possible edge, and every node scans all five columns. Store only each node's neighbours in a small list. The visiting order and output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int graph[5][5] = {\n        {0, 1, 1, 0, 0},\n        {1, 0, 0, 1, 0},\n        {1, 0, 0, 1, 1},\n        {0, 1, 1, 0, 0},\n        {0, 0, 1, 0, 0},\n    };\n    int seen[5] = {0};\n    int queue[10];\n    int head = 0, tail = 0;\n    queue[tail++] = 0;\n    seen[0] = 1;\n    while (head < tail) {\n        int node = queue[head++];\n        printf(\"%d \", node);\n        for (int other = 0; other < 5; other++) {\n            if (graph[node][other] == 1 && seen[other] == 0) {\n                seen[other] = 1;\n                queue[tail++] = other;\n            }\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int neighbours[5][3] = {{1, 2, -1}, {0, 3, -1}, {0, 3, 4}, {1, 2, -1}, {2, -1, -1}};\n    int visited[5] = {0};\n    int queue[10];\n    int front = 0, rear = 0;\n    queue[rear++] = 0;\n    visited[0] = 1;\n    while (front < rear) {\n        int node = queue[front++];\n        printf(\"%d \", node);\n        for (int k = 0; k < 3 && neighbours[node][k] != -1; k++) {\n            int next = neighbours[node][k];\n            if (!visited[next]) {\n                visited[next] = 1;\n                queue[rear++] = next;\n            }\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "For a sparse graph an adjacency list stores and scans only the edges that exist, instead of n squared matrix cells. The loop ends at the -1 marker, and the neighbours are listed in ascending order so the visiting order is unchanged."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Callback Returns Nothing",
+    "language": "javascript",
+    "problemDescription": "The squares of 1, 2 and 3 should print [1,4,9], but the program prints [null,null,null].",
+    "buggyCode": "var numbers = [1, 2, 3];\nvar squares = numbers.map(function (n) {\n  n * n;\n});\nconsole.log(squares);",
+    "solution": {
+      "code": "var numbers = [1, 2, 3];\nvar squares = numbers.map(function (n) {\n  return n * n;\n});\nconsole.log(squares);",
+      "explanation": "map collects what the callback returns. Without a return statement the function returns undefined for every item, and undefined shows up as null when the array is printed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,4,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

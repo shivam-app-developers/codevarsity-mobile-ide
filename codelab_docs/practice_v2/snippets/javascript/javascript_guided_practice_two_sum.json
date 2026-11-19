@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Two Sum",
+    "language": "javascript",
+    "description": "Remember each number and its index in an object. For each number look up whether its complement (the target minus the number) was seen before.",
+    "ghostCode": "function twoSum(nums, target) {\n  var seen = {};\n  for (var i = 0; i < nums.length; i++) {\n    var need = target - nums[i];\n    if (seen.hasOwnProperty(need)) {\n      return [seen[need], i];\n    }\n    seen[nums[i]] = i;\n  }\n  return [];\n}\n\nconsole.log(twoSum([2, 7, 11, 15], 9));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0,1\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

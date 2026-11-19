@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Counting with Counter",
+    "language": "python",
+    "description": "collections.Counter counts how often each item occurs. most_common(n) lists the n most frequent items, and a missing item has the count 0.",
+    "ghostCode": "from collections import Counter\n\ntext = \"the cat and the hat and the bat\"\ncounts = Counter(text.split())\nprint(counts.most_common(2))\nprint(counts[\"the\"], counts[\"dog\"])",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('the', 3\\), \\('and', 2\\)\\][ \\t]*\\r?\\n3 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

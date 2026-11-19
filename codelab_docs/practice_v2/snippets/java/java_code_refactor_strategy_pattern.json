@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Strategy Objects Instead of a Mode String",
+    "language": "java",
+    "problemDescription": "checkout decides what to do by comparing a mode string with an if / else-if chain. Create a Discount interface with one class per mode and pass the object instead. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int checkout(int price, String mode) {\n        if (mode.equals(\"none\")) {\n            return price;\n        } else if (mode.equals(\"tenpercent\")) {\n            return price - price / 10;\n        } else if (mode.equals(\"flat50\")) {\n            return Math.max(0, price - 50);\n        }\n        return price;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(checkout(200, \"none\"));\n        System.out.println(checkout(200, \"tenpercent\"));\n        System.out.println(checkout(200, \"flat50\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    interface Discount {\n        int apply(int price);\n    }\n\n    static class NoDiscount implements Discount {\n        public int apply(int price) {\n            return price;\n        }\n    }\n\n    static class TenPercent implements Discount {\n        public int apply(int price) {\n            return price - price / 10;\n        }\n    }\n\n    static class Flat50 implements Discount {\n        public int apply(int price) {\n            return Math.max(0, price - 50);\n        }\n    }\n\n    static int checkout(int price, Discount discount) {\n        return discount.apply(price);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(checkout(200, new NoDiscount()));\n        System.out.println(checkout(200, new TenPercent()));\n        System.out.println(checkout(200, new Flat50()));\n    }\n}",
+      "explanation": "A misspelt mode string compiles and silently returns the full price, while a missing class is a compile error. A new discount is a new class, and checkout never changes."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*200[ \\t]*\\r?\\n180[ \\t]*\\r?\\n150\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

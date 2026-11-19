@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Add Two Matrices",
+    "language": "c",
+    "description": "Matrices of the same size are added element by element. Use two nested loops: the outer for rows, the inner for columns.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[2][3] = {{1, 2, 3}, {4, 5, 6}};\n    int b[2][3] = {{7, 8, 9}, {10, 11, 12}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 3; j++) {\n            printf(\"%d \", a[i][j] + b[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8 10 12[ \\t]*\\r?\\n14 16 18\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

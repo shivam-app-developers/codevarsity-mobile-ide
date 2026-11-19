@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Balanced Brackets",
+    "language": "c",
+    "description": "Push every opening bracket on a stack. A closing bracket must match the one on top. At the end the stack must be empty.",
+    "ghostCode": "#include <stdio.h>\n\nint is_balanced(const char *s) {\n    char stack[100];\n    int top = -1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        char c = s[i];\n        if (c == '(' || c == '[' || c == '{') {\n            stack[++top] = c;\n        } else if (c == ')' || c == ']' || c == '}') {\n            if (top < 0) {\n                return 0;\n            }\n            char open = stack[top--];\n            if ((c == ')' && open != '(') ||\n                (c == ']' && open != '[') ||\n                (c == '}' && open != '{')) {\n                return 0;\n            }\n        }\n    }\n    return top == -1;\n}\n\nint main() {\n    printf(\"%d\\n\", is_balanced(\"{[()]}\"));\n    printf(\"%d\\n\", is_balanced(\"([)]\"));\n    printf(\"%d\\n\", is_balanced(\"((\"));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n0[ \\t]*\\r?\\n0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

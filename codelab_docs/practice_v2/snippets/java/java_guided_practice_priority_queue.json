@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: PriorityQueue",
+    "language": "java",
+    "description": "A PriorityQueue always hands out the smallest element first. Pass Collections.reverseOrder() to get the largest first.",
+    "ghostCode": "import java.util.PriorityQueue;\n\npublic class Main {\n    public static void main(String[] args) {\n        PriorityQueue<Integer> heap = new PriorityQueue<>();\n        int[] values = {5, 1, 8, 3, 2};\n        for (int v : values) {\n            heap.add(v);\n        }\n        StringBuilder sb = new StringBuilder();\n        while (!heap.isEmpty()) {\n            sb.append(heap.poll()).append(' ');\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 5 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

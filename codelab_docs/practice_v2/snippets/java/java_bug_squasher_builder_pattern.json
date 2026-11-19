@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Setter Assigns the Parameter to Itself",
+    "language": "java",
+    "problemDescription": "The pizza is built with cheese(true), but the program prints cheese=false.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Pizza pizza = new Pizza.Builder(\"large\").cheese(true).toppings(3).build();\n        System.out.println(pizza);\n    }\n}\n\nclass Pizza {\n    private final String size;\n    private final boolean cheese;\n    private final int toppings;\n\n    private Pizza(Builder b) {\n        this.size = b.size;\n        this.cheese = b.cheese;\n        this.toppings = b.toppings;\n    }\n\n    @Override\n    public String toString() {\n        return size + \" pizza, cheese=\" + cheese + \", toppings=\" + toppings;\n    }\n\n    static class Builder {\n        private final String size;\n        private boolean cheese;\n        private int toppings;\n\n        Builder(String size) {\n            this.size = size;\n        }\n\n        Builder cheese(boolean cheese) {\n            cheese = cheese;\n            return this;\n        }\n\n        Builder toppings(int toppings) {\n            this.toppings = toppings;\n            return this;\n        }\n\n        Pizza build() {\n            return new Pizza(this);\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Pizza pizza = new Pizza.Builder(\"large\").cheese(true).toppings(3).build();\n        System.out.println(pizza);\n    }\n}\n\nclass Pizza {\n    private final String size;\n    private final boolean cheese;\n    private final int toppings;\n\n    private Pizza(Builder b) {\n        this.size = b.size;\n        this.cheese = b.cheese;\n        this.toppings = b.toppings;\n    }\n\n    @Override\n    public String toString() {\n        return size + \" pizza, cheese=\" + cheese + \", toppings=\" + toppings;\n    }\n\n    static class Builder {\n        private final String size;\n        private boolean cheese;\n        private int toppings;\n\n        Builder(String size) {\n            this.size = size;\n        }\n\n        Builder cheese(boolean cheese) {\n            this.cheese = cheese;\n            return this;\n        }\n\n        Builder toppings(int toppings) {\n            this.toppings = toppings;\n            return this;\n        }\n\n        Pizza build() {\n            return new Pizza(this);\n        }\n    }\n}",
+      "explanation": "Inside cheese(boolean cheese) the name cheese is the parameter, so cheese = cheese assigns the parameter to itself and the builder's field stays false. this.cheese refers to the field."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*large pizza, cheese=true, toppings=3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

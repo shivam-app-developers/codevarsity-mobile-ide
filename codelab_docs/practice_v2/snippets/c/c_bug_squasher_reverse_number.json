@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Digits Are Added, Not Placed",
+    "language": "c",
+    "problemDescription": "Reversing 9043 should print 3409, but the program prints 16.",
+    "buggyCode": "#include <stdio.h>\n\nint reverse(int n) {\n    int rev = 0;\n    while (n > 0) {\n        rev = rev + n % 10;\n        n /= 10;\n    }\n    return rev;\n}\n\nint main() {\n    printf(\"%d\\n\", reverse(9043));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint reverse(int n) {\n    int rev = 0;\n    while (n > 0) {\n        rev = rev * 10 + n % 10;\n        n /= 10;\n    }\n    return rev;\n}\n\nint main() {\n    printf(\"%d\\n\", reverse(9043));\n    return 0;\n}",
+      "explanation": "Without multiplying by 10, each new digit is just added to the total, so the digits are summed (3+4+0+9 = 16). Multiplying rev by 10 first moves the digits already collected one place to the left."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3409\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

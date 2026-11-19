@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Comparison Points the Wrong Way",
+    "language": "javascript",
+    "problemDescription": "IV should be 4 and MCMXCIV should be 1994, but the program prints 6 and a wrong number.",
+    "buggyCode": "var values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };\n\nfunction romanToInt(s) {\n  var total = 0;\n  for (var i = 0; i < s.length; i++) {\n    var current = values[s.charAt(i)];\n    var next = values[s.charAt(i + 1)];\n    if (next < current) {\n      total -= current;\n    } else {\n      total += current;\n    }\n  }\n  return total;\n}\n\nconsole.log(romanToInt(\"IV\"), romanToInt(\"MCMXCIV\"));",
+    "solution": {
+      "code": "var values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };\n\nfunction romanToInt(s) {\n  var total = 0;\n  for (var i = 0; i < s.length; i++) {\n    var current = values[s.charAt(i)];\n    var next = values[s.charAt(i + 1)];\n    if (next > current) {\n      total -= current;\n    } else {\n      total += current;\n    }\n  }\n  return total;\n}\n\nconsole.log(romanToInt(\"IV\"), romanToInt(\"MCMXCIV\"));",
+      "explanation": "A smaller symbol in front of a bigger one (I before V) is subtracted. The test must be next > current. Reversing it subtracts the bigger symbols that come first (the M in MCMXCIV) and adds the small ones."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 1994\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

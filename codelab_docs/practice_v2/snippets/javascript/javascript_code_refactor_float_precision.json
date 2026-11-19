@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A round2 Helper",
+    "language": "javascript",
+    "problemDescription": "The same rounding formula is written out three times. Move it into a round2 function. The output must stay the same.",
+    "initialCode": "console.log(Math.floor(0.1 * 3 * 100 + 0.5) / 100);\nconsole.log(Math.floor(1.005 * 100 + 0.5) / 100);\nconsole.log(Math.floor(2.675 * 100 + 0.5) / 100);",
+    "solution": {
+      "code": "function round2(x) {\n  return Math.floor(x * 100 + 0.5) / 100;\n}\n\nconsole.log(round2(0.1 * 3));\nconsole.log(round2(1.005));\nconsole.log(round2(2.675));",
+      "explanation": "A named helper says what the formula is for, and a change to how rounding works (for example a different number of decimals) is made in one place. Note that 1.005 prints 1, not 1.01, because the stored value of 1.005 is slightly below 1.005."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0\\.3[ \\t]*\\r?\\n1[ \\t]*\\r?\\n2\\.68\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

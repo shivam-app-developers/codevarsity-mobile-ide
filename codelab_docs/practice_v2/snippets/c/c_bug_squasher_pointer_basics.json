@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Function Changes Only Its Own Pointer",
+    "language": "c",
+    "problemDescription": "reset(&score) should set score to 0, but score is still 7 afterwards.",
+    "buggyCode": "#include <stdio.h>\n\nvoid reset(int *p) {\n    p = 0;\n}\n\nint main() {\n    int score = 7;\n    reset(&score);\n    printf(\"score = %d\\n\", score);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid reset(int *p) {\n    *p = 0;\n}\n\nint main() {\n    int score = 7;\n    reset(&score);\n    printf(\"score = %d\\n\", score);\n    return 0;\n}",
+      "explanation": "p = 0 only changes the function's own copy of the pointer so it points nowhere; the caller's variable is untouched. *p = 0 follows the pointer and writes 0 into the variable it points to."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*score = 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

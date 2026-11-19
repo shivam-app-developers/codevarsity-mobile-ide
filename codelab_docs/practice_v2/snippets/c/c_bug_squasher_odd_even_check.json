@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Negative Numbers Look Even",
+    "language": "c",
+    "problemDescription": "-3 is odd, but the program says it is even. Positive numbers are classified correctly.",
+    "buggyCode": "#include <stdio.h>\n#include <stdbool.h>\n\nbool is_odd(int n) {\n    return n % 2 == 1;\n}\n\nint main() {\n    int values[] = {7, 10, -3, -8, 0};\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d is %s\\n\", values[i], is_odd(values[i]) ? \"odd\" : \"even\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdbool.h>\n\nbool is_odd(int n) {\n    return n % 2 != 0;\n}\n\nint main() {\n    int values[] = {7, 10, -3, -8, 0};\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d is %s\\n\", values[i], is_odd(values[i]) ? \"odd\" : \"even\");\n    }\n    return 0;\n}",
+      "explanation": "In C the remainder keeps the sign of the dividend, so -3 % 2 is -1, not 1. Comparing with == 1 misses every negative odd number. Testing n % 2 != 0 works for both signs."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7 is odd[ \\t]*\\r?\\n10 is even[ \\t]*\\r?\\n-3 is odd[ \\t]*\\r?\\n-8 is even[ \\t]*\\r?\\n0 is even\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

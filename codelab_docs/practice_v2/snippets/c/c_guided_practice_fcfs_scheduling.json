@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: FCFS CPU Scheduling",
+    "language": "c",
+    "description": "First Come First Served runs processes in arrival order. A process waits for the sum of the bursts before it, and its turnaround time is wait plus burst.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int burst[] = {5, 3, 8, 6};\n    int n = 4;\n    int waiting = 0, total_wait = 0, total_turnaround = 0;\n    printf(\"Process Burst Wait Turnaround\\n\");\n    for (int i = 0; i < n; i++) {\n        int turnaround = waiting + burst[i];\n        printf(\"P%d      %d     %d    %d\\n\", i + 1, burst[i], waiting, turnaround);\n        total_wait += waiting;\n        total_turnaround += turnaround;\n        waiting += burst[i];\n    }\n    printf(\"Average wait: %.2f\\n\", (double)total_wait / n);\n    printf(\"Average turnaround: %.2f\\n\", (double)total_turnaround / n);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Process Burst Wait Turnaround[ \\t]*\\r?\\nP1      5     0    5[ \\t]*\\r?\\nP2      3     5    8[ \\t]*\\r?\\nP3      8     8    16[ \\t]*\\r?\\nP4      6     16    22[ \\t]*\\r?\\nAverage wait: 7\\.25[ \\t]*\\r?\\nAverage turnaround: 12\\.75\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

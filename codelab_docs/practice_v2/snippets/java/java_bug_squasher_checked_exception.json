@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Missing throws Declaration",
+    "language": "java",
+    "problemDescription": "The program does not compile: load throws a checked Exception but does not declare it.",
+    "buggyCode": "public class Main {\n    static void load(String name) {\n        if (name.isEmpty()) {\n            throw new Exception(\"no file name\");\n        }\n        System.out.println(\"Loading \" + name);\n    }\n\n    public static void main(String[] args) {\n        try {\n            load(\"data.txt\");\n            load(\"\");\n        } catch (Exception e) {\n            System.out.println(\"Problem: \" + e.getMessage());\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static void load(String name) throws Exception {\n        if (name.isEmpty()) {\n            throw new Exception(\"no file name\");\n        }\n        System.out.println(\"Loading \" + name);\n    }\n\n    public static void main(String[] args) {\n        try {\n            load(\"data.txt\");\n            load(\"\");\n        } catch (Exception e) {\n            System.out.println(\"Problem: \" + e.getMessage());\n        }\n    }\n}",
+      "explanation": "Java makes you handle or declare checked exceptions, so callers know what can go wrong. The compiler rejects a throw new Exception(...) in a method without a matching throws clause."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Loading data\\.txt[ \\t]*\\r?\\nProblem: no file name\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

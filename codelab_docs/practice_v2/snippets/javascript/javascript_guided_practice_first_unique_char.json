@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: First Non-Repeating Character",
+    "language": "javascript",
+    "description": "Count every character first, then walk the string again and return the index of the first character whose count is 1.",
+    "ghostCode": "function firstUnique(s) {\n  var counts = {};\n  for (var i = 0; i < s.length; i++) {\n    counts[s[i]] = (counts[s[i]] || 0) + 1;\n  }\n  for (var j = 0; j < s.length; j++) {\n    if (counts[s[j]] === 1) {\n      return j;\n    }\n  }\n  return -1;\n}\n\nconsole.log(firstUnique(\"leetcode\"), firstUnique(\"loveleetcode\"), firstUnique(\"aabb\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 2 -1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

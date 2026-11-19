@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Exceptions Instead of Checking First",
+    "language": "python",
+    "problemDescription": "The function tests for zero before dividing and repeats the final message on both paths. Use try / except / else / finally so the message is written once. The output must stay the same.",
+    "initialCode": "def divide(a, b):\n    if b == 0:\n        print(\"cannot divide by zero\")\n        print(\"done\")\n        return None\n    print(\"ok\")\n    print(\"done\")\n    return a / b\n\n\nprint(divide(10, 4))\nprint(divide(1, 0))",
+    "solution": {
+      "code": "def divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError:\n        print(\"cannot divide by zero\")\n        return None\n    else:\n        print(\"ok\")\n        return result\n    finally:\n        print(\"done\")\n\n\nprint(divide(10, 4))\nprint(divide(1, 0))",
+      "explanation": "finally guarantees the closing message on every path, including future ones, so it no longer has to be copied before each return."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ok[ \\t]*\\r?\\ndone[ \\t]*\\r?\\n2\\.5[ \\t]*\\r?\\ncannot divide by zero[ \\t]*\\r?\\ndone[ \\t]*\\r?\\nNone\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

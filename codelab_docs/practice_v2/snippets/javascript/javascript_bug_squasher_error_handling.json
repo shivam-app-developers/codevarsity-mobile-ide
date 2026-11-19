@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A String Is Thrown Instead of an Error",
+    "language": "javascript",
+    "problemDescription": "The handler should print Caught: Not a number: abc, but it prints Caught: undefined.",
+    "buggyCode": "function parseAge(text) {\n  var age = Number(text);\n  if (isNaN(age)) {\n    throw \"Not a number: \" + text;\n  }\n  return age;\n}\n\ntry {\n  parseAge(\"abc\");\n} catch (e) {\n  console.log(\"Caught: \" + e.message);\n}",
+    "solution": {
+      "code": "function parseAge(text) {\n  var age = Number(text);\n  if (isNaN(age)) {\n    throw new Error(\"Not a number: \" + text);\n  }\n  return age;\n}\n\ntry {\n  parseAge(\"abc\");\n} catch (e) {\n  console.log(\"Caught: \" + e.message);\n}",
+      "explanation": "JavaScript lets you throw any value, but only Error objects have a message property. Here the caught value is a plain string, so e.message is undefined. Always throw new Error(...) so the message and a stack trace are available."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Caught: Not a number: abc\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

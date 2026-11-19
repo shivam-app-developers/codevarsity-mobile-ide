@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: yield Placed After the Update",
+    "language": "python",
+    "problemDescription": "The sequence should start 0, 1, 1 and stay below the limit, but it starts at 1 and ends with 55, which is above the limit of 50.",
+    "buggyCode": "def fibonacci(limit):\n    a, b = 0, 1\n    while a < limit:\n        a, b = b, a + b\n        yield a\n\n\nprint(list(fibonacci(50)))",
+    "solution": {
+      "code": "def fibonacci(limit):\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\n\nprint(list(fibonacci(50)))",
+      "explanation": "The loop condition checks the old value of a, but yield now hands out the new one, which has not been checked. The first value 0 is skipped and the last value can exceed the limit. Yield the value that was just tested, then update."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0, 1, 1, 2, 3, 5, 8, 13, 21, 34\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

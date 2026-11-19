@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Toggle Letter Case",
+    "language": "c",
+    "description": "Capital letters sit 32 places before small letters in ASCII. Use character ranges and 'a' - 'A' arithmetic to swap the case of every letter.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"Hello, World 42\";\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] >= 'a' && s[i] <= 'z') {\n            s[i] = s[i] - 'a' + 'A';\n        } else if (s[i] >= 'A' && s[i] <= 'Z') {\n            s[i] = s[i] - 'A' + 'a';\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*hELLO, wORLD 42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

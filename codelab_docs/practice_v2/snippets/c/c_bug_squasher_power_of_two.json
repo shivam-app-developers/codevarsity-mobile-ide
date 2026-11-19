@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Zero Counts as a Power of Two",
+    "language": "c",
+    "problemDescription": "0 is not a power of two, but the program answers yes for it.",
+    "buggyCode": "#include <stdio.h>\n\nint is_power_of_two(unsigned int n) {\n    return (n & (n - 1)) == 0;\n}\n\nint main() {\n    unsigned int tests[] = {0, 2, 3, 8};\n    for (int i = 0; i < 4; i++) {\n        printf(\"%u -> %d\\n\", tests[i], is_power_of_two(tests[i]));\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint is_power_of_two(unsigned int n) {\n    return n > 0 && (n & (n - 1)) == 0;\n}\n\nint main() {\n    unsigned int tests[] = {0, 2, 3, 8};\n    for (int i = 0; i < 4; i++) {\n        printf(\"%u -> %d\\n\", tests[i], is_power_of_two(tests[i]));\n    }\n    return 0;\n}",
+      "explanation": "For n = 0 the expression 0 & (0 - 1) is 0, so the bit trick alone reports true. Zero has no bit set at all, so it must be excluded with n > 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 -> 0[ \\t]*\\r?\\n2 -> 1[ \\t]*\\r?\\n3 -> 0[ \\t]*\\r?\\n8 -> 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

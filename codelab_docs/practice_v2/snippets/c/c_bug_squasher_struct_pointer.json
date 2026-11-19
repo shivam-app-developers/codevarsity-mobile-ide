@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Struct Is Passed by Value",
+    "language": "c",
+    "problemDescription": "scale should turn a 4 x 3 rectangle into 12 x 9, but the program still prints 4 x 3.",
+    "buggyCode": "#include <stdio.h>\n\nstruct Rect {\n    int width;\n    int height;\n};\n\nvoid scale(struct Rect r, int factor) {\n    r.width *= factor;\n    r.height *= factor;\n}\n\nint main() {\n    struct Rect r = {4, 3};\n    scale(r, 3);\n    printf(\"%d x %d\\n\", r.width, r.height);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Rect {\n    int width;\n    int height;\n};\n\nvoid scale(struct Rect *r, int factor) {\n    r->width *= factor;\n    r->height *= factor;\n}\n\nint main() {\n    struct Rect r = {4, 3};\n    scale(&r, 3);\n    printf(\"%d x %d\\n\", r.width, r.height);\n    return 0;\n}",
+      "explanation": "Passing a struct by value copies it, so the function scales its private copy and the caller's rectangle never changes. Pass its address (struct Rect *) and use -> to change the original."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12 x 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

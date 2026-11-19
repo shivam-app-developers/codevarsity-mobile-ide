@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Longest Common Subsequence",
+    "language": "c",
+    "description": "dp[i][j] is the LCS length of the first i letters of one string and the first j letters of the other. Matching letters extend the diagonal; otherwise take the better neighbour.",
+    "ghostCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *a = \"AGGTAB\";\n    const char *b = \"GXTXAYB\";\n    int n = strlen(a), m = strlen(b);\n    int dp[7][8] = {{0}};\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= m; j++) {\n            if (a[i - 1] == b[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1] + 1;\n            } else {\n                dp[i][j] = dp[i - 1][j] > dp[i][j - 1] ? dp[i - 1][j] : dp[i][j - 1];\n            }\n        }\n    }\n    printf(\"LCS length: %d\\n\", dp[n][m]);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*LCS length: 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Pattern Is Not Anchored",
+    "language": "javascript",
+    "problemDescription": "5555-12345 is not a valid phone number (3 digits, dash, 4 digits), but the program says true.",
+    "buggyCode": "function isPhone(text) {\n  return /\\d{3}-\\d{4}/.test(text);\n}\n\nconsole.log(isPhone(\"555-1234\"));\nconsole.log(isPhone(\"5555-12345\"));",
+    "solution": {
+      "code": "function isPhone(text) {\n  return /^\\d{3}-\\d{4}$/.test(text);\n}\n\nconsole.log(isPhone(\"555-1234\"));\nconsole.log(isPhone(\"5555-12345\"));",
+      "explanation": "Without ^ and $ the pattern only has to match somewhere inside the text, and 5555-12345 contains 555-1234. The anchors force the whole text to match."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

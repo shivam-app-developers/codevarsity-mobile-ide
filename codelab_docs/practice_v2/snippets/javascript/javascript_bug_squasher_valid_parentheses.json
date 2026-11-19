@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+    "language": "javascript",
+    "problemDescription": "The text (( has brackets that are never closed, but isValid returns true for it.",
+    "buggyCode": "function isValid(s) {\n  var stack = [];\n  var pairs = { \")\": \"(\", \"]\": \"[\", \"}\": \"{\" };\n  for (var i = 0; i < s.length; i++) {\n    var c = s.charAt(i);\n    if (c === \"(\" || c === \"[\" || c === \"{\") {\n      stack.push(c);\n    } else if (stack.pop() !== pairs[c]) {\n      return false;\n    }\n  }\n  return true;\n}\n\nconsole.log(isValid(\"()\"), isValid(\"((\"));",
+    "solution": {
+      "code": "function isValid(s) {\n  var stack = [];\n  var pairs = { \")\": \"(\", \"]\": \"[\", \"}\": \"{\" };\n  for (var i = 0; i < s.length; i++) {\n    var c = s.charAt(i);\n    if (c === \"(\" || c === \"[\" || c === \"{\") {\n      stack.push(c);\n    } else if (stack.pop() !== pairs[c]) {\n      return false;\n    }\n  }\n  return stack.length === 0;\n}\n\nconsole.log(isValid(\"()\"), isValid(\"((\"));",
+      "explanation": "Reaching the end without a mismatch is not enough: brackets still on the stack were opened and never closed. The text is valid only when the stack is empty."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

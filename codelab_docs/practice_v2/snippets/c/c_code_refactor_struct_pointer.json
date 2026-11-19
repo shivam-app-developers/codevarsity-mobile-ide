@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the Global Result with a Struct",
+    "language": "c",
+    "problemDescription": "Two separate ints are passed in and the answer is left in a global variable. Group width and height in a struct and return the area. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint area_result;\n\nvoid compute_area(int w, int h) {\n    area_result = w * h;\n}\n\nint main() {\n    int width = 6, height = 7;\n    compute_area(width, height);\n    printf(\"Area: %d\\n\", area_result);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Rect {\n    int width;\n    int height;\n};\n\nint area(const struct Rect *r) {\n    return r->width * r->height;\n}\n\nint main() {\n    struct Rect r = {6, 7};\n    printf(\"Area: %d\\n\", area(&r));\n    return 0;\n}",
+      "explanation": "A rectangle is one thing, so it is one struct. The function returns its result instead of writing to a global, and const promises not to change the rectangle."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Area: 42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

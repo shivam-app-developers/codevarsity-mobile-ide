@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: reduce",
+    "language": "javascript",
+    "description": "reduce folds an array into a single value. The callback receives the accumulator so far and the next item; the second argument of reduce is the starting value.",
+    "ghostCode": "var nums = [4, 8, 15, 16, 23];\nvar sum = nums.reduce(function (total, n) {\n  return total + n;\n}, 0);\nconsole.log(sum);\n\nvar max = nums.reduce(function (best, n) {\n  return n > best ? n : best;\n}, nums[0]);\nconsole.log(max);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*66[ \\t]*\\r?\\n23\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

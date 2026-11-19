@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pascal's Triangle",
+    "language": "javascript",
+    "description": "Each row starts and ends with 1, and every item in between is the sum of the two items above it.",
+    "ghostCode": "function pascal(rows) {\n  var triangle = [];\n  for (var n = 0; n < rows; n++) {\n    var row = [1];\n    for (var k = 1; k < n; k++) {\n      row.push(triangle[n - 1][k - 1] + triangle[n - 1][k]);\n    }\n    if (n > 0) {\n      row.push(1);\n    }\n    triangle.push(row);\n  }\n  return triangle;\n}\n\nconsole.log(pascal(5));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1\\],\\[1,1\\],\\[1,2,1\\],\\[1,3,3,1\\],\\[1,4,6,4,1\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

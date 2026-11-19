@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use the Modulo-9 Formula",
+    "language": "c",
+    "problemDescription": "Nested loops add digits repeatedly. Replace them with the closed form: the digital root of n is 1 + (n - 1) % 9 for n greater than 0. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint root(int n) {\n    while (n > 9) {\n        int s = 0;\n        while (n != 0) {\n            s = s + n % 10;\n            n = n / 10;\n        }\n        n = s;\n    }\n    return n;\n}\n\nint main() {\n    printf(\"%d\\n\", root(9875));\n    printf(\"%d\\n\", root(6789));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint root(int n) {\n    return n == 0 ? 0 : 1 + (n - 1) % 9;\n}\n\nint main() {\n    printf(\"%d\\n\", root(9875));\n    printf(\"%d\\n\", root(6789));\n    return 0;\n}",
+      "explanation": "A number and its digit sum leave the same remainder when divided by 9, so repeating the digit sum ends at the number's remainder mod 9, with 9 used instead of 0. The formula needs no loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

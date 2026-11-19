@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Move Zeros to the End",
+    "language": "java",
+    "description": "Copy each non-zero value forward to a write position, keeping their order, then fill the rest with zeros.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    static void moveZeros(int[] a) {\n        int pos = 0;\n        for (int i = 0; i < a.length; i++) {\n            if (a[i] != 0) {\n                a[pos++] = a[i];\n            }\n        }\n        while (pos < a.length) {\n            a[pos++] = 0;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {0, 1, 0, 3, 12};\n        moveZeros(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 3, 12, 0, 0\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: JSON Written with Single Quotes",
+    "language": "javascript",
+    "problemDescription": "Parsing the text and printing the second item of b should print 3, but the program crashes with a SyntaxError.",
+    "buggyCode": "var data = JSON.parse(\"{'a':1,'b':[2,3]}\");\nconsole.log(data.b[1]);",
+    "solution": {
+      "code": "var data = JSON.parse('{\"a\":1,\"b\":[2,3]}');\nconsole.log(data.b[1]);",
+      "explanation": "JSON is stricter than JavaScript object syntax: keys and strings must use double quotes. Single quotes make JSON.parse throw a SyntaxError."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Comprehension Instead of a Loop with append",
+    "language": "python",
+    "problemDescription": "A loop with an if and append collects the long words in upper case. Use a list comprehension. The output must stay the same.",
+    "initialCode": "words = [\"apple\", \"fig\", \"kiwi\", \"banana\"]\nlong_upper = []\nfor w in words:\n    if len(w) > 3:\n        long_upper.append(w.upper())\nprint(long_upper)",
+    "solution": {
+      "code": "words = [\"apple\", \"fig\", \"kiwi\", \"banana\"]\nlong_upper = [w.upper() for w in words if len(w) > 3]\nprint(long_upper)",
+      "explanation": "The comprehension says what the new list contains (upper-cased long words) instead of describing how to fill it, with no empty list to create and no append calls."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['APPLE', 'KIWI', 'BANANA'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

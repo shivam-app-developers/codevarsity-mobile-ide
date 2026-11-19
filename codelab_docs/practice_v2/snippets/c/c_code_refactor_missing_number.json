@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: XOR Instead of a Search per Candidate",
+    "language": "c",
+    "problemDescription": "Every candidate number is searched for in the whole array with a nested loop. Use XOR: values that appear twice cancel out, leaving the missing number. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 4, 0, 2};\n    int n = 4;\n    for (int v = 0; v <= n; v++) {\n        int found = 0;\n        for (int i = 0; i < n; i++) {\n            if (a[i] == v) {\n                found = 1;\n            }\n        }\n        if (found == 0) {\n            printf(\"%d\\n\", v);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 4, 0, 2};\n    int n = 4;\n    int result = n;\n    for (int i = 0; i < n; i++) {\n        result ^= i ^ a[i];\n    }\n    printf(\"%d\\n\", result);\n    return 0;\n}",
+      "explanation": "x ^ x is 0 and x ^ 0 is x. XOR-ing every index and every value (plus n) cancels each present number twice and leaves only the missing one, in a single pass and with no extra memory."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Nested Comprehension Instead of Loops with append",
+    "language": "python",
+    "problemDescription": "Two nested loops and a temporary row list build the multiplication grid. Use a nested list comprehension. The output must stay the same.",
+    "initialCode": "grid = []\nfor i in range(3):\n    row = []\n    for j in range(4):\n        row.append(i * j)\n    grid.append(row)\nprint(grid)",
+    "solution": {
+      "code": "grid = [[i * j for j in range(4)] for i in range(3)]\nprint(grid)",
+      "explanation": "The comprehension describes the grid in one line, and each row is created by the inner expression, so rows can never be accidentally shared."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[0, 0, 0, 0\\], \\[0, 1, 2, 3\\], \\[0, 2, 4, 6\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Name the Pegs by Their Role",
+    "language": "javascript",
+    "problemDescription": "The pegs are called a, b and c, the moves are collected in a global array, and the base case is n === 1. Rename the pegs from, via and to, pass the array in and use the base case n === 0. The output must stay the same.",
+    "initialCode": "var moves = [];\n\nfunction hanoi(n, a, b, c) {\n  if (n === 1) {\n    moves.push(a + \"->\" + c);\n  } else {\n    hanoi(n - 1, a, c, b);\n    moves.push(a + \"->\" + c);\n    hanoi(n - 1, b, a, c);\n  }\n}\n\nhanoi(3, \"A\", \"B\", \"C\");\nconsole.log(moves.join(\" \"));",
+    "solution": {
+      "code": "function hanoi(n, from, via, to, moves) {\n  if (n === 0) {\n    return;\n  }\n  hanoi(n - 1, from, to, via, moves);\n  moves.push(from + \"->\" + to);\n  hanoi(n - 1, via, from, to, moves);\n}\n\nvar moves = [];\nhanoi(3, \"A\", \"B\", \"C\", moves);\nconsole.log(moves.join(\" \"));",
+      "explanation": "Descriptive names make the three roles obvious, the zero-disk base case removes the duplicated push, and passing the array in avoids a global variable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*A->C A->B C->B A->C B->A B->C A->C\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Copy Is Only a Second Name",
+    "language": "java",
+    "problemDescription": "After sorting a, the copy should still be [4, 2, 8], but it prints [2, 4, 8] as well.",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] original = {4, 2, 8};\n        int[] backup = original;\n        Arrays.sort(original);\n        System.out.println(Arrays.toString(original));\n        System.out.println(Arrays.toString(backup));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] original = {4, 2, 8};\n        int[] backup = Arrays.copyOf(original, original.length);\n        Arrays.sort(original);\n        System.out.println(Arrays.toString(original));\n        System.out.println(Arrays.toString(backup));\n    }\n}",
+      "explanation": "Assigning an array variable copies only the reference, so both names point at the same array and sorting one changes the other. Arrays.copyOf creates a new array with the same contents."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2, 4, 8\\][ \\t]*\\r?\\n\\[4, 2, 8\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Swap Pointers Instead of Copying Text",
+    "language": "c",
+    "problemDescription": "Words stored in a two-dimensional char array are sorted by copying their characters with strcpy three times per swap. Store pointers to the words and swap those instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char names[4][10] = {\"delta\", \"alpha\", \"charlie\", \"bravo\"};\n    char temp[10];\n    for (int i = 0; i < 4; i++) {\n        for (int j = i + 1; j < 4; j++) {\n            if (strcmp(names[i], names[j]) > 0) {\n                strcpy(temp, names[i]);\n                strcpy(names[i], names[j]);\n                strcpy(names[j], temp);\n            }\n        }\n    }\n    for (int i = 0; i < 4; i++) {\n        printf(\"%s\\n\", names[i]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *names[] = {\"delta\", \"alpha\", \"charlie\", \"bravo\"};\n    for (int i = 0; i < 4; i++) {\n        for (int j = i + 1; j < 4; j++) {\n            if (strcmp(names[i], names[j]) > 0) {\n                const char *temp = names[i];\n                names[i] = names[j];\n                names[j] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < 4; i++) {\n        printf(\"%s\\n\", names[i]);\n    }\n    return 0;\n}",
+      "explanation": "Swapping two pointers moves 8 bytes while strcpy-ing each word copies all its characters three times. It also removes the fixed 10-character limit of the char array."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*alpha[ \\t]*\\r?\\nbravo[ \\t]*\\r?\\ncharlie[ \\t]*\\r?\\ndelta\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

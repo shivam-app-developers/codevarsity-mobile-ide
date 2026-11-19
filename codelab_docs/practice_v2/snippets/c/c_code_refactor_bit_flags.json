@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Flags with Bit Operators",
+    "language": "c",
+    "problemDescription": "Permissions are stored as a sum and tested with division and remainder. Use named bit flags with | and &. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int perms = 0;\n    int READ = 4, WRITE = 2, EXEC = 1;\n    perms = perms + READ;\n    perms = perms + EXEC;\n    if (perms / WRITE % 2 == 1) {\n        printf(\"can write\\n\");\n    } else {\n        printf(\"cannot write\\n\");\n    }\n    if (perms / READ % 2 == 1) {\n        printf(\"can read\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nenum { READ = 4, WRITE = 2, EXEC = 1 };\n\nint main() {\n    int perms = READ | EXEC;\n    printf(\"%s\\n\", (perms & WRITE) ? \"can write\" : \"cannot write\");\n    if (perms & READ) {\n        printf(\"can read\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Each flag is one bit, so OR combines flags and AND tests them. Adding the same flag twice with + would corrupt the value, while | is safe, and the test no longer needs division."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cannot write[ \\t]*\\r?\\ncan read\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

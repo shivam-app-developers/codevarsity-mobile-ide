@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Loop for Both Diagonals",
+    "language": "c",
+    "problemDescription": "Each diagonal is added with hand-written indexes. Use one loop over a named size. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 10}};\n    int a = m[0][0] + m[1][1] + m[2][2];\n    int b = m[0][2] + m[1][1] + m[2][0];\n    printf(\"%d %d\\n\", a, b);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define N 3\n\nint main() {\n    int m[N][N] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 10}};\n    int main_diag = 0, anti_diag = 0;\n    for (int i = 0; i < N; i++) {\n        main_diag += m[i][i];\n        anti_diag += m[i][N - 1 - i];\n    }\n    printf(\"%d %d\\n\", main_diag, anti_diag);\n    return 0;\n}",
+      "explanation": "The pattern m[i][i] and m[i][N - 1 - i] works for any size. Hand-written indexes would have to be edited for every new matrix size."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*16 15\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

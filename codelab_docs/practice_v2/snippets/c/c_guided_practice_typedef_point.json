@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: typedef and Structs",
+    "language": "c",
+    "description": "typedef gives a struct a short type name, so you can write Point instead of struct Point. Structs can be passed to functions by value.",
+    "ghostCode": "#include <stdio.h>\n\ntypedef struct {\n    int x;\n    int y;\n} Point;\n\nint distance_squared(Point a, Point b) {\n    int dx = a.x - b.x;\n    int dy = a.y - b.y;\n    return dx * dx + dy * dy;\n}\n\nint main() {\n    Point p = {1, 2};\n    Point q = {4, 6};\n    printf(\"Squared distance = %d\\n\", distance_squared(p, q));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Squared distance = 25\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: A Linked List",
+    "language": "javascript",
+    "description": "Each node holds a value and a reference to the next node (null at the end). add walks to the last node; toArray follows the references until null.",
+    "ghostCode": "function Node(value) {\n  this.value = value;\n  this.next = null;\n}\n\nfunction LinkedList() {\n  this.head = null;\n  this.size = 0;\n}\n\nLinkedList.prototype.add = function (value) {\n  var node = new Node(value);\n  if (this.head === null) {\n    this.head = node;\n  } else {\n    var current = this.head;\n    while (current.next !== null) {\n      current = current.next;\n    }\n    current.next = node;\n  }\n  this.size++;\n};\n\nLinkedList.prototype.toArray = function () {\n  var out = [];\n  for (var cur = this.head; cur !== null; cur = cur.next) {\n    out.push(cur.value);\n  }\n  return out;\n};\n\nvar list = new LinkedList();\nlist.add(10);\nlist.add(20);\nlist.add(30);\nconsole.log(list.toArray(), list.size);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[10,20,30\\] 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

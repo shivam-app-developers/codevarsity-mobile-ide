@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compare Neighbours Instead of Searching the Result",
+    "language": "javascript",
+    "problemDescription": "indexOf searches the whole result for every item. Because the array is sorted, comparing each item with its neighbour is enough; use filter. The output must stay the same.",
+    "initialCode": "var a = [2, 2, 5, 5, 5, 9];\nvar unique = [];\nfor (var i = 0; i < a.length; i++) {\n  if (unique.indexOf(a[i]) === -1) {\n    unique.push(a[i]);\n  }\n}\nconsole.log(unique);",
+    "solution": {
+      "code": "var a = [2, 2, 5, 5, 5, 9];\nvar unique = a.filter(function (x, i) {\n  return i === 0 || x !== a[i - 1];\n});\nconsole.log(unique);",
+      "explanation": "In sorted data a duplicate is always equal to the item before it, so each item is compared once with its neighbour instead of scanning the growing result list."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,5,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

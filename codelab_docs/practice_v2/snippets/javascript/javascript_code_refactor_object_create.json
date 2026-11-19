@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Inherit the Method Instead of Copying It",
+    "language": "javascript",
+    "problemDescription": "The greet function is copied into every object by hand. Put it on a base object and create the others with Object.create. The output must stay the same.",
+    "initialCode": "var base = {\n  greet: function () {\n    return \"Hello, \" + this.name;\n  }\n};\n\nvar a = { name: \"Asha\", greet: base.greet };\nvar b = { name: \"Ravi\", greet: base.greet };\nconsole.log(a.greet());\nconsole.log(b.greet());",
+    "solution": {
+      "code": "var base = {\n  greet: function () {\n    return \"Hello, \" + this.name;\n  }\n};\n\nvar a = Object.create(base);\na.name = \"Asha\";\nvar b = Object.create(base);\nb.name = \"Ravi\";\nconsole.log(a.greet());\nconsole.log(b.greet());",
+      "explanation": "With inheritance the behaviour is stored once on base, and changing it there changes every object created from it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Asha[ \\t]*\\r?\\nHello, Ravi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

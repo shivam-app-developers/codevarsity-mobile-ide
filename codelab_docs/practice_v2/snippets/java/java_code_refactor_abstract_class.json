@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Polymorphism Instead of a Type String",
+    "language": "java",
+    "problemDescription": "A method decides what to compute by comparing a type string with if and else-if. Create an abstract Shape with one subclass per kind, and let each compute its own area. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int area(String type, int a, int b) {\n        if (type.equals(\"rect\")) {\n            return a * b;\n        } else if (type.equals(\"square\")) {\n            return a * a;\n        }\n        return 0;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(area(\"rect\", 4, 5));\n        System.out.println(area(\"square\", 3, 0));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Shape[] shapes = {new Rectangle(4, 5), new Square(3)};\n        for (Shape s : shapes) {\n            System.out.println(s.area());\n        }\n    }\n}\n\nabstract class Shape {\n    abstract int area();\n}\n\nclass Rectangle extends Shape {\n    private final int width, height;\n\n    Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n\n    int area() {\n        return width * height;\n    }\n}\n\nclass Square extends Shape {\n    private final int side;\n\n    Square(int side) {\n        this.side = side;\n    }\n\n    int area() {\n        return side * side;\n    }\n}",
+      "explanation": "Adding a new shape no longer means editing a growing if chain; it is one new class. The compiler also forces every shape to define area, whereas a misspelt type string silently returns 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*20[ \\t]*\\r?\\n9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

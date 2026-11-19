@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Selection Sort",
+    "language": "javascript",
+    "description": "Find the smallest item of the unsorted part, swap it to the front of that part, and repeat for the next position.",
+    "ghostCode": "function selectionSort(a) {\n  for (var i = 0; i < a.length - 1; i++) {\n    var min = i;\n    for (var j = i + 1; j < a.length; j++) {\n      if (a[j] < a[min]) {\n        min = j;\n      }\n    }\n    var temp = a[i];\n    a[i] = a[min];\n    a[min] = temp;\n  }\n  return a;\n}\n\nconsole.log(selectionSort([64, 25, 12, 22, 11]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[11,12,22,25,64\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

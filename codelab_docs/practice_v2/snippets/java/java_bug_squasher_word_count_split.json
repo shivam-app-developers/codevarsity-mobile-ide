@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Repeated Spaces Create Empty Words",
+    "language": "java",
+    "problemDescription": "The text has 9 words, but the program prints 12.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        String text = \"the quick  brown fox jumps   over the lazy dog\";\n        String[] words = text.split(\" \");\n        System.out.println(words.length);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String text = \"the quick  brown fox jumps   over the lazy dog\";\n        String[] words = text.split(\"\\\\s+\");\n        System.out.println(words.length);\n    }\n}",
+      "explanation": "split(\" \") cuts at every single space, so two spaces in a row produce an empty string between them, and those empty strings are counted as words. The pattern \\\\s+ treats a whole run of spaces as one separator."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

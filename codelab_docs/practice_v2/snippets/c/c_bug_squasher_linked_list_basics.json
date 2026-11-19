@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Node Is Not Printed",
+    "language": "c",
+    "problemDescription": "The list 5, 6, 7 should be printed completely, but the last element 7 is missing.",
+    "buggyCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *append(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = NULL;\n    if (head == NULL) {\n        return node;\n    }\n    struct Node *p = head;\n    while (p->next != NULL) {\n        p = p->next;\n    }\n    p->next = node;\n    return head;\n}\n\nint main() {\n    struct Node *head = NULL;\n    head = append(head, 5);\n    head = append(head, 6);\n    head = append(head, 7);\n    for (struct Node *p = head; p->next != NULL; p = p->next) {\n        printf(\"%d \", p->value);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *append(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = NULL;\n    if (head == NULL) {\n        return node;\n    }\n    struct Node *p = head;\n    while (p->next != NULL) {\n        p = p->next;\n    }\n    p->next = node;\n    return head;\n}\n\nint main() {\n    struct Node *head = NULL;\n    head = append(head, 5);\n    head = append(head, 6);\n    head = append(head, 7);\n    for (struct Node *p = head; p != NULL; p = p->next) {\n        printf(\"%d \", p->value);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "To visit every node the loop must continue while p itself is not NULL. Testing p->next stops at the last node before printing it. (That test is the right one when you want to stop at the last node, as append does.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5 6 7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Start Node Is Visited Twice",
+    "language": "c",
+    "problemDescription": "Starting from node 0 the order should be 0 1 2 3 4, but node 0 appears a second time in the output.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int graph[5][5] = {\n        {0, 1, 1, 0, 0},\n        {1, 0, 0, 1, 0},\n        {1, 0, 0, 1, 1},\n        {0, 1, 1, 0, 0},\n        {0, 0, 1, 0, 0},\n    };\n    int visited[5] = {0};\n    int queue[10];\n    int front = 0, rear = 0;\n    queue[rear++] = 0;\n    while (front < rear) {\n        int node = queue[front++];\n        printf(\"%d \", node);\n        for (int next = 0; next < 5; next++) {\n            if (graph[node][next] && !visited[next]) {\n                visited[next] = 1;\n                queue[rear++] = next;\n            }\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int graph[5][5] = {\n        {0, 1, 1, 0, 0},\n        {1, 0, 0, 1, 0},\n        {1, 0, 0, 1, 1},\n        {0, 1, 1, 0, 0},\n        {0, 0, 1, 0, 0},\n    };\n    int visited[5] = {0};\n    int queue[10];\n    int front = 0, rear = 0;\n    queue[rear++] = 0;\n    visited[0] = 1;\n    while (front < rear) {\n        int node = queue[front++];\n        printf(\"%d \", node);\n        for (int next = 0; next < 5; next++) {\n            if (graph[node][next] && !visited[next]) {\n                visited[next] = 1;\n                queue[rear++] = next;\n            }\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Every node that goes into the queue must be marked visited at the same time, including the start node. If the start is not marked, its neighbours find it unvisited and add it to the queue again."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: replace with a Pattern Instead of split and a Loop",
+    "language": "javascript",
+    "problemDescription": "The text is split at every space, the empty pieces are removed in a loop, and the words are joined again. Collapse the spaces with one replace. The output must stay the same.",
+    "initialCode": "var text = \"too   many    spaces\";\nvar parts = text.split(\" \");\nvar words = [];\nfor (var i = 0; i < parts.length; i++) {\n  if (parts[i] !== \"\") {\n    words.push(parts[i]);\n  }\n}\nconsole.log(words.join(\" \"));",
+    "solution": {
+      "code": "var text = \"too   many    spaces\";\nconsole.log(text.replace(/\\s+/g, \" \"));",
+      "explanation": "\\s+ matches a whole run of spaces at once, so splitting, filtering out empty pieces and joining are replaced by a single call."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*too many spaces\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

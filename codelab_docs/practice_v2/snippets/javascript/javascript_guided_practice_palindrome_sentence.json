@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Palindrome Sentence",
+    "language": "javascript",
+    "description": "Lower-case the text, remove everything that is not a letter or digit with a regular expression, and compare it with its reverse.",
+    "ghostCode": "function isPalindrome(text) {\n  var cleaned = text.toLowerCase().replace(/[^a-z0-9]/g, \"\");\n  return cleaned === cleaned.split(\"\").reverse().join(\"\");\n}\n\nconsole.log(isPalindrome(\"A man, a plan, a canal: Panama\"));\nconsole.log(isPalindrome(\"race a car\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

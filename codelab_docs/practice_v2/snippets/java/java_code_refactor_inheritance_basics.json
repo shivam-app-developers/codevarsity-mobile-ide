@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Extract a Superclass",
+    "language": "java",
+    "problemDescription": "Dog and Cat contain the same name field and the same eat method. Move the shared parts into an Animal superclass. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Dog d = new Dog(\"Rex\");\n        Cat c = new Cat(\"Tom\");\n        d.eat();\n        c.eat();\n        d.speak();\n        c.speak();\n    }\n}\n\nclass Dog {\n    String name;\n\n    Dog(String name) {\n        this.name = name;\n    }\n\n    void eat() {\n        System.out.println(name + \" is eating\");\n    }\n\n    void speak() {\n        System.out.println(name + \" says Woof\");\n    }\n}\n\nclass Cat {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat() {\n        System.out.println(name + \" is eating\");\n    }\n\n    void speak() {\n        System.out.println(name + \" says Meow\");\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Dog d = new Dog(\"Rex\");\n        Cat c = new Cat(\"Tom\");\n        d.eat();\n        c.eat();\n        d.speak();\n        c.speak();\n    }\n}\n\nclass Animal {\n    protected String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void eat() {\n        System.out.println(name + \" is eating\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    void speak() {\n        System.out.println(name + \" says Woof\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    void speak() {\n        System.out.println(name + \" says Meow\");\n    }\n}",
+      "explanation": "Shared code belongs in the superclass: a fix to eat() now fixes every animal. Each subclass keeps only what makes it different."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Rex is eating[ \\t]*\\r?\\nTom is eating[ \\t]*\\r?\\nRex says Woof[ \\t]*\\r?\\nTom says Meow\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

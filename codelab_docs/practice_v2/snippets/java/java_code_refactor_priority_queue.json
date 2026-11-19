@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Heap Instead of Searching for the Maximum Repeatedly",
+    "language": "java",
+    "problemDescription": "The largest element is found with a loop and removed from an ArrayList again and again. Use a max-heap PriorityQueue. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = new ArrayList<>(Arrays.asList(5, 1, 8, 3, 2));\n        while (!list.isEmpty()) {\n            int maxIndex = 0;\n            for (int i = 1; i < list.size(); i++) {\n                if (list.get(i) > list.get(maxIndex)) {\n                    maxIndex = i;\n                }\n            }\n            System.out.print(list.remove(maxIndex) + \" \");\n        }\n        System.out.println();\n    }\n}",
+    "solution": {
+      "code": "import java.util.Collections;\nimport java.util.PriorityQueue;\n\npublic class Main {\n    public static void main(String[] args) {\n        PriorityQueue<Integer> heap = new PriorityQueue<>(Collections.reverseOrder());\n        for (int v : new int[] {5, 1, 8, 3, 2}) {\n            heap.add(v);\n        }\n        while (!heap.isEmpty()) {\n            System.out.print(heap.poll() + \" \");\n        }\n        System.out.println();\n    }\n}",
+      "explanation": "A heap finds the next largest element in log n steps. Scanning the whole list each time takes n steps per element, which is n squared overall."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8 5 3 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

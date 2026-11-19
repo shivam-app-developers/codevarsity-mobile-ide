@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Reading Does Not Refresh the Entry",
+    "language": "python",
+    "problemDescription": "After a is read, b should be evicted and the cache should hold ['a', 'c'], but it holds ['b', 'c'].",
+    "buggyCode": "from collections import OrderedDict\n\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.items = OrderedDict()\n\n    def get(self, key):\n        if key not in self.items:\n            return -1\n        return self.items[key]\n\n    def put(self, key, value):\n        self.items[key] = value\n        self.items.move_to_end(key)\n        if len(self.items) > self.capacity:\n            self.items.popitem(last=False)\n\n\ncache = LRUCache(2)\ncache.put(\"a\", 1)\ncache.put(\"b\", 2)\ncache.get(\"a\")\ncache.put(\"c\", 3)\nprint(list(cache.items))",
+    "solution": {
+      "code": "from collections import OrderedDict\n\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.items = OrderedDict()\n\n    def get(self, key):\n        if key not in self.items:\n            return -1\n        self.items.move_to_end(key)\n        return self.items[key]\n\n    def put(self, key, value):\n        self.items[key] = value\n        self.items.move_to_end(key)\n        if len(self.items) > self.capacity:\n            self.items.popitem(last=False)\n\n\ncache = LRUCache(2)\ncache.put(\"a\", 1)\ncache.put(\"b\", 2)\ncache.get(\"a\")\ncache.put(\"c\", 3)\nprint(list(cache.items))",
+      "explanation": "The cache evicts the entry that was used least recently. If get does not move the key to the end, reading a does not count as a use, so a (inserted first) is evicted instead of b."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['a', 'c'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: reverse and join Instead of Building Backwards",
+    "language": "javascript",
+    "problemDescription": "A loop walks the words from the end and appends a space except after the last one. Use reverse and join. The output must stay the same.",
+    "initialCode": "var words = \"one two three\".split(\" \");\nvar result = \"\";\nfor (var i = words.length - 1; i >= 0; i--) {\n  result += words[i];\n  if (i > 0) {\n    result += \" \";\n  }\n}\nconsole.log(result);",
+    "solution": {
+      "code": "var result = \"one two three\".split(\" \").reverse().join(\" \");\nconsole.log(result);",
+      "explanation": "join puts separators only between items, so the special case for the last word disappears, and reverse does the backward walk."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*three two one\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: replace Instead of a Flag and a Character Loop",
+    "language": "javascript",
+    "problemDescription": "A flag says \"the next letter must be a capital\" while a loop copies the characters. Use replace with a capture group. The output must stay the same.",
+    "initialCode": "var name = \"api_response_code\";\nvar out = \"\";\nvar upperNext = false;\nfor (var i = 0; i < name.length; i++) {\n  var c = name.charAt(i);\n  if (c === \"_\") {\n    upperNext = true;\n  } else if (upperNext) {\n    out += c.toUpperCase();\n    upperNext = false;\n  } else {\n    out += c;\n  }\n}\nconsole.log(out);",
+    "solution": {
+      "code": "var name = \"api_response_code\";\nvar out = name.replace(/_([a-z])/g, function (match, letter) {\n  return letter.toUpperCase();\n});\nconsole.log(out);",
+      "explanation": "The regular expression describes the pattern \"underscore followed by a letter\" directly, so the state variable and the manual copying are gone."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apiResponseCode\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Collatz Steps",
+    "language": "javascript",
+    "description": "Halve even numbers and turn odd numbers n into 3n + 1, counting the steps until the number reaches 1.",
+    "ghostCode": "function collatzSteps(n) {\n  var steps = 0;\n  while (n !== 1) {\n    n = n % 2 === 0 ? n / 2 : 3 * n + 1;\n    steps++;\n  }\n  return steps;\n}\n\nconsole.log(collatzSteps(6), collatzSteps(27));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8 111\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

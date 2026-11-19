@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sorting Numbers",
+    "language": "javascript",
+    "description": "sort() without arguments compares the items as text. To sort numbers, pass a comparison function that returns a negative, zero or positive number.",
+    "ghostCode": "var nums = [10, 9, 1, 100];\nnums.sort(function (a, b) {\n  return a - b;\n});\nconsole.log(nums);\nvar words = [\"banana\", \"Apple\", \"cherry\"];\nwords.sort();\nconsole.log(words);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,9,10,100\\][ \\t]*\\r?\\n\\[\"Apple\",\"banana\",\"cherry\"\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

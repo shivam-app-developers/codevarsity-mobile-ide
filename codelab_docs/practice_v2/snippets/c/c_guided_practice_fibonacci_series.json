@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Fibonacci Series",
+    "language": "c",
+    "description": "Print the first 10 Fibonacci numbers. Each number is the sum of the two before it, so keep the last two and slide them forward.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a = 0, b = 1;\n    printf(\"Fibonacci:\");\n    for (int i = 0; i < 10; i++) {\n        printf(\" %d\", a);\n        int next = a + b;\n        a = b;\n        b = next;\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Fibonacci: 0 1 1 2 3 5 8 13 21 34\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

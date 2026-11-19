@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One finally Instead of Repeated Cleanup",
+    "language": "java",
+    "problemDescription": "The cleanup line is written in both the normal path and the catch block. Move it into a finally block. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int divide(int a, int b) {\n        try {\n            int r = a / b;\n            System.out.println(\"cleanup\");\n            return r;\n        } catch (ArithmeticException e) {\n            System.out.println(\"cleanup\");\n            return 0;\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(divide(10, 2));\n        System.out.println(divide(1, 0));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int divide(int a, int b) {\n        try {\n            return a / b;\n        } catch (ArithmeticException e) {\n            return 0;\n        } finally {\n            System.out.println(\"cleanup\");\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(divide(10, 2));\n        System.out.println(divide(1, 0));\n    }\n}",
+      "explanation": "finally runs on every path out of the try statement, so the cleanup is written once. Duplicated cleanup is easy to forget when a new path (another catch, an early return) is added."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cleanup[ \\t]*\\r?\\n5[ \\t]*\\r?\\ncleanup[ \\t]*\\r?\\n0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

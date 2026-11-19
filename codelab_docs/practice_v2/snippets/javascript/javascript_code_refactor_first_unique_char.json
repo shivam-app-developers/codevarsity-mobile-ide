@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Count Once Instead of Comparing Every Pair",
+    "language": "javascript",
+    "problemDescription": "For each character the whole string is searched again to see whether it repeats. Count the characters once in an object and look the counts up. The output must stay the same.",
+    "initialCode": "var s = \"swiss\";\nvar answer = -1;\nfor (var i = 0; i < s.length && answer === -1; i++) {\n  var repeated = false;\n  for (var j = 0; j < s.length; j++) {\n    if (i !== j && s.charAt(i) === s.charAt(j)) {\n      repeated = true;\n    }\n  }\n  if (!repeated) {\n    answer = i;\n  }\n}\nconsole.log(answer);",
+    "solution": {
+      "code": "var s = \"swiss\";\nvar counts = {};\nfor (var i = 0; i < s.length; i++) {\n  counts[s[i]] = (counts[s[i]] || 0) + 1;\n}\nvar answer = -1;\nfor (var j = 0; j < s.length; j++) {\n  if (counts[s[j]] === 1) {\n    answer = j;\n    break;\n  }\n}\nconsole.log(answer);",
+      "explanation": "Two linear passes replace the n squared comparisons of the nested loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

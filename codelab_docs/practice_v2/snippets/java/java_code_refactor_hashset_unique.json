@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: HashSet Instead of Nested Loops",
+    "language": "java",
+    "problemDescription": "Each element is compared with all the elements before it to find the first duplicate. Remember the seen values in a HashSet. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {2, 5, 3, 5, 2};\n        for (int i = 0; i < a.length; i++) {\n            for (int j = 0; j < i; j++) {\n                if (a[i] == a[j]) {\n                    System.out.println(a[i]);\n                    return;\n                }\n            }\n        }\n        System.out.println(-1);\n    }\n}",
+    "solution": {
+      "code": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {2, 5, 3, 5, 2};\n        Set<Integer> seen = new HashSet<>();\n        for (int n : a) {\n            if (!seen.add(n)) {\n                System.out.println(n);\n                return;\n            }\n        }\n        System.out.println(-1);\n    }\n}",
+      "explanation": "A set answers \"have I seen this before?\" in constant time, so one pass is enough. The nested loops compare every pair, which takes n squared steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

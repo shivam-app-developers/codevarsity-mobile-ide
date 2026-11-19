@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Smaller Value Is Returned",
+    "language": "java",
+    "problemDescription": "larger should return the bigger value (8, pear, 2.5), but the program prints the smaller ones.",
+    "buggyCode": "public class Main {\n    static <T extends Comparable<T>> T larger(T a, T b) {\n        return a.compareTo(b) >= 0 ? b : a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(larger(3, 8));\n        System.out.println(larger(\"pear\", \"apple\"));\n        System.out.println(larger(2.5, 1.5));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static <T extends Comparable<T>> T larger(T a, T b) {\n        return a.compareTo(b) >= 0 ? a : b;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(larger(3, 8));\n        System.out.println(larger(\"pear\", \"apple\"));\n        System.out.println(larger(2.5, 1.5));\n    }\n}",
+      "explanation": "compareTo returns a positive number or zero when a is not smaller than b, so in that case a is the larger value and must be the one returned. Swapping the branches returns the smaller value every time."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8[ \\t]*\\r?\\npear[ \\t]*\\r?\\n2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

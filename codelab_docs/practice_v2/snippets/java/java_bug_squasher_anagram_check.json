@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only One Word Is Sorted",
+    "language": "java",
+    "problemDescription": "triangle and integral are anagrams, but the program prints false.",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    static boolean isAnagram(String a, String b) {\n        char[] x = a.toCharArray();\n        char[] y = b.toCharArray();\n        Arrays.sort(x);\n        return Arrays.equals(x, y);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isAnagram(\"triangle\", \"integral\"));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static boolean isAnagram(String a, String b) {\n        char[] x = a.toCharArray();\n        char[] y = b.toCharArray();\n        Arrays.sort(x);\n        Arrays.sort(y);\n        return Arrays.equals(x, y);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isAnagram(\"triangle\", \"integral\"));\n    }\n}",
+      "explanation": "Comparing a sorted array with an unsorted one only works by accident. Both words must be put in the same order before they can be compared element by element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

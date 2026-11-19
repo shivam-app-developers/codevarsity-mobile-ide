@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Generalize the Three-Digit Formula",
+    "language": "java",
+    "problemDescription": "The digits are pulled out with fixed divisors and cubed by hand, which only works for three-digit numbers. Write an isArmstrong method that works for any number of digits (use the same range 100 to 999 so the output stays the same).",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        for (int n = 100; n < 1000; n++) {\n            int a = n / 100;\n            int b = n / 10 % 10;\n            int c = n % 10;\n            if (a * a * a + b * b * b + c * c * c == n) {\n                System.out.println(n);\n            }\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isArmstrong(int n) {\n        int digits = String.valueOf(n).length();\n        int sum = 0;\n        for (int rest = n; rest > 0; rest /= 10) {\n            int power = 1;\n            for (int i = 0; i < digits; i++) {\n                power *= rest % 10;\n            }\n            sum += power;\n        }\n        return sum == n;\n    }\n\n    public static void main(String[] args) {\n        for (int n = 100; n < 1000; n++) {\n            if (isArmstrong(n)) {\n                System.out.println(n);\n            }\n        }\n    }\n}",
+      "explanation": "A loop over the digits replaces three hard-wired variables, so the same method works for 4-digit numbers like 9474 and for any other length. Logic that hides a fixed assumption (here: 3 digits) is a bug waiting for new input."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*153[ \\t]*\\r?\\n370[ \\t]*\\r?\\n371[ \\t]*\\r?\\n407\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

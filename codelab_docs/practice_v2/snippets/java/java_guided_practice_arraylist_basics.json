@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: ArrayList Basics",
+    "language": "java",
+    "description": "An ArrayList grows as you add items. add appends or inserts at an index, remove deletes, and get, size and contains read it.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> fruits = new ArrayList<>();\n        fruits.add(\"apple\");\n        fruits.add(\"banana\");\n        fruits.add(1, \"cherry\");\n        System.out.println(fruits);\n        fruits.remove(\"apple\");\n        System.out.println(fruits.get(0) + \" \" + fruits.size());\n        System.out.println(fruits.contains(\"banana\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[apple, cherry, banana\\][ \\t]*\\r?\\ncherry 2[ \\t]*\\r?\\ntrue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Leftover Items Are Dropped",
+    "language": "javascript",
+    "problemDescription": "Merging [1,4,7] with [2,3,9,10] should end with 9 and 10, but the program prints [1,2,3,4,7].",
+    "buggyCode": "function merge(a, b) {\n  var result = [];\n  var i = 0;\n  var j = 0;\n  while (i < a.length && j < b.length) {\n    if (a[i] <= b[j]) {\n      result.push(a[i++]);\n    } else {\n      result.push(b[j++]);\n    }\n  }\n  return result;\n}\n\nconsole.log(merge([1, 4, 7], [2, 3, 9, 10]));",
+    "solution": {
+      "code": "function merge(a, b) {\n  var result = [];\n  var i = 0;\n  var j = 0;\n  while (i < a.length && j < b.length) {\n    if (a[i] <= b[j]) {\n      result.push(a[i++]);\n    } else {\n      result.push(b[j++]);\n    }\n  }\n  return result.concat(a.slice(i), b.slice(j));\n}\n\nconsole.log(merge([1, 4, 7], [2, 3, 9, 10]));",
+      "explanation": "The loop stops as soon as one array is used up, but the other may still hold items. They are already sorted, so they just have to be appended: slice(i) takes what remains of a, and slice(j) what remains of b."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4,7,9,10\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: find, some, every",
+    "language": "javascript",
+    "description": "find returns the first matching item, findIndex its position, some asks whether any item matches and every whether all of them do.",
+    "ghostCode": "var users = [\n  { name: \"Asha\", age: 17 },\n  { name: \"Ravi\", age: 25 },\n  { name: \"Meena\", age: 31 }\n];\nvar firstAdult = users.find(function (u) {\n  return u.age >= 18;\n});\nconsole.log(firstAdult.name);\nconsole.log(users.some(function (u) { return u.age > 30; }));\nconsole.log(users.every(function (u) { return u.age >= 18; }));\nconsole.log(users.findIndex(function (u) { return u.name === \"Meena\"; }));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Ravi[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

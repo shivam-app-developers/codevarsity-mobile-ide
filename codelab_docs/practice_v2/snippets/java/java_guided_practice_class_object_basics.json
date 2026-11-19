@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Classes and Objects",
+    "language": "java",
+    "description": "A class describes fields and methods; new creates an object from it. The constructor sets up the fields of the new object.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Car car = new Car(\"Toyota\", 2020);\n        car.describe();\n        car.drive(150);\n        car.drive(30);\n        System.out.println(\"Odometer: \" + car.getKm());\n    }\n}\n\nclass Car {\n    private String model;\n    private int year;\n    private int km;\n\n    Car(String model, int year) {\n        this.model = model;\n        this.year = year;\n    }\n\n    void drive(int distance) {\n        km += distance;\n    }\n\n    int getKm() {\n        return km;\n    }\n\n    void describe() {\n        System.out.println(year + \" \" + model);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2020 Toyota[ \\t]*\\r?\\nOdometer: 180\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Missing Call to the Superclass Constructor",
+    "language": "java",
+    "problemDescription": "The program does not compile: the Manager constructor never calls the constructor of Employee.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Manager m = new Manager(\"Asha\", 1000, 500);\n        System.out.println(m.name + \" earns \" + m.yearly());\n    }\n}\n\nclass Employee {\n    protected String name;\n    protected int salary;\n\n    Employee(String name, int salary) {\n        this.name = name;\n        this.salary = salary;\n    }\n}\n\nclass Manager extends Employee {\n    private int bonus;\n\n    Manager(String name, int salary, int bonus) {\n\n        this.bonus = bonus;\n    }\n\n    int yearly() {\n        return salary * 12 + bonus;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Manager m = new Manager(\"Asha\", 1000, 500);\n        System.out.println(m.name + \" earns \" + m.yearly());\n    }\n}\n\nclass Employee {\n    protected String name;\n    protected int salary;\n\n    Employee(String name, int salary) {\n        this.name = name;\n        this.salary = salary;\n    }\n}\n\nclass Manager extends Employee {\n    private int bonus;\n\n    Manager(String name, int salary, int bonus) {\n        super(name, salary);\n        this.bonus = bonus;\n    }\n\n    int yearly() {\n        return salary * 12 + bonus;\n    }\n}",
+      "explanation": "Every constructor starts by calling a superclass constructor. When none is written, Java inserts super() with no arguments, but Employee has no such constructor, so the code does not compile. Call super(name, salary) explicitly as the first statement."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha earns 12500\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

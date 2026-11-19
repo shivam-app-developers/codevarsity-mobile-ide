@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Leftovers of the Second Array Are Lost",
+    "language": "java",
+    "problemDescription": "Merging 1 5 8 with 2 3 4 20 30 should end with 20 30, but the last two entries are 0.",
+    "buggyCode": "import java.util.Arrays;\n\npublic class Main {\n    static int[] merge(int[] a, int[] b) {\n        int[] result = new int[a.length + b.length];\n        int i = 0, j = 0, k = 0;\n        while (i < a.length && j < b.length) {\n            result[k++] = a[i] <= b[j] ? a[i++] : b[j++];\n        }\n        while (i < a.length) {\n            result[k++] = a[i++];\n        }\n        return result;\n    }\n\n    public static void main(String[] args) {\n        int[] first = {1, 5, 8};\n        int[] second = {2, 3, 4, 20, 30};\n        System.out.println(Arrays.toString(merge(first, second)));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    static int[] merge(int[] a, int[] b) {\n        int[] result = new int[a.length + b.length];\n        int i = 0, j = 0, k = 0;\n        while (i < a.length && j < b.length) {\n            result[k++] = a[i] <= b[j] ? a[i++] : b[j++];\n        }\n        while (i < a.length) {\n            result[k++] = a[i++];\n        }\n        while (j < b.length) {\n            result[k++] = b[j++];\n        }\n        return result;\n    }\n\n    public static void main(String[] args) {\n        int[] first = {1, 5, 8};\n        int[] second = {2, 3, 4, 20, 30};\n        System.out.println(Arrays.toString(merge(first, second)));\n    }\n}",
+      "explanation": "The first loop ends as soon as one array is used up, but the other may still have elements. Those leftovers are already sorted and must be copied, otherwise the result keeps its default zeros."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3, 4, 5, 8, 20, 30\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

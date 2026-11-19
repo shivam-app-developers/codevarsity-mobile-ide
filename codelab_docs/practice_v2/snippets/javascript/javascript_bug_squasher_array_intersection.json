@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Duplicates in the Result",
+    "language": "javascript",
+    "problemDescription": "The common values of [1,2,2,3,4] and [2,4,4,6] should be [2,4], but the program prints [2,2,4].",
+    "buggyCode": "function intersection(a, b) {\n  return a.filter(function (x, i) {\n    return b.indexOf(x) !== -1;\n  });\n}\n\nconsole.log(intersection([1, 2, 2, 3, 4], [2, 4, 4, 6]));",
+    "solution": {
+      "code": "function intersection(a, b) {\n  return a.filter(function (x, i) {\n    return b.indexOf(x) !== -1 && a.indexOf(x) === i;\n  });\n}\n\nconsole.log(intersection([1, 2, 2, 3, 4], [2, 4, 4, 6]));",
+      "explanation": "The second 2 in the first array is also found in the second array, so it is kept again. Checking that this is the first occurrence (a.indexOf(x) === i) keeps each common value only once."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

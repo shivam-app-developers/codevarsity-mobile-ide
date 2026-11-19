@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Zip Two Arrays",
+    "language": "javascript",
+    "description": "zip pairs up the items at the same position of two arrays. Stop at the shorter array so no pair contains a missing value.",
+    "ghostCode": "function zip(a, b) {\n  var length = Math.min(a.length, b.length);\n  var pairs = [];\n  for (var i = 0; i < length; i++) {\n    pairs.push([a[i], b[i]]);\n  }\n  return pairs;\n}\n\nconsole.log(zip([1, 2, 3], [\"a\", \"b\", \"c\"]));\nconsole.log(zip([1, 2, 3], [\"x\"]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,\"a\"\\],\\[2,\"b\"\\],\\[3,\"c\"\\]\\][ \\t]*\\r?\\n\\[\\[1,\"x\"\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

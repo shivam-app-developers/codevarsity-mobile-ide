@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Steps Counted Only for Odd Numbers",
+    "language": "c",
+    "problemDescription": "Starting from 27 the sequence takes 111 steps, but the program prints 41.",
+    "buggyCode": "#include <stdio.h>\n\nint collatz_steps(int n) {\n    int steps = 0;\n    while (n != 1) {\n        if (n % 2 == 0) {\n            n /= 2;\n        } else {\n            n = 3 * n + 1;\n            steps++;\n        }\n    }\n    return steps;\n}\n\nint main() {\n    printf(\"%d\\n\", collatz_steps(27));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint collatz_steps(int n) {\n    int steps = 0;\n    while (n != 1) {\n        if (n % 2 == 0) {\n            n /= 2;\n        } else {\n            n = 3 * n + 1;\n        }\n        steps++;\n    }\n    return steps;\n}\n\nint main() {\n    printf(\"%d\\n\", collatz_steps(27));\n    return 0;\n}",
+      "explanation": "Every move of the sequence is a step, whether the number is halved or tripled. Putting steps++ inside the else branch counts only the odd moves."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*111\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

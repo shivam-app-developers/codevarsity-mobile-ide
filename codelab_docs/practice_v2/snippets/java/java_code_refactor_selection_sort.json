@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Swap per Pass",
+    "language": "java",
+    "problemDescription": "Elements are swapped every time a smaller one is found, which moves data many times per pass. Remember the index of the smallest element and swap once at the end of the pass. The output must stay the same.",
+    "initialCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {29, 10, 14, 37, 13};\n        for (int i = 0; i < a.length; i++) {\n            for (int j = i + 1; j < a.length; j++) {\n                if (a[j] < a[i]) {\n                    int temp = a[i];\n                    a[i] = a[j];\n                    a[j] = temp;\n                }\n            }\n        }\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {29, 10, 14, 37, 13};\n        for (int i = 0; i < a.length - 1; i++) {\n            int min = i;\n            for (int j = i + 1; j < a.length; j++) {\n                if (a[j] < a[min]) {\n                    min = j;\n                }\n            }\n            int temp = a[i];\n            a[i] = a[min];\n            a[min] = temp;\n        }\n        System.out.println(Arrays.toString(a));\n    }\n}",
+      "explanation": "Selection sort makes at most n - 1 swaps in total, while swapping inside the inner loop can swap many times per pass. Both compare about the same number of elements, but writing to memory is the more expensive part."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[10, 13, 14, 29, 37\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

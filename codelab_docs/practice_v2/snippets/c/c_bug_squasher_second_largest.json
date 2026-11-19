@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Duplicate Maximum Counts Twice",
+    "language": "c",
+    "problemDescription": "In 20, 20, 10, 5 the second largest distinct value is 10, but the program prints 20.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {20, 20, 10, 5};\n    int first = -1, second = -1;\n    for (int i = 0; i < 4; i++) {\n        if (a[i] > first) {\n            second = first;\n            first = a[i];\n        } else if (a[i] > second) {\n            second = a[i];\n        }\n    }\n    printf(\"Second largest: %d\\n\", second);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {20, 20, 10, 5};\n    int first = -1, second = -1;\n    for (int i = 0; i < 4; i++) {\n        if (a[i] > first) {\n            second = first;\n            first = a[i];\n        } else if (a[i] > second && a[i] != first) {\n            second = a[i];\n        }\n    }\n    printf(\"Second largest: %d\\n\", second);\n    return 0;\n}",
+      "explanation": "When the second 20 arrives it is not larger than first, but it is larger than second (-1), so it is stored as second. The extra test a[i] != first rejects values equal to the maximum."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Second largest: 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

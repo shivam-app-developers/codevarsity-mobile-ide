@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Move Zeros to the End",
+    "language": "javascript",
+    "description": "Keep the non-zero items in their order, then append as many zeros as were removed.",
+    "ghostCode": "function moveZeros(list) {\n  var nonZero = list.filter(function (x) {\n    return x !== 0;\n  });\n  var zeros = list.length - nonZero.length;\n  for (var i = 0; i < zeros; i++) {\n    nonZero.push(0);\n  }\n  return nonZero;\n}\n\nconsole.log(moveZeros([0, 1, 0, 3, 12]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,3,12,0,0\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

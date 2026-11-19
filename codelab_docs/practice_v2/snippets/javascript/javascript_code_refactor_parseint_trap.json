@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: map and filter Instead of a Loop with push",
+    "language": "javascript",
+    "problemDescription": "A loop converts each text to a number, tests it and pushes it onto a result array. Use map and filter, with an explicit radix. The output must stay the same.",
+    "initialCode": "var input = \"10,20,x,40\".split(\",\");\nvar numbers = [];\nfor (var i = 0; i < input.length; i++) {\n  var n = parseInt(input[i]);\n  if (!isNaN(n)) {\n    numbers.push(n);\n  }\n}\nconsole.log(numbers);",
+    "solution": {
+      "code": "var numbers = \"10,20,x,40\"\n  .split(\",\")\n  .map(function (s) {\n    return parseInt(s, 10);\n  })\n  .filter(function (n) {\n    return !isNaN(n);\n  });\nconsole.log(numbers);",
+      "explanation": "The chain reads as the steps of the job (split, convert, keep the valid ones), with no counter or temporary array, and parseInt always gets a radix of 10."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[10,20,40\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

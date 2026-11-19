@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Message Never Reaches the Exception",
+    "language": "java",
+    "problemDescription": "The program should print Failed: Need 30 more, but it prints Failed: null.",
+    "buggyCode": "public class Main {\n    static void withdraw(int balance, int amount) throws InsufficientFundsException {\n        if (amount > balance) {\n            throw new InsufficientFundsException(\"Need \" + (amount - balance) + \" more\");\n        }\n        System.out.println(\"Withdrew \" + amount);\n    }\n\n    public static void main(String[] args) {\n        try {\n            withdraw(100, 130);\n        } catch (InsufficientFundsException e) {\n            System.out.println(\"Failed: \" + e.getMessage());\n        }\n    }\n}\n\nclass InsufficientFundsException extends Exception {\n    InsufficientFundsException(String message) {\n\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static void withdraw(int balance, int amount) throws InsufficientFundsException {\n        if (amount > balance) {\n            throw new InsufficientFundsException(\"Need \" + (amount - balance) + \" more\");\n        }\n        System.out.println(\"Withdrew \" + amount);\n    }\n\n    public static void main(String[] args) {\n        try {\n            withdraw(100, 130);\n        } catch (InsufficientFundsException e) {\n            System.out.println(\"Failed: \" + e.getMessage());\n        }\n    }\n}\n\nclass InsufficientFundsException extends Exception {\n    InsufficientFundsException(String message) {\n        super(message);\n    }\n}",
+      "explanation": "getMessage returns the text given to the superclass constructor. If the custom constructor does not pass its message on with super(message), the exception is built with no message and getMessage returns null."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Failed: Need 30 more\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

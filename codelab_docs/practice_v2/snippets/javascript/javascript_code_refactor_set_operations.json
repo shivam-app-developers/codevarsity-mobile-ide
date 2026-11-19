@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Set Lookup Instead of indexOf",
+    "language": "javascript",
+    "problemDescription": "indexOf scans the whole second array for every item of the first. Put the second array in a Set and test with has. The output must stay the same.",
+    "initialCode": "var a = [1, 2, 3, 4];\nvar b = [3, 4, 5];\nvar common = [];\nfor (var i = 0; i < a.length; i++) {\n  if (b.indexOf(a[i]) !== -1) {\n    common.push(a[i]);\n  }\n}\nconsole.log(common);",
+    "solution": {
+      "code": "var a = [1, 2, 3, 4];\nvar inB = new Set([3, 4, 5]);\nvar common = a.filter(function (x) {\n  return inB.has(x);\n});\nconsole.log(common);",
+      "explanation": "Set.has takes constant time, while indexOf scans the array. For big arrays the Set version is much faster, and filter says what is being selected."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the else-if Chain with a Helper",
+    "language": "c",
+    "problemDescription": "Five almost identical branches count the same thing. Write an is_vowel helper (strchr with \"aeiou\" does the lookup) and use it in the loop. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"programming language\";\n    int count = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] == 'a') count++;\n        else if (s[i] == 'e') count++;\n        else if (s[i] == 'i') count++;\n        else if (s[i] == 'o') count++;\n        else if (s[i] == 'u') count++;\n    }\n    printf(\"%d\\n\", count);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint is_vowel(char c) {\n    return c != '\\0' && strchr(\"aeiou\", c) != NULL;\n}\n\nint main() {\n    char s[] = \"programming language\";\n    int count = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (is_vowel(s[i])) {\n            count++;\n        }\n    }\n    printf(\"%d\\n\", count);\n    return 0;\n}",
+      "explanation": "The set of vowels now lives in one string, so adding or removing a letter is a one-place change. The c != '\\0' test matters because strchr also \"finds\" the terminator."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

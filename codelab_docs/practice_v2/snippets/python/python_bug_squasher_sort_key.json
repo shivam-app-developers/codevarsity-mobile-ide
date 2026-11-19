@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Marks Are Sorted in Ascending Order",
+    "language": "python",
+    "problemDescription": "The students should be ranked by marks from high to low, then by name, but the program lists the lowest marks first.",
+    "buggyCode": "students = [(\"Ravi\", 72), (\"Meena\", 91), (\"Kiran\", 72), (\"Asha\", 91)]\nby_marks = sorted(students, key=lambda s: (s[1], s[0]))\nprint(by_marks)",
+    "solution": {
+      "code": "students = [(\"Ravi\", 72), (\"Meena\", 91), (\"Kiran\", 72), (\"Asha\", 91)]\nby_marks = sorted(students, key=lambda s: (-s[1], s[0]))\nprint(by_marks)",
+      "explanation": "Python sorts keys from small to large. Negating the marks turns \"highest first\" into \"smallest negative number first\". Without the minus sign the lowest marks come first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('Asha', 91\\), \\('Meena', 91\\), \\('Kiran', 72\\), \\('Ravi', 72\\)\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

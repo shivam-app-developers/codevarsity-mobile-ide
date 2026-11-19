@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Reusable memoize Wrapper",
+    "language": "javascript",
+    "problemDescription": "fib keeps its own global memo object and checks it by hand. Move the caching into a reusable memoize function and wrap fib with it. The output must stay the same.",
+    "initialCode": "var memo = {};\n\nfunction fib(n) {\n  if (n <= 1) {\n    return n;\n  }\n  if (memo[n] !== undefined) {\n    return memo[n];\n  }\n  var result = fib(n - 1) + fib(n - 2);\n  memo[n] = result;\n  return result;\n}\n\nconsole.log(fib(30));",
+    "solution": {
+      "code": "function memoize(fn) {\n  var cache = {};\n  return function (n) {\n    if (!(n in cache)) {\n      cache[n] = fn(n);\n    }\n    return cache[n];\n  };\n}\n\nvar fib = memoize(function (n) {\n  return n <= 1 ? n : fib(n - 1) + fib(n - 2);\n});\n\nconsole.log(fib(30));",
+      "explanation": "fib now contains only the maths. The caching lives in one wrapper that works for any single-argument function, and it keeps its cache private instead of in a global variable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*832040\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

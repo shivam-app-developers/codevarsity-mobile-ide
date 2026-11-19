@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Object.assign Instead of Copying Key by Key",
+    "language": "javascript",
+    "problemDescription": "A loop copies each property of an object into a new one. Use Object.assign. The output must stay the same.",
+    "initialCode": "var a = { x: 1, y: 2, z: 3 };\nvar b = {};\nfor (var key in a) {\n  if (a.hasOwnProperty(key)) {\n    b[key] = a[key];\n  }\n}\nb.x = 100;\nconsole.log(a.x, b.x, b.z);",
+    "solution": {
+      "code": "var a = { x: 1, y: 2, z: 3 };\nvar b = Object.assign({}, a);\nb.x = 100;\nconsole.log(a.x, b.x, b.z);",
+      "explanation": "Object.assign states \"copy the properties\" directly and handles the own-property check for you."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 100 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

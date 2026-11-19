@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Run a Function Only Once",
+    "language": "javascript",
+    "description": "once wraps a function so it runs on the first call only. Later calls return the saved result without running it again.",
+    "ghostCode": "function once(fn) {\n  var called = false;\n  var result;\n  return function () {\n    if (!called) {\n      called = true;\n      result = fn.apply(this, arguments);\n    }\n    return result;\n  };\n}\n\nvar init = once(function () {\n  console.log(\"initializing\");\n  return 42;\n});\nconsole.log(init());\nconsole.log(init());",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*initializing[ \\t]*\\r?\\n42[ \\t]*\\r?\\n42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

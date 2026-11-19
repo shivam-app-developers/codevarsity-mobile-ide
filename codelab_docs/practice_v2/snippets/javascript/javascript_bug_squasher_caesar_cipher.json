@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: No Wrap-Around at z",
+    "language": "javascript",
+    "problemDescription": "Shifting xyz by 3 should give abc, but the program prints {|}.",
+    "buggyCode": "function encrypt(text, shift) {\n  var out = \"\";\n  for (var i = 0; i < text.length; i++) {\n    var code = text.charCodeAt(i);\n    if (code >= 97 && code <= 122) {\n      out += String.fromCharCode((code - 97 + shift) + 97);\n    } else {\n      out += text.charAt(i);\n    }\n  }\n  return out;\n}\n\nconsole.log(encrypt(\"xyz\", 3));",
+    "solution": {
+      "code": "function encrypt(text, shift) {\n  var out = \"\";\n  for (var i = 0; i < text.length; i++) {\n    var code = text.charCodeAt(i);\n    if (code >= 97 && code <= 122) {\n      out += String.fromCharCode((code - 97 + shift) % 26 + 97);\n    } else {\n      out += text.charAt(i);\n    }\n  }\n  return out;\n}\n\nconsole.log(encrypt(\"xyz\", 3));",
+      "explanation": "Adding the shift to a letter near the end of the alphabet goes past z (code 122) into other characters. The % 26 brings the offset back into the range 0 to 25 so the alphabet wraps around."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abc\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

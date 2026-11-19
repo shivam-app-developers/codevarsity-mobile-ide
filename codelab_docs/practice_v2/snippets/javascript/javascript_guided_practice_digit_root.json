@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Digital Root",
+    "language": "javascript",
+    "description": "Add the digits of a number until a single digit is left. 9875 gives 29, then 11, then 2. Use Math.floor when dividing by 10.",
+    "ghostCode": "function digitRoot(n) {\n  while (n >= 10) {\n    var sum = 0;\n    while (n > 0) {\n      sum += n % 10;\n      n = Math.floor(n / 10);\n    }\n    n = sum;\n  }\n  return n;\n}\n\nconsole.log(digitRoot(9875), digitRoot(6789));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

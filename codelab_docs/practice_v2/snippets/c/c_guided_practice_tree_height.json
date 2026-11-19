@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Height of a Binary Tree",
+    "language": "c",
+    "description": "The height of a tree is 1 plus the height of its taller subtree, and an empty tree has height 0.",
+    "ghostCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nint height(struct Node *root) {\n    if (root == NULL) {\n        return 0;\n    }\n    int l = height(root->left);\n    int r = height(root->right);\n    return 1 + (l > r ? l : r);\n}\n\nint main() {\n    struct Node *root = new_node(10);\n    root->left = new_node(5);\n    root->right = new_node(20);\n    root->left->left = new_node(3);\n    root->left->left->left = new_node(1);\n    printf(\"Height: %d\\n\", height(root));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Height: 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

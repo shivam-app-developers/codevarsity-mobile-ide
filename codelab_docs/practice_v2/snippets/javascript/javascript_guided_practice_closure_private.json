@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Private State with Closures",
+    "language": "javascript",
+    "description": "Variables of the outer function cannot be reached from outside, but the functions it returns can use them. This is how JavaScript hides data without classes.",
+    "ghostCode": "function createAccount(balance) {\n  return {\n    deposit: function (amount) {\n      balance += amount;\n      return balance;\n    },\n    getBalance: function () {\n      return balance;\n    }\n  };\n}\n\nvar account = createAccount(100);\naccount.deposit(50);\nconsole.log(account.getBalance());\nconsole.log(account.balance);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*150[ \\t]*\\r?\\nundefined\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

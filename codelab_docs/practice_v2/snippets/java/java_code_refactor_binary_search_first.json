@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Binary Search Instead of a Linear Scan",
+    "language": "java",
+    "problemDescription": "A loop scans from the start until it finds the first 2. Use a binary search that moves left after each hit. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {1, 2, 2, 2, 3, 5};\n        int index = -1;\n        for (int i = 0; i < a.length; i++) {\n            if (a[i] == 2) {\n                index = i;\n                break;\n            }\n        }\n        System.out.println(index);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {1, 2, 2, 2, 3, 5};\n        int low = 0, high = a.length - 1, index = -1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (a[mid] == 2) {\n                index = mid;\n                high = mid - 1;\n            } else if (a[mid] < 2) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n        System.out.println(index);\n    }\n}",
+      "explanation": "For a sorted array the binary search needs about log2(n) comparisons instead of up to n, which for a million elements is 20 steps instead of a million."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

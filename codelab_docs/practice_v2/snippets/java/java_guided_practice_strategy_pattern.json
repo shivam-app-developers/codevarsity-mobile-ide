@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Strategy Pattern",
+    "language": "java",
+    "description": "Put each algorithm behind a common interface so it can be chosen at run time and replaced without touching the code that uses it.",
+    "ghostCode": "public class Main {\n    interface Discount {\n        int apply(int price);\n    }\n\n    static class NoDiscount implements Discount {\n        public int apply(int price) {\n            return price;\n        }\n    }\n\n    static class TenPercent implements Discount {\n        public int apply(int price) {\n            return price - price / 10;\n        }\n    }\n\n    static class Flat50 implements Discount {\n        public int apply(int price) {\n            return Math.max(0, price - 50);\n        }\n    }\n\n    static int checkout(int price, Discount discount) {\n        return discount.apply(price);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(checkout(200, new NoDiscount()));\n        System.out.println(checkout(200, new TenPercent()));\n        System.out.println(checkout(200, new Flat50()));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*200[ \\t]*\\r?\\n180[ \\t]*\\r?\\n150\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

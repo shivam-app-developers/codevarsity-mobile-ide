@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Set Lookup Instead of Nested Loops",
+    "language": "javascript",
+    "problemDescription": "Two nested loops compare every pair of items. Put the second array in a Set and test membership with has. The output must stay the same.",
+    "initialCode": "var a = [1, 2, 2, 3, 4];\nvar b = [2, 4, 4, 6];\nvar result = [];\nfor (var i = 0; i < a.length; i++) {\n  for (var j = 0; j < b.length; j++) {\n    if (a[i] === b[j] && result.indexOf(a[i]) === -1) {\n      result.push(a[i]);\n    }\n  }\n}\nconsole.log(result);",
+    "solution": {
+      "code": "var a = [1, 2, 2, 3, 4];\nvar inB = new Set([2, 4, 4, 6]);\nvar result = [];\na.forEach(function (x) {\n  if (inB.has(x) && result.indexOf(x) === -1) {\n    result.push(x);\n  }\n});\nconsole.log(result);",
+      "explanation": "Set.has answers \"is it in the second array?\" in constant time, so each item of the first array is checked once instead of being compared with every item of the second."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

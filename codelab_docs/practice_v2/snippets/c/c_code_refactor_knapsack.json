@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Table Instead of Trying Every Subset",
+    "language": "c",
+    "problemDescription": "A recursive function tries to take or skip every item, which doubles the work for each extra item. Replace it with the one-dimensional table. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint weights[] = {1, 3, 4, 5};\nint values[] = {1, 4, 5, 7};\n\nint best(int i, int capacity) {\n    if (i == 4) {\n        return 0;\n    }\n    int skip = best(i + 1, capacity);\n    int take = 0;\n    if (weights[i] <= capacity) {\n        take = values[i] + best(i + 1, capacity - weights[i]);\n    }\n    return take > skip ? take : skip;\n}\n\nint main() {\n    printf(\"%d\\n\", best(0, 7));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int weights[] = {1, 3, 4, 5};\n    int values[] = {1, 4, 5, 7};\n    int dp[8] = {0};\n    for (int i = 0; i < 4; i++) {\n        for (int w = 7; w >= weights[i]; w--) {\n            int take = dp[w - weights[i]] + values[i];\n            if (take > dp[w]) {\n                dp[w] = take;\n            }\n        }\n    }\n    printf(\"%d\\n\", dp[7]);\n    return 0;\n}",
+      "explanation": "The recursive version has 2 to the power of n branches. The table keeps the best value for every capacity and updates it item by item, so it needs only n times the capacity steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Comparing Against the Consumed Number",
+    "language": "java",
+    "problemDescription": "121 reads the same backwards, but the program says false for every number.",
+    "buggyCode": "public class Main {\n    static boolean isPalindrome(int n) {\n        int original = n, reversed = 0;\n        while (n > 0) {\n            reversed = reversed * 10 + n % 10;\n            n /= 10;\n        }\n        return n == reversed;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(121));\n        System.out.println(isPalindrome(123));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static boolean isPalindrome(int n) {\n        int original = n, reversed = 0;\n        while (n > 0) {\n            reversed = reversed * 10 + n % 10;\n            n /= 10;\n        }\n        return original == reversed;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(121));\n        System.out.println(isPalindrome(123));\n    }\n}",
+      "explanation": "The loop divides n down to 0, so after it n no longer holds the number. Comparing 0 with the reversed number is false for every input. Keep a copy of the original value and compare against that."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

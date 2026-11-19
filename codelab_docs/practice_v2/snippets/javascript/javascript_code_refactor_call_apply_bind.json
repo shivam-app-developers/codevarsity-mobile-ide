@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: call Instead of Temporarily Copying the Function",
+    "language": "javascript",
+    "problemDescription": "The function is copied onto the object, called as a method, and deleted again. Call it with the object as this directly. The output must stay the same.",
+    "initialCode": "function introduce(greeting, punctuation) {\n  return greeting + \", \" + this.name + punctuation;\n}\n\nvar other = { name: \"Meena\" };\nother.introduce = introduce;\nvar text = other.introduce(\"Hello\", \"!\");\ndelete other.introduce;\nconsole.log(text);",
+    "solution": {
+      "code": "function introduce(greeting, punctuation) {\n  return greeting + \", \" + this.name + punctuation;\n}\n\nvar other = { name: \"Meena\" };\nconsole.log(introduce.call(other, \"Hello\", \"!\"));",
+      "explanation": "call borrows a function for one call without changing the object, so there is nothing to clean up afterwards."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Meena!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

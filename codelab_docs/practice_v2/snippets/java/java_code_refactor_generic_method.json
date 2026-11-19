@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Generic Method Instead of Three Overloads",
+    "language": "java",
+    "problemDescription": "larger is written three times, for int, String and double, with the same logic. Replace the overloads with one generic method. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int larger(int a, int b) {\n        return a >= b ? a : b;\n    }\n\n    static String larger(String a, String b) {\n        return a.compareTo(b) >= 0 ? a : b;\n    }\n\n    static double larger(double a, double b) {\n        return a >= b ? a : b;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(larger(3, 8));\n        System.out.println(larger(\"pear\", \"apple\"));\n        System.out.println(larger(2.5, 1.5));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static <T extends Comparable<T>> T larger(T a, T b) {\n        return a.compareTo(b) >= 0 ? a : b;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(larger(3, 8));\n        System.out.println(larger(\"pear\", \"apple\"));\n        System.out.println(larger(2.5, 1.5));\n    }\n}",
+      "explanation": "The three versions all say \"compare and return the bigger one\". With a bounded type parameter the comparison is written once and works for every type that can be compared."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8[ \\t]*\\r?\\npear[ \\t]*\\r?\\n2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

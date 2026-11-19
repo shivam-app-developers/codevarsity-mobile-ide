@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Abstract Classes",
+    "language": "java",
+    "description": "An abstract class cannot be instantiated and may declare abstract methods that every concrete subclass must implement.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Shape[] shapes = {new Rectangle(4, 5), new Square(3)};\n        for (Shape s : shapes) {\n            s.print();\n        }\n    }\n}\n\nabstract class Shape {\n    abstract String name();\n\n    abstract int area();\n\n    void print() {\n        System.out.println(name() + \" area: \" + area());\n    }\n}\n\nclass Rectangle extends Shape {\n    private final int width, height;\n\n    Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n\n    String name() {\n        return \"Rectangle\";\n    }\n\n    int area() {\n        return width * height;\n    }\n}\n\nclass Square extends Shape {\n    private final int side;\n\n    Square(int side) {\n        this.side = side;\n    }\n\n    String name() {\n        return \"Square\";\n    }\n\n    int area() {\n        return side * side;\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Rectangle area: 20[ \\t]*\\r?\\nSquare area: 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

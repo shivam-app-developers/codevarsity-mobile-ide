@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A LinkedList Class Instead of Hand-Linked Nodes",
+    "language": "java",
+    "problemDescription": "Three nodes are created and linked field by field in main. Write a small list class with an addLast method and a printAll method that prints each value on its own line. The output must stay the same.",
+    "initialCode": "public class Main {\n    static class Node {\n        int value;\n        Node next;\n\n        Node(int v) {\n            value = v;\n        }\n    }\n\n    public static void main(String[] args) {\n        Node a = new Node(1);\n        Node b = new Node(2);\n        Node c = new Node(3);\n        a.next = b;\n        b.next = c;\n        Node p = a;\n        while (p != null) {\n            System.out.println(p.value);\n            p = p.next;\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static class Node {\n        int value;\n        Node next;\n\n        Node(int value) {\n            this.value = value;\n        }\n    }\n\n    static class LinkedList {\n        private Node head;\n\n        void addLast(int value) {\n            Node node = new Node(value);\n            if (head == null) {\n                head = node;\n                return;\n            }\n            Node current = head;\n            while (current.next != null) {\n                current = current.next;\n            }\n            current.next = node;\n        }\n\n        void printAll() {\n            for (Node n = head; n != null; n = n.next) {\n                System.out.println(n.value);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        LinkedList list = new LinkedList();\n        list.addLast(1);\n        list.addLast(2);\n        list.addLast(3);\n        list.printAll();\n    }\n}",
+      "explanation": "The list class hides the pointer handling behind two clear operations, so callers cannot link nodes wrongly, and adding a fourth value is one more call."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

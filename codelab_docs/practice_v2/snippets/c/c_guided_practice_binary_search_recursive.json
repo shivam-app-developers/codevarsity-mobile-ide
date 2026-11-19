@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Recursive Binary Search",
+    "language": "c",
+    "description": "Look at the middle element of a sorted range. If it is too small search the right half, if too big search the left half, and give up when the range is empty.",
+    "ghostCode": "#include <stdio.h>\n\nint search(const int a[], int low, int high, int target) {\n    if (low > high) {\n        return -1;\n    }\n    int mid = low + (high - low) / 2;\n    if (a[mid] == target) {\n        return mid;\n    }\n    if (a[mid] < target) {\n        return search(a, mid + 1, high, target);\n    }\n    return search(a, low, mid - 1, target);\n}\n\nint main() {\n    int a[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};\n    printf(\"%d\\n\", search(a, 0, 9, 23));\n    printf(\"%d\\n\", search(a, 0, 9, 7));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

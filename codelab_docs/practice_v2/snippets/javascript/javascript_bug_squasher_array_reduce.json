@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong Starting Value",
+    "language": "javascript",
+    "problemDescription": "The numbers add up to 66, but the program prints 67.",
+    "buggyCode": "var nums = [4, 8, 15, 16, 23];\nvar sum = nums.reduce(function (total, n) {\n  return total + n;\n}, 1);\nconsole.log(sum);",
+    "solution": {
+      "code": "var nums = [4, 8, 15, 16, 23];\nvar sum = nums.reduce(function (total, n) {\n  return total + n;\n}, 0);\nconsole.log(sum);",
+      "explanation": "The starting value is counted in the result, so for a sum it must be 0, the neutral element of addition. Starting at 1 adds one extra to the total (for a product the neutral value would be 1)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*66\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

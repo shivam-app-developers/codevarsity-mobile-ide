@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Struct Basics",
+    "language": "c",
+    "description": "A struct groups related values under one name. Copy text into a char array with strcpy, because arrays cannot be assigned with =.",
+    "ghostCode": "#include <stdio.h>\n#include <string.h>\n\nstruct Student {\n    char name[20];\n    int roll;\n    float marks;\n};\n\nint main() {\n    struct Student s;\n    strcpy(s.name, \"Asha\");\n    s.roll = 101;\n    s.marks = 88.5f;\n    printf(\"%s (roll %d) scored %.1f\\n\", s.name, s.roll, s.marks);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha \\(roll 101\\) scored 88\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Two Pointers Instead of a List with contains",
+    "language": "java",
+    "problemDescription": "An ArrayList and contains() are used to filter the duplicates of a sorted array, which scans the list for every element. Use a write index on the array itself. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {2, 2, 5, 5, 5, 9};\n        ArrayList<Integer> unique = new ArrayList<>();\n        for (int i = 0; i < a.length; i++) {\n            if (!unique.contains(a[i])) {\n                unique.add(a[i]);\n            }\n        }\n        System.out.println(unique.size());\n        System.out.println(unique);\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {2, 2, 5, 5, 5, 9};\n        int write = 1;\n        for (int read = 1; read < a.length; read++) {\n            if (a[read] != a[write - 1]) {\n                a[write++] = a[read];\n            }\n        }\n        System.out.println(write);\n        System.out.println(Arrays.toString(Arrays.copyOf(a, write)));\n    }\n}",
+      "explanation": "Because the array is sorted, duplicates are neighbours, so comparing with the previous unique value is enough. contains() scans the whole list each time, which takes n squared steps and extra memory."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3[ \\t]*\\r?\\n\\[2, 5, 9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

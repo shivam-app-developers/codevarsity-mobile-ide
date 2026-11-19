@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Fibonacci Series",
+    "language": "java",
+    "description": "Keep the last two numbers and slide them forward on every step to print the first ten Fibonacci numbers.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        int a = 0, b = 1;\n        for (int i = 0; i < 10; i++) {\n            System.out.print(a + \" \");\n            int next = a + b;\n            a = b;\n            b = next;\n        }\n        System.out.println();\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 1 2 3 5 8 13 21 34\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

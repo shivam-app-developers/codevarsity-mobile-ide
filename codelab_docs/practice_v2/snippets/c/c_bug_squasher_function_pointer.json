@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Table Entries in the Wrong Order",
+    "language": "c",
+    "problemDescription": "subtract should print 8 and multiply 48, but the two results are swapped.",
+    "buggyCode": "#include <stdio.h>\n\nint add(int a, int b) { return a + b; }\nint subtract(int a, int b) { return a - b; }\nint multiply(int a, int b) { return a * b; }\n\nint main() {\n    int (*operations[])(int, int) = {add, multiply, subtract};\n    const char *names[] = {\"add\", \"subtract\", \"multiply\"};\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s: %d\\n\", names[i], operations[i](12, 4));\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint add(int a, int b) { return a + b; }\nint subtract(int a, int b) { return a - b; }\nint multiply(int a, int b) { return a * b; }\n\nint main() {\n    int (*operations[])(int, int) = {add, subtract, multiply};\n    const char *names[] = {\"add\", \"subtract\", \"multiply\"};\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s: %d\\n\", names[i], operations[i](12, 4));\n    }\n    return 0;\n}",
+      "explanation": "Two parallel arrays only work when their entries line up. The second name is subtract but the second function is multiply, so the labels and results no longer match. Keep the tables in the same order, or put the name and function in one struct."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*add: 16[ \\t]*\\r?\\nsubtract: 8[ \\t]*\\r?\\nmultiply: 48\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Fast Recursive Power",
+    "language": "c",
+    "description": "Compute base to the power of exp by halving the exponent: x^n is (x^(n/2)) squared, times x when n is odd.",
+    "ghostCode": "#include <stdio.h>\n\nint power(int base, int exp) {\n    if (exp == 0) {\n        return 1;\n    }\n    int half = power(base, exp / 2);\n    if (exp % 2 == 0) {\n        return half * half;\n    }\n    return half * half * base;\n}\n\nint main() {\n    printf(\"2^10 = %d\\n\", power(2, 10));\n    printf(\"3^5 = %d\\n\", power(3, 5));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\^10 = 1024[ \\t]*\\r?\\n3\\^5 = 243\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Count Once Instead of Comparing Every Pair",
+    "language": "java",
+    "problemDescription": "For every character the whole string is scanned again to see whether it repeats. Count the letters once in an array and look up each count. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String s = \"swiss\";\n        int answer = -1;\n        for (int i = 0; i < s.length() && answer == -1; i++) {\n            boolean repeated = false;\n            for (int j = 0; j < s.length(); j++) {\n                if (i != j && s.charAt(i) == s.charAt(j)) {\n                    repeated = true;\n                }\n            }\n            if (!repeated) {\n                answer = i;\n            }\n        }\n        System.out.println(answer);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s = \"swiss\";\n        int[] counts = new int[26];\n        for (char c : s.toCharArray()) {\n            counts[c - 'a']++;\n        }\n        int answer = -1;\n        for (int i = 0; i < s.length(); i++) {\n            if (counts[s.charAt(i) - 'a'] == 1) {\n                answer = i;\n                break;\n            }\n        }\n        System.out.println(answer);\n    }\n}",
+      "explanation": "Comparing every character with every other one takes n squared steps. Two passes with a counting array take 2n steps, which is the standard trick for this interview question."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

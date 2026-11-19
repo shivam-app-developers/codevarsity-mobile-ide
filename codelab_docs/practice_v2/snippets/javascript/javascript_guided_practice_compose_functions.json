@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Function Composition",
+    "language": "javascript",
+    "description": "compose(f, g) returns a new function that applies g first and then f, like f(g(x)).",
+    "ghostCode": "function compose(f, g) {\n  return function (x) {\n    return f(g(x));\n  };\n}\n\nfunction addOne(x) {\n  return x + 1;\n}\n\nfunction twice(x) {\n  return x * 2;\n}\n\nvar addThenDouble = compose(twice, addOne);\nvar doubleThenAdd = compose(addOne, twice);\nconsole.log(addThenDouble(5));\nconsole.log(doubleThenAdd(5));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12[ \\t]*\\r?\\n11\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

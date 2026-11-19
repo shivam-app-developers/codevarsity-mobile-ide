@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: reduce and concat Instead of Nested Loops",
+    "language": "javascript",
+    "problemDescription": "Two nested loops copy the items of each inner array into a result. Use reduce with concat. The output must stay the same.",
+    "initialCode": "var nested = [[1, 2], [3], [4, 5, 6]];\nvar flat = [];\nfor (var i = 0; i < nested.length; i++) {\n  for (var j = 0; j < nested[i].length; j++) {\n    flat.push(nested[i][j]);\n  }\n}\nconsole.log(flat);",
+    "solution": {
+      "code": "var nested = [[1, 2], [3], [4, 5, 6]];\nvar flat = nested.reduce(function (all, part) {\n  return all.concat(part);\n}, []);\nconsole.log(flat);",
+      "explanation": "Joining the arrays one after the other is exactly what reduce with concat expresses, with no indexes to get wrong."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4,5,6\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

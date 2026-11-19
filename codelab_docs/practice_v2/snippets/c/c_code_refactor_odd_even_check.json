@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Flatten the Nested Ifs",
+    "language": "c",
+    "problemDescription": "A flag variable and nested ifs are used to print one word. Simplify it to a single expression. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 14;\n    int r;\n    if (n % 2 == 0) {\n        r = 1;\n    } else {\n        r = 0;\n    }\n    if (r == 1) {\n        printf(\"Even\\n\");\n    } else {\n        if (r == 0) {\n            printf(\"Odd\\n\");\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int n = 14;\n    printf(\"%s\\n\", n % 2 == 0 ? \"Even\" : \"Odd\");\n    return 0;\n}",
+      "explanation": "The flag r only repeated the answer of the first if, and the inner if could never be false. A conditional expression states the decision once."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Even\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

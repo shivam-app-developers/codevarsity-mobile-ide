@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Proper Loop Condition and a Conditional Expression",
+    "language": "javascript",
+    "problemDescription": "An endless while(true) loop with a break and a two-line formula computes the steps. Put the stopping condition in the loop header and use a conditional expression. The output must stay the same.",
+    "initialCode": "var n = 7;\nvar count = 0;\nwhile (true) {\n  if (n === 1) {\n    break;\n  }\n  if (n % 2 === 0) {\n    n = n / 2;\n  } else {\n    n = n * 3;\n    n = n + 1;\n  }\n  count = count + 1;\n}\nconsole.log(count);",
+    "solution": {
+      "code": "function collatzSteps(n) {\n  var steps = 0;\n  while (n !== 1) {\n    n = n % 2 === 0 ? n / 2 : 3 * n + 1;\n    steps++;\n  }\n  return steps;\n}\n\nconsole.log(collatzSteps(7));",
+      "explanation": "The loop's purpose is visible in its header, and the function name explains the result."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*16\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

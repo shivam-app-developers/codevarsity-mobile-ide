@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Varargs Parameter Is Not Last",
+    "language": "java",
+    "problemDescription": "The program does not compile: the variable-length parameter is placed before another parameter.",
+    "buggyCode": "public class Main {\n    static String join(String... parts, String separator) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < parts.length; i++) {\n            if (i > 0) {\n                sb.append(separator);\n            }\n            sb.append(parts[i]);\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(join(\"-\", \"a\", \"b\", \"c\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String join(String separator, String... parts) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < parts.length; i++) {\n            if (i > 0) {\n                sb.append(separator);\n            }\n            sb.append(parts[i]);\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(join(\"-\", \"a\", \"b\", \"c\"));\n    }\n}",
+      "explanation": "A varargs parameter swallows all remaining arguments, so it must be the last parameter; otherwise the compiler could not tell where it ends. Put the separator first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a-b-c\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

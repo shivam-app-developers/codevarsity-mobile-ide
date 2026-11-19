@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: filter Used Where find Is Needed",
+    "language": "javascript",
+    "problemDescription": "The first adult is Ravi, but the program prints undefined.",
+    "buggyCode": "var users = [\n  { name: \"Asha\", age: 17 },\n  { name: \"Ravi\", age: 25 }\n];\nvar firstAdult = users.filter(function (u) {\n  return u.age >= 18;\n});\nconsole.log(firstAdult.name);",
+    "solution": {
+      "code": "var users = [\n  { name: \"Asha\", age: 17 },\n  { name: \"Ravi\", age: 25 }\n];\nvar firstAdult = users.find(function (u) {\n  return u.age >= 18;\n});\nconsole.log(firstAdult.name);",
+      "explanation": "filter always returns an array, even when only one item matches, and an array has no name property. find returns the first matching item itself."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Ravi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

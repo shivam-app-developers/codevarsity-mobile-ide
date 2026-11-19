@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sieve of Eratosthenes",
+    "language": "c",
+    "description": "Mark the multiples of every prime as composite. You only need to start from p * p and only go up to the square root of the limit.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int limit = 50;\n    int composite[51] = {0};\n    for (int i = 2; i * i <= limit; i++) {\n        if (!composite[i]) {\n            for (int j = i * i; j <= limit; j += i) {\n                composite[j] = 1;\n            }\n        }\n    }\n    for (int i = 2; i <= limit; i++) {\n        if (!composite[i]) {\n            printf(\"%d \", i);\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 3 5 7 11 13 17 19 23 29 31 37 41 43 47\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

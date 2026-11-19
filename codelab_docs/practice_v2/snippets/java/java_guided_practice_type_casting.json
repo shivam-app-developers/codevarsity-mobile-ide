@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Type Casting and Integer Division",
+    "language": "java",
+    "description": "Casting a double to an int cuts off the decimals, a long that is too big wraps around when cast to int, and a char can be built from a number.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        double price = 9.99;\n        int whole = (int) price;\n        long big = 3000000000L;\n        int wrapped = (int) big;\n        char letter = (char) ('A' + 2);\n        System.out.println(\"whole = \" + whole);\n        System.out.println(\"wrapped = \" + wrapped);\n        System.out.println(\"letter = \" + letter);\n        System.out.println(7 / 2 + \" \" + 7 / 2.0);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*whole = 9[ \\t]*\\r?\\nwrapped = -1294967296[ \\t]*\\r?\\nletter = C[ \\t]*\\r?\\n3 3\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

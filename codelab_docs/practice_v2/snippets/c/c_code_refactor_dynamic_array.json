@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Size the Array to Fit",
+    "language": "c",
+    "problemDescription": "A fixed array of 100 ints is declared for 4 values. Allocate exactly n ints with malloc and free them at the end. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 4;\n    int buffer[100];\n    for (int i = 0; i < n; i++) {\n        buffer[i] = i * 10;\n    }\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        sum += buffer[i];\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int n = 4;\n    int *values = malloc(n * sizeof(int));\n    for (int i = 0; i < n; i++) {\n        values[i] = i * 10;\n    }\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        sum += values[i];\n    }\n    printf(\"%d\\n\", sum);\n    free(values);\n    return 0;\n}",
+      "explanation": "A fixed array wastes memory when n is small and overflows when n is large. Allocating n elements uses exactly what is needed, as long as every malloc is paired with a free."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*60\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

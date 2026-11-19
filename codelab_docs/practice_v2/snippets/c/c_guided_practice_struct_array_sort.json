@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sort an Array of Structs",
+    "language": "c",
+    "description": "Sort structs by one field. When two elements swap, the whole struct must move so the name stays with its score.",
+    "ghostCode": "#include <stdio.h>\n\nstruct Player {\n    const char *name;\n    int score;\n};\n\nint main() {\n    struct Player p[] = {{\"Ann\", 40}, {\"Raj\", 95}, {\"Mia\", 72}};\n    int n = 3;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (p[j].score < p[j + 1].score) {\n                struct Player temp = p[j];\n                p[j] = p[j + 1];\n                p[j + 1] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < n; i++) {\n        printf(\"%d. %s %d\\n\", i + 1, p[i].name, p[i].score);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\. Raj 95[ \\t]*\\r?\\n2\\. Mia 72[ \\t]*\\r?\\n3\\. Ann 40\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Method Loses Its Object",
+    "language": "javascript",
+    "problemDescription": "Calling the extracted greet function should print Hi, I am Asha, but it prints Hi, I am undefined.",
+    "buggyCode": "var person = {\n  name: \"Asha\",\n  greet: function () {\n    return \"Hi, I am \" + this.name;\n  }\n};\n\nvar greet = person.greet;\nconsole.log(greet());",
+    "solution": {
+      "code": "var person = {\n  name: \"Asha\",\n  greet: function () {\n    return \"Hi, I am \" + this.name;\n  }\n};\n\nvar greet = person.greet.bind(person);\nconsole.log(greet());",
+      "explanation": "this is decided by how a function is called, not where it was written. Calling greet() on its own gives it no object, so this.name is undefined. bind(person) fixes this to person permanently."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hi, I am Asha\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

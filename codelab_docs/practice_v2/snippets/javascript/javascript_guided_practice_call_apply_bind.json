@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: call, apply and bind",
+    "language": "javascript",
+    "description": "call and apply run a function with a chosen this: call takes the arguments one by one, apply takes them as an array. bind returns a new function with this (and some arguments) fixed.",
+    "ghostCode": "function introduce(greeting, punctuation) {\n  return greeting + \", \" + this.name + punctuation;\n}\n\nvar user = { name: \"Ravi\" };\nconsole.log(introduce.call(user, \"Hello\", \"!\"));\nconsole.log(introduce.apply(user, [\"Hi\", \"?\"]));\nvar hello = introduce.bind(user, \"Hey\");\nconsole.log(hello(\".\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Ravi![ \\t]*\\r?\\nHi, Ravi\\?[ \\t]*\\r?\\nHey, Ravi\\.\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Counter Variable Is Reset on Every Call",
+    "language": "javascript",
+    "problemDescription": "Calling the counter twice should print 1 and then 2, but it prints 1 both times.",
+    "buggyCode": "function makeCounter() {\n  return function () {\n    var count = 0;\n    count += 1;\n    return count;\n  };\n}\n\nvar counter = makeCounter();\nconsole.log(counter());\nconsole.log(counter());",
+    "solution": {
+      "code": "function makeCounter() {\n  var count = 0;\n  return function () {\n    count += 1;\n    return count;\n  };\n}\n\nvar counter = makeCounter();\nconsole.log(counter());\nconsole.log(counter());",
+      "explanation": "A variable declared inside the inner function is created again on every call. To keep a value between calls it must live in the outer function, where the closure can keep it alive."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Regular Expression Basics",
+    "language": "javascript",
+    "description": "test checks whether a pattern matches, match with the g flag lists all matches, and exec returns capture groups. ^ and $ anchor the pattern to the whole text.",
+    "ghostCode": "var phone = /^\\d{3}-\\d{4}$/;\nconsole.log(phone.test(\"555-1234\"));\nconsole.log(phone.test(\"5551234\"));\nvar text = \"Order 66 shipped on day 12\";\nconsole.log(text.match(/\\d+/g));\nvar m = /(\\w+)@(\\w+)\\.com/.exec(\"mail asha@example.com now\");\nconsole.log(m[1], m[2]);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\n\\[\"66\",\"12\"\\][ \\t]*\\r?\\nasha example\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

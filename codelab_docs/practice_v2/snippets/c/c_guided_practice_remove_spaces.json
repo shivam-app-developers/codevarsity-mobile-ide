@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Remove Spaces In Place",
+    "language": "c",
+    "description": "Use a read index and a write index. Copy only the characters you keep, then write the string terminator at the write position.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"a b  c d\";\n    int write = 0;\n    for (int read = 0; s[read] != '\\0'; read++) {\n        if (s[read] != ' ') {\n            s[write++] = s[read];\n        }\n    }\n    s[write] = '\\0';\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abcd\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

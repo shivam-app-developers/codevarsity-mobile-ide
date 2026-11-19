@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: map Instead of Hand-Written Indexes",
+    "language": "javascript",
+    "problemDescription": "Every item of the 2 by 3 matrix is written out by hand into the result. Build the transpose with map for any size. The output must stay the same.",
+    "initialCode": "var m = [[1, 2, 3], [4, 5, 6]];\nvar t = [\n  [m[0][0], m[1][0]],\n  [m[0][1], m[1][1]],\n  [m[0][2], m[1][2]]\n];\nconsole.log(t);",
+    "solution": {
+      "code": "var m = [[1, 2, 3], [4, 5, 6]];\nvar t = m[0].map(function (item, j) {\n  return m.map(function (row) {\n    return row[j];\n  });\n});\nconsole.log(t);",
+      "explanation": "The hand-written version works only for a 2 by 3 matrix. Mapping over the columns and then over the rows works for any size."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,4\\],\\[2,5\\],\\[3,6\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

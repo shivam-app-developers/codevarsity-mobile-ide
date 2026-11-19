@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Loop Instead of Two",
+    "language": "javascript",
+    "problemDescription": "Every start and end position is tried with nested loops that add the numbers one by one. Use Kadane's single loop. The output must stay the same.",
+    "initialCode": "var nums = [3, -2, 5, -1, 2, -6, 4];\nvar best = nums[0];\nfor (var i = 0; i < nums.length; i++) {\n  var sum = 0;\n  for (var j = i; j < nums.length; j++) {\n    sum += nums[j];\n    if (sum > best) {\n      best = sum;\n    }\n  }\n}\nconsole.log(best);",
+    "solution": {
+      "code": "var nums = [3, -2, 5, -1, 2, -6, 4];\nvar best = nums[0];\nvar current = nums[0];\nfor (var i = 1; i < nums.length; i++) {\n  current = Math.max(nums[i], current + nums[i]);\n  best = Math.max(best, current);\n}\nconsole.log(best);",
+      "explanation": "The nested loops try about n squared / 2 ranges. Kadane's algorithm remembers the best sum ending at the current number, so one pass of n steps is enough."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

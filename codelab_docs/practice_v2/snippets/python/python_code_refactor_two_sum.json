@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Dictionary Instead of Nested Loops",
+    "language": "python",
+    "problemDescription": "Every pair of numbers is tried with two nested loops. Use a dictionary lookup of the complement. The output must stay the same.",
+    "initialCode": "nums = [3, 2, 4]\ntarget = 6\nfor i in range(len(nums)):\n    for j in range(i + 1, len(nums)):\n        if nums[i] + nums[j] == target:\n            print([i, j])",
+    "solution": {
+      "code": "nums = [3, 2, 4]\ntarget = 6\nseen = {}\nfor i, n in enumerate(nums):\n    if target - n in seen:\n        print([seen[target - n], i])\n        break\n    seen[n] = i",
+      "explanation": "A dictionary answers \"have I seen the complement?\" in constant time, so one pass of n steps replaces the n squared pairs."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

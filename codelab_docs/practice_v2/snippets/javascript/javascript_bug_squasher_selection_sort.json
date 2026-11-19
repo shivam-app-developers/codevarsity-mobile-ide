@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Search Always Starts at Index 0",
+    "language": "javascript",
+    "problemDescription": "The array 64, 25, 12, 22, 11 should be sorted to [11,12,22,25,64], but the program prints [12,11,22,25,64].",
+    "buggyCode": "function selectionSort(a) {\n  for (var i = 0; i < a.length - 1; i++) {\n    var min = 0;\n    for (var j = i + 1; j < a.length; j++) {\n      if (a[j] < a[min]) {\n        min = j;\n      }\n    }\n    var temp = a[i];\n    a[i] = a[min];\n    a[min] = temp;\n  }\n  return a;\n}\n\nconsole.log(selectionSort([64, 25, 12, 22, 11]));",
+    "solution": {
+      "code": "function selectionSort(a) {\n  for (var i = 0; i < a.length - 1; i++) {\n    var min = i;\n    for (var j = i + 1; j < a.length; j++) {\n      if (a[j] < a[min]) {\n        min = j;\n      }\n    }\n    var temp = a[i];\n    a[i] = a[min];\n    a[min] = temp;\n  }\n  return a;\n}\n\nconsole.log(selectionSort([64, 25, 12, 22, 11]));",
+      "explanation": "In each round the minimum is searched only in the unsorted part, so the candidate must start at the first unsorted index i. Starting at 0 compares against the already sorted front and swaps a sorted item back."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[11,12,22,25,64\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

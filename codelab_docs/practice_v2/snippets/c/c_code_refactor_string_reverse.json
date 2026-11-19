@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Reverse In Place with Two Pointers",
+    "language": "c",
+    "problemDescription": "The string is copied backwards into a second buffer. Reverse it in place with a left and a right pointer instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char a[] = \"stressed\";\n    char b[20];\n    int len = strlen(a);\n    int j = 0;\n    for (int i = len - 1; i >= 0; i--) {\n        b[j] = a[i];\n        j++;\n    }\n    b[j] = '\\0';\n    printf(\"%s\\n\", b);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s) {\n    char *left = s;\n    char *right = s + strlen(s) - 1;\n    while (left < right) {\n        char temp = *left;\n        *left++ = *right;\n        *right-- = temp;\n    }\n}\n\nint main() {\n    char word[] = \"stressed\";\n    reverse(word);\n    printf(\"%s\\n\", word);\n    return 0;\n}",
+      "explanation": "Two pointers moving towards each other swap the characters directly, so there is no second buffer to size and no manual terminator to remember."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*desserts\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

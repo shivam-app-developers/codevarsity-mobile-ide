@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Maximum Subarray (Kadane)",
+    "language": "java",
+    "description": "At each element choose between extending the current run and starting a new one, and keep the best run seen so far.",
+    "ghostCode": "public class Main {\n    static int maxSubarray(int[] a) {\n        int best = a[0], current = a[0];\n        for (int i = 1; i < a.length; i++) {\n            current = Math.max(a[i], current + a[i]);\n            best = Math.max(best, current);\n        }\n        return best;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(maxSubarray(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}));\n        System.out.println(maxSubarray(new int[] {-4, -1, -8}));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

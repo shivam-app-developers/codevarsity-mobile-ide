@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Euclid Instead of Trying Every Divisor",
+    "language": "java",
+    "problemDescription": "A loop tests every number up to the smaller value. Replace it with Euclid's algorithm. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int a = 84, b = 36;\n        int result = 1;\n        for (int i = 1; i <= a && i <= b; i++) {\n            if (a % i == 0 && b % i == 0) {\n                result = i;\n            }\n        }\n        System.out.println(result);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int gcd(int a, int b) {\n        return b == 0 ? a : gcd(b, a % b);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(gcd(84, 36));\n    }\n}",
+      "explanation": "Euclid's algorithm needs only a handful of steps even for huge numbers, because each step at least halves one of them. Trying every divisor needs as many steps as the smaller number."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

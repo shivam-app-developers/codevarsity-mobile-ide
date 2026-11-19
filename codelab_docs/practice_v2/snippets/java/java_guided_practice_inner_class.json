@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Inner and Nested Classes",
+    "language": "java",
+    "description": "An inner (non-static) class belongs to an instance of the outer class and can use its fields. From static code you need an outer instance: outer.new Inner().",
+    "ghostCode": "public class Main {\n    private int base = 10;\n\n    class Adder {\n        int add(int x) {\n            return base + x;\n        }\n    }\n\n    public static void main(String[] args) {\n        Main outer = new Main();\n        Main.Adder adder = outer.new Adder();\n        System.out.println(adder.add(5));\n        outer.base = 100;\n        System.out.println(adder.add(5));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*15[ \\t]*\\r?\\n105\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

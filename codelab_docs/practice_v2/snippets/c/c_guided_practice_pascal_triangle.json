@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pascal's Triangle",
+    "language": "c",
+    "description": "Each entry is the number of ways to choose k items from n. Each value follows from the previous one in its row: value * (n - k) / (k + 1).",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int rows = 6;\n    for (int n = 0; n < rows; n++) {\n        int value = 1;\n        for (int k = 0; k <= n; k++) {\n            printf(\"%d \", value);\n            value = value * (n - k) / (k + 1);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n1 1[ \\t]*\\r?\\n1 2 1[ \\t]*\\r?\\n1 3 3 1[ \\t]*\\r?\\n1 4 6 4 1[ \\t]*\\r?\\n1 5 10 10 5 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

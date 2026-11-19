@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shrink the Prefix Instead of Comparing Letter by Letter",
+    "language": "java",
+    "problemDescription": "Nested loops compare the words character by character with a flag and a break. Shrink a candidate prefix with startsWith inside a commonPrefix method. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String[] words = {\"cascade\", \"cast\", \"castle\"};\n        String result = \"\";\n        for (int i = 0; i < words[0].length(); i++) {\n            char c = words[0].charAt(i);\n            boolean same = true;\n            for (int w = 1; w < words.length; w++) {\n                if (i >= words[w].length() || words[w].charAt(i) != c) {\n                    same = false;\n                }\n            }\n            if (same == false) {\n                break;\n            }\n            result = result + c;\n        }\n        System.out.println(result);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String commonPrefix(String[] words) {\n        String prefix = words[0];\n        for (String word : words) {\n            while (!word.startsWith(prefix)) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n            }\n        }\n        return prefix;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(commonPrefix(new String[] {\"cascade\", \"cast\", \"castle\"}));\n    }\n}",
+      "explanation": "startsWith does the character comparison and the bounds check for you, so the index handling and the flag are gone. The method is also reusable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cas\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

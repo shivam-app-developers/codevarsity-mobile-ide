@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Generator Instead of an Output List Parameter",
+    "language": "python",
+    "problemDescription": "inorder fills a list passed in as a parameter. Make it a generator with yield from and build the list with list(). The output must stay the same.",
+    "initialCode": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n\n\ndef inorder(root, out):\n    if root is not None:\n        inorder(root.left, out)\n        out.append(root.key)\n        inorder(root.right, out)\n\n\nroot = Node(4)\nroot.left = Node(2)\nroot.right = Node(6)\nroot.left.left = Node(1)\nroot.left.right = Node(3)\nresult = []\ninorder(root, result)\nprint(result)",
+    "solution": {
+      "code": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n\n\ndef inorder(root):\n    if root is not None:\n        yield from inorder(root.left)\n        yield root.key\n        yield from inorder(root.right)\n\n\nroot = Node(4)\nroot.left = Node(2)\nroot.right = Node(6)\nroot.left.left = Node(1)\nroot.left.right = Node(3)\nprint(list(inorder(root)))",
+      "explanation": "A generator hands out the keys one at a time, so the caller decides what to do with them (a list, a loop, a sum) and no output parameter is needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3, 4, 6\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

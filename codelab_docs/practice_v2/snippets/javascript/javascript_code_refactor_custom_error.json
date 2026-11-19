@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: instanceof Instead of Comparing Names",
+    "language": "javascript",
+    "problemDescription": "The type of the caught error is found by comparing its name string. Use instanceof. The output must stay the same.",
+    "initialCode": "function ValidationError(message) {\n  this.name = \"ValidationError\";\n  this.message = message;\n}\nValidationError.prototype = Object.create(Error.prototype);\nValidationError.prototype.constructor = ValidationError;\n\ntry {\n  throw new ValidationError(\"bad\");\n} catch (e) {\n  if (e.name === \"ValidationError\") {\n    console.log(\"validation problem: \" + e.message);\n  } else {\n    throw e;\n  }\n}",
+    "solution": {
+      "code": "function ValidationError(message) {\n  this.name = \"ValidationError\";\n  this.message = message;\n}\nValidationError.prototype = Object.create(Error.prototype);\nValidationError.prototype.constructor = ValidationError;\n\ntry {\n  throw new ValidationError(\"bad\");\n} catch (e) {\n  if (e instanceof ValidationError) {\n    console.log(\"validation problem: \" + e.message);\n  } else {\n    throw e;\n  }\n}",
+      "explanation": "A name is just text that any error could carry (or misspell), while instanceof checks the real type, including errors that extend ValidationError later."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*validation problem: bad\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

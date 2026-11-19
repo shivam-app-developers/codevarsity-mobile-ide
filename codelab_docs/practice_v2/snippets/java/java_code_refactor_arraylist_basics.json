@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: ArrayList Instead of an Array and a Counter",
+    "language": "java",
+    "problemDescription": "A fixed array of 10 slots and a manual counter store the fruits. Use an ArrayList. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String[] items = new String[10];\n        int count = 0;\n        items[count++] = \"apple\";\n        items[count++] = \"banana\";\n        items[count++] = \"cherry\";\n        for (int i = 0; i < count; i++) {\n            System.out.println(items[i]);\n        }\n        System.out.println(count);\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> items = new ArrayList<>();\n        items.add(\"apple\");\n        items.add(\"banana\");\n        items.add(\"cherry\");\n        for (String item : items) {\n            System.out.println(item);\n        }\n        System.out.println(items.size());\n    }\n}",
+      "explanation": "The list grows by itself, so there is no capacity to guess (the array overflows at the 11th item) and no counter to keep in step with the contents."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*apple[ \\t]*\\r?\\nbanana[ \\t]*\\r?\\ncherry[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Round Robin Scheduling",
+    "language": "c",
+    "description": "Each process runs for at most one time quantum, then goes to the back of the line. Repeat until all are finished. Waiting time is finish time minus burst time.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int burst[] = {5, 3, 2};\n    int remaining[] = {5, 3, 2};\n    int finish[3] = {0};\n    int quantum = 2, time = 0, done = 0;\n    while (done < 3) {\n        for (int i = 0; i < 3; i++) {\n            if (remaining[i] > 0) {\n                int slice = remaining[i] < quantum ? remaining[i] : quantum;\n                time += slice;\n                remaining[i] -= slice;\n                if (remaining[i] == 0) {\n                    finish[i] = time;\n                    done++;\n                }\n            }\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"P%d finishes at %d, waits %d\\n\", i + 1, finish[i], finish[i] - burst[i]);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*P1 finishes at 10, waits 5[ \\t]*\\r?\\nP2 finishes at 9, waits 6[ \\t]*\\r?\\nP3 finishes at 6, waits 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

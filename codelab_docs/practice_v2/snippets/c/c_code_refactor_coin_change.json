@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Table Instead of Exponential Recursion",
+    "language": "c",
+    "problemDescription": "The plain recursive version solves the same sub-amounts over and over. Fill a table from small amounts upwards instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint coins[] = {1, 3, 4};\n\nint min_coins(int amount) {\n    if (amount == 0) {\n        return 0;\n    }\n    int best = 1000;\n    for (int i = 0; i < 3; i++) {\n        if (coins[i] <= amount) {\n            int r = min_coins(amount - coins[i]) + 1;\n            if (r < best) {\n                best = r;\n            }\n        }\n    }\n    return best;\n}\n\nint main() {\n    printf(\"%d\\n\", min_coins(18));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int coins[] = {1, 3, 4};\n    int amount = 18;\n    int dp[19];\n    dp[0] = 0;\n    for (int a = 1; a <= amount; a++) {\n        dp[a] = 1000;\n        for (int c = 0; c < 3; c++) {\n            if (coins[c] <= a && dp[a - coins[c]] + 1 < dp[a]) {\n                dp[a] = dp[a - coins[c]] + 1;\n            }\n        }\n    }\n    printf(\"%d\\n\", dp[amount]);\n    return 0;\n}",
+      "explanation": "The recursion recomputes small amounts again and again, so its running time grows exponentially with the amount. The table computes each amount once, which takes amount times the number of coins steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

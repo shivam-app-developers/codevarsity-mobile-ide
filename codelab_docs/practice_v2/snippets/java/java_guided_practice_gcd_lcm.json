@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: GCD and LCM",
+    "language": "java",
+    "description": "Euclid's algorithm replaces (a, b) by (b, a % b) until b is 0. The least common multiple is a / gcd * b.",
+    "ghostCode": "public class Main {\n    static int gcd(int a, int b) {\n        while (b != 0) {\n            int temp = b;\n            b = a % b;\n            a = temp;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(\"GCD(48, 18) = \" + gcd(48, 18));\n        System.out.println(\"LCM(48, 18) = \" + (48 / gcd(48, 18) * 18));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*GCD\\(48, 18\\) = 6[ \\t]*\\r?\\nLCM\\(48, 18\\) = 144\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

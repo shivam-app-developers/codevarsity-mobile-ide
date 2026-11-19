@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Zero Has No Digits",
+    "language": "c",
+    "problemDescription": "The number 0 has one digit, but the program prints 0 digits for it. Other numbers are fine.",
+    "buggyCode": "#include <stdio.h>\n\nint count_digits(int n) {\n    int count = 0;\n    while (n > 0) {\n        count++;\n        n /= 10;\n    }\n    return count;\n}\n\nint main() {\n    printf(\"%d %d %d\\n\", count_digits(0), count_digits(7), count_digits(12345));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint count_digits(int n) {\n    int count = 0;\n    do {\n        count++;\n        n /= 10;\n    } while (n > 0);\n    return count;\n}\n\nint main() {\n    printf(\"%d %d %d\\n\", count_digits(0), count_digits(7), count_digits(12345));\n    return 0;\n}",
+      "explanation": "A while loop tests before running, so for n = 0 the body never runs and the count stays 0. A do-while runs the body once first, which counts the single digit of 0."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 1 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

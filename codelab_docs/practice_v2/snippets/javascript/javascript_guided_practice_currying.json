@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Currying",
+    "language": "javascript",
+    "description": "A curried function takes its arguments one at a time and returns a new function after each one. This lets you fix some arguments now and supply the rest later.",
+    "ghostCode": "function add(a) {\n  return function (b) {\n    return function (c) {\n      return a + b + c;\n    };\n  };\n}\n\nconsole.log(add(1)(2)(3));\nvar add10 = add(10);\nconsole.log(add10(5)(5));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6[ \\t]*\\r?\\n20\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

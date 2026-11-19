@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Number Pairs with Itself",
+    "language": "javascript",
+    "problemDescription": "For 3, 2, 4 and target 6 the answer is indexes 1 and 2, but the program prints [0,0].",
+    "buggyCode": "function twoSum(nums, target) {\n  var seen = {};\n  for (var i = 0; i < nums.length; i++) {\n    seen[nums[i]] = i;\n    var need = target - nums[i];\n    if (seen.hasOwnProperty(need)) {\n      return [seen[need], i];\n    }\n  }\n  return [];\n}\n\nconsole.log(twoSum([3, 2, 4], 6));",
+    "solution": {
+      "code": "function twoSum(nums, target) {\n  var seen = {};\n  for (var i = 0; i < nums.length; i++) {\n    var need = target - nums[i];\n    if (seen.hasOwnProperty(need)) {\n      return [seen[need], i];\n    }\n    seen[nums[i]] = i;\n  }\n  return [];\n}\n\nconsole.log(twoSum([3, 2, 4], 6));",
+      "explanation": "The current number must be looked up before it is stored. Storing it first lets 3 find itself as its own complement (3 + 3 = 6), but an element may not be used twice."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

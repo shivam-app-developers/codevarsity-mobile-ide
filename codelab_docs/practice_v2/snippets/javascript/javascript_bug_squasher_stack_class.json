@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: peek Reads Past the End",
+    "language": "javascript",
+    "problemDescription": "After popping 3 the top of the stack is 2, but peek returns undefined.",
+    "buggyCode": "function Stack() {\n  this.items = [];\n}\n\nStack.prototype.push = function (x) {\n  this.items.push(x);\n};\n\nStack.prototype.pop = function () {\n  return this.items.pop();\n};\n\nStack.prototype.peek = function () {\n  return this.items[this.items.length];\n};\n\nvar s = new Stack();\ns.push(1);\ns.push(2);\ns.push(3);\ns.pop();\nconsole.log(s.peek());",
+    "solution": {
+      "code": "function Stack() {\n  this.items = [];\n}\n\nStack.prototype.push = function (x) {\n  this.items.push(x);\n};\n\nStack.prototype.pop = function () {\n  return this.items.pop();\n};\n\nStack.prototype.peek = function () {\n  return this.items[this.items.length - 1];\n};\n\nvar s = new Stack();\ns.push(1);\ns.push(2);\ns.push(3);\ns.pop();\nconsole.log(s.peek());",
+      "explanation": "An array of length n has its last item at index n - 1. Index n is one past the end, so reading it gives undefined."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

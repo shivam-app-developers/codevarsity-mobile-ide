@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Methods on the Prototype Instead of in the Constructor",
+    "language": "javascript",
+    "problemDescription": "The constructor creates a new increment function for every counter. Move increment to the prototype. The output must stay the same.",
+    "initialCode": "function Counter() {\n  this.count = 0;\n  this.increment = function () {\n    this.count += 1;\n  };\n}\n\nvar a = new Counter();\na.increment();\na.increment();\nvar b = new Counter();\nb.increment();\nconsole.log(a.count, b.count);",
+    "solution": {
+      "code": "function Counter() {\n  this.count = 0;\n}\n\nCounter.prototype.increment = function () {\n  this.count += 1;\n};\n\nvar a = new Counter();\na.increment();\na.increment();\nvar b = new Counter();\nb.increment();\nconsole.log(a.count, b.count);",
+      "explanation": "With the method on the prototype there is one function in memory however many counters exist, instead of a fresh copy per counter."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

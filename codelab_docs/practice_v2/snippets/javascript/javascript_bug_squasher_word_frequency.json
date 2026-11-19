@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Count Is Reset to 1",
+    "language": "javascript",
+    "problemDescription": "The word the appears three times, but every word is reported with the count 1.",
+    "buggyCode": "var text = \"the cat and the hat and the bat\";\nvar counts = {};\ntext.split(\" \").forEach(function (word) {\n  counts[word] = 1;\n});\nconsole.log(counts);",
+    "solution": {
+      "code": "var text = \"the cat and the hat and the bat\";\nvar counts = {};\ntext.split(\" \").forEach(function (word) {\n  counts[word] = (counts[word] || 0) + 1;\n});\nconsole.log(counts);",
+      "explanation": "Assigning the constant 1 throws away the count collected so far. The new value must be the old count (or 0 for a first occurrence) plus one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"the\":3,\"cat\":1,\"and\":2,\"hat\":1,\"bat\":1\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

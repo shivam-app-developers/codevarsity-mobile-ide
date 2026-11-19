@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Early Integer Division",
+    "language": "c",
+    "problemDescription": "The third row of Pascal's triangle should be 1 2 1, but the program prints 1 2 0.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int n = 0; n < 5; n++) {\n        int value = 1;\n        for (int k = 0; k <= n; k++) {\n            printf(\"%d \", value);\n            value = value * ((n - k) / (k + 1));\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    for (int n = 0; n < 5; n++) {\n        int value = 1;\n        for (int k = 0; k <= n; k++) {\n            printf(\"%d \", value);\n            value = value * (n - k) / (k + 1);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Dividing (n - k) by (k + 1) first throws away the remainder: 1 / 2 is 0 in integer arithmetic. Multiplying first keeps the product exact, and the division that follows is always exact."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n1 1[ \\t]*\\r?\\n1 2 1[ \\t]*\\r?\\n1 3 3 1[ \\t]*\\r?\\n1 4 6 4 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: XOR Instead of a Search per Candidate",
+    "language": "javascript",
+    "problemDescription": "Every candidate number is searched for in the array with indexOf. Use XOR: values that appear twice cancel out and leave the missing number. The output must stay the same.",
+    "initialCode": "var nums = [1, 4, 0, 2];\nfor (var v = 0; v <= nums.length; v++) {\n  if (nums.indexOf(v) === -1) {\n    console.log(v);\n  }\n}",
+    "solution": {
+      "code": "var nums = [1, 4, 0, 2];\nvar result = nums.length;\nfor (var i = 0; i < nums.length; i++) {\n  result ^= i ^ nums[i];\n}\nconsole.log(result);",
+      "explanation": "x ^ x is 0 and x ^ 0 is x, so XOR-ing every index and every value (plus n) leaves the missing number. It takes one pass instead of a search for every candidate."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

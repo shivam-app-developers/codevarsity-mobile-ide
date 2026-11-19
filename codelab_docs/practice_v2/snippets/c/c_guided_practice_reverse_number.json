@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse a Number",
+    "language": "c",
+    "description": "Build the reversed number digit by digit: shift what you have built one place left (times 10), then add the next digit.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 12345;\n    int reversed = 0;\n    while (n > 0) {\n        int digit = n % 10;\n        reversed = reversed * 10 + digit;\n        n /= 10;\n    }\n    printf(\"Reversed: %d\\n\", reversed);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Reversed: 54321\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Recursive insert Instead of a Loop with Duplicated Branches",
+    "language": "java",
+    "problemDescription": "insert walks down with a while(true) loop, and the left and right cases repeat the same null check. Write it recursively. The output must stay the same.",
+    "initialCode": "public class Main {\n    static class Node {\n        int key;\n        Node left, right;\n\n        Node(int key) {\n            this.key = key;\n        }\n    }\n\n    static Node insert(Node root, int key) {\n        Node node = new Node(key);\n        if (root == null) {\n            return node;\n        }\n        Node current = root;\n        while (true) {\n            if (key < current.key) {\n                if (current.left == null) {\n                    current.left = node;\n                    break;\n                }\n                current = current.left;\n            } else if (key > current.key) {\n                if (current.right == null) {\n                    current.right = node;\n                    break;\n                }\n                current = current.right;\n            } else {\n                break;\n            }\n        }\n        return root;\n    }\n\n    static void inorder(Node root) {\n        if (root != null) {\n            inorder(root.left);\n            System.out.print(root.key + \" \");\n            inorder(root.right);\n        }\n    }\n\n    public static void main(String[] args) {\n        Node root = null;\n        for (int key : new int[] {8, 3, 10, 1, 6, 14, 6}) {\n            root = insert(root, key);\n        }\n        inorder(root);\n        System.out.println();\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static class Node {\n        int key;\n        Node left, right;\n\n        Node(int key) {\n            this.key = key;\n        }\n    }\n\n    static Node insert(Node root, int key) {\n        if (root == null) {\n            return new Node(key);\n        }\n        if (key < root.key) {\n            root.left = insert(root.left, key);\n        } else if (key > root.key) {\n            root.right = insert(root.right, key);\n        }\n        return root;\n    }\n\n    static void inorder(Node root) {\n        if (root != null) {\n            inorder(root.left);\n            System.out.print(root.key + \" \");\n            inorder(root.right);\n        }\n    }\n\n    public static void main(String[] args) {\n        Node root = null;\n        for (int key : new int[] {8, 3, 10, 1, 6, 14, 6}) {\n            root = insert(root, key);\n        }\n        inorder(root);\n        System.out.println();\n    }\n}",
+      "explanation": "A tree is naturally recursive: inserting into a tree means inserting into one of its subtrees. The recursive version has one base case and no repeated null checks, and duplicates are ignored in both versions."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 3 6 8 10 14\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Give the Operation Its Own Function",
+    "language": "c",
+    "problemDescription": "The switch and its arithmetic sit inside main. Move the decision into a function that returns the result, and make main only print. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a = 20, b = 4;\n    char op = '/';\n    int r = 0;\n    switch (op) {\n        case '+': r = a + b; break;\n        case '-': r = a - b; break;\n        case '*': r = a * b; break;\n        case '/': r = a / b; break;\n    }\n    printf(\"%d %c %d = %d\\n\", a, op, b, r);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint apply(int a, int b, char op) {\n    switch (op) {\n        case '+': return a + b;\n        case '-': return a - b;\n        case '*': return a * b;\n        case '/': return a / b;\n    }\n    return 0;\n}\n\nint main() {\n    int a = 20, b = 4;\n    char op = '/';\n    printf(\"%d %c %d = %d\\n\", a, op, b, apply(a, b, op));\n    return 0;\n}",
+      "explanation": "Returning straight from each case removes the need for break and the temporary result variable. The calculator logic is now testable on its own and main only handles printing."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*20 \\/ 4 = 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

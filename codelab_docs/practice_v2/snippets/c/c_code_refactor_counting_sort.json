@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Name the Range",
+    "language": "c",
+    "problemDescription": "The numbers 8 and 9 appear as the largest value and the array size and must be kept in step by hand. Define MAX_VALUE once and derive the rest from it. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {5, 1, 4, 1, 5, 2};\n    int counts[6] = {0};\n    for (int i = 0; i < 6; i++) {\n        counts[a[i]]++;\n    }\n    int k = 0;\n    for (int v = 0; v <= 5; v++) {\n        while (counts[v] > 0) {\n            a[k] = v;\n            k++;\n            counts[v]--;\n        }\n    }\n    for (int i = 0; i < 6; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define MAX_VALUE 5\n\nint main() {\n    int a[] = {5, 1, 4, 1, 5, 2};\n    int n = sizeof(a) / sizeof(a[0]);\n    int counts[MAX_VALUE + 1] = {0};\n    for (int i = 0; i < n; i++) {\n        counts[a[i]]++;\n    }\n    int k = 0;\n    for (int v = 0; v <= MAX_VALUE; v++) {\n        while (counts[v]-- > 0) {\n            a[k++] = v;\n        }\n    }\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "With MAX_VALUE defined once, the array size and loop bound can no longer disagree, which is exactly the kind of bug the previous exercise showed. sizeof gives the element count so it is not repeated as a literal."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 1 2 4 5 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

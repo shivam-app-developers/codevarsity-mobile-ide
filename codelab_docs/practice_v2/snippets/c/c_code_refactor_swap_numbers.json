@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Swap Without a Temporary Variable",
+    "language": "c",
+    "problemDescription": "This swap uses a temporary variable. Rewrite it with arithmetic so no third variable is needed. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int first = 12, second = 30;\n    int temp = first;\n    first = second;\n    second = temp;\n    printf(\"%d %d\\n\", first, second);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int first = 12, second = 30;\n    first = first + second;\n    second = first - second;\n    first = first - second;\n    printf(\"%d %d\\n\", first, second);\n    return 0;\n}",
+      "explanation": "The sum is kept in first, then subtracting the old second leaves the old first in second, and subtracting that from the sum gives the old second. It is a known trick, though with huge values the addition can overflow, so the temporary variable is usually the better choice."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*30 12\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

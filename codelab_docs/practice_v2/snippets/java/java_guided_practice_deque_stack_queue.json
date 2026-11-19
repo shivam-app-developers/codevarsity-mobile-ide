@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Stack and Queue with ArrayDeque",
+    "language": "java",
+    "description": "ArrayDeque works as a stack (push and pop at the front) and as a queue (offer at the back, poll from the front).",
+    "ghostCode": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(1);\n        stack.push(2);\n        stack.push(3);\n        System.out.println(stack.pop() + \" \" + stack.peek());\n        Deque<Integer> queue = new ArrayDeque<>();\n        queue.offer(1);\n        queue.offer(2);\n        queue.offer(3);\n        System.out.println(queue.poll() + \" \" + queue.peek());\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 2[ \\t]*\\r?\\n1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

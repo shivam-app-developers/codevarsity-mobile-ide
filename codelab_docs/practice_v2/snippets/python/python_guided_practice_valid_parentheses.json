@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Valid Parentheses",
+    "language": "python",
+    "description": "Push opening brackets on a stack. A closing bracket must match the one on top. The text is valid only if the stack is empty at the end.",
+    "ghostCode": "def is_valid(text):\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for ch in text:\n        if ch in \"([{\":\n            stack.append(ch)\n        elif not stack or stack.pop() != pairs[ch]:\n            return False\n    return not stack\n\n\nprint(is_valid(\"()[]{}\"), is_valid(\"(]\"), is_valid(\"({[]})\"), is_valid(\"((\"))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*True False True False\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

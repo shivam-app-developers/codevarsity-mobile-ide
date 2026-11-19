@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Recursive Digit Sum",
+    "language": "c",
+    "description": "A recursive function needs a base case that stops it and a step that makes the problem smaller. Here the base case is 0 and each step drops the last digit.",
+    "ghostCode": "#include <stdio.h>\n\nint digit_sum(int n) {\n    if (n == 0) {\n        return 0;\n    }\n    return n % 10 + digit_sum(n / 10);\n}\n\nint main() {\n    printf(\"%d\\n\", digit_sum(2468));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*20\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

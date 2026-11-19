@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use Arrays.copyOf and Arrays.toString",
+    "language": "java",
+    "problemDescription": "An array is copied element by element and printed by building the text with a loop. Use Arrays.copyOf and Arrays.toString. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[] a = {4, 8, 15};\n        int[] b = new int[a.length];\n        for (int i = 0; i < a.length; i++) {\n            b[i] = a[i];\n        }\n        String text = \"[\";\n        for (int i = 0; i < b.length; i++) {\n            text = text + b[i];\n            if (i < b.length - 1) {\n                text = text + \", \";\n            }\n        }\n        text = text + \"]\";\n        System.out.println(text);\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {4, 8, 15};\n        int[] b = Arrays.copyOf(a, a.length);\n        System.out.println(Arrays.toString(b));\n    }\n}",
+      "explanation": "The standard library already has well-tested helpers for the most common array jobs. Using them is shorter, faster and less likely to contain an off-by-one error."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[4, 8, 15\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

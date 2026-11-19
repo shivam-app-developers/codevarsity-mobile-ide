@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Add the Row Above Instead of Computing Factorials",
+    "language": "javascript",
+    "problemDescription": "Every entry is computed from three factorials. Build each row from the row above by adding neighbours. The output must stay the same.",
+    "initialCode": "function fact(n) {\n  var f = 1;\n  for (var i = 2; i <= n; i++) {\n    f *= i;\n  }\n  return f;\n}\n\nvar triangle = [];\nfor (var n = 0; n < 5; n++) {\n  var row = [];\n  for (var k = 0; k <= n; k++) {\n    row.push(fact(n) / (fact(k) * fact(n - k)));\n  }\n  triangle.push(row);\n}\nconsole.log(triangle);",
+    "solution": {
+      "code": "var triangle = [];\nfor (var n = 0; n < 5; n++) {\n  var row = [1];\n  for (var k = 1; k < n; k++) {\n    row.push(triangle[n - 1][k - 1] + triangle[n - 1][k]);\n  }\n  if (n > 0) {\n    row.push(1);\n  }\n  triangle.push(row);\n}\nconsole.log(triangle);",
+      "explanation": "Adding two neighbours is the definition of Pascal's triangle and uses only small numbers, while factorials grow so quickly that they lose precision for rows beyond 20."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1\\],\\[1,1\\],\\[1,2,1\\],\\[1,3,3,1\\],\\[1,4,6,4,1\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

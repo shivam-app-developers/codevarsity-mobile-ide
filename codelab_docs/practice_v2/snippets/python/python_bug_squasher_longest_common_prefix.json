@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Test Stops at the First Matching Column",
+    "language": "python",
+    "problemDescription": "The common prefixes should be fl and inter, but the program prints two empty lines.",
+    "buggyCode": "def common_prefix(words):\n    prefix = \"\"\n    for letters in zip(*words):\n        if len(set(letters)) == 1:\n            break\n        prefix += letters[0]\n    return prefix\n\n\nprint(common_prefix([\"flower\", \"flow\", \"flight\"]))\nprint(common_prefix([\"interview\", \"internet\", \"interval\"]))",
+    "solution": {
+      "code": "def common_prefix(words):\n    prefix = \"\"\n    for letters in zip(*words):\n        if len(set(letters)) != 1:\n            break\n        prefix += letters[0]\n    return prefix\n\n\nprint(common_prefix([\"flower\", \"flow\", \"flight\"]))\nprint(common_prefix([\"interview\", \"internet\", \"interval\"]))",
+      "explanation": "A column belongs to the prefix when all letters in it are equal, which is when the set of letters has exactly one member. The loop must stop when that is not the case (!= 1); the reversed test stops at the very first matching column."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fl[ \\t]*\\r?\\ninter\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

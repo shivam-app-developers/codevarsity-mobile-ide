@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Start Node Is Not Marked",
+    "language": "javascript",
+    "problemDescription": "Starting from node 0 the order should be [0,1,2,3,4], but node 0 appears a second time.",
+    "buggyCode": "var graph = { 0: [1, 2], 1: [0, 3], 2: [0, 3, 4], 3: [1, 2], 4: [2] };\n\nfunction bfs(start) {\n  var visited = {};\n  var queue = [start];\n  var order = [];\n\n  while (queue.length > 0) {\n    var node = queue.shift();\n    order.push(node);\n    graph[node].forEach(function (next) {\n      if (!visited[next]) {\n        visited[next] = true;\n        queue.push(next);\n      }\n    });\n  }\n  return order;\n}\n\nconsole.log(bfs(0));",
+    "solution": {
+      "code": "var graph = { 0: [1, 2], 1: [0, 3], 2: [0, 3, 4], 3: [1, 2], 4: [2] };\n\nfunction bfs(start) {\n  var visited = {};\n  var queue = [start];\n  var order = [];\n  visited[start] = true;\n  while (queue.length > 0) {\n    var node = queue.shift();\n    order.push(node);\n    graph[node].forEach(function (next) {\n      if (!visited[next]) {\n        visited[next] = true;\n        queue.push(next);\n      }\n    });\n  }\n  return order;\n}\n\nconsole.log(bfs(0));",
+      "explanation": "Every node that enters the queue must be marked at that moment, including the start node. If it is not marked, its neighbours see it as unvisited and queue it again."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0,1,2,3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

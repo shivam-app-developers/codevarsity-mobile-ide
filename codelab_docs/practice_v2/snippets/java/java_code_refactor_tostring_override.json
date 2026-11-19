@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: toString Instead of a show Method",
+    "language": "java",
+    "problemDescription": "A show method prints each object, and callers must remember to use it. Override toString and print the objects directly. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Student s1 = new Student(\"Ravi\", 72);\n        Student s2 = new Student(\"Meena\", 91);\n        s1.show();\n        s2.show();\n    }\n}\n\nclass Student {\n    String name;\n    int mark;\n\n    Student(String name, int mark) {\n        this.name = name;\n        this.mark = mark;\n    }\n\n    void show() {\n        System.out.println(name + \" scored \" + mark);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Student s1 = new Student(\"Ravi\", 72);\n        Student s2 = new Student(\"Meena\", 91);\n        System.out.println(s1);\n        System.out.println(s2);\n    }\n}\n\nclass Student {\n    private final String name;\n    private final int mark;\n\n    Student(String name, int mark) {\n        this.name = name;\n        this.mark = mark;\n    }\n\n    @Override\n    public String toString() {\n        return name + \" scored \" + mark;\n    }\n}",
+      "explanation": "toString is the standard hook for text output: println, string concatenation and debuggers all use it, so one method serves every place that shows the object."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Ravi scored 72[ \\t]*\\r?\\nMeena scored 91\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

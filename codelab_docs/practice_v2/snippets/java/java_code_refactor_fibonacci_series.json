@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Iteration Instead of Exponential Recursion",
+    "language": "java",
+    "problemDescription": "This recursive fib makes hundreds of thousands of calls for fib(27). Rewrite it with a loop. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int fib(int n) {\n        if (n == 0) {\n            return 0;\n        } else if (n == 1) {\n            return 1;\n        } else {\n            return fib(n - 1) + fib(n - 2);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fib(27));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int fib(int n) {\n        int a = 0, b = 1;\n        for (int i = 0; i < n; i++) {\n            int next = a + b;\n            a = b;\n            b = next;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fib(27));\n    }\n}",
+      "explanation": "The recursive version recomputes the same values over and over, so its work grows exponentially. The loop computes each Fibonacci number once, which takes n steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*196418\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

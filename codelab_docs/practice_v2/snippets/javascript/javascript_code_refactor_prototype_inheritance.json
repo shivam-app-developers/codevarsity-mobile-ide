@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Object.create Instead of new Parent()",
+    "language": "javascript",
+    "problemDescription": "The child's prototype is made by calling new Animal(...), which runs the parent constructor with a dummy argument, and Dog sets name itself. Link the prototypes with Object.create and call the parent constructor from Dog. The output must stay the same.",
+    "initialCode": "function Animal(name) {\n  this.name = name;\n}\n\nAnimal.prototype.speak = function () {\n  return this.name + \" makes a sound\";\n};\n\nfunction Dog(name) {\n  this.name = name;\n}\n\nDog.prototype = new Animal(\"unused\");\nDog.prototype.speak = function () {\n  return this.name + \" barks\";\n};\n\nvar d = new Dog(\"Rex\");\nconsole.log(d.speak());\nconsole.log(d instanceof Animal);",
+    "solution": {
+      "code": "function Animal(name) {\n  this.name = name;\n}\n\nAnimal.prototype.speak = function () {\n  return this.name + \" makes a sound\";\n};\n\nfunction Dog(name) {\n  Animal.call(this, name);\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\nDog.prototype.speak = function () {\n  return this.name + \" barks\";\n};\n\nvar d = new Dog(\"Rex\");\nconsole.log(d.speak());\nconsole.log(d instanceof Animal);",
+      "explanation": "new Animal(\"unused\") creates a throw-away parent object only to serve as a prototype, and it breaks if the parent constructor needs real arguments. Object.create links the prototypes without running any constructor."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Rex barks[ \\t]*\\r?\\ntrue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Count Even and Odd Elements",
+    "language": "c",
+    "description": "Walk through an array and count how many elements are even and how many are odd.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {3, 8, 11, 4, 6, 7, 10};\n    int evens = 0, odds = 0;\n    for (int i = 0; i < 7; i++) {\n        if (a[i] % 2 == 0) evens++;\n        else odds++;\n    }\n    printf(\"Even: %d, Odd: %d\\n\", evens, odds);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Even: 4, Odd: 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

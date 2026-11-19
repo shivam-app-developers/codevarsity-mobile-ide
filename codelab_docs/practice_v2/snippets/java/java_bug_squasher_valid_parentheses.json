@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+    "language": "java",
+    "problemDescription": "The text ((( contains brackets that are never closed, but the program prints true.",
+    "buggyCode": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    static boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') {\n                stack.push(c);\n            } else {\n                if (stack.isEmpty()) {\n                    return false;\n                }\n                char open = stack.pop();\n                if ((c == ')' && open != '(') || (c == ']' && open != '[')\n                        || (c == '}' && open != '{')) {\n                    return false;\n                }\n            }\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isValid(\"()[]\"));\n        System.out.println(isValid(\"(((\"));\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    static boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') {\n                stack.push(c);\n            } else {\n                if (stack.isEmpty()) {\n                    return false;\n                }\n                char open = stack.pop();\n                if ((c == ')' && open != '(') || (c == ']' && open != '[')\n                        || (c == '}' && open != '{')) {\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isValid(\"()[]\"));\n        System.out.println(isValid(\"(((\"));\n    }\n}",
+      "explanation": "Surviving the loop without a mismatch is not enough. Brackets still on the stack were opened and never closed, so the text is valid only when the stack is empty."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

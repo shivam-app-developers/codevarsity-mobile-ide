@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Curried Function Instead of Many Copies",
+    "language": "javascript",
+    "problemDescription": "timesTwo and timesThree are the same function with a different number. Write one curried multiplyBy function. The output must stay the same.",
+    "initialCode": "function timesTwo(x) {\n  return x * 2;\n}\n\nfunction timesThree(x) {\n  return x * 3;\n}\n\nconsole.log(timesTwo(7));\nconsole.log(timesThree(7));",
+    "solution": {
+      "code": "function multiplyBy(factor) {\n  return function (x) {\n    return x * factor;\n  };\n}\n\nvar timesTwo = multiplyBy(2);\nvar timesThree = multiplyBy(3);\nconsole.log(timesTwo(7));\nconsole.log(timesThree(7));",
+      "explanation": "Fixing the first argument produces a specialised function, so one general function replaces a family of near-identical ones."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*14[ \\t]*\\r?\\n21\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Reversal Off by One",
+    "language": "c",
+    "problemDescription": "Rotating 1 2 3 4 5 6 7 left by 3 should give 4 5 6 7 1 2 3, but the program prints 7 4 5 6 1 2 3.",
+    "buggyCode": "#include <stdio.h>\n\nvoid reverse(int a[], int from, int to) {\n    while (from < to) {\n        int t = a[from];\n        a[from++] = a[to];\n        a[to--] = t;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5, 6, 7};\n    int n = 7, k = 3;\n    reverse(a, 0, k - 1);\n    reverse(a, k, n - 2);\n    reverse(a, 0, n - 1);\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid reverse(int a[], int from, int to) {\n    while (from < to) {\n        int t = a[from];\n        a[from++] = a[to];\n        a[to--] = t;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5, 6, 7};\n    int n = 7, k = 3;\n    reverse(a, 0, k - 1);\n    reverse(a, k, n - 1);\n    reverse(a, 0, n - 1);\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Rotating by k with three reversals needs the second reversal to cover positions k through n - 1. Stopping at n - 2 leaves the last element out of its block, so it is carried to the front by the final full reversal."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 5 6 7 1 2 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

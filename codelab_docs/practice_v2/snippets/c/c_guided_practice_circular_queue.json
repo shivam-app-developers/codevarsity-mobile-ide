@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Circular Queue",
+    "language": "c",
+    "description": "A circular queue reuses freed slots by wrapping indexes around with the modulo operator. The next free slot is (front + count) % SIZE.",
+    "ghostCode": "#include <stdio.h>\n\n#define SIZE 3\n\nint items[SIZE];\nint front = 0, count = 0;\n\nint enqueue(int value) {\n    if (count == SIZE) {\n        return 0;\n    }\n    items[(front + count) % SIZE] = value;\n    count++;\n    return 1;\n}\n\nint dequeue() {\n    int value = items[front];\n    front = (front + 1) % SIZE;\n    count--;\n    return value;\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d\\n\", dequeue());\n    printf(\"enqueue 4: %d\\n\", enqueue(4));\n    printf(\"%d\\n\", dequeue());\n    printf(\"%d\\n\", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\nenqueue 4: 1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3[ \\t]*\\r?\\n4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

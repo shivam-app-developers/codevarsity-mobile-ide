@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+    "language": "c",
+    "problemDescription": "The text ((( has three brackets that are never closed, but the program says it is balanced.",
+    "buggyCode": "#include <stdio.h>\n\nint is_balanced(const char *s) {\n    char stack[100];\n    int top = -1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        char c = s[i];\n        if (c == '(' || c == '[' || c == '{') {\n            stack[++top] = c;\n        } else if (c == ')' || c == ']' || c == '}') {\n            if (top < 0) {\n                return 0;\n            }\n            char open = stack[top--];\n            if ((c == ')' && open != '(') ||\n                (c == ']' && open != '[') ||\n                (c == '}' && open != '{')) {\n                return 0;\n            }\n        }\n    }\n    return 1;\n}\n\nint main() {\n    printf(\"%d\\n\", is_balanced(\"()[]\"));\n    printf(\"%d\\n\", is_balanced(\"(((\"));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint is_balanced(const char *s) {\n    char stack[100];\n    int top = -1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        char c = s[i];\n        if (c == '(' || c == '[' || c == '{') {\n            stack[++top] = c;\n        } else if (c == ')' || c == ']' || c == '}') {\n            if (top < 0) {\n                return 0;\n            }\n            char open = stack[top--];\n            if ((c == ')' && open != '(') ||\n                (c == ']' && open != '[') ||\n                (c == '}' && open != '{')) {\n                return 0;\n            }\n        }\n    }\n    return top == -1;\n}\n\nint main() {\n    printf(\"%d\\n\", is_balanced(\"()[]\"));\n    printf(\"%d\\n\", is_balanced(\"(((\"));\n    return 0;\n}",
+      "explanation": "Reaching the end without a mismatch is not enough: brackets left on the stack were opened and never closed. The text is balanced only if the stack is empty."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

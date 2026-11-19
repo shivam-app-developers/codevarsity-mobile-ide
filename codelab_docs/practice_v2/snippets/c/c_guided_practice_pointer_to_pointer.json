@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pointer to Pointer",
+    "language": "c",
+    "description": "To let a function change which variable a pointer points to, pass the address of the pointer: an int ** parameter.",
+    "ghostCode": "#include <stdio.h>\n\nvoid pick_larger(int **result, int *a, int *b) {\n    *result = (*a >= *b) ? a : b;\n}\n\nint main() {\n    int x = 12, y = 30;\n    int *larger = NULL;\n    pick_larger(&larger, &x, &y);\n    printf(\"larger = %d\\n\", *larger);\n    *larger = 0;\n    printf(\"x=%d y=%d\\n\", x, y);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*larger = 30[ \\t]*\\r?\\nx=12 y=0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

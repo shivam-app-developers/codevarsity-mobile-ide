@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: remove Takes an Index, Not a Value",
+    "language": "java",
+    "problemDescription": "Removing the value 1 from [1, 5, 9] should leave [5, 9], but the program leaves [1, 9].",
+    "buggyCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        nums.add(1);\n        nums.add(5);\n        nums.add(9);\n        nums.remove(1);\n        System.out.println(nums);\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        nums.add(1);\n        nums.add(5);\n        nums.add(9);\n        nums.remove(Integer.valueOf(1));\n        System.out.println(nums);\n    }\n}",
+      "explanation": "On a List<Integer>, remove(1) with an int argument calls remove(int index) and deletes the element at position 1 (the 5). To remove the value 1 you must pass an Integer object: remove(Integer.valueOf(1))."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5, 9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

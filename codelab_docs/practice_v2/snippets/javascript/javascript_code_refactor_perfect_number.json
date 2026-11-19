@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Function Instead of Two Copied Loops",
+    "language": "javascript",
+    "problemDescription": "The divisor loop is written once per number tested. Move it into an isPerfect function and call it for each number. The output must stay the same.",
+    "initialCode": "var a = 6;\nvar s1 = 0;\nfor (var i = 1; i < a; i++) {\n  if (a % i === 0) {\n    s1 += i;\n  }\n}\nconsole.log(a + \" \" + (s1 === a));\nvar b = 12;\nvar s2 = 0;\nfor (var j = 1; j < b; j++) {\n  if (b % j === 0) {\n    s2 += j;\n  }\n}\nconsole.log(b + \" \" + (s2 === b));",
+    "solution": {
+      "code": "function isPerfect(n) {\n  var sum = 0;\n  for (var d = 1; d < n; d++) {\n    if (n % d === 0) {\n      sum += d;\n    }\n  }\n  return sum === n;\n}\n\n[6, 12].forEach(function (n) {\n  console.log(n + \" \" + isPerfect(n));\n});",
+      "explanation": "The divisor-sum logic exists once, and testing another number is one more array item instead of another copied loop."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6 true[ \\t]*\\r?\\n12 false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

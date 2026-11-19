@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Generic Methods and Bounds",
+    "language": "java",
+    "description": "A method can have its own type parameter. The bound T extends Comparable<T> promises that values can be compared with compareTo.",
+    "ghostCode": "public class Main {\n    static <T extends Comparable<T>> T larger(T a, T b) {\n        return a.compareTo(b) >= 0 ? a : b;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(larger(3, 8));\n        System.out.println(larger(\"pear\", \"apple\"));\n        System.out.println(larger(2.5, 1.5));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8[ \\t]*\\r?\\npear[ \\t]*\\r?\\n2\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a Helper to Repeat Characters",
+    "language": "java",
+    "problemDescription": "Every space and every star is printed by its own print call inside two inner loops. Write a repeat helper and print each row with one println. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 3; i++) {\n            for (int s = 0; s < 3 - i; s++) {\n                System.out.print(\" \");\n            }\n            for (int k = 0; k < 2 * i - 1; k++) {\n                System.out.print(\"*\");\n            }\n            System.out.println();\n        }\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String repeat(char c, int times) {\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < times; i++) {\n            sb.append(c);\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        int rows = 3;\n        for (int i = 1; i <= rows; i++) {\n            System.out.println(repeat(' ', rows - i) + repeat('*', 2 * i - 1));\n        }\n    }\n}",
+      "explanation": "A small helper names the idea \"a character repeated n times\", so each row reads as spaces plus stars. The row count is also a single variable instead of two scattered literals."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*  \\*[ \\t]*\\r?\\n \\*\\*\\*[ \\t]*\\r?\\n\\*\\*\\*\\*\\*\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

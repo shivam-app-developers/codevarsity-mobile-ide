@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Items Equal to the Pivot Disappear",
+    "language": "javascript",
+    "problemDescription": "Sorting 3, 1, 3, 2, 3 should give [1,2,3,3,3], but the program prints [1,2,3].",
+    "buggyCode": "function quickSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var pivot = a[0];\n  var rest = a.slice(1);\n  var smaller = rest.filter(function (x) {\n    return x < pivot;\n  });\n  var larger = rest.filter(function (x) {\n    return x > pivot;\n  });\n  return quickSort(smaller).concat([pivot], quickSort(larger));\n}\n\nconsole.log(quickSort([3, 1, 3, 2, 3]));",
+    "solution": {
+      "code": "function quickSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var pivot = a[0];\n  var rest = a.slice(1);\n  var smaller = rest.filter(function (x) {\n    return x < pivot;\n  });\n  var larger = rest.filter(function (x) {\n    return x >= pivot;\n  });\n  return quickSort(smaller).concat([pivot], quickSort(larger));\n}\n\nconsole.log(quickSort([3, 1, 3, 2, 3]));",
+      "explanation": "Every item other than the pivot must go to one of the two sides. With > the items equal to the pivot belong to neither list and vanish. One of the two conditions must include equality."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,3,3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

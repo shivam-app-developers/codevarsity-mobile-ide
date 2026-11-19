@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: All-Negative Input Gives Zero",
+    "language": "javascript",
+    "problemDescription": "For -4, -1, -8 the best subarray is just -1, but the program prints 0.",
+    "buggyCode": "function maxSubarray(nums) {\n  var best = 0;\n  var current = nums[0];\n  for (var i = 1; i < nums.length; i++) {\n    current = Math.max(nums[i], current + nums[i]);\n    best = Math.max(best, current);\n  }\n  return best;\n}\n\nconsole.log(maxSubarray([-4, -1, -8]));",
+    "solution": {
+      "code": "function maxSubarray(nums) {\n  var best = nums[0];\n  var current = nums[0];\n  for (var i = 1; i < nums.length; i++) {\n    current = Math.max(nums[i], current + nums[i]);\n    best = Math.max(best, current);\n  }\n  return best;\n}\n\nconsole.log(maxSubarray([-4, -1, -8]));",
+      "explanation": "Starting best at 0 quietly allows an empty subarray with sum 0, which beats every negative sum. A subarray must contain at least one element, so best starts from the first element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

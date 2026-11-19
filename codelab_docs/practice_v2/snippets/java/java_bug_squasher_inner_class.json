@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Inner Class Created Without an Outer Instance",
+    "language": "java",
+    "problemDescription": "The program does not compile: main is static and creates the inner class without an enclosing Main object.",
+    "buggyCode": "public class Main {\n    private String owner = \"Asha\";\n\n    class Wallet {\n        String label() {\n            return owner + \"'s wallet\";\n        }\n    }\n\n    public static void main(String[] args) {\n        Main m = new Main();\n        Main.Wallet w = new Wallet();\n        System.out.println(w.label());\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    private String owner = \"Asha\";\n\n    class Wallet {\n        String label() {\n            return owner + \"'s wallet\";\n        }\n    }\n\n    public static void main(String[] args) {\n        Main m = new Main();\n        Main.Wallet w = m.new Wallet();\n        System.out.println(w.label());\n    }\n}",
+      "explanation": "An inner class instance is tied to an instance of the outer class, because it can read the outer fields. From a static method there is no current outer object, so you must say which one: m.new Wallet()."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha's wallet\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

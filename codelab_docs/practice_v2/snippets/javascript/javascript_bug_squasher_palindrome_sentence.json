@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Capital Letters Are Removed with the Punctuation",
+    "language": "javascript",
+    "problemDescription": "The Panama sentence is a palindrome and should print true, but the program prints false.",
+    "buggyCode": "function isPalindrome(text) {\n  var cleaned = text.replace(/[^a-z0-9]/g, \"\");\n  return cleaned === cleaned.split(\"\").reverse().join(\"\");\n}\n\nconsole.log(isPalindrome(\"A man, a plan, a canal: Panama\"));",
+    "solution": {
+      "code": "function isPalindrome(text) {\n  var cleaned = text.toLowerCase().replace(/[^a-z0-9]/g, \"\");\n  return cleaned === cleaned.split(\"\").reverse().join(\"\");\n}\n\nconsole.log(isPalindrome(\"A man, a plan, a canal: Panama\"));",
+      "explanation": "The pattern [^a-z0-9] means \"anything that is not a lower-case letter or digit\", so capital letters are deleted along with the punctuation unless the text is lower-cased first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

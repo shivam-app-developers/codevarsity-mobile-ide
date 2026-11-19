@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Large Fibonacci Numbers Overflow",
+    "language": "java",
+    "problemDescription": "The 50th Fibonacci number is 12586269025, but the program prints a negative number.",
+    "buggyCode": "public class Main {\n    static int fib(int n) {\n        int a = 0, b = 1;\n        for (int i = 0; i < n; i++) {\n            int next = a + b;\n            a = b;\n            b = next;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fib(50));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static long fib(int n) {\n        long a = 0, b = 1;\n        for (int i = 0; i < n; i++) {\n            long next = a + b;\n            a = b;\n            b = next;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fib(50));\n    }\n}",
+      "explanation": "Fibonacci numbers grow quickly: after about 46 terms they no longer fit in an int. Java does not report the overflow; the value just wraps around into a negative number. A long holds values up to about 9 quintillion."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12586269025\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

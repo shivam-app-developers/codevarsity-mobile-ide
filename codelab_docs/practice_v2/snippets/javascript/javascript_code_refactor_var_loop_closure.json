@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Generate the Functions in a Loop",
+    "language": "javascript",
+    "problemDescription": "Three almost identical functions are written by hand. Create them in a loop with a helper that captures the number. The output must stay the same.",
+    "initialCode": "function first() {\n  return 0;\n}\nfunction second() {\n  return 1;\n}\nfunction third() {\n  return 2;\n}\nvar callbacks = [first, second, third];\nconsole.log(callbacks[0](), callbacks[1](), callbacks[2]());",
+    "solution": {
+      "code": "function makeReturner(n) {\n  return function () {\n    return n;\n  };\n}\n\nvar callbacks = [];\nfor (var i = 0; i < 3; i++) {\n  callbacks.push(makeReturner(i));\n}\nconsole.log(callbacks[0](), callbacks[1](), callbacks[2]());",
+      "explanation": "A function that builds the callback gives each one its own n, so the loop works for any count, and a fourth callback needs no new code."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

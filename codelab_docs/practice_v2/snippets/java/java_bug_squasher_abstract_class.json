@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Subclass Misses an Abstract Method",
+    "language": "java",
+    "problemDescription": "The program does not compile: Square does not implement every abstract method of Shape.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Shape s = new Square(3);\n        System.out.println(s.name() + \" \" + s.area());\n    }\n}\n\nabstract class Shape {\n    abstract String name();\n\n    abstract int area();\n}\n\nclass Square extends Shape {\n    private final int side;\n\n    Square(int side) {\n        this.side = side;\n    }\n\n    String name() {\n        return \"Square\";\n    }\n\n\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Shape s = new Square(3);\n        System.out.println(s.name() + \" \" + s.area());\n    }\n}\n\nabstract class Shape {\n    abstract String name();\n\n    abstract int area();\n}\n\nclass Square extends Shape {\n    private final int side;\n\n    Square(int side) {\n        this.side = side;\n    }\n\n    String name() {\n        return \"Square\";\n    }\n\n    int area() {\n        return side * side;\n    }\n}",
+      "explanation": "A concrete class must give a body to every abstract method it inherits. Square implements name() but not area(), so the compiler rejects it. Implement the missing method or declare the class abstract too."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Square 9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

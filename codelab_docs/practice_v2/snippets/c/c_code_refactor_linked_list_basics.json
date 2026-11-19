@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Helper Instead of Hand-Linked Nodes",
+    "language": "c",
+    "problemDescription": "Three nodes are allocated and linked one field at a time. Write a push_front helper, build the list in a loop, and free the nodes while printing. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nint main() {\n    struct Node *a = malloc(sizeof(struct Node));\n    struct Node *b = malloc(sizeof(struct Node));\n    struct Node *c = malloc(sizeof(struct Node));\n    a->value = 1;\n    a->next = b;\n    b->value = 2;\n    b->next = c;\n    c->value = 3;\n    c->next = NULL;\n    struct Node *p = a;\n    while (p != NULL) {\n        printf(\"%d\\n\", p->value);\n        p = p->next;\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push_front(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nint main() {\n    struct Node *head = NULL;\n    for (int v = 3; v >= 1; v--) {\n        head = push_front(head, v);\n    }\n    struct Node *p = head;\n    while (p != NULL) {\n        printf(\"%d\\n\", p->value);\n        struct Node *next = p->next;\n        free(p);\n        p = next;\n    }\n    return 0;\n}",
+      "explanation": "A helper builds any number of nodes without naming each one, and the list can grow at run time. Reading the next pointer before free(p) matters, because the node's memory is gone afterwards."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

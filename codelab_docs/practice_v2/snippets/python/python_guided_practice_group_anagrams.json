@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Group Anagrams",
+    "language": "python",
+    "description": "Words that are anagrams have the same letters when sorted. Use the sorted letters as a dictionary key and collect the words per key in a list.",
+    "ghostCode": "from collections import defaultdict\n\n\ndef group_anagrams(words):\n    groups = defaultdict(list)\n    for word in words:\n        groups[\"\".join(sorted(word))].append(word)\n    return list(groups.values())\n\n\nprint(group_anagrams([\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\['eat', 'tea', 'ate'\\], \\['tan', 'nat'\\], \\['bat'\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

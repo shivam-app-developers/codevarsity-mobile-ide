@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Decorator Instead of Counting by Hand in Every Function",
+    "language": "python",
+    "problemDescription": "Each function increments a global counter itself. Write a count_calls decorator that counts the calls of any function it wraps. The output must stay the same.",
+    "initialCode": "calls = 0\n\n\ndef greet(name):\n    global calls\n    calls += 1\n    return \"Hello, \" + name\n\n\ndef shout(name):\n    global calls\n    calls += 1\n    return name.upper() + \"!\"\n\n\nprint(greet(\"Asha\"))\nprint(shout(\"ravi\"))\nprint(calls)",
+    "solution": {
+      "code": "def count_calls(func):\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return func(*args, **kwargs)\n\n    wrapper.calls = 0\n    return wrapper\n\n\n@count_calls\ndef greet(name):\n    return \"Hello, \" + name\n\n\n@count_calls\ndef shout(name):\n    return name.upper() + \"!\"\n\n\nprint(greet(\"Asha\"))\nprint(shout(\"ravi\"))\nprint(greet.calls + shout.calls)",
+      "explanation": "The counting is written once and applied with one line (@count_calls), the functions contain only their own job, and there is no global variable to share."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Asha[ \\t]*\\r?\\nRAVI![ \\t]*\\r?\\n2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

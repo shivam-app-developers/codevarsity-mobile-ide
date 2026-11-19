@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Rotate an Array Right",
+    "language": "java",
+    "description": "Rotate right by k with three reversals: reverse everything, then reverse the first k elements, then reverse the rest.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    static void reverse(int[] a, int from, int to) {\n        while (from < to) {\n            int t = a[from];\n            a[from++] = a[to];\n            a[to--] = t;\n        }\n    }\n\n    static void rotateRight(int[] a, int k) {\n        k %= a.length;\n        reverse(a, 0, a.length - 1);\n        reverse(a, 0, k - 1);\n        reverse(a, k, a.length - 1);\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 2, 3, 4, 5, 6, 7};\n        rotateRight(a, 3);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5, 6, 7, 1, 2, 3, 4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

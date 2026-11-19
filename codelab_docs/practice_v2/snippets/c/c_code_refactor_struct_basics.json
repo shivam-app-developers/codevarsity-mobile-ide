@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Parallel Arrays Become an Array of Structs",
+    "language": "c",
+    "problemDescription": "The name, roll and marks of each student live in three separate arrays that must be kept in step. Group them into a struct and use one array of structs. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char *names[] = {\"Ravi\", \"Meena\", \"Kiran\"};\n    int rolls[] = {1, 2, 3};\n    float marks[] = {72.5f, 91.0f, 66.5f};\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %s %.1f\\n\", rolls[i], names[i], marks[i]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Student {\n    const char *name;\n    int roll;\n    float marks;\n};\n\nint main() {\n    struct Student students[] = {\n        {\"Ravi\", 1, 72.5f},\n        {\"Meena\", 2, 91.0f},\n        {\"Kiran\", 3, 66.5f},\n    };\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %s %.1f\\n\", students[i].roll, students[i].name, students[i].marks);\n    }\n    return 0;\n}",
+      "explanation": "Data that belongs together should travel together. With a struct, one index selects a whole student, and the three values can no longer drift out of step."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 Ravi 72\\.5[ \\t]*\\r?\\n2 Meena 91\\.0[ \\t]*\\r?\\n3 Kiran 66\\.5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

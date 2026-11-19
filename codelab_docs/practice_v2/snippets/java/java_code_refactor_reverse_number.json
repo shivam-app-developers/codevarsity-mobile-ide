@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: StringBuilder Instead of Repeated Concatenation",
+    "language": "java",
+    "problemDescription": "A String is rebuilt by prepending one character at a time. Use StringBuilder's reverse method. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int n = 70815;\n        String s = \"\" + n;\n        String r = \"\";\n        for (int i = 0; i < s.length(); i++) {\n            r = s.charAt(i) + r;\n        }\n        System.out.println(r);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int n = 70815;\n        System.out.println(new StringBuilder(String.valueOf(n)).reverse());\n    }\n}",
+      "explanation": "Strings are immutable, so every concatenation in the loop creates a new String and copies the old one. StringBuilder changes one buffer in place, and reverse() is already written and tested."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*51807\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

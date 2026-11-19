@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Rotate In Place",
+    "language": "c",
+    "problemDescription": "A second matrix is filled with r[j][2 - i] = m[i][j] and then copied back. Rotate in place with a transpose followed by a row reversal. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    int r[3][3];\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            r[j][2 - i] = m[i][j];\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            m[i][j] = r[i][j];\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    for (int i = 0; i < 3; i++) {\n        for (int j = i + 1; j < 3; j++) {\n            int t = m[i][j];\n            m[i][j] = m[j][i];\n            m[j][i] = t;\n        }\n    }\n    for (int i = 0; i < 3; i++) {\n        int t = m[i][0];\n        m[i][0] = m[i][2];\n        m[i][2] = t;\n    }\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d %d %d\\n\", m[i][0], m[i][1], m[i][2]);\n    }\n    return 0;\n}",
+      "explanation": "Transposing then reversing rows rotates the matrix using constant extra memory. The version with a second matrix needs a copy of the entire grid, which is costly for big images."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7 4 1[ \\t]*\\r?\\n8 5 2[ \\t]*\\r?\\n9 6 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

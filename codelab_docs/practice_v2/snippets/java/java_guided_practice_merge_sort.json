@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Merge Sort",
+    "language": "java",
+    "description": "Split the array in half, sort each half recursively, and merge the two sorted halves.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    static void mergeSort(int[] a, int left, int right) {\n        if (left >= right) {\n            return;\n        }\n        int mid = (left + right) / 2;\n        mergeSort(a, left, mid);\n        mergeSort(a, mid + 1, right);\n        int[] merged = new int[right - left + 1];\n        int i = left, j = mid + 1, k = 0;\n        while (i <= mid && j <= right) {\n            merged[k++] = a[i] <= a[j] ? a[i++] : a[j++];\n        }\n        while (i <= mid) {\n            merged[k++] = a[i++];\n        }\n        while (j <= right) {\n            merged[k++] = a[j++];\n        }\n        System.arraycopy(merged, 0, a, left, merged.length);\n    }\n\n    public static void main(String[] args) {\n        int[] a = {38, 27, 43, 3, 9, 82, 10};\n        mergeSort(a, 0, a.length - 1);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3, 9, 10, 27, 38, 43, 82\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

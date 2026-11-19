@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Wrong Exception Is Caught",
+    "language": "python",
+    "problemDescription": "Dividing by zero should print cannot divide by zero and return None, but the program crashes with a ZeroDivisionError.",
+    "buggyCode": "def divide(a, b):\n    try:\n        result = a / b\n    except ValueError:\n        print(\"cannot divide by zero\")\n        return None\n    else:\n        return result\n    finally:\n        print(\"done\")\n\n\nprint(divide(1, 0))",
+    "solution": {
+      "code": "def divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError:\n        print(\"cannot divide by zero\")\n        return None\n    else:\n        return result\n    finally:\n        print(\"done\")\n\n\nprint(divide(1, 0))",
+      "explanation": "An except clause handles only the exception types it names. Dividing by zero raises ZeroDivisionError, which is not a ValueError, so it passes through uncaught (after finally has run)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*cannot divide by zero[ \\t]*\\r?\\ndone[ \\t]*\\r?\\nNone\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

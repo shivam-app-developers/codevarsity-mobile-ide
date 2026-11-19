@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Letter Becomes a Capital",
+    "language": "java",
+    "problemDescription": "hello big world should become Hello Big World, but the program prints HELLO BIG WORLD.",
+    "buggyCode": "public class Main {\n    static String capitalize(String s) {\n        StringBuilder sb = new StringBuilder();\n        boolean newWord = true;\n        for (char c : s.toCharArray()) {\n            if (c == ' ') {\n                newWord = true;\n                sb.append(c);\n            } else if (newWord) {\n                sb.append(Character.toUpperCase(c));\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(capitalize(\"hello big world\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static String capitalize(String s) {\n        StringBuilder sb = new StringBuilder();\n        boolean newWord = true;\n        for (char c : s.toCharArray()) {\n            if (c == ' ') {\n                newWord = true;\n                sb.append(c);\n            } else if (newWord) {\n                sb.append(Character.toUpperCase(c));\n                newWord = false;\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(capitalize(\"hello big world\"));\n    }\n}",
+      "explanation": "The flag has to be cleared once the first letter of the word is handled. If it stays true, every following letter is treated as the start of a new word and capitalised as well."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello Big World\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: ArrayDeque Instead of ArrayList.remove(0)",
+    "language": "java",
+    "problemDescription": "An ArrayList is used as a queue by removing index 0 each time, which shifts every other element. Use an ArrayDeque. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> queue = new ArrayList<>();\n        queue.add(1);\n        queue.add(2);\n        queue.add(3);\n        int first = queue.remove(0);\n        System.out.println(first + \" \" + queue.get(0));\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> queue = new ArrayDeque<>();\n        queue.offer(1);\n        queue.offer(2);\n        queue.offer(3);\n        System.out.println(queue.poll() + \" \" + queue.peek());\n    }\n}",
+      "explanation": "Removing the first element of an ArrayList moves all the others one place left, which takes n steps. An ArrayDeque removes from the front in constant time."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

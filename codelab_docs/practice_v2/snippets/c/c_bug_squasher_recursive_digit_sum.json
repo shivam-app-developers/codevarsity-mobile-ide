@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Base Case Returns 1",
+    "language": "c",
+    "problemDescription": "The digits of 5139 add up to 18, but the program prints 19.",
+    "buggyCode": "#include <stdio.h>\n\nint digit_sum(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n % 10 + digit_sum(n / 10);\n}\n\nint main() {\n    printf(\"%d\\n\", digit_sum(5139));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint digit_sum(int n) {\n    if (n == 0) {\n        return 0;\n    }\n    return n % 10 + digit_sum(n / 10);\n}\n\nint main() {\n    printf(\"%d\\n\", digit_sum(5139));\n    return 0;\n}",
+      "explanation": "The base case supplies the value that is added after all the digits are used up, so it must be the neutral value for addition: 0. Returning 1 adds an extra 1 to every result."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*18\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

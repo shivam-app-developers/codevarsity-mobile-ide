@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Swap Whole Structs",
+    "language": "c",
+    "problemDescription": "Each field of the two items is swapped by hand. Swap the whole structs with one temporary struct. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nstruct Item {\n    const char *name;\n    int price;\n};\n\nint main() {\n    struct Item items[] = {{\"pen\", 15}, {\"book\", 120}, {\"eraser\", 5}, {\"bag\", 450}};\n    for (int i = 0; i < 4; i++) {\n        for (int j = i + 1; j < 4; j++) {\n            if (items[i].price > items[j].price) {\n                const char *tn = items[i].name;\n                int tp = items[i].price;\n                items[i].name = items[j].name;\n                items[i].price = items[j].price;\n                items[j].name = tn;\n                items[j].price = tp;\n            }\n        }\n    }\n    for (int i = 0; i < 4; i++) {\n        printf(\"%s %d\\n\", items[i].name, items[i].price);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nstruct Item {\n    const char *name;\n    int price;\n};\n\nint main() {\n    struct Item items[] = {{\"pen\", 15}, {\"book\", 120}, {\"eraser\", 5}, {\"bag\", 450}};\n    for (int i = 0; i < 4; i++) {\n        for (int j = i + 1; j < 4; j++) {\n            if (items[i].price > items[j].price) {\n                struct Item temp = items[i];\n                items[i] = items[j];\n                items[j] = temp;\n            }\n        }\n    }\n    for (int i = 0; i < 4; i++) {\n        printf(\"%s %d\\n\", items[i].name, items[i].price);\n    }\n    return 0;\n}",
+      "explanation": "Structs can be assigned as a whole, so three lines replace six. If a field is added to Item later, the swap keeps working with no change."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*eraser 5[ \\t]*\\r?\\npen 15[ \\t]*\\r?\\nbook 120[ \\t]*\\r?\\nbag 450\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

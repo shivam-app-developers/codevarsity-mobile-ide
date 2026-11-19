@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pointer Arithmetic on Arrays",
+    "language": "c",
+    "description": "An array name is the address of its first element, and p + i is the address of element i. *(p + i) is the same as p[i].",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {10, 20, 30, 40, 50};\n    int *p = a;\n    for (int i = 0; i < 5; i++) {\n        printf(\"a[%d] = %d (via pointer: %d)\\n\", i, a[i], *(p + i));\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a\\[0\\] = 10 \\(via pointer: 10\\)[ \\t]*\\r?\\na\\[1\\] = 20 \\(via pointer: 20\\)[ \\t]*\\r?\\na\\[2\\] = 30 \\(via pointer: 30\\)[ \\t]*\\r?\\na\\[3\\] = 40 \\(via pointer: 40\\)[ \\t]*\\r?\\na\\[4\\] = 50 \\(via pointer: 50\\)\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

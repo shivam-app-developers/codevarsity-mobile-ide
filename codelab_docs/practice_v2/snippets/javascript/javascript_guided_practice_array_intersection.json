@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Intersection of Two Arrays",
+    "language": "javascript",
+    "description": "Keep the items of the first array that also appear in the second, each only once. indexOf tells whether a value is in an array.",
+    "ghostCode": "function intersection(a, b) {\n  return a.filter(function (x, i) {\n    return b.indexOf(x) !== -1 && a.indexOf(x) === i;\n  });\n}\n\nconsole.log(intersection([1, 2, 2, 3, 4], [2, 4, 4, 6]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

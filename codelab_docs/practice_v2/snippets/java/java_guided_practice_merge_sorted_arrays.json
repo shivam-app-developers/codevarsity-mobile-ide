@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Merge Two Sorted Arrays",
+    "language": "java",
+    "description": "Keep one index per array and always copy the smaller front element into the result. Then copy what is left of either array.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    static int[] merge(int[] a, int[] b) {\n        int[] result = new int[a.length + b.length];\n        int i = 0, j = 0, k = 0;\n        while (i < a.length && j < b.length) {\n            result[k++] = a[i] <= b[j] ? a[i++] : b[j++];\n        }\n        while (i < a.length) {\n            result[k++] = a[i++];\n        }\n        while (j < b.length) {\n            result[k++] = b[j++];\n        }\n        return result;\n    }\n\n    public static void main(String[] args) {\n        int[] first = {1, 4, 7};\n        int[] second = {2, 3, 9, 10};\n        System.out.println(Arrays.toString(merge(first, second)));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3, 4, 7, 9, 10\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

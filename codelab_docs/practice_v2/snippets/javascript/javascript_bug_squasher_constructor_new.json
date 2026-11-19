@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The new Keyword Is Missing",
+    "language": "javascript",
+    "problemDescription": "The program should print Asha is 30, but it crashes with a TypeError.",
+    "buggyCode": "function Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\nPerson.prototype.describe = function () {\n  return this.name + \" is \" + this.age;\n};\n\nvar p = Person(\"Asha\", 30);\nconsole.log(p.describe());",
+    "solution": {
+      "code": "function Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\nPerson.prototype.describe = function () {\n  return this.name + \" is \" + this.age;\n};\n\nvar p = new Person(\"Asha\", 30);\nconsole.log(p.describe());",
+      "explanation": "Without new the function is just called, nothing is returned, so p is undefined, and this.name is stored on the global object. Calling p.describe() then fails because p is undefined."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha is 30\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

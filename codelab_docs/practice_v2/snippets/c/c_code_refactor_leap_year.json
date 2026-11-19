@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Return the Condition Directly",
+    "language": "c",
+    "problemDescription": "The function uses a chain of ifs to return 1 or 0. Simplify it so it returns the logical expression directly. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint is_leap(int year) {\n    if (year % 400 == 0) {\n        return 1;\n    } else {\n        if (year % 100 == 0) {\n            return 0;\n        } else {\n            if (year % 4 == 0) {\n                return 1;\n            } else {\n                return 0;\n            }\n        }\n    }\n}\n\nint main() {\n    printf(\"%d %d %d\\n\", is_leap(1900), is_leap(2000), is_leap(2024));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint is_leap(int year) {\n    return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;\n}\n\nint main() {\n    printf(\"%d %d %d\\n\", is_leap(1900), is_leap(2000), is_leap(2024));\n    return 0;\n}",
+      "explanation": "A comparison already produces 1 or 0 in C, so the whole ladder collapses into one boolean expression that mirrors the rule: divisible by 4 and not by 100, or divisible by 400."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

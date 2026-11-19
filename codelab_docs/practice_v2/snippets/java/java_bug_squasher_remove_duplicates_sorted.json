@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Count Is One Too Small",
+    "language": "java",
+    "problemDescription": "The sorted array has 4 unique values (1 2 3 4), but the program reports 3 and prints only 1 2 3.",
+    "buggyCode": "public class Main {\n    static int removeDuplicates(int[] a) {\n        if (a.length == 0) {\n            return 0;\n        }\n        int write = 1;\n        for (int read = 1; read < a.length; read++) {\n            if (a[read] != a[write - 1]) {\n                a[write++] = a[read];\n            }\n        }\n        return write - 1;\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 1, 2, 3, 3, 3, 4};\n        int n = removeDuplicates(a);\n        System.out.println(\"Unique count: \" + n);\n        for (int i = 0; i < n; i++) {\n            System.out.print(a[i] + \" \");\n        }\n        System.out.println();\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int removeDuplicates(int[] a) {\n        if (a.length == 0) {\n            return 0;\n        }\n        int write = 1;\n        for (int read = 1; read < a.length; read++) {\n            if (a[read] != a[write - 1]) {\n                a[write++] = a[read];\n            }\n        }\n        return write;\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 1, 2, 3, 3, 3, 4};\n        int n = removeDuplicates(a);\n        System.out.println(\"Unique count: \" + n);\n        for (int i = 0; i < n; i++) {\n            System.out.print(a[i] + \" \");\n        }\n        System.out.println();\n    }\n}",
+      "explanation": "write is the index where the next unique value would go, which is also the number of unique values written so far. Returning write - 1 drops the last unique element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Unique count: 4[ \\t]*\\r?\\n1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

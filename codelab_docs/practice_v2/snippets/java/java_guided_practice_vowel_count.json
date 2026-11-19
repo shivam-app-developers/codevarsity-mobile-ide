@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Count the Vowels",
+    "language": "java",
+    "description": "Check each character against the string \"aeiou\" with indexOf. indexOf returns -1 when the character is not found.",
+    "ghostCode": "public class Main {\n    static boolean isVowel(char c) {\n        return \"aeiou\".indexOf(Character.toLowerCase(c)) >= 0;\n    }\n\n    public static void main(String[] args) {\n        String text = \"Hello World\";\n        int vowels = 0, consonants = 0;\n        for (char c : text.toCharArray()) {\n            if (isVowel(c)) {\n                vowels++;\n            } else if (Character.isLetter(c)) {\n                consonants++;\n            }\n        }\n        System.out.println(\"Vowels: \" + vowels);\n        System.out.println(\"Consonants: \" + consonants);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Vowels: 3[ \\t]*\\r?\\nConsonants: 7\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

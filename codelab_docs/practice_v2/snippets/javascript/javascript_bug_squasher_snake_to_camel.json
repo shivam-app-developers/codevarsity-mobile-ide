@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Underscore Is Kept",
+    "language": "javascript",
+    "problemDescription": "user_first_name should become userFirstName, but the program prints user_First_Name.",
+    "buggyCode": "function snakeToCamel(name) {\n  return name.replace(/_([a-z])/g, function (match, letter) {\n    return match.toUpperCase();\n  });\n}\n\nconsole.log(snakeToCamel(\"user_first_name\"));",
+    "solution": {
+      "code": "function snakeToCamel(name) {\n  return name.replace(/_([a-z])/g, function (match, letter) {\n    return letter.toUpperCase();\n  });\n}\n\nconsole.log(snakeToCamel(\"user_first_name\"));",
+      "explanation": "match is the whole matched text, underscore included (_f). Upper-casing it keeps the underscore. The captured letter alone, letter, is what should replace the pair."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*userFirstName\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

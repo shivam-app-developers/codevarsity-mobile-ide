@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Interfaces and Default Methods",
+    "language": "java",
+    "description": "An interface lists what a class can do. A default method gives every implementing class a ready-made behaviour that it may override.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Greeter g = new EnglishGreeter();\n        g.greet(\"Asha\");\n        g.farewell();\n    }\n}\n\ninterface Greeter {\n    void greet(String name);\n\n    default void farewell() {\n        System.out.println(\"Goodbye!\");\n    }\n}\n\nclass EnglishGreeter implements Greeter {\n    public void greet(String name) {\n        System.out.println(\"Hello, \" + name);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Asha[ \\t]*\\r?\\nGoodbye!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

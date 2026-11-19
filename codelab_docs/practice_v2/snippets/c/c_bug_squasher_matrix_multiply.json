@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Each Product Replaces the Previous One",
+    "language": "c",
+    "problemDescription": "The product should be 2 8 / 16 10, but the program prints 0 0 / 15 6.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[2][2] = {{2, 0}, {1, 3}};\n    int b[2][2] = {{1, 4}, {5, 2}};\n    int c[2][2] = {{0}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2; j++) {\n            for (int k = 0; k < 2; k++) {\n                c[i][j] = a[i][k] * b[k][j];\n            }\n        }\n    }\n    for (int i = 0; i < 2; i++) {\n        printf(\"%d %d\\n\", c[i][0], c[i][1]);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[2][2] = {{2, 0}, {1, 3}};\n    int b[2][2] = {{1, 4}, {5, 2}};\n    int c[2][2] = {{0}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2; j++) {\n            for (int k = 0; k < 2; k++) {\n                c[i][j] += a[i][k] * b[k][j];\n            }\n        }\n    }\n    for (int i = 0; i < 2; i++) {\n        printf(\"%d %d\\n\", c[i][0], c[i][1]);\n    }\n    return 0;\n}",
+      "explanation": "Each entry is a sum of several products, so every product has to be added to the running total with +=. Plain assignment overwrites the total, and only the product from the last k survives."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 8[ \\t]*\\r?\\n16 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

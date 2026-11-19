@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Smallest First Instead of Largest First",
+    "language": "java",
+    "problemDescription": "The values should come out largest first (8 5 3 2 1), but they come out smallest first.",
+    "buggyCode": "import java.util.Collections;\nimport java.util.PriorityQueue;\n\npublic class Main {\n    public static void main(String[] args) {\n        PriorityQueue<Integer> heap = new PriorityQueue<>();\n        int[] values = {5, 1, 8, 3, 2};\n        for (int v : values) {\n            heap.add(v);\n        }\n        StringBuilder sb = new StringBuilder();\n        while (!heap.isEmpty()) {\n            sb.append(heap.poll()).append(' ');\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+    "solution": {
+      "code": "import java.util.Collections;\nimport java.util.PriorityQueue;\n\npublic class Main {\n    public static void main(String[] args) {\n        PriorityQueue<Integer> heap = new PriorityQueue<>(Collections.reverseOrder());\n        int[] values = {5, 1, 8, 3, 2};\n        for (int v : values) {\n            heap.add(v);\n        }\n        StringBuilder sb = new StringBuilder();\n        while (!heap.isEmpty()) {\n            sb.append(heap.poll()).append(' ');\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+      "explanation": "By default a PriorityQueue is a min-heap: the natural order of the numbers decides, so the smallest is polled first. A reversed comparator turns it into a max-heap."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8 5 3 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Simple Calculator with switch",
+    "language": "c",
+    "description": "Pick an operation with switch. Remember break after each case, and handle the default case.",
+    "ghostCode": "#include <stdio.h>\n\nint calculate(int a, int b, char op) {\n    switch (op) {\n        case '+': return a + b;\n        case '-': return a - b;\n        case '*': return a * b;\n        case '/': return b != 0 ? a / b : 0;\n        default: return 0;\n    }\n}\n\nint main() {\n    printf(\"12 + 5 = %d\\n\", calculate(12, 5, '+'));\n    printf(\"12 * 5 = %d\\n\", calculate(12, 5, '*'));\n    printf(\"12 / 5 = %d\\n\", calculate(12, 5, '/'));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*12 \\+ 5 = 17[ \\t]*\\r?\\n12 \\* 5 = 60[ \\t]*\\r?\\n12 \\/ 5 = 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

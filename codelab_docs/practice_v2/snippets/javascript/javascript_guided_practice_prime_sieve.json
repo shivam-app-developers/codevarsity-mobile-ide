@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sieve of Eratosthenes",
+    "language": "javascript",
+    "description": "Walk through the numbers; each number not yet crossed out is prime, and its multiples (starting at its square) get crossed out.",
+    "ghostCode": "function primesUpTo(limit) {\n  var composite = [];\n  var primes = [];\n  for (var i = 2; i <= limit; i++) {\n    if (!composite[i]) {\n      primes.push(i);\n      for (var j = i * i; j <= limit; j += i) {\n        composite[j] = true;\n      }\n    }\n  }\n  return primes;\n}\n\nconsole.log(primesUpTo(30));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,3,5,7,11,13,17,19,23,29\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: filter Instead of a Loop with push",
+    "language": "javascript",
+    "problemDescription": "A loop with if / else splits the items into two arrays. Use filter for each side. The output must stay the same.",
+    "initialCode": "function quickSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var pivot = a[0];\n  var smaller = [];\n  var larger = [];\n  for (var i = 1; i < a.length; i++) {\n    if (a[i] < pivot) {\n      smaller.push(a[i]);\n    } else {\n      larger.push(a[i]);\n    }\n  }\n  return quickSort(smaller).concat([pivot], quickSort(larger));\n}\n\nconsole.log(quickSort([9, 4, 6, 2, 8, 1, 7]));",
+    "solution": {
+      "code": "function quickSort(a) {\n  if (a.length <= 1) {\n    return a;\n  }\n  var pivot = a[0];\n  var rest = a.slice(1);\n  var smaller = rest.filter(function (x) {\n    return x < pivot;\n  });\n  var larger = rest.filter(function (x) {\n    return x >= pivot;\n  });\n  return quickSort(smaller).concat([pivot], quickSort(larger));\n}\n\nconsole.log(quickSort([9, 4, 6, 2, 8, 1, 7]));",
+      "explanation": "filter states the rule for each side directly, so the two result arrays and the manual loop are not needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,4,6,7,8,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

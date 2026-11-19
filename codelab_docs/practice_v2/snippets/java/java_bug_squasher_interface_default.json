@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Interface Method Implemented Without public",
+    "language": "java",
+    "problemDescription": "The program does not compile: the method that implements the interface is not allowed to be less visible than the interface method.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Playable song = new Song(\"Imagine\");\n        song.play();\n    }\n}\n\ninterface Playable {\n    void play();\n}\n\nclass Song implements Playable {\n    private final String title;\n\n    Song(String title) {\n        this.title = title;\n    }\n\n    void play() {\n        System.out.println(\"Playing \" + title);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Playable song = new Song(\"Imagine\");\n        song.play();\n    }\n}\n\ninterface Playable {\n    void play();\n}\n\nclass Song implements Playable {\n    private final String title;\n\n    Song(String title) {\n        this.title = title;\n    }\n\n    public void play() {\n        System.out.println(\"Playing \" + title);\n    }\n}",
+      "explanation": "Methods declared in an interface are implicitly public. An implementing method with weaker (package-private) access would hide the method from users of the interface, so the compiler requires the public keyword."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Playing Imagine\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: 49 Is Listed as a Prime",
+    "language": "c",
+    "problemDescription": "49 is 7 times 7, but the sieve prints it in the list of primes up to 49.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int limit = 49;\n    int composite[50] = {0};\n    for (int i = 2; i * i < limit; i++) {\n        if (!composite[i]) {\n            for (int j = i * i; j <= limit; j += i) {\n                composite[j] = 1;\n            }\n        }\n    }\n    for (int i = 2; i <= limit; i++) {\n        if (!composite[i]) printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int limit = 49;\n    int composite[50] = {0};\n    for (int i = 2; i * i <= limit; i++) {\n        if (!composite[i]) {\n            for (int j = i * i; j <= limit; j += i) {\n                composite[j] = 1;\n            }\n        }\n    }\n    for (int i = 2; i <= limit; i++) {\n        if (!composite[i]) printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "The last prime whose multiples must be marked is the largest one with p * p <= limit. When p * p equals the limit exactly, as 7 * 7 = 49 does, a strict < skips that prime and its square stays unmarked."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 3 5 7 11 13 17 19 23 29 31 37 41 43 47\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

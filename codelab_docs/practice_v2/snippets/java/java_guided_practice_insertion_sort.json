@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Insertion Sort",
+    "language": "java",
+    "description": "Take each element in turn and shift the larger elements of the sorted front part one place right until the element fits.",
+    "ghostCode": "import java.util.Arrays;\n\npublic class Main {\n    static void insertionSort(int[] a) {\n        for (int i = 1; i < a.length; i++) {\n            int key = a[i];\n            int j = i - 1;\n            while (j >= 0 && a[j] > key) {\n                a[j + 1] = a[j];\n                j--;\n            }\n            a[j + 1] = key;\n        }\n    }\n\n    public static void main(String[] args) {\n        int[] a = {12, 11, 13, 5, 6};\n        insertionSort(a);\n        System.out.println(Arrays.toString(a));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[5, 6, 11, 12, 13\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

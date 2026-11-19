@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Capitalize Each Word",
+    "language": "java",
+    "description": "Track whether the next letter starts a new word. A space sets the flag, and the first letter after it is converted to upper case and clears the flag.",
+    "ghostCode": "public class Main {\n    static String capitalize(String s) {\n        StringBuilder sb = new StringBuilder();\n        boolean newWord = true;\n        for (char c : s.toCharArray()) {\n            if (c == ' ') {\n                newWord = true;\n                sb.append(c);\n            } else if (newWord) {\n                sb.append(Character.toUpperCase(c));\n                newWord = false;\n            } else {\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(capitalize(\"learn to code every day\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Learn To Code Every Day\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

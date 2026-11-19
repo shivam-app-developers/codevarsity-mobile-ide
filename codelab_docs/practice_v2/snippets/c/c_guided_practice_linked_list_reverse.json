@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse a Linked List",
+    "language": "c",
+    "description": "Walk the list once and turn each next pointer around. Remember the next node before overwriting the pointer, or the rest of the list is lost.",
+    "ghostCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nstruct Node *reverse(struct Node *head) {\n    struct Node *prev = NULL;\n    while (head != NULL) {\n        struct Node *next = head->next;\n        head->next = prev;\n        prev = head;\n        head = next;\n    }\n    return prev;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 4; v >= 1; v--) {\n        list = push(list, v);\n    }\n    list = reverse(list);\n    for (struct Node *p = list; p != NULL; p = p->next) {\n        printf(\"%d \", p->value);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 3 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

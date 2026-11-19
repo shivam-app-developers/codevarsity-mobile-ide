@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Second Argument Is Never Passed On",
+    "language": "javascript",
+    "problemDescription": "Doubling 21 through a curried multiply should print 42, but the program prints NaN.",
+    "buggyCode": "function curry(fn) {\n  return function (a) {\n    return function (b) {\n      return fn(a);\n    };\n  };\n}\n\nfunction multiply(x, y) {\n  return x * y;\n}\n\nvar twice = curry(multiply)(2);\nconsole.log(twice(21));",
+    "solution": {
+      "code": "function curry(fn) {\n  return function (a) {\n    return function (b) {\n      return fn(a, b);\n    };\n  };\n}\n\nfunction multiply(x, y) {\n  return x * y;\n}\n\nvar twice = curry(multiply)(2);\nconsole.log(twice(21));",
+      "explanation": "The innermost function has to call the original function with both collected arguments. Calling fn(a) alone passes undefined as y, and 2 * undefined is NaN."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

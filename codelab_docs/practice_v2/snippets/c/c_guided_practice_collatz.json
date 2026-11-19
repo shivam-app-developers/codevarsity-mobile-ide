@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Collatz Sequence",
+    "language": "c",
+    "description": "Halve even numbers, turn odd numbers n into 3n + 1, and count the steps until the number reaches 1.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 6;\n    int steps = 0;\n    printf(\"%d\", n);\n    while (n != 1) {\n        n = (n % 2 == 0) ? n / 2 : 3 * n + 1;\n        printf(\" -> %d\", n);\n        steps++;\n    }\n    printf(\"\\nSteps: %d\\n\", steps);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1[ \\t]*\\r?\\nSteps: 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

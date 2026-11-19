@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Count in One Pass",
+    "language": "c",
+    "problemDescription": "For every letter of the alphabet the whole word is scanned again. Count all letters in a single pass with a counting array. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"banana\";\n    for (int c = 'a'; c <= 'z'; c++) {\n        int n = 0;\n        for (int i = 0; s[i] != '\\0'; i++) {\n            if (s[i] == c) {\n                n++;\n            }\n        }\n        if (n > 0) {\n            printf(\"%c=%d\\n\", c, n);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    char s[] = \"banana\";\n    int counts[26] = {0};\n    for (int i = 0; s[i] != '\\0'; i++) {\n        counts[s[i] - 'a']++;\n    }\n    for (int c = 0; c < 26; c++) {\n        if (counts[c] > 0) {\n            printf(\"%c=%d\\n\", 'a' + c, counts[c]);\n        }\n    }\n    return 0;\n}",
+      "explanation": "The first version rescans the word 26 times. The counting array reads the word once and then the 26 counters once, which is far less work for long text."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a=3[ \\t]*\\r?\\nb=1[ \\t]*\\r?\\nn=2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

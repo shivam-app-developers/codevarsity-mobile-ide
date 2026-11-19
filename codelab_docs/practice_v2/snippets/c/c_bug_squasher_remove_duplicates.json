@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Last Value Disappears",
+    "language": "c",
+    "problemDescription": "Removing duplicates from the sorted array 1 1 2 3 3 3 4 should give 1 2 3 4, but the 4 is missing.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 1, 2, 3, 3, 3, 4};\n    int n = 7;\n    int write = 1;\n    for (int read = 1; read < n - 1; read++) {\n        if (a[read] != a[write - 1]) {\n            a[write++] = a[read];\n        }\n    }\n    for (int i = 0; i < write; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 1, 2, 3, 3, 3, 4};\n    int n = 7;\n    int write = 1;\n    for (int read = 1; read < n; read++) {\n        if (a[read] != a[write - 1]) {\n            a[write++] = a[read];\n        }\n    }\n    for (int i = 0; i < write; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "The loop must visit every index up to n - 1, so the condition is read < n. With read < n - 1 the last element is never examined, and a unique last value is lost."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

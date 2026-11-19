@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move the new Calls into a Factory",
+    "language": "java",
+    "problemDescription": "The choice between the classes is made with an if / else right in main, and would be repeated everywhere a notifier is needed. Put it in a factory method. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        String type = \"sms\";\n        Notifier n;\n        if (type.equals(\"email\")) {\n            n = new EmailNotifier();\n        } else {\n            n = new SmsNotifier();\n        }\n        System.out.println(n.send(\"Hi\"));\n    }\n}\n\ninterface Notifier {\n    String send(String message);\n}\n\nclass EmailNotifier implements Notifier {\n    public String send(String message) {\n        return \"Email: \" + message;\n    }\n}\n\nclass SmsNotifier implements Notifier {\n    public String send(String message) {\n        return \"SMS: \" + message;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(NotifierFactory.create(\"sms\").send(\"Hi\"));\n    }\n}\n\ninterface Notifier {\n    String send(String message);\n}\n\nclass EmailNotifier implements Notifier {\n    public String send(String message) {\n        return \"Email: \" + message;\n    }\n}\n\nclass SmsNotifier implements Notifier {\n    public String send(String message) {\n        return \"SMS: \" + message;\n    }\n}\n\nclass NotifierFactory {\n    static Notifier create(String type) {\n        if (type.equals(\"email\")) {\n            return new EmailNotifier();\n        }\n        return new SmsNotifier();\n    }\n}",
+      "explanation": "With a factory, main no longer knows which classes exist. Adding a push-notification class means changing only the factory, not every place that creates a notifier."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*SMS: Hi\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

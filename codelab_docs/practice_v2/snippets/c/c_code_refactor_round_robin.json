@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Named Constants and a Clear Slice",
+    "language": "c",
+    "problemDescription": "The numbers 3 and 2 appear all over the scheduler and the slice length is decided with an if/else. Name the constants and use a conditional expression. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int remaining[3] = {4, 1, 3};\n    int time = 0;\n    int done = 0;\n    while (done < 3) {\n        for (int i = 0; i < 3; i++) {\n            if (remaining[i] > 0) {\n                int slice;\n                if (remaining[i] > 2) {\n                    slice = 2;\n                } else {\n                    slice = remaining[i];\n                }\n                time = time + slice;\n                remaining[i] = remaining[i] - slice;\n                if (remaining[i] == 0) {\n                    printf(\"P%d done at %d\\n\", i + 1, time);\n                    done = done + 1;\n                }\n            }\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define PROCESSES 3\n#define QUANTUM 2\n\nint main() {\n    int remaining[PROCESSES] = {4, 1, 3};\n    int time = 0, done = 0;\n    while (done < PROCESSES) {\n        for (int i = 0; i < PROCESSES; i++) {\n            if (remaining[i] > 0) {\n                int slice = remaining[i] < QUANTUM ? remaining[i] : QUANTUM;\n                time += slice;\n                remaining[i] -= slice;\n                if (remaining[i] == 0) {\n                    printf(\"P%d done at %d\\n\", i + 1, time);\n                    done++;\n                }\n            }\n        }\n    }\n    return 0;\n}",
+      "explanation": "PROCESSES and QUANTUM can be changed in one place, and the slice is the smaller of the remaining time and the quantum, which a single conditional expression says directly."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*P2 done at 3[ \\t]*\\r?\\nP1 done at 7[ \\t]*\\r?\\nP3 done at 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

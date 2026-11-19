@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Constructor and toString Instead of Public Fields",
+    "language": "java",
+    "problemDescription": "Fields are set one by one from outside the class and printed with repeated concatenation. Give the class a constructor, private final fields and a toString. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Point a = new Point();\n        a.x = 1;\n        a.y = 2;\n        Point b = new Point();\n        b.x = 4;\n        b.y = 6;\n        System.out.println(a.x + \",\" + a.y);\n        System.out.println(b.x + \",\" + b.y);\n    }\n}\n\nclass Point {\n    int x;\n    int y;\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Point a = new Point(1, 2);\n        Point b = new Point(4, 6);\n        System.out.println(a);\n        System.out.println(b);\n    }\n}\n\nclass Point {\n    private final int x;\n    private final int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public String toString() {\n        return x + \",\" + y;\n    }\n}",
+      "explanation": "A constructor makes sure an object is never half-initialised, final fields cannot be changed by accident, and toString puts the formatting in one place instead of in every caller."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1,2[ \\t]*\\r?\\n4,6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

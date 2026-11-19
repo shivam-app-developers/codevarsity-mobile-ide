@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Breadth-First Search",
+    "language": "javascript",
+    "description": "BFS visits a graph level by level with a queue. Mark a node as visited when it is added to the queue so it is never queued twice.",
+    "ghostCode": "var graph = { 0: [1, 2], 1: [0, 3], 2: [0, 3, 4], 3: [1, 2], 4: [2] };\n\nfunction bfs(start) {\n  var visited = {};\n  var queue = [start];\n  var order = [];\n  visited[start] = true;\n  while (queue.length > 0) {\n    var node = queue.shift();\n    order.push(node);\n    graph[node].forEach(function (next) {\n      if (!visited[next]) {\n        visited[next] = true;\n        queue.push(next);\n      }\n    });\n  }\n  return order;\n}\n\nconsole.log(bfs(0));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0,1,2,3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

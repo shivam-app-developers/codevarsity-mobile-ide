@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Remove the Repeated Steps",
+    "language": "c",
+    "problemDescription": "The loop body does one job in three separate statements with unclear names. Tidy it into a function with clear names and compound assignments. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int x = 70815;\n    int y = 0;\n    while (x > 0) {\n        y = y * 10;\n        y = y + x % 10;\n        x = x / 10;\n    }\n    printf(\"%d\\n\", y);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint reverse_digits(int number) {\n    int reversed = 0;\n    while (number > 0) {\n        reversed = reversed * 10 + number % 10;\n        number /= 10;\n    }\n    return reversed;\n}\n\nint main() {\n    printf(\"%d\\n\", reverse_digits(70815));\n    return 0;\n}",
+      "explanation": "The two steps that grow the result become one expression, the names say what each variable holds, and the logic is wrapped in a reusable function."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*51807\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

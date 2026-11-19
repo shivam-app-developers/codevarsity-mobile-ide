@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: parseInt Reads Binary as Decimal",
+    "language": "javascript",
+    "problemDescription": "The binary text 1010 is the number 10, but the program prints 1010.",
+    "buggyCode": "console.log(parseInt(\"1010\"));",
+    "solution": {
+      "code": "console.log(parseInt(\"1010\", 2));",
+      "explanation": "Without the second argument parseInt reads the text as a decimal number, so 1010 stays one thousand and ten. The radix 2 tells it to read binary digits."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

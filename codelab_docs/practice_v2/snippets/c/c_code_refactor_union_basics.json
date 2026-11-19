@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Tagged Union Instead of Parallel Variables",
+    "language": "c",
+    "problemDescription": "A type flag and two separate variables describe one value that is either an int or a double. Use a struct with an enum tag and a union, and a function that prints it. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int type = 1;\n    int int_value = 42;\n    double double_value = 0.0;\n    if (type == 1) {\n        printf(\"int: %d\\n\", int_value);\n    } else {\n        printf(\"double: %.2f\\n\", double_value);\n    }\n    type = 2;\n    double_value = 3.14;\n    if (type == 1) {\n        printf(\"int: %d\\n\", int_value);\n    } else {\n        printf(\"double: %.2f\\n\", double_value);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nenum Kind { INT_KIND, DOUBLE_KIND };\n\nstruct Variant {\n    enum Kind kind;\n    union {\n        int i;\n        double d;\n    } value;\n};\n\nvoid show(struct Variant v) {\n    if (v.kind == INT_KIND) {\n        printf(\"int: %d\\n\", v.value.i);\n    } else {\n        printf(\"double: %.2f\\n\", v.value.d);\n    }\n}\n\nint main() {\n    struct Variant a = {INT_KIND, {.i = 42}};\n    struct Variant b = {DOUBLE_KIND, {.d = 3.14}};\n    show(a);\n    show(b);\n    return 0;\n}",
+      "explanation": "A tagged union stores exactly one of the alternatives plus a tag saying which one is valid. The printing logic is written once in show instead of being copied for every value."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*int: 42[ \\t]*\\r?\\ndouble: 3\\.14\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Longest Common Prefix",
+    "language": "java",
+    "description": "Start with the first word as the prefix. While another word does not start with it, cut the last letter off the prefix.",
+    "ghostCode": "public class Main {\n    static String commonPrefix(String[] words) {\n        String prefix = words[0];\n        for (int i = 1; i < words.length; i++) {\n            while (!words[i].startsWith(prefix)) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n            }\n        }\n        return prefix;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(commonPrefix(new String[] {\"flower\", \"flow\", \"flight\"}));\n        System.out.println(commonPrefix(new String[] {\"interview\", \"internet\", \"interval\"}));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fl[ \\t]*\\r?\\ninter\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Leap Year Check",
+    "language": "c",
+    "description": "A year is a leap year when it is divisible by 4, except century years, which must be divisible by 400.",
+    "ghostCode": "#include <stdio.h>\n\nint is_leap(int year) {\n    return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;\n}\n\nint main() {\n    int years[] = {1900, 2000, 2023, 2024};\n    for (int i = 0; i < 4; i++) {\n        printf(\"%d: %s\\n\", years[i], is_leap(years[i]) ? \"leap\" : \"not leap\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1900: not leap[ \\t]*\\r?\\n2000: leap[ \\t]*\\r?\\n2023: not leap[ \\t]*\\r?\\n2024: leap\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

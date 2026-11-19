@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Loops Instead of Unrolled Formulas",
+    "language": "java",
+    "problemDescription": "Each of the four entries of the product is written out as its own formula. Use the three-loop algorithm. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int[][] a = {{1, 2}, {3, 4}};\n        int[][] b = {{2, 0}, {1, 2}};\n        int c00 = a[0][0] * b[0][0] + a[0][1] * b[1][0];\n        int c01 = a[0][0] * b[0][1] + a[0][1] * b[1][1];\n        int c10 = a[1][0] * b[0][0] + a[1][1] * b[1][0];\n        int c11 = a[1][0] * b[0][1] + a[1][1] * b[1][1];\n        System.out.println(c00 + \" \" + c01);\n        System.out.println(c10 + \" \" + c11);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int[][] a = {{1, 2}, {3, 4}};\n        int[][] b = {{2, 0}, {1, 2}};\n        int n = a.length;\n        for (int i = 0; i < n; i++) {\n            StringBuilder line = new StringBuilder();\n            for (int j = 0; j < n; j++) {\n                int sum = 0;\n                for (int k = 0; k < n; k++) {\n                    sum += a[i][k] * b[k][j];\n                }\n                line.append(j == 0 ? \"\" : \" \").append(sum);\n            }\n            System.out.println(line);\n        }\n    }\n}",
+      "explanation": "The formula for one entry is the same everywhere, only the indexes change, so loops express it once and work for any size."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4 4[ \\t]*\\r?\\n10 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

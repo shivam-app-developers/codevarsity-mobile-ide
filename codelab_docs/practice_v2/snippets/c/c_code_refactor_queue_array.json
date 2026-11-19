@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move a Front Index Instead of Shifting",
+    "language": "c",
+    "problemDescription": "Every removal shifts all remaining items one place to the left. Keep a front index instead and never move the data. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int q[5];\n    int n = 0;\n    q[n++] = 7;\n    q[n++] = 8;\n    q[n++] = 9;\n    for (int round = 0; round < 3; round++) {\n        printf(\"%d\\n\", q[0]);\n        for (int i = 0; i < n - 1; i++) {\n            q[i] = q[i + 1];\n        }\n        n--;\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int q[5];\n    int front = 0, rear = 0;\n    q[rear++] = 7;\n    q[rear++] = 8;\n    q[rear++] = 9;\n    while (front < rear) {\n        printf(\"%d\\n\", q[front++]);\n    }\n    return 0;\n}",
+      "explanation": "Shifting makes every removal cost n moves. Advancing a front index makes each removal a single step, which is how real array queues work."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*7[ \\t]*\\r?\\n8[ \\t]*\\r?\\n9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

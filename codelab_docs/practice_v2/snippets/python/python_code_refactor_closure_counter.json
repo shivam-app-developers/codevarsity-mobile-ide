@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Counter Factory Instead of Global Variables",
+    "language": "python",
+    "problemDescription": "Each counter is a global variable with its own function that uses the global statement. Write a make_counter function that returns a new counter with private state. The output must stay the same.",
+    "initialCode": "count_a = 0\ncount_b = 0\n\n\ndef increment_a():\n    global count_a\n    count_a += 1\n    return count_a\n\n\ndef increment_b():\n    global count_b\n    count_b += 1\n    return count_b\n\n\nprint(increment_a(), increment_a(), increment_b())",
+    "solution": {
+      "code": "def make_counter():\n    count = 0\n\n    def increment():\n        nonlocal count\n        count += 1\n        return count\n\n    return increment\n\n\nincrement_a = make_counter()\nincrement_b = make_counter()\nprint(increment_a(), increment_a(), increment_b())",
+      "explanation": "A closure gives every counter its own private state, so a third counter needs no new variable or function, and no other code can change the count by accident."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: An ArrayDeque Instead of a Global Array and Counter",
+    "language": "java",
+    "problemDescription": "A static array and a static top index implement a stack, with string concatenation to build the output. Use an ArrayDeque as the stack and a StringBuilder. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int[] data = new int[100];\n    static int top = 0;\n\n    public static void main(String[] args) {\n        for (int i = 1; i <= 5; i++) {\n            data[top] = i * i;\n            top++;\n        }\n        String out = \"\";\n        while (top > 0) {\n            top--;\n            out = out + data[top] + \" \";\n        }\n        System.out.println(out.trim());\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        for (int i = 1; i <= 5; i++) {\n            stack.push(i * i);\n        }\n        StringBuilder out = new StringBuilder();\n        while (!stack.isEmpty()) {\n            out.append(stack.pop()).append(' ');\n        }\n        System.out.println(out.toString().trim());\n    }\n}",
+      "explanation": "ArrayDeque grows by itself (the fixed array overflows after 100 pushes), and push and pop say what they do. The state also lives in a local variable instead of global fields."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25 16 9 4 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

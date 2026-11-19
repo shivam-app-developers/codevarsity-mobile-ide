@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Indentation Is Not a Block",
+    "language": "c",
+    "problemDescription": "The array 2 5 8 9 12 has 3 even and 2 odd numbers, but the program says odds=5.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {2, 5, 8, 9, 12};\n    int evens = 0, odds = 0;\n    for (int i = 0; i < 5; i++) {\n        if (a[i] % 2 == 0)\n            evens++;\n            odds++;\n    }\n    printf(\"evens=%d odds=%d\\n\", evens, odds);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {2, 5, 8, 9, 12};\n    int evens = 0, odds = 0;\n    for (int i = 0; i < 5; i++) {\n        if (a[i] % 2 == 0) {\n            evens++;\n        } else {\n            odds++;\n        }\n    }\n    printf(\"evens=%d odds=%d\\n\", evens, odds);\n    return 0;\n}",
+      "explanation": "C ignores indentation. Without braces only the first statement after the if belongs to it, so odds++ runs for every element. Use braces (and an else) so the intent is explicit."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*evens=3 odds=2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

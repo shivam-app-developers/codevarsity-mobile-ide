@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Remove while(1) and Spread-Out Arithmetic",
+    "language": "c",
+    "problemDescription": "An endless loop with a break and a two-line formula computes the step count. Rewrite it as a function with a normal loop condition and a conditional expression. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 7;\n    int count = 0;\n    while (1) {\n        if (n == 1) {\n            break;\n        }\n        if (n % 2 == 0) {\n            n = n / 2;\n        }\n        else {\n            n = n * 3;\n            n = n + 1;\n        }\n        count = count + 1;\n    }\n    printf(\"%d\\n\", count);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint collatz_steps(int n) {\n    int steps = 0;\n    while (n != 1) {\n        n = (n % 2 == 0) ? n / 2 : 3 * n + 1;\n        steps++;\n    }\n    return steps;\n}\n\nint main() {\n    printf(\"%d\\n\", collatz_steps(7));\n    return 0;\n}",
+      "explanation": "Putting the stopping condition in the while header makes the loop's purpose visible at once. The function name explains the result, and the conditional expression shows the two possible moves side by side."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*16\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

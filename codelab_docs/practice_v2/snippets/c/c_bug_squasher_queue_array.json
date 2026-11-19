@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Dequeue Returns the Newest Item",
+    "language": "c",
+    "problemDescription": "The values 1, 2, 3 are enqueued in that order, then 4 after two removals. They should come out 1 2 3 4, but the program prints 3 2 4 1.",
+    "buggyCode": "#include <stdio.h>\n\nint queue[10];\nint front = 0, rear = 0;\n\nvoid enqueue(int value) {\n    queue[rear++] = value;\n}\n\nint dequeue() {\n    return queue[--rear];\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d \", dequeue());\n    printf(\"%d \", dequeue());\n    enqueue(4);\n    printf(\"%d \", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint queue[10];\nint front = 0, rear = 0;\n\nvoid enqueue(int value) {\n    queue[rear++] = value;\n}\n\nint dequeue() {\n    return queue[front++];\n}\n\nint main() {\n    enqueue(1);\n    enqueue(2);\n    enqueue(3);\n    printf(\"%d \", dequeue());\n    printf(\"%d \", dequeue());\n    enqueue(4);\n    printf(\"%d \", dequeue());\n    printf(\"%d\\n\", dequeue());\n    return 0;\n}",
+      "explanation": "Taking from the rear end makes the structure a stack (last in, first out). A queue must remove from the front, where the oldest item is, and then move front forward."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

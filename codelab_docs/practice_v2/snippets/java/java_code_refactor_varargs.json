@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Varargs Method Instead of Overloads",
+    "language": "java",
+    "problemDescription": "Three overloads of sum take one, two and three numbers and repeat the addition. Replace them with one varargs method. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int sum(int a) {\n        return a;\n    }\n\n    static int sum(int a, int b) {\n        return a + b;\n    }\n\n    static int sum(int a, int b, int c) {\n        return a + b + c;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sum(1));\n        System.out.println(sum(1, 2));\n        System.out.println(sum(1, 2, 3));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int sum(int... numbers) {\n        int total = 0;\n        for (int n : numbers) {\n            total += n;\n        }\n        return total;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sum(1));\n        System.out.println(sum(1, 2));\n        System.out.println(sum(1, 2, 3));\n    }\n}",
+      "explanation": "Varargs handles any number of arguments, so a fourth or tenth value needs no new method."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n3[ \\t]*\\r?\\n6\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

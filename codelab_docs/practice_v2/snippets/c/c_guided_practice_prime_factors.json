@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Prime Factorization",
+    "language": "c",
+    "description": "Divide out each factor as often as it fits. Only factors up to the square root need testing; whatever is left above 1 is itself a prime.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int n = 360;\n    printf(\"Prime factors of %d:\", n);\n    for (int p = 2; p * p <= n; p++) {\n        while (n % p == 0) {\n            printf(\" %d\", p);\n            n /= p;\n        }\n    }\n    if (n > 1) {\n        printf(\" %d\", n);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Prime factors of 360: 2 2 2 3 3 5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Old Characters Show After the Result",
+    "language": "c",
+    "problemDescription": "Removing the spaces from \"hello big world\" should print hellobigworld, but the program prints hellobigworldld.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    char s[] = \"hello big world\";\n    int write = 0;\n    for (int read = 0; s[read] != '\\0'; read++) {\n        if (s[read] != ' ') {\n            s[write++] = s[read];\n        }\n    }\n\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    char s[] = \"hello big world\";\n    int write = 0;\n    for (int read = 0; s[read] != '\\0'; read++) {\n        if (s[read] != ' ') {\n            s[write++] = s[read];\n        }\n    }\n    s[write] = '\\0';\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+      "explanation": "Compacting the characters moves them forward but leaves the old tail of the string behind them. Without a new '\\0' at the write position printf keeps reading the stale characters up to the original end."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*hellobigworld\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

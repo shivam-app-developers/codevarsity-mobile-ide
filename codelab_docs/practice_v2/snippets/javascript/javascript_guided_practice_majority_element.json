@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Majority Element (Boyer-Moore)",
+    "language": "javascript",
+    "description": "Keep a candidate and a counter: a matching item adds one, another item subtracts one, and when the counter hits 0 the next item becomes the candidate. A majority element always survives.",
+    "ghostCode": "function majority(nums) {\n  var candidate = null;\n  var count = 0;\n  nums.forEach(function (n) {\n    if (count === 0) {\n      candidate = n;\n    }\n    count += n === candidate ? 1 : -1;\n  });\n  return candidate;\n}\n\nconsole.log(majority([2, 2, 1, 1, 1, 2, 2]));\nconsole.log(majority([3, 3, 4]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

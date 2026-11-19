@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: JSON.stringify Instead of Building the Text by Hand",
+    "language": "javascript",
+    "problemDescription": "The JSON text is assembled with string concatenation, which breaks for names with quotes. Use JSON.stringify. The output must stay the same.",
+    "initialCode": "var p = { name: \"Asha\", age: 30 };\nvar text = '{\"name\":\"' + p.name + '\",\"age\":' + p.age + '}';\nconsole.log(text);",
+    "solution": {
+      "code": "var p = { name: \"Asha\", age: 30 };\nconsole.log(JSON.stringify(p));",
+      "explanation": "stringify takes care of quoting and escaping, so a name like He said \"hi\" cannot produce invalid JSON."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"name\":\"Asha\",\"age\":30\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

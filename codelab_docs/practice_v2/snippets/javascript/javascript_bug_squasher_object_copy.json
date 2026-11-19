@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Copy Is the Same Object",
+    "language": "javascript",
+    "problemDescription": "Changing the name on the copy should leave the original as Asha, but the original changes too.",
+    "buggyCode": "var original = { name: \"Asha\", age: 30 };\nvar copy = original;\ncopy.name = \"Ravi\";\nconsole.log(original.name);",
+    "solution": {
+      "code": "var original = { name: \"Asha\", age: 30 };\nvar copy = Object.assign({}, original);\ncopy.name = \"Ravi\";\nconsole.log(original.name);",
+      "explanation": "var copy = original does not copy anything: both variables point to the same object, so a change through one is visible through the other. Object.assign into a new empty object creates a separate object."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Asha\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

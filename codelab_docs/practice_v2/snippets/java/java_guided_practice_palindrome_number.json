@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Palindrome Number",
+    "language": "java",
+    "description": "Reverse the number and compare it with the original. Negative numbers are never palindromes.",
+    "ghostCode": "public class Main {\n    static boolean isPalindrome(int n) {\n        if (n < 0) {\n            return false;\n        }\n        int original = n, reversed = 0;\n        while (n > 0) {\n            reversed = reversed * 10 + n % 10;\n            n /= 10;\n        }\n        return original == reversed;\n    }\n\n    public static void main(String[] args) {\n        int[] tests = {121, -121, 10, 12321, 12345};\n        for (int t : tests) {\n            System.out.println(t + \" -> \" + isPalindrome(t));\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*121 -> true[ \\t]*\\r?\\n-121 -> false[ \\t]*\\r?\\n10 -> false[ \\t]*\\r?\\n12321 -> true[ \\t]*\\r?\\n12345 -> false\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

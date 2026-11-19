@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Collapse the Special Cases",
+    "language": "c",
+    "problemDescription": "The height function has separate branches for leaves, a missing left child, a missing right child and the two orderings. One base case and a max replace all of them. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nint height(struct Node *root) {\n    if (root == NULL) {\n        return 0;\n    }\n    if (root->left == NULL && root->right == NULL) {\n        return 1;\n    }\n    if (root->left == NULL) {\n        return 1 + height(root->right);\n    }\n    if (root->right == NULL) {\n        return 1 + height(root->left);\n    }\n    int l = height(root->left);\n    int r = height(root->right);\n    if (l > r) {\n        return 1 + l;\n    } else {\n        return 1 + r;\n    }\n}\n\nint main() {\n    struct Node *root = new_node(8);\n    root->left = new_node(4);\n    root->right = new_node(12);\n    root->right->right = new_node(14);\n    root->right->right->right = new_node(15);\n    printf(\"%d\\n\", height(root));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node *left, *right;\n};\n\nstruct Node *new_node(int key) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->key = key;\n    node->left = NULL;\n    node->right = NULL;\n    return node;\n}\n\nint height(struct Node *root) {\n    if (root == NULL) {\n        return 0;\n    }\n    int l = height(root->left);\n    int r = height(root->right);\n    return 1 + (l > r ? l : r);\n}\n\nint main() {\n    struct Node *root = new_node(8);\n    root->left = new_node(4);\n    root->right = new_node(12);\n    root->right->right = new_node(14);\n    root->right->right->right = new_node(15);\n    printf(\"%d\\n\", height(root));\n    return 0;\n}",
+      "explanation": "Treating NULL as height 0 makes the leaf and one-child cases fall out automatically: a leaf is 1 + max(0, 0). Fewer special cases means fewer places to be wrong."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

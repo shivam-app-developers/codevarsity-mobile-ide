@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Valid Parentheses",
+    "language": "java",
+    "description": "Push every opening bracket on a stack; a closing bracket must match the one on top. The string is valid only if the stack is empty at the end.",
+    "ghostCode": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\npublic class Main {\n    static boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') {\n                stack.push(c);\n            } else {\n                if (stack.isEmpty()) {\n                    return false;\n                }\n                char open = stack.pop();\n                if ((c == ')' && open != '(') || (c == ']' && open != '[')\n                        || (c == '}' && open != '{')) {\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isValid(\"()[]{}\"));\n        System.out.println(isValid(\"(]\"));\n        System.out.println(isValid(\"({[]})\"));\n        System.out.println(isValid(\"((\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\nfalse\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

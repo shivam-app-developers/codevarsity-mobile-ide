@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Number Itself Is Added",
+    "language": "javascript",
+    "problemDescription": "6 and 28 are perfect numbers, but the program prints an empty list.",
+    "buggyCode": "function isPerfect(n) {\n  var sum = 0;\n  for (var d = 1; d <= n; d++) {\n    if (n % d === 0) {\n      sum += d;\n    }\n  }\n  return sum === n;\n}\n\nvar found = [];\nfor (var n = 2; n <= 30; n++) {\n  if (isPerfect(n)) {\n    found.push(n);\n  }\n}\nconsole.log(found);",
+    "solution": {
+      "code": "function isPerfect(n) {\n  var sum = 0;\n  for (var d = 1; d < n; d++) {\n    if (n % d === 0) {\n      sum += d;\n    }\n  }\n  return sum === n;\n}\n\nvar found = [];\nfor (var n = 2; n <= 30; n++) {\n  if (isPerfect(n)) {\n    found.push(n);\n  }\n}\nconsole.log(found);",
+      "explanation": "Proper divisors exclude the number itself. With d <= n the number is added to its own divisor sum, so the sum is always greater than n and nothing qualifies."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[6,28\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

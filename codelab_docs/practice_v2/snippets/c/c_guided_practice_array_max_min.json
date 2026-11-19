@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Largest and Smallest Element",
+    "language": "c",
+    "description": "Start with the first element as both the maximum and the minimum, then scan the rest and update them.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int data[] = {34, -5, 78, 12, 0, 56};\n    int n = sizeof(data) / sizeof(data[0]);\n    int max = data[0], min = data[0];\n    for (int i = 1; i < n; i++) {\n        if (data[i] > max) max = data[i];\n        if (data[i] < min) min = data[i];\n    }\n    printf(\"Max: %d\\nMin: %d\\n\", max, min);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Max: 78[ \\t]*\\r?\\nMin: -5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

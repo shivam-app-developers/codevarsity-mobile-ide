@@ -9,7 +9,7 @@
       "difficulty": "beginner",
       "order": 0,
       "rev": "f73a5b72f20a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_anagram.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_anagram.json"
     },
     {
       "id": "javascript_bug_squasher_anagram",
@@ -19,7 +19,7 @@
       "difficulty": "beginner",
       "order": 1,
       "rev": "e71a394befed",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_anagram.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_anagram.json"
     },
     {
       "id": "javascript_code_refactor_anagram",
@@ -29,7 +29,7 @@
       "difficulty": "beginner",
       "order": 2,
       "rev": "147892b3760d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_anagram.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_anagram.json"
     },
     {
       "id": "javascript_guided_practice_armstrong",
@@ -39,7 +39,7 @@
       "difficulty": "beginner",
       "order": 3,
       "rev": "4b8edead3f2c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_armstrong.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_armstrong.json"
     },
     {
       "id": "javascript_bug_squasher_armstrong",
@@ -49,7 +49,7 @@
       "difficulty": "beginner",
       "order": 4,
       "rev": "b1c0cd75bf19",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_armstrong.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_armstrong.json"
     },
     {
       "id": "javascript_guided_practice_mean",
@@ -59,7 +59,7 @@
       "difficulty": "beginner",
       "order": 5,
       "rev": "5529c51f3efd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_mean.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_mean.json"
     },
     {
       "id": "javascript_bug_squasher_mean",
@@ -69,7 +69,7 @@
       "difficulty": "beginner",
       "order": 6,
       "rev": "14968fa939f6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_mean.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_mean.json"
     },
     {
       "id": "javascript_code_refactor_mean",
@@ -79,7 +79,37 @@
       "difficulty": "beginner",
       "order": 7,
       "rev": "245c5c193a8c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_mean.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_mean.json"
+    },
+    {
+      "id": "javascript_guided_practice_string_capitalize",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Capitalize Each Word",
+      "difficulty": "beginner",
+      "order": 8,
+      "rev": "0542c19557e6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_string_capitalize.json"
+    },
+    {
+      "id": "javascript_bug_squasher_string_capitalize",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The First Letter Appears Twice",
+      "difficulty": "beginner",
+      "order": 9,
+      "rev": "5ec70c9326a8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_string_capitalize.json"
+    },
+    {
+      "id": "javascript_code_refactor_string_capitalize",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: split and map Instead of a Character Loop",
+      "difficulty": "beginner",
+      "order": 10,
+      "rev": "7f3c3c412525",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_string_capitalize.json"
     },
     {
       "id": "javascript_guided_practice_count_vowels",
@@ -87,9 +117,9 @@
       "language": "javascript",
       "title": "Guided Practice: Count Vowels",
       "difficulty": "beginner",
-      "order": 8,
+      "order": 11,
       "rev": "e0fa9c5e2e11",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_count_vowels.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_count_vowels.json"
     },
     {
       "id": "javascript_bug_squasher_count_vowels",
@@ -97,9 +127,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Regex Case Sensitivity",
       "difficulty": "beginner",
-      "order": 9,
+      "order": 12,
       "rev": "1c5789b94b86",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_count_vowels.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_count_vowels.json"
     },
     {
       "id": "javascript_code_refactor_count_vowels",
@@ -107,9 +137,9 @@
       "language": "javascript",
       "title": "Code Refactor: Function One-Liner",
       "difficulty": "beginner",
-      "order": 10,
+      "order": 13,
       "rev": "09c0d5136f91",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_count_vowels.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_count_vowels.json"
     },
     {
       "id": "javascript_guided_practice_factorial",
@@ -117,9 +147,9 @@
       "language": "javascript",
       "title": "Guided Practice: Factorial Loop",
       "difficulty": "beginner",
-      "order": 11,
+      "order": 14,
       "rev": "d29f7a52d74d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_factorial.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_factorial.json"
     },
     {
       "id": "javascript_bug_squasher_factorial",
@@ -127,9 +157,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Factorial Base Case",
       "difficulty": "beginner",
-      "order": 12,
+      "order": 15,
       "rev": "6534614611a5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_factorial.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_factorial.json"
     },
     {
       "id": "javascript_guided_practice_fibonacci",
@@ -137,9 +167,9 @@
       "language": "javascript",
       "title": "Guided Practice: Fibonacci Number",
       "difficulty": "beginner",
-      "order": 13,
+      "order": 16,
       "rev": "837494afc61a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_fibonacci.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_fibonacci.json"
     },
     {
       "id": "javascript_bug_squasher_fibonacci",
@@ -147,9 +177,129 @@
       "language": "javascript",
       "title": "Bug Squasher: Fibonacci Swap",
       "difficulty": "beginner",
-      "order": 14,
+      "order": 17,
       "rev": "ec31e424bb57",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_fibonacci.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_fibonacci.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_filter",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: filter",
+      "difficulty": "beginner",
+      "order": 18,
+      "rev": "4a75e61007b3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_filter.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_filter",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Boundary Value Is Excluded",
+      "difficulty": "beginner",
+      "order": 19,
+      "rev": "5ab630061cf8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_filter.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_filter",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: filter Instead of a Loop with an if",
+      "difficulty": "beginner",
+      "order": 20,
+      "rev": "3045499d4565",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_filter.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_find_some",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: find, some, every",
+      "difficulty": "beginner",
+      "order": 21,
+      "rev": "37cc9dd915d8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_find_some.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_find_some",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: filter Used Where find Is Needed",
+      "difficulty": "beginner",
+      "order": 22,
+      "rev": "d31eec58d17a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_find_some.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_find_some",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: find Instead of a Loop with break",
+      "difficulty": "beginner",
+      "order": 23,
+      "rev": "5453a12ee165",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_find_some.json"
+    },
+    {
+      "id": "javascript_guided_practice_fizzbuzz",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: FizzBuzz",
+      "difficulty": "beginner",
+      "order": 24,
+      "rev": "1f7ac0269258",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_fizzbuzz.json"
+    },
+    {
+      "id": "javascript_bug_squasher_fizzbuzz",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Combined Case Is Checked Last",
+      "difficulty": "beginner",
+      "order": 25,
+      "rev": "7e6ba170b50a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_fizzbuzz.json"
+    },
+    {
+      "id": "javascript_code_refactor_fizzbuzz",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Build the Word from Parts",
+      "difficulty": "beginner",
+      "order": 26,
+      "rev": "2c36c0a1b3fb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_fizzbuzz.json"
+    },
+    {
+      "id": "javascript_guided_practice_gcd_lcm",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: GCD and LCM",
+      "difficulty": "beginner",
+      "order": 27,
+      "rev": "6328f9b97108",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_gcd_lcm.json"
+    },
+    {
+      "id": "javascript_bug_squasher_gcd_lcm",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Wrong Variable Is Returned",
+      "difficulty": "beginner",
+      "order": 28,
+      "rev": "21c813f0cd49",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_gcd_lcm.json"
+    },
+    {
+      "id": "javascript_code_refactor_gcd_lcm",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Euclid Instead of Trying Every Divisor",
+      "difficulty": "beginner",
+      "order": 29,
+      "rev": "c2e1f60b30dd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_gcd_lcm.json"
     },
     {
       "id": "javascript_guided_practice_is_even",
@@ -157,9 +307,9 @@
       "language": "javascript",
       "title": "Guided Practice: Is Even",
       "difficulty": "beginner",
-      "order": 15,
+      "order": 30,
       "rev": "4bcce9f1fc45",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_even.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_even.json"
     },
     {
       "id": "javascript_bug_squasher_is_even",
@@ -167,9 +317,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Is Even Assignment",
       "difficulty": "beginner",
-      "order": 16,
+      "order": 31,
       "rev": "f214226f09d4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_even.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_even.json"
     },
     {
       "id": "javascript_code_refactor_is_even",
@@ -177,9 +327,9 @@
       "language": "javascript",
       "title": "Code Refactor: Arrow Function",
       "difficulty": "beginner",
-      "order": 17,
+      "order": 32,
       "rev": "487882446153",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_even.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_even.json"
     },
     {
       "id": "javascript_guided_practice_is_odd",
@@ -187,9 +337,9 @@
       "language": "javascript",
       "title": "Guided Practice: Is Odd",
       "difficulty": "beginner",
-      "order": 18,
+      "order": 33,
       "rev": "48a98465867b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_odd.json"
     },
     {
       "id": "javascript_bug_squasher_is_odd",
@@ -197,9 +347,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Is Odd Not Operator",
       "difficulty": "beginner",
-      "order": 19,
+      "order": 34,
       "rev": "9c19439c83c9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_odd.json"
     },
     {
       "id": "javascript_code_refactor_is_odd",
@@ -207,9 +357,9 @@
       "language": "javascript",
       "title": "Code Refactor: Boolean Coercion",
       "difficulty": "beginner",
-      "order": 20,
+      "order": 35,
       "rev": "2b7ce877ab24",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_odd.json"
     },
     {
       "id": "javascript_guided_practice_is_power_of_two",
@@ -217,9 +367,9 @@
       "language": "javascript",
       "title": "Guided Practice: Is Power of Two",
       "difficulty": "beginner",
-      "order": 21,
+      "order": 36,
       "rev": "ff36eb0c221e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_is_power_of_two.json"
     },
     {
       "id": "javascript_bug_squasher_is_power_of_two",
@@ -227,9 +377,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Power of Two Logic",
       "difficulty": "beginner",
-      "order": 22,
+      "order": 37,
       "rev": "06da6557d5b4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_is_power_of_two.json"
     },
     {
       "id": "javascript_code_refactor_is_power_of_two",
@@ -237,9 +387,9 @@
       "language": "javascript",
       "title": "Code Refactor: Bitwise Power of Two",
       "difficulty": "beginner",
-      "order": 23,
+      "order": 38,
       "rev": "939226a7fc11",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_is_power_of_two.json"
     },
     {
       "id": "javascript_guided_practice_bin_to_dec",
@@ -247,9 +397,9 @@
       "language": "javascript",
       "title": "Guided Practice: JS Binary to Decimal",
       "difficulty": "beginner",
-      "order": 24,
+      "order": 39,
       "rev": "d472c577dcc6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bin_to_dec.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bin_to_dec.json"
     },
     {
       "id": "javascript_bug_squasher_bin_to_dec",
@@ -257,9 +407,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Radix Parameter",
       "difficulty": "beginner",
-      "order": 25,
+      "order": 40,
       "rev": "5edc24d9b4a8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bin_to_dec.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bin_to_dec.json"
     },
     {
       "id": "javascript_code_refactor_bin_to_dec",
@@ -267,9 +417,9 @@
       "language": "javascript",
       "title": "Code Refactor: Manual Binary Conversion",
       "difficulty": "beginner",
-      "order": 26,
+      "order": 41,
       "rev": "dd3f39bd6db0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bin_to_dec.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bin_to_dec.json"
     },
     {
       "id": "javascript_guided_practice_bubble_sort",
@@ -277,9 +427,9 @@
       "language": "javascript",
       "title": "Guided Practice: JS Bubble Sort",
       "difficulty": "beginner",
-      "order": 27,
+      "order": 42,
       "rev": "2a43f6ba9e6f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_bubble_sort.json"
     },
     {
       "id": "javascript_bug_squasher_bubble_sort",
@@ -287,9 +437,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Sort Mutation",
       "difficulty": "beginner",
-      "order": 28,
+      "order": 43,
       "rev": "5e718e09c8b6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_bubble_sort.json"
     },
     {
       "id": "javascript_code_refactor_bubble_sort",
@@ -297,9 +447,9 @@
       "language": "javascript",
       "title": "Code Refactor: Bubble Sort Optimization",
       "difficulty": "beginner",
-      "order": 29,
+      "order": 44,
       "rev": "d167029b1c9d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_bubble_sort.json"
     },
     {
       "id": "javascript_guided_practice_linear_search",
@@ -307,9 +457,9 @@
       "language": "javascript",
       "title": "Guided Practice: JS Linear Search",
       "difficulty": "beginner",
-      "order": 30,
+      "order": 45,
       "rev": "c51bdd6dd24c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_linear_search.json"
     },
     {
       "id": "javascript_bug_squasher_linear_search",
@@ -317,9 +467,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Search Return",
       "difficulty": "beginner",
-      "order": 31,
+      "order": 46,
       "rev": "695c9dd3e675",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_linear_search.json"
     },
     {
       "id": "javascript_code_refactor_linear_search",
@@ -327,9 +477,189 @@
       "language": "javascript",
       "title": "Code Refactor: findIndex Method",
       "difficulty": "beginner",
-      "order": 32,
+      "order": 47,
       "rev": "3873e72cb75c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_linear_search.json"
+    },
+    {
+      "id": "javascript_guided_practice_json_roundtrip",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: JSON stringify and parse",
+      "difficulty": "beginner",
+      "order": 48,
+      "rev": "c7769638173c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_json_roundtrip.json"
+    },
+    {
+      "id": "javascript_bug_squasher_json_roundtrip",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: JSON Written with Single Quotes",
+      "difficulty": "beginner",
+      "order": 49,
+      "rev": "85191d3fe7e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_json_roundtrip.json"
+    },
+    {
+      "id": "javascript_code_refactor_json_roundtrip",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: JSON.stringify Instead of Building the Text by Hand",
+      "difficulty": "beginner",
+      "order": 50,
+      "rev": "0e11bea00451",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_json_roundtrip.json"
+    },
+    {
+      "id": "javascript_guided_practice_leap_year",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Leap Year",
+      "difficulty": "beginner",
+      "order": 51,
+      "rev": "02539494c25d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_leap_year.json"
+    },
+    {
+      "id": "javascript_bug_squasher_leap_year",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Century Rule Is Inverted",
+      "difficulty": "beginner",
+      "order": 52,
+      "rev": "95e156fbee6d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_leap_year.json"
+    },
+    {
+      "id": "javascript_code_refactor_leap_year",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Return the Condition Directly",
+      "difficulty": "beginner",
+      "order": 53,
+      "rev": "68e7f6886ca7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_leap_year.json"
+    },
+    {
+      "id": "javascript_guided_practice_longest_word",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Longest Word",
+      "difficulty": "beginner",
+      "order": 54,
+      "rev": "30bf1c1245d1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_longest_word.json"
+    },
+    {
+      "id": "javascript_bug_squasher_longest_word",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Last of Equal Words Wins",
+      "difficulty": "beginner",
+      "order": 55,
+      "rev": "abfc660f1f89",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_longest_word.json"
+    },
+    {
+      "id": "javascript_code_refactor_longest_word",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Pass Instead of Two",
+      "difficulty": "beginner",
+      "order": 56,
+      "rev": "31dad98473de",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_longest_word.json"
+    },
+    {
+      "id": "javascript_guided_practice_object_iteration",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Looping Over an Object",
+      "difficulty": "beginner",
+      "order": 57,
+      "rev": "c761893ca1d4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_object_iteration.json"
+    },
+    {
+      "id": "javascript_bug_squasher_object_iteration",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Dot Notation Used with a Variable Key",
+      "difficulty": "beginner",
+      "order": 58,
+      "rev": "1df40684fae0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_object_iteration.json"
+    },
+    {
+      "id": "javascript_code_refactor_object_iteration",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Object.keys and forEach",
+      "difficulty": "beginner",
+      "order": 59,
+      "rev": "331a0a921ac2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_object_iteration.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_map",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: map",
+      "difficulty": "beginner",
+      "order": 60,
+      "rev": "07b95bc26ecd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_map.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_map",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Callback Returns Nothing",
+      "difficulty": "beginner",
+      "order": 61,
+      "rev": "333646e8c5e0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_map.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_map",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: map Instead of a Loop with push",
+      "difficulty": "beginner",
+      "order": 62,
+      "rev": "076a31d6478c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_map.json"
+    },
+    {
+      "id": "javascript_guided_practice_base_conversion",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Number Bases",
+      "difficulty": "beginner",
+      "order": 63,
+      "rev": "f3bc44294a36",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_base_conversion.json"
+    },
+    {
+      "id": "javascript_bug_squasher_base_conversion",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: parseInt Reads Binary as Decimal",
+      "difficulty": "beginner",
+      "order": 64,
+      "rev": "a6dcc1991b05",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_base_conversion.json"
+    },
+    {
+      "id": "javascript_code_refactor_base_conversion",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: toString(2) Instead of Dividing by Hand",
+      "difficulty": "beginner",
+      "order": 65,
+      "rev": "bf6ea484ba3a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_base_conversion.json"
     },
     {
       "id": "javascript_guided_practice_palindrome",
@@ -337,9 +667,9 @@
       "language": "javascript",
       "title": "Guided Practice: Palindrome Check",
       "difficulty": "beginner",
-      "order": 33,
+      "order": 66,
       "rev": "c81b09c9f798",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_palindrome.json"
     },
     {
       "id": "javascript_code_refactor_palindrome",
@@ -347,9 +677,39 @@
       "language": "javascript",
       "title": "Code Refactor: Two-Pointer Palindrome",
       "difficulty": "beginner",
-      "order": 34,
+      "order": 67,
       "rev": "f6cd0a9ac4cd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_palindrome.json"
+    },
+    {
+      "id": "javascript_guided_practice_perfect_number",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Perfect Numbers",
+      "difficulty": "beginner",
+      "order": 68,
+      "rev": "08da82eb5536",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_perfect_number.json"
+    },
+    {
+      "id": "javascript_bug_squasher_perfect_number",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Number Itself Is Added",
+      "difficulty": "beginner",
+      "order": 69,
+      "rev": "63c64d306793",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_perfect_number.json"
+    },
+    {
+      "id": "javascript_code_refactor_perfect_number",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Function Instead of Two Copied Loops",
+      "difficulty": "beginner",
+      "order": 70,
+      "rev": "2954eec45e7b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_perfect_number.json"
     },
     {
       "id": "javascript_guided_practice_reverse_string",
@@ -357,9 +717,9 @@
       "language": "javascript",
       "title": "Guided Practice: Reverse String",
       "difficulty": "beginner",
-      "order": 35,
+      "order": 71,
       "rev": "ef2bf8ad3b70",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_reverse_string.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_reverse_string.json"
     },
     {
       "id": "javascript_bug_squasher_reverse_string",
@@ -367,9 +727,69 @@
       "language": "javascript",
       "title": "Bug Squasher: Reverse Loop Index",
       "difficulty": "beginner",
-      "order": 36,
+      "order": 72,
       "rev": "295eb26c8b91",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_reverse_string.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_reverse_string.json"
+    },
+    {
+      "id": "javascript_guided_practice_reverse_words",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Reverse the Order of Words",
+      "difficulty": "beginner",
+      "order": 73,
+      "rev": "2238e2e73aed",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_reverse_words.json"
+    },
+    {
+      "id": "javascript_bug_squasher_reverse_words",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Letters Are Split Instead of the Words",
+      "difficulty": "beginner",
+      "order": 74,
+      "rev": "9f63a70b2157",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_reverse_words.json"
+    },
+    {
+      "id": "javascript_code_refactor_reverse_words",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: reverse and join Instead of Building Backwards",
+      "difficulty": "beginner",
+      "order": 75,
+      "rev": "56b0863ba4d3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_reverse_words.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_sort_default",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Sorting Numbers",
+      "difficulty": "beginner",
+      "order": 76,
+      "rev": "113b55884f91",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_sort_default.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_sort_default",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Numbers Sorted as Text",
+      "difficulty": "beginner",
+      "order": 77,
+      "rev": "87b6429dd6ba",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_sort_default.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_sort_default",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Built-In sort Instead of a Hand-Written Loop",
+      "difficulty": "beginner",
+      "order": 78,
+      "rev": "eaebd991e7a4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_sort_default.json"
     },
     {
       "id": "javascript_guided_practice_sum_digits",
@@ -377,9 +797,9 @@
       "language": "javascript",
       "title": "Guided Practice: Sum of Digits",
       "difficulty": "beginner",
-      "order": 37,
+      "order": 79,
       "rev": "86adac770bf4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_sum_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_sum_digits.json"
     },
     {
       "id": "javascript_bug_squasher_sum_digits",
@@ -387,9 +807,9 @@
       "language": "javascript",
       "title": "Bug Squasher: Digits Division",
       "difficulty": "beginner",
-      "order": 38,
+      "order": 80,
       "rev": "db5af48a5785",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_sum_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_sum_digits.json"
     },
     {
       "id": "javascript_code_refactor_sum_digits",
@@ -397,9 +817,1719 @@
       "language": "javascript",
       "title": "Code Refactor: String Conversion Sum",
       "difficulty": "beginner",
-      "order": 39,
+      "order": 81,
       "rev": "682f97f98012",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_sum_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_sum_digits.json"
+    },
+    {
+      "id": "javascript_guided_practice_truncate_text",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Truncate Long Text",
+      "difficulty": "beginner",
+      "order": 82,
+      "rev": "9c6a51adcbd5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_truncate_text.json"
+    },
+    {
+      "id": "javascript_bug_squasher_truncate_text",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Text of Exactly the Limit Is Cut",
+      "difficulty": "beginner",
+      "order": 83,
+      "rev": "292dda2861c4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_truncate_text.json"
+    },
+    {
+      "id": "javascript_code_refactor_truncate_text",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Early Return Instead of a Result Variable",
+      "difficulty": "beginner",
+      "order": 84,
+      "rev": "edf2e1010c90",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_truncate_text.json"
+    },
+    {
+      "id": "javascript_guided_practice_error_handling",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: try, catch and finally",
+      "difficulty": "beginner",
+      "order": 85,
+      "rev": "9d9d68cbe9db",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_error_handling.json"
+    },
+    {
+      "id": "javascript_bug_squasher_error_handling",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: A String Is Thrown Instead of an Error",
+      "difficulty": "beginner",
+      "order": 86,
+      "rev": "d089723ab960",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_error_handling.json"
+    },
+    {
+      "id": "javascript_code_refactor_error_handling",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Exceptions Instead of Returning null",
+      "difficulty": "beginner",
+      "order": 87,
+      "rev": "e943fe9c4986",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_error_handling.json"
+    },
+    {
+      "id": "javascript_guided_practice_type_coercion",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: == versus ===",
+      "difficulty": "medium",
+      "order": 88,
+      "rev": "3bfc7a58463b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_type_coercion.json"
+    },
+    {
+      "id": "javascript_bug_squasher_type_coercion",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Zero Equals the Empty String",
+      "difficulty": "medium",
+      "order": 89,
+      "rev": "f30b62399bf1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_type_coercion.json"
+    },
+    {
+      "id": "javascript_code_refactor_type_coercion",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Explicit Conversions Instead of Tricks",
+      "difficulty": "medium",
+      "order": 90,
+      "rev": "b12bc29be70d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_type_coercion.json"
+    },
+    {
+      "id": "javascript_guided_practice_linked_list_objects",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: A Linked List",
+      "difficulty": "medium",
+      "order": 91,
+      "rev": "f5cbb0c23f2c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_linked_list_objects.json"
+    },
+    {
+      "id": "javascript_bug_squasher_linked_list_objects",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Last Node Is Not Visited",
+      "difficulty": "medium",
+      "order": 92,
+      "rev": "191d5f4ab63b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_linked_list_objects.json"
+    },
+    {
+      "id": "javascript_code_refactor_linked_list_objects",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A LinkedList Object Instead of Hand-Linked Nodes",
+      "difficulty": "medium",
+      "order": 93,
+      "rev": "6eb977451f92",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_linked_list_objects.json"
+    },
+    {
+      "id": "javascript_guided_practice_stack_class",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: A Stack Class",
+      "difficulty": "medium",
+      "order": 94,
+      "rev": "1ff7dc2b3f17",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_stack_class.json"
+    },
+    {
+      "id": "javascript_bug_squasher_stack_class",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: peek Reads Past the End",
+      "difficulty": "medium",
+      "order": 95,
+      "rev": "e82afb4f9af7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_stack_class.json"
+    },
+    {
+      "id": "javascript_code_refactor_stack_class",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Stack Object Instead of a Loose Array and Index",
+      "difficulty": "medium",
+      "order": 96,
+      "rev": "200bca176926",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_stack_class.json"
+    },
+    {
+      "id": "javascript_guided_practice_caesar_cipher",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Caesar Cipher",
+      "difficulty": "medium",
+      "order": 97,
+      "rev": "a88a82725af8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_caesar_cipher.json"
+    },
+    {
+      "id": "javascript_bug_squasher_caesar_cipher",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: No Wrap-Around at z",
+      "difficulty": "medium",
+      "order": 98,
+      "rev": "3fb7452f8406",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_caesar_cipher.json"
+    },
+    {
+      "id": "javascript_code_refactor_caesar_cipher",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Arithmetic Instead of an Alphabet Lookup",
+      "difficulty": "medium",
+      "order": 99,
+      "rev": "ab33ee45130e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_caesar_cipher.json"
+    },
+    {
+      "id": "javascript_guided_practice_call_apply_bind",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: call, apply and bind",
+      "difficulty": "medium",
+      "order": 100,
+      "rev": "78c62ae168da",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_call_apply_bind.json"
+    },
+    {
+      "id": "javascript_bug_squasher_call_apply_bind",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: call Used with an Array of Arguments",
+      "difficulty": "medium",
+      "order": 101,
+      "rev": "9ff5376daad7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_call_apply_bind.json"
+    },
+    {
+      "id": "javascript_code_refactor_call_apply_bind",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: call Instead of Temporarily Copying the Function",
+      "difficulty": "medium",
+      "order": 102,
+      "rev": "2273a8e21186",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_call_apply_bind.json"
+    },
+    {
+      "id": "javascript_guided_practice_camel_to_snake",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: camelCase to snake_case",
+      "difficulty": "medium",
+      "order": 103,
+      "rev": "66859c174b21",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_camel_to_snake.json"
+    },
+    {
+      "id": "javascript_bug_squasher_camel_to_snake",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Only the First Capital Is Replaced",
+      "difficulty": "medium",
+      "order": 104,
+      "rev": "2bbc73fb432c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_camel_to_snake.json"
+    },
+    {
+      "id": "javascript_code_refactor_camel_to_snake",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: replace Instead of a Character Loop",
+      "difficulty": "medium",
+      "order": 105,
+      "rev": "e4956e9dff98",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_camel_to_snake.json"
+    },
+    {
+      "id": "javascript_guided_practice_climbing_stairs",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Climbing Stairs",
+      "difficulty": "medium",
+      "order": 106,
+      "rev": "da4528946237",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_climbing_stairs.json"
+    },
+    {
+      "id": "javascript_bug_squasher_climbing_stairs",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: One Step Too Many in the Loop",
+      "difficulty": "medium",
+      "order": 107,
+      "rev": "ed98ce05a41f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_climbing_stairs.json"
+    },
+    {
+      "id": "javascript_code_refactor_climbing_stairs",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Loop Instead of Exponential Recursion",
+      "difficulty": "medium",
+      "order": 108,
+      "rev": "05685656656e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_climbing_stairs.json"
+    },
+    {
+      "id": "javascript_guided_practice_closure_counter",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Closure Counter",
+      "difficulty": "medium",
+      "order": 109,
+      "rev": "f5774b9855c6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_closure_counter.json"
+    },
+    {
+      "id": "javascript_bug_squasher_closure_counter",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Counter Variable Is Reset on Every Call",
+      "difficulty": "medium",
+      "order": 110,
+      "rev": "69a3258cf4ef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_closure_counter.json"
+    },
+    {
+      "id": "javascript_code_refactor_closure_counter",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Counter Factory Instead of Global Variables",
+      "difficulty": "medium",
+      "order": 111,
+      "rev": "997fdffab205",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_closure_counter.json"
+    },
+    {
+      "id": "javascript_guided_practice_var_loop_closure",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Closures in a Loop",
+      "difficulty": "medium",
+      "order": 112,
+      "rev": "63d9075bff4f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_var_loop_closure.json"
+    },
+    {
+      "id": "javascript_bug_squasher_var_loop_closure",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: All Callbacks Return the Same Number",
+      "difficulty": "medium",
+      "order": 113,
+      "rev": "6c37256769fc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_var_loop_closure.json"
+    },
+    {
+      "id": "javascript_code_refactor_var_loop_closure",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Generate the Functions in a Loop",
+      "difficulty": "medium",
+      "order": 114,
+      "rev": "13fce6f628dd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_var_loop_closure.json"
+    },
+    {
+      "id": "javascript_guided_practice_collatz",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Collatz Steps",
+      "difficulty": "medium",
+      "order": 115,
+      "rev": "954e1012111b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_collatz.json"
+    },
+    {
+      "id": "javascript_bug_squasher_collatz",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Only the Odd Steps Are Counted",
+      "difficulty": "medium",
+      "order": 116,
+      "rev": "b59463827dcb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_collatz.json"
+    },
+    {
+      "id": "javascript_code_refactor_collatz",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Proper Loop Condition and a Conditional Expression",
+      "difficulty": "medium",
+      "order": 117,
+      "rev": "f142f007e56a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_collatz.json"
+    },
+    {
+      "id": "javascript_guided_practice_constructor_new",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Constructor Functions and new",
+      "difficulty": "medium",
+      "order": 118,
+      "rev": "a0b15cdf6569",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_constructor_new.json"
+    },
+    {
+      "id": "javascript_bug_squasher_constructor_new",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The new Keyword Is Missing",
+      "difficulty": "medium",
+      "order": 119,
+      "rev": "01c6d37250d9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_constructor_new.json"
+    },
+    {
+      "id": "javascript_code_refactor_constructor_new",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Constructor with a Prototype Method",
+      "difficulty": "medium",
+      "order": 120,
+      "rev": "43bfc8ac949d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_constructor_new.json"
+    },
+    {
+      "id": "javascript_guided_practice_object_copy",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Copying Objects",
+      "difficulty": "medium",
+      "order": 121,
+      "rev": "78fa42c47552",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_object_copy.json"
+    },
+    {
+      "id": "javascript_bug_squasher_object_copy",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Copy Is the Same Object",
+      "difficulty": "medium",
+      "order": 122,
+      "rev": "283d2b066875",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_object_copy.json"
+    },
+    {
+      "id": "javascript_code_refactor_object_copy",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Object.assign Instead of Copying Key by Key",
+      "difficulty": "medium",
+      "order": 123,
+      "rev": "d49e11578a6d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_object_copy.json"
+    },
+    {
+      "id": "javascript_guided_practice_count_set_bits",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Count the 1 Bits",
+      "difficulty": "medium",
+      "order": 124,
+      "rev": "672e559711a4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_count_set_bits.json"
+    },
+    {
+      "id": "javascript_bug_squasher_count_set_bits",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Highest Bit Is Never Counted",
+      "difficulty": "medium",
+      "order": 125,
+      "rev": "818ce9c0d3a4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_count_set_bits.json"
+    },
+    {
+      "id": "javascript_code_refactor_count_set_bits",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Kernighan's Trick",
+      "difficulty": "medium",
+      "order": 126,
+      "rev": "42ec98901fea",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_count_set_bits.json"
+    },
+    {
+      "id": "javascript_guided_practice_deep_clone",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Deep Copy with JSON",
+      "difficulty": "medium",
+      "order": 127,
+      "rev": "a561b3548c14",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_deep_clone.json"
+    },
+    {
+      "id": "javascript_bug_squasher_deep_clone",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: A Shallow Copy Shares the Address",
+      "difficulty": "medium",
+      "order": 128,
+      "rev": "26e9fb560e2b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_deep_clone.json"
+    },
+    {
+      "id": "javascript_code_refactor_deep_clone",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Clone with JSON Instead of Copying Every Level",
+      "difficulty": "medium",
+      "order": 129,
+      "rev": "ea79a16e6008",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_deep_clone.json"
+    },
+    {
+      "id": "javascript_guided_practice_digit_root",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Digital Root",
+      "difficulty": "medium",
+      "order": 130,
+      "rev": "c72cc336f550",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_digit_root.json"
+    },
+    {
+      "id": "javascript_bug_squasher_digit_root",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Only One Round of Adding",
+      "difficulty": "medium",
+      "order": 131,
+      "rev": "24edcb03ed2f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_digit_root.json"
+    },
+    {
+      "id": "javascript_code_refactor_digit_root",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: The Modulo-9 Formula",
+      "difficulty": "medium",
+      "order": 132,
+      "rev": "c9bd199b9a43",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_digit_root.json"
+    },
+    {
+      "id": "javascript_guided_practice_missing_number",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Find the Missing Number",
+      "difficulty": "medium",
+      "order": 133,
+      "rev": "11e92e775359",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_missing_number.json"
+    },
+    {
+      "id": "javascript_bug_squasher_missing_number",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Wrong Formula for the Expected Sum",
+      "difficulty": "medium",
+      "order": 134,
+      "rev": "a274def737b3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_missing_number.json"
+    },
+    {
+      "id": "javascript_code_refactor_missing_number",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: XOR Instead of a Search per Candidate",
+      "difficulty": "medium",
+      "order": 135,
+      "rev": "8c71f4321380",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_missing_number.json"
+    },
+    {
+      "id": "javascript_guided_practice_first_unique_char",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: First Non-Repeating Character",
+      "difficulty": "medium",
+      "order": 136,
+      "rev": "4ede7b913e67",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_first_unique_char.json"
+    },
+    {
+      "id": "javascript_bug_squasher_first_unique_char",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The First Repeated Letter Is Found",
+      "difficulty": "medium",
+      "order": 137,
+      "rev": "2903411c3f38",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_first_unique_char.json"
+    },
+    {
+      "id": "javascript_code_refactor_first_unique_char",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Count Once Instead of Comparing Every Pair",
+      "difficulty": "medium",
+      "order": 138,
+      "rev": "e7ec2c86e2ae",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_first_unique_char.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_flatten",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Flatten a Nested Array",
+      "difficulty": "medium",
+      "order": 139,
+      "rev": "a69ae284818f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_flatten.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_flatten",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Result of concat Is Thrown Away",
+      "difficulty": "medium",
+      "order": 140,
+      "rev": "a3d315bcbd57",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_flatten.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_flatten",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: reduce and concat Instead of Nested Loops",
+      "difficulty": "medium",
+      "order": 141,
+      "rev": "3d2fb08a558e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_flatten.json"
+    },
+    {
+      "id": "javascript_guided_practice_float_precision",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Floating-Point Precision",
+      "difficulty": "medium",
+      "order": 142,
+      "rev": "6eff4ea2800a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_float_precision.json"
+    },
+    {
+      "id": "javascript_bug_squasher_float_precision",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Money Added as Floating-Point Numbers",
+      "difficulty": "medium",
+      "order": 143,
+      "rev": "7b847e5cbc44",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_float_precision.json"
+    },
+    {
+      "id": "javascript_code_refactor_float_precision",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A round2 Helper",
+      "difficulty": "medium",
+      "order": 144,
+      "rev": "f27d7bd4d182",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_float_precision.json"
+    },
+    {
+      "id": "javascript_guided_practice_compose_functions",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Function Composition",
+      "difficulty": "medium",
+      "order": 145,
+      "rev": "98d8ae568229",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_compose_functions.json"
+    },
+    {
+      "id": "javascript_bug_squasher_compose_functions",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Functions Run in the Wrong Order",
+      "difficulty": "medium",
+      "order": 146,
+      "rev": "a6c8f72acae1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_compose_functions.json"
+    },
+    {
+      "id": "javascript_code_refactor_compose_functions",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A pipe Helper Instead of Numbered Steps",
+      "difficulty": "medium",
+      "order": 147,
+      "rev": "31918be8cea7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_compose_functions.json"
+    },
+    {
+      "id": "javascript_guided_practice_getters_setters",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Getters and Setters",
+      "difficulty": "medium",
+      "order": 148,
+      "rev": "3e8c126d5308",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_getters_setters.json"
+    },
+    {
+      "id": "javascript_bug_squasher_getters_setters",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Wrong Formula in the Setter",
+      "difficulty": "medium",
+      "order": 149,
+      "rev": "a64512784ac9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_getters_setters.json"
+    },
+    {
+      "id": "javascript_code_refactor_getters_setters",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Accessor Properties Instead of get and set Methods",
+      "difficulty": "medium",
+      "order": 150,
+      "rev": "34e7b6f71210",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_getters_setters.json"
+    },
+    {
+      "id": "javascript_guided_practice_hoisting",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Hoisting",
+      "difficulty": "medium",
+      "order": 151,
+      "rev": "399d51a5897a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_hoisting.json"
+    },
+    {
+      "id": "javascript_bug_squasher_hoisting",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Calling a Function Expression Too Early",
+      "difficulty": "medium",
+      "order": 152,
+      "rev": "1c70890ac443",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_hoisting.json"
+    },
+    {
+      "id": "javascript_code_refactor_hoisting",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Define Before Use",
+      "difficulty": "medium",
+      "order": 153,
+      "rev": "f2b167e965fc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_hoisting.json"
+    },
+    {
+      "id": "javascript_guided_practice_insertion_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Insertion Sort",
+      "difficulty": "medium",
+      "order": 154,
+      "rev": "1c6cd89b70e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_insertion_sort.json"
+    },
+    {
+      "id": "javascript_bug_squasher_insertion_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The First Item Is Never Compared",
+      "difficulty": "medium",
+      "order": 155,
+      "rev": "d86f04399c4b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_insertion_sort.json"
+    },
+    {
+      "id": "javascript_code_refactor_insertion_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Shift Instead of Swapping",
+      "difficulty": "medium",
+      "order": 156,
+      "rev": "7157d0939c70",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_insertion_sort.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_intersection",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Intersection of Two Arrays",
+      "difficulty": "medium",
+      "order": 157,
+      "rev": "68584cf5a5dc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_intersection.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_intersection",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Duplicates in the Result",
+      "difficulty": "medium",
+      "order": 158,
+      "rev": "55c8a93a297d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_intersection.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_intersection",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Set Lookup Instead of Nested Loops",
+      "difficulty": "medium",
+      "order": 159,
+      "rev": "56321e5c63e1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_intersection.json"
+    },
+    {
+      "id": "javascript_guided_practice_longest_common_prefix",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Longest Common Prefix",
+      "difficulty": "medium",
+      "order": 160,
+      "rev": "08a47af5845a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_longest_common_prefix.json"
+    },
+    {
+      "id": "javascript_bug_squasher_longest_common_prefix",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Prefix Is Cut from the Front",
+      "difficulty": "medium",
+      "order": 161,
+      "rev": "94398e1091ef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_longest_common_prefix.json"
+    },
+    {
+      "id": "javascript_code_refactor_longest_common_prefix",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Shrink the Prefix Instead of Comparing Letters",
+      "difficulty": "medium",
+      "order": 162,
+      "rev": "73f1db1918f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_longest_common_prefix.json"
+    },
+    {
+      "id": "javascript_guided_practice_map_basics",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Map",
+      "difficulty": "medium",
+      "order": 163,
+      "rev": "f43f68796d18",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_map_basics.json"
+    },
+    {
+      "id": "javascript_bug_squasher_map_basics",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Property Syntax Does Not Fill the Map",
+      "difficulty": "medium",
+      "order": 164,
+      "rev": "b74d46a432ee",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_map_basics.json"
+    },
+    {
+      "id": "javascript_code_refactor_map_basics",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Map Instead of an Object Used as a Dictionary",
+      "difficulty": "medium",
+      "order": 165,
+      "rev": "1a1db71c987e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_map_basics.json"
+    },
+    {
+      "id": "javascript_guided_practice_parseint_trap",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: map and parseInt",
+      "difficulty": "medium",
+      "order": 166,
+      "rev": "6876e5ae94d8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_parseint_trap.json"
+    },
+    {
+      "id": "javascript_bug_squasher_parseint_trap",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: parseInt Receives the Index as Its Radix",
+      "difficulty": "medium",
+      "order": 167,
+      "rev": "3b84734f2159",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_parseint_trap.json"
+    },
+    {
+      "id": "javascript_code_refactor_parseint_trap",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: map and filter Instead of a Loop with push",
+      "difficulty": "medium",
+      "order": 168,
+      "rev": "69b3d0a3650d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_parseint_trap.json"
+    },
+    {
+      "id": "javascript_guided_practice_max_subarray",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Maximum Subarray (Kadane)",
+      "difficulty": "medium",
+      "order": 169,
+      "rev": "e468e8b6be3c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_max_subarray.json"
+    },
+    {
+      "id": "javascript_bug_squasher_max_subarray",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: All-Negative Input Gives Zero",
+      "difficulty": "medium",
+      "order": 170,
+      "rev": "95a49cb5d669",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_max_subarray.json"
+    },
+    {
+      "id": "javascript_code_refactor_max_subarray",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Loop Instead of Two",
+      "difficulty": "medium",
+      "order": 171,
+      "rev": "4a9cddbdd2b7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_max_subarray.json"
+    },
+    {
+      "id": "javascript_guided_practice_merge_sorted",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Merge Two Sorted Arrays",
+      "difficulty": "medium",
+      "order": 172,
+      "rev": "286747ca9662",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_merge_sorted.json"
+    },
+    {
+      "id": "javascript_bug_squasher_merge_sorted",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Leftover Items Are Dropped",
+      "difficulty": "medium",
+      "order": 173,
+      "rev": "5a992ef58536",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_merge_sorted.json"
+    },
+    {
+      "id": "javascript_code_refactor_merge_sorted",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Merge in One Pass Instead of Concatenating and Sorting",
+      "difficulty": "medium",
+      "order": 174,
+      "rev": "0d43805fb974",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_merge_sorted.json"
+    },
+    {
+      "id": "javascript_guided_practice_object_merge",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Merging Objects with Defaults",
+      "difficulty": "medium",
+      "order": 175,
+      "rev": "ea8f603bf4a5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_object_merge.json"
+    },
+    {
+      "id": "javascript_bug_squasher_object_merge",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Defaults Override the Options",
+      "difficulty": "medium",
+      "order": 176,
+      "rev": "637cdc0b64f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_object_merge.json"
+    },
+    {
+      "id": "javascript_code_refactor_object_merge",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Object.assign Instead of Checking Each Option",
+      "difficulty": "medium",
+      "order": 177,
+      "rev": "3635eb4a43ed",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_object_merge.json"
+    },
+    {
+      "id": "javascript_guided_practice_move_zeros",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Move Zeros to the End",
+      "difficulty": "medium",
+      "order": 178,
+      "rev": "e9a190986a16",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_move_zeros.json"
+    },
+    {
+      "id": "javascript_bug_squasher_move_zeros",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: One Zero Goes Missing",
+      "difficulty": "medium",
+      "order": 179,
+      "rev": "6405e3eec2aa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_move_zeros.json"
+    },
+    {
+      "id": "javascript_code_refactor_move_zeros",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Swap In Place Instead of Three Passes",
+      "difficulty": "medium",
+      "order": 180,
+      "rev": "aa1f59394e56",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_move_zeros.json"
+    },
+    {
+      "id": "javascript_guided_practice_object_create",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Object.create",
+      "difficulty": "medium",
+      "order": 181,
+      "rev": "b9bea131ba63",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_object_create.json"
+    },
+    {
+      "id": "javascript_bug_squasher_object_create",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Bike Is Not a Separate Object",
+      "difficulty": "medium",
+      "order": 182,
+      "rev": "6ce61843ba2a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_object_create.json"
+    },
+    {
+      "id": "javascript_code_refactor_object_create",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Inherit the Method Instead of Copying It",
+      "difficulty": "medium",
+      "order": 183,
+      "rev": "9f48fd9eb90c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_object_create.json"
+    },
+    {
+      "id": "javascript_guided_practice_palindrome_sentence",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Palindrome Sentence",
+      "difficulty": "medium",
+      "order": 184,
+      "rev": "b778e51529b2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_palindrome_sentence.json"
+    },
+    {
+      "id": "javascript_bug_squasher_palindrome_sentence",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Capital Letters Are Removed with the Punctuation",
+      "difficulty": "medium",
+      "order": 185,
+      "rev": "99478235fbb0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_palindrome_sentence.json"
+    },
+    {
+      "id": "javascript_code_refactor_palindrome_sentence",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Clean and Reverse Instead of Two Pointers with Regex Tests",
+      "difficulty": "medium",
+      "order": 186,
+      "rev": "c76efc7686f3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_palindrome_sentence.json"
+    },
+    {
+      "id": "javascript_guided_practice_pascal_triangle",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Pascal's Triangle",
+      "difficulty": "medium",
+      "order": 187,
+      "rev": "b5d7c5bcd0da",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_pascal_triangle.json"
+    },
+    {
+      "id": "javascript_bug_squasher_pascal_triangle",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Products Instead of Sums",
+      "difficulty": "medium",
+      "order": 188,
+      "rev": "ef87c2d91c93",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_pascal_triangle.json"
+    },
+    {
+      "id": "javascript_code_refactor_pascal_triangle",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Add the Row Above Instead of Computing Factorials",
+      "difficulty": "medium",
+      "order": 189,
+      "rev": "61ced8a2ee58",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_pascal_triangle.json"
+    },
+    {
+      "id": "javascript_guided_practice_closure_private",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Private State with Closures",
+      "difficulty": "medium",
+      "order": 190,
+      "rev": "6cdeab976e80",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_closure_private.json"
+    },
+    {
+      "id": "javascript_bug_squasher_closure_private",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: deposit Changes the Wrong Variable",
+      "difficulty": "medium",
+      "order": 191,
+      "rev": "2e3c66581d49",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_closure_private.json"
+    },
+    {
+      "id": "javascript_code_refactor_closure_private",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Hide the Balance Behind Functions",
+      "difficulty": "medium",
+      "order": 192,
+      "rev": "a6165cab5e90",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_closure_private.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_reduce",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: reduce",
+      "difficulty": "medium",
+      "order": 193,
+      "rev": "cbf1cd8b2abd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_reduce.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_reduce",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Wrong Starting Value",
+      "difficulty": "medium",
+      "order": 194,
+      "rev": "f2aff688f999",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_reduce.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_reduce",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: reduce Instead of an Accumulator Loop",
+      "difficulty": "medium",
+      "order": 195,
+      "rev": "b551bff7af40",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_reduce.json"
+    },
+    {
+      "id": "javascript_guided_practice_regex_basics",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Regular Expression Basics",
+      "difficulty": "medium",
+      "order": 196,
+      "rev": "efc5b90a503a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_regex_basics.json"
+    },
+    {
+      "id": "javascript_bug_squasher_regex_basics",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Pattern Is Not Anchored",
+      "difficulty": "medium",
+      "order": 197,
+      "rev": "05318b5b5e68",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_regex_basics.json"
+    },
+    {
+      "id": "javascript_code_refactor_regex_basics",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Regular Expression Instead of a Character Loop",
+      "difficulty": "medium",
+      "order": 198,
+      "rev": "918bd1ce58d2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_regex_basics.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_unique",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Remove Duplicates",
+      "difficulty": "medium",
+      "order": 199,
+      "rev": "43d5d3fc9252",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_unique.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_unique",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Filter Keeps Every Item",
+      "difficulty": "medium",
+      "order": 200,
+      "rev": "d4bdcc52743f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_unique.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_unique",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Set Instead of Nested Loops",
+      "difficulty": "medium",
+      "order": 201,
+      "rev": "bee4db2ee1a3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_unique.json"
+    },
+    {
+      "id": "javascript_guided_practice_remove_duplicates_sorted",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Remove Duplicates from a Sorted Array",
+      "difficulty": "medium",
+      "order": 202,
+      "rev": "7a196bb82ed2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_remove_duplicates_sorted.json"
+    },
+    {
+      "id": "javascript_bug_squasher_remove_duplicates_sorted",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Old Tail Is Left in the Array",
+      "difficulty": "medium",
+      "order": 203,
+      "rev": "5135b73d9543",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_remove_duplicates_sorted.json"
+    },
+    {
+      "id": "javascript_code_refactor_remove_duplicates_sorted",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Compare Neighbours Instead of Searching the Result",
+      "difficulty": "medium",
+      "order": 204,
+      "rev": "0b6b7494f838",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_remove_duplicates_sorted.json"
+    },
+    {
+      "id": "javascript_guided_practice_regex_replace",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Replacing with Regular Expressions",
+      "difficulty": "medium",
+      "order": 205,
+      "rev": "3cad353c9ceb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_regex_replace.json"
+    },
+    {
+      "id": "javascript_bug_squasher_regex_replace",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Only the First Match Is Replaced",
+      "difficulty": "medium",
+      "order": 206,
+      "rev": "24caef0595e7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_regex_replace.json"
+    },
+    {
+      "id": "javascript_code_refactor_regex_replace",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: replace with a Pattern Instead of split and a Loop",
+      "difficulty": "medium",
+      "order": 207,
+      "rev": "28b8d94784d4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_regex_replace.json"
+    },
+    {
+      "id": "javascript_guided_practice_roman_to_int",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Roman Numeral to Number",
+      "difficulty": "medium",
+      "order": 208,
+      "rev": "5b1e28ae44b5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_roman_to_int.json"
+    },
+    {
+      "id": "javascript_bug_squasher_roman_to_int",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Comparison Points the Wrong Way",
+      "difficulty": "medium",
+      "order": 209,
+      "rev": "182aabce4253",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_roman_to_int.json"
+    },
+    {
+      "id": "javascript_code_refactor_roman_to_int",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Values Table Instead of an if Chain",
+      "difficulty": "medium",
+      "order": 210,
+      "rev": "1d190d4e754c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_roman_to_int.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_rotate",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Rotate an Array",
+      "difficulty": "medium",
+      "order": 211,
+      "rev": "38b3267fef98",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_rotate.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_rotate",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Rotating by More Than the Length",
+      "difficulty": "medium",
+      "order": 212,
+      "rev": "2351e63f845e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_rotate.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_rotate",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: slice and concat Instead of shift and push",
+      "difficulty": "medium",
+      "order": 213,
+      "rev": "60641e6014a6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_rotate.json"
+    },
+    {
+      "id": "javascript_guided_practice_once_function",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Run a Function Only Once",
+      "difficulty": "medium",
+      "order": 214,
+      "rev": "38b8ffbec273",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_once_function.json"
+    },
+    {
+      "id": "javascript_bug_squasher_once_function",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Function Runs Every Time",
+      "difficulty": "medium",
+      "order": 215,
+      "rev": "6b8e5794bc27",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_once_function.json"
+    },
+    {
+      "id": "javascript_code_refactor_once_function",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A once Wrapper Instead of a Global Flag",
+      "difficulty": "medium",
+      "order": 216,
+      "rev": "89bdedf133dd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_once_function.json"
+    },
+    {
+      "id": "javascript_guided_practice_run_length_encoding",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Run-Length Encoding",
+      "difficulty": "medium",
+      "order": 217,
+      "rev": "491a32f2d4b3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_run_length_encoding.json"
+    },
+    {
+      "id": "javascript_bug_squasher_run_length_encoding",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Every Run Is One Too Long",
+      "difficulty": "medium",
+      "order": 218,
+      "rev": "629b27867e14",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_run_length_encoding.json"
+    },
+    {
+      "id": "javascript_code_refactor_run_length_encoding",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Handle Each Run as a Unit",
+      "difficulty": "medium",
+      "order": 219,
+      "rev": "f18c9093a5f8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_run_length_encoding.json"
+    },
+    {
+      "id": "javascript_guided_practice_selection_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Selection Sort",
+      "difficulty": "medium",
+      "order": 220,
+      "rev": "9051522202fa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_selection_sort.json"
+    },
+    {
+      "id": "javascript_bug_squasher_selection_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Search Always Starts at Index 0",
+      "difficulty": "medium",
+      "order": 221,
+      "rev": "098ea22bdecb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_selection_sort.json"
+    },
+    {
+      "id": "javascript_code_refactor_selection_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Swap per Pass",
+      "difficulty": "medium",
+      "order": 222,
+      "rev": "5ba028bc2987",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_selection_sort.json"
+    },
+    {
+      "id": "javascript_guided_practice_set_operations",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Set Operations",
+      "difficulty": "medium",
+      "order": 223,
+      "rev": "6209de469866",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_set_operations.json"
+    },
+    {
+      "id": "javascript_bug_squasher_set_operations",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Difference Forgets the Negation",
+      "difficulty": "medium",
+      "order": 224,
+      "rev": "426820b05042",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_set_operations.json"
+    },
+    {
+      "id": "javascript_code_refactor_set_operations",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Set Lookup Instead of indexOf",
+      "difficulty": "medium",
+      "order": 225,
+      "rev": "fe61bcdcd3ac",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_set_operations.json"
+    },
+    {
+      "id": "javascript_guided_practice_prime_sieve",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Sieve of Eratosthenes",
+      "difficulty": "medium",
+      "order": 226,
+      "rev": "99a53379aff2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_prime_sieve.json"
+    },
+    {
+      "id": "javascript_bug_squasher_prime_sieve",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Limit Itself Is Skipped",
+      "difficulty": "medium",
+      "order": 227,
+      "rev": "69a8b125c6e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_prime_sieve.json"
+    },
+    {
+      "id": "javascript_code_refactor_prime_sieve",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Sieve Instead of Trial Division",
+      "difficulty": "medium",
+      "order": 228,
+      "rev": "ebda7d55ea35",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_prime_sieve.json"
+    },
+    {
+      "id": "javascript_guided_practice_snake_to_camel",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: snake_case to camelCase",
+      "difficulty": "medium",
+      "order": 229,
+      "rev": "11e4b2972a76",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_snake_to_camel.json"
+    },
+    {
+      "id": "javascript_bug_squasher_snake_to_camel",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Underscore Is Kept",
+      "difficulty": "medium",
+      "order": 230,
+      "rev": "04d6d2fb1afe",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_snake_to_camel.json"
+    },
+    {
+      "id": "javascript_code_refactor_snake_to_camel",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: replace Instead of a Flag and a Character Loop",
+      "difficulty": "medium",
+      "order": 231,
+      "rev": "95b7852fa9b6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_snake_to_camel.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_chunk",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Split an Array into Chunks",
+      "difficulty": "medium",
+      "order": 232,
+      "rev": "1c5e76bf2b13",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_chunk.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_chunk",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Loop Moves One Step at a Time",
+      "difficulty": "medium",
+      "order": 233,
+      "rev": "8f5d96d30425",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_chunk.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_chunk",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A chunk Function Instead of Manual Bookkeeping",
+      "difficulty": "medium",
+      "order": 234,
+      "rev": "ba343b5a49a5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_chunk.json"
+    },
+    {
+      "id": "javascript_guided_practice_tower_of_hanoi",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Tower of Hanoi",
+      "difficulty": "medium",
+      "order": 235,
+      "rev": "e9a5e8247c2a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_tower_of_hanoi.json"
+    },
+    {
+      "id": "javascript_bug_squasher_tower_of_hanoi",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Small Tower Goes to the Wrong Peg",
+      "difficulty": "medium",
+      "order": 236,
+      "rev": "38097a3ce746",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_tower_of_hanoi.json"
+    },
+    {
+      "id": "javascript_code_refactor_tower_of_hanoi",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Name the Pegs by Their Role",
+      "difficulty": "medium",
+      "order": 237,
+      "rev": "79615ed03b4a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_tower_of_hanoi.json"
+    },
+    {
+      "id": "javascript_guided_practice_matrix_transpose",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Transpose a Matrix",
+      "difficulty": "medium",
+      "order": 238,
+      "rev": "71ca416339f3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_matrix_transpose.json"
+    },
+    {
+      "id": "javascript_bug_squasher_matrix_transpose",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Last Column Is Missing",
+      "difficulty": "medium",
+      "order": 239,
+      "rev": "887018eeb76a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_matrix_transpose.json"
+    },
+    {
+      "id": "javascript_code_refactor_matrix_transpose",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: map Instead of Hand-Written Indexes",
+      "difficulty": "medium",
+      "order": 240,
+      "rev": "580f3234404e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_matrix_transpose.json"
+    },
+    {
+      "id": "javascript_guided_practice_two_sum",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Two Sum",
+      "difficulty": "medium",
+      "order": 241,
+      "rev": "9056e1d63441",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_two_sum.json"
+    },
+    {
+      "id": "javascript_bug_squasher_two_sum",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: A Number Pairs with Itself",
+      "difficulty": "medium",
+      "order": 242,
+      "rev": "2b2790063d09",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_two_sum.json"
+    },
+    {
+      "id": "javascript_code_refactor_two_sum",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Pass with an Object Instead of Nested Loops",
+      "difficulty": "medium",
+      "order": 243,
+      "rev": "a121eec80044",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_two_sum.json"
+    },
+    {
+      "id": "javascript_guided_practice_valid_parentheses",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Valid Parentheses",
+      "difficulty": "medium",
+      "order": 244,
+      "rev": "47c09c60bc2a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_valid_parentheses.json"
+    },
+    {
+      "id": "javascript_bug_squasher_valid_parentheses",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Unclosed Brackets Are Accepted",
+      "difficulty": "medium",
+      "order": 245,
+      "rev": "23c6037707a1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_valid_parentheses.json"
+    },
+    {
+      "id": "javascript_code_refactor_valid_parentheses",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Stack Instead of Repeated Replacing",
+      "difficulty": "medium",
+      "order": 246,
+      "rev": "19644fc1374d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_valid_parentheses.json"
+    },
+    {
+      "id": "javascript_guided_practice_word_frequency",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Word Frequency",
+      "difficulty": "medium",
+      "order": 247,
+      "rev": "edd020808f37",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_word_frequency.json"
+    },
+    {
+      "id": "javascript_bug_squasher_word_frequency",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Every Count Is Reset to 1",
+      "difficulty": "medium",
+      "order": 248,
+      "rev": "fb2e590742e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_word_frequency.json"
+    },
+    {
+      "id": "javascript_code_refactor_word_frequency",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: The || Default Instead of if / else",
+      "difficulty": "medium",
+      "order": 249,
+      "rev": "8c5660d113b1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_word_frequency.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_zip",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Zip Two Arrays",
+      "difficulty": "medium",
+      "order": 250,
+      "rev": "fbc67f050191",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_zip.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_zip",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Pairs with Missing Values",
+      "difficulty": "medium",
+      "order": 251,
+      "rev": "ccf7c91fd0a1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_zip.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_zip",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Index Instead of Two",
+      "difficulty": "medium",
+      "order": 252,
+      "rev": "5d1da6e514c7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_zip.json"
     },
     {
       "id": "javascript_guided_practice_binarysearch",
@@ -407,9 +2537,9 @@
       "language": "javascript",
       "title": "JavaScript Binary Search",
       "difficulty": "medium",
-      "order": 40,
+      "order": 253,
       "rev": "257c7f95523f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_binarysearch.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_binarysearch.json"
     },
     {
       "id": "javascript_bug_squasher_binarysearch",
@@ -417,9 +2547,9 @@
       "language": "javascript",
       "title": "Bug Squasher: JS Binary Search",
       "difficulty": "medium",
-      "order": 41,
+      "order": 254,
       "rev": "110dd964163f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_binarysearch.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_binarysearch.json"
     },
     {
       "id": "javascript_code_refactor_binarysearch",
@@ -427,9 +2557,429 @@
       "language": "javascript",
       "title": "JS Refactor: Binary Search",
       "difficulty": "medium",
-      "order": 42,
+      "order": 255,
       "rev": "cd325f626d42",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_binarysearch.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_binarysearch.json"
+    },
+    {
+      "id": "javascript_guided_practice_permutations",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: All Permutations",
+      "difficulty": "advanced",
+      "order": 256,
+      "rev": "7c4980dc6dc6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_permutations.json"
+    },
+    {
+      "id": "javascript_bug_squasher_permutations",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Picked Item Is Not Added",
+      "difficulty": "advanced",
+      "order": 257,
+      "rev": "d14339f32b18",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_permutations.json"
+    },
+    {
+      "id": "javascript_code_refactor_permutations",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Recursion Instead of Nested Loops",
+      "difficulty": "advanced",
+      "order": 258,
+      "rev": "7ca7d462bd35",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_permutations.json"
+    },
+    {
+      "id": "javascript_guided_practice_subsets",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: All Subsets",
+      "difficulty": "advanced",
+      "order": 259,
+      "rev": "468efa0f3a77",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_subsets.json"
+    },
+    {
+      "id": "javascript_bug_squasher_subsets",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Starting with No Subsets at All",
+      "difficulty": "advanced",
+      "order": 260,
+      "rev": "46c4e3bf34c4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_subsets.json"
+    },
+    {
+      "id": "javascript_code_refactor_subsets",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Doubling Instead of Bit Masks",
+      "difficulty": "advanced",
+      "order": 261,
+      "rev": "0ef06918c088",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_subsets.json"
+    },
+    {
+      "id": "javascript_guided_practice_graph_bfs",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Breadth-First Search",
+      "difficulty": "advanced",
+      "order": 262,
+      "rev": "b8b8ede38f7b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_graph_bfs.json"
+    },
+    {
+      "id": "javascript_bug_squasher_graph_bfs",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Start Node Is Not Marked",
+      "difficulty": "advanced",
+      "order": 263,
+      "rev": "ea77d21f15e0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_graph_bfs.json"
+    },
+    {
+      "id": "javascript_code_refactor_graph_bfs",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A visited Object Instead of Searching an Array",
+      "difficulty": "advanced",
+      "order": 264,
+      "rev": "d4c1977d8594",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_graph_bfs.json"
+    },
+    {
+      "id": "javascript_guided_practice_currying",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Currying",
+      "difficulty": "advanced",
+      "order": 265,
+      "rev": "ea07354e2b37",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_currying.json"
+    },
+    {
+      "id": "javascript_bug_squasher_currying",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Second Argument Is Never Passed On",
+      "difficulty": "advanced",
+      "order": 266,
+      "rev": "cdfe9de5b413",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_currying.json"
+    },
+    {
+      "id": "javascript_code_refactor_currying",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: One Curried Function Instead of Many Copies",
+      "difficulty": "advanced",
+      "order": 267,
+      "rev": "c122dc3018c1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_currying.json"
+    },
+    {
+      "id": "javascript_guided_practice_custom_error",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Custom Error Types",
+      "difficulty": "advanced",
+      "order": 268,
+      "rev": "81f63476f14f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_custom_error.json"
+    },
+    {
+      "id": "javascript_bug_squasher_custom_error",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Error Prototype Is Not Linked",
+      "difficulty": "advanced",
+      "order": 269,
+      "rev": "dda39825826b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_custom_error.json"
+    },
+    {
+      "id": "javascript_code_refactor_custom_error",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: instanceof Instead of Comparing Names",
+      "difficulty": "advanced",
+      "order": 270,
+      "rev": "70796a764656",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_custom_error.json"
+    },
+    {
+      "id": "javascript_guided_practice_binary_search_first",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: First Occurrence with Binary Search",
+      "difficulty": "advanced",
+      "order": 271,
+      "rev": "0f2f17f7d516",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_binary_search_first.json"
+    },
+    {
+      "id": "javascript_bug_squasher_binary_search_first",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Stops at Any Match",
+      "difficulty": "advanced",
+      "order": 272,
+      "rev": "64e928fc775c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_binary_search_first.json"
+    },
+    {
+      "id": "javascript_code_refactor_binary_search_first",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Binary Search Instead of a Linear Scan",
+      "difficulty": "advanced",
+      "order": 273,
+      "rev": "f02d773d94a9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_binary_search_first.json"
+    },
+    {
+      "id": "javascript_guided_practice_array_group_by",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Group Items by a Key",
+      "difficulty": "advanced",
+      "order": 274,
+      "rev": "fcdbd01699a3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_array_group_by.json"
+    },
+    {
+      "id": "javascript_bug_squasher_array_group_by",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Each Group Keeps Only Its Last Item",
+      "difficulty": "advanced",
+      "order": 275,
+      "rev": "28b68f0be7a5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_array_group_by.json"
+    },
+    {
+      "id": "javascript_code_refactor_array_group_by",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Reusable groupBy Instead of Two Special Arrays",
+      "difficulty": "advanced",
+      "order": 276,
+      "rev": "415df63110f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_array_group_by.json"
+    },
+    {
+      "id": "javascript_guided_practice_majority_element",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Majority Element (Boyer-Moore)",
+      "difficulty": "advanced",
+      "order": 277,
+      "rev": "44bd6694f87b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_majority_element.json"
+    },
+    {
+      "id": "javascript_bug_squasher_majority_element",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Other Items Do Not Cancel the Candidate",
+      "difficulty": "advanced",
+      "order": 278,
+      "rev": "c0b94304033c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_majority_element.json"
+    },
+    {
+      "id": "javascript_code_refactor_majority_element",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Boyer-Moore Instead of Counting Everything",
+      "difficulty": "advanced",
+      "order": 279,
+      "rev": "f50f69577ee4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_majority_element.json"
+    },
+    {
+      "id": "javascript_guided_practice_memoize",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Memoization",
+      "difficulty": "advanced",
+      "order": 280,
+      "rev": "c7a0c245a0bf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_memoize.json"
+    },
+    {
+      "id": "javascript_bug_squasher_memoize",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: A Cached Zero Counts as Missing",
+      "difficulty": "advanced",
+      "order": 281,
+      "rev": "203b5ce6f399",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_memoize.json"
+    },
+    {
+      "id": "javascript_code_refactor_memoize",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: A Reusable memoize Wrapper",
+      "difficulty": "advanced",
+      "order": 282,
+      "rev": "0e9ae7a83871",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_memoize.json"
+    },
+    {
+      "id": "javascript_guided_practice_merge_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Merge Sort",
+      "difficulty": "advanced",
+      "order": 283,
+      "rev": "a75ccdf1c7d2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_merge_sort.json"
+    },
+    {
+      "id": "javascript_bug_squasher_merge_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Items Left in One Half Are Dropped",
+      "difficulty": "advanced",
+      "order": 284,
+      "rev": "1cd4b814b95f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_merge_sort.json"
+    },
+    {
+      "id": "javascript_code_refactor_merge_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Merge Sort Instead of Bubble Sort",
+      "difficulty": "advanced",
+      "order": 285,
+      "rev": "cab8db95fd67",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_merge_sort.json"
+    },
+    {
+      "id": "javascript_guided_practice_prototype_inheritance",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Prototype Inheritance",
+      "difficulty": "advanced",
+      "order": 286,
+      "rev": "673d80f5516d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_prototype_inheritance.json"
+    },
+    {
+      "id": "javascript_bug_squasher_prototype_inheritance",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Parent Constructor Is Not Called",
+      "difficulty": "advanced",
+      "order": 287,
+      "rev": "e56945397010",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_prototype_inheritance.json"
+    },
+    {
+      "id": "javascript_code_refactor_prototype_inheritance",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Object.create Instead of new Parent()",
+      "difficulty": "advanced",
+      "order": 288,
+      "rev": "17e9ba3568f4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_prototype_inheritance.json"
+    },
+    {
+      "id": "javascript_guided_practice_quick_sort",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Quick Sort",
+      "difficulty": "advanced",
+      "order": 289,
+      "rev": "913eff620a81",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_quick_sort.json"
+    },
+    {
+      "id": "javascript_bug_squasher_quick_sort",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Items Equal to the Pivot Disappear",
+      "difficulty": "advanced",
+      "order": 290,
+      "rev": "a5afc0ddfe94",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_quick_sort.json"
+    },
+    {
+      "id": "javascript_code_refactor_quick_sort",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: filter Instead of a Loop with push",
+      "difficulty": "advanced",
+      "order": 291,
+      "rev": "1d26e886d83b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_quick_sort.json"
+    },
+    {
+      "id": "javascript_guided_practice_prototype_shared",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: Shared Prototype Pitfall",
+      "difficulty": "advanced",
+      "order": 292,
+      "rev": "44574e319908",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_prototype_shared.json"
+    },
+    {
+      "id": "javascript_bug_squasher_prototype_shared",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: Both Baskets Share One Array",
+      "difficulty": "advanced",
+      "order": 293,
+      "rev": "b9e3456918fa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_prototype_shared.json"
+    },
+    {
+      "id": "javascript_code_refactor_prototype_shared",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Methods on the Prototype Instead of in the Constructor",
+      "difficulty": "advanced",
+      "order": 294,
+      "rev": "240fb1727293",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_prototype_shared.json"
+    },
+    {
+      "id": "javascript_guided_practice_this_binding",
+      "type": "guided",
+      "language": "javascript",
+      "title": "Guided Practice: What this Points To",
+      "difficulty": "advanced",
+      "order": 295,
+      "rev": "cc5b5ab74bbf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_guided_practice_this_binding.json"
+    },
+    {
+      "id": "javascript_bug_squasher_this_binding",
+      "type": "bug_squasher",
+      "language": "javascript",
+      "title": "Bug Squasher: The Method Loses Its Object",
+      "difficulty": "advanced",
+      "order": 296,
+      "rev": "6d6e0154e8fa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_bug_squasher_this_binding.json"
+    },
+    {
+      "id": "javascript_code_refactor_this_binding",
+      "type": "refactor",
+      "language": "javascript",
+      "title": "Code Refactor: Use this Instead of the Object's Name",
+      "difficulty": "advanced",
+      "order": 297,
+      "rev": "5fabb8221fc5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/javascript/javascript_code_refactor_this_binding.json"
     }
   ],
   "projects": []

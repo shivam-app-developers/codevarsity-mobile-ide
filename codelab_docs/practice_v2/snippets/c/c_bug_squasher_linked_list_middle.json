@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Both Pointers Move at the Same Speed",
+    "language": "c",
+    "problemDescription": "The middle of 1 2 3 4 5 is 3, but the program prints 5.",
+    "buggyCode": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nstruct Node *middle(struct Node *head) {\n    struct Node *slow = head, *fast = head;\n    while (fast != NULL && fast->next != NULL) {\n        slow = slow->next;\n        fast = fast->next;\n    }\n    return slow;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 5; v >= 1; v--) {\n        list = push(list, v);\n    }\n    printf(\"%d\\n\", middle(list)->value);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int value;\n    struct Node *next;\n};\n\nstruct Node *push(struct Node *head, int value) {\n    struct Node *node = malloc(sizeof(struct Node));\n    node->value = value;\n    node->next = head;\n    return node;\n}\n\nstruct Node *middle(struct Node *head) {\n    struct Node *slow = head, *fast = head;\n    while (fast != NULL && fast->next != NULL) {\n        slow = slow->next;\n        fast = fast->next->next;\n    }\n    return slow;\n}\n\nint main() {\n    struct Node *list = NULL;\n    for (int v = 5; v >= 1; v--) {\n        list = push(list, v);\n    }\n    printf(\"%d\\n\", middle(list)->value);\n    return 0;\n}",
+      "explanation": "The trick only works because fast covers twice the distance of slow. If both move one node at a time, fast ends at the last node together with slow, so slow ends up at the end instead of the middle."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Old Tail Is Left in the Array",
+    "language": "javascript",
+    "problemDescription": "After removing the duplicates the array should be [1,2,3,4], but the program prints [1,2,3,4,3,3,4].",
+    "buggyCode": "function removeDuplicates(list) {\n  var write = 1;\n  for (var read = 1; read < list.length; read++) {\n    if (list[read] !== list[write - 1]) {\n      list[write++] = list[read];\n    }\n  }\n\n  return write;\n}\n\nvar data = [1, 1, 2, 3, 3, 3, 4];\nremoveDuplicates(data);\nconsole.log(data);",
+    "solution": {
+      "code": "function removeDuplicates(list) {\n  var write = 1;\n  for (var read = 1; read < list.length; read++) {\n    if (list[read] !== list[write - 1]) {\n      list[write++] = list[read];\n    }\n  }\n  list.length = write;\n  return write;\n}\n\nvar data = [1, 1, 2, 3, 3, 3, 4];\nremoveDuplicates(data);\nconsole.log(data);",
+      "explanation": "Copying the unique items forward overwrites the front of the array but leaves the old items behind them. Setting list.length to the number of unique items cuts off that leftover tail."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3,4\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

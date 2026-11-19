@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: camelCase to snake_case",
+    "language": "javascript",
+    "description": "replace with a regular expression and the g flag changes every capital letter. A function as the replacement can build the new text from each match.",
+    "ghostCode": "function camelToSnake(name) {\n  return name.replace(/[A-Z]/g, function (letter) {\n    return \"_\" + letter.toLowerCase();\n  });\n}\n\nconsole.log(camelToSnake(\"userFirstName\"));\nconsole.log(camelToSnake(\"id\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*user_first_name[ \\t]*\\r?\\nid\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: equals Overloaded Instead of Overridden",
+    "language": "java",
+    "problemDescription": "Two equal points should collapse to one entry in a HashSet (size 1), but the set holds 2.",
+    "buggyCode": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Set<Point> set = new HashSet<>();\n        set.add(new Point(1, 2));\n        set.add(new Point(1, 2));\n        System.out.println(set.size());\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public boolean equals(Point p) {\n        return x == p.x && y == p.y;\n    }\n\n    @Override\n    public int hashCode() {\n        return 31 * x + y;\n    }\n}",
+    "solution": {
+      "code": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    public static void main(String[] args) {\n        Set<Point> set = new HashSet<>();\n        set.add(new Point(1, 2));\n        set.add(new Point(1, 2));\n        System.out.println(set.size());\n    }\n}\n\nclass Point {\n    private final int x, y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    @Override\n    public boolean equals(Object o) {\n        if (!(o instanceof Point)) {\n            return false;\n        }\n        Point p = (Point) o;\n        return x == p.x && y == p.y;\n    }\n\n    @Override\n    public int hashCode() {\n        return 31 * x + y;\n    }\n}",
+      "explanation": "equals(Point) is a different method (an overload) from equals(Object). HashSet calls equals(Object), which is still the inherited identity comparison, so equal-looking points are treated as different. Always write equals(Object) and add @Override so the compiler checks it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

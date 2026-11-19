@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Number Pairs with Itself",
+    "language": "python",
+    "problemDescription": "For [3, 2, 4] and target 6 the answer is [1, 2] (2 + 4), but the program prints [0, 0].",
+    "buggyCode": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        seen[n] = i\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n    return []\n\n\nprint(two_sum([3, 2, 4], 6))",
+    "solution": {
+      "code": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n        seen[n] = i\n    return []\n\n\nprint(two_sum([3, 2, 4], 6))",
+      "explanation": "The current number must be looked up before it is stored. Storing first lets 3 find itself as its own complement (3 + 3 = 6), but an element may not be used twice."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

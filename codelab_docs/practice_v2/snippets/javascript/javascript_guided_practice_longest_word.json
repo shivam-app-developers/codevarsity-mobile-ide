@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Longest Word",
+    "language": "javascript",
+    "description": "Keep the longest word seen so far and replace it only when a word is strictly longer.",
+    "ghostCode": "function longestWord(sentence) {\n  var words = sentence.split(\" \");\n  var longest = \"\";\n  words.forEach(function (w) {\n    if (w.length > longest.length) {\n      longest = w;\n    }\n  });\n  return longest;\n}\n\nconsole.log(longestWord(\"I love programming in JavaScript\"));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*programming\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

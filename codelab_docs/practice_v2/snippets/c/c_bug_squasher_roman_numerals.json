@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Table Not in Descending Order",
+    "language": "c",
+    "problemDescription": "6 should print VI, but the program prints IVII.",
+    "buggyCode": "#include <stdio.h>\n\nvoid print_roman(int n) {\n    int values[] = {10, 9, 4, 5, 1};\n    const char *symbols[] = {\"X\", \"IX\", \"IV\", \"V\", \"I\"};\n    for (int i = 0; i < 5; i++) {\n        while (n >= values[i]) {\n            printf(\"%s\", symbols[i]);\n            n -= values[i];\n        }\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    print_roman(14);\n    print_roman(6);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid print_roman(int n) {\n    int values[] = {10, 9, 5, 4, 1};\n    const char *symbols[] = {\"X\", \"IX\", \"V\", \"IV\", \"I\"};\n    for (int i = 0; i < 5; i++) {\n        while (n >= values[i]) {\n            printf(\"%s\", symbols[i]);\n            n -= values[i];\n        }\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    print_roman(14);\n    print_roman(6);\n    return 0;\n}",
+      "explanation": "The greedy method only works when the table runs from the biggest value to the smallest. With 4 listed before 5, the number 6 matches 4 first (IV) and the rest becomes II, instead of using V first."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*XIV[ \\t]*\\r?\\nVI\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

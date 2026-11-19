@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Bits Printed in the Wrong Order",
+    "language": "c",
+    "problemDescription": "13 in binary is 1101, but the program prints 1011.",
+    "buggyCode": "#include <stdio.h>\n\nvoid print_binary(int n) {\n    int bits[32];\n    int count = 0;\n    while (n > 0) {\n        bits[count++] = n % 2;\n        n /= 2;\n    }\n    for (int i = 0; i < count; i++) {\n        printf(\"%d\", bits[i]);\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    print_binary(13);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid print_binary(int n) {\n    int bits[32];\n    int count = 0;\n    while (n > 0) {\n        bits[count++] = n % 2;\n        n /= 2;\n    }\n    for (int i = count - 1; i >= 0; i--) {\n        printf(\"%d\", bits[i]);\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    print_binary(13);\n    return 0;\n}",
+      "explanation": "The remainders come out lowest bit first, so the stored array is the binary number backwards. Reading it from the last stored bit down to the first gives the correct order."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1101\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

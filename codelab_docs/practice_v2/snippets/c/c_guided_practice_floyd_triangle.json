@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Floyd's Triangle",
+    "language": "c",
+    "description": "Fill a triangle with consecutive numbers. The counter keeps running across rows, so declare it outside both loops.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int number = 1;\n    for (int row = 1; row <= 5; row++) {\n        for (int col = 1; col <= row; col++) {\n            printf(\"%d \", number++);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2 3[ \\t]*\\r?\\n4 5 6[ \\t]*\\r?\\n7 8 9 10[ \\t]*\\r?\\n11 12 13 14 15\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

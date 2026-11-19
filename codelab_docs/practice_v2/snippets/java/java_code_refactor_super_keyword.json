@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Call super Instead of Repeating Its Text",
+    "language": "java",
+    "problemDescription": "LoudGreeter repeats the word Hello from Greeter instead of using the parent's method. Build on super.greet(). The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Greeter g = new LoudGreeter();\n        System.out.println(g.greet());\n    }\n}\n\nclass Greeter {\n    String greet() {\n        return \"Hello\";\n    }\n}\n\nclass LoudGreeter extends Greeter {\n    @Override\n    String greet() {\n        return \"Hello\".toUpperCase() + \"!\";\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Greeter g = new LoudGreeter();\n        System.out.println(g.greet());\n    }\n}\n\nclass Greeter {\n    String greet() {\n        return \"Hello\";\n    }\n}\n\nclass LoudGreeter extends Greeter {\n    @Override\n    String greet() {\n        return super.greet().toUpperCase() + \"!\";\n    }\n}",
+      "explanation": "If the text in Greeter changes, the copy in LoudGreeter silently stays the old one. Calling super.greet() keeps the subclass in step with its parent."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*HELLO!\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Star Pyramid",
+    "language": "java",
+    "description": "Each row has spaces followed by an odd number of stars. Row i has rows - i spaces and 2 * i - 1 stars.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        int rows = 4;\n        for (int i = 1; i <= rows; i++) {\n            StringBuilder line = new StringBuilder();\n            for (int s = 0; s < rows - i; s++) {\n                line.append(' ');\n            }\n            for (int k = 0; k < 2 * i - 1; k++) {\n                line.append('*');\n            }\n            System.out.println(line);\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*   \\*[ \\t]*\\r?\\n  \\*\\*\\*[ \\t]*\\r?\\n \\*\\*\\*\\*\\*[ \\t]*\\r?\\n\\*\\*\\*\\*\\*\\*\\*\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

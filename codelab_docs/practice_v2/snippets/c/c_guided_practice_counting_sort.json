@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Counting Sort",
+    "language": "c",
+    "description": "For small non-negative values count how often each value occurs, then write the values back in order. No comparisons between elements are needed.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {4, 2, 2, 8, 3, 3, 1};\n    int n = 7;\n    int counts[9] = {0};\n    for (int i = 0; i < n; i++) {\n        counts[a[i]]++;\n    }\n    int k = 0;\n    for (int v = 0; v <= 8; v++) {\n        while (counts[v] > 0) {\n            a[k++] = v;\n            counts[v]--;\n        }\n    }\n    for (int i = 0; i < n; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 2 2 3 3 4 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

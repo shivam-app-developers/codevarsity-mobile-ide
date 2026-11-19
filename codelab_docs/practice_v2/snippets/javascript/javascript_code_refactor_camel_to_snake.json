@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: replace Instead of a Character Loop",
+    "language": "javascript",
+    "problemDescription": "A loop inspects every character and builds the new text. Use replace with a regular expression. The output must stay the same.",
+    "initialCode": "var name = \"getHttpResponseCode\";\nvar out = \"\";\nfor (var i = 0; i < name.length; i++) {\n  var c = name.charAt(i);\n  if (c >= \"A\" && c <= \"Z\") {\n    out += \"_\" + c.toLowerCase();\n  } else {\n    out += c;\n  }\n}\nconsole.log(out);",
+    "solution": {
+      "code": "var name = \"getHttpResponseCode\";\nvar out = name.replace(/[A-Z]/g, function (letter) {\n  return \"_\" + letter.toLowerCase();\n});\nconsole.log(out);",
+      "explanation": "The pattern [A-Z] says which characters to change and the function says how, so the loop, the index and the accumulator variable are not needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*get_http_response_code\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

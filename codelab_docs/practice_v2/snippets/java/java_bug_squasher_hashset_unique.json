@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Check Is Inverted",
+    "language": "java",
+    "problemDescription": "The first duplicate in 2 5 3 5 2 is 5, but the program prints 2.",
+    "buggyCode": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    static int firstDuplicate(int[] a) {\n        Set<Integer> seen = new HashSet<>();\n        for (int n : a) {\n            if (seen.add(n)) {\n                return n;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(firstDuplicate(new int[] {2, 5, 3, 5, 2}));\n    }\n}",
+    "solution": {
+      "code": "import java.util.HashSet;\nimport java.util.Set;\n\npublic class Main {\n    static int firstDuplicate(int[] a) {\n        Set<Integer> seen = new HashSet<>();\n        for (int n : a) {\n            if (!seen.add(n)) {\n                return n;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(firstDuplicate(new int[] {2, 5, 3, 5, 2}));\n    }\n}",
+      "explanation": "add returns true when the value is new and false when it was already in the set. A duplicate is the case where add returns false, so the test needs the negation !seen.add(n). Without it the method returns at the very first (new) element."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

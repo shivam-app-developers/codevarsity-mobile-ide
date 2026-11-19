@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: map Instead of a Loop with push",
+    "language": "javascript",
+    "problemDescription": "A loop and an empty array convert Celsius to Fahrenheit. Use map. The output must stay the same.",
+    "initialCode": "var celsius = [0, 20, 100];\nvar fahrenheit = [];\nfor (var i = 0; i < celsius.length; i++) {\n  fahrenheit.push(celsius[i] * 9 / 5 + 32);\n}\nconsole.log(fahrenheit);",
+    "solution": {
+      "code": "var celsius = [0, 20, 100];\nvar fahrenheit = celsius.map(function (c) {\n  return c * 9 / 5 + 32;\n});\nconsole.log(fahrenheit);",
+      "explanation": "map says \"turn each item into a new one\" directly, with no index variable and no array to create and fill by hand."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[32,68,212\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

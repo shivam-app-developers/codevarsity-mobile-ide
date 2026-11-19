@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Custom Error Types",
+    "language": "javascript",
+    "description": "Make your own error type by giving a constructor a name and message and linking its prototype to Error.prototype, so instanceof Error works.",
+    "ghostCode": "function ValidationError(message) {\n  this.name = \"ValidationError\";\n  this.message = message;\n}\nValidationError.prototype = Object.create(Error.prototype);\nValidationError.prototype.constructor = ValidationError;\n\nfunction check(age) {\n  if (age < 0) {\n    throw new ValidationError(\"age must be positive\");\n  }\n  return age;\n}\n\ntry {\n  check(5);\n  check(-1);\n} catch (e) {\n  console.log(e.name + \": \" + e.message);\n  console.log(e instanceof ValidationError, e instanceof Error);\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ValidationError: age must be positive[ \\t]*\\r?\\ntrue true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

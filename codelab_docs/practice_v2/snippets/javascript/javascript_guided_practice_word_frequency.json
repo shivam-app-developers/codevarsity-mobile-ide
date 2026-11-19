@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Word Frequency",
+    "language": "javascript",
+    "description": "Use an object as a counter: look up the current count (or 0 if the word is new) and store it back plus one.",
+    "ghostCode": "var text = \"the cat and the hat and the bat\";\nvar counts = {};\ntext.split(\" \").forEach(function (word) {\n  counts[word] = (counts[word] || 0) + 1;\n});\nconsole.log(counts);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"the\":3,\"cat\":1,\"and\":2,\"hat\":1,\"bat\":1\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

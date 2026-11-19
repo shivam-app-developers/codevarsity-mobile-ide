@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Digital Root",
+    "language": "c",
+    "description": "Add the digits of a number again and again until a single digit is left. 9875 gives 29, then 11, then 2.",
+    "ghostCode": "#include <stdio.h>\n\nint digit_root(int n) {\n    while (n >= 10) {\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n /= 10;\n        }\n        n = sum;\n    }\n    return n;\n}\n\nint main() {\n    printf(\"%d\\n\", digit_root(9875));\n    printf(\"%d\\n\", digit_root(6789));\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2[ \\t]*\\r?\\n3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

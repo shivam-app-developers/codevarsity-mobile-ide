@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Remove Duplicates",
+    "language": "javascript",
+    "description": "A Set stores each value only once. Array.from turns the Set back into an array that keeps the first-seen order.",
+    "ghostCode": "var numbers = [3, 1, 3, 2, 1, 5];\nvar unique = Array.from(new Set(numbers));\nconsole.log(unique);\nconsole.log(unique.length);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,1,2,5\\][ \\t]*\\r?\\n4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

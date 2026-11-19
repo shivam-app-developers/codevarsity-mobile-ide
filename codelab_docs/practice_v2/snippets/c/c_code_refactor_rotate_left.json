@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Rotate with Modulo in One Function",
+    "language": "c",
+    "problemDescription": "The array is rotated one step at a time inside nested loops. Write a rotate_left function that places each element directly using the modulo operator. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5, 6};\n    for (int r = 0; r < 2; r++) {\n        int t = a[0];\n        for (int i = 0; i < 5; i++) {\n            a[i] = a[i + 1];\n        }\n        a[5] = t;\n    }\n    for (int i = 0; i < 6; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid rotate_left(int a[], int n, int k) {\n    int rotated[100];\n    for (int i = 0; i < n; i++) {\n        rotated[i] = a[(i + k) % n];\n    }\n    for (int i = 0; i < n; i++) {\n        a[i] = rotated[i];\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4, 5, 6};\n    rotate_left(a, 6, 2);\n    for (int i = 0; i < 6; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Rotating by k one step at a time costs n * k moves. Element i of the result is simply a[(i + k) % n], so a single pass places everything, and the function works for any k."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 4 5 6 1 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

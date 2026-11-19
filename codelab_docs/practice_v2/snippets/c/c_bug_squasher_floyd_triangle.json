@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Row Starts at 1",
+    "language": "c",
+    "problemDescription": "Floyd's triangle should print 1, then 2 3, then 4 5 6, but every row restarts at 1.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int row = 1; row <= 4; row++) {\n        int number = 1;\n        for (int col = 1; col <= row; col++) {\n            printf(\"%d \", number++);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int number = 1;\n    for (int row = 1; row <= 4; row++) {\n        for (int col = 1; col <= row; col++) {\n            printf(\"%d \", number++);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+      "explanation": "A variable declared inside the outer loop is created again for every row, so it restarts at 1. To keep counting across rows it must be declared before the loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n2 3[ \\t]*\\r?\\n4 5 6[ \\t]*\\r?\\n7 8 9 10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

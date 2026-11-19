@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compute the Percentage with Integers",
+    "language": "java",
+    "problemDescription": "The percentage is computed with three doubles and a cast. Compute it with integer arithmetic, multiplying before dividing. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 45;\n        int total = 60;\n        double ratio = (double) score / (double) total;\n        double scaled = ratio * 100.0;\n        int percent = (int) scaled;\n        System.out.println(percent + \"%\");\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int score = 45;\n        int total = 60;\n        int percent = score * 100 / total;\n        System.out.println(percent + \"%\");\n    }\n}",
+      "explanation": "Multiplying by 100 first keeps the precision of the integer division, so no floating-point numbers or casts are needed. Floating-point values can also be slightly off (0.1 + 0.2 is not exactly 0.3)."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*75%\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

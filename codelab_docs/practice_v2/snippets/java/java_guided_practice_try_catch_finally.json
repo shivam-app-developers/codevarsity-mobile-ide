@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: try, catch and finally",
+    "language": "java",
+    "description": "Code that may fail goes in try. catch handles a specific exception type, and finally always runs, whether or not an exception happened.",
+    "ghostCode": "public class Main {\n    static int parse(String text) {\n        try {\n            return Integer.parseInt(text);\n        } catch (NumberFormatException e) {\n            System.out.println(\"Not a number: \" + text);\n            return -1;\n        } finally {\n            System.out.println(\"Done parsing \" + text);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\"));\n        System.out.println(parse(\"4x2\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Done parsing 42[ \\t]*\\r?\\n42[ \\t]*\\r?\\nNot a number: 4x2[ \\t]*\\r?\\nDone parsing 4x2[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

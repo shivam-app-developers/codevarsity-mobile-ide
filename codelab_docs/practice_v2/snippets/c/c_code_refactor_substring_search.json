@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use strstr",
+    "language": "c",
+    "problemDescription": "Two loops and a match flag look for a word in a sentence. Replace them with strstr and compute the index from the returned pointer. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char text[] = \"the quick brown fox\";\n    char word[] = \"brown\";\n    int tl = strlen(text);\n    int wl = strlen(word);\n    int pos = -1;\n    for (int i = 0; i <= tl - wl; i++) {\n        int match = 1;\n        for (int j = 0; j < wl; j++) {\n            if (text[i + j] != word[j]) {\n                match = 0;\n            }\n        }\n        if (match == 1 && pos == -1) {\n            pos = i;\n        }\n    }\n    printf(\"%d\\n\", pos);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char text[] = \"the quick brown fox\";\n    char *found = strstr(text, \"brown\");\n    printf(\"%d\\n\", found ? (int)(found - text) : -1);\n    return 0;\n}",
+      "explanation": "strstr returns a pointer to the first match or NULL. Subtracting the start of the text turns the pointer into an index. The library function is shorter and well tested."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*10\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

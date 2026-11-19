@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Prototype Inheritance",
+    "language": "javascript",
+    "description": "A child constructor calls the parent constructor with call to set up its fields, and its prototype is created from the parent's prototype with Object.create.",
+    "ghostCode": "function Animal(name) {\n  this.name = name;\n}\n\nAnimal.prototype.speak = function () {\n  return this.name + \" makes a sound\";\n};\n\nfunction Dog(name) {\n  Animal.call(this, name);\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\nDog.prototype.speak = function () {\n  return this.name + \" barks\";\n};\n\nvar d = new Dog(\"Rex\");\nconsole.log(d.speak());\nconsole.log(d instanceof Animal);\nconsole.log(Animal.prototype.speak.call(d));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Rex barks[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\nRex makes a sound\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

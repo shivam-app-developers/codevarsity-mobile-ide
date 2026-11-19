@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Sorting a Read-Only List",
+    "language": "java",
+    "problemDescription": "Sorting the list should print [1, 2, 3], but the program crashes with an UnsupportedOperationException.",
+    "buggyCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> readOnly = Collections.unmodifiableList(Arrays.asList(3, 1, 2));\n        Collections.sort(readOnly);\n        System.out.println(readOnly);\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> readOnly = Collections.unmodifiableList(Arrays.asList(3, 1, 2));\n        List<Integer> sorted = new ArrayList<>(readOnly);\n        Collections.sort(sorted);\n        System.out.println(sorted);\n    }\n}",
+      "explanation": "An unmodifiable list refuses every change, and sorting changes the list in place. To get a sorted version, copy it into a new ArrayList and sort the copy."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 2, 3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

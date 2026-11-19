@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A LinkedList Object Instead of Hand-Linked Nodes",
+    "language": "javascript",
+    "problemDescription": "Three node objects are created and linked by hand and the list is walked in the main code. Write a LinkedList with add and toArray. The output must stay the same.",
+    "initialCode": "var a = { value: 1, next: null };\nvar b = { value: 2, next: null };\nvar c = { value: 3, next: null };\na.next = b;\nb.next = c;\nvar out = [];\nvar p = a;\nwhile (p !== null) {\n  out.push(p.value);\n  p = p.next;\n}\nconsole.log(out);",
+    "solution": {
+      "code": "function Node(value) {\n  this.value = value;\n  this.next = null;\n}\n\nfunction LinkedList() {\n  this.head = null;\n}\n\nLinkedList.prototype.add = function (value) {\n  var node = new Node(value);\n  if (this.head === null) {\n    this.head = node;\n    return;\n  }\n  var current = this.head;\n  while (current.next !== null) {\n    current = current.next;\n  }\n  current.next = node;\n};\n\nLinkedList.prototype.toArray = function () {\n  var out = [];\n  for (var cur = this.head; cur !== null; cur = cur.next) {\n    out.push(cur.value);\n  }\n  return out;\n};\n\nvar list = new LinkedList();\nlist.add(1);\nlist.add(2);\nlist.add(3);\nconsole.log(list.toArray());",
+      "explanation": "The list hides the pointer handling behind two clear operations, so callers cannot link nodes wrongly, and adding a fourth value is one more call."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,3\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

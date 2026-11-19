@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Start Node Is Not Marked",
+    "language": "java",
+    "problemDescription": "Starting from node 0 the order should be 0 1 2 3 4, but node 0 appears a second time.",
+    "buggyCode": "import java.util.ArrayDeque;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Queue;\n\npublic class Main {\n    public static void main(String[] args) {\n        int n = 5;\n        List<List<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            graph.add(new ArrayList<>());\n        }\n        int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {2, 3}, {2, 4}};\n        for (int[] e : edges) {\n            graph.get(e[0]).add(e[1]);\n            graph.get(e[1]).add(e[0]);\n        }\n        boolean[] visited = new boolean[n];\n        Queue<Integer> queue = new ArrayDeque<>();\n        queue.add(0);\n        StringBuilder order = new StringBuilder();\n        while (!queue.isEmpty()) {\n            int node = queue.poll();\n            order.append(node).append(' ');\n            for (int next : graph.get(node)) {\n                if (!visited[next]) {\n                    visited[next] = true;\n                    queue.add(next);\n                }\n            }\n        }\n        System.out.println(order.toString().trim());\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayDeque;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Queue;\n\npublic class Main {\n    public static void main(String[] args) {\n        int n = 5;\n        List<List<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            graph.add(new ArrayList<>());\n        }\n        int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {2, 3}, {2, 4}};\n        for (int[] e : edges) {\n            graph.get(e[0]).add(e[1]);\n            graph.get(e[1]).add(e[0]);\n        }\n        boolean[] visited = new boolean[n];\n        Queue<Integer> queue = new ArrayDeque<>();\n        queue.add(0);\n        visited[0] = true;\n        StringBuilder order = new StringBuilder();\n        while (!queue.isEmpty()) {\n            int node = queue.poll();\n            order.append(node).append(' ');\n            for (int next : graph.get(node)) {\n                if (!visited[next]) {\n                    visited[next] = true;\n                    queue.add(next);\n                }\n            }\n        }\n        System.out.println(order.toString().trim());\n    }\n}",
+      "explanation": "Every node that enters the queue must be marked at the same moment, including the start node. If it is not marked, its neighbours see it as unvisited and put it into the queue again."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0 1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

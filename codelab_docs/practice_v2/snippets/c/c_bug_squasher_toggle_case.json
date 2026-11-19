@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Letter Z Is Not Converted",
+    "language": "c",
+    "problemDescription": "Zebra and Alpha should become zEBRA AND aLPHA, but the capital Z stays a capital Z.",
+    "buggyCode": "#include <stdio.h>\n\nchar toggle(char c) {\n    if (c >= 'a' && c <= 'z') return c - 'a' + 'A';\n    if (c >= 'A' && c < 'Z') return c - 'A' + 'a';\n    return c;\n}\n\nint main() {\n    char s[] = \"Zebra and Alpha\";\n    for (int i = 0; s[i] != '\\0'; i++) {\n        s[i] = toggle(s[i]);\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nchar toggle(char c) {\n    if (c >= 'a' && c <= 'z') return c - 'a' + 'A';\n    if (c >= 'A' && c <= 'Z') return c - 'A' + 'a';\n    return c;\n}\n\nint main() {\n    char s[] = \"Zebra and Alpha\";\n    for (int i = 0; s[i] != '\\0'; i++) {\n        s[i] = toggle(s[i]);\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+      "explanation": "The range test must include both ends, so it needs <= 'Z'. With < 'Z' the last capital letter falls outside the range and is returned unchanged. Boundary values are a classic place for off-by-one errors."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*zEBRA AND aLPHA\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

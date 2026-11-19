@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Range Shrinks from One Side Only",
+    "language": "c",
+    "problemDescription": "abcd should be reversed to dcba, but the program prints dabc.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s, int left, int right) {\n    if (left >= right) {\n        return;\n    }\n    char temp = s[left];\n    s[left] = s[right];\n    s[right] = temp;\n    reverse(s, left + 1, right);\n}\n\nint main() {\n    char word[] = \"abcd\";\n    reverse(word, 0, strlen(word) - 1);\n    printf(\"%s\\n\", word);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nvoid reverse(char *s, int left, int right) {\n    if (left >= right) {\n        return;\n    }\n    char temp = s[left];\n    s[left] = s[right];\n    s[right] = temp;\n    reverse(s, left + 1, right - 1);\n}\n\nint main() {\n    char word[] = \"abcd\";\n    reverse(word, 0, strlen(word) - 1);\n    printf(\"%s\\n\", word);\n    return 0;\n}",
+      "explanation": "After swapping the outer pair, both ends must move inwards. Keeping right fixed swaps the same last position again and again, which rotates the characters instead of reversing them."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*dcba\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

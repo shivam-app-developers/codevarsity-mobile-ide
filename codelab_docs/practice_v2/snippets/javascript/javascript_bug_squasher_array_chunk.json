@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Loop Moves One Step at a Time",
+    "language": "javascript",
+    "problemDescription": "Splitting 1 to 7 into chunks of 3 should give [[1,2,3],[4,5,6],[7]], but the chunks overlap.",
+    "buggyCode": "function chunk(list, size) {\n  var chunks = [];\n  for (var i = 0; i < list.length; i++) {\n    chunks.push(list.slice(i, i + size));\n  }\n  return chunks;\n}\n\nconsole.log(chunk([1, 2, 3, 4, 5, 6, 7], 3));",
+    "solution": {
+      "code": "function chunk(list, size) {\n  var chunks = [];\n  for (var i = 0; i < list.length; i += size) {\n    chunks.push(list.slice(i, i + size));\n  }\n  return chunks;\n}\n\nconsole.log(chunk([1, 2, 3, 4, 5, 6, 7], 3));",
+      "explanation": "After taking the chunk that starts at i, the next chunk starts size positions later. Moving only one step makes each chunk start one item after the previous one, so they overlap."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1,2,3\\],\\[4,5,6\\],\\[7\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

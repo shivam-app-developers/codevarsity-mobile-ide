@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: OR Instead of XOR",
+    "language": "c",
+    "problemDescription": "In 2 3 2 4 4 the number 3 appears once, but the program prints 7.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {2, 3, 2, 4, 4};\n    int result = 0;\n    for (int i = 0; i < 5; i++) {\n        result |= a[i];\n    }\n    printf(\"%d\\n\", result);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int a[] = {2, 3, 2, 4, 4};\n    int result = 0;\n    for (int i = 0; i < 5; i++) {\n        result ^= a[i];\n    }\n    printf(\"%d\\n\", result);\n    return 0;\n}",
+      "explanation": "OR only ever sets bits, so equal values do not cancel out and the bits of every number pile up (2 | 3 | 4 = 7). XOR toggles bits, so a value that appears twice cancels itself."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

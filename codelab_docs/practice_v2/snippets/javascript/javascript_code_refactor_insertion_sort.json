@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shift Instead of Swapping",
+    "language": "javascript",
+    "problemDescription": "Each item is moved into place with repeated three-line swaps. Hold the item in a variable, shift the larger ones right and write it once. The output must stay the same.",
+    "initialCode": "var a = [9, 4, 7, 1, 8, 2];\nfor (var i = 1; i < a.length; i++) {\n  var j = i;\n  while (j > 0 && a[j - 1] > a[j]) {\n    var t = a[j];\n    a[j] = a[j - 1];\n    a[j - 1] = t;\n    j--;\n  }\n}\nconsole.log(a);",
+    "solution": {
+      "code": "var a = [9, 4, 7, 1, 8, 2];\nfor (var i = 1; i < a.length; i++) {\n  var key = a[i];\n  var j = i - 1;\n  while (j >= 0 && a[j] > key) {\n    a[j + 1] = a[j];\n    j--;\n  }\n  a[j + 1] = key;\n}\nconsole.log(a);",
+      "explanation": "A swap writes two items, a shift writes one. Holding the item in key and writing it once saves about two thirds of the writes."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2,4,7,8,9\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

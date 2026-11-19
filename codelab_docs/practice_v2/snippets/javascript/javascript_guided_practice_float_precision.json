@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Floating-Point Precision",
+    "language": "javascript",
+    "description": "Numbers like 0.1 cannot be stored exactly in binary, so 0.1 + 0.2 is not exactly 0.3. Compare with a tolerance, or round to the precision you need.",
+    "ghostCode": "console.log(0.1 + 0.2);\nconsole.log(0.1 + 0.2 === 0.3);\nconsole.log(Math.abs(0.1 + 0.2 - 0.3) < 0.0000001);\nconsole.log(Math.round((0.1 + 0.2) * 100) / 100);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0\\.30000000000000004[ \\t]*\\r?\\nfalse[ \\t]*\\r?\\ntrue[ \\t]*\\r?\\n0\\.3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

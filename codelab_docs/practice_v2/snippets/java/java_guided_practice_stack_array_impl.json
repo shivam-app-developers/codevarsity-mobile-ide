@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Stack with a Growing Array",
+    "language": "java",
+    "description": "Store the items in an array. When it is full, allocate an array twice as big and copy the old items over before adding the new one.",
+    "ghostCode": "public class Main {\n    static class IntStack {\n        private int[] data = new int[2];\n        private int size;\n\n        void push(int value) {\n            if (size == data.length) {\n                int[] bigger = new int[data.length * 2];\n                System.arraycopy(data, 0, bigger, 0, size);\n                data = bigger;\n            }\n            data[size++] = value;\n        }\n\n        int pop() {\n            if (size == 0) {\n                throw new IllegalStateException(\"stack is empty\");\n            }\n            return data[--size];\n        }\n\n        boolean isEmpty() {\n            return size == 0;\n        }\n    }\n\n    public static void main(String[] args) {\n        IntStack stack = new IntStack();\n        for (int i = 1; i <= 5; i++) {\n            stack.push(i * i);\n        }\n        StringBuilder sb = new StringBuilder();\n        while (!stack.isEmpty()) {\n            sb.append(stack.pop()).append(' ');\n        }\n        System.out.println(sb.toString().trim());\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25 16 9 4 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

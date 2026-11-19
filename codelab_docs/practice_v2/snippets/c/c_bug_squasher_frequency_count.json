@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Index Used Instead of Value",
+    "language": "c",
+    "problemDescription": "In 3 1 4 1 5 9 2 6 5 3 the digit 1 appears twice, but the program reports every digit exactly once.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int data[] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};\n    int counts[10] = {0};\n    for (int i = 0; i < 10; i++) {\n        counts[i]++;\n    }\n    for (int d = 0; d < 10; d++) {\n        if (counts[d] > 0) {\n            printf(\"%d: %d\\n\", d, counts[d]);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int data[] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};\n    int counts[10] = {0};\n    for (int i = 0; i < 10; i++) {\n        counts[data[i]]++;\n    }\n    for (int d = 0; d < 10; d++) {\n        if (counts[d] > 0) {\n            printf(\"%d: %d\\n\", d, counts[d]);\n        }\n    }\n    return 0;\n}",
+      "explanation": "The counter to increase is the one whose index equals the value read from the array. counts[i] counts positions, not values, so each position is counted once. counts[data[i]] counts the values themselves."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1: 2[ \\t]*\\r?\\n2: 1[ \\t]*\\r?\\n3: 2[ \\t]*\\r?\\n4: 1[ \\t]*\\r?\\n5: 2[ \\t]*\\r?\\n6: 1[ \\t]*\\r?\\n9: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

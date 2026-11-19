@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Parent Constructor Is Not Called",
+    "language": "javascript",
+    "problemDescription": "The dog should bark as Rex barks, but the program prints undefined barks.",
+    "buggyCode": "function Animal(name) {\n  this.name = name;\n}\n\nfunction Dog(name) {\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.speak = function () {\n  return this.name + \" barks\";\n};\n\nconsole.log(new Dog(\"Rex\").speak());",
+    "solution": {
+      "code": "function Animal(name) {\n  this.name = name;\n}\n\nfunction Dog(name) {\n  Animal.call(this, name);\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.speak = function () {\n  return this.name + \" barks\";\n};\n\nconsole.log(new Dog(\"Rex\").speak());",
+      "explanation": "Setting up the prototype only links the methods. The fields that the parent constructor creates (this.name) exist only if the child constructor calls it, which is what Animal.call(this, name) does."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Rex barks\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

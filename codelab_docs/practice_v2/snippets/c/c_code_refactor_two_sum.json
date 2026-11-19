@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Return the First Pair from a Function",
+    "language": "c",
+    "problemDescription": "A found flag, two result variables and a full double loop keep running after the answer is known. Put the search in a function that returns as soon as it finds a pair. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a[] = {10, 3, 8, 7, 1};\n    int t = 15;\n    int found = 0;\n    int x = -1, y = -1;\n    for (int i = 0; i < 5; i++) {\n        for (int j = 0; j < 5; j++) {\n            if (i != j && found == 0 && a[i] + a[j] == t) {\n                x = i;\n                y = j;\n                found = 1;\n            }\n        }\n    }\n    if (found == 1) {\n        printf(\"%d %d\\n\", x, y);\n    } else {\n        printf(\"none\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint find_pair(const int a[], int n, int target, int *first, int *second) {\n    for (int i = 0; i < n; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (a[i] + a[j] == target) {\n                *first = i;\n                *second = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int a[] = {10, 3, 8, 7, 1};\n    int x, y;\n    if (find_pair(a, 5, 15, &x, &y)) {\n        printf(\"%d %d\\n\", x, y);\n    } else {\n        printf(\"none\\n\");\n    }\n    return 0;\n}",
+      "explanation": "Returning from the function stops the search at the first match and the return value replaces the found flag. Starting j at i + 1 removes the need for the i != j test."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*2 3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pointer Basics",
+    "language": "c",
+    "description": "A pointer stores the address of a variable. & takes an address and * follows it, so *ptr reads and writes the original variable.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int value = 42;\n    int *ptr = &value;\n    printf(\"value = %d\\n\", value);\n    printf(\"*ptr = %d\\n\", *ptr);\n    *ptr = 100;\n    printf(\"value after *ptr = 100: %d\\n\", value);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*value = 42[ \\t]*\\r?\\n\\*ptr = 42[ \\t]*\\r?\\nvalue after \\*ptr = 100: 100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

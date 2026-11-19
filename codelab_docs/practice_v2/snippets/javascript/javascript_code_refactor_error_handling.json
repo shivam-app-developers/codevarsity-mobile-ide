@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Exceptions Instead of Returning null",
+    "language": "javascript",
+    "problemDescription": "parseAge returns null on failure and the caller has to check for it. Throw an error and handle it with try / catch / finally. The output must stay the same.",
+    "initialCode": "function parseAge(text) {\n  var age = Number(text);\n  if (isNaN(age)) {\n    return null;\n  }\n  return age;\n}\n\nvar inputs = [\"42\", \"abc\"];\nfor (var i = 0; i < inputs.length; i++) {\n  var age = parseAge(inputs[i]);\n  if (age === null) {\n    console.log(\"Caught: Not a number: \" + inputs[i]);\n    break;\n  }\n  console.log(age);\n}\nconsole.log(\"done\");",
+    "solution": {
+      "code": "function parseAge(text) {\n  var age = Number(text);\n  if (isNaN(age)) {\n    throw new Error(\"Not a number: \" + text);\n  }\n  return age;\n}\n\ntry {\n  console.log(parseAge(\"42\"));\n  console.log(parseAge(\"abc\"));\n} catch (e) {\n  console.log(\"Caught: \" + e.message);\n} finally {\n  console.log(\"done\");\n}",
+      "explanation": "A null return value can be ignored by accident, and every caller needs its own check. An exception cannot be ignored silently, carries a message, and the happy path reads without error handling."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*42[ \\t]*\\r?\\nCaught: Not a number: abc[ \\t]*\\r?\\ndone\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

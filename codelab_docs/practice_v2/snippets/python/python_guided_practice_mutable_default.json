@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: The Mutable Default Argument",
+    "language": "python",
+    "description": "A default value is created once, when the function is defined. A default list would be shared between calls, so use None as the default and create the list inside the function.",
+    "ghostCode": "def add_item(item, items=None):\n    if items is None:\n        items = []\n    items.append(item)\n    return items\n\n\nprint(add_item(\"a\"))\nprint(add_item(\"b\"))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['a'\\][ \\t]*\\r?\\n\\['b'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Getters and Setters",
+    "language": "javascript",
+    "description": "A getter or setter looks like a property but runs a function. Use them to compute one value from another and keep both in sync.",
+    "ghostCode": "var temperature = {\n  celsius: 25,\n  get fahrenheit() {\n    return this.celsius * 9 / 5 + 32;\n  },\n  set fahrenheit(value) {\n    this.celsius = (value - 32) * 5 / 9;\n  }\n};\n\nconsole.log(temperature.fahrenheit);\ntemperature.fahrenheit = 212;\nconsole.log(temperature.celsius);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*77[ \\t]*\\r?\\n100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

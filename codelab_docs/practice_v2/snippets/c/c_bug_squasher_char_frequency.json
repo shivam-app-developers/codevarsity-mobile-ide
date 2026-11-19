@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Letter Z Is Skipped",
+    "language": "c",
+    "problemDescription": "pizza contains the letter z twice, but the report has no line for z.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    char text[] = \"pizza\";\n    int counts[26] = {0};\n    for (int i = 0; text[i] != '\\0'; i++) {\n        counts[text[i] - 'a']++;\n    }\n    for (int c = 0; c < 25; c++) {\n        if (counts[c] > 0) {\n            printf(\"%c=%d\\n\", 'a' + c, counts[c]);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    char text[] = \"pizza\";\n    int counts[26] = {0};\n    for (int i = 0; text[i] != '\\0'; i++) {\n        counts[text[i] - 'a']++;\n    }\n    for (int c = 0; c < 26; c++) {\n        if (counts[c] > 0) {\n            printf(\"%c=%d\\n\", 'a' + c, counts[c]);\n        }\n    }\n    return 0;\n}",
+      "explanation": "The array has 26 slots, indexes 0 to 25, and z is the last one. Stopping at c < 25 never looks at index 25. The loop must run to c < 26."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a=1[ \\t]*\\r?\\ni=1[ \\t]*\\r?\\np=1[ \\t]*\\r?\\nz=2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

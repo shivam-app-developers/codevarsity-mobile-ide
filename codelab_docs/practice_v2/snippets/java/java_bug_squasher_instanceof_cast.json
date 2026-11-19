@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Casting Without Checking the Type",
+    "language": "java",
+    "problemDescription": "The program should print Fetching! twice and then Dogs: 2, but it crashes with a ClassCastException when it reaches the cat.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Animal[] animals = {new Dog(), new Cat(), new Dog()};\n        int dogs = 0;\n        for (Animal a : animals) {\n            Dog d = (Dog) a;\n            d.fetch();\n            dogs++;\n        }\n        System.out.println(\"Dogs: \" + dogs);\n    }\n}\n\nclass Animal {\n}\n\nclass Dog extends Animal {\n    void fetch() {\n        System.out.println(\"Fetching!\");\n    }\n}\n\nclass Cat extends Animal {\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Animal[] animals = {new Dog(), new Cat(), new Dog()};\n        int dogs = 0;\n        for (Animal a : animals) {\n            if (a instanceof Dog) {\n                Dog d = (Dog) a;\n                d.fetch();\n                dogs++;\n            }\n        }\n        System.out.println(\"Dogs: \" + dogs);\n    }\n}\n\nclass Animal {\n}\n\nclass Dog extends Animal {\n    void fetch() {\n        System.out.println(\"Fetching!\");\n    }\n}\n\nclass Cat extends Animal {\n}",
+      "explanation": "A cast tells the compiler to trust you, but the check happens at run time. A Cat is not a Dog, so the cast throws ClassCastException. Guard the cast with instanceof."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Fetching![ \\t]*\\r?\\nFetching![ \\t]*\\r?\\nDogs: 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

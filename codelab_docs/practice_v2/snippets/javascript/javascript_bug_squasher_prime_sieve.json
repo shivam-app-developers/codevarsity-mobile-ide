@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Limit Itself Is Skipped",
+    "language": "javascript",
+    "problemDescription": "29 is prime and the limit is 29, but the list of primes up to 29 does not contain it.",
+    "buggyCode": "function primesUpTo(limit) {\n  var composite = [];\n  var primes = [];\n  for (var i = 2; i < limit; i++) {\n    if (!composite[i]) {\n      primes.push(i);\n      for (var j = i * i; j <= limit; j += i) {\n        composite[j] = true;\n      }\n    }\n  }\n  return primes;\n}\n\nconsole.log(primesUpTo(29));",
+    "solution": {
+      "code": "function primesUpTo(limit) {\n  var composite = [];\n  var primes = [];\n  for (var i = 2; i <= limit; i++) {\n    if (!composite[i]) {\n      primes.push(i);\n      for (var j = i * i; j <= limit; j += i) {\n        composite[j] = true;\n      }\n    }\n  }\n  return primes;\n}\n\nconsole.log(primesUpTo(29));",
+      "explanation": "\"Up to limit\" includes the limit itself, so the loop condition must be i <= limit. With < the last number is never examined, which is only noticeable when the limit is prime."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[2,3,5,7,11,13,17,19,23,29\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

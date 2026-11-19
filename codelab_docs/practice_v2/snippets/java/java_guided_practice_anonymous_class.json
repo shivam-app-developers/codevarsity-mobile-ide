@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Anonymous Comparator",
+    "language": "java",
+    "description": "An anonymous class implements an interface right where it is needed. Here a Comparator tells Collections.sort to order words by length.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.Comparator;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> words = new ArrayList<>();\n        words.add(\"banana\");\n        words.add(\"kiwi\");\n        words.add(\"apple\");\n        Collections.sort(words, new Comparator<String>() {\n            @Override\n            public int compare(String a, String b) {\n                return a.length() - b.length();\n            }\n        });\n        System.out.println(words);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[kiwi, apple, banana\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

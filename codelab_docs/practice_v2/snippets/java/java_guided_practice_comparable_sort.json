@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Comparable and Sorting Objects",
+    "language": "java",
+    "description": "Implement Comparable<T> and compareTo to give objects a natural order. Collections.sort then uses it. A negative result means this object comes first.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Student> students = new ArrayList<>();\n        students.add(new Student(\"Ravi\", 72));\n        students.add(new Student(\"Meena\", 91));\n        students.add(new Student(\"Kiran\", 66));\n        Collections.sort(students);\n        for (Student s : students) {\n            System.out.println(s.name + \" \" + s.marks);\n        }\n    }\n}\n\nclass Student implements Comparable<Student> {\n    String name;\n    int marks;\n\n    Student(String name, int marks) {\n        this.name = name;\n        this.marks = marks;\n    }\n\n    @Override\n    public int compareTo(Student other) {\n        return Integer.compare(other.marks, marks);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Meena 91[ \\t]*\\r?\\nRavi 72[ \\t]*\\r?\\nKiran 66\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

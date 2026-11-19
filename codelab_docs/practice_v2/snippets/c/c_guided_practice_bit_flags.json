@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Set, Clear and Toggle Bits",
+    "language": "c",
+    "description": "OR with a mask sets a bit, AND with the inverted mask clears it, XOR toggles it, and shifting right then AND 1 reads it.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    unsigned int flags = 0;\n    flags |= (1u << 3);\n    flags |= (1u << 0);\n    printf(\"flags = %u\\n\", flags);\n    flags &= ~(1u << 0);\n    printf(\"after clearing bit 0 = %u\\n\", flags);\n    flags ^= (1u << 5);\n    printf(\"after toggling bit 5 = %u\\n\", flags);\n    printf(\"bit 3 is %s\\n\", (flags >> 3) & 1 ? \"set\" : \"clear\");\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*flags = 9[ \\t]*\\r?\\nafter clearing bit 0 = 8[ \\t]*\\r?\\nafter toggling bit 5 = 40[ \\t]*\\r?\\nbit 3 is set\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

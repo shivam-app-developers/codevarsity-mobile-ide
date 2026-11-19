@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Numbers Sorted as Text",
+    "language": "javascript",
+    "problemDescription": "The numbers should be sorted into [1,9,10,100], but the program prints [1,10,100,9].",
+    "buggyCode": "var nums = [10, 9, 1, 100];\nnums.sort();\nconsole.log(nums);",
+    "solution": {
+      "code": "var nums = [10, 9, 1, 100];\nnums.sort(function (a, b) {\n  return a - b;\n});\nconsole.log(nums);",
+      "explanation": "The default sort converts every item to a string and compares them alphabetically, so \"10\" comes before \"9\". A comparator that subtracts the two numbers sorts by value."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,9,10,100\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

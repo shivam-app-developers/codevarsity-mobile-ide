@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compare with is None and Drop the Empty else",
+    "language": "python",
+    "problemDescription": "The code compares with == None and has an else branch that assigns the variable to itself. Use is None and remove the else. The output must stay the same.",
+    "initialCode": "def add_item(item, items=None):\n    if items == None:\n        items = []\n    else:\n        items = items\n    items.append(item)\n    return items\n\n\nfirst = add_item(\"a\")\nsecond = add_item(\"b\", first)\nprint(first)\nprint(second)",
+    "solution": {
+      "code": "def add_item(item, items=None):\n    if items is None:\n        items = []\n    items.append(item)\n    return items\n\n\nfirst = add_item(\"a\")\nsecond = add_item(\"b\", first)\nprint(first)\nprint(second)",
+      "explanation": "None is a single object, so is None is the exact and fastest test (== can be overridden by a class), and an else branch that does nothing only adds noise."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\['a', 'b'\\][ \\t]*\\r?\\n\\['a', 'b'\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

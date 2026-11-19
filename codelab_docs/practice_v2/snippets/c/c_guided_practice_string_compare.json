@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Compare Two Strings",
+    "language": "c",
+    "description": "Compare strings character by character until they differ or one ends. The difference of the first differing characters tells which one comes first.",
+    "ghostCode": "#include <stdio.h>\n\nint compare(const char *a, const char *b) {\n    int i = 0;\n    while (a[i] != '\\0' && a[i] == b[i]) {\n        i++;\n    }\n    return a[i] - b[i];\n}\n\nint main() {\n    printf(\"%d\\n\", compare(\"apple\", \"apple\") == 0);\n    printf(\"%d\\n\", compare(\"apple\", \"banana\") < 0);\n    printf(\"%d\\n\", compare(\"pear\", \"peach\") > 0);\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1[ \\t]*\\r?\\n1[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

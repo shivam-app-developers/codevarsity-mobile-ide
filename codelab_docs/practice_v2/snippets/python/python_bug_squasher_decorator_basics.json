@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Wrapper Forgets to Return",
+    "language": "python",
+    "problemDescription": "greet should return the greeting Hello, Asha, but the program prints None.",
+    "buggyCode": "def count_calls(func):\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        func(*args, **kwargs)\n\n    wrapper.calls = 0\n    return wrapper\n\n\n@count_calls\ndef greet(name):\n    return \"Hello, \" + name\n\n\nprint(greet(\"Asha\"))",
+    "solution": {
+      "code": "def count_calls(func):\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return func(*args, **kwargs)\n\n    wrapper.calls = 0\n    return wrapper\n\n\n@count_calls\ndef greet(name):\n    return \"Hello, \" + name\n\n\nprint(greet(\"Asha\"))",
+      "explanation": "The decorated name now refers to the wrapper, so whatever the wrapper returns is what callers get. Without return the call runs but the result is discarded and the wrapper returns None."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello, Asha\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

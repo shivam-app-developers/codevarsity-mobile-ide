@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Text of Exactly the Limit Is Cut",
+    "language": "javascript",
+    "problemDescription": "A text that is exactly 10 characters long fits in a limit of 10 and should stay unchanged, but it is truncated.",
+    "buggyCode": "function truncate(text, max) {\n  if (text.length < max) {\n    return text;\n  }\n  return text.slice(0, max - 3) + \"...\";\n}\n\nconsole.log(truncate(\"abcdefghij\", 10));",
+    "solution": {
+      "code": "function truncate(text, max) {\n  if (text.length <= max) {\n    return text;\n  }\n  return text.slice(0, max - 3) + \"...\";\n}\n\nconsole.log(truncate(\"abcdefghij\", 10));",
+      "explanation": "A text of exactly max characters still fits, so the check must allow equality (<=). With < the boundary case is shortened even though no shortening is needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*abcdefghij\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

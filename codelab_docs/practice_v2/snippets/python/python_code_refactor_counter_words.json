@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Counter Instead of a Dictionary and a Sort",
+    "language": "python",
+    "problemDescription": "A dictionary is filled with an if / else and then sorted by count. Use Counter and most_common. The output must stay the same.",
+    "initialCode": "text = \"the cat and the hat and the bat\"\ncounts = {}\nfor word in text.split():\n    if word in counts:\n        counts[word] += 1\n    else:\n        counts[word] = 1\ntop = sorted(counts.items(), key=lambda item: -item[1])[:2]\nprint(top)",
+    "solution": {
+      "code": "from collections import Counter\n\ntext = \"the cat and the hat and the bat\"\nprint(Counter(text.split()).most_common(2))",
+      "explanation": "Counter is made for counting: it handles the first occurrence of an item without a branch and sorts by frequency for you."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('the', 3\\), \\('and', 2\\)\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

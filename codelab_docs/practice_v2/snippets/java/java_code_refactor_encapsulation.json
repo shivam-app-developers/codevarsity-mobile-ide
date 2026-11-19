@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move the Rule into the Class",
+    "language": "java",
+    "problemDescription": "The caller changes a public balance field and repeats the check \"amount is positive and not more than the balance\" before every withdrawal. Make the field private and put the rule in a withdraw method. The output must stay the same.",
+    "initialCode": "public class Main {\n    public static void main(String[] args) {\n        Account a = new Account();\n        a.balance = 100;\n        if (50 > 0 && 50 <= a.balance) {\n            a.balance = a.balance - 50;\n        }\n        if (80 > 0 && 80 <= a.balance) {\n            a.balance = a.balance - 80;\n        }\n        System.out.println(a.balance);\n    }\n}\n\nclass Account {\n    int balance;\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Account a = new Account(100);\n        a.withdraw(50);\n        a.withdraw(80);\n        System.out.println(a.getBalance());\n    }\n}\n\nclass Account {\n    private int balance;\n\n    Account(int opening) {\n        balance = opening;\n    }\n\n    void withdraw(int amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n        }\n    }\n\n    int getBalance() {\n        return balance;\n    }\n}",
+      "explanation": "With a private field the rule lives in exactly one place and cannot be bypassed. The callers say what they want (withdraw 80) and the class decides whether it is allowed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

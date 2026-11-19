@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compare Without a Reversed Copy",
+    "language": "c",
+    "problemDescription": "A reversed copy of the word is built and compared with strcmp. Write is_palindrome so it compares characters from both ends and needs no copy. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char s[] = \"madam\";\n    char r[20];\n    int n = strlen(s);\n    for (int i = 0; i < n; i++) {\n        r[i] = s[n - i - 1];\n    }\n    r[n] = '\\0';\n    if (strcmp(s, r) == 0) {\n        printf(\"palindrome\\n\");\n    } else {\n        printf(\"not palindrome\\n\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint is_palindrome(const char *s) {\n    for (int i = 0, j = strlen(s) - 1; i < j; i++, j--) {\n        if (s[i] != s[j]) {\n            return 0;\n        }\n    }\n    return 1;\n}\n\nint main() {\n    printf(\"%s\\n\", is_palindrome(\"madam\") ? \"palindrome\" : \"not palindrome\");\n    return 0;\n}",
+      "explanation": "Only half of the characters need comparing, no extra memory is used, and the function stops at the first mismatch."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*palindrome\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

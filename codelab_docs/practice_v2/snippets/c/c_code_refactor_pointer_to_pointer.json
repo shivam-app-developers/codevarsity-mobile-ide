@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Return the Pointer Instead of Using a Global",
+    "language": "c",
+    "problemDescription": "A global pointer receives the result of choose. Return the chosen pointer from the function instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint *chosen;\n\nvoid choose(int *a, int *b) {\n    if (*a >= *b) {\n        chosen = a;\n    } else {\n        chosen = b;\n    }\n}\n\nint main() {\n    int p = 5, q = 9;\n    choose(&p, &q);\n    printf(\"%d\\n\", *chosen);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint *larger(int *a, int *b) {\n    return *a >= *b ? a : b;\n}\n\nint main() {\n    int p = 5, q = 9;\n    printf(\"%d\\n\", *larger(&p, &q));\n    return 0;\n}",
+      "explanation": "A function that returns its result is easier to follow than one that leaves it in a global variable, and it can be used inside an expression. Only return pointers to data that outlives the call, like these caller variables."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

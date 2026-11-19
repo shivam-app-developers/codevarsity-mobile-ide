@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Error Prototype Is Not Linked",
+    "language": "javascript",
+    "problemDescription": "A ValidationError should also be an Error (true true), but the program prints true false.",
+    "buggyCode": "function ValidationError(message) {\n  this.name = \"ValidationError\";\n  this.message = message;\n}\nValidationError.prototype.constructor = ValidationError;\n\ntry {\n  throw new ValidationError(\"bad\");\n} catch (e) {\n  console.log(e instanceof ValidationError, e instanceof Error);\n}",
+    "solution": {
+      "code": "function ValidationError(message) {\n  this.name = \"ValidationError\";\n  this.message = message;\n}\nValidationError.prototype = Object.create(Error.prototype);\nValidationError.prototype.constructor = ValidationError;\n\ntry {\n  throw new ValidationError(\"bad\");\n} catch (e) {\n  console.log(e instanceof ValidationError, e instanceof Error);\n}",
+      "explanation": "instanceof Error checks whether Error.prototype is in the prototype chain of the object. Without the Object.create(Error.prototype) link the custom error has no connection to Error, so code that catches generic errors will not recognise it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*true true\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

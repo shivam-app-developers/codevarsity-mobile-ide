@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: reduce Instead of an Accumulator Loop",
+    "language": "javascript",
+    "problemDescription": "A loop with a running total adds up price times quantity for every cart item. Use reduce. The output must stay the same.",
+    "initialCode": "var cart = [\n  { price: 5, qty: 2 },\n  { price: 3, qty: 4 },\n  { price: 10, qty: 1 }\n];\nvar total = 0;\nfor (var i = 0; i < cart.length; i++) {\n  total += cart[i].price * cart[i].qty;\n}\nconsole.log(total);",
+    "solution": {
+      "code": "var cart = [\n  { price: 5, qty: 2 },\n  { price: 3, qty: 4 },\n  { price: 10, qty: 1 }\n];\nvar total = cart.reduce(function (sum, item) {\n  return sum + item.price * item.qty;\n}, 0);\nconsole.log(total);",
+      "explanation": "reduce names the accumulator and the item, and the loop counter, the index lookups and the separate total variable disappear."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*32\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

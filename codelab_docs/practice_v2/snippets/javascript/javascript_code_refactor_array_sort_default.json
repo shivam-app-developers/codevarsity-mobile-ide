@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Built-In sort Instead of a Hand-Written Loop",
+    "language": "javascript",
+    "problemDescription": "A bubble sort with a swap sorts the numbers. Use sort with a comparator. The output must stay the same.",
+    "initialCode": "var nums = [29, 7, 100, 14, 3];\nfor (var i = 0; i < nums.length; i++) {\n  for (var j = 0; j < nums.length - 1 - i; j++) {\n    if (nums[j] > nums[j + 1]) {\n      var temp = nums[j];\n      nums[j] = nums[j + 1];\n      nums[j + 1] = temp;\n    }\n  }\n}\nconsole.log(nums);",
+    "solution": {
+      "code": "var nums = [29, 7, 100, 14, 3];\nnums.sort(function (a, b) {\n  return a - b;\n});\nconsole.log(nums);",
+      "explanation": "The built-in sort is faster and well tested, and the comparator states the ordering rule in one line instead of burying it in loops and swaps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,7,14,29,100\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

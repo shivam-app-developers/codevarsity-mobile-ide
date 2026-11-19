@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Center Is Counted Twice",
+    "language": "c",
+    "problemDescription": "Both diagonals together sum to 24 when the center element 5 is counted only once, but the program prints 29.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{2, 0, 1}, {4, 5, 6}, {7, 8, 9}};\n    int total = 0;\n    for (int i = 0; i < 3; i++) {\n        total += m[i][i];\n        total += m[i][2 - i];\n    }\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int m[3][3] = {{2, 0, 1}, {4, 5, 6}, {7, 8, 9}};\n    int total = 0;\n    for (int i = 0; i < 3; i++) {\n        total += m[i][i];\n        if (i != 2 - i) {\n            total += m[i][2 - i];\n        }\n    }\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+      "explanation": "In an odd-sized matrix both diagonals pass through the center, so its value would be added twice. The test i != 2 - i skips the anti-diagonal element when it is the same cell as the main-diagonal one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*24\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Flag Is Never Reset",
+    "language": "c",
+    "problemDescription": "Once one word fails the check, every later word is reported as no. noon should be yes.",
+    "buggyCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *words[] = {\"racecar\", \"banana\", \"noon\", \"abca\"};\n    int ok = 1;\n    for (int w = 0; w < 4; w++) {\n        const char *s = words[w];\n        for (int i = 0, j = strlen(s) - 1; i < j; i++, j--) {\n            if (s[i] != s[j]) {\n                ok = 0;\n            }\n        }\n        printf(\"%s: %s\\n\", s, ok ? \"yes\" : \"no\");\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    const char *words[] = {\"racecar\", \"banana\", \"noon\", \"abca\"};\n    for (int w = 0; w < 4; w++) {\n        const char *s = words[w];\n        int ok = 1;\n        for (int i = 0, j = strlen(s) - 1; i < j; i++, j--) {\n            if (s[i] != s[j]) {\n                ok = 0;\n            }\n        }\n        printf(\"%s: %s\\n\", s, ok ? \"yes\" : \"no\");\n    }\n    return 0;\n}",
+      "explanation": "The flag ok has to start as 1 for every word. Declared outside the loop it stays 0 after banana fails, so all following words look like failures. Reset state at the start of each iteration."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*racecar: yes[ \\t]*\\r?\\nbanana: no[ \\t]*\\r?\\nnoon: yes[ \\t]*\\r?\\nabca: no\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

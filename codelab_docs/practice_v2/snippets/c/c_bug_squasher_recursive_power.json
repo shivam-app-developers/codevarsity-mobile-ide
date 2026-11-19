@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Odd Case Forgets the Base",
+    "language": "c",
+    "problemDescription": "2 to the power of 10 should print 1024, but the program prints 1.",
+    "buggyCode": "#include <stdio.h>\n\nint power(int base, int exp) {\n    if (exp == 0) {\n        return 1;\n    }\n    int half = power(base, exp / 2);\n    if (exp % 2 == 0) {\n        return half * half;\n    }\n    return half * half;\n}\n\nint main() {\n    printf(\"%d\\n\", power(2, 10));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint power(int base, int exp) {\n    if (exp == 0) {\n        return 1;\n    }\n    int half = power(base, exp / 2);\n    if (exp % 2 == 0) {\n        return half * half;\n    }\n    return half * half * base;\n}\n\nint main() {\n    printf(\"%d\\n\", power(2, 10));\n    return 0;\n}",
+      "explanation": "When the exponent is odd, squaring the half loses one factor of the base, so it must be multiplied in again. Without it every odd step produces 1, and the error propagates to every result built on top of it."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1024\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

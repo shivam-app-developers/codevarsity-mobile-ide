@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Static Nested Class for a Helper That Needs No Outer State",
+    "language": "java",
+    "problemDescription": "The Helper class does not use any field of Main, yet it is an inner class that needs an outer object. Make it a static nested class. The output must stay the same.",
+    "initialCode": "public class Main {\n    class Helper {\n        int twice(int x) {\n            return x * 2;\n        }\n    }\n\n    public static void main(String[] args) {\n        Main outer = new Main();\n        Helper helper = outer.new Helper();\n        System.out.println(helper.twice(21));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static class Helper {\n        int twice(int x) {\n            return x * 2;\n        }\n    }\n\n    public static void main(String[] args) {\n        Helper helper = new Helper();\n        System.out.println(helper.twice(21));\n    }\n}",
+      "explanation": "A non-static inner class silently keeps a reference to its outer object, which costs memory and can keep that object alive. A static nested class is just a class that lives inside another one's namespace."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*42\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

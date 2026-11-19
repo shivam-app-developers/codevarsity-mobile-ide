@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Counting Array Instead of Many Counters",
+    "language": "c",
+    "problemDescription": "There is one counter variable and one if for every value. Replace them with a single counting array and a loop. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int d[] = {1, 0, 2, 1, 0, 1, 2, 2};\n    int c0 = 0, c1 = 0, c2 = 0;\n    for (int i = 0; i < 8; i++) {\n        if (d[i] == 0) c0++;\n        if (d[i] == 1) c1++;\n        if (d[i] == 2) c2++;\n    }\n    printf(\"0:%d\\n\", c0);\n    printf(\"1:%d\\n\", c1);\n    printf(\"2:%d\\n\", c2);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int digits[] = {1, 0, 2, 1, 0, 1, 2, 2};\n    int counts[3] = {0};\n    for (int i = 0; i < 8; i++) {\n        counts[digits[i]]++;\n    }\n    for (int v = 0; v < 3; v++) {\n        printf(\"%d:%d\\n\", v, counts[v]);\n    }\n    return 0;\n}",
+      "explanation": "The value itself selects the counter, so the chain of ifs collapses into one statement and adding a fourth value only means a bigger array."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*0:2[ \\t]*\\r?\\n1:3[ \\t]*\\r?\\n2:3\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

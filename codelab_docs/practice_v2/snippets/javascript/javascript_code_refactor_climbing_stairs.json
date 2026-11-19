@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Loop Instead of Exponential Recursion",
+    "language": "javascript",
+    "problemDescription": "The recursive version calls itself twice per step and repeats the same work hundreds of thousands of times. Rewrite it with a loop. The output must stay the same.",
+    "initialCode": "function ways(n) {\n  if (n <= 2) {\n    return n;\n  }\n  return ways(n - 1) + ways(n - 2);\n}\n\nconsole.log(ways(25));",
+    "solution": {
+      "code": "function ways(n) {\n  if (n <= 2) {\n    return n;\n  }\n  var prev = 1;\n  var current = 2;\n  for (var i = 3; i <= n; i++) {\n    var next = prev + current;\n    prev = current;\n    current = next;\n  }\n  return current;\n}\n\nconsole.log(ways(25));",
+      "explanation": "Only the last two values are needed, so the loop keeps two variables and finishes in n steps. The recursion recomputes the same sub-problems exponentially often."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*121393\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Tuple Unpacking Instead of Index Chains",
+    "language": "python",
+    "problemDescription": "The loop reaches into result[len(result) - 1] and intervals[i][0] again and again. Unpack each interval and use result[-1]. The output must stay the same.",
+    "initialCode": "intervals = sorted([[1, 3], [2, 6], [8, 10]])\nresult = []\nfor i in range(len(intervals)):\n    if len(result) == 0:\n        result.append(intervals[i])\n    else:\n        if intervals[i][0] <= result[len(result) - 1][1]:\n            if intervals[i][1] > result[len(result) - 1][1]:\n                result[len(result) - 1][1] = intervals[i][1]\n        else:\n            result.append(intervals[i])\nprint(result)",
+    "solution": {
+      "code": "intervals = sorted([[1, 3], [2, 6], [8, 10]])\nresult = [intervals[0]]\nfor start, end in intervals[1:]:\n    if start <= result[-1][1]:\n        result[-1][1] = max(result[-1][1], end)\n    else:\n        result.append([start, end])\nprint(result)",
+      "explanation": "Unpacking names the two numbers, result[-1] reads the last item without arithmetic, and max replaces the nested if that only updated the end."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[1, 6\\], \\[8, 10\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

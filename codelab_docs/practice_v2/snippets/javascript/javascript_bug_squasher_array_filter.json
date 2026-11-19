@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Boundary Value Is Excluded",
+    "language": "javascript",
+    "problemDescription": "Someone aged exactly 18 is an adult, so the result should be [18,25,40], but the program prints [25,40].",
+    "buggyCode": "var ages = [12, 18, 25, 9, 40];\nvar adults = ages.filter(function (age) {\n  return age > 18;\n});\nconsole.log(adults);",
+    "solution": {
+      "code": "var ages = [12, 18, 25, 9, 40];\nvar adults = ages.filter(function (age) {\n  return age >= 18;\n});\nconsole.log(adults);",
+      "explanation": "The rule \"18 or older\" includes 18, so the comparison must be >=. With > the boundary value itself is filtered out. Always test the values at the edge of a condition."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[18,25,40\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

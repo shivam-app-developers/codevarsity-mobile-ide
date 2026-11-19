@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Power of Two Check",
+    "language": "c",
+    "description": "A power of two has exactly one bit set, so n & (n - 1) clears it and leaves zero. Zero itself must be excluded.",
+    "ghostCode": "#include <stdio.h>\n\nint is_power_of_two(unsigned int n) {\n    return n > 0 && (n & (n - 1)) == 0;\n}\n\nint main() {\n    unsigned int tests[] = {1, 6, 16, 18, 64, 100};\n    for (int i = 0; i < 6; i++) {\n        printf(\"%u: %s\\n\", tests[i], is_power_of_two(tests[i]) ? \"yes\" : \"no\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1: yes[ \\t]*\\r?\\n6: no[ \\t]*\\r?\\n16: yes[ \\t]*\\r?\\n18: no[ \\t]*\\r?\\n64: yes[ \\t]*\\r?\\n100: no\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

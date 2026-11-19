@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Number Itself Is Added",
+    "language": "c",
+    "problemDescription": "6 and 28 are perfect numbers, but the program prints nothing.",
+    "buggyCode": "#include <stdio.h>\n\nint main() {\n    for (int n = 2; n <= 30; n++) {\n        int sum = 0;\n        for (int d = 1; d <= n; d++) {\n            if (n % d == 0) {\n                sum += d;\n            }\n        }\n        if (sum == n) {\n            printf(\"%d\\n\", n);\n        }\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    for (int n = 2; n <= 30; n++) {\n        int sum = 0;\n        for (int d = 1; d < n; d++) {\n            if (n % d == 0) {\n                sum += d;\n            }\n        }\n        if (sum == n) {\n            printf(\"%d\\n\", n);\n        }\n    }\n    return 0;\n}",
+      "explanation": "Proper divisors exclude the number itself. With d <= n the number is added to its own divisor sum, so the sum is always bigger than n and no number ever qualifies."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6[ \\t]*\\r?\\n28\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

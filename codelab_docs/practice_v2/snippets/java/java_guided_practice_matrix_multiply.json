@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Matrix Multiplication",
+    "language": "java",
+    "description": "Entry (i, j) of the product is the sum over k of a[i][k] * b[k][j]: three nested loops with += into the result.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        int[][] a = {{1, 2}, {3, 4}};\n        int[][] b = {{5, 6}, {7, 8}};\n        int[][] c = new int[2][2];\n        for (int i = 0; i < 2; i++) {\n            for (int j = 0; j < 2; j++) {\n                for (int k = 0; k < 2; k++) {\n                    c[i][j] += a[i][k] * b[k][j];\n                }\n            }\n        }\n        for (int[] row : c) {\n            System.out.println(row[0] + \" \" + row[1]);\n        }\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*19 22[ \\t]*\\r?\\n43 50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

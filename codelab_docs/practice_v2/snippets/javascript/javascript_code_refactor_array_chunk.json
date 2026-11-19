@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A chunk Function Instead of Manual Bookkeeping",
+    "language": "javascript",
+    "problemDescription": "A current array is filled and pushed whenever it reaches 2 items, with a special case after the loop. Use the slice-based chunk function. The output must stay the same.",
+    "initialCode": "var items = [\"a\", \"b\", \"c\", \"d\", \"e\"];\nvar groups = [];\nvar current = [];\nfor (var i = 0; i < items.length; i++) {\n  current.push(items[i]);\n  if (current.length === 2) {\n    groups.push(current);\n    current = [];\n  }\n}\nif (current.length > 0) {\n  groups.push(current);\n}\nconsole.log(groups);",
+    "solution": {
+      "code": "function chunk(list, size) {\n  var chunks = [];\n  for (var i = 0; i < list.length; i += size) {\n    chunks.push(list.slice(i, i + size));\n  }\n  return chunks;\n}\n\nconsole.log(chunk([\"a\", \"b\", \"c\", \"d\", \"e\"], 2));",
+      "explanation": "slice handles the short last chunk automatically, so the special case after the loop and the temporary array are not needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[\"a\",\"b\"\\],\\[\"c\",\"d\"\\],\\[\"e\"\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

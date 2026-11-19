@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Matrix Multiplication",
+    "language": "c",
+    "description": "Entry (i, j) of the product is the sum over k of a[i][k] * b[k][j]. That needs three nested loops and an accumulator that starts at 0.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int a[2][2] = {{1, 2}, {3, 4}};\n    int b[2][2] = {{5, 6}, {7, 8}};\n    int c[2][2] = {{0}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2; j++) {\n            for (int k = 0; k < 2; k++) {\n                c[i][j] += a[i][k] * b[k][j];\n            }\n        }\n    }\n    for (int i = 0; i < 2; i++) {\n        printf(\"%d %d\\n\", c[i][0], c[i][1]);\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*19 22[ \\t]*\\r?\\n43 50\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

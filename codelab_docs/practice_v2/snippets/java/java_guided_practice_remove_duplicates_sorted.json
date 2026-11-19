@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Remove Duplicates from a Sorted Array",
+    "language": "java",
+    "description": "Use a read index and a write index. Copy an element forward only when it differs from the last element written, and return how many unique values there are.",
+    "ghostCode": "public class Main {\n    static int removeDuplicates(int[] a) {\n        if (a.length == 0) {\n            return 0;\n        }\n        int write = 1;\n        for (int read = 1; read < a.length; read++) {\n            if (a[read] != a[write - 1]) {\n                a[write++] = a[read];\n            }\n        }\n        return write;\n    }\n\n    public static void main(String[] args) {\n        int[] a = {1, 1, 2, 3, 3, 3, 4};\n        int n = removeDuplicates(a);\n        System.out.println(\"Unique count: \" + n);\n        for (int i = 0; i < n; i++) {\n            System.out.print(a[i] + \" \");\n        }\n        System.out.println();\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Unique count: 4[ \\t]*\\r?\\n1 2 3 4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Integer.compare Instead of an if Ladder",
+    "language": "java",
+    "problemDescription": "compareTo uses an if / else-if / else ladder to return -1, 1 or 0. Replace the ladder with Integer.compare. The output must stay the same.",
+    "initialCode": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        Player[] players = {new Player(\"Ann\", 40), new Player(\"Raj\", 95), new Player(\"Mia\", 72)};\n        Arrays.sort(players);\n        for (Player p : players) {\n            System.out.println(p.name + \" \" + p.score);\n        }\n    }\n}\n\nclass Player implements Comparable<Player> {\n    String name;\n    int score;\n\n    Player(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    @Override\n    public int compareTo(Player other) {\n        if (score > other.score) {\n            return -1;\n        } else if (score < other.score) {\n            return 1;\n        } else {\n            return 0;\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        Player[] players = {new Player(\"Ann\", 40), new Player(\"Raj\", 95), new Player(\"Mia\", 72)};\n        Arrays.sort(players);\n        for (Player p : players) {\n            System.out.println(p.name + \" \" + p.score);\n        }\n    }\n}\n\nclass Player implements Comparable<Player> {\n    String name;\n    int score;\n\n    Player(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    @Override\n    public int compareTo(Player other) {\n        return Integer.compare(other.score, score);\n    }\n}",
+      "explanation": "Integer.compare does the three-way comparison correctly. (Writing score - other.score instead would overflow for very large or very small values, which is why Integer.compare is preferred.)"
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Raj 95[ \\t]*\\r?\\nMia 72[ \\t]*\\r?\\nAnn 40\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A pipe Helper Instead of Numbered Steps",
+    "language": "javascript",
+    "problemDescription": "A string is cleaned in three separate steps with throw-away variables. Write small functions and chain them with a pipe helper. The output must stay the same.",
+    "initialCode": "var input = \"  Hello World  \";\nvar step1 = input.trim();\nvar step2 = step1.toLowerCase();\nvar step3 = step2.split(\" \").join(\"-\");\nconsole.log(step3);",
+    "solution": {
+      "code": "function pipe() {\n  var fns = Array.prototype.slice.call(arguments);\n  return function (x) {\n    return fns.reduce(function (value, fn) {\n      return fn(value);\n    }, x);\n  };\n}\n\nfunction trim(s) {\n  return s.trim();\n}\n\nfunction lower(s) {\n  return s.toLowerCase();\n}\n\nfunction hyphenate(s) {\n  return s.split(\" \").join(\"-\");\n}\n\nvar slugify = pipe(trim, lower, hyphenate);\nconsole.log(slugify(\"  Hello World  \"));",
+      "explanation": "Each step is now a named function that can be tested and reused, and slugify is simply the list of steps in order. Throw-away variables like step1 and step2 disappear."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*hello-world\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

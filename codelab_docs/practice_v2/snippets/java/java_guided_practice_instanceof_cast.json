@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: instanceof and Casting",
+    "language": "java",
+    "description": "Before casting to a subclass, test the object with instanceof. A wrong cast throws a ClassCastException at run time.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        Animal[] animals = {new Dog(), new Cat(), new Dog()};\n        int dogs = 0;\n        for (Animal a : animals) {\n            if (a instanceof Dog) {\n                Dog d = (Dog) a;\n                d.fetch();\n                dogs++;\n            }\n        }\n        System.out.println(\"Dogs: \" + dogs);\n    }\n}\n\nclass Animal {\n}\n\nclass Dog extends Animal {\n    void fetch() {\n        System.out.println(\"Fetching!\");\n    }\n}\n\nclass Cat extends Animal {\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Fetching![ \\t]*\\r?\\nFetching![ \\t]*\\r?\\nDogs: 2\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

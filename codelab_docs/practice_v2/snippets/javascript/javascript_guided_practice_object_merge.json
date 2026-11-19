@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Merging Objects with Defaults",
+    "language": "javascript",
+    "description": "Object.assign copies properties from left to right, so later objects override earlier ones. Put the defaults first and the user's options last.",
+    "ghostCode": "var defaults = { color: \"blue\", size: \"M\", count: 1 };\nvar options = { size: \"L\", count: 5 };\nvar config = Object.assign({}, defaults, options);\nconsole.log(config);\nObject.freeze(config);\nconfig.color = \"red\";\nconsole.log(config.color);",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"color\":\"blue\",\"size\":\"L\",\"count\":5\\}[ \\t]*\\r?\\nblue\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

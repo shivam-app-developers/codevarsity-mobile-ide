@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: A Gap Before the Second Word",
+    "language": "c",
+    "problemDescription": "Joining Code and Varsity should print CodeVarsity, but the program prints only Code.",
+    "buggyCode": "#include <stdio.h>\n\nvoid append(char *dest, const char *src) {\n    int end = 0;\n    while (dest[end] != '\\0') {\n        end++;\n    }\n    int i = 0;\n    while (src[i] != '\\0') {\n        dest[end + i + 1] = src[i];\n        i++;\n    }\n    dest[end + i] = '\\0';\n}\n\nint main() {\n    char text[30] = \"Code\";\n    append(text, \"Varsity\");\n    printf(\"%s\\n\", text);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid append(char *dest, const char *src) {\n    int end = 0;\n    while (dest[end] != '\\0') {\n        end++;\n    }\n    int i = 0;\n    while (src[i] != '\\0') {\n        dest[end + i] = src[i];\n        i++;\n    }\n    dest[end + i] = '\\0';\n}\n\nint main() {\n    char text[30] = \"Code\";\n    append(text, \"Varsity\");\n    printf(\"%s\\n\", text);\n    return 0;\n}",
+      "explanation": "Writing one position too far leaves the original terminating '\\0' of Code in place, so the string still ends right after Code and the new text is never seen by printf. The copy must start exactly at the old terminator."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*CodeVarsity\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

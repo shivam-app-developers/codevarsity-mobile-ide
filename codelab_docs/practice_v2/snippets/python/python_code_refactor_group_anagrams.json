@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: defaultdict Instead of Checking for the Key",
+    "language": "python",
+    "problemDescription": "Every word first checks whether its key exists and creates an empty list if not. Use defaultdict(list). The output must stay the same.",
+    "initialCode": "words = [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]\ngroups = {}\nfor word in words:\n    key = \"\".join(sorted(word))\n    if key not in groups:\n        groups[key] = []\n    groups[key].append(word)\nprint(list(groups.values()))",
+    "solution": {
+      "code": "from collections import defaultdict\n\nwords = [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]\ngroups = defaultdict(list)\nfor word in words:\n    groups[\"\".join(sorted(word))].append(word)\nprint(list(groups.values()))",
+      "explanation": "defaultdict creates the empty list the first time a key is used, so the \"is the key there yet?\" branch disappears."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\['eat', 'tea', 'ate'\\], \\['tan', 'nat'\\], \\['bat'\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

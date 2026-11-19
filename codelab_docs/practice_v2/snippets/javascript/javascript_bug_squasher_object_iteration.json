@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Dot Notation Used with a Variable Key",
+    "language": "javascript",
+    "problemDescription": "The total of the scores should be 247, but the program prints NaN.",
+    "buggyCode": "var scores = { asha: 90, ravi: 72, meena: 85 };\nvar total = 0;\nfor (var name in scores) {\n  total += scores.name;\n}\nconsole.log(\"total: \" + total);",
+    "solution": {
+      "code": "var scores = { asha: 90, ravi: 72, meena: 85 };\nvar total = 0;\nfor (var name in scores) {\n  total += scores[name];\n}\nconsole.log(\"total: \" + total);",
+      "explanation": "scores.name looks for a property literally called name, which does not exist, so it is undefined and the sum becomes NaN. When the key is stored in a variable, use the bracket form scores[name]."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*total: 247\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

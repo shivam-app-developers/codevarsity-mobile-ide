@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every Letter Becomes a Capital",
+    "language": "c",
+    "problemDescription": "hello big world should become Hello Big World, but the program prints HELLO BIG WORLD.",
+    "buggyCode": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    char s[] = \"hello big world\";\n    int new_word = 1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (isspace(s[i])) {\n            new_word = 1;\n        } else if (new_word) {\n            s[i] = toupper(s[i]);\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n#include <ctype.h>\n\nint main() {\n    char s[] = \"hello big world\";\n    int new_word = 1;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (isspace(s[i])) {\n            new_word = 1;\n        } else if (new_word) {\n            s[i] = toupper(s[i]);\n            new_word = 0;\n        }\n    }\n    printf(\"%s\\n\", s);\n    return 0;\n}",
+      "explanation": "The flag must be cleared after the first letter of a word is capitalised. Left at 1, every following letter is treated as the start of a new word and gets capitalised too."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Hello Big World\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

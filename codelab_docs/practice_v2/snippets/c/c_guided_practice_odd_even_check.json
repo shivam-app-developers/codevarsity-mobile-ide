@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Odd or Even",
+    "language": "c",
+    "description": "Use the remainder operator to decide whether each number from 1 to 6 is even or odd.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    for (int n = 1; n <= 6; n++) {\n        if (n % 2 == 0) {\n            printf(\"%d is even\\n\", n);\n        } else {\n            printf(\"%d is odd\\n\", n);\n        }\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1 is odd[ \\t]*\\r?\\n2 is even[ \\t]*\\r?\\n3 is odd[ \\t]*\\r?\\n4 is even[ \\t]*\\r?\\n5 is odd[ \\t]*\\r?\\n6 is even\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

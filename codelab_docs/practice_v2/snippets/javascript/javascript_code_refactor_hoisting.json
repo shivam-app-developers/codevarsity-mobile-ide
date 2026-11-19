@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Define Before Use",
+    "language": "javascript",
+    "problemDescription": "The code calls a function that is defined further down and works only because of hoisting. Move the definition above the call so it reads top to bottom. The output must stay the same.",
+    "initialCode": "var result = add(2, 3);\nconsole.log(result);\n\nfunction add(a, b) {\n  return a + b;\n}",
+    "solution": {
+      "code": "function add(a, b) {\n  return a + b;\n}\n\nvar result = add(2, 3);\nconsole.log(result);",
+      "explanation": "Defining things before they are used makes the order of execution obvious, and it keeps working if the function is later changed into a function expression, where hoisting would not help."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*5\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Pass with an Object Instead of Nested Loops",
+    "language": "javascript",
+    "problemDescription": "Every pair of numbers is tried with two nested loops. Replace them with a lookup object. The output must stay the same.",
+    "initialCode": "var nums = [3, 2, 4];\nvar target = 6;\nfor (var i = 0; i < nums.length; i++) {\n  for (var j = i + 1; j < nums.length; j++) {\n    if (nums[i] + nums[j] === target) {\n      console.log([i, j]);\n    }\n  }\n}",
+    "solution": {
+      "code": "var nums = [3, 2, 4];\nvar target = 6;\nvar seen = {};\nfor (var i = 0; i < nums.length; i++) {\n  var need = target - nums[i];\n  if (seen.hasOwnProperty(need)) {\n    console.log([seen[need], i]);\n    break;\n  }\n  seen[nums[i]] = i;\n}",
+      "explanation": "A lookup answers \"have I seen the complement?\" in constant time, so one pass of n steps replaces the n squared pairs."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

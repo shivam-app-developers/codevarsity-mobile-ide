@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Reverse a Number",
+    "language": "java",
+    "description": "Build the reversed number digit by digit: multiply what you have by 10 and add the next digit.",
+    "ghostCode": "public class Main {\n    public static void main(String[] args) {\n        int n = 12345;\n        int reversed = 0;\n        while (n > 0) {\n            reversed = reversed * 10 + n % 10;\n            n /= 10;\n        }\n        System.out.println(\"Reversed: \" + reversed);\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Reversed: 54321\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

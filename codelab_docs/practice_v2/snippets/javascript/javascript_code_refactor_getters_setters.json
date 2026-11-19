@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Accessor Properties Instead of get and set Methods",
+    "language": "javascript",
+    "problemDescription": "getFahrenheit and setFahrenheit are ordinary methods that callers must remember to call. Turn them into a getter and a setter. The output must stay the same.",
+    "initialCode": "var t = {\n  celsius: 25,\n  getFahrenheit: function () {\n    return this.celsius * 9 / 5 + 32;\n  },\n  setFahrenheit: function (value) {\n    this.celsius = (value - 32) * 5 / 9;\n  }\n};\n\nconsole.log(t.getFahrenheit());\nt.setFahrenheit(212);\nconsole.log(t.celsius);",
+    "solution": {
+      "code": "var t = {\n  celsius: 25,\n  get fahrenheit() {\n    return this.celsius * 9 / 5 + 32;\n  },\n  set fahrenheit(value) {\n    this.celsius = (value - 32) * 5 / 9;\n  }\n};\n\nconsole.log(t.fahrenheit);\nt.fahrenheit = 212;\nconsole.log(t.celsius);",
+      "explanation": "With accessors the derived value reads like a normal property (t.fahrenheit), and the way it is computed can change later without changing any caller."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*77[ \\t]*\\r?\\n100\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

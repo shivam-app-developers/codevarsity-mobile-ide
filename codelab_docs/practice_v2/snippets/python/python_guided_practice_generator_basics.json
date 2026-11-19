@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Generators",
+    "language": "python",
+    "description": "A function with yield is a generator: it produces its values one at a time, pausing after each yield, instead of building a whole list in memory.",
+    "ghostCode": "def fibonacci(limit):\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\n\nprint(list(fibonacci(50)))\ngen = fibonacci(10)\nprint(next(gen), next(gen), next(gen))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0, 1, 1, 2, 3, 5, 8, 13, 21, 34\\][ \\t]*\\r?\\n0 1 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

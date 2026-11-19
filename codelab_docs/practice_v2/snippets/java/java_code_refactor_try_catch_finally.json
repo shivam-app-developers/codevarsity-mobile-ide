@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use finally Instead of Scattered Steps",
+    "language": "java",
+    "problemDescription": "The failure is remembered in a flag and the message and the final line are printed afterwards in a fixed order. Use a try / catch / finally. The output must stay the same.",
+    "initialCode": "public class Main {\n    static int parse(String text) {\n        int result = -1;\n        boolean ok = true;\n        try {\n            result = Integer.parseInt(text);\n        } catch (NumberFormatException e) {\n            ok = false;\n        }\n        if (ok == false) {\n            System.out.println(\"Not a number: \" + text);\n        }\n        System.out.println(\"Done parsing \" + text);\n        return result;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\"));\n        System.out.println(parse(\"4x2\"));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int parse(String text) {\n        try {\n            return Integer.parseInt(text);\n        } catch (NumberFormatException e) {\n            System.out.println(\"Not a number: \" + text);\n            return -1;\n        } finally {\n            System.out.println(\"Done parsing \" + text);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\"));\n        System.out.println(parse(\"4x2\"));\n    }\n}",
+      "explanation": "The error handling now sits in the catch block where the error happens, and finally guarantees the closing line even if another exception or an early return occurs. No flag variable is needed."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Done parsing 42[ \\t]*\\r?\\n42[ \\t]*\\r?\\nNot a number: 4x2[ \\t]*\\r?\\nDone parsing 4x2[ \\t]*\\r?\\n-1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

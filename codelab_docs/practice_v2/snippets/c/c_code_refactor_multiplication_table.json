@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the Magic Numbers",
+    "language": "c",
+    "problemDescription": "The table works but the numbers 3 and 5 are written again and again. Use named values so the table can be changed in one place. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 5; i++) {\n        printf(\"%d x %d = %d\\n\", 3, i, 3 * i);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\n#define NUMBER 3\n#define ROWS 5\n\nint main() {\n    for (int i = 1; i <= ROWS; i++) {\n        printf(\"%d x %d = %d\\n\", NUMBER, i, NUMBER * i);\n    }\n    return 0;\n}",
+      "explanation": "Named constants say what each number means and let you change the table by editing a single line instead of hunting for every 3 and 5."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*3 x 1 = 3[ \\t]*\\r?\\n3 x 2 = 6[ \\t]*\\r?\\n3 x 3 = 9[ \\t]*\\r?\\n3 x 4 = 12[ \\t]*\\r?\\n3 x 5 = 15\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

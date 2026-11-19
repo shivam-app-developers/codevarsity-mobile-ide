@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sorting with a key Function",
+    "language": "python",
+    "description": "sorted takes a key function that turns each item into the value to compare. A tuple key sorts by several criteria, and a minus sign reverses a numeric one.",
+    "ghostCode": "students = [(\"Ravi\", 72), (\"Meena\", 91), (\"Kiran\", 72), (\"Asha\", 91)]\nby_marks = sorted(students, key=lambda s: (-s[1], s[0]))\nprint(by_marks)\nprint(max(students, key=lambda s: s[1])[0])",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\('Asha', 91\\), \\('Meena', 91\\), \\('Kiran', 72\\), \\('Ravi', 72\\)\\][ \\t]*\\r?\\nMeena\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: One Difference Is Not Squared",
+    "language": "c",
+    "problemDescription": "The points (1, 2) and (4, 6) are 5 apart, so the squared distance is 25, but the program prints 5.",
+    "buggyCode": "#include <stdio.h>\n\ntypedef struct {\n    int x;\n    int y;\n} Point;\n\nint distance_squared(Point a, Point b) {\n    int dx = a.x - b.x;\n    int dy = a.y - b.y;\n    return dx * dx + dy;\n}\n\nint main() {\n    Point start = {1, 2};\n    Point end = {4, 6};\n    printf(\"%d\\n\", distance_squared(start, end));\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\ntypedef struct {\n    int x;\n    int y;\n} Point;\n\nint distance_squared(Point a, Point b) {\n    int dx = a.x - b.x;\n    int dy = a.y - b.y;\n    return dx * dx + dy * dy;\n}\n\nint main() {\n    Point start = {1, 2};\n    Point end = {4, 6};\n    printf(\"%d\\n\", distance_squared(start, end));\n    return 0;\n}",
+      "explanation": "The squared distance is dx squared plus dy squared. Leaving dy unsquared adds -4 instead of 16, so the total is 9 - 4 = 5 instead of 25."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*25\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

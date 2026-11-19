@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Star Pyramid",
+    "language": "c",
+    "description": "Each row needs some spaces followed by an odd number of stars. Row i has rows - i spaces and 2 * i - 1 stars.",
+    "ghostCode": "#include <stdio.h>\n\nint main() {\n    int rows = 4;\n    for (int i = 1; i <= rows; i++) {\n        for (int space = 0; space < rows - i; space++) {\n            printf(\" \");\n        }\n        for (int star = 0; star < 2 * i - 1; star++) {\n            printf(\"*\");\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*   \\*[ \\t]*\\r?\\n  \\*\\*\\*[ \\t]*\\r?\\n \\*\\*\\*\\*\\*[ \\t]*\\r?\\n\\*\\*\\*\\*\\*\\*\\*\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

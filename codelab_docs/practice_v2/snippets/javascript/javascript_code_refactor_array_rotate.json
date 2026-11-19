@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: slice and concat Instead of shift and push",
+    "language": "javascript",
+    "problemDescription": "The first item is removed and pushed to the end, once per step. Rotate in one go with slice and concat. The output must stay the same.",
+    "initialCode": "var list = [1, 2, 3, 4, 5, 6];\nfor (var step = 0; step < 2; step++) {\n  list.push(list.shift());\n}\nconsole.log(list);",
+    "solution": {
+      "code": "var list = [1, 2, 3, 4, 5, 6];\nvar k = 2;\nvar rotated = list.slice(k).concat(list.slice(0, k));\nconsole.log(rotated);",
+      "explanation": "shift moves every remaining item one place, so rotating by k costs k times n. slice and concat do the whole rotation in a single pass."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,4,5,6,1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

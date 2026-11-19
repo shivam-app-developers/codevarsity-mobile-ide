@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One Function for Both Scalings",
+    "language": "c",
+    "problemDescription": "double_all and triple_all are copies of each other except for one number. Replace them with one scale function that takes the factor. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nvoid double_all(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        a[i] = a[i] * 2;\n    }\n}\n\nvoid triple_all(int a[], int n) {\n    for (int i = 0; i < n; i++) {\n        a[i] = a[i] * 3;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4};\n    double_all(a, 4);\n    triple_all(a, 4);\n    for (int i = 0; i < 4; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nvoid scale(int a[], int n, int factor) {\n    for (int i = 0; i < n; i++) {\n        a[i] *= factor;\n    }\n}\n\nint main() {\n    int a[] = {1, 2, 3, 4};\n    scale(a, 4, 2);\n    scale(a, 4, 3);\n    for (int i = 0; i < 4; i++) printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Whatever differs between two copies of a function should become a parameter. One scale function replaces both, and a bug fixed in it is fixed everywhere."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*6 12 18 24\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Map Instead of Two Parallel Lists",
+    "language": "java",
+    "problemDescription": "Two lists, one with the words and one with the counts, are kept in step with indexOf. Use a LinkedHashMap, which also keeps the first-seen order. The output must stay the same.",
+    "initialCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"to be or not to be\";\n        List<String> words = new ArrayList<>();\n        List<Integer> counts = new ArrayList<>();\n        for (String w : text.split(\" \")) {\n            int i = words.indexOf(w);\n            if (i == -1) {\n                words.add(w);\n                counts.add(1);\n            } else {\n                counts.set(i, counts.get(i) + 1);\n            }\n        }\n        for (int i = 0; i < words.size(); i++) {\n            System.out.println(words.get(i) + \": \" + counts.get(i));\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        String text = \"to be or not to be\";\n        Map<String, Integer> counts = new LinkedHashMap<>();\n        for (String w : text.split(\" \")) {\n            counts.put(w, counts.getOrDefault(w, 0) + 1);\n        }\n        for (Map.Entry<String, Integer> e : counts.entrySet()) {\n            System.out.println(e.getKey() + \": \" + e.getValue());\n        }\n    }\n}",
+      "explanation": "A map associates each word with its count directly, so there are no parallel lists to keep in step, and lookups are fast instead of scanning the list with indexOf."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*to: 2[ \\t]*\\r?\\nbe: 2[ \\t]*\\r?\\nor: 1[ \\t]*\\r?\\nnot: 1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: The || Default Instead of if / else",
+    "language": "javascript",
+    "problemDescription": "An if / else with hasOwnProperty decides between starting at 1 and adding 1. Use the || 0 default. The output must stay the same.",
+    "initialCode": "var words = [\"to\", \"be\", \"or\", \"not\", \"to\", \"be\"];\nvar counts = {};\nwords.forEach(function (word) {\n  if (counts.hasOwnProperty(word)) {\n    counts[word] = counts[word] + 1;\n  } else {\n    counts[word] = 1;\n  }\n});\nconsole.log(counts);",
+    "solution": {
+      "code": "var words = [\"to\", \"be\", \"or\", \"not\", \"to\", \"be\"];\nvar counts = {};\nwords.forEach(function (word) {\n  counts[word] = (counts[word] || 0) + 1;\n});\nconsole.log(counts);",
+      "explanation": "A missing key reads as undefined, and undefined || 0 is 0, so one expression covers both the first and the later occurrences."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"to\":2,\"be\":2,\"or\":1,\"not\":1\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

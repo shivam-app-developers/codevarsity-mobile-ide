@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: All Subsets",
+    "language": "javascript",
+    "description": "Start with the empty subset. For each item, add a copy of every existing subset with that item appended: the number of subsets doubles each time.",
+    "ghostCode": "function subsets(items) {\n  var result = [[]];\n  items.forEach(function (item) {\n    var size = result.length;\n    for (var i = 0; i < size; i++) {\n      result.push(result[i].concat([item]));\n    }\n  });\n  return result;\n}\n\nconsole.log(subsets([1, 2, 3]));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[\\[\\],\\[1\\],\\[2\\],\\[1,2\\],\\[3\\],\\[1,3\\],\\[2,3\\],\\[1,2,3\\]\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

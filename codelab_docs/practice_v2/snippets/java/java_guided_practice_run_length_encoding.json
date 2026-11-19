@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Run-Length Encoding",
+    "language": "java",
+    "description": "Compress repeated characters into the character followed by the length of its run: aaabcc becomes a3b1c2.",
+    "ghostCode": "public class Main {\n    static String encode(String s) {\n        StringBuilder sb = new StringBuilder();\n        int i = 0;\n        while (i < s.length()) {\n            char c = s.charAt(i);\n            int run = 0;\n            while (i < s.length() && s.charAt(i) == c) {\n                run++;\n                i++;\n            }\n            sb.append(c).append(run);\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        System.out.println(encode(\"aaabccdddd\"));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*a3b1c2d4\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

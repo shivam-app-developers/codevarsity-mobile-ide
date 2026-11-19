@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Rotate an Array",
+    "language": "javascript",
+    "description": "Rotate left by k: the first k items move to the end. Use k modulo the length so that large values of k still work.",
+    "ghostCode": "function rotateLeft(list, k) {\n  var shift = k % list.length;\n  return list.slice(shift).concat(list.slice(0, shift));\n}\n\nconsole.log(rotateLeft([1, 2, 3, 4, 5], 2));\nconsole.log(rotateLeft([1, 2, 3, 4, 5], 7));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,4,5,1,2\\][ \\t]*\\r?\\n\\[3,4,5,1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

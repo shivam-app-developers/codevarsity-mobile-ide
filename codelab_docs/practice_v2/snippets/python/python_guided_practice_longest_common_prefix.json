@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Longest Common Prefix",
+    "language": "python",
+    "description": "zip(*words) walks through the words column by column. Stop at the first column where the letters are not all the same.",
+    "ghostCode": "def common_prefix(words):\n    prefix = \"\"\n    for letters in zip(*words):\n        if len(set(letters)) != 1:\n            break\n        prefix += letters[0]\n    return prefix\n\n\nprint(common_prefix([\"flower\", \"flow\", \"flight\"]))\nprint(common_prefix([\"interview\", \"internet\", \"interval\"]))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*fl[ \\t]*\\r?\\ninter\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

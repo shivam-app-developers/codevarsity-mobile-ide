@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Only the Odd Steps Are Counted",
+    "language": "javascript",
+    "problemDescription": "Starting from 6 the sequence takes 8 steps, but the program prints 2.",
+    "buggyCode": "function collatzSteps(n) {\n  var steps = 0;\n  while (n !== 1) {\n    if (n % 2 === 0) {\n      n = n / 2;\n    } else {\n      n = 3 * n + 1;\n      steps++;\n    }\n  }\n  return steps;\n}\n\nconsole.log(collatzSteps(6));",
+    "solution": {
+      "code": "function collatzSteps(n) {\n  var steps = 0;\n  while (n !== 1) {\n    if (n % 2 === 0) {\n      n = n / 2;\n    } else {\n      n = 3 * n + 1;\n    }\n    steps++;\n  }\n  return steps;\n}\n\nconsole.log(collatzSteps(6));",
+      "explanation": "Every move of the sequence is a step, whether the number is halved or tripled. Putting steps++ inside the else branch counts only the odd moves."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

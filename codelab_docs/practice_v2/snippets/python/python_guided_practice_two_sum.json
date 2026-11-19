@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Two Sum",
+    "language": "python",
+    "description": "Remember each number and its index in a dictionary. For every number, check whether its complement (the target minus the number) was seen before.",
+    "ghostCode": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n        seen[n] = i\n    return []\n\n\nprint(two_sum([2, 7, 11, 15], 9))\nprint(two_sum([3, 2, 4], 6))",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[0, 1\\][ \\t]*\\r?\\n\\[1, 2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

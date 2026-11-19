@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: A Reusable groupBy Instead of Two Special Arrays",
+    "language": "javascript",
+    "problemDescription": "Odd and even numbers are sorted into two separate arrays with an if / else in a loop. Write a groupBy function that works for any key. The output must stay the same.",
+    "initialCode": "var nums = [1, 2, 3, 4, 5, 6];\nvar odds = [];\nvar evens = [];\nfor (var i = 0; i < nums.length; i++) {\n  if (nums[i] % 2 === 0) {\n    evens.push(nums[i]);\n  } else {\n    odds.push(nums[i]);\n  }\n}\nconsole.log({ odd: odds, even: evens });",
+    "solution": {
+      "code": "function groupBy(list, keyFn) {\n  var groups = {};\n  list.forEach(function (item) {\n    var key = keyFn(item);\n    if (!groups[key]) {\n      groups[key] = [];\n    }\n    groups[key].push(item);\n  });\n  return groups;\n}\n\nvar nums = [1, 2, 3, 4, 5, 6];\nconsole.log(groupBy(nums, function (n) {\n  return n % 2 === 0 ? \"even\" : \"odd\";\n}));",
+      "explanation": "The key function says how to group, and groupBy does the collecting for any number of groups. Adding a third category needs no new array variable."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"odd\":\\[1,3,5\\],\"even\":\\[2,4,6\\]\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

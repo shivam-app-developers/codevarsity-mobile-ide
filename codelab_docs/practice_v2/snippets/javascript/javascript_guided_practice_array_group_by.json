@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Group Items by a Key",
+    "language": "javascript",
+    "description": "Build an object whose keys are the group names and whose values are arrays. Create the array the first time a key is seen, then push the item.",
+    "ghostCode": "function groupBy(list, keyFn) {\n  var groups = {};\n  list.forEach(function (item) {\n    var key = keyFn(item);\n    if (!groups[key]) {\n      groups[key] = [];\n    }\n    groups[key].push(item);\n  });\n  return groups;\n}\n\nvar words = [\"apple\", \"bat\", \"cat\", \"dragon\", \"eel\"];\nconsole.log(groupBy(words, function (w) {\n  return w.length;\n}));",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\{\"3\":\\[\"bat\",\"cat\",\"eel\"\\],\"5\":\\[\"apple\"\\],\"6\":\\[\"dragon\"\\]\\}\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

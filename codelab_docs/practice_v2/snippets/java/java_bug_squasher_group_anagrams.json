@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Word Itself Is Used as the Key",
+    "language": "java",
+    "problemDescription": "eat, tea and ate are anagrams and belong in one group, but every word ends up in its own group.",
+    "buggyCode": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"eat\", \"tea\", \"ate\", \"bat\"};\n        Map<String, List<String>> groups = new TreeMap<>();\n        for (String w : words) {\n            char[] letters = w.toCharArray();\n            Arrays.sort(letters);\n            String key = w;\n            if (!groups.containsKey(key)) {\n                groups.put(key, new ArrayList<>());\n            }\n            groups.get(key).add(w);\n        }\n        for (List<String> group : groups.values()) {\n            System.out.println(group);\n        }\n    }\n}",
+    "solution": {
+      "code": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.TreeMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] words = {\"eat\", \"tea\", \"ate\", \"bat\"};\n        Map<String, List<String>> groups = new TreeMap<>();\n        for (String w : words) {\n            char[] letters = w.toCharArray();\n            Arrays.sort(letters);\n            String key = new String(letters);\n            if (!groups.containsKey(key)) {\n                groups.put(key, new ArrayList<>());\n            }\n            groups.get(key).add(w);\n        }\n        for (List<String> group : groups.values()) {\n            System.out.println(group);\n        }\n    }\n}",
+      "explanation": "Anagrams must map to the same key. The word itself is different for each anagram, but its letters in sorted order are identical, so the key has to be built from the sorted letters."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[bat\\][ \\t]*\\r?\\n\\[eat, tea, ate\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

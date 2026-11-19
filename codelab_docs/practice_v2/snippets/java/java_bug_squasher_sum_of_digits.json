@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Number Shrinks by Subtraction",
+    "language": "java",
+    "problemDescription": "The digits of 305 add up to 8, but the program prints 155.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        int n = 305;\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n -= 10;\n        }\n        System.out.println(\"Digit sum: \" + sum);\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int n = 305;\n        int sum = 0;\n        while (n > 0) {\n            sum += n % 10;\n            n /= 10;\n        }\n        System.out.println(\"Digit sum: \" + sum);\n    }\n}",
+      "explanation": "To move to the next digit the number must be divided by 10, which drops the last digit. Subtracting 10 keeps the same last digit (5) for about thirty rounds, so the same digit is added again and again."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Digit sum: 8\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

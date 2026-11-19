@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Stops at Any Match",
+    "language": "javascript",
+    "problemDescription": "The first 2 is at index 1, but the program prints 2, the index of the middle 2.",
+    "buggyCode": "function firstIndex(a, target) {\n  var low = 0;\n  var high = a.length - 1;\n  var answer = -1;\n  while (low <= high) {\n    var mid = Math.floor((low + high) / 2);\n    if (a[mid] === target) {\n      return mid;\n    } else if (a[mid] < target) {\n      low = mid + 1;\n    } else {\n      high = mid - 1;\n    }\n  }\n  return answer;\n}\n\nconsole.log(firstIndex([1, 2, 2, 2, 3, 5], 2));",
+    "solution": {
+      "code": "function firstIndex(a, target) {\n  var low = 0;\n  var high = a.length - 1;\n  var answer = -1;\n  while (low <= high) {\n    var mid = Math.floor((low + high) / 2);\n    if (a[mid] === target) {\n      answer = mid;\n      high = mid - 1;\n    } else if (a[mid] < target) {\n      low = mid + 1;\n    } else {\n      high = mid - 1;\n    }\n  }\n  return answer;\n}\n\nconsole.log(firstIndex([1, 2, 2, 2, 3, 5], 2));",
+      "explanation": "A plain binary search returns at the first hit, which may be any of the equal values. To find the first one, record the hit and keep searching the left half for an earlier one."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

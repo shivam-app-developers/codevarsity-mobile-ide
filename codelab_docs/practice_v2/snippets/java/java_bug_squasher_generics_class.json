@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Raw Type Loses the Element Type",
+    "language": "java",
+    "problemDescription": "The program does not compile: the Box was declared without a type argument, so get() returns a plain Object.",
+    "buggyCode": "public class Main {\n    public static void main(String[] args) {\n        Box name = new Box(\"Asha\");\n        System.out.println(name.get().toUpperCase());\n    }\n}\n\nclass Box<T> {\n    private final T value;\n\n    Box(T value) {\n        this.value = value;\n    }\n\n    T get() {\n        return value;\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Box<String> name = new Box<>(\"Asha\");\n        System.out.println(name.get().toUpperCase());\n    }\n}\n\nclass Box<T> {\n    private final T value;\n\n    Box(T value) {\n        this.value = value;\n    }\n\n    T get() {\n        return value;\n    }\n}",
+      "explanation": "Using the generic class without a type argument (a raw type) makes get() return Object, and Object has no toUpperCase method. Writing Box<String> tells the compiler the value is a String."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*ASHA\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

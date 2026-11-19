@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the Nested Ifs with a Helper",
+    "language": "c",
+    "problemDescription": "Deeply nested comparisons find the maximum. Write a small max function and use it twice instead. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int a = 31, b = 77, c = 45;\n    int result;\n    if (a > b) {\n        if (a > c) {\n            result = a;\n        } else {\n            result = c;\n        }\n    } else {\n        if (b > c) {\n            result = b;\n        } else {\n            result = c;\n        }\n    }\n    printf(\"Max = %d\\n\", result);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint max(int x, int y) {\n    return x > y ? x : y;\n}\n\nint main() {\n    int a = 31, b = 77, c = 45;\n    printf(\"Max = %d\\n\", max(max(a, b), c));\n    return 0;\n}",
+      "explanation": "The maximum of three numbers is the maximum of (the maximum of two) and the third. A two-argument helper removes four branches and is reusable for any number of values."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*Max = 77\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

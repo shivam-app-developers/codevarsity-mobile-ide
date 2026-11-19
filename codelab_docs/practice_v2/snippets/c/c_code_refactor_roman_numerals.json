@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Table-Driven Conversion",
+    "language": "c",
+    "problemDescription": "One while loop is written out per symbol. Replace them with two parallel tables and one loop. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int n = 58;\n    while (n >= 50) { printf(\"L\"); n -= 50; }\n    while (n >= 40) { printf(\"XL\"); n -= 40; }\n    while (n >= 10) { printf(\"X\"); n -= 10; }\n    while (n >= 9) { printf(\"IX\"); n -= 9; }\n    while (n >= 5) { printf(\"V\"); n -= 5; }\n    while (n >= 4) { printf(\"IV\"); n -= 4; }\n    while (n >= 1) { printf(\"I\"); n -= 1; }\n    printf(\"\\n\");\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int values[] = {50, 40, 10, 9, 5, 4, 1};\n    const char *symbols[] = {\"L\", \"XL\", \"X\", \"IX\", \"V\", \"IV\", \"I\"};\n    int n = 58;\n    for (int i = 0; i < 7; i++) {\n        while (n >= values[i]) {\n            printf(\"%s\", symbols[i]);\n            n -= values[i];\n        }\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+      "explanation": "Data in a table replaces repeated code. To support larger numbers you add rows to the table, not more loops."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*LVIII\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Multiplying Before Dividing Overflows",
+    "language": "java",
+    "problemDescription": "The LCM of 100000 and 99999 is 9999900000, but the program prints 1409965408.",
+    "buggyCode": "public class Main {\n    static int gcd(int a, int b) {\n        return b == 0 ? a : gcd(b, a % b);\n    }\n\n    static long lcm(int a, int b) {\n        return a * b / gcd(a, b);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(lcm(100000, 99999));\n    }\n}",
+    "solution": {
+      "code": "public class Main {\n    static int gcd(int a, int b) {\n        return b == 0 ? a : gcd(b, a % b);\n    }\n\n    static long lcm(int a, int b) {\n        return (long) a / gcd(a, b) * b;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(lcm(100000, 99999));\n    }\n}",
+      "explanation": "a * b is calculated with ints first, and 100000 * 99999 does not fit in 32 bits, so it wraps around before the division happens. Dividing by the gcd first (and widening to long) keeps the intermediate result small."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*9999900000\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

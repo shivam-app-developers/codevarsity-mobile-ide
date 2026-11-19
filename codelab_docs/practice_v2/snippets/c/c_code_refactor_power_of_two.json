@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace the Division Loop with One Expression",
+    "language": "c",
+    "problemDescription": "A flag and a loop that halves the number again and again test for a power of two. Replace them with the bit trick n > 0 && (n & (n - 1)) == 0. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    int values[] = {8, 12, 32, 33};\n    for (int i = 0; i < 4; i++) {\n        int n = values[i];\n        int ok = 1;\n        if (n < 1) {\n            ok = 0;\n        }\n        while (n > 1) {\n            if (n % 2 != 0) {\n                ok = 0;\n            }\n            n = n / 2;\n        }\n        printf(\"%d: %d\\n\", values[i], ok);\n    }\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint main() {\n    int values[] = {8, 12, 32, 33};\n    for (int i = 0; i < 4; i++) {\n        int n = values[i];\n        int ok = n > 0 && (n & (n - 1)) == 0;\n        printf(\"%d: %d\\n\", values[i], ok);\n    }\n    return 0;\n}",
+      "explanation": "A number with a single 1 bit loses it when you AND with n - 1. One comparison now does what the loop did in log2(n) steps."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*8: 1[ \\t]*\\r?\\n12: 0[ \\t]*\\r?\\n32: 1[ \\t]*\\r?\\n33: 0\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

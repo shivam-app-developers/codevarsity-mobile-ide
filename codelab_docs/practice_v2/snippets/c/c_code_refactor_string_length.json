@@ -1,0 +1,22 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Walk a Pointer to the End",
+    "language": "c",
+    "problemDescription": "A for loop with a break and a counter measures the string. Write a length function that moves a pointer to the terminator and subtracts the start. The output must stay the same.",
+    "initialCode": "#include <stdio.h>\n\nint main() {\n    char word[] = \"programming\";\n    int i;\n    int count = 0;\n    for (i = 0; i < 100; i++) {\n        if (word[i] == '\\0') {\n            break;\n        }\n        count = count + 1;\n    }\n    printf(\"%d\\n\", count);\n    return 0;\n}",
+    "solution": {
+      "code": "#include <stdio.h>\n\nint length(const char *s) {\n    const char *end = s;\n    while (*end) {\n        end++;\n    }\n    return (int)(end - s);\n}\n\nint main() {\n    printf(\"%d\\n\", length(\"programming\"));\n    return 0;\n}",
+      "explanation": "Subtracting two pointers into the same array gives the number of elements between them. The made-up limit 100 disappears, so strings of any length work."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*11\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

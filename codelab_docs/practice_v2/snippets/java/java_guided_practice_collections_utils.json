@@ -1,0 +1,18 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: The Collections Helpers",
+    "language": "java",
+    "description": "java.util.Collections has ready-made helpers: sort, reverse, max, min, frequency and addAll.",
+    "ghostCode": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        Collections.addAll(nums, 4, 9, 1, 7);\n        Collections.sort(nums);\n        System.out.println(nums);\n        Collections.reverse(nums);\n        System.out.println(nums);\n        System.out.println(Collections.max(nums) + \" \" + Collections.min(nums));\n        System.out.println(Collections.frequency(nums, 7));\n    }\n}",
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[1, 4, 7, 9\\][ \\t]*\\r?\\n\\[9, 7, 4, 1\\][ \\t]*\\r?\\n9 1[ \\t]*\\r?\\n1\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

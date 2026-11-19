@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Rotating by More Than the Length",
+    "language": "javascript",
+    "problemDescription": "Rotating a 5-item array by 7 is the same as rotating by 2 and should print [3,4,5,1,2], but the array comes back unchanged.",
+    "buggyCode": "function rotateLeft(list, k) {\n  var shift = k;\n  return list.slice(shift).concat(list.slice(0, shift));\n}\n\nconsole.log(rotateLeft([1, 2, 3, 4, 5], 7));",
+    "solution": {
+      "code": "function rotateLeft(list, k) {\n  var shift = k % list.length;\n  return list.slice(shift).concat(list.slice(0, shift));\n}\n\nconsole.log(rotateLeft([1, 2, 3, 4, 5], 7));",
+      "explanation": "After a full turn (5 steps) the array looks the same again, so only k modulo the length matters. Without the modulo, slice(7) is empty and slice(0, 7) is the whole array."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*\\[3,4,5,1,2\\]\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The Letters Are Split Instead of the Words",
+    "language": "javascript",
+    "problemDescription": "one two three should become three two one, but the program prints single letters separated by spaces.",
+    "buggyCode": "function reverseWords(sentence) {\n  return sentence.split(\"\").reverse().join(\" \");\n}\n\nconsole.log(reverseWords(\"one two three\"));",
+    "solution": {
+      "code": "function reverseWords(sentence) {\n  return sentence.split(\" \").reverse().join(\" \");\n}\n\nconsole.log(reverseWords(\"one two three\"));",
+      "explanation": "split(\" \") cuts at spaces and gives words; split(\"\") cuts between every character and gives single letters. Reversing and joining those letters with spaces produces the unreadable text."
+    },
+    "validation": {
+      "type": "output",
+      "tests": [
+        {
+          "input": "",
+          "pattern": "(?<![\\s\\S])\\s*three two one\\s*(?![\\s\\S])"
+        }
+      ]
+    }
+  }
+}
