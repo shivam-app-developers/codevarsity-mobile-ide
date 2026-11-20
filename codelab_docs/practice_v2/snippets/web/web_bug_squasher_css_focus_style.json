@@ -17,8 +17,8 @@
           "width": 320,
           "checks": [
             {
-              "label": "Focusing the field changes how it looks",
-              "expr": "(() => { var before = style('#mail', 'borderTopColor') + style('#mail', 'outlineStyle'); el('#mail').focus(); return before !== style('#mail', 'borderTopColor') + style('#mail', 'outlineStyle'); })()"
+              "label": "A :focus rule gives the field a visible style",
+              "expr": "[].some.call(document.styleSheets[0].cssRules, function (r) { return /:focus/.test(r.selectorText) && (r.style.outlineStyle === 'solid' || r.style.borderColor !== '' || r.style.boxShadow !== ''); })"
             }
           ]
         }

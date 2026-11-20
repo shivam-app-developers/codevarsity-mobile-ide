@@ -498,7 +498,7 @@
       "title": "Bug Squasher: Label that is not connected",
       "difficulty": "beginner",
       "order": 49,
-      "rev": "064a1289b52b",
+      "rev": "e7d979a7a911",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_form_labels.json"
     },
     {
@@ -2748,7 +2748,7 @@
       "title": "Guided Practice: Visible Keyboard Focus",
       "difficulty": "medium",
       "order": 274,
-      "rev": "d224907eaec0",
+      "rev": "0aa2f89b1f79",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_focus_style.json"
     },
     {
@@ -2758,7 +2758,7 @@
       "title": "Bug Squasher: Focus is invisible",
       "difficulty": "medium",
       "order": 275,
-      "rev": "ed5bcda20304",
+      "rev": "993f03505f4d",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_focus_style.json"
     },
     {
@@ -2768,7 +2768,7 @@
       "title": "Code Refactor: Style the focus ring with outline",
       "difficulty": "medium",
       "order": 276,
-      "rev": "80074f98aef2",
+      "rev": "80e498448d64",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_focus_style.json"
     },
     {

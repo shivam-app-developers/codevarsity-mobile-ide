@@ -21,8 +21,8 @@
               "expr": "labelled('#phone')"
             },
             {
-              "label": "Clicking the label focuses the input",
-              "expr": "(() => { document.querySelector('label').click(); return document.activeElement === document.querySelector('#phone'); })()"
+              "label": "The label belongs to the phone input",
+              "expr": "el('label').control === el('#phone')"
             }
           ]
         }

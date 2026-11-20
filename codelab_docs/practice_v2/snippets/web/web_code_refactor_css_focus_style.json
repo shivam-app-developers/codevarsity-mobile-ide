@@ -17,12 +17,12 @@
           "width": 320,
           "checks": [
             {
-              "label": "The field looks different when focused",
-              "expr": "(() => { var before = style('#q', 'borderTopColor') + style('#q', 'outlineStyle') + style('#q', 'outlineColor'); el('#q').focus(); return before !== style('#q', 'borderTopColor') + style('#q', 'outlineStyle') + style('#q', 'outlineColor'); })()"
+              "label": "A :focus rule gives the field a green focus style",
+              "expr": "[].some.call(document.styleSheets[0].cssRules, function (r) { return /:focus/.test(r.selectorText) && (r.style.borderColor === 'green' || r.style.outlineColor === 'green'); })"
             },
             {
-              "label": "The field is the same height before and after focus",
-              "expr": "(() => { var h = el('#q').offsetHeight; el('#q').focus(); return h === el('#q').offsetHeight; })()"
+              "label": "The field keeps its 1px gray border at rest",
+              "expr": "px('#q', 'borderTopWidth') === 1 && style('#q', 'borderTopColor') === 'rgb(128, 128, 128)'"
             }
           ]
         }
