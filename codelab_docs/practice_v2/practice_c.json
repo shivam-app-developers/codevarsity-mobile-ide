@@ -9,7 +9,7 @@
       "difficulty": "beginner",
       "order": 0,
       "rev": "1eba2347e5c5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_add.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_add.json"
     },
     {
       "id": "c_bug_squasher_matrix_add",
@@ -19,7 +19,7 @@
       "difficulty": "beginner",
       "order": 1,
       "rev": "2d99c7d11ef4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_add.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_add.json"
     },
     {
       "id": "c_code_refactor_matrix_add",
@@ -29,7 +29,7 @@
       "difficulty": "beginner",
       "order": 2,
       "rev": "01e775fd960a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_add.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_add.json"
     },
     {
       "id": "c_guided_practice_armstrong",
@@ -39,7 +39,7 @@
       "difficulty": "beginner",
       "order": 3,
       "rev": "bdbbf16dc7d4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_armstrong.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_armstrong.json"
     },
     {
       "id": "c_bug_squasher_armstrong",
@@ -49,7 +49,7 @@
       "difficulty": "beginner",
       "order": 4,
       "rev": "3ace35033bdf",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_armstrong.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_armstrong.json"
     },
     {
       "id": "c_code_refactor_armstrong",
@@ -59,7 +59,7 @@
       "difficulty": "beginner",
       "order": 5,
       "rev": "f843ebf1f180",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_armstrong.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_armstrong.json"
     },
     {
       "id": "c_guided_practice_array_sum_average",
@@ -69,7 +69,7 @@
       "difficulty": "beginner",
       "order": 6,
       "rev": "84472ecfabb9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_sum_average.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_sum_average.json"
     },
     {
       "id": "c_bug_squasher_array_sum_average",
@@ -79,7 +79,7 @@
       "difficulty": "beginner",
       "order": 7,
       "rev": "9c2a7235f397",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_sum_average.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_sum_average.json"
     },
     {
       "id": "c_code_refactor_array_sum_average",
@@ -89,7 +89,7 @@
       "difficulty": "beginner",
       "order": 8,
       "rev": "cad78225d0f2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_sum_average.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_sum_average.json"
     },
     {
       "id": "c_guided_practice_bin_to_dec",
@@ -99,7 +99,7 @@
       "difficulty": "beginner",
       "order": 9,
       "rev": "8da8fc3e424d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_bin_to_dec.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_bin_to_dec.json"
     },
     {
       "id": "c_bug_squasher_bin_to_dec",
@@ -109,7 +109,7 @@
       "difficulty": "beginner",
       "order": 10,
       "rev": "f8513595989d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bin_to_dec.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bin_to_dec.json"
     },
     {
       "id": "c_guided_practice_bubble_sort",
@@ -119,7 +119,7 @@
       "difficulty": "beginner",
       "order": 11,
       "rev": "716a1e6a4289",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_bubble_sort.json"
     },
     {
       "id": "c_bug_squasher_bubble_sort",
@@ -129,7 +129,7 @@
       "difficulty": "beginner",
       "order": 12,
       "rev": "f2c3053e5a63",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bubble_sort.json"
     },
     {
       "id": "c_code_refactor_bubble_sort",
@@ -139,7 +139,7 @@
       "difficulty": "beginner",
       "order": 13,
       "rev": "f3b83cf16587",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_bubble_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_bubble_sort.json"
     },
     {
       "id": "c_guided_practice_count_even_odd",
@@ -149,7 +149,7 @@
       "difficulty": "beginner",
       "order": 14,
       "rev": "7986e6d08b24",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_even_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_even_odd.json"
     },
     {
       "id": "c_bug_squasher_count_even_odd",
@@ -159,7 +159,7 @@
       "difficulty": "beginner",
       "order": 15,
       "rev": "2b8daea77728",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_even_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_even_odd.json"
     },
     {
       "id": "c_code_refactor_count_even_odd",
@@ -169,7 +169,7 @@
       "difficulty": "beginner",
       "order": 16,
       "rev": "7611b58e6e03",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_even_odd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_even_odd.json"
     },
     {
       "id": "c_guided_practice_count_digits",
@@ -179,7 +179,7 @@
       "difficulty": "beginner",
       "order": 17,
       "rev": "cab2d0d47031",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_digits.json"
     },
     {
       "id": "c_bug_squasher_count_digits",
@@ -189,7 +189,7 @@
       "difficulty": "beginner",
       "order": 18,
       "rev": "44cfd030754b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_digits.json"
     },
     {
       "id": "c_code_refactor_count_digits",
@@ -199,7 +199,7 @@
       "difficulty": "beginner",
       "order": 19,
       "rev": "bf959776398c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_digits.json"
     },
     {
       "id": "c_guided_practice_vowel_consonant_count",
@@ -209,7 +209,7 @@
       "difficulty": "beginner",
       "order": 20,
       "rev": "9f25a1bc151a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_vowel_consonant_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_vowel_consonant_count.json"
     },
     {
       "id": "c_bug_squasher_vowel_consonant_count",
@@ -219,7 +219,7 @@
       "difficulty": "beginner",
       "order": 21,
       "rev": "0677b8bc27af",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_vowel_consonant_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_vowel_consonant_count.json"
     },
     {
       "id": "c_code_refactor_vowel_consonant_count",
@@ -229,7 +229,7 @@
       "difficulty": "beginner",
       "order": 22,
       "rev": "c754beefc5ef",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_vowel_consonant_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_vowel_consonant_count.json"
     },
     {
       "id": "c_guided_practice_decimal_to_binary",
@@ -239,7 +239,7 @@
       "difficulty": "beginner",
       "order": 23,
       "rev": "e98eefd92a95",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_decimal_to_binary.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_decimal_to_binary.json"
     },
     {
       "id": "c_bug_squasher_decimal_to_binary",
@@ -249,7 +249,7 @@
       "difficulty": "beginner",
       "order": 24,
       "rev": "08abd05f2f6f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_decimal_to_binary.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_decimal_to_binary.json"
     },
     {
       "id": "c_code_refactor_decimal_to_binary",
@@ -259,7 +259,7 @@
       "difficulty": "beginner",
       "order": 25,
       "rev": "140f5ca5c215",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_decimal_to_binary.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_decimal_to_binary.json"
     },
     {
       "id": "c_guided_practice_enum_basics",
@@ -269,7 +269,7 @@
       "difficulty": "beginner",
       "order": 26,
       "rev": "c7fe5d2efd9d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_enum_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_enum_basics.json"
     },
     {
       "id": "c_bug_squasher_enum_basics",
@@ -279,7 +279,7 @@
       "difficulty": "beginner",
       "order": 27,
       "rev": "2f3384312f3d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_enum_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_enum_basics.json"
     },
     {
       "id": "c_code_refactor_enum_basics",
@@ -289,7 +289,7 @@
       "difficulty": "beginner",
       "order": 28,
       "rev": "b24fe6e7e70b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_enum_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_enum_basics.json"
     },
     {
       "id": "c_guided_practice_gcd",
@@ -299,7 +299,7 @@
       "difficulty": "beginner",
       "order": 29,
       "rev": "179aa3ad5a7e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_gcd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_gcd.json"
     },
     {
       "id": "c_bug_squasher_gcd",
@@ -309,7 +309,7 @@
       "difficulty": "beginner",
       "order": 30,
       "rev": "bbdb790d705a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_gcd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_gcd.json"
     },
     {
       "id": "c_code_refactor_gcd",
@@ -319,7 +319,7 @@
       "difficulty": "beginner",
       "order": 31,
       "rev": "1721d4ae87d3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_gcd.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_gcd.json"
     },
     {
       "id": "c_guided_practice_fibonacci_series",
@@ -329,7 +329,7 @@
       "difficulty": "beginner",
       "order": 32,
       "rev": "441c98cea51d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_fibonacci_series.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_fibonacci_series.json"
     },
     {
       "id": "c_bug_squasher_fibonacci_series",
@@ -339,7 +339,7 @@
       "difficulty": "beginner",
       "order": 33,
       "rev": "93992471ee14",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fibonacci_series.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fibonacci_series.json"
     },
     {
       "id": "c_code_refactor_fibonacci_series",
@@ -349,7 +349,7 @@
       "difficulty": "beginner",
       "order": 34,
       "rev": "cc950e29bf89",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_fibonacci_series.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_fibonacci_series.json"
     },
     {
       "id": "c_guided_practice_fizzbuzz",
@@ -359,7 +359,7 @@
       "difficulty": "beginner",
       "order": 35,
       "rev": "aa991c2f849b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_fizzbuzz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_fizzbuzz.json"
     },
     {
       "id": "c_bug_squasher_fizzbuzz",
@@ -369,7 +369,7 @@
       "difficulty": "beginner",
       "order": 36,
       "rev": "1fea9e71b685",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fizzbuzz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fizzbuzz.json"
     },
     {
       "id": "c_code_refactor_fizzbuzz",
@@ -379,7 +379,7 @@
       "difficulty": "beginner",
       "order": 37,
       "rev": "3c7e63a420bd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_fizzbuzz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_fizzbuzz.json"
     },
     {
       "id": "c_guided_practice_floyd_triangle",
@@ -389,7 +389,7 @@
       "difficulty": "beginner",
       "order": 38,
       "rev": "d911d72fcba9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_floyd_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_floyd_triangle.json"
     },
     {
       "id": "c_bug_squasher_floyd_triangle",
@@ -399,7 +399,7 @@
       "difficulty": "beginner",
       "order": 39,
       "rev": "32771b183c12",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_floyd_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_floyd_triangle.json"
     },
     {
       "id": "c_code_refactor_floyd_triangle",
@@ -409,7 +409,7 @@
       "difficulty": "beginner",
       "order": 40,
       "rev": "bbba4d856c55",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_floyd_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_floyd_triangle.json"
     },
     {
       "id": "c_guided_practice_hello_world",
@@ -419,7 +419,7 @@
       "difficulty": "beginner",
       "order": 41,
       "rev": "873c7001f3f4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_hello_world.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_hello_world.json"
     },
     {
       "id": "c_bug_squasher_hello_world",
@@ -429,7 +429,7 @@
       "difficulty": "beginner",
       "order": 42,
       "rev": "08950929552d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_hello_world.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_hello_world.json"
     },
     {
       "id": "c_code_refactor_hello_world",
@@ -439,7 +439,7 @@
       "difficulty": "beginner",
       "order": 43,
       "rev": "d7426760dd76",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_hello_world.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_hello_world.json"
     },
     {
       "id": "c_guided_practice_insertion_sort",
@@ -449,7 +449,7 @@
       "difficulty": "beginner",
       "order": 44,
       "rev": "94a06a8123d6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_insertion_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_insertion_sort.json"
     },
     {
       "id": "c_bug_squasher_insertion_sort",
@@ -459,7 +459,7 @@
       "difficulty": "beginner",
       "order": 45,
       "rev": "9bcda28f09e1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_insertion_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_insertion_sort.json"
     },
     {
       "id": "c_code_refactor_insertion_sort",
@@ -469,7 +469,7 @@
       "difficulty": "beginner",
       "order": 46,
       "rev": "f8bb9046423c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_insertion_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_insertion_sort.json"
     },
     {
       "id": "c_guided_practice_array_max_min",
@@ -479,7 +479,7 @@
       "difficulty": "beginner",
       "order": 47,
       "rev": "8c64bb99168c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_max_min.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_max_min.json"
     },
     {
       "id": "c_bug_squasher_array_max_min",
@@ -489,7 +489,7 @@
       "difficulty": "beginner",
       "order": 48,
       "rev": "fa33f58b34d6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_max_min.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_max_min.json"
     },
     {
       "id": "c_code_refactor_array_max_min",
@@ -499,7 +499,7 @@
       "difficulty": "beginner",
       "order": 49,
       "rev": "d4429b7d5d84",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_max_min.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_max_min.json"
     },
     {
       "id": "c_guided_practice_largest_of_three",
@@ -509,7 +509,7 @@
       "difficulty": "beginner",
       "order": 50,
       "rev": "a3800a56ffb8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_largest_of_three.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_largest_of_three.json"
     },
     {
       "id": "c_bug_squasher_largest_of_three",
@@ -519,7 +519,7 @@
       "difficulty": "beginner",
       "order": 51,
       "rev": "cd0743bd284b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_largest_of_three.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_largest_of_three.json"
     },
     {
       "id": "c_code_refactor_largest_of_three",
@@ -529,7 +529,7 @@
       "difficulty": "beginner",
       "order": 52,
       "rev": "a3b491ec82a7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_largest_of_three.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_largest_of_three.json"
     },
     {
       "id": "c_guided_practice_leap_year",
@@ -539,7 +539,7 @@
       "difficulty": "beginner",
       "order": 53,
       "rev": "fc998dbfbcc1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_leap_year.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_leap_year.json"
     },
     {
       "id": "c_bug_squasher_leap_year",
@@ -549,7 +549,7 @@
       "difficulty": "beginner",
       "order": 54,
       "rev": "1d0d16c22d3e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_leap_year.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_leap_year.json"
     },
     {
       "id": "c_code_refactor_leap_year",
@@ -559,7 +559,7 @@
       "difficulty": "beginner",
       "order": 55,
       "rev": "f2a874202fec",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_leap_year.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_leap_year.json"
     },
     {
       "id": "c_guided_practice_linear_search",
@@ -569,7 +569,7 @@
       "difficulty": "beginner",
       "order": 56,
       "rev": "78da51f90ee6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_linear_search.json"
     },
     {
       "id": "c_bug_squasher_linear_search",
@@ -579,7 +579,7 @@
       "difficulty": "beginner",
       "order": 57,
       "rev": "d157a15aaf9c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linear_search.json"
     },
     {
       "id": "c_code_refactor_linear_search",
@@ -589,7 +589,7 @@
       "difficulty": "beginner",
       "order": 58,
       "rev": "46c78220b12c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_linear_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_linear_search.json"
     },
     {
       "id": "c_guided_practice_multiplication_table",
@@ -599,7 +599,7 @@
       "difficulty": "beginner",
       "order": 59,
       "rev": "1f26e2da2d48",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_multiplication_table.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_multiplication_table.json"
     },
     {
       "id": "c_bug_squasher_multiplication_table",
@@ -609,7 +609,7 @@
       "difficulty": "beginner",
       "order": 60,
       "rev": "551204236275",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_multiplication_table.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_multiplication_table.json"
     },
     {
       "id": "c_code_refactor_multiplication_table",
@@ -619,7 +619,7 @@
       "difficulty": "beginner",
       "order": 61,
       "rev": "1400a0add7f7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_multiplication_table.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_multiplication_table.json"
     },
     {
       "id": "c_guided_practice_odd_even_check",
@@ -629,7 +629,7 @@
       "difficulty": "beginner",
       "order": 62,
       "rev": "79e6b4c700f6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_odd_even_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_odd_even_check.json"
     },
     {
       "id": "c_bug_squasher_odd_even_check",
@@ -639,7 +639,7 @@
       "difficulty": "beginner",
       "order": 63,
       "rev": "50eb40028e62",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_odd_even_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_odd_even_check.json"
     },
     {
       "id": "c_code_refactor_odd_even_check",
@@ -649,7 +649,7 @@
       "difficulty": "beginner",
       "order": 64,
       "rev": "413820b66780",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_odd_even_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_odd_even_check.json"
     },
     {
       "id": "c_guided_practice_palindrome",
@@ -659,7 +659,7 @@
       "difficulty": "beginner",
       "order": 65,
       "rev": "802125108954",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_palindrome.json"
     },
     {
       "id": "c_bug_squasher_palindrome",
@@ -669,7 +669,7 @@
       "difficulty": "beginner",
       "order": 66,
       "rev": "ebf8306eaec6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_palindrome.json"
     },
     {
       "id": "c_code_refactor_palindrome",
@@ -679,7 +679,7 @@
       "difficulty": "beginner",
       "order": 67,
       "rev": "ab1e6a9b9928",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_palindrome.json"
     },
     {
       "id": "c_guided_practice_string_palindrome",
@@ -689,7 +689,7 @@
       "difficulty": "beginner",
       "order": 68,
       "rev": "78abb8e32998",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_palindrome.json"
     },
     {
       "id": "c_bug_squasher_string_palindrome",
@@ -699,7 +699,7 @@
       "difficulty": "beginner",
       "order": 69,
       "rev": "ab861f5965e6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_palindrome.json"
     },
     {
       "id": "c_code_refactor_string_palindrome",
@@ -709,7 +709,7 @@
       "difficulty": "beginner",
       "order": 70,
       "rev": "83c89f5e0183",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_palindrome.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_palindrome.json"
     },
     {
       "id": "c_guided_practice_perfect_number",
@@ -719,7 +719,7 @@
       "difficulty": "beginner",
       "order": 71,
       "rev": "22ff0988f473",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_perfect_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_perfect_number.json"
     },
     {
       "id": "c_bug_squasher_perfect_number",
@@ -729,7 +729,7 @@
       "difficulty": "beginner",
       "order": 72,
       "rev": "fcbcf6c33192",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_perfect_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_perfect_number.json"
     },
     {
       "id": "c_code_refactor_perfect_number",
@@ -739,7 +739,7 @@
       "difficulty": "beginner",
       "order": 73,
       "rev": "bf2e123872d1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_perfect_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_perfect_number.json"
     },
     {
       "id": "c_guided_practice_pointer_basics",
@@ -749,7 +749,7 @@
       "difficulty": "beginner",
       "order": 74,
       "rev": "d6ef7aabeeb2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_basics.json"
     },
     {
       "id": "c_bug_squasher_pointer_basics",
@@ -759,7 +759,7 @@
       "difficulty": "beginner",
       "order": 75,
       "rev": "45112ee1684c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_basics.json"
     },
     {
       "id": "c_code_refactor_pointer_basics",
@@ -769,7 +769,7 @@
       "difficulty": "beginner",
       "order": 76,
       "rev": "b971fb786677",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_basics.json"
     },
     {
       "id": "c_guided_practice_power_of_two",
@@ -779,7 +779,7 @@
       "difficulty": "beginner",
       "order": 77,
       "rev": "66d5d7f936be",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_power_of_two.json"
     },
     {
       "id": "c_bug_squasher_power_of_two",
@@ -789,7 +789,7 @@
       "difficulty": "beginner",
       "order": 78,
       "rev": "0a9a72e097c0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_power_of_two.json"
     },
     {
       "id": "c_code_refactor_power_of_two",
@@ -799,7 +799,7 @@
       "difficulty": "beginner",
       "order": 79,
       "rev": "198631fe709f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_power_of_two.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_power_of_two.json"
     },
     {
       "id": "c_guided_practice_power_by_loop",
@@ -809,7 +809,7 @@
       "difficulty": "beginner",
       "order": 80,
       "rev": "d313a2313d01",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_power_by_loop.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_power_by_loop.json"
     },
     {
       "id": "c_bug_squasher_power_by_loop",
@@ -819,7 +819,7 @@
       "difficulty": "beginner",
       "order": 81,
       "rev": "67c7a060eec3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_power_by_loop.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_power_by_loop.json"
     },
     {
       "id": "c_code_refactor_power_by_loop",
@@ -829,7 +829,7 @@
       "difficulty": "beginner",
       "order": 82,
       "rev": "e210227a553e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_power_by_loop.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_power_by_loop.json"
     },
     {
       "id": "c_guided_practice_prime",
@@ -839,7 +839,7 @@
       "difficulty": "beginner",
       "order": 83,
       "rev": "f5d97b74df45",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_prime.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_prime.json"
     },
     {
       "id": "c_bug_squasher_prime",
@@ -849,7 +849,7 @@
       "difficulty": "beginner",
       "order": 84,
       "rev": "16c6a738d0af",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prime.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prime.json"
     },
     {
       "id": "c_code_refactor_prime",
@@ -859,7 +859,7 @@
       "difficulty": "beginner",
       "order": 85,
       "rev": "cf4dd5d6d72f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_prime.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_prime.json"
     },
     {
       "id": "c_guided_practice_recursive_digit_sum",
@@ -869,7 +869,7 @@
       "difficulty": "beginner",
       "order": 86,
       "rev": "f9c437dac912",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_digit_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_digit_sum.json"
     },
     {
       "id": "c_bug_squasher_recursive_digit_sum",
@@ -879,7 +879,7 @@
       "difficulty": "beginner",
       "order": 87,
       "rev": "4402e2a7f14d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_digit_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_digit_sum.json"
     },
     {
       "id": "c_code_refactor_recursive_digit_sum",
@@ -889,7 +889,7 @@
       "difficulty": "beginner",
       "order": 88,
       "rev": "207e64ff76ab",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_digit_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_digit_sum.json"
     },
     {
       "id": "c_guided_practice_reverse_number",
@@ -899,7 +899,7 @@
       "difficulty": "beginner",
       "order": 89,
       "rev": "311cb2d6b876",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_reverse_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_reverse_number.json"
     },
     {
       "id": "c_bug_squasher_reverse_number",
@@ -909,7 +909,7 @@
       "difficulty": "beginner",
       "order": 90,
       "rev": "c906aed54763",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_reverse_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_reverse_number.json"
     },
     {
       "id": "c_code_refactor_reverse_number",
@@ -919,7 +919,7 @@
       "difficulty": "beginner",
       "order": 91,
       "rev": "2dea2878f17b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_reverse_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_reverse_number.json"
     },
     {
       "id": "c_guided_practice_string_reverse",
@@ -929,7 +929,7 @@
       "difficulty": "beginner",
       "order": 92,
       "rev": "116ae6baeb99",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_reverse.json"
     },
     {
       "id": "c_bug_squasher_string_reverse",
@@ -939,7 +939,7 @@
       "difficulty": "beginner",
       "order": 93,
       "rev": "617dcaefcb6c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_reverse.json"
     },
     {
       "id": "c_code_refactor_string_reverse",
@@ -949,7 +949,7 @@
       "difficulty": "beginner",
       "order": 94,
       "rev": "f9367c8609c7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_reverse.json"
     },
     {
       "id": "c_guided_practice_array_reverse",
@@ -959,7 +959,7 @@
       "difficulty": "beginner",
       "order": 95,
       "rev": "de9cbe84d7af",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_reverse.json"
     },
     {
       "id": "c_bug_squasher_array_reverse",
@@ -969,7 +969,7 @@
       "difficulty": "beginner",
       "order": 96,
       "rev": "9bcf1e51eb63",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_reverse.json"
     },
     {
       "id": "c_code_refactor_array_reverse",
@@ -979,7 +979,7 @@
       "difficulty": "beginner",
       "order": 97,
       "rev": "ab7000014e23",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_reverse.json"
     },
     {
       "id": "c_guided_practice_selection_sort",
@@ -989,7 +989,7 @@
       "difficulty": "beginner",
       "order": 98,
       "rev": "e1ff0290096b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_selection_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_selection_sort.json"
     },
     {
       "id": "c_bug_squasher_selection_sort",
@@ -999,7 +999,7 @@
       "difficulty": "beginner",
       "order": 99,
       "rev": "ee486432bfc7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_selection_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_selection_sort.json"
     },
     {
       "id": "c_code_refactor_selection_sort",
@@ -1009,7 +1009,7 @@
       "difficulty": "beginner",
       "order": 100,
       "rev": "401ad8ba1b48",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_selection_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_selection_sort.json"
     },
     {
       "id": "c_guided_practice_simple_calculator",
@@ -1019,7 +1019,7 @@
       "difficulty": "beginner",
       "order": 101,
       "rev": "2c8afc63b8dd",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_simple_calculator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_simple_calculator.json"
     },
     {
       "id": "c_bug_squasher_simple_calculator",
@@ -1029,7 +1029,7 @@
       "difficulty": "beginner",
       "order": 102,
       "rev": "a7ae02e9fe01",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_simple_calculator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_simple_calculator.json"
     },
     {
       "id": "c_code_refactor_simple_calculator",
@@ -1039,7 +1039,7 @@
       "difficulty": "beginner",
       "order": 103,
       "rev": "5dadc4f1e80e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_simple_calculator.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_simple_calculator.json"
     },
     {
       "id": "c_guided_practice_factorial",
@@ -1049,7 +1049,7 @@
       "difficulty": "beginner",
       "order": 104,
       "rev": "c8570f9c66ae",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_factorial.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_factorial.json"
     },
     {
       "id": "c_bug_squasher_factorial",
@@ -1059,7 +1059,7 @@
       "difficulty": "beginner",
       "order": 105,
       "rev": "5cf2ffb4ad8c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_factorial.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_factorial.json"
     },
     {
       "id": "c_code_refactor_factorial",
@@ -1069,7 +1069,7 @@
       "difficulty": "beginner",
       "order": 106,
       "rev": "c9bf22218b97",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_factorial.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_factorial.json"
     },
     {
       "id": "c_guided_practice_lcm",
@@ -1079,7 +1079,7 @@
       "difficulty": "beginner",
       "order": 107,
       "rev": "ee9447435792",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_lcm.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_lcm.json"
     },
     {
       "id": "c_bug_squasher_lcm",
@@ -1089,7 +1089,7 @@
       "difficulty": "beginner",
       "order": 108,
       "rev": "0f11ebbbc9c3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_lcm.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_lcm.json"
     },
     {
       "id": "c_code_refactor_lcm",
@@ -1099,7 +1099,7 @@
       "difficulty": "beginner",
       "order": 109,
       "rev": "d0ff15184945",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_lcm.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_lcm.json"
     },
     {
       "id": "c_guided_practice_word_count",
@@ -1109,7 +1109,7 @@
       "difficulty": "beginner",
       "order": 110,
       "rev": "a2946a931dbe",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_word_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_word_count.json"
     },
     {
       "id": "c_bug_squasher_word_count",
@@ -1119,7 +1119,7 @@
       "difficulty": "beginner",
       "order": 111,
       "rev": "07984c31c395",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_word_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_word_count.json"
     },
     {
       "id": "c_guided_practice_star_pyramid",
@@ -1129,7 +1129,7 @@
       "difficulty": "beginner",
       "order": 112,
       "rev": "b3bbd782eb42",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_star_pyramid.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_star_pyramid.json"
     },
     {
       "id": "c_bug_squasher_star_pyramid",
@@ -1139,7 +1139,7 @@
       "difficulty": "beginner",
       "order": 113,
       "rev": "6a0c33f208e8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_star_pyramid.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_star_pyramid.json"
     },
     {
       "id": "c_code_refactor_star_pyramid",
@@ -1149,7 +1149,7 @@
       "difficulty": "beginner",
       "order": 114,
       "rev": "59a231dd90d7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_star_pyramid.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_star_pyramid.json"
     },
     {
       "id": "c_guided_practice_string_length",
@@ -1159,7 +1159,7 @@
       "difficulty": "beginner",
       "order": 115,
       "rev": "ca037bd3c0ea",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_length.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_length.json"
     },
     {
       "id": "c_bug_squasher_string_length",
@@ -1169,7 +1169,7 @@
       "difficulty": "beginner",
       "order": 116,
       "rev": "0f10018ee97d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_length.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_length.json"
     },
     {
       "id": "c_code_refactor_string_length",
@@ -1179,7 +1179,7 @@
       "difficulty": "beginner",
       "order": 117,
       "rev": "90b1c058e720",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_length.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_length.json"
     },
     {
       "id": "c_guided_practice_strong_number",
@@ -1189,7 +1189,7 @@
       "difficulty": "beginner",
       "order": 118,
       "rev": "0301dac46cda",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_strong_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_strong_number.json"
     },
     {
       "id": "c_bug_squasher_strong_number",
@@ -1199,7 +1199,7 @@
       "difficulty": "beginner",
       "order": 119,
       "rev": "6820888bfb3b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_strong_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_strong_number.json"
     },
     {
       "id": "c_code_refactor_strong_number",
@@ -1209,7 +1209,7 @@
       "difficulty": "beginner",
       "order": 120,
       "rev": "2c54803786a2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_strong_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_strong_number.json"
     },
     {
       "id": "c_guided_practice_struct_basics",
@@ -1219,7 +1219,7 @@
       "difficulty": "beginner",
       "order": 121,
       "rev": "9562c1cbf3a2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_basics.json"
     },
     {
       "id": "c_bug_squasher_struct_basics",
@@ -1229,7 +1229,7 @@
       "difficulty": "beginner",
       "order": 122,
       "rev": "9c33d0d15f8a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_basics.json"
     },
     {
       "id": "c_code_refactor_struct_basics",
@@ -1239,7 +1239,7 @@
       "difficulty": "beginner",
       "order": 123,
       "rev": "09028ea43571",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_basics.json"
     },
     {
       "id": "c_guided_practice_sum_of_digits",
@@ -1249,7 +1249,7 @@
       "difficulty": "beginner",
       "order": 124,
       "rev": "da8c37ffcc69",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_sum_of_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_sum_of_digits.json"
     },
     {
       "id": "c_bug_squasher_sum_of_digits",
@@ -1259,7 +1259,7 @@
       "difficulty": "beginner",
       "order": 125,
       "rev": "f3e2b8cd8814",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sum_of_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sum_of_digits.json"
     },
     {
       "id": "c_code_refactor_sum_of_digits",
@@ -1269,7 +1269,7 @@
       "difficulty": "beginner",
       "order": 126,
       "rev": "dd68e6076801",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_sum_of_digits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_sum_of_digits.json"
     },
     {
       "id": "c_guided_practice_sum_of_naturals",
@@ -1279,7 +1279,7 @@
       "difficulty": "beginner",
       "order": 127,
       "rev": "f340ea7f8fef",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_sum_of_naturals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_sum_of_naturals.json"
     },
     {
       "id": "c_bug_squasher_sum_of_naturals",
@@ -1289,7 +1289,7 @@
       "difficulty": "beginner",
       "order": 128,
       "rev": "2d2938c675c1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sum_of_naturals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sum_of_naturals.json"
     },
     {
       "id": "c_code_refactor_sum_of_naturals",
@@ -1299,7 +1299,7 @@
       "difficulty": "beginner",
       "order": 129,
       "rev": "1d6f57a8866b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_sum_of_naturals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_sum_of_naturals.json"
     },
     {
       "id": "c_guided_practice_swap_numbers",
@@ -1309,7 +1309,7 @@
       "difficulty": "beginner",
       "order": 130,
       "rev": "99621036844d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_swap_numbers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_swap_numbers.json"
     },
     {
       "id": "c_bug_squasher_swap_numbers",
@@ -1319,7 +1319,7 @@
       "difficulty": "beginner",
       "order": 131,
       "rev": "26660db2e349",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_swap_numbers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_swap_numbers.json"
     },
     {
       "id": "c_code_refactor_swap_numbers",
@@ -1329,7 +1329,7 @@
       "difficulty": "beginner",
       "order": 132,
       "rev": "2ba803dee4eb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_swap_numbers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_swap_numbers.json"
     },
     {
       "id": "c_guided_practice_swap_pointers",
@@ -1339,7 +1339,7 @@
       "difficulty": "beginner",
       "order": 133,
       "rev": "32ec4bfb6d2e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_swap_pointers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_swap_pointers.json"
     },
     {
       "id": "c_bug_squasher_swap_pointers",
@@ -1349,7 +1349,7 @@
       "difficulty": "beginner",
       "order": 134,
       "rev": "85473cbf5c44",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_swap_pointers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_swap_pointers.json"
     },
     {
       "id": "c_code_refactor_swap_pointers",
@@ -1359,7 +1359,7 @@
       "difficulty": "beginner",
       "order": 135,
       "rev": "6dce246d99f9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_swap_pointers.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_swap_pointers.json"
     },
     {
       "id": "c_guided_practice_temp_conv",
@@ -1369,7 +1369,7 @@
       "difficulty": "beginner",
       "order": 136,
       "rev": "f3ab4ad68667",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_temp_conv.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_temp_conv.json"
     },
     {
       "id": "c_bug_squasher_temp_conv",
@@ -1379,7 +1379,7 @@
       "difficulty": "beginner",
       "order": 137,
       "rev": "3ff7c6ef91d7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_temp_conv.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_temp_conv.json"
     },
     {
       "id": "c_code_refactor_temp_conv",
@@ -1389,7 +1389,7 @@
       "difficulty": "beginner",
       "order": 138,
       "rev": "3d1c89333355",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_temp_conv.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_temp_conv.json"
     },
     {
       "id": "c_guided_practice_toggle_case",
@@ -1399,7 +1399,7 @@
       "difficulty": "beginner",
       "order": 139,
       "rev": "28fe3ce12b82",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_toggle_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_toggle_case.json"
     },
     {
       "id": "c_bug_squasher_toggle_case",
@@ -1409,7 +1409,7 @@
       "difficulty": "beginner",
       "order": 140,
       "rev": "32eb56a3ed98",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_toggle_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_toggle_case.json"
     },
     {
       "id": "c_code_refactor_toggle_case",
@@ -1419,7 +1419,7 @@
       "difficulty": "beginner",
       "order": 141,
       "rev": "8296a4806591",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_toggle_case.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_toggle_case.json"
     },
     {
       "id": "c_guided_practice_binary_search",
@@ -1429,7 +1429,7 @@
       "difficulty": "medium",
       "order": 142,
       "rev": "e61331de835f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_binary_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_binary_search.json"
     },
     {
       "id": "c_bug_squasher_binary_search",
@@ -1439,7 +1439,7 @@
       "difficulty": "medium",
       "order": 143,
       "rev": "ed6577cf17a9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_binary_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_binary_search.json"
     },
     {
       "id": "c_code_refactor_binary_search",
@@ -1449,7 +1449,7 @@
       "difficulty": "medium",
       "order": 144,
       "rev": "f25283d60279",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_binary_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_binary_search.json"
     },
     {
       "id": "c_guided_practice_anagram_check",
@@ -1459,7 +1459,7 @@
       "difficulty": "medium",
       "order": 145,
       "rev": "6f7e77520381",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_anagram_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_anagram_check.json"
     },
     {
       "id": "c_bug_squasher_anagram_check",
@@ -1469,7 +1469,7 @@
       "difficulty": "medium",
       "order": 146,
       "rev": "7ab7d722615a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_anagram_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_anagram_check.json"
     },
     {
       "id": "c_code_refactor_anagram_check",
@@ -1479,7 +1479,7 @@
       "difficulty": "medium",
       "order": 147,
       "rev": "68067e2103cb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_anagram_check.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_anagram_check.json"
     },
     {
       "id": "c_guided_practice_array_parameter",
@@ -1489,7 +1489,7 @@
       "difficulty": "medium",
       "order": 148,
       "rev": "2ba0012eeab6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_parameter.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_array_parameter.json"
     },
     {
       "id": "c_bug_squasher_array_parameter",
@@ -1499,7 +1499,7 @@
       "difficulty": "medium",
       "order": 149,
       "rev": "c356c81a70f1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_parameter.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_array_parameter.json"
     },
     {
       "id": "c_code_refactor_array_parameter",
@@ -1509,7 +1509,7 @@
       "difficulty": "medium",
       "order": 150,
       "rev": "9c307142c55b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_parameter.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_array_parameter.json"
     },
     {
       "id": "c_guided_practice_balanced_brackets",
@@ -1519,7 +1519,7 @@
       "difficulty": "medium",
       "order": 151,
       "rev": "069d23b4955b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_balanced_brackets.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_balanced_brackets.json"
     },
     {
       "id": "c_bug_squasher_balanced_brackets",
@@ -1529,7 +1529,7 @@
       "difficulty": "medium",
       "order": 152,
       "rev": "4d89dd81aca4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_balanced_brackets.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_balanced_brackets.json"
     },
     {
       "id": "c_code_refactor_balanced_brackets",
@@ -1539,7 +1539,7 @@
       "difficulty": "medium",
       "order": 153,
       "rev": "c9b3d0a4e288",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_balanced_brackets.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_balanced_brackets.json"
     },
     {
       "id": "c_guided_practice_bfs_graph",
@@ -1549,7 +1549,7 @@
       "difficulty": "medium",
       "order": 154,
       "rev": "34e2c2b6fce5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_bfs_graph.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_bfs_graph.json"
     },
     {
       "id": "c_bug_squasher_bfs_graph",
@@ -1559,7 +1559,7 @@
       "difficulty": "medium",
       "order": 155,
       "rev": "3e429f58b60f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bfs_graph.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bfs_graph.json"
     },
     {
       "id": "c_code_refactor_bfs_graph",
@@ -1569,7 +1569,7 @@
       "difficulty": "medium",
       "order": 156,
       "rev": "bbda45e18031",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_bfs_graph.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_bfs_graph.json"
     },
     {
       "id": "c_guided_practice_capitalize_words",
@@ -1579,7 +1579,7 @@
       "difficulty": "medium",
       "order": 157,
       "rev": "e5da2f438936",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_capitalize_words.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_capitalize_words.json"
     },
     {
       "id": "c_bug_squasher_capitalize_words",
@@ -1589,7 +1589,7 @@
       "difficulty": "medium",
       "order": 158,
       "rev": "b25ebc0efbde",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_capitalize_words.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_capitalize_words.json"
     },
     {
       "id": "c_code_refactor_capitalize_words",
@@ -1599,7 +1599,7 @@
       "difficulty": "medium",
       "order": 159,
       "rev": "094066235eaa",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_capitalize_words.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_capitalize_words.json"
     },
     {
       "id": "c_guided_practice_char_frequency",
@@ -1609,7 +1609,7 @@
       "difficulty": "medium",
       "order": 160,
       "rev": "77a40ac6279b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_char_frequency.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_char_frequency.json"
     },
     {
       "id": "c_bug_squasher_char_frequency",
@@ -1619,7 +1619,7 @@
       "difficulty": "medium",
       "order": 161,
       "rev": "251950c9538d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_char_frequency.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_char_frequency.json"
     },
     {
       "id": "c_code_refactor_char_frequency",
@@ -1629,7 +1629,7 @@
       "difficulty": "medium",
       "order": 162,
       "rev": "d0d7edf73151",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_char_frequency.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_char_frequency.json"
     },
     {
       "id": "c_guided_practice_collatz",
@@ -1639,7 +1639,7 @@
       "difficulty": "medium",
       "order": 163,
       "rev": "c25d0279a4c4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_collatz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_collatz.json"
     },
     {
       "id": "c_bug_squasher_collatz",
@@ -1649,7 +1649,7 @@
       "difficulty": "medium",
       "order": 164,
       "rev": "96740a5d5713",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_collatz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_collatz.json"
     },
     {
       "id": "c_code_refactor_collatz",
@@ -1659,7 +1659,7 @@
       "difficulty": "medium",
       "order": 165,
       "rev": "d2b8e81a627a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_collatz.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_collatz.json"
     },
     {
       "id": "c_guided_practice_string_compare",
@@ -1669,7 +1669,7 @@
       "difficulty": "medium",
       "order": 166,
       "rev": "b70198fbd464",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_compare.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_compare.json"
     },
     {
       "id": "c_bug_squasher_string_compare",
@@ -1679,7 +1679,7 @@
       "difficulty": "medium",
       "order": 167,
       "rev": "a6f37fa640d3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_compare.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_compare.json"
     },
     {
       "id": "c_code_refactor_string_compare",
@@ -1689,7 +1689,7 @@
       "difficulty": "medium",
       "order": 168,
       "rev": "2850c9180573",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_compare.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_compare.json"
     },
     {
       "id": "c_guided_practice_string_copy_concat",
@@ -1699,7 +1699,7 @@
       "difficulty": "medium",
       "order": 169,
       "rev": "4d64da058bfa",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_copy_concat.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_copy_concat.json"
     },
     {
       "id": "c_bug_squasher_string_copy_concat",
@@ -1709,7 +1709,7 @@
       "difficulty": "medium",
       "order": 170,
       "rev": "a6018e948096",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_copy_concat.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_copy_concat.json"
     },
     {
       "id": "c_code_refactor_string_copy_concat",
@@ -1719,7 +1719,7 @@
       "difficulty": "medium",
       "order": 171,
       "rev": "8e5344f86343",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_copy_concat.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_copy_concat.json"
     },
     {
       "id": "c_guided_practice_count_set_bits",
@@ -1729,7 +1729,7 @@
       "difficulty": "medium",
       "order": 172,
       "rev": "697dceb311b4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_set_bits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_count_set_bits.json"
     },
     {
       "id": "c_bug_squasher_count_set_bits",
@@ -1739,7 +1739,7 @@
       "difficulty": "medium",
       "order": 173,
       "rev": "dcce1756904e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_set_bits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_count_set_bits.json"
     },
     {
       "id": "c_code_refactor_count_set_bits",
@@ -1749,7 +1749,7 @@
       "difficulty": "medium",
       "order": 174,
       "rev": "86343ea9a6f6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_set_bits.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_count_set_bits.json"
     },
     {
       "id": "c_guided_practice_counting_sort",
@@ -1759,7 +1759,7 @@
       "difficulty": "medium",
       "order": 175,
       "rev": "5d2e9224b9c9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_counting_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_counting_sort.json"
     },
     {
       "id": "c_bug_squasher_counting_sort",
@@ -1769,7 +1769,7 @@
       "difficulty": "medium",
       "order": 176,
       "rev": "662991600081",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_counting_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_counting_sort.json"
     },
     {
       "id": "c_code_refactor_counting_sort",
@@ -1779,7 +1779,7 @@
       "difficulty": "medium",
       "order": 177,
       "rev": "2fd149cf47d5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_counting_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_counting_sort.json"
     },
     {
       "id": "c_guided_practice_digit_root",
@@ -1789,7 +1789,7 @@
       "difficulty": "medium",
       "order": 178,
       "rev": "7998d5467943",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_digit_root.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_digit_root.json"
     },
     {
       "id": "c_bug_squasher_digit_root",
@@ -1799,7 +1799,7 @@
       "difficulty": "medium",
       "order": 179,
       "rev": "dea3d9d67521",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_digit_root.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_digit_root.json"
     },
     {
       "id": "c_code_refactor_digit_root",
@@ -1809,7 +1809,7 @@
       "difficulty": "medium",
       "order": 180,
       "rev": "44662a23847c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_digit_root.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_digit_root.json"
     },
     {
       "id": "c_guided_practice_dynamic_array",
@@ -1819,7 +1819,7 @@
       "difficulty": "medium",
       "order": 181,
       "rev": "050d37e31aea",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_dynamic_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_dynamic_array.json"
     },
     {
       "id": "c_bug_squasher_dynamic_array",
@@ -1829,7 +1829,7 @@
       "difficulty": "medium",
       "order": 182,
       "rev": "6b031c054123",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_dynamic_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_dynamic_array.json"
     },
     {
       "id": "c_code_refactor_dynamic_array",
@@ -1839,7 +1839,7 @@
       "difficulty": "medium",
       "order": 183,
       "rev": "e98d5a3b22bc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_dynamic_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_dynamic_array.json"
     },
     {
       "id": "c_guided_practice_recursive_power",
@@ -1849,7 +1849,7 @@
       "difficulty": "medium",
       "order": 184,
       "rev": "1426f811db0e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_power.json"
     },
     {
       "id": "c_bug_squasher_recursive_power",
@@ -1859,7 +1859,7 @@
       "difficulty": "medium",
       "order": 185,
       "rev": "d6feff8688e0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_power.json"
     },
     {
       "id": "c_code_refactor_recursive_power",
@@ -1869,7 +1869,7 @@
       "difficulty": "medium",
       "order": 186,
       "rev": "dd926de312d1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_power.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_power.json"
     },
     {
       "id": "c_guided_practice_fcfs_scheduling",
@@ -1879,7 +1879,7 @@
       "difficulty": "medium",
       "order": 187,
       "rev": "1ba8df2caa9c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_fcfs_scheduling.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_fcfs_scheduling.json"
     },
     {
       "id": "c_bug_squasher_fcfs_scheduling",
@@ -1889,7 +1889,7 @@
       "difficulty": "medium",
       "order": 188,
       "rev": "34a92a1bb2c7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fcfs_scheduling.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_fcfs_scheduling.json"
     },
     {
       "id": "c_code_refactor_fcfs_scheduling",
@@ -1899,7 +1899,7 @@
       "difficulty": "medium",
       "order": 189,
       "rev": "0a01eaeeeff0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_fcfs_scheduling.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_fcfs_scheduling.json"
     },
     {
       "id": "c_guided_practice_substring_search",
@@ -1909,7 +1909,7 @@
       "difficulty": "medium",
       "order": 190,
       "rev": "5262652938e8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_substring_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_substring_search.json"
     },
     {
       "id": "c_bug_squasher_substring_search",
@@ -1919,7 +1919,7 @@
       "difficulty": "medium",
       "order": 191,
       "rev": "f05bcd6f1746",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_substring_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_substring_search.json"
     },
     {
       "id": "c_code_refactor_substring_search",
@@ -1929,7 +1929,7 @@
       "difficulty": "medium",
       "order": 192,
       "rev": "1250bf8ffaa1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_substring_search.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_substring_search.json"
     },
     {
       "id": "c_guided_practice_missing_number",
@@ -1939,7 +1939,7 @@
       "difficulty": "medium",
       "order": 193,
       "rev": "3b3b48c03f46",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_missing_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_missing_number.json"
     },
     {
       "id": "c_bug_squasher_missing_number",
@@ -1949,7 +1949,7 @@
       "difficulty": "medium",
       "order": 194,
       "rev": "b2f4fc490592",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_missing_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_missing_number.json"
     },
     {
       "id": "c_code_refactor_missing_number",
@@ -1959,7 +1959,7 @@
       "difficulty": "medium",
       "order": 195,
       "rev": "6bf73ae1f44b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_missing_number.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_missing_number.json"
     },
     {
       "id": "c_guided_practice_single_number_xor",
@@ -1969,7 +1969,7 @@
       "difficulty": "medium",
       "order": 196,
       "rev": "c31522164522",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_single_number_xor.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_single_number_xor.json"
     },
     {
       "id": "c_bug_squasher_single_number_xor",
@@ -1979,7 +1979,7 @@
       "difficulty": "medium",
       "order": 197,
       "rev": "fccbb316f345",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_single_number_xor.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_single_number_xor.json"
     },
     {
       "id": "c_code_refactor_single_number_xor",
@@ -1989,7 +1989,7 @@
       "difficulty": "medium",
       "order": 198,
       "rev": "b5b100e0cf77",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_single_number_xor.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_single_number_xor.json"
     },
     {
       "id": "c_guided_practice_frequency_count",
@@ -1999,7 +1999,7 @@
       "difficulty": "medium",
       "order": 199,
       "rev": "e638391ccd1c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_frequency_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_frequency_count.json"
     },
     {
       "id": "c_bug_squasher_frequency_count",
@@ -2009,7 +2009,7 @@
       "difficulty": "medium",
       "order": 200,
       "rev": "fc22aaa65408",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_frequency_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_frequency_count.json"
     },
     {
       "id": "c_code_refactor_frequency_count",
@@ -2019,7 +2019,7 @@
       "difficulty": "medium",
       "order": 201,
       "rev": "b75f6ebbd3d5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_frequency_count.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_frequency_count.json"
     },
     {
       "id": "c_guided_practice_function_pointer",
@@ -2029,7 +2029,7 @@
       "difficulty": "medium",
       "order": 202,
       "rev": "450c11898b93",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_function_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_function_pointer.json"
     },
     {
       "id": "c_bug_squasher_function_pointer",
@@ -2039,7 +2039,7 @@
       "difficulty": "medium",
       "order": 203,
       "rev": "1273ec1eb951",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_function_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_function_pointer.json"
     },
     {
       "id": "c_code_refactor_function_pointer",
@@ -2049,7 +2049,7 @@
       "difficulty": "medium",
       "order": 204,
       "rev": "d316d9ab4195",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_function_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_function_pointer.json"
     },
     {
       "id": "c_guided_practice_roman_numerals",
@@ -2059,7 +2059,7 @@
       "difficulty": "medium",
       "order": 205,
       "rev": "5538bf0360c5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_roman_numerals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_roman_numerals.json"
     },
     {
       "id": "c_bug_squasher_roman_numerals",
@@ -2069,7 +2069,7 @@
       "difficulty": "medium",
       "order": 206,
       "rev": "c66b16f8f5a9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_roman_numerals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_roman_numerals.json"
     },
     {
       "id": "c_code_refactor_roman_numerals",
@@ -2079,7 +2079,7 @@
       "difficulty": "medium",
       "order": 207,
       "rev": "04bb03f3d86f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_roman_numerals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_roman_numerals.json"
     },
     {
       "id": "c_guided_practice_linked_list_basics",
@@ -2089,7 +2089,7 @@
       "difficulty": "medium",
       "order": 208,
       "rev": "53fc9f9636a0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_basics.json"
     },
     {
       "id": "c_bug_squasher_linked_list_basics",
@@ -2099,7 +2099,7 @@
       "difficulty": "medium",
       "order": 209,
       "rev": "6c009730a48c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_basics.json"
     },
     {
       "id": "c_code_refactor_linked_list_basics",
@@ -2109,7 +2109,7 @@
       "difficulty": "medium",
       "order": 210,
       "rev": "8351334077a3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_basics.json"
     },
     {
       "id": "c_guided_practice_matrix_multiply",
@@ -2119,7 +2119,7 @@
       "difficulty": "medium",
       "order": 211,
       "rev": "6763f4846da1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_multiply.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_multiply.json"
     },
     {
       "id": "c_bug_squasher_matrix_multiply",
@@ -2129,7 +2129,7 @@
       "difficulty": "medium",
       "order": 212,
       "rev": "75b243292142",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_multiply.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_multiply.json"
     },
     {
       "id": "c_code_refactor_matrix_multiply",
@@ -2139,7 +2139,7 @@
       "difficulty": "medium",
       "order": 213,
       "rev": "54b6ecf34681",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_multiply.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_multiply.json"
     },
     {
       "id": "c_guided_practice_max_subarray",
@@ -2149,7 +2149,7 @@
       "difficulty": "medium",
       "order": 214,
       "rev": "3fbd78ee8f9e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_max_subarray.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_max_subarray.json"
     },
     {
       "id": "c_bug_squasher_max_subarray",
@@ -2159,7 +2159,7 @@
       "difficulty": "medium",
       "order": 215,
       "rev": "1cb3c7ad3a6d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_max_subarray.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_max_subarray.json"
     },
     {
       "id": "c_code_refactor_max_subarray",
@@ -2169,7 +2169,7 @@
       "difficulty": "medium",
       "order": 216,
       "rev": "af8dfc4f2984",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_max_subarray.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_max_subarray.json"
     },
     {
       "id": "c_guided_practice_merge_sorted_arrays",
@@ -2179,7 +2179,7 @@
       "difficulty": "medium",
       "order": 217,
       "rev": "46c72d43538b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_merge_sorted_arrays.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_merge_sorted_arrays.json"
     },
     {
       "id": "c_bug_squasher_merge_sorted_arrays",
@@ -2189,7 +2189,7 @@
       "difficulty": "medium",
       "order": 218,
       "rev": "80dabc039cfb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_merge_sorted_arrays.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_merge_sorted_arrays.json"
     },
     {
       "id": "c_code_refactor_merge_sorted_arrays",
@@ -2199,7 +2199,7 @@
       "difficulty": "medium",
       "order": 219,
       "rev": "12ce86dbb69d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_merge_sorted_arrays.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_merge_sorted_arrays.json"
     },
     {
       "id": "c_guided_practice_linked_list_middle",
@@ -2209,7 +2209,7 @@
       "difficulty": "medium",
       "order": 220,
       "rev": "f6cbb6ab07bc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_middle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_middle.json"
     },
     {
       "id": "c_bug_squasher_linked_list_middle",
@@ -2219,7 +2219,7 @@
       "difficulty": "medium",
       "order": 221,
       "rev": "03d52f725c87",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_middle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_middle.json"
     },
     {
       "id": "c_code_refactor_linked_list_middle",
@@ -2229,7 +2229,7 @@
       "difficulty": "medium",
       "order": 222,
       "rev": "8ab1859d91a8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_middle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_middle.json"
     },
     {
       "id": "c_guided_practice_move_zeros",
@@ -2239,7 +2239,7 @@
       "difficulty": "medium",
       "order": 223,
       "rev": "b0048dce64f6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_move_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_move_zeros.json"
     },
     {
       "id": "c_bug_squasher_move_zeros",
@@ -2249,7 +2249,7 @@
       "difficulty": "medium",
       "order": 224,
       "rev": "8d40a865138a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_move_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_move_zeros.json"
     },
     {
       "id": "c_code_refactor_move_zeros",
@@ -2259,7 +2259,7 @@
       "difficulty": "medium",
       "order": 225,
       "rev": "2e573df979e3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_move_zeros.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_move_zeros.json"
     },
     {
       "id": "c_guided_practice_pascal_triangle",
@@ -2269,7 +2269,7 @@
       "difficulty": "medium",
       "order": 226,
       "rev": "ccb788f16e4b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_pascal_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_pascal_triangle.json"
     },
     {
       "id": "c_bug_squasher_pascal_triangle",
@@ -2279,7 +2279,7 @@
       "difficulty": "medium",
       "order": 227,
       "rev": "b54f0739937b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pascal_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pascal_triangle.json"
     },
     {
       "id": "c_code_refactor_pascal_triangle",
@@ -2289,7 +2289,7 @@
       "difficulty": "medium",
       "order": 228,
       "rev": "6965f087f8d2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_pascal_triangle.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_pascal_triangle.json"
     },
     {
       "id": "c_guided_practice_pointer_arithmetic",
@@ -2299,7 +2299,7 @@
       "difficulty": "medium",
       "order": 229,
       "rev": "bb34f4fa55ca",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_arithmetic.json"
     },
     {
       "id": "c_bug_squasher_pointer_arithmetic",
@@ -2309,7 +2309,7 @@
       "difficulty": "medium",
       "order": 230,
       "rev": "68e1671645a7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_arithmetic.json"
     },
     {
       "id": "c_code_refactor_pointer_arithmetic",
@@ -2319,7 +2319,7 @@
       "difficulty": "medium",
       "order": 231,
       "rev": "96d884348f57",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_arithmetic.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_arithmetic.json"
     },
     {
       "id": "c_guided_practice_prefix_sum",
@@ -2329,7 +2329,7 @@
       "difficulty": "medium",
       "order": 232,
       "rev": "655b2fd1d6e5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_prefix_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_prefix_sum.json"
     },
     {
       "id": "c_bug_squasher_prefix_sum",
@@ -2339,7 +2339,7 @@
       "difficulty": "medium",
       "order": 233,
       "rev": "c08aecd3d77e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prefix_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prefix_sum.json"
     },
     {
       "id": "c_code_refactor_prefix_sum",
@@ -2349,7 +2349,7 @@
       "difficulty": "medium",
       "order": 234,
       "rev": "52554df996f4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_prefix_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_prefix_sum.json"
     },
     {
       "id": "c_guided_practice_prime_factors",
@@ -2359,7 +2359,7 @@
       "difficulty": "medium",
       "order": 235,
       "rev": "469356be22c3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_prime_factors.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_prime_factors.json"
     },
     {
       "id": "c_bug_squasher_prime_factors",
@@ -2369,7 +2369,7 @@
       "difficulty": "medium",
       "order": 236,
       "rev": "4a2eeb13e66d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prime_factors.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_prime_factors.json"
     },
     {
       "id": "c_code_refactor_prime_factors",
@@ -2379,7 +2379,7 @@
       "difficulty": "medium",
       "order": 237,
       "rev": "a40060f78516",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_prime_factors.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_prime_factors.json"
     },
     {
       "id": "c_guided_practice_queue_array",
@@ -2389,7 +2389,7 @@
       "difficulty": "medium",
       "order": 238,
       "rev": "ef34c53e4252",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_queue_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_queue_array.json"
     },
     {
       "id": "c_bug_squasher_queue_array",
@@ -2399,7 +2399,7 @@
       "difficulty": "medium",
       "order": 239,
       "rev": "d048577130c1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_queue_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_queue_array.json"
     },
     {
       "id": "c_code_refactor_queue_array",
@@ -2409,7 +2409,7 @@
       "difficulty": "medium",
       "order": 240,
       "rev": "08cc1af0be22",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_queue_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_queue_array.json"
     },
     {
       "id": "c_guided_practice_binary_search_recursive",
@@ -2419,7 +2419,7 @@
       "difficulty": "medium",
       "order": 241,
       "rev": "f7be09049cc3",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_binary_search_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_binary_search_recursive.json"
     },
     {
       "id": "c_bug_squasher_binary_search_recursive",
@@ -2429,7 +2429,7 @@
       "difficulty": "medium",
       "order": 242,
       "rev": "5f35bb92e7b1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_binary_search_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_binary_search_recursive.json"
     },
     {
       "id": "c_code_refactor_binary_search_recursive",
@@ -2439,7 +2439,7 @@
       "difficulty": "medium",
       "order": 243,
       "rev": "ef74d9a41402",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_binary_search_recursive.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_binary_search_recursive.json"
     },
     {
       "id": "c_guided_practice_recursive_fibonacci",
@@ -2449,7 +2449,7 @@
       "difficulty": "medium",
       "order": 244,
       "rev": "12b7c32a8fe9",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_fibonacci.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_fibonacci.json"
     },
     {
       "id": "c_bug_squasher_recursive_fibonacci",
@@ -2459,7 +2459,7 @@
       "difficulty": "medium",
       "order": 245,
       "rev": "bb53bf20e2d1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_fibonacci.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_fibonacci.json"
     },
     {
       "id": "c_code_refactor_recursive_fibonacci",
@@ -2469,7 +2469,7 @@
       "difficulty": "medium",
       "order": 246,
       "rev": "74c770c1781a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_fibonacci.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_fibonacci.json"
     },
     {
       "id": "c_guided_practice_recursive_string_reverse",
@@ -2479,7 +2479,7 @@
       "difficulty": "medium",
       "order": 247,
       "rev": "0e88c27cd95a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_recursive_string_reverse.json"
     },
     {
       "id": "c_bug_squasher_recursive_string_reverse",
@@ -2489,7 +2489,7 @@
       "difficulty": "medium",
       "order": 248,
       "rev": "a260b121d20c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_recursive_string_reverse.json"
     },
     {
       "id": "c_code_refactor_recursive_string_reverse",
@@ -2499,7 +2499,7 @@
       "difficulty": "medium",
       "order": 249,
       "rev": "279dfcc9ed7c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_string_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_recursive_string_reverse.json"
     },
     {
       "id": "c_guided_practice_remove_duplicates",
@@ -2509,7 +2509,7 @@
       "difficulty": "medium",
       "order": 250,
       "rev": "21ba94f1a608",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_remove_duplicates.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_remove_duplicates.json"
     },
     {
       "id": "c_bug_squasher_remove_duplicates",
@@ -2519,7 +2519,7 @@
       "difficulty": "medium",
       "order": 251,
       "rev": "2fd2fd53403c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_remove_duplicates.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_remove_duplicates.json"
     },
     {
       "id": "c_code_refactor_remove_duplicates",
@@ -2529,7 +2529,7 @@
       "difficulty": "medium",
       "order": 252,
       "rev": "be70deadd76d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_remove_duplicates.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_remove_duplicates.json"
     },
     {
       "id": "c_guided_practice_remove_spaces",
@@ -2539,7 +2539,7 @@
       "difficulty": "medium",
       "order": 253,
       "rev": "9fc759a251c5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_remove_spaces.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_remove_spaces.json"
     },
     {
       "id": "c_bug_squasher_remove_spaces",
@@ -2549,7 +2549,7 @@
       "difficulty": "medium",
       "order": 254,
       "rev": "26cf12e9e4ec",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_remove_spaces.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_remove_spaces.json"
     },
     {
       "id": "c_code_refactor_remove_spaces",
@@ -2559,7 +2559,7 @@
       "difficulty": "medium",
       "order": 255,
       "rev": "ec3d2aef2197",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_remove_spaces.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_remove_spaces.json"
     },
     {
       "id": "c_guided_practice_rotate_left",
@@ -2569,7 +2569,7 @@
       "difficulty": "medium",
       "order": 256,
       "rev": "26f80ffd374d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_rotate_left.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_rotate_left.json"
     },
     {
       "id": "c_bug_squasher_rotate_left",
@@ -2579,7 +2579,7 @@
       "difficulty": "medium",
       "order": 257,
       "rev": "634840f308df",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_rotate_left.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_rotate_left.json"
     },
     {
       "id": "c_code_refactor_rotate_left",
@@ -2589,7 +2589,7 @@
       "difficulty": "medium",
       "order": 258,
       "rev": "c5c0bbb37f77",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_rotate_left.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_rotate_left.json"
     },
     {
       "id": "c_guided_practice_second_largest",
@@ -2599,7 +2599,7 @@
       "difficulty": "medium",
       "order": 259,
       "rev": "bd3ee9de53e7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_second_largest.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_second_largest.json"
     },
     {
       "id": "c_bug_squasher_second_largest",
@@ -2609,7 +2609,7 @@
       "difficulty": "medium",
       "order": 260,
       "rev": "d16e8a761adb",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_second_largest.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_second_largest.json"
     },
     {
       "id": "c_code_refactor_second_largest",
@@ -2619,7 +2619,7 @@
       "difficulty": "medium",
       "order": 261,
       "rev": "815e2b982961",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_second_largest.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_second_largest.json"
     },
     {
       "id": "c_guided_practice_bit_flags",
@@ -2629,7 +2629,7 @@
       "difficulty": "medium",
       "order": 262,
       "rev": "7b31d0e168ad",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_bit_flags.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_bit_flags.json"
     },
     {
       "id": "c_bug_squasher_bit_flags",
@@ -2639,7 +2639,7 @@
       "difficulty": "medium",
       "order": 263,
       "rev": "2a59c3bd963f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bit_flags.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bit_flags.json"
     },
     {
       "id": "c_code_refactor_bit_flags",
@@ -2649,7 +2649,7 @@
       "difficulty": "medium",
       "order": 264,
       "rev": "ade5c9ed717c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_bit_flags.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_bit_flags.json"
     },
     {
       "id": "c_guided_practice_sieve_primes",
@@ -2659,7 +2659,7 @@
       "difficulty": "medium",
       "order": 265,
       "rev": "fd4ce7907e6b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_sieve_primes.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_sieve_primes.json"
     },
     {
       "id": "c_bug_squasher_sieve_primes",
@@ -2669,7 +2669,7 @@
       "difficulty": "medium",
       "order": 266,
       "rev": "56d75e66cb3c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sieve_primes.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_sieve_primes.json"
     },
     {
       "id": "c_code_refactor_sieve_primes",
@@ -2679,7 +2679,7 @@
       "difficulty": "medium",
       "order": 267,
       "rev": "4bdea7b96051",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_sieve_primes.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_sieve_primes.json"
     },
     {
       "id": "c_guided_practice_string_array_sort",
@@ -2689,7 +2689,7 @@
       "difficulty": "medium",
       "order": 268,
       "rev": "75c303066dd5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_string_array_sort.json"
     },
     {
       "id": "c_bug_squasher_string_array_sort",
@@ -2699,7 +2699,7 @@
       "difficulty": "medium",
       "order": 269,
       "rev": "b662820f7c46",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_string_array_sort.json"
     },
     {
       "id": "c_code_refactor_string_array_sort",
@@ -2709,7 +2709,7 @@
       "difficulty": "medium",
       "order": 270,
       "rev": "79b337a48071",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_string_array_sort.json"
     },
     {
       "id": "c_guided_practice_struct_array_sort",
@@ -2719,7 +2719,7 @@
       "difficulty": "medium",
       "order": 271,
       "rev": "0d7f5623c762",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_array_sort.json"
     },
     {
       "id": "c_bug_squasher_struct_array_sort",
@@ -2729,7 +2729,7 @@
       "difficulty": "medium",
       "order": 272,
       "rev": "0e012274128f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_array_sort.json"
     },
     {
       "id": "c_code_refactor_struct_array_sort",
@@ -2739,7 +2739,7 @@
       "difficulty": "medium",
       "order": 273,
       "rev": "1936b503c0cc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_array_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_array_sort.json"
     },
     {
       "id": "c_guided_practice_stack_array",
@@ -2749,7 +2749,7 @@
       "difficulty": "medium",
       "order": 274,
       "rev": "850be7cada84",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_stack_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_stack_array.json"
     },
     {
       "id": "c_bug_squasher_stack_array",
@@ -2759,7 +2759,7 @@
       "difficulty": "medium",
       "order": 275,
       "rev": "167047e2fe00",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_stack_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_stack_array.json"
     },
     {
       "id": "c_code_refactor_stack_array",
@@ -2769,7 +2769,7 @@
       "difficulty": "medium",
       "order": 276,
       "rev": "2f553744a3b7",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_stack_array.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_stack_array.json"
     },
     {
       "id": "c_guided_practice_struct_pointer",
@@ -2779,7 +2779,7 @@
       "difficulty": "medium",
       "order": 277,
       "rev": "737af9118c55",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_struct_pointer.json"
     },
     {
       "id": "c_bug_squasher_struct_pointer",
@@ -2789,7 +2789,7 @@
       "difficulty": "medium",
       "order": 278,
       "rev": "9135a71f3153",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_struct_pointer.json"
     },
     {
       "id": "c_code_refactor_struct_pointer",
@@ -2799,7 +2799,7 @@
       "difficulty": "medium",
       "order": 279,
       "rev": "2b79e2804d28",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_struct_pointer.json"
     },
     {
       "id": "c_guided_practice_matrix_diagonals",
@@ -2809,7 +2809,7 @@
       "difficulty": "medium",
       "order": 280,
       "rev": "e7f81e92fa54",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_diagonals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_diagonals.json"
     },
     {
       "id": "c_bug_squasher_matrix_diagonals",
@@ -2819,7 +2819,7 @@
       "difficulty": "medium",
       "order": 281,
       "rev": "2e8c1b209541",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_diagonals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_diagonals.json"
     },
     {
       "id": "c_code_refactor_matrix_diagonals",
@@ -2829,7 +2829,7 @@
       "difficulty": "medium",
       "order": 282,
       "rev": "f375e8da5db1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_diagonals.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_diagonals.json"
     },
     {
       "id": "c_guided_practice_tower_of_hanoi",
@@ -2839,7 +2839,7 @@
       "difficulty": "medium",
       "order": 283,
       "rev": "7f348bbcc86e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_tower_of_hanoi.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_tower_of_hanoi.json"
     },
     {
       "id": "c_bug_squasher_tower_of_hanoi",
@@ -2849,7 +2849,7 @@
       "difficulty": "medium",
       "order": 284,
       "rev": "d5dbbc1e8a58",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_tower_of_hanoi.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_tower_of_hanoi.json"
     },
     {
       "id": "c_code_refactor_tower_of_hanoi",
@@ -2859,7 +2859,7 @@
       "difficulty": "medium",
       "order": 285,
       "rev": "20d2e2db069d",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_tower_of_hanoi.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_tower_of_hanoi.json"
     },
     {
       "id": "c_guided_practice_matrix_transpose",
@@ -2869,7 +2869,7 @@
       "difficulty": "medium",
       "order": 286,
       "rev": "3d27af3959d1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_transpose.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_matrix_transpose.json"
     },
     {
       "id": "c_bug_squasher_matrix_transpose",
@@ -2879,7 +2879,7 @@
       "difficulty": "medium",
       "order": 287,
       "rev": "2b7816d1d5be",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_transpose.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_matrix_transpose.json"
     },
     {
       "id": "c_code_refactor_matrix_transpose",
@@ -2889,7 +2889,7 @@
       "difficulty": "medium",
       "order": 288,
       "rev": "145edfcffac5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_transpose.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_matrix_transpose.json"
     },
     {
       "id": "c_guided_practice_two_sum",
@@ -2899,7 +2899,7 @@
       "difficulty": "medium",
       "order": 289,
       "rev": "35ba908b8d84",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_two_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_two_sum.json"
     },
     {
       "id": "c_bug_squasher_two_sum",
@@ -2909,7 +2909,7 @@
       "difficulty": "medium",
       "order": 290,
       "rev": "66c1349e29bc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_two_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_two_sum.json"
     },
     {
       "id": "c_code_refactor_two_sum",
@@ -2919,7 +2919,7 @@
       "difficulty": "medium",
       "order": 291,
       "rev": "3c3b4b1c8508",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_two_sum.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_two_sum.json"
     },
     {
       "id": "c_guided_practice_typedef_point",
@@ -2929,7 +2929,7 @@
       "difficulty": "medium",
       "order": 292,
       "rev": "a5f912595de5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_typedef_point.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_typedef_point.json"
     },
     {
       "id": "c_bug_squasher_typedef_point",
@@ -2939,7 +2939,7 @@
       "difficulty": "medium",
       "order": 293,
       "rev": "e433d174f749",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_typedef_point.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_typedef_point.json"
     },
     {
       "id": "c_code_refactor_typedef_point",
@@ -2949,7 +2949,7 @@
       "difficulty": "medium",
       "order": 294,
       "rev": "db77b9b4bdfc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_typedef_point.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_typedef_point.json"
     },
     {
       "id": "c_guided_practice_union_basics",
@@ -2959,7 +2959,7 @@
       "difficulty": "medium",
       "order": 295,
       "rev": "7f606c573f62",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_union_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_union_basics.json"
     },
     {
       "id": "c_bug_squasher_union_basics",
@@ -2969,7 +2969,7 @@
       "difficulty": "medium",
       "order": 296,
       "rev": "05eaa370e41c",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_union_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_union_basics.json"
     },
     {
       "id": "c_code_refactor_union_basics",
@@ -2979,7 +2979,7 @@
       "difficulty": "medium",
       "order": 297,
       "rev": "9d4daf492104",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_union_basics.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_union_basics.json"
     },
     {
       "id": "c_guided_practice_knapsack",
@@ -2989,7 +2989,7 @@
       "difficulty": "advanced",
       "order": 298,
       "rev": "69ff817b37cf",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_knapsack.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_knapsack.json"
     },
     {
       "id": "c_bug_squasher_knapsack",
@@ -2999,7 +2999,7 @@
       "difficulty": "advanced",
       "order": 299,
       "rev": "ee5d544d0af6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_knapsack.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_knapsack.json"
     },
     {
       "id": "c_code_refactor_knapsack",
@@ -3009,7 +3009,7 @@
       "difficulty": "advanced",
       "order": 300,
       "rev": "860b2a486344",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_knapsack.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_knapsack.json"
     },
     {
       "id": "c_guided_practice_permutations_string",
@@ -3019,7 +3019,7 @@
       "difficulty": "advanced",
       "order": 301,
       "rev": "18f7d43fe491",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_permutations_string.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_permutations_string.json"
     },
     {
       "id": "c_bug_squasher_permutations_string",
@@ -3029,7 +3029,7 @@
       "difficulty": "advanced",
       "order": 302,
       "rev": "73b1ba05bd3e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_permutations_string.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_permutations_string.json"
     },
     {
       "id": "c_code_refactor_permutations_string",
@@ -3039,7 +3039,7 @@
       "difficulty": "advanced",
       "order": 303,
       "rev": "468087286142",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_permutations_string.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_permutations_string.json"
     },
     {
       "id": "c_guided_practice_bst_insert",
@@ -3049,7 +3049,7 @@
       "difficulty": "advanced",
       "order": 304,
       "rev": "b2c83869b738",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_bst_insert.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_bst_insert.json"
     },
     {
       "id": "c_bug_squasher_bst_insert",
@@ -3059,7 +3059,7 @@
       "difficulty": "advanced",
       "order": 305,
       "rev": "d9d4cb70bf4b",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bst_insert.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_bst_insert.json"
     },
     {
       "id": "c_code_refactor_bst_insert",
@@ -3069,7 +3069,7 @@
       "difficulty": "advanced",
       "order": 306,
       "rev": "da3f7148cad8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_bst_insert.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_bst_insert.json"
     },
     {
       "id": "c_guided_practice_circular_queue",
@@ -3079,7 +3079,7 @@
       "difficulty": "advanced",
       "order": 307,
       "rev": "fcb93b524a7a",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_circular_queue.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_circular_queue.json"
     },
     {
       "id": "c_bug_squasher_circular_queue",
@@ -3089,7 +3089,7 @@
       "difficulty": "advanced",
       "order": 308,
       "rev": "35feb7d8b33e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_circular_queue.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_circular_queue.json"
     },
     {
       "id": "c_code_refactor_circular_queue",
@@ -3099,7 +3099,7 @@
       "difficulty": "advanced",
       "order": 309,
       "rev": "046d601df357",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_circular_queue.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_circular_queue.json"
     },
     {
       "id": "c_guided_practice_postfix_eval",
@@ -3109,7 +3109,7 @@
       "difficulty": "advanced",
       "order": 310,
       "rev": "80c09e490c69",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_postfix_eval.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_postfix_eval.json"
     },
     {
       "id": "c_bug_squasher_postfix_eval",
@@ -3119,7 +3119,7 @@
       "difficulty": "advanced",
       "order": 311,
       "rev": "61348b070078",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_postfix_eval.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_postfix_eval.json"
     },
     {
       "id": "c_code_refactor_postfix_eval",
@@ -3129,7 +3129,7 @@
       "difficulty": "advanced",
       "order": 312,
       "rev": "229f85a0abc8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_postfix_eval.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_postfix_eval.json"
     },
     {
       "id": "c_guided_practice_tree_height",
@@ -3139,7 +3139,7 @@
       "difficulty": "advanced",
       "order": 313,
       "rev": "f78c2890df85",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_tree_height.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_tree_height.json"
     },
     {
       "id": "c_bug_squasher_tree_height",
@@ -3149,7 +3149,7 @@
       "difficulty": "advanced",
       "order": 314,
       "rev": "e448130f4cf5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_tree_height.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_tree_height.json"
     },
     {
       "id": "c_code_refactor_tree_height",
@@ -3159,7 +3159,7 @@
       "difficulty": "advanced",
       "order": 315,
       "rev": "2c0fa55a280f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_tree_height.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_tree_height.json"
     },
     {
       "id": "c_guided_practice_lcs",
@@ -3169,7 +3169,7 @@
       "difficulty": "advanced",
       "order": 316,
       "rev": "8eb331b0ade4",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_lcs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_lcs.json"
     },
     {
       "id": "c_bug_squasher_lcs",
@@ -3179,7 +3179,7 @@
       "difficulty": "advanced",
       "order": 317,
       "rev": "492f106d78a8",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_lcs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_lcs.json"
     },
     {
       "id": "c_code_refactor_lcs",
@@ -3189,7 +3189,7 @@
       "difficulty": "advanced",
       "order": 318,
       "rev": "25825e32185f",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_lcs.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_lcs.json"
     },
     {
       "id": "c_guided_practice_merge_sort",
@@ -3199,7 +3199,7 @@
       "difficulty": "advanced",
       "order": 319,
       "rev": "7a118ebc0780",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_merge_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_merge_sort.json"
     },
     {
       "id": "c_bug_squasher_merge_sort",
@@ -3209,7 +3209,7 @@
       "difficulty": "advanced",
       "order": 320,
       "rev": "d8a6616bdfd1",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_merge_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_merge_sort.json"
     },
     {
       "id": "c_code_refactor_merge_sort",
@@ -3219,7 +3219,7 @@
       "difficulty": "advanced",
       "order": 321,
       "rev": "977aab55ad67",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_merge_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_merge_sort.json"
     },
     {
       "id": "c_guided_practice_coin_change",
@@ -3229,7 +3229,7 @@
       "difficulty": "advanced",
       "order": 322,
       "rev": "1bf518f082f6",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_coin_change.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_coin_change.json"
     },
     {
       "id": "c_bug_squasher_coin_change",
@@ -3239,7 +3239,7 @@
       "difficulty": "advanced",
       "order": 323,
       "rev": "3b12eef5dd46",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_coin_change.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_coin_change.json"
     },
     {
       "id": "c_code_refactor_coin_change",
@@ -3249,7 +3249,7 @@
       "difficulty": "advanced",
       "order": 324,
       "rev": "d77bcb5d685e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_coin_change.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_coin_change.json"
     },
     {
       "id": "c_guided_practice_pointer_to_pointer",
@@ -3259,7 +3259,7 @@
       "difficulty": "advanced",
       "order": 325,
       "rev": "5cf27e1e8ae2",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_to_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_pointer_to_pointer.json"
     },
     {
       "id": "c_bug_squasher_pointer_to_pointer",
@@ -3269,7 +3269,7 @@
       "difficulty": "advanced",
       "order": 326,
       "rev": "dda184575fcf",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_to_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_pointer_to_pointer.json"
     },
     {
       "id": "c_code_refactor_pointer_to_pointer",
@@ -3279,7 +3279,7 @@
       "difficulty": "advanced",
       "order": 327,
       "rev": "43c281491954",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_to_pointer.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_pointer_to_pointer.json"
     },
     {
       "id": "c_guided_practice_quick_sort",
@@ -3289,7 +3289,7 @@
       "difficulty": "advanced",
       "order": 328,
       "rev": "207dbe0c6631",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_quick_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_quick_sort.json"
     },
     {
       "id": "c_bug_squasher_quick_sort",
@@ -3299,7 +3299,7 @@
       "difficulty": "advanced",
       "order": 329,
       "rev": "a83a9b1848ad",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_quick_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_quick_sort.json"
     },
     {
       "id": "c_code_refactor_quick_sort",
@@ -3309,7 +3309,7 @@
       "difficulty": "advanced",
       "order": 330,
       "rev": "a14766397dbc",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_quick_sort.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_quick_sort.json"
     },
     {
       "id": "c_guided_practice_linked_list_reverse",
@@ -3319,7 +3319,7 @@
       "difficulty": "advanced",
       "order": 331,
       "rev": "b2397b7c6d00",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_linked_list_reverse.json"
     },
     {
       "id": "c_bug_squasher_linked_list_reverse",
@@ -3329,7 +3329,7 @@
       "difficulty": "advanced",
       "order": 332,
       "rev": "e1513096e7a0",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_linked_list_reverse.json"
     },
     {
       "id": "c_code_refactor_linked_list_reverse",
@@ -3339,7 +3339,7 @@
       "difficulty": "advanced",
       "order": 333,
       "rev": "3dfd11ebbbb5",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_reverse.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_linked_list_reverse.json"
     },
     {
       "id": "c_guided_practice_rotate_matrix",
@@ -3349,7 +3349,7 @@
       "difficulty": "advanced",
       "order": 334,
       "rev": "a4272c952036",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_rotate_matrix.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_rotate_matrix.json"
     },
     {
       "id": "c_bug_squasher_rotate_matrix",
@@ -3359,7 +3359,7 @@
       "difficulty": "advanced",
       "order": 335,
       "rev": "e4e63c3be540",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_rotate_matrix.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_rotate_matrix.json"
     },
     {
       "id": "c_code_refactor_rotate_matrix",
@@ -3369,7 +3369,7 @@
       "difficulty": "advanced",
       "order": 336,
       "rev": "157ffedda024",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_rotate_matrix.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_rotate_matrix.json"
     },
     {
       "id": "c_guided_practice_round_robin",
@@ -3379,7 +3379,7 @@
       "difficulty": "advanced",
       "order": 337,
       "rev": "c448e76971ed",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_guided_practice_round_robin.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_guided_practice_round_robin.json"
     },
     {
       "id": "c_bug_squasher_round_robin",
@@ -3389,7 +3389,7 @@
       "difficulty": "advanced",
       "order": 338,
       "rev": "c386104c282e",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_bug_squasher_round_robin.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_bug_squasher_round_robin.json"
     },
     {
       "id": "c_code_refactor_round_robin",
@@ -3399,7 +3399,7 @@
       "difficulty": "advanced",
       "order": 339,
       "rev": "febae8896a30",
-      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/c/c_code_refactor_round_robin.json"
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/master/codelab_docs/practice_v2/snippets/c/c_code_refactor_round_robin.json"
     }
   ],
   "projects": []
