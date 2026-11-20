@@ -1,0 +1,41 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Stack on Phones, Columns on Wide Screens",
+    "language": "html",
+    "description": "Type two blocks that stack on a narrow screen and sit side by side from 600px up. A media query applies rules only when the screen width matches.",
+    "ghostCode": "<style>\n  .a, .b { height: 40px; }\n  .a { background: salmon; }\n  .b { background: khaki; }\n  @media (min-width: 600px) {\n    .wrap { display: flex; }\n    .a, .b { flex: 1; }\n  }\n</style>\n<div class=\"wrap\">\n  <div class=\"a\"></div>\n  <div class=\"b\"></div>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "On a phone the blocks are stacked",
+              "expr": "el('.b').offsetTop > el('.a').offsetTop"
+            },
+            {
+              "label": "On a phone each block is full width",
+              "expr": "el('.a').offsetWidth === el('.wrap').offsetWidth"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen the blocks share a row",
+              "expr": "el('.b').offsetTop === el('.a').offsetTop"
+            },
+            {
+              "label": "On a wide screen the blocks are half width each",
+              "expr": "Math.abs(el('.a').offsetWidth * 2 - el('.wrap').offsetWidth) <= 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

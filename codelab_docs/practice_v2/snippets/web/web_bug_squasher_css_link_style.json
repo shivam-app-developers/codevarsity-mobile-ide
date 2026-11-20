@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Link text is not coloured",
+    "language": "html",
+    "problemDescription": "Links should be green, but they stay the default blue. The rule styles an element that does not exist in the page.",
+    "buggyCode": "<style>\n  link { color: green; }\n</style>\n<a href=\"#top\">Top</a>",
+    "solution": {
+      "code": "<style>\n  a { color: green; }\n</style>\n<a href=\"#top\">Top</a>",
+      "explanation": "The element for a link is a, not link. A selector that matches nothing is not an error, so the rule just never applies. Check the tag name when nothing changes."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link is green",
+              "expr": "style('a', 'color') === 'rgb(0, 128, 0)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

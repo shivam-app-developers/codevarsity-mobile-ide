@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Real headings instead of bold paragraphs",
+    "language": "html",
+    "problemDescription": "This page fakes headings with bold paragraphs. Replace them with h1 and h2 so the outline is real. The visible text must not change.",
+    "initialCode": "<p><b>Menu</b></p>\n<p><b>Drinks</b></p>\n<p>Tea and coffee.</p>\n<p><b>Snacks</b></p>\n<p>Biscuits and fruit.</p>",
+    "solution": {
+      "code": "<h1>Menu</h1>\n<h2>Drinks</h2>\n<p>Tea and coffee.</p>\n<h2>Snacks</h2>\n<p>Biscuits and fruit.</p>",
+      "explanation": "A bold paragraph looks like a heading but has no meaning, so a screen reader cannot jump between sections. h1 and h2 give the same words a structure, and CSS can still style them."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first line says Menu",
+              "expr": "text('body').indexOf('Menu') === 0"
+            },
+            {
+              "label": "Drinks and Snacks are both on the page",
+              "expr": "text('body').indexOf('Drinks') > 0 && text('body').indexOf('Snacks') > 0"
+            },
+            {
+              "label": "The paragraphs are kept",
+              "expr": "text('body').indexOf('Tea and coffee.') > 0 && text('body').indexOf('Biscuits and fruit.') > 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

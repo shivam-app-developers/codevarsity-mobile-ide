@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Rule written for the wrong selector",
+    "language": "html",
+    "problemDescription": "The warning message should be red, but it stays black. The rule was written with a dot, which selects a class, but the element uses an id.",
+    "buggyCode": "<style>\n  .warn { color: red; font-weight: bold; }\n</style>\n<p id=\"warn\">Disk almost full</p>",
+    "solution": {
+      "code": "<style>\n  #warn { color: red; font-weight: bold; }\n</style>\n<p id=\"warn\">Disk almost full</p>",
+      "explanation": "A dot selects the class attribute and a hash selects the id attribute. The selector .warn matches elements with class=\"warn\", so it matched nothing here. Use #warn for the id."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The warning is red",
+              "expr": "style('#warn', 'color') === 'rgb(255, 0, 0)'"
+            },
+            {
+              "label": "The warning is bold",
+              "expr": "+style('#warn', 'fontWeight') >= 600"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

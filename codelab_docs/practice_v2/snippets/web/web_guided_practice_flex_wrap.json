@@ -1,0 +1,37 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Wrap Flex Items",
+    "language": "html",
+    "description": "Type a row of 100px tags that wraps onto new lines when the screen is too narrow. Without flex-wrap, flex items shrink or overflow instead.",
+    "ghostCode": "<style>\n  .tags { display: flex; flex-wrap: wrap; gap: 8px; }\n  .tag { width: 100px; height: 30px; background: orange; }\n</style>\n<div class=\"tags\">\n  <div class=\"tag\"></div>\n  <div class=\"tag\"></div>\n  <div class=\"tag\"></div>\n  <div class=\"tag\"></div>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "On a small screen the tags wrap",
+              "expr": "el('.tag:last-child').offsetTop > el('.tag').offsetTop"
+            },
+            {
+              "label": "The page does not scroll sideways",
+              "expr": "noSidewaysScroll()"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen all tags fit in one row",
+              "expr": "el('.tag:last-child').offsetTop === el('.tag').offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

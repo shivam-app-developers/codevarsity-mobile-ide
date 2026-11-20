@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Table With Head and Body",
+    "language": "html",
+    "description": "Type a small table with a header row (thead, th) and data rows (tbody, td). Use th for headings, not td.",
+    "ghostCode": "<table border=\"1\">\n  <thead>\n    <tr><th>Name</th><th>Score</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Asha</td><td>90</td></tr>\n    <tr><td>Ben</td><td>85</td></tr>\n  </tbody>\n</table>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The table has 2 header cells",
+              "expr": "count('thead th') === 2"
+            },
+            {
+              "label": "The table has 2 data rows",
+              "expr": "count('tbody tr') === 2"
+            },
+            {
+              "label": "Every data row has 2 cells",
+              "expr": "[].every.call(document.querySelectorAll('tbody tr'), function (r) { return r.cells.length === 2; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Delete a List Item",
+    "language": "html",
+    "description": "Type a list where each item has a delete button. The handler finds the item from the button with parentElement and removes it with remove().",
+    "ghostCode": "<ul id=\"list\">\n  <li>Milk <button>x</button></li>\n  <li>Eggs <button>x</button></li>\n  <li>Tea <button>x</button></li>\n</ul>\n<script>\n  var buttons = document.querySelectorAll('#list button');\n  buttons.forEach(function (b) {\n    b.addEventListener('click', function () {\n      b.parentElement.remove();\n    });\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list starts with three items",
+              "expr": "count('#list li') === 3"
+            },
+            {
+              "label": "Deleting the first removes Milk",
+              "expr": "document.querySelector('#list button').click() || text('#list').indexOf('Milk') < 0"
+            },
+            {
+              "label": "Two items are left",
+              "expr": "count('#list li') === 2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Styling Text",
+    "language": "html",
+    "description": "Type rules that centre a heading, make it upper case and set the line height of a paragraph. These are the properties that change how text looks without changing the words.",
+    "ghostCode": "<style>\n  h1 {\n    text-align: center;\n    text-transform: uppercase;\n  }\n  p { line-height: 1.6; font-weight: bold; }\n</style>\n<h1>Welcome</h1>\n<p>Text with room between the lines.</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading is centred",
+              "expr": "style('h1', 'textAlign') === 'center'"
+            },
+            {
+              "label": "The heading is upper case",
+              "expr": "style('h1', 'textTransform') === 'uppercase'"
+            },
+            {
+              "label": "The paragraph is bold",
+              "expr": "+style('p', 'fontWeight') >= 600"
+            },
+            {
+              "label": "The line height is 1.6 times the font size",
+              "expr": "Math.abs(px('p', 'lineHeight') - 1.6 * px('p', 'fontSize')) < 0.5"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

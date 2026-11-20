@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Semantic Page Layout",
+    "language": "html",
+    "description": "Type a page made of header, nav, main, article and footer. These tags tell browsers, search engines and screen readers what each part of the page is for.",
+    "ghostCode": "<header><h1>My Blog</h1></header>\n<nav>\n  <a href=\"#home\">Home</a>\n  <a href=\"#about\">About</a>\n</nav>\n<main>\n  <article>\n    <h2>First Post</h2>\n    <p>Hello, web!</p>\n  </article>\n</main>\n<footer><p>My Blog 2026</p></footer>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "header, nav, main and footer are in the page",
+              "expr": "exists('body > header') && exists('body > nav') && exists('body > main') && exists('body > footer')"
+            },
+            {
+              "label": "The article is inside main",
+              "expr": "exists('main > article')"
+            },
+            {
+              "label": "The page has one h1",
+              "expr": "count('h1') === 1"
+            },
+            {
+              "label": "The nav has two links",
+              "expr": "count('nav a') === 2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

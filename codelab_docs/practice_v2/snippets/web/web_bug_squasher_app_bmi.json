@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Height is not squared",
+    "language": "html",
+    "problemDescription": "A weight of 70 kg at 1.75 m shows a BMI of 40 instead of 22.9. The height is used as it is, and not multiplied by itself.",
+    "buggyCode": "<input id=\"w\" value=\"70\">\n<input id=\"h\" value=\"1.75\">\n<button id=\"b\">BMI</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var w = Number(document.getElementById('w').value);\n    var h = Number(document.getElementById('h').value);\n    document.getElementById('r').textContent = (w / h).toFixed(1);\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"w\" value=\"70\">\n<input id=\"h\" value=\"1.75\">\n<button id=\"b\">BMI</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var w = Number(document.getElementById('w').value);\n    var h = Number(document.getElementById('h').value);\n    document.getElementById('r').textContent = (w / (h * h)).toFixed(1);\n  });\n</script>",
+      "explanation": "The formula divides by the height squared, h * h. Dividing by h alone gives 40, which is far too large. Check a known example by hand after writing a formula."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "70 kg at 1.75 m is 22.9",
+              "expr": "click('#b') && text('#r') === '22.9'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

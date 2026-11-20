@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move repeated text styles to one rule",
+    "language": "html",
+    "problemDescription": "Each paragraph repeats the same inline style. Move it into one rule in a style tag. The look must stay the same.",
+    "initialCode": "<p style=\"font-size: 18px; color: #333;\">One</p>\n<p style=\"font-size: 18px; color: #333;\">Two</p>\n<p style=\"font-size: 18px; color: #333;\">Three</p>",
+    "solution": {
+      "code": "<style>\n  p { font-size: 18px; color: #333; }\n</style>\n<p>One</p>\n<p>Two</p>\n<p>Three</p>",
+      "explanation": "Inline styles repeat the same text on every element. A rule in a style tag is written once and covers every paragraph, including ones you add later."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three paragraphs",
+              "expr": "count('p') === 3"
+            },
+            {
+              "label": "All are 18px",
+              "expr": "[].every.call(document.querySelectorAll('p'), function (p) { return parseFloat(getComputedStyle(p).fontSize) === 18; })"
+            },
+            {
+              "label": "All are dark gray",
+              "expr": "[].every.call(document.querySelectorAll('p'), function (p) { return getComputedStyle(p).color === 'rgb(51, 51, 51)'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

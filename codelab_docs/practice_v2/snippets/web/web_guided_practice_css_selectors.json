@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Element, Class and ID Selectors",
+    "language": "html",
+    "description": "Type three rules: one for every p, one for the class note and one for the id title. A class can be used on many elements, an id on one.",
+    "ghostCode": "<style>\n  p { color: gray; }\n  .note { color: blue; }\n  #title { color: red; }\n</style>\n<h1 id=\"title\">Selectors</h1>\n<p>Plain paragraph</p>\n<p class=\"note\">A note</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The title is red",
+              "expr": "style('#title', 'color') === 'rgb(255, 0, 0)'"
+            },
+            {
+              "label": "The plain paragraph is gray",
+              "expr": "style('p', 'color') === 'rgb(128, 128, 128)'"
+            },
+            {
+              "label": "The note is blue",
+              "expr": "style('.note', 'color') === 'rgb(0, 0, 255)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

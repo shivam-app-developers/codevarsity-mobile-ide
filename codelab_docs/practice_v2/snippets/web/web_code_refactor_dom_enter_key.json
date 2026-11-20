@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a form instead of a key listener",
+    "language": "html",
+    "problemDescription": "A key listener adds the item on Enter. A form with a submit handler does this for free, and also works with a Go button on a phone keyboard. Use a form. The item must still be added on submit.",
+    "initialCode": "<input id=\"q\" placeholder=\"Add\">\n<ul id=\"l\"></ul>\n<script>\n  var q = document.getElementById('q');\n  q.addEventListener('keydown', function (e) {\n    if (e.key === 'Enter') {\n      var li = document.createElement('li');\n      li.textContent = q.value;\n      document.getElementById('l').appendChild(li);\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<form id=\"f\">\n  <input id=\"q\" placeholder=\"Add\">\n</form>\n<ul id=\"l\"></ul>\n<script>\n  var q = document.getElementById('q');\n  document.getElementById('f').addEventListener('submit', function (e) {\n    e.preventDefault();\n    var li = document.createElement('li');\n    li.textContent = q.value;\n    document.getElementById('l').appendChild(li);\n  });\n</script>",
+      "explanation": "A form turns Enter, a Go key or a button press into one submit event. That covers keyboards, phones and screen readers without testing key names."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Adding Milk gives one item",
+              "expr": "type('#q', 'Milk') && (document.getElementById('f') ? submit('#f') : el('#q').dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter'}))) !== null && text('#l') === 'Milk'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

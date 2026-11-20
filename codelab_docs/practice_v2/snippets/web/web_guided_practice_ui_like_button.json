@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Like and Unlike",
+    "language": "html",
+    "description": "Type a like button that adds one to the count when it is pressed and takes it back when it is pressed again. A boolean remembers whether the page is already liked.",
+    "ghostCode": "<button id=\"like\">Like</button>\n<span id=\"count\">10</span>\n<script>\n  var liked = false;\n  var count = 10;\n  document.getElementById('like').addEventListener('click', function () {\n    liked = !liked;\n    count = liked ? count + 1 : count - 1;\n    document.getElementById('count').textContent = count;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The count starts at 10",
+              "expr": "text('#count') === '10'"
+            },
+            {
+              "label": "One press makes it 11",
+              "expr": "click('#like') && text('#count') === '11'"
+            },
+            {
+              "label": "A second press takes it back to 10",
+              "expr": "click('#like') && text('#count') === '10'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

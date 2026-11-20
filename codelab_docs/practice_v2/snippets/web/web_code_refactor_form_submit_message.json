@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Read the form with FormData",
+    "language": "html",
+    "problemDescription": "The handler reads each field one by one. Read the whole form with FormData instead. The shown text must stay the same.",
+    "initialCode": "<form id=\"f\">\n  <input name=\"first\" value=\"Ada\">\n  <input name=\"last\" value=\"Lovelace\">\n  <button>Show</button>\n</form>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    e.preventDefault();\n    var a = document.getElementsByName('first')[0].value;\n    var b = document.getElementsByName('last')[0].value;\n    document.getElementById('out').textContent = a + ' ' + b;\n  });\n</script>",
+    "solution": {
+      "code": "<form id=\"f\">\n  <input name=\"first\" value=\"Ada\">\n  <input name=\"last\" value=\"Lovelace\">\n  <button>Show</button>\n</form>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    e.preventDefault();\n    var data = new FormData(e.target);\n    document.getElementById('out').textContent =\n      data.get('first') + ' ' + data.get('last');\n  });\n</script>",
+      "explanation": "FormData collects every named field of the form, so adding a field later needs no extra line of code to read it. It is also what you pass to a request when you send the form to a server."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The submit is handled by the page",
+              "expr": "submit('#f') === true"
+            },
+            {
+              "label": "The full name is shown",
+              "expr": "text('#out') === 'Ada Lovelace'"
+            },
+            {
+              "label": "A changed first name is shown",
+              "expr": "type('[name=first]', 'Grace') && submit('#f') && text('#out') === 'Grace Lovelace'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

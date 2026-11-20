@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: List items outside the list",
+    "language": "html",
+    "problemDescription": "A screen reader announces this list as having two items. The last item was written after the closing tag of the list, so it is not part of it.",
+    "buggyCode": "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n</ul>\n<li>JavaScript</li>",
+    "solution": {
+      "code": "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n  <li>JavaScript</li>\n</ul>",
+      "explanation": "An li only belongs to a list when it sits between the opening and closing tag of ul or ol. Outside it, the browser shows the text without a bullet and screen readers do not count it as part of the list."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "All three items are inside the list",
+              "expr": "count('ul > li') === 3"
+            },
+            {
+              "label": "The last item is JavaScript",
+              "expr": "document.querySelectorAll('ul > li')[2].textContent === 'JavaScript'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

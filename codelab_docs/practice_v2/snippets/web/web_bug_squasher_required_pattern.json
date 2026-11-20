@@ -1,0 +1,40 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Pattern that accepts everything",
+    "language": "html",
+    "problemDescription": "This username field should accept only lower-case letters, three to eight of them. It accepts \"AB\" and even an empty value, because of a mistake in its attributes.",
+    "buggyCode": "<form>\n  <input id=\"user\" pattern=\"[a-z]{3,8\">\n</form>",
+    "solution": {
+      "code": "<form>\n  <input id=\"user\" required pattern=\"[a-z]{3,8}\">\n</form>",
+      "explanation": "A pattern is ignored when it is not a valid regular expression (the closing brace was missing), and an empty value is only rejected when the input has required. Fix both and the browser blocks wrong values by itself."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "An empty username is not valid",
+              "expr": "type('#user', '') && !el('#user').validity.valid"
+            },
+            {
+              "label": "Capital letters are not valid",
+              "expr": "type('#user', 'AB') && !el('#user').validity.valid"
+            },
+            {
+              "label": "Two letters are too short",
+              "expr": "type('#user', 'ab') && !el('#user').validity.valid"
+            },
+            {
+              "label": "Four lower-case letters are valid",
+              "expr": "type('#user', 'cats') && el('#user').validity.valid"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

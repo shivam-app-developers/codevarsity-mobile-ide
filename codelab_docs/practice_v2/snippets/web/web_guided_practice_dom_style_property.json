@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Change Styles From a Script",
+    "language": "html",
+    "description": "Type a button that makes a bar wider each time it is clicked. The style property of an element sets inline styles, and the value needs a unit.",
+    "ghostCode": "<div id=\"bar\" style=\"height: 16px; width: 50px; background: teal\"></div>\n<button id=\"grow\">Grow</button>\n<script>\n  var width = 50;\n  var bar = document.getElementById('bar');\n  document.getElementById('grow').addEventListener('click', function () {\n    width = width + 50;\n    bar.style.width = width + 'px';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The bar starts 50px wide",
+              "expr": "el('#bar').offsetWidth === 50"
+            },
+            {
+              "label": "One click makes it 100px wide",
+              "expr": "click('#grow') && el('#bar').offsetWidth === 100"
+            },
+            {
+              "label": "Two more clicks make it 200px wide",
+              "expr": "click('#grow') && click('#grow') && el('#bar').offsetWidth === 200"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Scale and Rotate With transform",
+    "language": "html",
+    "description": "Type a tile that is a little bigger and tilted. transform moves, scales or rotates an element without changing the space it takes in the layout.",
+    "ghostCode": "<style>\n  .tile {\n    width: 60px;\n    height: 60px;\n    background: purple;\n    transform: scale(1.5) rotate(10deg);\n  }\n</style>\n<div class=\"tile\"></div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The tile has a transform",
+              "expr": "style('.tile', 'transform') !== 'none'"
+            },
+            {
+              "label": "The tile still takes 60px of layout width",
+              "expr": "el('.tile').offsetWidth === 60"
+            },
+            {
+              "label": "The tile looks wider on screen",
+              "expr": "el('.tile').getBoundingClientRect().width > 80"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

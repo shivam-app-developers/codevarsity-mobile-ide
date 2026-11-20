@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Quiz crashes when a question is skipped",
+    "language": "html",
+    "problemDescription": "If the second question is left unanswered, pressing Score shows nothing and the console reports an error. The script reads the value of a choice that does not exist.",
+    "buggyCode": "<label><input type=\"radio\" name=\"a\" value=\"y\"> Yes</label>\n<label><input type=\"radio\" name=\"a\" value=\"n\"> No</label>\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var pick = document.querySelector('[name=a]:checked');\n    var text = 'You chose ' + pick.value;\n    document.getElementById('r').textContent = text;\n  });\n</script>",
+    "solution": {
+      "code": "<label><input type=\"radio\" name=\"a\" value=\"y\"> Yes</label>\n<label><input type=\"radio\" name=\"a\" value=\"n\"> No</label>\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var pick = document.querySelector('[name=a]:checked');\n    var text = pick ? 'You chose ' + pick.value : 'Pick an answer';\n    document.getElementById('r').textContent = text;\n  });\n</script>",
+      "explanation": "querySelector returns null when nothing matches, and reading .value of null throws an error. Test the result first and handle the case where nothing is chosen."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "With no choice the page asks to pick",
+              "expr": "click('#b') && text('#r') === 'Pick an answer'"
+            },
+            {
+              "label": "After choosing Yes it says so",
+              "expr": "document.querySelector('[name=a][value=y]').click() || click('#b') && text('#r') === 'You chose y'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

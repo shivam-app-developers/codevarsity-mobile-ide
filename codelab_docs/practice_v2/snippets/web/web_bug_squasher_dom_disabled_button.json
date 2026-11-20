@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Button stays disabled",
+    "language": "html",
+    "problemDescription": "The Save button should turn on when a name is typed, but it never does. The script sets the property to the wrong value.",
+    "buggyCode": "<input id=\"name\" placeholder=\"Name\">\n<button id=\"save\" disabled>Save</button>\n<script>\n  var who = document.getElementById('name');\n  var save = document.getElementById('save');\n  who.addEventListener('input', function () {\n    save.disabled = who.value !== '';\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"name\" placeholder=\"Name\">\n<button id=\"save\" disabled>Save</button>\n<script>\n  var who = document.getElementById('name');\n  var save = document.getElementById('save');\n  who.addEventListener('input', function () {\n    save.disabled = who.value === '';\n  });\n</script>",
+      "explanation": "The button must be disabled when the field is empty. The test was the wrong way round: not empty gave disabled true. Say what you want in words first: disabled when the value is empty."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button starts disabled",
+              "expr": "el('#save').disabled === true"
+            },
+            {
+              "label": "Typing a name enables it",
+              "expr": "type('#name', 'Ann') && el('#save').disabled === false"
+            },
+            {
+              "label": "Clearing the name disables it",
+              "expr": "type('#name', '') && el('#save').disabled === true"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

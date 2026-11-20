@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Zero is calculated every time",
+    "language": "html",
+    "problemDescription": "Calling the function with 0 several times does the work every time, though the cache should answer. The answer for 0 is 0, which counts as empty.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var cache = {};\n  var work = 0;\n  function double(n) {\n    if (cache[n]) return cache[n];\n    work = work + 1;\n    cache[n] = n * 2;\n    return cache[n];\n  }\n  double(0); double(0); double(0);\n  document.getElementById('out').textContent = work;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var cache = {};\n  var work = 0;\n  function double(n) {\n    if (n in cache) return cache[n];\n    work = work + 1;\n    cache[n] = n * 2;\n    return cache[n];\n  }\n  double(0); double(0); double(0);\n  document.getElementById('out').textContent = work;\n</script>",
+      "explanation": "if (cache[n]) is false for a saved answer of 0 (and for an empty string or false), so the answer is lost. Test whether the key exists with the in operator instead of testing the value."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The real work ran once",
+              "expr": "text('#out') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

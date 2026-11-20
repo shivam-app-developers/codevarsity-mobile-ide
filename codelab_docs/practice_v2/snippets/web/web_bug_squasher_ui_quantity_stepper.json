@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Quantity goes negative",
+    "language": "html",
+    "problemDescription": "The minus button keeps going below 1 to 0, -1 and further, but a basket cannot hold a negative quantity. The button never checks the limit.",
+    "buggyCode": "<button id=\"down\">-</button>\n<b id=\"n\">1</b>\n<script>\n  var n = 1;\n  document.getElementById('down').addEventListener('click', function () {\n    n = n - 1;\n    document.getElementById('n').textContent = n;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"down\">-</button>\n<b id=\"n\">1</b>\n<script>\n  var n = 1;\n  document.getElementById('down').addEventListener('click', function () {\n    if (n > 1) { n = n - 1; }\n    document.getElementById('n').textContent = n;\n  });\n</script>",
+      "explanation": "A limit has to be checked in the code that changes the value. Without the if, every click subtracts one more."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Minus at 1 stays at 1",
+              "expr": "click('#down') && text('#n') === '1'"
+            },
+            {
+              "label": "Minus twice stays at 1",
+              "expr": "click('#down') && text('#n') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

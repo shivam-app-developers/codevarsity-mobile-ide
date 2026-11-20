@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: FizzBuzz",
+    "language": "html",
+    "description": "Type the classic FizzBuzz for 1 to 15: multiples of 3 say Fizz, multiples of 5 say Buzz and multiples of both say FizzBuzz. The check for both must come first.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var words = [];\n  for (var i = 1; i <= 15; i++) {\n    if (i % 15 === 0) words.push('FizzBuzz');\n    else if (i % 3 === 0) words.push('Fizz');\n    else if (i % 5 === 0) words.push('Buzz');\n    else words.push(i);\n  }\n  document.getElementById('out').textContent = words.join(' ');\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list is right",
+              "expr": "text('#out') === '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

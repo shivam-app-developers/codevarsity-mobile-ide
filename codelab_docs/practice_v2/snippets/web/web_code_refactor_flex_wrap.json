@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Flex wrap instead of floats",
+    "language": "html",
+    "problemDescription": "The boxes are floated to make a row that wraps. Use a flex container with wrap. The boxes must still wrap on a narrow screen.",
+    "initialCode": "<style>\n  .row { overflow: hidden; }\n  .box {\n    float: left;\n    width: 110px;\n    height: 30px;\n    background: plum;\n    margin: 4px;\n  }\n</style>\n<div class=\"row\">\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .row { display: flex; flex-wrap: wrap; }\n  .box { width: 110px; height: 30px; background: plum; margin: 4px; }\n</style>\n<div class=\"row\">\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n</div>",
+      "explanation": "Floats were made for text wrapping around pictures. Flex with wrap is made for rows of boxes, needs no clearing of the container, and handles spacing and alignment much better."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are four boxes",
+              "expr": "count('.box') === 4"
+            },
+            {
+              "label": "The boxes wrap on a small screen",
+              "expr": "el('.box:last-child').offsetTop > el('.box').offsetTop"
+            },
+            {
+              "label": "The page does not scroll sideways",
+              "expr": "noSidewaysScroll()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

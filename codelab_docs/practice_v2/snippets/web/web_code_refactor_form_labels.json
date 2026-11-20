@@ -1,0 +1,40 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Wrap each input in its label",
+    "language": "html",
+    "problemDescription": "Each input here has a label with for and id. Wrap the input in the label instead, so no for and id pair is needed. The page must keep both fields and labels.",
+    "initialCode": "<form>\n  <label for=\"a\">City</label>\n  <input id=\"a\" type=\"text\">\n  <label for=\"b\">Country</label>\n  <input id=\"b\" type=\"text\">\n</form>",
+    "solution": {
+      "code": "<form>\n  <label>City <input type=\"text\"></label>\n  <label>Country <input type=\"text\"></label>\n</form>",
+      "explanation": "An input inside its label is connected automatically, with no id to keep unique and no for to keep in sync. Both ways are valid, but the wrapped form has fewer places to make a mistake."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page has two text inputs",
+              "expr": "count('input[type=text]') === 2"
+            },
+            {
+              "label": "The page has two labels",
+              "expr": "count('label') === 2"
+            },
+            {
+              "label": "City and Country labels are there",
+              "expr": "text('form').indexOf('City') >= 0 && text('form').indexOf('Country') >= 0"
+            },
+            {
+              "label": "Every input has a label",
+              "expr": "[].every.call(document.querySelectorAll('input'), function (i) { return !!i.labels && i.labels.length === 1; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

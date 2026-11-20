@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Round avatar is a rounded square",
+    "language": "html",
+    "problemDescription": "This 60px avatar should be a circle, but it shows as a square with slightly rounded corners. The radius is too small for a circle.",
+    "buggyCode": "<style>\n  .avatar {\n    width: 60px;\n    height: 60px;\n    background: tomato;\n    border-radius: 5px;\n  }\n</style>\n<div class=\"avatar\"></div>",
+    "solution": {
+      "code": "<style>\n  .avatar {\n    width: 60px;\n    height: 60px;\n    background: tomato;\n    border-radius: 50%;\n  }\n</style>\n<div class=\"avatar\"></div>",
+      "explanation": "A border-radius of 50% (or at least half of the side) turns a square into a circle. A small pixel value only softens the corners."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The avatar is a circle",
+              "expr": "el('.avatar').offsetWidth === 60 && parseFloat(getComputedStyle(el('.avatar')).borderTopLeftRadius) >= 30"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

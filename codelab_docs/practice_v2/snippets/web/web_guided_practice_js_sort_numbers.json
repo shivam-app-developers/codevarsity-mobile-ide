@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sorting Numbers",
+    "language": "html",
+    "description": "Type a sort with a compare function. Without it, sort puts the items in text order, so 10 comes before 9. A compare function returns a negative, zero or positive number.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var nums = [10, 9, 1, 100];\n  nums.sort(function (a, b) { return a - b; });\n  document.getElementById('out').textContent = nums.join(',');\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The numbers are in order",
+              "expr": "text('#out') === '1,9,10,100'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

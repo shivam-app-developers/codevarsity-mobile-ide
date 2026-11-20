@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Toggle a Class",
+    "language": "html",
+    "description": "Type a button that turns a highlight on and off. classList.toggle adds the class when it is missing and removes it when it is there.",
+    "ghostCode": "<style>\n  .on { background: gold; }\n</style>\n<p id=\"note\">Highlight me</p>\n<button id=\"b\">Toggle</button>\n<script>\n  var note = document.getElementById('note');\n  document.getElementById('b').addEventListener('click', function () {\n    note.classList.toggle('on');\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The note starts without the highlight",
+              "expr": "!el('#note').classList.contains('on')"
+            },
+            {
+              "label": "One click turns the highlight on",
+              "expr": "click('#b') && el('#note').classList.contains('on')"
+            },
+            {
+              "label": "The note turns gold",
+              "expr": "style('#note', 'backgroundColor') === 'rgb(255, 215, 0)'"
+            },
+            {
+              "label": "A second click turns it off",
+              "expr": "click('#b') && !el('#note').classList.contains('on')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Images With Alt Text",
+    "language": "html",
+    "description": "Type an image with alt text and a figure with a caption. The alt text is what a screen reader says and what shows when the picture cannot load.",
+    "ghostCode": "<figure>\n  <img src=\"apple.png\" alt=\"A red apple\" width=\"40\" height=\"40\">\n  <figcaption>An apple from the market</figcaption>\n</figure>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The image has alt text",
+              "expr": "attr('img', 'alt') === 'A red apple'"
+            },
+            {
+              "label": "The image sits in a figure",
+              "expr": "exists('figure > img')"
+            },
+            {
+              "label": "The caption is in the figure",
+              "expr": "text('figure figcaption') === 'An apple from the market'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

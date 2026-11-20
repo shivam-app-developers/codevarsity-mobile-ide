@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Styling Lists",
+    "language": "html",
+    "description": "Type rules that remove the bullets of a list and put its items in a row. This is how most navigation menus start.",
+    "ghostCode": "<style>\n  ul { list-style: none; padding: 0; }\n  li { display: inline-block; margin-right: 12px; }\n</style>\n<ul>\n  <li>Home</li>\n  <li>Shop</li>\n  <li>About</li>\n</ul>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list has no bullets",
+              "expr": "style('ul', 'listStyleType') === 'none'"
+            },
+            {
+              "label": "The items are in a row",
+              "expr": "el('li').offsetTop === document.querySelectorAll('li')[2].offsetTop"
+            },
+            {
+              "label": "The items have a 12px gap",
+              "expr": "px('li', 'marginRight') === 12"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

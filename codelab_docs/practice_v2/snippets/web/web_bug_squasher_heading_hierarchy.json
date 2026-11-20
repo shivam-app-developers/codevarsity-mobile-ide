@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Heading skips a level",
+    "language": "html",
+    "problemDescription": "The outline of this page jumps from h1 straight to h4 just to get smaller text. Screen reader users who list the headings find a hole in the outline. Fix the levels.",
+    "buggyCode": "<h1>Travel Guide</h1>\n<h4>Europe</h4>\n<p>Old cities.</p>\n<h6>Spain</h6>\n<p>Sun and food.</p>\n<h2>Asia</h2>\n<p>Big cities.</p>",
+    "solution": {
+      "code": "<h1>Travel Guide</h1>\n<h2>Europe</h2>\n<p>Old cities.</p>\n<h3>Spain</h3>\n<p>Sun and food.</p>\n<h2>Asia</h2>\n<p>Big cities.</p>",
+      "explanation": "Headings are read as an outline. A jump from h1 to h4 says there are missing sections. Choose the level by the structure of the content and use CSS for the size."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page has one h1",
+              "expr": "count('h1') === 1"
+            },
+            {
+              "label": "Headings never skip a level",
+              "expr": "(() => { var prev = 0; return [].every.call(document.querySelectorAll('h1,h2,h3,h4,h5,h6'), function (h) { var n = +h.tagName[1]; var ok = n <= prev + 1; prev = n; return ok; }); })()"
+            },
+            {
+              "label": "Europe, Spain and Asia are still headings",
+              "expr": "count('h2') + count('h3') === 3"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

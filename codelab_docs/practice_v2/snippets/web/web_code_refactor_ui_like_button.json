@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Derive the count from the state",
+    "language": "html",
+    "problemDescription": "The script adds and subtracts from the count in two places. Keep only the liked state and the base number, and compute the shown count from them. The page must behave the same.",
+    "initialCode": "<button id=\"l\">Like</button>\n<span id=\"c\">20</span>\n<script>\n  var liked = false;\n  var count = 20;\n  document.getElementById('l').addEventListener('click', function () {\n    if (liked) {\n      liked = false;\n      count = count - 1;\n    } else {\n      liked = true;\n      count = count + 1;\n    }\n    document.getElementById('c').textContent = count;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"l\">Like</button>\n<span id=\"c\">20</span>\n<script>\n  var liked = false;\n  var base = 20;\n  document.getElementById('l').addEventListener('click', function () {\n    liked = !liked;\n    document.getElementById('c').textContent = base + (liked ? 1 : 0);\n  });\n</script>",
+      "explanation": "Storing the base number and the state, and computing the shown value, means the two can never disagree. When a value can be worked out from other values, it should not be stored on its own."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The count starts at 20",
+              "expr": "text('#c') === '20'"
+            },
+            {
+              "label": "One press makes it 21",
+              "expr": "click('#l') && text('#c') === '21'"
+            },
+            {
+              "label": "A second press makes it 20",
+              "expr": "click('#l') && text('#c') === '20'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

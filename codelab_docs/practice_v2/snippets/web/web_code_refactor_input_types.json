@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a range input for a volume",
+    "language": "html",
+    "problemDescription": "This volume control is a text box where the user types a number. Change it to a range slider with the same limits and the same starting value.",
+    "initialCode": "<label>Volume <input id=\"vol\" type=\"text\" value=\"50\"></label>\n<p id=\"shown\">50</p>\n<script>\n  var box = document.getElementById('vol');\n  box.addEventListener('input', function () {\n    document.getElementById('shown').textContent = box.value;\n  });\n</script>",
+    "solution": {
+      "code": "<label>Volume\n  <input id=\"vol\" type=\"range\" min=\"0\" max=\"100\" value=\"50\">\n</label>\n<p id=\"shown\">50</p>\n<script>\n  var box = document.getElementById('vol');\n  box.addEventListener('input', function () {\n    document.getElementById('shown').textContent = box.value;\n  });\n</script>",
+      "explanation": "A slider is the right control for a value in a range: it needs no typing, cannot hold a wrong value, and the min and max are part of the control. The script that shows the value stays the same."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The volume starts at 50",
+              "expr": "el('#vol').value === '50' && text('#shown') === '50'"
+            },
+            {
+              "label": "Changing the volume updates the text",
+              "expr": "type('#vol', '70') && text('#shown') === '70'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

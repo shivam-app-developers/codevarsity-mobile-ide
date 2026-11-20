@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Tic-Tac-Toe Winner",
+    "language": "html",
+    "description": "Type a board of nine cells and a function that finds the winner. The eight winning lines are listed as arrays of positions, and a line wins when all three cells hold the same mark.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var lines = [\n    [0,1,2], [3,4,5], [6,7,8], [0,3,6],\n    [1,4,7], [2,5,8], [0,4,8], [2,4,6]\n  ];\n  function winner(b) {\n    for (var i = 0; i < lines.length; i++) {\n      var x = lines[i];\n      var m = b[x[0]];\n      if (m && m === b[x[1]] && m === b[x[2]]) return m;\n    }\n    return 'none';\n  }\n  var board = ['X', 'O', 'X', 'O', 'X', 'O', '', '', 'X'];\n  document.getElementById('out').textContent = winner(board);\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The diagonal X wins",
+              "expr": "text('#out') === 'X'"
+            },
+            {
+              "label": "No winner on an empty board",
+              "expr": "winner(['', '', '', '', '', '', '', '', '']) === 'none'"
+            },
+            {
+              "label": "A column of O wins",
+              "expr": "winner(['O', 'X', '', 'O', 'X', '', 'O', '', '']) === 'O'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

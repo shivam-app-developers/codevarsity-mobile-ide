@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Dropdown With Select",
+    "language": "html",
+    "description": "Type a select with three options and a default. The value of the chosen option is what the form sends, and the text is what the user sees.",
+    "ghostCode": "<label for=\"size\">Size</label>\n<select id=\"size\">\n  <option value=\"s\">Small</option>\n  <option value=\"m\" selected>Medium</option>\n  <option value=\"l\">Large</option>\n</select>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three options",
+              "expr": "count('#size option') === 3"
+            },
+            {
+              "label": "Medium is chosen first",
+              "expr": "el('#size').value === 'm'"
+            },
+            {
+              "label": "The Large option has the value l",
+              "expr": "el('#size option[value=l]').textContent === 'Large'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

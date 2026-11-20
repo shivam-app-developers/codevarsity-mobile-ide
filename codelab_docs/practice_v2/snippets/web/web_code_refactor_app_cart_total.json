@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use reduce for the total",
+    "language": "html",
+    "problemDescription": "The total is built with a counter variable and forEach. Use reduce on the rows. The total must stay the same.",
+    "initialCode": "<div class=\"r\" data-p=\"4\"></div>\n<div class=\"r\" data-p=\"6\"></div>\n<div class=\"r\" data-p=\"10\"></div>\n<p id=\"out\"></p>\n<script>\n  var total = 0;\n  document.querySelectorAll('.r').forEach(function (r) {\n    total = total + Number(r.dataset.p);\n  });\n  document.getElementById('out').textContent = total;\n</script>",
+    "solution": {
+      "code": "<div class=\"r\" data-p=\"4\"></div>\n<div class=\"r\" data-p=\"6\"></div>\n<div class=\"r\" data-p=\"10\"></div>\n<p id=\"out\"></p>\n<script>\n  var rows = Array.from(document.querySelectorAll('.r'));\n  var total = rows.reduce(function (sum, r) {\n    return sum + Number(r.dataset.p);\n  }, 0);\n  document.getElementById('out').textContent = total;\n</script>",
+      "explanation": "reduce says \"combine all the rows into one value\", so no variable outside the loop needs to be changed. The three-line forEach did the same work with a variable that is easy to touch by accident."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The total is 20",
+              "expr": "text('#out') === '20'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

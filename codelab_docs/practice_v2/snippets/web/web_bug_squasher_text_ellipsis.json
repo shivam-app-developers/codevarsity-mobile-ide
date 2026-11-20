@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: No dots at the end of the title",
+    "language": "html",
+    "problemDescription": "Long names in this card are cut off with no sign that there is more text. The ellipsis is missing.",
+    "buggyCode": "<style>\n  .name {\n    width: 120px;\n    white-space: nowrap;\n    overflow: hidden;\n  }\n</style>\n<div class=\"name\">Alexandria Montgomery-Smith</div>",
+    "solution": {
+      "code": "<style>\n  .name {\n    width: 120px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n</style>\n<div class=\"name\">Alexandria Montgomery-Smith</div>",
+      "explanation": "text-overflow only has an effect on a box that has hidden overflow, and it only adds the dots when the text is cut. Without it the text just ends at the edge."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The text ends with an ellipsis",
+              "expr": "style('.name', 'textOverflow') === 'ellipsis'"
+            },
+            {
+              "label": "The extra text is hidden",
+              "expr": "style('.name', 'overflow') === 'hidden'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

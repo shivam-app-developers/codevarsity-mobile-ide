@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace nested conditions with a lookup list",
+    "language": "html",
+    "problemDescription": "The category uses nested if and else blocks. Use a short chain of returns inside a function named category. The words shown must stay the same.",
+    "initialCode": "<input id=\"n\" value=\"22\">\n<button id=\"b\">Group</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var bmi = Number(document.getElementById('n').value);\n    var word;\n    if (bmi < 18.5) {\n      word = 'Under';\n    } else {\n      if (bmi < 25) {\n        word = 'Normal';\n      } else {\n        word = 'Over';\n      }\n    }\n    document.getElementById('r').textContent = word;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"n\" value=\"22\">\n<button id=\"b\">Group</button>\n<p id=\"r\"></p>\n<script>\n  function category(bmi) {\n    if (bmi < 18.5) return 'Under';\n    if (bmi < 25) return 'Normal';\n    return 'Over';\n  }\n  document.getElementById('b').addEventListener('click', function () {\n    var bmi = Number(document.getElementById('n').value);\n    document.getElementById('r').textContent = category(bmi);\n  });\n</script>",
+      "explanation": "Early returns remove the nesting: each line says one case and leaves the function. The code reads like the list of rules it implements."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "22 is Normal",
+              "expr": "click('#b') && text('#r') === 'Normal'"
+            },
+            {
+              "label": "17 is Under",
+              "expr": "type('#n', '17') && click('#b') && text('#r') === 'Under'"
+            },
+            {
+              "label": "30 is Over",
+              "expr": "type('#n', '30') && click('#b') && text('#r') === 'Over'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

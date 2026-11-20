@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Counter counts up instead of down",
+    "language": "html",
+    "problemDescription": "The text under the box says \"5 left\" after typing 5 characters, then \"6 left\" after the sixth. It should count down from 30. The calculation is the wrong way round.",
+    "buggyCode": "<textarea id=\"t\"></textarea>\n<p><span id=\"n\">30</span> left</p>\n<script>\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    document.getElementById('n').textContent = t.value.length;\n  });\n</script>",
+    "solution": {
+      "code": "<textarea id=\"t\"></textarea>\n<p><span id=\"n\">30</span> left</p>\n<script>\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    document.getElementById('n').textContent = 30 - t.value.length;\n  });\n</script>",
+      "explanation": "The page shows how many characters were typed, but the label says how many are left. The remaining count is the limit minus the length."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "It starts at 30",
+              "expr": "text('#n') === '30'"
+            },
+            {
+              "label": "Five characters leave 25",
+              "expr": "type('#t', 'hello') && text('#n') === '25'"
+            },
+            {
+              "label": "Ten characters leave 20",
+              "expr": "type('#t', '0123456789') && text('#n') === '20'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

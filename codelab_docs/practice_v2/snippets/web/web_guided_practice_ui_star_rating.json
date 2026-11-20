@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Star Rating",
+    "language": "html",
+    "description": "Type a row of five stars that fill up to the one clicked and show the score. The loop compares each star's position with the chosen number.",
+    "ghostCode": "<div id=\"stars\">\n  <span>o</span><span>o</span><span>o</span><span>o</span><span>o</span>\n</div>\n<p id=\"score\">0 of 5</p>\n<script>\n  var stars = document.querySelectorAll('#stars span');\n  stars.forEach(function (star, index) {\n    star.addEventListener('click', function () {\n      stars.forEach(function (s, i) {\n        s.textContent = i <= index ? '*' : 'o';\n      });\n      document.getElementById('score').textContent = (index + 1) + ' of 5';\n    });\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The score starts at 0",
+              "expr": "text('#score') === '0 of 5'"
+            },
+            {
+              "label": "Clicking the third star fills three",
+              "expr": "document.querySelectorAll('#stars span')[2].click() || text('#stars') === '***oo'"
+            },
+            {
+              "label": "The score shows 3 of 5",
+              "expr": "text('#score') === '3 of 5'"
+            },
+            {
+              "label": "Clicking the first star fills one",
+              "expr": "document.querySelectorAll('#stars span')[0].click() || text('#stars') === '*oooo'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

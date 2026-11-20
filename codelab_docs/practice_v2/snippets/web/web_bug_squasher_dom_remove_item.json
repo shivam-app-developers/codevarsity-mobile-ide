@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Delete removes the wrong item",
+    "language": "html",
+    "problemDescription": "Pressing the delete button of Write removes Read, the first item, instead. The handler removes a fixed item instead of the one that was pressed.",
+    "buggyCode": "<ul id=\"todo\">\n  <li>Read <button>x</button></li>\n  <li>Write <button>x</button></li>\n</ul>\n<script>\n  document.querySelectorAll('#todo button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      document.querySelector('#todo li').remove();\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<ul id=\"todo\">\n  <li>Read <button>x</button></li>\n  <li>Write <button>x</button></li>\n</ul>\n<script>\n  document.querySelectorAll('#todo button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      b.parentElement.remove();\n    });\n  });\n</script>",
+      "explanation": "querySelector always returns the first match, so the first item is removed whichever button was pressed. Use the pressed button's own parent: b.parentElement."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Deleting the second item removes Write",
+              "expr": "document.querySelectorAll('#todo button')[1].click() || text('#todo').indexOf('Write') < 0"
+            },
+            {
+              "label": "Read is still there",
+              "expr": "text('#todo').indexOf('Read') >= 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

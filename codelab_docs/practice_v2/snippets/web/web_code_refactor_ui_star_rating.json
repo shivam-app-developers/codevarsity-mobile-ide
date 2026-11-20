@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Fill the stars with a ternary and a join",
+    "language": "html",
+    "problemDescription": "Each pass of the loop sets every star by hand. Build the whole text of the row in one line with repeat. The row must look the same after each click.",
+    "initialCode": "<p id=\"row\">ooooo</p>\n<button id=\"b1\">1</button><button id=\"b3\">3</button>\n<script>\n  function show(n) {\n    var text = '';\n    for (var i = 0; i < 5; i++) {\n      if (i < n) { text = text + '*'; } else { text = text + 'o'; }\n    }\n    document.getElementById('row').textContent = text;\n  }\n  document.getElementById('b1').onclick = function () { show(1); };\n  document.getElementById('b3').onclick = function () { show(3); };\n</script>",
+    "solution": {
+      "code": "<p id=\"row\">ooooo</p>\n<button id=\"b1\">1</button><button id=\"b3\">3</button>\n<script>\n  function show(n) {\n    document.getElementById('row').textContent =\n      '*'.repeat(n) + 'o'.repeat(5 - n);\n  }\n  document.getElementById('b1').onclick = function () { show(1); };\n  document.getElementById('b3').onclick = function () { show(3); };\n</script>",
+      "explanation": "repeat builds a string from a count, so a stars row is the filled part plus the empty part. The loop with an if inside did the same work in six lines."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The row starts empty",
+              "expr": "text('#row') === 'ooooo'"
+            },
+            {
+              "label": "Button 3 fills three stars",
+              "expr": "click('#b3') && text('#row') === '***oo'"
+            },
+            {
+              "label": "Button 1 fills one star",
+              "expr": "click('#b1') && text('#row') === '*oooo'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

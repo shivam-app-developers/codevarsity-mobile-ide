@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Ten comes before nine",
+    "language": "html",
+    "problemDescription": "The scores are sorted, but 100 comes first, before 25 and 5. The sort has no compare function, so it sorts them as text.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var scores = [25, 5, 100, 50];\n  scores.sort();\n  document.getElementById('out').textContent = scores.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var scores = [25, 5, 100, 50];\n  scores.sort(function (a, b) { return a - b; });\n  document.getElementById('out').textContent = scores.join(',');\n</script>",
+      "explanation": "The default sort converts every item to text and compares them letter by letter, so \"100\" comes before \"25\" and \"5\". A compare function a - b sorts the numbers by value."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The scores are in number order",
+              "expr": "text('#out') === '5,25,50,100'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: px, rem and Percent",
+    "language": "html",
+    "description": "Type sizes in three units: rem for text, px for a border and a percentage for a width. rem follows the root font size, percent follows the parent.",
+    "ghostCode": "<style>\n  .wrap { width: 200px; }\n  .half { width: 50%; }\n  h1 { font-size: 2rem; border: 1px solid; }\n</style>\n<div class=\"wrap\"><div class=\"half\">Half</div></div>\n<h1>Big</h1>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The half box is 100px wide",
+              "expr": "px('.half', 'width') === 100"
+            },
+            {
+              "label": "The heading is twice the root font size",
+              "expr": "px('h1', 'fontSize') === 2 * px('html', 'fontSize')"
+            },
+            {
+              "label": "The heading border is 1px",
+              "expr": "px('h1', 'borderTopWidth') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

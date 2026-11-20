@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Filter keeps the duplicates",
+    "language": "html",
+    "problemDescription": "The page should show each number once, but it only shows the repeated ones. The test in the filter is the wrong way round.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var nums = [1, 2, 2, 3, 1, 4];\n  var unique = nums.filter(function (n, i) {\n    return nums.indexOf(n) !== i;\n  });\n  document.getElementById('out').textContent = unique.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var nums = [1, 2, 2, 3, 1, 4];\n  var unique = nums.filter(function (n, i) {\n    return nums.indexOf(n) === i;\n  });\n  document.getElementById('out').textContent = unique.join(',');\n</script>",
+      "explanation": "indexOf gives the position of the first match. An item is the first of its kind when its own position equals that index. Not equal means it is a repeat, so the filter kept only repeats."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Each number is shown once",
+              "expr": "text('#out') === '1,2,3,4'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

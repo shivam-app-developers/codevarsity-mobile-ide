@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Position instead of margin guesses",
+    "language": "html",
+    "problemDescription": "The label is moved to the bottom of the box with a guessed offset from the top. Use position absolute with bottom 0 inside a relative box. It must stay at the bottom edge.",
+    "initialCode": "<style>\n  .box { width: 120px; height: 80px; background: #cde; }\n  .label {\n    position: relative;\n    top: 62px;\n    font-size: 14px;\n    line-height: 18px;\n  }\n</style>\n<div class=\"box\"><div class=\"label\">Tag</div></div>",
+    "solution": {
+      "code": "<style>\n  .box {\n    position: relative;\n    width: 120px;\n    height: 80px;\n    background: #cde;\n  }\n  .label {\n    position: absolute;\n    bottom: 0;\n    font-size: 14px;\n    line-height: 18px;\n  }\n</style>\n<div class=\"box\"><div class=\"label\">Tag</div></div>",
+      "explanation": "A top offset guesses the distance from the top and breaks when the text size or the box height changes. bottom: 0 on a positioned element says exactly what is wanted: stay at the bottom edge."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The label is at the bottom of the box",
+              "expr": "Math.abs(el('.label').getBoundingClientRect().bottom - el('.box').getBoundingClientRect().bottom) <= 1"
+            },
+            {
+              "label": "The label is inside the box",
+              "expr": "el('.label').getBoundingClientRect().top >= el('.box').getBoundingClientRect().top"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

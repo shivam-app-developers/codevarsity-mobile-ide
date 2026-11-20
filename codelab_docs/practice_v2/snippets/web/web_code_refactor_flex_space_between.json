@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use auto margin for the last item",
+    "language": "html",
+    "problemDescription": "The bar uses a fixed margin to push the button to the right, which breaks on other sizes. Use the auto margin on the button. The button must stay at the right end.",
+    "initialCode": "<style>\n  .bar { display: flex; }\n  .btn { margin-left: 180px; }\n</style>\n<div class=\"bar\">\n  <span class=\"title\">Inbox</span>\n  <button class=\"btn\">Edit</button>\n</div>",
+    "solution": {
+      "code": "<style>\n  .bar { display: flex; }\n  .btn { margin-left: auto; }\n</style>\n<div class=\"bar\">\n  <span class=\"title\">Inbox</span>\n  <button class=\"btn\">Edit</button>\n</div>",
+      "explanation": "An auto margin takes all the free space on its side in a flex row, so the button always lands at the end, whatever the width. A fixed pixel margin is only right for one width."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The title is on the left",
+              "expr": "el('.title').getBoundingClientRect().left === el('.bar').getBoundingClientRect().left"
+            },
+            {
+              "label": "The button is pushed to the right half",
+              "expr": "el('.btn').getBoundingClientRect().left > el('.bar').getBoundingClientRect().width / 3"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

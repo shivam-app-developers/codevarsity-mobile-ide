@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Name the limit",
+    "language": "html",
+    "problemDescription": "The number 40 appears three times in this script. Put it in one named constant, so the limit can be changed in one place. The behaviour must not change.",
+    "initialCode": "<textarea id=\"t\"></textarea>\n<p id=\"n\">40</p>\n<script>\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    if (t.value.length > 40) {\n      t.value = t.value.slice(0, 40);\n    }\n    document.getElementById('n').textContent = 40 - t.value.length;\n  });\n</script>",
+    "solution": {
+      "code": "<textarea id=\"t\"></textarea>\n<p id=\"n\">40</p>\n<script>\n  var LIMIT = 40;\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    if (t.value.length > LIMIT) {\n      t.value = t.value.slice(0, LIMIT);\n    }\n    document.getElementById('n').textContent = LIMIT - t.value.length;\n  });\n</script>",
+      "explanation": "A named constant gives the number a meaning and a single place to change. With the number repeated, changing one copy and forgetting another is an easy mistake."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "It starts at 40",
+              "expr": "text('#n') === '40'"
+            },
+            {
+              "label": "Typing 10 characters leaves 30",
+              "expr": "type('#t', '0123456789') && text('#n') === '30'"
+            },
+            {
+              "label": "Text over the limit is cut to 40",
+              "expr": "type('#t', new Array(61).join('x')) && el('#t').value.length === 40 && text('#n') === '0'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

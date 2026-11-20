@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Bullets are still there",
+    "language": "html",
+    "problemDescription": "The menu should be plain text without bullets, but each item still shows a dot. The rule for the list style uses a value that the browser does not know.",
+    "buggyCode": "<style>\n  ul { list-style: nope; }\n</style>\n<ul>\n  <li>Inbox</li>\n  <li>Sent</li>\n</ul>",
+    "solution": {
+      "code": "<style>\n  ul { list-style: none; }\n</style>\n<ul>\n  <li>Inbox</li>\n  <li>Sent</li>\n</ul>",
+      "explanation": "The value none removes the marker. A word that is not a valid value (nope) makes the declaration invalid, so the default disc stays. Check the value spelling when a rule seems to be ignored."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list has no bullets",
+              "expr": "style('ul', 'listStyleType') === 'none'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

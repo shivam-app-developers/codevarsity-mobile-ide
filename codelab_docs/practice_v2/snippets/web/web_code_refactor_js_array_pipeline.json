@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Loop replaced by array methods",
+    "language": "html",
+    "problemDescription": "A for loop builds a list and a running total by hand. Use filter and reduce. The page must show the same sum.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var marks = [40, 75, 90, 30, 60];\n  var passed = [];\n  for (var i = 0; i < marks.length; i++) {\n    if (marks[i] >= 50) {\n      passed.push(marks[i]);\n    }\n  }\n  var sum = 0;\n  for (var j = 0; j < passed.length; j++) {\n    sum = sum + passed[j];\n  }\n  document.getElementById('out').textContent = sum;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var marks = [40, 75, 90, 30, 60];\n  var sum = marks\n    .filter(function (m) { return m >= 50; })\n    .reduce(function (a, b) { return a + b; }, 0);\n  document.getElementById('out').textContent = sum;\n</script>",
+      "explanation": "The methods name what is happening: keep some, then combine. The loop version makes the reader work out the same thing from index variables."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The sum of passing marks is 225",
+              "expr": "text('#out') === '225'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

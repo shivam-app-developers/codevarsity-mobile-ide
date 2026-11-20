@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Match with a selector",
+    "language": "html",
+    "problemDescription": "The handler compares the tag name with a capital-letter string. Use e.target.matches('li') so the test reads like a CSS selector. The rows must be marked in the same way.",
+    "initialCode": "<ul id=\"rows\">\n  <li>Alpha</li>\n  <li>Beta</li>\n</ul>\n<script>\n  document.getElementById('rows').addEventListener('click', function (e) {\n    if (e.target.tagName === 'LI') {\n      e.target.classList.add('picked');\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<ul id=\"rows\">\n  <li>Alpha</li>\n  <li>Beta</li>\n</ul>\n<script>\n  document.getElementById('rows').addEventListener('click', function (e) {\n    if (e.target.matches('li')) {\n      e.target.classList.add('picked');\n    }\n  });\n</script>",
+      "explanation": "matches uses the same selector language as CSS, so the same text can be used in a stylesheet and in the script. A tag name in capital letters is easy to mistype and cannot test a class."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking the first row marks it",
+              "expr": "document.querySelectorAll('#rows li')[0].click() || document.querySelectorAll('#rows li')[0].classList.contains('picked')"
+            },
+            {
+              "label": "The second row is not marked",
+              "expr": "!document.querySelectorAll('#rows li')[1].classList.contains('picked')"
+            },
+            {
+              "label": "Clicking the list itself marks nothing",
+              "expr": "el('#rows').click() || count('#rows li.picked') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

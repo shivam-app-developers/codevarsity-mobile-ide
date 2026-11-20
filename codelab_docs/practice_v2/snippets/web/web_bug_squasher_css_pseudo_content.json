@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Marker never appears",
+    "language": "html",
+    "problemDescription": "A star should show before each review, but nothing appears. The rule for the marker has no content property.",
+    "buggyCode": "<style>\n  .review::before { color: gold; }\n</style>\n<p class=\"review\">Great product</p>",
+    "solution": {
+      "code": "<style>\n  .review::before { content: \"* \"; color: gold; }\n</style>\n<p class=\"review\">Great product</p>",
+      "explanation": "A ::before or ::after element is only created when its content is set. An empty string is enough for a decoration, but the property must be there."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The star is drawn before the review",
+              "expr": "getComputedStyle(el('.review'), '::before').content === '\"* \"'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

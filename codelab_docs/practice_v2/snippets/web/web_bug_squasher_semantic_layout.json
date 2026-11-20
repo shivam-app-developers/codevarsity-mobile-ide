@@ -1,0 +1,44 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Page built from divs only",
+    "language": "html",
+    "problemDescription": "This page looks right, but a screen reader finds no header, navigation or main area, because every part is a plain div. Use the HTML tag that names each part.",
+    "buggyCode": "<div class=\"header\"><h1>Pet Shop</h1></div>\n<div class=\"nav\">\n  <a href=\"#dogs\">Dogs</a>\n  <a href=\"#cats\">Cats</a>\n</div>\n<div class=\"main\">\n  <p>Welcome to the shop.</p>\n</div>\n<div class=\"footer\">Open 9 to 5</div>",
+    "solution": {
+      "code": "<header><h1>Pet Shop</h1></header>\n<nav>\n  <a href=\"#dogs\">Dogs</a>\n  <a href=\"#cats\">Cats</a>\n</nav>\n<main>\n  <p>Welcome to the shop.</p>\n</main>\n<footer>Open 9 to 5</footer>",
+      "explanation": "A div has no meaning, so assistive technology cannot skip to the main content or list the navigation. header, nav, main and footer look the same in the browser but describe the page structure."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page has a header",
+              "expr": "exists('body > header')"
+            },
+            {
+              "label": "The page has a nav",
+              "expr": "exists('body > nav')"
+            },
+            {
+              "label": "The page has a main area",
+              "expr": "exists('body > main')"
+            },
+            {
+              "label": "The page has a footer",
+              "expr": "exists('body > footer')"
+            },
+            {
+              "label": "The nav keeps its two links",
+              "expr": "count('nav a') === 2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

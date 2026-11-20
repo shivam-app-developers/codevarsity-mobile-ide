@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One transition shorthand",
+    "language": "html",
+    "problemDescription": "The transition is described with three separate properties. Use the transition shorthand. The same property, time and easing must stay.",
+    "initialCode": "<style>\n  .card {\n    background: white;\n    transition-property: background-color;\n    transition-duration: 0.4s;\n    transition-timing-function: ease-in;\n  }\n</style>\n<div class=\"card\">Card</div>",
+    "solution": {
+      "code": "<style>\n  .card {\n    background: white;\n    transition: background-color 0.4s ease-in;\n  }\n</style>\n<div class=\"card\">Card</div>",
+      "explanation": "The transition shorthand takes property, duration and easing in one line, which is how it is almost always written and read."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The property is background-color",
+              "expr": "style('.card', 'transitionProperty') === 'background-color'"
+            },
+            {
+              "label": "The duration is 0.4 seconds",
+              "expr": "style('.card', 'transitionDuration') === '0.4s'"
+            },
+            {
+              "label": "The easing is ease-in",
+              "expr": "style('.card', 'transitionTimingFunction') === 'ease-in'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

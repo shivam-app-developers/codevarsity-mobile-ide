@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: BMI Calculator",
+    "language": "html",
+    "description": "Type a body mass index calculator: weight in kilograms divided by height in metres squared. Show the number with one decimal and a category.",
+    "ghostCode": "<input id=\"kg\" value=\"70\">\n<input id=\"m\" value=\"1.75\">\n<button id=\"go\">BMI</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    var kg = Number(document.getElementById('kg').value);\n    var m = Number(document.getElementById('m').value);\n    var bmi = kg / (m * m);\n    var word = bmi < 18.5 ? 'Under' : bmi < 25 ? 'Normal' : 'Over';\n    var shown = bmi.toFixed(1) + ' ' + word;\n    document.getElementById('out').textContent = shown;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "70 kg at 1.75 m is 22.9 Normal",
+              "expr": "click('#go') && text('#out') === '22.9 Normal'"
+            },
+            {
+              "label": "50 kg at 1.80 m is Under",
+              "expr": "type('#kg', '50') && type('#m', '1.8') && click('#go') && text('#out') === '15.4 Under'"
+            },
+            {
+              "label": "90 kg at 1.70 m is Over",
+              "expr": "type('#kg', '90') && type('#m', '1.7') && click('#go') && text('#out') === '31.1 Over'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

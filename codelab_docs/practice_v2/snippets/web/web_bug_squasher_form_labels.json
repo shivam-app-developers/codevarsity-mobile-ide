@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Label that is not connected",
+    "language": "html",
+    "problemDescription": "Tapping the word \"Phone\" does not focus the phone input, and a screen reader reads the input as an unnamed field. The label and the input are not connected.",
+    "buggyCode": "<form>\n  <label for=\"phone-number\">Phone</label>\n  <input id=\"phone\" type=\"tel\">\n</form>",
+    "solution": {
+      "code": "<form>\n  <label for=\"phone\">Phone</label>\n  <input id=\"phone\" type=\"tel\">\n</form>",
+      "explanation": "The for attribute of a label must equal the id of its input. When they differ, the label is just text. A connected label gives a bigger tap target and a name for screen readers."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The phone input has a label",
+              "expr": "labelled('#phone')"
+            },
+            {
+              "label": "Clicking the label focuses the input",
+              "expr": "(() => { document.querySelector('label').click(); return document.activeElement === document.querySelector('#phone'); })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

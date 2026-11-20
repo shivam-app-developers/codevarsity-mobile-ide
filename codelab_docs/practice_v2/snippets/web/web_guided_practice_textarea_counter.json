@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Live Character Counter",
+    "language": "html",
+    "description": "Type a textarea that shows how many characters are left out of 20. The input event fires on every key.",
+    "ghostCode": "<textarea id=\"t\" maxlength=\"20\"></textarea>\n<p><span id=\"left\">20</span> left</p>\n<script>\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    var left = 20 - t.value.length;\n    document.getElementById('left').textContent = left;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "It starts at 20",
+              "expr": "text('#left') === '20'"
+            },
+            {
+              "label": "Five characters leave 15",
+              "expr": "type('#t', 'hello') && text('#left') === '15'"
+            },
+            {
+              "label": "Clearing the text gives 20 again",
+              "expr": "type('#t', '') && text('#left') === '20'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -2,12 +2,1362 @@
   "version": 2,
   "snippets": [
     {
+      "id": "web_guided_practice_css_scroll_box",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: A Scrollable Box",
+      "difficulty": "beginner",
+      "order": 0,
+      "rev": "4a0524c8d32f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_scroll_box.json"
+    },
+    {
+      "id": "web_bug_squasher_css_scroll_box",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Long text spills out of its box",
+      "difficulty": "beginner",
+      "order": 1,
+      "rev": "99b4749696f5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_scroll_box.json"
+    },
+    {
+      "id": "web_code_refactor_css_scroll_box",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: max-height instead of a fixed height",
+      "difficulty": "beginner",
+      "order": 2,
+      "rev": "3a7ec8f18cfc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_scroll_box.json"
+    },
+    {
+      "id": "web_guided_practice_css_display",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Block, Inline and None",
+      "difficulty": "beginner",
+      "order": 3,
+      "rev": "b2f8cf08bb30",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_display.json"
+    },
+    {
+      "id": "web_bug_squasher_css_display",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Width has no effect on a span",
+      "difficulty": "beginner",
+      "order": 4,
+      "rev": "7f99c7301190",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_display.json"
+    },
+    {
+      "id": "web_code_refactor_css_display",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Hide with a class",
+      "difficulty": "beginner",
+      "order": 5,
+      "rev": "c60a8e83eb6a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_display.json"
+    },
+    {
+      "id": "web_guided_practice_flex_center",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Centre With Flexbox",
+      "difficulty": "beginner",
+      "order": 6,
+      "rev": "cbf19d3bd6c0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flex_center.json"
+    },
+    {
+      "id": "web_bug_squasher_flex_center",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Child is centred only one way",
+      "difficulty": "beginner",
+      "order": 7,
+      "rev": "a1b2da380281",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flex_center.json"
+    },
+    {
+      "id": "web_code_refactor_flex_center",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace margin tricks with flex",
+      "difficulty": "beginner",
+      "order": 8,
+      "rev": "5b2abf2b9e44",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_flex_center.json"
+    },
+    {
+      "id": "web_guided_practice_dom_style_property",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Change Styles From a Script",
+      "difficulty": "beginner",
+      "order": 9,
+      "rev": "686401d9d9e9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_style_property.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_style_property",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Width does not change",
+      "difficulty": "beginner",
+      "order": 10,
+      "rev": "d8a33edd724c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_style_property.json"
+    },
+    {
+      "id": "web_code_refactor_dom_style_property",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Set a class instead of many styles",
+      "difficulty": "beginner",
+      "order": 11,
+      "rev": "8bf26cc47a5d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_style_property.json"
+    },
+    {
+      "id": "web_guided_practice_input_types",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Choosing the Right Input Type",
+      "difficulty": "beginner",
+      "order": 12,
+      "rev": "1ee4116b1527",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_input_types.json"
+    },
+    {
+      "id": "web_bug_squasher_input_types",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Quantity field takes any text",
+      "difficulty": "beginner",
+      "order": 13,
+      "rev": "9043ff0ed9f0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_input_types.json"
+    },
+    {
+      "id": "web_code_refactor_input_types",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use a range input for a volume",
+      "difficulty": "beginner",
+      "order": 14,
+      "rev": "f8e120860ee3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_input_types.json"
+    },
+    {
+      "id": "web_guided_practice_dom_click_counter",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Click Counter",
+      "difficulty": "beginner",
+      "order": 15,
+      "rev": "69df717dd77f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_click_counter.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_click_counter",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Counter stuck at 1",
+      "difficulty": "beginner",
+      "order": 16,
+      "rev": "8251b20ec39d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_click_counter.json"
+    },
+    {
+      "id": "web_code_refactor_dom_click_counter",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Read the number from one place",
+      "difficulty": "beginner",
+      "order": 17,
+      "rev": "d706abd32b84",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_click_counter.json"
+    },
+    {
+      "id": "web_guided_practice_checkbox_count",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Count the Ticked Boxes",
+      "difficulty": "beginner",
+      "order": 18,
+      "rev": "138513c06fef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_checkbox_count.json"
+    },
+    {
+      "id": "web_bug_squasher_checkbox_count",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Count that never changes",
+      "difficulty": "beginner",
+      "order": 19,
+      "rev": "4a93c9b3ccef",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_checkbox_count.json"
+    },
+    {
+      "id": "web_code_refactor_checkbox_count",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One handler for every box",
+      "difficulty": "beginner",
+      "order": 20,
+      "rev": "8d1264c61130",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_checkbox_count.json"
+    },
+    {
+      "id": "web_guided_practice_dom_create_element",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Create and Append Elements",
+      "difficulty": "beginner",
+      "order": 21,
+      "rev": "5af8a9e45f0e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_create_element.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_create_element",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: New items replace the old ones",
+      "difficulty": "beginner",
+      "order": 22,
+      "rev": "f8660e925b3b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_create_element.json"
+    },
+    {
+      "id": "web_code_refactor_dom_create_element",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Build a list from an array",
+      "difficulty": "beginner",
+      "order": 23,
+      "rev": "8b81c8771473",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_create_element.json"
+    },
+    {
+      "id": "web_guided_practice_select_dropdown",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Dropdown With Select",
+      "difficulty": "beginner",
+      "order": 24,
+      "rev": "4abfa71fcc4e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_select_dropdown.json"
+    },
+    {
+      "id": "web_bug_squasher_select_dropdown",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Dropdown that sends the wrong value",
+      "difficulty": "beginner",
+      "order": 25,
+      "rev": "e089c04129e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_select_dropdown.json"
+    },
+    {
+      "id": "web_code_refactor_select_dropdown",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Group options with optgroup",
+      "difficulty": "beginner",
+      "order": 26,
+      "rev": "9a6c4c756fc0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_select_dropdown.json"
+    },
+    {
+      "id": "web_guided_practice_css_selectors",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Element, Class and ID Selectors",
+      "difficulty": "beginner",
+      "order": 27,
+      "rev": "680f50fb3f2e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_selectors.json"
+    },
+    {
+      "id": "web_bug_squasher_css_selectors",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Rule written for the wrong selector",
+      "difficulty": "beginner",
+      "order": 28,
+      "rev": "a3cab2bc7862",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_selectors.json"
+    },
+    {
+      "id": "web_code_refactor_css_selectors",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Share one rule between elements",
+      "difficulty": "beginner",
+      "order": 29,
+      "rev": "d3ea7a0ba07b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_selectors.json"
+    },
+    {
+      "id": "web_guided_practice_dom_disabled_button",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Enable a Button When Ready",
+      "difficulty": "beginner",
+      "order": 30,
+      "rev": "b4faacae8c84",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_disabled_button.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_disabled_button",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Button stays disabled",
+      "difficulty": "beginner",
+      "order": 31,
+      "rev": "ba7a0a8a4eb5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_disabled_button.json"
+    },
+    {
+      "id": "web_code_refactor_dom_disabled_button",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use a boolean directly",
+      "difficulty": "beginner",
+      "order": 32,
+      "rev": "744716d893fa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_disabled_button.json"
+    },
+    {
+      "id": "web_guided_practice_flex_grow",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Equal Columns With flex: 1",
+      "difficulty": "beginner",
+      "order": 33,
+      "rev": "02a273462708",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flex_grow.json"
+    },
+    {
+      "id": "web_bug_squasher_flex_grow",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Sidebar has no room",
+      "difficulty": "beginner",
+      "order": 34,
+      "rev": "13b524f084ea",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flex_grow.json"
+    },
+    {
+      "id": "web_code_refactor_flex_grow",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Shorthand for flex",
+      "difficulty": "beginner",
+      "order": 35,
+      "rev": "826581b3b667",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_flex_grow.json"
+    },
+    {
+      "id": "web_guided_practice_js_array_pipeline",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Filter, Map and Reduce",
+      "difficulty": "beginner",
+      "order": 36,
+      "rev": "ec59015b6769",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_array_pipeline.json"
+    },
+    {
+      "id": "web_bug_squasher_js_array_pipeline",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Total is NaN",
+      "difficulty": "beginner",
+      "order": 37,
+      "rev": "a7771e628535",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_array_pipeline.json"
+    },
+    {
+      "id": "web_code_refactor_js_array_pipeline",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Loop replaced by array methods",
+      "difficulty": "beginner",
+      "order": 38,
+      "rev": "099d4c209520",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_array_pipeline.json"
+    },
+    {
+      "id": "web_guided_practice_js_fizzbuzz_list",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: FizzBuzz",
+      "difficulty": "beginner",
+      "order": 39,
+      "rev": "34ad2fb9e3c8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_fizzbuzz_list.json"
+    },
+    {
+      "id": "web_bug_squasher_js_fizzbuzz_list",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: 15 says Fizz",
+      "difficulty": "beginner",
+      "order": 40,
+      "rev": "b3062a783c74",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_fizzbuzz_list.json"
+    },
+    {
+      "id": "web_code_refactor_js_fizzbuzz_list",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Build the word instead of testing three cases",
+      "difficulty": "beginner",
+      "order": 41,
+      "rev": "27366399f9f8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_fizzbuzz_list.json"
+    },
+    {
+      "id": "web_guided_practice_heading_hierarchy",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Heading Levels",
+      "difficulty": "beginner",
+      "order": 42,
+      "rev": "4aaaee02ae1c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_heading_hierarchy.json"
+    },
+    {
+      "id": "web_bug_squasher_heading_hierarchy",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Heading skips a level",
+      "difficulty": "beginner",
+      "order": 43,
+      "rev": "0ed5178f5c7c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_heading_hierarchy.json"
+    },
+    {
+      "id": "web_code_refactor_heading_hierarchy",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Real headings instead of bold paragraphs",
+      "difficulty": "beginner",
+      "order": 44,
+      "rev": "de7ef575c852",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_heading_hierarchy.json"
+    },
+    {
+      "id": "web_guided_practice_image_alt",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Images With Alt Text",
+      "difficulty": "beginner",
+      "order": 45,
+      "rev": "c303c118df15",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_image_alt.json"
+    },
+    {
+      "id": "web_bug_squasher_image_alt",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Picture with no alt text",
+      "difficulty": "beginner",
+      "order": 46,
+      "rev": "a7536ca964bc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_image_alt.json"
+    },
+    {
+      "id": "web_code_refactor_image_alt",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Caption inside a figure",
+      "difficulty": "beginner",
+      "order": 47,
+      "rev": "07703578401d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_image_alt.json"
+    },
+    {
+      "id": "web_guided_practice_form_labels",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Labels for Inputs",
+      "difficulty": "beginner",
+      "order": 48,
+      "rev": "b1c9d017a219",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_form_labels.json"
+    },
+    {
+      "id": "web_bug_squasher_form_labels",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Label that is not connected",
+      "difficulty": "beginner",
+      "order": 49,
+      "rev": "064a1289b52b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_form_labels.json"
+    },
+    {
+      "id": "web_code_refactor_form_labels",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Wrap each input in its label",
+      "difficulty": "beginner",
+      "order": 50,
+      "rev": "5ed09e1e13a0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_form_labels.json"
+    },
+    {
+      "id": "web_guided_practice_ui_like_button",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Like and Unlike",
+      "difficulty": "beginner",
+      "order": 51,
+      "rev": "9a91a54dcc51",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_like_button.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_like_button",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Every press adds a like",
+      "difficulty": "beginner",
+      "order": 52,
+      "rev": "e0cb4bece6b1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_like_button.json"
+    },
+    {
+      "id": "web_code_refactor_ui_like_button",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Derive the count from the state",
+      "difficulty": "beginner",
+      "order": 53,
+      "rev": "381a1fe6c015",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_like_button.json"
+    },
+    {
+      "id": "web_guided_practice_links_anchors",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Links and Page Anchors",
+      "difficulty": "beginner",
+      "order": 54,
+      "rev": "31521986986c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_links_anchors.json"
+    },
+    {
+      "id": "web_bug_squasher_links_anchors",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Anchor link that goes nowhere",
+      "difficulty": "beginner",
+      "order": 55,
+      "rev": "fcd0c013414e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_links_anchors.json"
+    },
+    {
+      "id": "web_code_refactor_links_anchors",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Back to top without JavaScript",
+      "difficulty": "beginner",
+      "order": 56,
+      "rev": "3b4605a5eb42",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_links_anchors.json"
+    },
+    {
+      "id": "web_guided_practice_textarea_counter",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Live Character Counter",
+      "difficulty": "beginner",
+      "order": 57,
+      "rev": "ff396ef17658",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_textarea_counter.json"
+    },
+    {
+      "id": "web_bug_squasher_textarea_counter",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Counter counts up instead of down",
+      "difficulty": "beginner",
+      "order": 58,
+      "rev": "5ec529c4fb9b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_textarea_counter.json"
+    },
+    {
+      "id": "web_code_refactor_textarea_counter",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Name the limit",
+      "difficulty": "beginner",
+      "order": 59,
+      "rev": "5cca203aaf22",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_textarea_counter.json"
+    },
+    {
+      "id": "web_guided_practice_dom_live_preview",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Live Preview While Typing",
+      "difficulty": "beginner",
+      "order": 60,
+      "rev": "9a63ea8172d7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_live_preview.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_live_preview",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Preview is one step behind",
+      "difficulty": "beginner",
+      "order": 61,
+      "rev": "2bf701dda100",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_live_preview.json"
+    },
+    {
+      "id": "web_code_refactor_dom_live_preview",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use the event target",
+      "difficulty": "beginner",
+      "order": 62,
+      "rev": "5566c70f161c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_live_preview.json"
+    },
+    {
+      "id": "web_guided_practice_ui_toggle_button",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: On and Off Toggle Button",
+      "difficulty": "beginner",
+      "order": 63,
+      "rev": "20d9130256b5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_toggle_button.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_toggle_button",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Screen reader never hears the state",
+      "difficulty": "beginner",
+      "order": 64,
+      "rev": "87acc99d43dc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_toggle_button.json"
+    },
+    {
+      "id": "web_code_refactor_ui_toggle_button",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Keep the state in one variable",
+      "difficulty": "beginner",
+      "order": 65,
+      "rev": "d06dad3d4bd7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_toggle_button.json"
+    },
+    {
+      "id": "web_guided_practice_lists_basics",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Ordered and Unordered Lists",
+      "difficulty": "beginner",
+      "order": 66,
+      "rev": "ddd1fea26029",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_lists_basics.json"
+    },
+    {
+      "id": "web_bug_squasher_lists_basics",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: List items outside the list",
+      "difficulty": "beginner",
+      "order": 67,
+      "rev": "57437d4a9360",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_lists_basics.json"
+    },
+    {
+      "id": "web_code_refactor_lists_basics",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use a list for a row of links",
+      "difficulty": "beginner",
+      "order": 68,
+      "rev": "c81fa5b04d89",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_lists_basics.json"
+    },
+    {
+      "id": "web_guided_practice_css_box_model",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Padding, Border and Margin",
+      "difficulty": "beginner",
+      "order": 69,
+      "rev": "dff3825b52d2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_box_model.json"
+    },
+    {
+      "id": "web_bug_squasher_css_box_model",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Box wider than the screen",
+      "difficulty": "beginner",
+      "order": 70,
+      "rev": "62fb6b1a9a61",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_box_model.json"
+    },
+    {
+      "id": "web_code_refactor_css_box_model",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use the shorthand",
+      "difficulty": "beginner",
+      "order": 71,
+      "rev": "370d774bee13",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_box_model.json"
+    },
+    {
+      "id": "web_guided_practice_js_palindrome_check",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Palindrome Checker",
+      "difficulty": "beginner",
+      "order": 72,
+      "rev": "e9b9c43d3bff",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_palindrome_check.json"
+    },
+    {
+      "id": "web_bug_squasher_js_palindrome_check",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Capital letters break the check",
+      "difficulty": "beginner",
+      "order": 73,
+      "rev": "18e6240bc56f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_palindrome_check.json"
+    },
+    {
+      "id": "web_code_refactor_js_palindrome_check",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Compare from both ends",
+      "difficulty": "beginner",
+      "order": 74,
+      "rev": "492bde61d3f7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_palindrome_check.json"
+    },
+    {
+      "id": "web_guided_practice_responsive_image",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Pictures That Fit the Screen",
+      "difficulty": "beginner",
+      "order": 75,
+      "rev": "9a3d945686e7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_responsive_image.json"
+    },
+    {
+      "id": "web_bug_squasher_responsive_image",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Picture makes the page scroll sideways",
+      "difficulty": "beginner",
+      "order": 76,
+      "rev": "5242c5c89fcb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_responsive_image.json"
+    },
+    {
+      "id": "web_code_refactor_responsive_image",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Fluid width instead of a fixed one",
+      "difficulty": "beginner",
+      "order": 77,
+      "rev": "a952bb61d8ce",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_responsive_image.json"
+    },
+    {
+      "id": "web_guided_practice_css_units",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: px, rem and Percent",
+      "difficulty": "beginner",
+      "order": 78,
+      "rev": "7f9acaae052a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_units.json"
+    },
+    {
+      "id": "web_bug_squasher_css_units",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Text too small to read",
+      "difficulty": "beginner",
+      "order": 79,
+      "rev": "4db781678807",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_units.json"
+    },
+    {
+      "id": "web_code_refactor_css_units",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use rem for sizes",
+      "difficulty": "beginner",
+      "order": 80,
+      "rev": "0dda9191bdca",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_units.json"
+    },
+    {
+      "id": "web_guided_practice_ui_quantity_stepper",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Quantity Stepper",
+      "difficulty": "beginner",
+      "order": 81,
+      "rev": "fdd5dc20b001",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_quantity_stepper.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_quantity_stepper",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Quantity goes negative",
+      "difficulty": "beginner",
+      "order": 82,
+      "rev": "b584ef5157b2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_quantity_stepper.json"
+    },
+    {
+      "id": "web_code_refactor_ui_quantity_stepper",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use Math.max for the lower limit",
+      "difficulty": "beginner",
+      "order": 83,
+      "rev": "135a915adee5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_quantity_stepper.json"
+    },
+    {
+      "id": "web_guided_practice_app_quiz_score",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Quiz Score",
+      "difficulty": "beginner",
+      "order": 84,
+      "rev": "935c6d30db71",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_quiz_score.json"
+    },
+    {
+      "id": "web_bug_squasher_app_quiz_score",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Quiz crashes when a question is skipped",
+      "difficulty": "beginner",
+      "order": 85,
+      "rev": "70d635b241aa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_quiz_score.json"
+    },
+    {
+      "id": "web_code_refactor_app_quiz_score",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Count right answers with an array",
+      "difficulty": "beginner",
+      "order": 86,
+      "rev": "804ab191279f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_quiz_score.json"
+    },
+    {
+      "id": "web_guided_practice_radio_group",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Radio Buttons Share a Name",
+      "difficulty": "beginner",
+      "order": 87,
+      "rev": "448ae521c536",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_radio_group.json"
+    },
+    {
+      "id": "web_bug_squasher_radio_group",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Two radio buttons can be chosen together",
+      "difficulty": "beginner",
+      "order": 88,
+      "rev": "37f3b6a62f4d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_radio_group.json"
+    },
+    {
+      "id": "web_code_refactor_radio_group",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Radio group in a fieldset",
+      "difficulty": "beginner",
+      "order": 89,
+      "rev": "9fce9debb185",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_radio_group.json"
+    },
+    {
+      "id": "web_guided_practice_js_unique_values",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Remove Duplicates",
+      "difficulty": "beginner",
+      "order": 90,
+      "rev": "e4eba6ab2a2d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_unique_values.json"
+    },
+    {
+      "id": "web_bug_squasher_js_unique_values",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Filter keeps the duplicates",
+      "difficulty": "beginner",
+      "order": 91,
+      "rev": "6aa62c7d5471",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_unique_values.json"
+    },
+    {
+      "id": "web_code_refactor_js_unique_values",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Set instead of nested loops",
+      "difficulty": "beginner",
+      "order": 92,
+      "rev": "7fef9df13c4b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_unique_values.json"
+    },
+    {
+      "id": "web_guided_practice_css_rounded_shadow",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Rounded Corners and Shadow",
+      "difficulty": "beginner",
+      "order": 93,
+      "rev": "937a55694087",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_rounded_shadow.json"
+    },
+    {
+      "id": "web_bug_squasher_css_rounded_shadow",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Round avatar is a rounded square",
+      "difficulty": "beginner",
+      "order": 94,
+      "rev": "119de63679be",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_rounded_shadow.json"
+    },
+    {
+      "id": "web_code_refactor_css_rounded_shadow",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One rule for the corners",
+      "difficulty": "beginner",
+      "order": 95,
+      "rev": "8b803e9f309d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_rounded_shadow.json"
+    },
+    {
+      "id": "web_guided_practice_flex_direction",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Row and Column Direction",
+      "difficulty": "beginner",
+      "order": 96,
+      "rev": "b10ed05303da",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flex_direction.json"
+    },
+    {
+      "id": "web_bug_squasher_flex_direction",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Buttons on one line instead of stacked",
+      "difficulty": "beginner",
+      "order": 97,
+      "rev": "81a669818f11",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flex_direction.json"
+    },
+    {
+      "id": "web_code_refactor_flex_direction",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Flex column instead of block with margins",
+      "difficulty": "beginner",
+      "order": 98,
+      "rev": "7ac24e218e8e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_flex_direction.json"
+    },
+    {
+      "id": "web_guided_practice_semantic_layout",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Semantic Page Layout",
+      "difficulty": "beginner",
+      "order": 99,
+      "rev": "3d2e5fd1559b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_semantic_layout.json"
+    },
+    {
+      "id": "web_bug_squasher_semantic_layout",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Page built from divs only",
+      "difficulty": "beginner",
+      "order": 100,
+      "rev": "763aa533668a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_semantic_layout.json"
+    },
+    {
+      "id": "web_code_refactor_semantic_layout",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace generic wrappers with semantic tags",
+      "difficulty": "beginner",
+      "order": 101,
+      "rev": "fa5cc7ab8c88",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_semantic_layout.json"
+    },
+    {
+      "id": "web_guided_practice_css_transition",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Smooth Colour Change With transition",
+      "difficulty": "beginner",
+      "order": 102,
+      "rev": "885dc046d4b6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_transition.json"
+    },
+    {
+      "id": "web_bug_squasher_css_transition",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Colour jumps instead of fading",
+      "difficulty": "beginner",
+      "order": 103,
+      "rev": "6c1342456c06",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_transition.json"
+    },
+    {
+      "id": "web_code_refactor_css_transition",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One transition shorthand",
+      "difficulty": "beginner",
+      "order": 104,
+      "rev": "587696f0cb97",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_transition.json"
+    },
+    {
+      "id": "web_guided_practice_flex_space_between",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Spread Items With space-between",
+      "difficulty": "beginner",
+      "order": 105,
+      "rev": "7f9da016e3e7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flex_space_between.json"
+    },
+    {
+      "id": "web_bug_squasher_flex_space_between",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Link stuck next to the logo",
+      "difficulty": "beginner",
+      "order": 106,
+      "rev": "91862646ac10",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flex_space_between.json"
+    },
+    {
+      "id": "web_code_refactor_flex_space_between",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use auto margin for the last item",
+      "difficulty": "beginner",
+      "order": 107,
+      "rev": "fe759b3abefa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_flex_space_between.json"
+    },
+    {
+      "id": "web_guided_practice_css_zebra_rows",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Striped Table Rows",
+      "difficulty": "beginner",
+      "order": 108,
+      "rev": "b8c7c6b46e9b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_zebra_rows.json"
+    },
+    {
+      "id": "web_bug_squasher_css_zebra_rows",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Wrong rows are striped",
+      "difficulty": "beginner",
+      "order": 109,
+      "rev": "1b2080106945",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_zebra_rows.json"
+    },
+    {
+      "id": "web_code_refactor_css_zebra_rows",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace row classes with nth-child",
+      "difficulty": "beginner",
+      "order": 110,
+      "rev": "ed4d0bbdfa1c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_zebra_rows.json"
+    },
+    {
+      "id": "web_guided_practice_css_link_style",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Styling Links",
+      "difficulty": "beginner",
+      "order": 111,
+      "rev": "ec68ee8c9076",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_link_style.json"
+    },
+    {
+      "id": "web_bug_squasher_css_link_style",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Link text is not coloured",
+      "difficulty": "beginner",
+      "order": 112,
+      "rev": "dc041127d198",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_link_style.json"
+    },
+    {
+      "id": "web_code_refactor_css_link_style",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Combine the link states",
+      "difficulty": "beginner",
+      "order": 113,
+      "rev": "78542043b9f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_link_style.json"
+    },
+    {
+      "id": "web_guided_practice_css_list_style",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Styling Lists",
+      "difficulty": "beginner",
+      "order": 114,
+      "rev": "f118ac92b78b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_list_style.json"
+    },
+    {
+      "id": "web_bug_squasher_css_list_style",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Bullets are still there",
+      "difficulty": "beginner",
+      "order": 115,
+      "rev": "2ee391dcd5f1",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_list_style.json"
+    },
+    {
+      "id": "web_code_refactor_css_list_style",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace br tags with list styling",
+      "difficulty": "beginner",
+      "order": 116,
+      "rev": "0cedc6b2cb88",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_list_style.json"
+    },
+    {
+      "id": "web_guided_practice_css_text_style",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Styling Text",
+      "difficulty": "beginner",
+      "order": 117,
+      "rev": "6e9997b83777",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_text_style.json"
+    },
+    {
+      "id": "web_bug_squasher_css_text_style",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Heading is not centred",
+      "difficulty": "beginner",
+      "order": 118,
+      "rev": "abd0e628720b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_text_style.json"
+    },
+    {
+      "id": "web_code_refactor_css_text_style",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Move repeated text styles to one rule",
+      "difficulty": "beginner",
+      "order": 119,
+      "rev": "87ceb8f978e9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_text_style.json"
+    },
+    {
+      "id": "web_guided_practice_table_structure",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Table With Head and Body",
+      "difficulty": "beginner",
+      "order": 120,
+      "rev": "6ded4cd64820",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_table_structure.json"
+    },
+    {
+      "id": "web_bug_squasher_table_structure",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Headings written as data cells",
+      "difficulty": "beginner",
+      "order": 121,
+      "rev": "9ce20e4c2846",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_table_structure.json"
+    },
+    {
+      "id": "web_code_refactor_table_structure",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Move a table caption into caption",
+      "difficulty": "beginner",
+      "order": 122,
+      "rev": "402982dd2284",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_table_structure.json"
+    },
+    {
+      "id": "web_guided_practice_app_temperature",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Temperature Converter",
+      "difficulty": "beginner",
+      "order": 123,
+      "rev": "2ae23b2695bf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_temperature.json"
+    },
+    {
+      "id": "web_bug_squasher_app_temperature",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Wrong answer for every temperature",
+      "difficulty": "beginner",
+      "order": 124,
+      "rev": "0649e7f4ec79",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_temperature.json"
+    },
+    {
+      "id": "web_code_refactor_app_temperature",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Two-way converter with one function",
+      "difficulty": "beginner",
+      "order": 125,
+      "rev": "0009eb6fcbaf",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_temperature.json"
+    },
+    {
+      "id": "web_guided_practice_grid_columns",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Three Columns With Grid",
+      "difficulty": "beginner",
+      "order": 126,
+      "rev": "4ece9f4f23c8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_grid_columns.json"
+    },
+    {
+      "id": "web_bug_squasher_grid_columns",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Gallery shows one picture per row",
+      "difficulty": "beginner",
+      "order": 127,
+      "rev": "fdf84f857f7a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_grid_columns.json"
+    },
+    {
+      "id": "web_code_refactor_grid_columns",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use repeat()",
+      "difficulty": "beginner",
+      "order": 128,
+      "rev": "2afcb12bcea6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_grid_columns.json"
+    },
+    {
+      "id": "web_guided_practice_app_tip_calculator",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Tip Calculator",
+      "difficulty": "beginner",
+      "order": 129,
+      "rev": "785c9a4fbf43",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_tip_calculator.json"
+    },
+    {
+      "id": "web_bug_squasher_app_tip_calculator",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Total is the bill and tip joined",
+      "difficulty": "beginner",
+      "order": 130,
+      "rev": "f206a6933250",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_tip_calculator.json"
+    },
+    {
+      "id": "web_code_refactor_app_tip_calculator",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Move the calculation into a function",
+      "difficulty": "beginner",
+      "order": 131,
+      "rev": "2d9c7aecf833",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_tip_calculator.json"
+    },
+    {
+      "id": "web_guided_practice_dom_class_toggle",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Toggle a Class",
+      "difficulty": "beginner",
+      "order": 132,
+      "rev": "7812c7bc4f3c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_class_toggle.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_class_toggle",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Highlight can be turned on but not off",
+      "difficulty": "beginner",
+      "order": 133,
+      "rev": "0489dcdbb152",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_class_toggle.json"
+    },
+    {
+      "id": "web_code_refactor_dom_class_toggle",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Toggle instead of if and else",
+      "difficulty": "beginner",
+      "order": 134,
+      "rev": "25c268c35a5c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_class_toggle.json"
+    },
+    {
       "id": "web_guided_practice_accordion",
       "type": "guided",
       "language": "web",
       "title": "Web: Accordion",
       "difficulty": "beginner",
-      "order": 0,
+      "order": 135,
       "rev": "6def53342fb9",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_accordion.json"
     },
@@ -17,7 +1367,7 @@
       "language": "web",
       "title": "Bug Squasher: Accordion",
       "difficulty": "beginner",
-      "order": 1,
+      "order": 136,
       "rev": "f20745343be4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_accordion.json"
     },
@@ -27,7 +1377,7 @@
       "language": "web",
       "title": "Web: Button Animations",
       "difficulty": "beginner",
-      "order": 2,
+      "order": 137,
       "rev": "83e9c29de8a1",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_button_animations.json"
     },
@@ -37,7 +1387,7 @@
       "language": "web",
       "title": "Bug Squasher: Button Animations",
       "difficulty": "beginner",
-      "order": 3,
+      "order": 138,
       "rev": "df9adb034e32",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_button_animations.json"
     },
@@ -47,7 +1397,7 @@
       "language": "web",
       "title": "Web: Calculator",
       "difficulty": "beginner",
-      "order": 4,
+      "order": 139,
       "rev": "149955e1b659",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_calculator.json"
     },
@@ -57,7 +1407,7 @@
       "language": "web",
       "title": "Bug Squasher: Calculator",
       "difficulty": "beginner",
-      "order": 5,
+      "order": 140,
       "rev": "6b0a7402a3c3",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_calculator.json"
     },
@@ -67,7 +1417,7 @@
       "language": "web",
       "title": "Web: Dark Mode Toggle",
       "difficulty": "beginner",
-      "order": 6,
+      "order": 141,
       "rev": "46cf08d57609",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dark_mode_toggle.json"
     },
@@ -77,7 +1427,7 @@
       "language": "web",
       "title": "Bug Squasher: Dark Mode Toggle",
       "difficulty": "beginner",
-      "order": 7,
+      "order": 142,
       "rev": "45941e6b2c41",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dark_mode_toggle.json"
     },
@@ -87,7 +1437,7 @@
       "language": "web",
       "title": "Web: Digital Clock",
       "difficulty": "beginner",
-      "order": 8,
+      "order": 143,
       "rev": "d3c3d9167be7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_digital_clock.json"
     },
@@ -97,7 +1447,7 @@
       "language": "web",
       "title": "Bug Squasher: Digital Clock",
       "difficulty": "beginner",
-      "order": 9,
+      "order": 144,
       "rev": "0c4c1a35febf",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_digital_clock.json"
     },
@@ -107,7 +1457,7 @@
       "language": "web",
       "title": "Web: Dynamic List",
       "difficulty": "beginner",
-      "order": 10,
+      "order": 145,
       "rev": "1a41501b6573",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dynamic_list.json"
     },
@@ -117,7 +1467,7 @@
       "language": "web",
       "title": "Bug Squasher: Dynamic List",
       "difficulty": "beginner",
-      "order": 11,
+      "order": 146,
       "rev": "e96d64b2f3ac",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dynamic_list.json"
     },
@@ -127,7 +1477,7 @@
       "language": "web",
       "title": "Web: Flexbox Layout",
       "difficulty": "beginner",
-      "order": 12,
+      "order": 147,
       "rev": "7f4e5ac19cd8",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flexbox_layout.json"
     },
@@ -137,7 +1487,7 @@
       "language": "web",
       "title": "Bug Squasher: Flexbox Layout",
       "difficulty": "beginner",
-      "order": 13,
+      "order": 148,
       "rev": "42e0d4d51480",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flexbox_layout.json"
     },
@@ -147,7 +1497,7 @@
       "language": "web",
       "title": "Web: Form Validation",
       "difficulty": "beginner",
-      "order": 14,
+      "order": 149,
       "rev": "b56a1ffcfb55",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_form_validation.json"
     },
@@ -157,7 +1507,7 @@
       "language": "web",
       "title": "Bug Squasher: Form Validation",
       "difficulty": "beginner",
-      "order": 15,
+      "order": 150,
       "rev": "e8aaaef6167b",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_form_validation.json"
     },
@@ -167,7 +1517,7 @@
       "language": "web",
       "title": "Web: Grid Layout",
       "difficulty": "beginner",
-      "order": 16,
+      "order": 151,
       "rev": "dd7fffd75db1",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_grid_layout.json"
     },
@@ -177,7 +1527,7 @@
       "language": "web",
       "title": "Bug Squasher: Grid Layout",
       "difficulty": "beginner",
-      "order": 17,
+      "order": 152,
       "rev": "6adbae551a1e",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_grid_layout.json"
     },
@@ -187,7 +1537,7 @@
       "language": "web",
       "title": "Web: Image Slider",
       "difficulty": "beginner",
-      "order": 18,
+      "order": 153,
       "rev": "af0c06f8b248",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_image_slider.json"
     },
@@ -197,7 +1547,7 @@
       "language": "web",
       "title": "Bug Squasher: Image Slider",
       "difficulty": "beginner",
-      "order": 19,
+      "order": 154,
       "rev": "556f1408a623",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_image_slider.json"
     },
@@ -207,7 +1557,7 @@
       "language": "web",
       "title": "Web: Modal Window",
       "difficulty": "beginner",
-      "order": 20,
+      "order": 155,
       "rev": "c4bd4a56e859",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_modal_window.json"
     },
@@ -217,7 +1567,7 @@
       "language": "web",
       "title": "Bug Squasher: Modal Window",
       "difficulty": "beginner",
-      "order": 21,
+      "order": 156,
       "rev": "f9d5d4168b39",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_modal_window.json"
     },
@@ -227,7 +1577,7 @@
       "language": "web",
       "title": "Web: Profile Card",
       "difficulty": "beginner",
-      "order": 22,
+      "order": 157,
       "rev": "534d86390249",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_profile_card.json"
     },
@@ -237,7 +1587,7 @@
       "language": "web",
       "title": "Bug Squasher: Profile Card",
       "difficulty": "beginner",
-      "order": 23,
+      "order": 158,
       "rev": "45c51011144d",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_profile_card.json"
     },
@@ -247,7 +1597,7 @@
       "language": "web",
       "title": "Web: Progress Bar",
       "difficulty": "beginner",
-      "order": 24,
+      "order": 159,
       "rev": "d2719cff3cbb",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_progress_bar.json"
     },
@@ -257,7 +1607,7 @@
       "language": "web",
       "title": "Bug Squasher: Progress Bar",
       "difficulty": "beginner",
-      "order": 25,
+      "order": 160,
       "rev": "de8cb1a1c4f7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_progress_bar.json"
     },
@@ -267,7 +1617,7 @@
       "language": "web",
       "title": "Web: Responsive Navbar",
       "difficulty": "beginner",
-      "order": 26,
+      "order": 161,
       "rev": "a31b2600c089",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_responsive_navbar.json"
     },
@@ -277,7 +1627,7 @@
       "language": "web",
       "title": "Bug Squasher: Responsive Navbar",
       "difficulty": "beginner",
-      "order": 27,
+      "order": 162,
       "rev": "ba02b6ff4752",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_responsive_navbar.json"
     },
@@ -287,7 +1637,7 @@
       "language": "web",
       "title": "Web: Scroll To Top",
       "difficulty": "beginner",
-      "order": 28,
+      "order": 163,
       "rev": "bef6e083f636",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_scroll_to_top.json"
     },
@@ -297,7 +1647,7 @@
       "language": "web",
       "title": "Bug Squasher: Scroll To Top",
       "difficulty": "beginner",
-      "order": 29,
+      "order": 164,
       "rev": "82749f1abb51",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_scroll_to_top.json"
     },
@@ -307,7 +1657,7 @@
       "language": "web",
       "title": "Web: Search Filter",
       "difficulty": "beginner",
-      "order": 30,
+      "order": 165,
       "rev": "1ad9185c3897",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_search_filter.json"
     },
@@ -317,7 +1667,7 @@
       "language": "web",
       "title": "Bug Squasher: Search Filter",
       "difficulty": "beginner",
-      "order": 31,
+      "order": 166,
       "rev": "d3f56e89f039",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_search_filter.json"
     },
@@ -327,7 +1677,7 @@
       "language": "web",
       "title": "Web: Tabs",
       "difficulty": "beginner",
-      "order": 32,
+      "order": 167,
       "rev": "b1d471555a44",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_tabs.json"
     },
@@ -337,7 +1687,7 @@
       "language": "web",
       "title": "Bug Squasher: Tabs",
       "difficulty": "beginner",
-      "order": 33,
+      "order": 168,
       "rev": "e8c89c79df4b",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_tabs.json"
     },
@@ -347,7 +1697,7 @@
       "language": "web",
       "title": "Web: Todo List",
       "difficulty": "beginner",
-      "order": 34,
+      "order": 169,
       "rev": "31cdabf7b336",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_todo_list.json"
     },
@@ -357,7 +1707,7 @@
       "language": "web",
       "title": "Bug Squasher: Todo List",
       "difficulty": "beginner",
-      "order": 35,
+      "order": 170,
       "rev": "c846baf26561",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_todo_list.json"
     },
@@ -367,7 +1717,7 @@
       "language": "web",
       "title": "Web: Tooltip",
       "difficulty": "beginner",
-      "order": 36,
+      "order": 171,
       "rev": "ade911929fc2",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_tooltip.json"
     },
@@ -377,7 +1727,7 @@
       "language": "web",
       "title": "Bug Squasher: Tooltip",
       "difficulty": "beginner",
-      "order": 37,
+      "order": 172,
       "rev": "9b4ce4cfd5fe",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_tooltip.json"
     },
@@ -387,7 +1737,7 @@
       "language": "web",
       "title": "Web: Weather Widget",
       "difficulty": "beginner",
-      "order": 38,
+      "order": 173,
       "rev": "b9d8112cdc52",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_weather_widget.json"
     },
@@ -397,9 +1747,1089 @@
       "language": "web",
       "title": "Bug Squasher: Weather Widget",
       "difficulty": "beginner",
-      "order": 39,
+      "order": 174,
       "rev": "f64d80c03427",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_weather_widget.json"
+    },
+    {
+      "id": "web_guided_practice_css_keyframes",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: A Spinner With Keyframes",
+      "difficulty": "medium",
+      "order": 175,
+      "rev": "93f347d9e060",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_keyframes.json"
+    },
+    {
+      "id": "web_bug_squasher_css_keyframes",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Animation does not start",
+      "difficulty": "medium",
+      "order": 176,
+      "rev": "5ebe34fd352c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_keyframes.json"
+    },
+    {
+      "id": "web_code_refactor_css_keyframes",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Animation shorthand",
+      "difficulty": "medium",
+      "order": 177,
+      "rev": "bd36771dfa3c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_keyframes.json"
+    },
+    {
+      "id": "web_guided_practice_dom_enter_key",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Add an Item With the Enter Key",
+      "difficulty": "medium",
+      "order": 178,
+      "rev": "4f81d69df291",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_enter_key.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_enter_key",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Any key adds an item",
+      "difficulty": "medium",
+      "order": 179,
+      "rev": "3941c9ed9254",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_enter_key.json"
+    },
+    {
+      "id": "web_code_refactor_dom_enter_key",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use a form instead of a key listener",
+      "difficulty": "medium",
+      "order": 180,
+      "rev": "fee28449c9b0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_enter_key.json"
+    },
+    {
+      "id": "web_guided_practice_css_pseudo_content",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Add Text With ::before",
+      "difficulty": "medium",
+      "order": 181,
+      "rev": "d795727abe8c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_pseudo_content.json"
+    },
+    {
+      "id": "web_bug_squasher_css_pseudo_content",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Marker never appears",
+      "difficulty": "medium",
+      "order": 182,
+      "rev": "b061e83ea32a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_pseudo_content.json"
+    },
+    {
+      "id": "web_code_refactor_css_pseudo_content",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Move decoration from HTML to CSS",
+      "difficulty": "medium",
+      "order": 183,
+      "rev": "4b24f893c2e2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_pseudo_content.json"
+    },
+    {
+      "id": "web_guided_practice_position_badge",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Badge in the Corner",
+      "difficulty": "medium",
+      "order": 184,
+      "rev": "70f3ad6271c5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_position_badge.json"
+    },
+    {
+      "id": "web_bug_squasher_position_badge",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Badge jumps out of the card",
+      "difficulty": "medium",
+      "order": 185,
+      "rev": "c465c4cb3a17",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_position_badge.json"
+    },
+    {
+      "id": "web_code_refactor_position_badge",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Position instead of margin guesses",
+      "difficulty": "medium",
+      "order": 186,
+      "rev": "b0869d360e25",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_position_badge.json"
+    },
+    {
+      "id": "web_guided_practice_app_bmi",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: BMI Calculator",
+      "difficulty": "medium",
+      "order": 187,
+      "rev": "f05b44326db9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_bmi.json"
+    },
+    {
+      "id": "web_bug_squasher_app_bmi",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Height is not squared",
+      "difficulty": "medium",
+      "order": 188,
+      "rev": "bd070745eec7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_bmi.json"
+    },
+    {
+      "id": "web_code_refactor_app_bmi",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace nested conditions with a lookup list",
+      "difficulty": "medium",
+      "order": 189,
+      "rev": "9126454091f5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_bmi.json"
+    },
+    {
+      "id": "web_guided_practice_required_pattern",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Built-in Form Validation",
+      "difficulty": "medium",
+      "order": 190,
+      "rev": "11ead191fcf5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_required_pattern.json"
+    },
+    {
+      "id": "web_bug_squasher_required_pattern",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Pattern that accepts everything",
+      "difficulty": "medium",
+      "order": 191,
+      "rev": "455febc3d12f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_required_pattern.json"
+    },
+    {
+      "id": "web_code_refactor_required_pattern",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace a script with attributes",
+      "difficulty": "medium",
+      "order": 192,
+      "rev": "effdbd0bb3d7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_required_pattern.json"
+    },
+    {
+      "id": "web_guided_practice_js_closure_counter",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Closure Counter",
+      "difficulty": "medium",
+      "order": 193,
+      "rev": "3dbc61749c00",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_closure_counter.json"
+    },
+    {
+      "id": "web_bug_squasher_js_closure_counter",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Both counters share one number",
+      "difficulty": "medium",
+      "order": 194,
+      "rev": "0e942c6205b5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_closure_counter.json"
+    },
+    {
+      "id": "web_code_refactor_js_closure_counter",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Closure instead of a global",
+      "difficulty": "medium",
+      "order": 195,
+      "rev": "d22525007b0e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_closure_counter.json"
+    },
+    {
+      "id": "web_guided_practice_css_variables",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Colours in CSS Variables",
+      "difficulty": "medium",
+      "order": 196,
+      "rev": "aa6aeddf1403",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_variables.json"
+    },
+    {
+      "id": "web_bug_squasher_css_variables",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Variable name does not match",
+      "difficulty": "medium",
+      "order": 197,
+      "rev": "a07cf9843aaa",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_variables.json"
+    },
+    {
+      "id": "web_code_refactor_css_variables",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace repeated colours with a variable",
+      "difficulty": "medium",
+      "order": 198,
+      "rev": "6e8b1b04dcfe",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_variables.json"
+    },
+    {
+      "id": "web_guided_practice_text_ellipsis",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Cut Long Text With an Ellipsis",
+      "difficulty": "medium",
+      "order": 199,
+      "rev": "45b876a4edac",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_text_ellipsis.json"
+    },
+    {
+      "id": "web_bug_squasher_text_ellipsis",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: No dots at the end of the title",
+      "difficulty": "medium",
+      "order": 200,
+      "rev": "859da77b9b20",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_text_ellipsis.json"
+    },
+    {
+      "id": "web_code_refactor_text_ellipsis",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Group the three rules in a class",
+      "difficulty": "medium",
+      "order": 201,
+      "rev": "bb2646c15252",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_text_ellipsis.json"
+    },
+    {
+      "id": "web_guided_practice_dom_dataset",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Data Attributes",
+      "difficulty": "medium",
+      "order": 202,
+      "rev": "2e41e9c20c79",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_dataset.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_dataset",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Total joins the prices as text",
+      "difficulty": "medium",
+      "order": 203,
+      "rev": "b27e2435aebb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_dataset.json"
+    },
+    {
+      "id": "web_code_refactor_dom_dataset",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace if chains with data attributes",
+      "difficulty": "medium",
+      "order": 204,
+      "rev": "601bbee13a4c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_dataset.json"
+    },
+    {
+      "id": "web_guided_practice_dom_remove_item",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Delete a List Item",
+      "difficulty": "medium",
+      "order": 205,
+      "rev": "a7d9c6b04d4b",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_remove_item.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_remove_item",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Delete removes the wrong item",
+      "difficulty": "medium",
+      "order": 206,
+      "rev": "8040765c0667",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_remove_item.json"
+    },
+    {
+      "id": "web_code_refactor_dom_remove_item",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One listener on the list",
+      "difficulty": "medium",
+      "order": 207,
+      "rev": "d6344975bd2d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_remove_item.json"
+    },
+    {
+      "id": "web_guided_practice_ui_dropdown_menu",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Dropdown That Closes on Outside Click",
+      "difficulty": "medium",
+      "order": 208,
+      "rev": "5b44039d99e5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_dropdown_menu.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_dropdown_menu",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Menu opens and closes at once",
+      "difficulty": "medium",
+      "order": 209,
+      "rev": "a99b67603133",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_dropdown_menu.json"
+    },
+    {
+      "id": "web_code_refactor_ui_dropdown_menu",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Check where the click happened",
+      "difficulty": "medium",
+      "order": 210,
+      "rev": "c9f94c02908d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_dropdown_menu.json"
+    },
+    {
+      "id": "web_guided_practice_js_event_bubbling",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Event Bubbling Order",
+      "difficulty": "medium",
+      "order": 211,
+      "rev": "1353156156f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_event_bubbling.json"
+    },
+    {
+      "id": "web_bug_squasher_js_event_bubbling",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Outer handler runs first",
+      "difficulty": "medium",
+      "order": 212,
+      "rev": "6dff45372d8a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_event_bubbling.json"
+    },
+    {
+      "id": "web_code_refactor_js_event_bubbling",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One handler with currentTarget",
+      "difficulty": "medium",
+      "order": 213,
+      "rev": "4cb23bfbddc5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_event_bubbling.json"
+    },
+    {
+      "id": "web_guided_practice_dom_event_delegation",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Event Delegation",
+      "difficulty": "medium",
+      "order": 214,
+      "rev": "ff76e96ae879",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_event_delegation.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_event_delegation",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Tasks added later do not respond",
+      "difficulty": "medium",
+      "order": 215,
+      "rev": "db5eb00f20bd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_event_delegation.json"
+    },
+    {
+      "id": "web_code_refactor_dom_event_delegation",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Match with a selector",
+      "difficulty": "medium",
+      "order": 216,
+      "rev": "3184d30139a3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_event_delegation.json"
+    },
+    {
+      "id": "web_guided_practice_ui_filter_buttons",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Filter a List With Buttons",
+      "difficulty": "medium",
+      "order": 217,
+      "rev": "86763d93f122",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_filter_buttons.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_filter_buttons",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Filter hides the wrong items",
+      "difficulty": "medium",
+      "order": 218,
+      "rev": "69ae680d14ae",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_filter_buttons.json"
+    },
+    {
+      "id": "web_code_refactor_ui_filter_buttons",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Toggle hidden with a boolean",
+      "difficulty": "medium",
+      "order": 219,
+      "rev": "ccc8f3212fb4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_filter_buttons.json"
+    },
+    {
+      "id": "web_guided_practice_js_loop_closures",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Functions Made in a Loop",
+      "difficulty": "medium",
+      "order": 220,
+      "rev": "8b7e8d94e196",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_loop_closures.json"
+    },
+    {
+      "id": "web_bug_squasher_js_loop_closures",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Every function returns 3",
+      "difficulty": "medium",
+      "order": 221,
+      "rev": "adef629656a4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_loop_closures.json"
+    },
+    {
+      "id": "web_code_refactor_js_loop_closures",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: let instead of a wrapper function",
+      "difficulty": "medium",
+      "order": 222,
+      "rev": "9c6f27e598b4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_loop_closures.json"
+    },
+    {
+      "id": "web_guided_practice_css_gradient",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Gradient Backgrounds",
+      "difficulty": "medium",
+      "order": 223,
+      "rev": "a2bc4d09852f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_gradient.json"
+    },
+    {
+      "id": "web_bug_squasher_css_gradient",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Gradient does not show",
+      "difficulty": "medium",
+      "order": 224,
+      "rev": "3d72dce5859c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_gradient.json"
+    },
+    {
+      "id": "web_code_refactor_css_gradient",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Shorthand for the background",
+      "difficulty": "medium",
+      "order": 225,
+      "rev": "20b336423d36",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_gradient.json"
+    },
+    {
+      "id": "web_guided_practice_form_submit_message",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Handle a Form Submit",
+      "difficulty": "medium",
+      "order": 226,
+      "rev": "c7bb9c29dc70",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_form_submit_message.json"
+    },
+    {
+      "id": "web_bug_squasher_form_submit_message",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Form reloads the page",
+      "difficulty": "medium",
+      "order": 227,
+      "rev": "a468a5823151",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_form_submit_message.json"
+    },
+    {
+      "id": "web_code_refactor_form_submit_message",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Read the form with FormData",
+      "difficulty": "medium",
+      "order": 228,
+      "rev": "8b4ad5ec6083",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_form_submit_message.json"
+    },
+    {
+      "id": "web_guided_practice_css_hide_methods",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Hide Without Losing the Space",
+      "difficulty": "medium",
+      "order": 229,
+      "rev": "0d3a021967b0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_hide_methods.json"
+    },
+    {
+      "id": "web_bug_squasher_css_hide_methods",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Hidden box still leaves a gap",
+      "difficulty": "medium",
+      "order": 230,
+      "rev": "7c1484639113",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_hide_methods.json"
+    },
+    {
+      "id": "web_code_refactor_css_hide_methods",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Hide with a class and a script",
+      "difficulty": "medium",
+      "order": 231,
+      "rev": "060b32391ea4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_hide_methods.json"
+    },
+    {
+      "id": "web_guided_practice_ui_pagination",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Page Buttons With Limits",
+      "difficulty": "medium",
+      "order": 232,
+      "rev": "1b65ae0c6b40",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_pagination.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_pagination",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Page number goes past the last page",
+      "difficulty": "medium",
+      "order": 233,
+      "rev": "59a04ca9c57c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_pagination.json"
+    },
+    {
+      "id": "web_code_refactor_ui_pagination",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: One function that clamps the page",
+      "difficulty": "medium",
+      "order": 234,
+      "rev": "b97306df98cb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_pagination.json"
+    },
+    {
+      "id": "web_guided_practice_grid_areas",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Page Layout With Grid Areas",
+      "difficulty": "medium",
+      "order": 235,
+      "rev": "f3b76f466158",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_grid_areas.json"
+    },
+    {
+      "id": "web_bug_squasher_grid_areas",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Footer sits beside the content",
+      "difficulty": "medium",
+      "order": 236,
+      "rev": "c7cee8b7f6e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_grid_areas.json"
+    },
+    {
+      "id": "web_code_refactor_grid_areas",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Replace a table layout with grid",
+      "difficulty": "medium",
+      "order": 237,
+      "rev": "23801fc44ccd",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_grid_areas.json"
+    },
+    {
+      "id": "web_guided_practice_ui_password_strength",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Password Strength Meter",
+      "difficulty": "medium",
+      "order": 238,
+      "rev": "e7b94ae9c4f9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_password_strength.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_password_strength",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Six letters count as Weak",
+      "difficulty": "medium",
+      "order": 239,
+      "rev": "6b70ed2ee5e7",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_password_strength.json"
+    },
+    {
+      "id": "web_code_refactor_ui_password_strength",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Name the rules",
+      "difficulty": "medium",
+      "order": 240,
+      "rev": "fff6e706ad4a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_password_strength.json"
+    },
+    {
+      "id": "web_guided_practice_css_transform",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Scale and Rotate With transform",
+      "difficulty": "medium",
+      "order": 241,
+      "rev": "044f27987e4c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_transform.json"
+    },
+    {
+      "id": "web_bug_squasher_css_transform",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Transform written with the wrong function",
+      "difficulty": "medium",
+      "order": 242,
+      "rev": "4bc8bc3fa782",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_transform.json"
+    },
+    {
+      "id": "web_code_refactor_css_transform",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Centre with translate",
+      "difficulty": "medium",
+      "order": 243,
+      "rev": "4bd682f51bd6",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_transform.json"
+    },
+    {
+      "id": "web_guided_practice_app_cart_total",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Shopping Cart Total",
+      "difficulty": "medium",
+      "order": 244,
+      "rev": "c5209d909f1d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_cart_total.json"
+    },
+    {
+      "id": "web_bug_squasher_app_cart_total",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Total only counts the last row",
+      "difficulty": "medium",
+      "order": 245,
+      "rev": "895c5e643a43",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_cart_total.json"
+    },
+    {
+      "id": "web_code_refactor_app_cart_total",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use reduce for the total",
+      "difficulty": "medium",
+      "order": 246,
+      "rev": "8af9f239fb49",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_cart_total.json"
+    },
+    {
+      "id": "web_guided_practice_password_toggle",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Show and Hide a Password",
+      "difficulty": "medium",
+      "order": 247,
+      "rev": "7fcb5036d128",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_password_toggle.json"
+    },
+    {
+      "id": "web_bug_squasher_password_toggle",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Password stays visible",
+      "difficulty": "medium",
+      "order": 248,
+      "rev": "acb7cb4db1e3",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_password_toggle.json"
+    },
+    {
+      "id": "web_code_refactor_password_toggle",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Toggle with a boolean",
+      "difficulty": "medium",
+      "order": 249,
+      "rev": "d05189ae1d5e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_password_toggle.json"
+    },
+    {
+      "id": "web_guided_practice_js_sort_numbers",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Sorting Numbers",
+      "difficulty": "medium",
+      "order": 250,
+      "rev": "bb8d1265312d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_sort_numbers.json"
+    },
+    {
+      "id": "web_bug_squasher_js_sort_numbers",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Ten comes before nine",
+      "difficulty": "medium",
+      "order": 251,
+      "rev": "d6b9a3a0fcbc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_sort_numbers.json"
+    },
+    {
+      "id": "web_code_refactor_js_sort_numbers",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Sort from high to low with a compare function",
+      "difficulty": "medium",
+      "order": 252,
+      "rev": "74cf834466ae",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_sort_numbers.json"
+    },
+    {
+      "id": "web_guided_practice_media_columns",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Stack on Phones, Columns on Wide Screens",
+      "difficulty": "medium",
+      "order": 253,
+      "rev": "faafed70ad9d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_media_columns.json"
+    },
+    {
+      "id": "web_bug_squasher_media_columns",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Layout never changes on a wide screen",
+      "difficulty": "medium",
+      "order": 254,
+      "rev": "83eb472daffb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_media_columns.json"
+    },
+    {
+      "id": "web_code_refactor_media_columns",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Mobile first",
+      "difficulty": "medium",
+      "order": 255,
+      "rev": "625de859474e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_media_columns.json"
+    },
+    {
+      "id": "web_guided_practice_z_index_stack",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Stacking With z-index",
+      "difficulty": "medium",
+      "order": 256,
+      "rev": "fff57b5f083f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_z_index_stack.json"
+    },
+    {
+      "id": "web_bug_squasher_z_index_stack",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Dropdown hidden behind the content",
+      "difficulty": "medium",
+      "order": 257,
+      "rev": "c697112a60eb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_z_index_stack.json"
+    },
+    {
+      "id": "web_code_refactor_z_index_stack",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Explicit stacking instead of source order",
+      "difficulty": "medium",
+      "order": 258,
+      "rev": "ddd069f20f5e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_z_index_stack.json"
+    },
+    {
+      "id": "web_guided_practice_ui_star_rating",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Star Rating",
+      "difficulty": "medium",
+      "order": 259,
+      "rev": "59cd6222de7e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_ui_star_rating.json"
+    },
+    {
+      "id": "web_bug_squasher_ui_star_rating",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: One star too few",
+      "difficulty": "medium",
+      "order": 260,
+      "rev": "40607d36600d",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_ui_star_rating.json"
+    },
+    {
+      "id": "web_code_refactor_ui_star_rating",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Fill the stars with a ternary and a join",
+      "difficulty": "medium",
+      "order": 261,
+      "rev": "497dfa62fada",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_ui_star_rating.json"
+    },
+    {
+      "id": "web_guided_practice_sticky_header",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Sticky Header",
+      "difficulty": "medium",
+      "order": 262,
+      "rev": "691a9903cd5c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_sticky_header.json"
+    },
+    {
+      "id": "web_bug_squasher_sticky_header",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Header scrolls away",
+      "difficulty": "medium",
+      "order": 263,
+      "rev": "25cc1df39116",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_sticky_header.json"
+    },
+    {
+      "id": "web_code_refactor_sticky_header",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Sticky instead of fixed",
+      "difficulty": "medium",
+      "order": 264,
+      "rev": "e3eb4ce042cc",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_sticky_header.json"
+    },
+    {
+      "id": "web_guided_practice_js_equality_trap",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Strict Equality and Typed Text",
+      "difficulty": "medium",
+      "order": 265,
+      "rev": "50fcd90131eb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_equality_trap.json"
+    },
+    {
+      "id": "web_bug_squasher_js_equality_trap",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: The right answer is marked wrong",
+      "difficulty": "medium",
+      "order": 266,
+      "rev": "03b8c1978c37",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_equality_trap.json"
+    },
+    {
+      "id": "web_code_refactor_js_equality_trap",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Strict equality instead of loose",
+      "difficulty": "medium",
+      "order": 267,
+      "rev": "d6eacf1ead40",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_equality_trap.json"
+    },
+    {
+      "id": "web_guided_practice_dom_text_vs_html",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: textContent or innerHTML",
+      "difficulty": "medium",
+      "order": 268,
+      "rev": "180e29102f75",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_dom_text_vs_html.json"
+    },
+    {
+      "id": "web_bug_squasher_dom_text_vs_html",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Typed tags become real elements",
+      "difficulty": "medium",
+      "order": 269,
+      "rev": "d903132448cb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_dom_text_vs_html.json"
+    },
+    {
+      "id": "web_code_refactor_dom_text_vs_html",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use textContent for plain text",
+      "difficulty": "medium",
+      "order": 270,
+      "rev": "0591393705f8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_dom_text_vs_html.json"
+    },
+    {
+      "id": "web_guided_practice_css_checkbox_toggle",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Toggle With :checked",
+      "difficulty": "medium",
+      "order": 271,
+      "rev": "96ba383e8d7a",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_checkbox_toggle.json"
+    },
+    {
+      "id": "web_bug_squasher_css_checkbox_toggle",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Panel never opens",
+      "difficulty": "medium",
+      "order": 272,
+      "rev": "84cd765143b0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_checkbox_toggle.json"
+    },
+    {
+      "id": "web_code_refactor_css_checkbox_toggle",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use the sibling selector for the label",
+      "difficulty": "medium",
+      "order": 273,
+      "rev": "bc2e46b9f19c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_checkbox_toggle.json"
+    },
+    {
+      "id": "web_guided_practice_css_focus_style",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Visible Keyboard Focus",
+      "difficulty": "medium",
+      "order": 274,
+      "rev": "d224907eaec0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_focus_style.json"
+    },
+    {
+      "id": "web_bug_squasher_css_focus_style",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Focus is invisible",
+      "difficulty": "medium",
+      "order": 275,
+      "rev": "ed5bcda20304",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_focus_style.json"
+    },
+    {
+      "id": "web_code_refactor_css_focus_style",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Style the focus ring with outline",
+      "difficulty": "medium",
+      "order": 276,
+      "rev": "80074f98aef2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_focus_style.json"
+    },
+    {
+      "id": "web_guided_practice_css_specificity",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Which Rule Wins",
+      "difficulty": "medium",
+      "order": 277,
+      "rev": "f1a4eccd85ed",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_css_specificity.json"
+    },
+    {
+      "id": "web_bug_squasher_css_specificity",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Later rule does not apply",
+      "difficulty": "medium",
+      "order": 278,
+      "rev": "22d64dfe2bb0",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_css_specificity.json"
+    },
+    {
+      "id": "web_code_refactor_css_specificity",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Remove the id from the style rule",
+      "difficulty": "medium",
+      "order": 279,
+      "rev": "52041b17be54",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_css_specificity.json"
+    },
+    {
+      "id": "web_guided_practice_flex_wrap",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Wrap Flex Items",
+      "difficulty": "medium",
+      "order": 280,
+      "rev": "c4041747c633",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_flex_wrap.json"
+    },
+    {
+      "id": "web_bug_squasher_flex_wrap",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Tags run off the screen",
+      "difficulty": "medium",
+      "order": 281,
+      "rev": "b20fc931dcc9",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_flex_wrap.json"
+    },
+    {
+      "id": "web_code_refactor_flex_wrap",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Flex wrap instead of floats",
+      "difficulty": "medium",
+      "order": 282,
+      "rev": "7317550afe62",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_flex_wrap.json"
     },
     {
       "id": "web_guided_practice_blurry_loading",
@@ -407,7 +2837,7 @@
       "language": "web",
       "title": "Web: Blurry Loading",
       "difficulty": "medium",
-      "order": 40,
+      "order": 283,
       "rev": "8121d96411c0",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_blurry_loading.json"
     },
@@ -417,7 +2847,7 @@
       "language": "web",
       "title": "Bug Squasher: Blurry Loading",
       "difficulty": "medium",
-      "order": 41,
+      "order": 284,
       "rev": "68b9832e44e4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_blurry_loading.json"
     },
@@ -427,7 +2857,7 @@
       "language": "web",
       "title": "Web Refactor: Blurry Loading",
       "difficulty": "medium",
-      "order": 42,
+      "order": 285,
       "rev": "e1f7b17f0aa4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_blurry_loading.json"
     },
@@ -437,7 +2867,7 @@
       "language": "web",
       "title": "Web: Expanding Cards",
       "difficulty": "medium",
-      "order": 43,
+      "order": 286,
       "rev": "043e316b0b58",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_expanding_cards.json"
     },
@@ -447,7 +2877,7 @@
       "language": "web",
       "title": "Bug Squasher: Expanding Cards",
       "difficulty": "medium",
-      "order": 44,
+      "order": 287,
       "rev": "4ca516c5b2ef",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_expanding_cards.json"
     },
@@ -457,7 +2887,7 @@
       "language": "web",
       "title": "Web Refactor: Expanding Cards",
       "difficulty": "medium",
-      "order": 45,
+      "order": 288,
       "rev": "6a8a3d9e40e4",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_expanding_cards.json"
     },
@@ -467,7 +2897,7 @@
       "language": "web",
       "title": "Web: Progress Steps",
       "difficulty": "medium",
-      "order": 46,
+      "order": 289,
       "rev": "95fce6a68076",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_progress_steps.json"
     },
@@ -477,7 +2907,7 @@
       "language": "web",
       "title": "Bug Squasher: Progress Steps",
       "difficulty": "medium",
-      "order": 47,
+      "order": 290,
       "rev": "fca6aff5e7f7",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_progress_steps.json"
     },
@@ -487,9 +2917,159 @@
       "language": "web",
       "title": "Web Refactor: Progress Steps",
       "difficulty": "medium",
-      "order": 48,
+      "order": 291,
       "rev": "7bc2c5ad2634",
       "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_progress_steps.json"
+    },
+    {
+      "id": "web_guided_practice_js_memoize",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Cache Results With Memoization",
+      "difficulty": "advanced",
+      "order": 292,
+      "rev": "b701887690a4",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_memoize.json"
+    },
+    {
+      "id": "web_bug_squasher_js_memoize",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Zero is calculated every time",
+      "difficulty": "advanced",
+      "order": 293,
+      "rev": "3c4b55e416af",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_memoize.json"
+    },
+    {
+      "id": "web_code_refactor_js_memoize",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Make a reusable memoize function",
+      "difficulty": "advanced",
+      "order": 294,
+      "rev": "18f4e40cc56e",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_memoize.json"
+    },
+    {
+      "id": "web_guided_practice_js_this_binding",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Keeping this in a Callback",
+      "difficulty": "advanced",
+      "order": 295,
+      "rev": "babe587c7bdb",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_this_binding.json"
+    },
+    {
+      "id": "web_bug_squasher_js_this_binding",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Greeting says Hi with no name",
+      "difficulty": "advanced",
+      "order": 296,
+      "rev": "67d4b10716a2",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_this_binding.json"
+    },
+    {
+      "id": "web_code_refactor_js_this_binding",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Arrow function instead of self",
+      "difficulty": "advanced",
+      "order": 297,
+      "rev": "1f30f8a8b10c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_this_binding.json"
+    },
+    {
+      "id": "web_guided_practice_js_promise_order",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Order of Async Code",
+      "difficulty": "advanced",
+      "order": 298,
+      "rev": "4d8aa1d19bd8",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_promise_order.json"
+    },
+    {
+      "id": "web_bug_squasher_js_promise_order",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Page shows the log too early",
+      "difficulty": "advanced",
+      "order": 299,
+      "rev": "9df97eb97f1c",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_promise_order.json"
+    },
+    {
+      "id": "web_code_refactor_js_promise_order",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: async and await instead of then",
+      "difficulty": "advanced",
+      "order": 300,
+      "rev": "948ec0809e93",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_promise_order.json"
+    },
+    {
+      "id": "web_guided_practice_js_deep_copy",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Shallow and Deep Copies",
+      "difficulty": "advanced",
+      "order": 301,
+      "rev": "9bc847532217",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_js_deep_copy.json"
+    },
+    {
+      "id": "web_bug_squasher_js_deep_copy",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Changing the copy changes the original",
+      "difficulty": "advanced",
+      "order": 302,
+      "rev": "d149d803ed38",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_js_deep_copy.json"
+    },
+    {
+      "id": "web_code_refactor_js_deep_copy",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Copy with a method instead of by hand",
+      "difficulty": "advanced",
+      "order": 303,
+      "rev": "fd9b9944beac",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_js_deep_copy.json"
+    },
+    {
+      "id": "web_guided_practice_app_tic_tac_toe",
+      "type": "guided",
+      "language": "web",
+      "title": "Guided Practice: Tic-Tac-Toe Winner",
+      "difficulty": "advanced",
+      "order": 304,
+      "rev": "99642b4d4c1f",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_guided_practice_app_tic_tac_toe.json"
+    },
+    {
+      "id": "web_bug_squasher_app_tic_tac_toe",
+      "type": "bug_squasher",
+      "language": "web",
+      "title": "Bug Squasher: Empty cells count as a win",
+      "difficulty": "advanced",
+      "order": 305,
+      "rev": "4e9ed6161a93",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_bug_squasher_app_tic_tac_toe.json"
+    },
+    {
+      "id": "web_code_refactor_app_tic_tac_toe",
+      "type": "refactor",
+      "language": "web",
+      "title": "Code Refactor: Use some and every",
+      "difficulty": "advanced",
+      "order": 306,
+      "rev": "29097302e7d5",
+      "url": "https://raw.githubusercontent.com/shivam-app-developers/codevarsity-mobile-ide/practice-v3-test/codelab_docs/practice_v2/snippets/web/web_code_refactor_app_tic_tac_toe.json"
     }
   ],
   "projects": []

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Heading is not centred",
+    "language": "html",
+    "problemDescription": "The heading should sit in the middle of the page but stays on the left. The rule uses a value that does not exist, so the browser ignores it.",
+    "buggyCode": "<style>\n  h2 { text-align: middle; color: navy; }\n</style>\n<h2>Our story</h2>",
+    "solution": {
+      "code": "<style>\n  h2 { text-align: center; color: navy; }\n</style>\n<h2>Our story</h2>",
+      "explanation": "The value for horizontal alignment is center, not middle. An unknown value makes the whole declaration invalid, so the default (left) stays and no error is shown."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading is centred",
+              "expr": "style('h2', 'textAlign') === 'center'"
+            },
+            {
+              "label": "The heading is navy",
+              "expr": "style('h2', 'color') === 'rgb(0, 0, 128)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

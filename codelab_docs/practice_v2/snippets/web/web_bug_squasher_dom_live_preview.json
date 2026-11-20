@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Preview is one step behind",
+    "language": "html",
+    "problemDescription": "The preview shows the text from before the last change: after typing \"ab\" it shows \"a\". The script reads the value at the wrong moment.",
+    "buggyCode": "<input id=\"t\" placeholder=\"Type\">\n<p id=\"p\"></p>\n<script>\n  var t = document.getElementById('t');\n  var last = '';\n  t.addEventListener('input', function () {\n    document.getElementById('p').textContent = last;\n    last = t.value;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"t\" placeholder=\"Type\">\n<p id=\"p\"></p>\n<script>\n  var t = document.getElementById('t');\n  t.addEventListener('input', function () {\n    document.getElementById('p').textContent = t.value;\n  });\n</script>",
+      "explanation": "The handler shows the previous value and then stores the new one, so the page is always one input late. Read t.value in the handler and show it straight away."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Typing ab shows ab",
+              "expr": "type('#t', 'ab') && text('#p') === 'ab'"
+            },
+            {
+              "label": "Typing abc shows abc",
+              "expr": "type('#t', 'abc') && text('#p') === 'abc'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

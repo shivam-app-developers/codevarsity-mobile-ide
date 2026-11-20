@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Choosing the Right Input Type",
+    "language": "html",
+    "description": "Type three inputs with the right type: number, email and date. The type gives phones the right keyboard and lets the browser reject wrong values.",
+    "ghostCode": "<form>\n  <input id=\"age\" type=\"number\" min=\"1\" max=\"120\">\n  <input id=\"mail\" type=\"email\">\n  <input id=\"born\" type=\"date\">\n</form>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Age is a number input",
+              "expr": "attr('#age', 'type') === 'number'"
+            },
+            {
+              "label": "Email is an email input",
+              "expr": "attr('#mail', 'type') === 'email'"
+            },
+            {
+              "label": "Born is a date input",
+              "expr": "attr('#born', 'type') === 'date'"
+            },
+            {
+              "label": "Age accepts 1 to 120",
+              "expr": "attr('#age', 'min') === '1' && attr('#age', 'max') === '120'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

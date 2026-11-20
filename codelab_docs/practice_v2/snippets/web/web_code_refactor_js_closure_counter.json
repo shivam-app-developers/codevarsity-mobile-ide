@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Closure instead of a global",
+    "language": "html",
+    "problemDescription": "The counter keeps its number in a global variable that any code can change. Hide it inside a function with a closure. The result shown must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var clicks = 0;\n  function next() {\n    clicks = clicks + 1;\n    return clicks;\n  }\n  next(); next();\n  document.getElementById('out').textContent = next();\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var next = (function () {\n    var clicks = 0;\n    return function () {\n      clicks = clicks + 1;\n      return clicks;\n    };\n  })();\n  next(); next();\n  document.getElementById('out').textContent = next();\n</script>",
+      "explanation": "With a closure, the number can only be changed through the function. Nothing else on the page can reset it by accident, and the name clicks cannot clash with another script."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page shows 3",
+              "expr": "text('#out') === '3'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

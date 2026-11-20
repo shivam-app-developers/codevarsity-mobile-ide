@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Quantity Stepper",
+    "language": "html",
+    "description": "Type a quantity with plus and minus buttons that never goes below 1. The minus button must check the number before it subtracts.",
+    "ghostCode": "<button id=\"minus\">-</button>\n<span id=\"qty\">1</span>\n<button id=\"plus\">+</button>\n<script>\n  var qty = 1;\n  function show() { document.getElementById('qty').textContent = qty; }\n  document.getElementById('plus').addEventListener('click', function () {\n    qty = qty + 1;\n    show();\n  });\n  document.getElementById('minus').addEventListener('click', function () {\n    if (qty > 1) qty = qty - 1;\n    show();\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The quantity starts at 1",
+              "expr": "text('#qty') === '1'"
+            },
+            {
+              "label": "Plus twice makes 3",
+              "expr": "click('#plus') && click('#plus') && text('#qty') === '3'"
+            },
+            {
+              "label": "Minus brings it to 2",
+              "expr": "click('#minus') && text('#qty') === '2'"
+            },
+            {
+              "label": "Minus never goes below 1",
+              "expr": "click('#minus') && click('#minus') && click('#minus') && text('#qty') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

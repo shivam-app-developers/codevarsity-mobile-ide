@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Make a reusable memoize function",
+    "language": "html",
+    "problemDescription": "The function has the caching code inside it. Move it to a function named memoize that wraps any function. The count of real calls must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var cache = {};\n  var work = 0;\n  function triple(n) {\n    if (n in cache) return cache[n];\n    work = work + 1;\n    cache[n] = n * 3;\n    return cache[n];\n  }\n  triple(2); triple(2); triple(3);\n  document.getElementById('out').textContent = work;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var work = 0;\n  function memoize(fn) {\n    var cache = {};\n    return function (n) {\n      if (!(n in cache)) cache[n] = fn(n);\n      return cache[n];\n    };\n  }\n  var triple = memoize(function (n) {\n    work = work + 1;\n    return n * 3;\n  });\n  triple(2); triple(2); triple(3);\n  document.getElementById('out').textContent = work;\n</script>",
+      "explanation": "The caching has nothing to do with tripling, so it can live in one helper that works for any function. Each wrapped function gets its own private cache through a closure."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The real work ran twice",
+              "expr": "text('#out') === '2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

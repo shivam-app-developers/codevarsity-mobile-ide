@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Set instead of nested loops",
+    "language": "html",
+    "problemDescription": "Two loops check every pair of items to remove the duplicates. Use a Set. The result must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var ids = [7, 3, 7, 9, 3];\n  var result = [];\n  for (var i = 0; i < ids.length; i++) {\n    var found = false;\n    for (var j = 0; j < result.length; j++) {\n      if (result[j] === ids[i]) { found = true; }\n    }\n    if (!found) { result.push(ids[i]); }\n  }\n  document.getElementById('out').textContent = result.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var ids = [7, 3, 7, 9, 3];\n  var result = Array.from(new Set(ids));\n  document.getElementById('out').textContent = result.join(',');\n</script>",
+      "explanation": "A Set cannot hold the same value twice, so the work is done by the data structure. The loop version checks every pair, and the Set stays fast with a long list."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The unique ids are 7, 3 and 9",
+              "expr": "text('#out') === '7,3,9'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Filter, Map and Reduce",
+    "language": "html",
+    "description": "Type a chain that keeps the even numbers, doubles them and adds them up. filter keeps, map changes every item and reduce combines all of them into one value.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var nums = [1, 2, 3, 4, 5, 6];\n  var total = nums\n    .filter(function (n) { return n % 2 === 0; })\n    .map(function (n) { return n * 2; })\n    .reduce(function (sum, n) { return sum + n; }, 0);\n  document.getElementById('out').textContent = total;\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The total is 24",
+              "expr": "text('#out') === '24'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

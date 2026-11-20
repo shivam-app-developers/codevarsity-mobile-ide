@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Toggle instead of if and else",
+    "language": "html",
+    "problemDescription": "The handler checks the class by hand and then adds or removes it. Replace the if with one classList.toggle call. It must behave the same.",
+    "initialCode": "<style>\n  .dark { background: black; color: white; }\n</style>\n<button id=\"t\">Theme</button>\n<script>\n  document.getElementById('t').addEventListener('click', function () {\n    if (document.body.classList.contains('dark')) {\n      document.body.classList.remove('dark');\n    } else {\n      document.body.classList.add('dark');\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<style>\n  .dark { background: black; color: white; }\n</style>\n<button id=\"t\">Theme</button>\n<script>\n  document.getElementById('t').addEventListener('click', function () {\n    document.body.classList.toggle('dark');\n  });\n</script>",
+      "explanation": "toggle does the check and the change in one call. The four lines of if and else did the same work, with more places to make a mistake."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page starts light",
+              "expr": "!document.body.classList.contains('dark')"
+            },
+            {
+              "label": "One click makes the page dark",
+              "expr": "click('#t') && document.body.classList.contains('dark')"
+            },
+            {
+              "label": "A second click makes it light again",
+              "expr": "click('#t') && !document.body.classList.contains('dark')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Outer handler runs first",
+    "language": "html",
+    "problemDescription": "When the button is clicked, the handler of the outer box runs before the handler of the button. It should run after it, as the click bubbles up.",
+    "buggyCode": "<div id=\"box\"><button id=\"btn\">Tap</button></div>\n<p id=\"log\"></p>\n<script>\n  var log = document.getElementById('log');\n  function add(name) { log.textContent += name + ' '; }\n  document.getElementById('box').addEventListener('click', function () {\n    add('box');\n  }, true);\n  document.getElementById('btn').addEventListener('click', function () {\n    add('btn');\n  });\n</script>",
+    "solution": {
+      "code": "<div id=\"box\"><button id=\"btn\">Tap</button></div>\n<p id=\"log\"></p>\n<script>\n  var log = document.getElementById('log');\n  function add(name) { log.textContent += name + ' '; }\n  document.getElementById('box').addEventListener('click', function () {\n    add('box');\n  });\n  document.getElementById('btn').addEventListener('click', function () {\n    add('btn');\n  });\n</script>",
+      "explanation": "The third argument true makes a listener run in the capture phase, on the way down, before the target's own handler. Without it, listeners run on the way back up (bubbling), starting from the target."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button handler runs first",
+              "expr": "click('#btn') && text('#log') === 'btn box'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

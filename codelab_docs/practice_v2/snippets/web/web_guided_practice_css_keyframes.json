@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: A Spinner With Keyframes",
+    "language": "html",
+    "description": "Type a box that spins forever. @keyframes describes the animation, and the animation property starts it with a name, a duration and how often it repeats.",
+    "ghostCode": "<style>\n  @keyframes spin {\n    from { transform: rotate(0deg); }\n    to { transform: rotate(360deg); }\n  }\n  .box {\n    width: 40px;\n    height: 40px;\n    background: tomato;\n    animation: spin 1s linear infinite;\n  }\n</style>\n<div class=\"box\"></div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box uses the spin animation",
+              "expr": "style('.box', 'animationName') === 'spin'"
+            },
+            {
+              "label": "It lasts one second",
+              "expr": "style('.box', 'animationDuration') === '1s'"
+            },
+            {
+              "label": "It repeats forever",
+              "expr": "style('.box', 'animationIterationCount') === 'infinite'"
+            },
+            {
+              "label": "The keyframes rule exists",
+              "expr": "[].some.call(document.styleSheets[0].cssRules, function (r) { return r.type === 7 && r.name === 'spin'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

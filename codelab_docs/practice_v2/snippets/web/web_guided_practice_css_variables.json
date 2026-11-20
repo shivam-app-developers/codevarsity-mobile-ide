@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Colours in CSS Variables",
+    "language": "html",
+    "description": "Type a theme where the brand colour is a variable. Variables start with two dashes and are read with var(). Change the one line and every use changes.",
+    "ghostCode": "<style>\n  :root { --brand: #0a7a5a; }\n  h1 { color: var(--brand); }\n  button { background: var(--brand); color: white; }\n</style>\n<h1>Shop</h1>\n<button>Buy</button>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading uses the brand colour",
+              "expr": "style('h1', 'color') === 'rgb(10, 122, 90)'"
+            },
+            {
+              "label": "The button uses the brand colour",
+              "expr": "style('button', 'backgroundColor') === 'rgb(10, 122, 90)'"
+            },
+            {
+              "label": "The variable is defined on the root",
+              "expr": "getComputedStyle(document.documentElement).getPropertyValue('--brand').trim() === '#0a7a5a'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace if chains with data attributes",
+    "language": "html",
+    "problemDescription": "The handler decides the message with an if for each button id. Put the message in a data-msg attribute and read it. The messages must stay the same.",
+    "initialCode": "<button id=\"a\">Hi</button>\n<button id=\"b\">Bye</button>\n<p id=\"out\"></p>\n<script>\n  document.querySelectorAll('button').forEach(function (btn) {\n    btn.addEventListener('click', function () {\n      if (btn.id === 'a') {\n        document.getElementById('out').textContent = 'Hello!';\n      } else if (btn.id === 'b') {\n        document.getElementById('out').textContent = 'Goodbye!';\n      }\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"a\" data-msg=\"Hello!\">Hi</button>\n<button id=\"b\" data-msg=\"Goodbye!\">Bye</button>\n<p id=\"out\"></p>\n<script>\n  document.querySelectorAll('button').forEach(function (btn) {\n    btn.addEventListener('click', function () {\n      document.getElementById('out').textContent = btn.dataset.msg;\n    });\n  });\n</script>",
+      "explanation": "The data lives in the HTML next to the button it belongs to, and the script has one branch for all of them. A third button needs only a new line of HTML."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Hi shows Hello",
+              "expr": "click('#a') && text('#out') === 'Hello!'"
+            },
+            {
+              "label": "Bye shows Goodbye",
+              "expr": "click('#b') && text('#out') === 'Goodbye!'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

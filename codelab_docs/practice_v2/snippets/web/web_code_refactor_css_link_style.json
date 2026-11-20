@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Combine the link states",
+    "language": "html",
+    "problemDescription": "The link colour is written in two rules, one for normal links and one for visited links, with the same value. Merge them. The colour must stay.",
+    "initialCode": "<style>\n  a:link { color: indigo; }\n  a:visited { color: indigo; }\n</style>\n<a href=\"#x\">Home</a>",
+    "solution": {
+      "code": "<style>\n  a { color: indigo; }\n</style>\n<a href=\"#x\">Home</a>",
+      "explanation": "A plain a selector covers every state of a link, so two rules with the same value are not needed. Add :hover or :visited only for the states that look different."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link is indigo",
+              "expr": "style('a', 'color') === 'rgb(75, 0, 130)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Counter stuck at 1",
+    "language": "html",
+    "problemDescription": "The counter shows 1 after the first click, and then never goes higher. The count is reset to zero every time the button is clicked.",
+    "buggyCode": "<button id=\"add\">Add</button>\n<p id=\"total\">0</p>\n<script>\n  document.getElementById('add').addEventListener('click', function () {\n    var total = 0;\n    total = total + 1;\n    document.getElementById('total').textContent = total;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"add\">Add</button>\n<p id=\"total\">0</p>\n<script>\n  var total = 0;\n  document.getElementById('add').addEventListener('click', function () {\n    total = total + 1;\n    document.getElementById('total').textContent = total;\n  });\n</script>",
+      "explanation": "A variable declared inside the handler is created again on every click, so it always starts from 0. Declare the counter outside the function so it keeps its value between clicks."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The total starts at 0",
+              "expr": "text('#total') === '0'"
+            },
+            {
+              "label": "Two clicks show 2",
+              "expr": "click('#add') && click('#add') && text('#total') === '2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

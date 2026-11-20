@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Hidden box still leaves a gap",
+    "language": "html",
+    "problemDescription": "The advert is hidden, but the page keeps an empty gap where it was. It should take no space at all.",
+    "buggyCode": "<style>\n  .ad { visibility: hidden; height: 80px; }\n</style>\n<p>Before</p>\n<div class=\"ad\">Advert</div>\n<p>After</p>",
+    "solution": {
+      "code": "<style>\n  .ad { display: none; height: 80px; }\n</style>\n<p>Before</p>\n<div class=\"ad\">Advert</div>\n<p>After</p>",
+      "explanation": "visibility: hidden hides the box but keeps its space in the layout. display: none removes it completely, so the text after it moves up."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The advert is hidden",
+              "expr": "!visible('.ad')"
+            },
+            {
+              "label": "The advert takes no space",
+              "expr": "el('.ad').offsetHeight === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

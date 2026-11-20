@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use some and every",
+    "language": "html",
+    "problemDescription": "The function loops over the lines with counters and an early return. Use some and every to ask the question directly. The result for a board must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var lines = [\n    [0,1,2], [3,4,5], [6,7,8], [0,3,6],\n    [1,4,7], [2,5,8], [0,4,8], [2,4,6]\n  ];\n  function hasWon(b, mark) {\n    for (var i = 0; i < lines.length; i++) {\n      var count = 0;\n      for (var j = 0; j < 3; j++) {\n        if (b[lines[i][j]] === mark) count = count + 1;\n      }\n      if (count === 3) return true;\n    }\n    return false;\n  }\n  var board = ['O', 'O', 'O', '', 'X', '', 'X', '', 'X'];\n  var o = hasWon(board, 'O');\n  var x = hasWon(board, 'X');\n  document.getElementById('out').textContent = o + ',' + x;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var lines = [\n    [0,1,2], [3,4,5], [6,7,8], [0,3,6],\n    [1,4,7], [2,5,8], [0,4,8], [2,4,6]\n  ];\n  function hasWon(b, mark) {\n    return lines.some(function (line) {\n      return line.every(function (i) { return b[i] === mark; });\n    });\n  }\n  var board = ['O', 'O', 'O', '', 'X', '', 'X', '', 'X'];\n  var o = hasWon(board, 'O');\n  var x = hasWon(board, 'X');\n  document.getElementById('out').textContent = o + ',' + x;\n</script>",
+      "explanation": "some and every ask \"is there a line where all three cells are this mark?\" in the words of the question. The counting loop and the early return are details the reader does not need."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "O wins and X does not",
+              "expr": "text('#out') === 'true,false'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

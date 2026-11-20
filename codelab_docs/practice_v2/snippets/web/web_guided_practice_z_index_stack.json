@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Stacking With z-index",
+    "language": "html",
+    "description": "Type two overlapping boxes where the second one is on top. For a z-index to work, the boxes must be positioned, and the higher number is drawn in front.",
+    "ghostCode": "<style>\n  .box { position: absolute; width: 60px; height: 60px; }\n  .red { background: red; left: 10px; top: 10px; z-index: 2; }\n  .blue { background: blue; left: 40px; top: 40px; z-index: 1; }\n</style>\n<div class=\"box red\"></div>\n<div class=\"box blue\"></div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The boxes overlap",
+              "expr": "(() => { var a = el('.red').getBoundingClientRect(), b = el('.blue').getBoundingClientRect(); return b.left < a.right && b.top < a.bottom; })()"
+            },
+            {
+              "label": "The red box is in front where they overlap",
+              "expr": "(() => { var a = el('.red').getBoundingClientRect(); return document.elementFromPoint(a.right - 5, a.bottom - 5) === el('.red'); })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

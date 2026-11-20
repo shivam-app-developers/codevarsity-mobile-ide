@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Badge jumps out of the card",
+    "language": "html",
+    "problemDescription": "The badge should stay in the corner of the card, but it flies to the corner of the whole page. The card is not positioned, so the badge uses the page.",
+    "buggyCode": "<style>\n  .card {\n    width: 100px;\n    height: 60px;\n    margin: 40px;\n    background: #ddd;\n  }\n  .dot {\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 12px;\n    height: 12px;\n    background: red;\n  }\n</style>\n<div class=\"card\"><div class=\"dot\"></div></div>",
+    "solution": {
+      "code": "<style>\n  .card {\n    position: relative;\n    width: 100px;\n    height: 60px;\n    margin: 40px;\n    background: #ddd;\n  }\n  .dot {\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 12px;\n    height: 12px;\n    background: red;\n  }\n</style>\n<div class=\"card\"><div class=\"dot\"></div></div>",
+      "explanation": "An absolutely positioned element is placed against its nearest positioned ancestor. With no position on the card, the nearest one is the page, so top and right refer to the page corner."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The dot touches the top of the card",
+              "expr": "el('.dot').getBoundingClientRect().top === el('.card').getBoundingClientRect().top"
+            },
+            {
+              "label": "The dot touches the right of the card",
+              "expr": "Math.abs(el('.dot').getBoundingClientRect().right - el('.card').getBoundingClientRect().right) < 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Count the Ticked Boxes",
+    "language": "html",
+    "description": "Type three checkboxes and a line that shows how many are ticked. The change event fires whenever a box is ticked or cleared.",
+    "ghostCode": "<label><input type=\"checkbox\"> HTML</label>\n<label><input type=\"checkbox\"> CSS</label>\n<label><input type=\"checkbox\"> JS</label>\n<p>Ticked: <span id=\"n\">0</span></p>\n<script>\n  var boxes = document.querySelectorAll('input');\n  boxes.forEach(function (b) {\n    b.addEventListener('change', function () {\n      var ticked = document.querySelectorAll('input:checked');\n      document.getElementById('n').textContent = ticked.length;\n    });\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The count starts at 0",
+              "expr": "text('#n') === '0'"
+            },
+            {
+              "label": "Ticking two boxes shows 2",
+              "expr": "(() => { var b = document.querySelectorAll('input'); b[0].click(); b[2].click(); return text('#n') === '2'; })()"
+            },
+            {
+              "label": "Clearing one box shows 1",
+              "expr": "(() => { document.querySelectorAll('input')[0].click(); return text('#n') === '1'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

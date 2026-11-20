@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Click Counter",
+    "language": "html",
+    "description": "Type a button that counts its clicks. The script keeps the number in a variable and writes it into the page after each click.",
+    "ghostCode": "<button id=\"btn\">Click me</button>\n<p>Clicks: <span id=\"n\">0</span></p>\n<script>\n  var count = 0;\n  var btn = document.getElementById('btn');\n  btn.addEventListener('click', function () {\n    count = count + 1;\n    document.getElementById('n').textContent = count;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The counter starts at 0",
+              "expr": "text('#n') === '0'"
+            },
+            {
+              "label": "Three clicks show 3",
+              "expr": "click('#btn') && click('#btn') && click('#btn') && text('#n') === '3'"
+            },
+            {
+              "label": "No script errors happen",
+              "expr": "errors().length === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

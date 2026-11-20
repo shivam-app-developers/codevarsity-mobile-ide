@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Any key adds an item",
+    "language": "html",
+    "problemDescription": "Every key press adds a new line to the list, not only Enter. The handler never checks which key was pressed.",
+    "buggyCode": "<input id=\"in\" placeholder=\"Type\">\n<ul id=\"out\"></ul>\n<script>\n  var field = document.getElementById('in');\n  field.addEventListener('keydown', function (e) {\n    var li = document.createElement('li');\n    li.textContent = field.value;\n    document.getElementById('out').appendChild(li);\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"in\" placeholder=\"Type\">\n<ul id=\"out\"></ul>\n<script>\n  var field = document.getElementById('in');\n  field.addEventListener('keydown', function (e) {\n    if (e.key === 'Enter') {\n      var li = document.createElement('li');\n      li.textContent = field.value;\n      document.getElementById('out').appendChild(li);\n    }\n  });\n</script>",
+      "explanation": "A keydown listener runs for every key. The handler must look at event.key and act only for the key it cares about, here Enter."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Enter adds one item",
+              "expr": "type('#in', 'a') && el('#in').dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter'})) !== null && count('#out li') === 1"
+            },
+            {
+              "label": "Another key adds nothing",
+              "expr": "el('#in').dispatchEvent(new KeyboardEvent('keydown', {key: 'a'})) !== null && count('#out li') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

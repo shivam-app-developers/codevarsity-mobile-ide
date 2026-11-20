@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: async and await instead of then",
+    "language": "html",
+    "problemDescription": "The code uses a chain of then calls. Rewrite it with an async function and await. The page must show the same text.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  function pause(ms) {\n    return new Promise(function (done) { setTimeout(done, ms); });\n  }\n  pause(10)\n    .then(function () { return 'first'; })\n    .then(function (x) {\n      document.getElementById('out').textContent = x + ' then second';\n    });\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  function pause(ms) {\n    return new Promise(function (done) { setTimeout(done, ms); });\n  }\n  async function run() {\n    await pause(10);\n    var x = 'first';\n    document.getElementById('out').textContent = x + ' then second';\n  }\n  run();\n</script>",
+      "explanation": "await makes asynchronous steps read from top to bottom like ordinary code. The result is the same, but errors can be caught with try and catch and the steps are easier to follow."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page shows the text",
+              "expr": "wait(250).then(function () { return text('#out') === 'first then second'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

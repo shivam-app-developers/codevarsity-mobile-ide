@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shorthand for the background",
+    "language": "html",
+    "problemDescription": "The background is set with three separate properties. Use the background shorthand. The look must be the same.",
+    "initialCode": "<style>\n  .hero {\n    padding: 20px;\n    background-color: navy;\n    background-image: linear-gradient(to bottom, navy, black);\n    background-repeat: no-repeat;\n  }\n</style>\n<div class=\"hero\">Hero</div>",
+    "solution": {
+      "code": "<style>\n  .hero {\n    padding: 20px;\n    background: linear-gradient(to bottom, navy, black) no-repeat;\n  }\n</style>\n<div class=\"hero\">Hero</div>",
+      "explanation": "The background shorthand sets colour, image, repeat and position in one line. The gradient already covers the whole box, so the extra colour was never visible."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The hero shows a gradient",
+              "expr": "style('.hero', 'backgroundImage').indexOf('linear-gradient') === 0"
+            },
+            {
+              "label": "The gradient does not repeat",
+              "expr": "style('.hero', 'backgroundRepeat') === 'no-repeat'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

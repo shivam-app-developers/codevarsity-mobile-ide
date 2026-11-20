@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Screen reader never hears the state",
+    "language": "html",
+    "problemDescription": "The button text changes between Mute and Unmute, but a screen reader always announces it as not pressed. The script updates the words and forgets the aria-pressed attribute.",
+    "buggyCode": "<button id=\"m\" aria-pressed=\"false\">Mute</button>\n<script>\n  var m = document.getElementById('m');\n  m.addEventListener('click', function () {\n    var on = m.getAttribute('aria-pressed') !== 'true';\n    m.textContent = on ? 'Unmute' : 'Mute';\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"m\" aria-pressed=\"false\">Mute</button>\n<script>\n  var m = document.getElementById('m');\n  m.addEventListener('click', function () {\n    var on = m.getAttribute('aria-pressed') !== 'true';\n    m.setAttribute('aria-pressed', on);\n    m.textContent = on ? 'Unmute' : 'Mute';\n  });\n</script>",
+      "explanation": "Visible text is only half of the interface. A screen reader reads aria-pressed to say whether a toggle button is on, so the script must update it every time the state changes."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "One click shows Unmute",
+              "expr": "click('#m') && text('#m') === 'Unmute'"
+            },
+            {
+              "label": "The attribute says pressed after the click",
+              "expr": "attr('#m', 'aria-pressed') === 'true'"
+            },
+            {
+              "label": "A second click shows Mute and not pressed",
+              "expr": "click('#m') && text('#m') === 'Mute' && attr('#m', 'aria-pressed') === 'false'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

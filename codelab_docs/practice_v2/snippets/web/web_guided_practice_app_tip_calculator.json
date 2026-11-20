@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Tip Calculator",
+    "language": "html",
+    "description": "Type a calculator that works out the tip and the total from a bill and a percentage. Values from inputs are text, so convert them with Number before calculating.",
+    "ghostCode": "<input id=\"bill\" value=\"200\">\n<input id=\"pct\" value=\"10\">\n<button id=\"go\">Calculate</button>\n<p>Tip: <span id=\"tip\"></span> Total: <span id=\"total\"></span></p>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    var bill = Number(document.getElementById('bill').value);\n    var pct = Number(document.getElementById('pct').value);\n    var tip = bill * pct / 100;\n    document.getElementById('tip').textContent = tip;\n    document.getElementById('total').textContent = bill + tip;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "10 percent of 200 is 20",
+              "expr": "click('#go') && text('#tip') === '20'"
+            },
+            {
+              "label": "The total is 220",
+              "expr": "text('#total') === '220'"
+            },
+            {
+              "label": "15 percent of 100 is 15 and the total 115",
+              "expr": "type('#bill', '100') && type('#pct', '15') && click('#go') && text('#tip') === '15' && text('#total') === '115'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

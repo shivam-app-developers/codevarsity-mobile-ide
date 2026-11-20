@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Striped Table Rows",
+    "language": "html",
+    "description": "Type a table whose even rows have a light background. The selector :nth-child(even) picks every second row without adding a class to the HTML.",
+    "ghostCode": "<style>\n  tr:nth-child(even) { background: #eee; }\n</style>\n<table>\n  <tr><td>One</td></tr>\n  <tr><td>Two</td></tr>\n  <tr><td>Three</td></tr>\n  <tr><td>Four</td></tr>\n</table>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The second row is shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('tr')[1]).backgroundColor === 'rgb(238, 238, 238)'"
+            },
+            {
+              "label": "The fourth row is shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('tr')[3]).backgroundColor === 'rgb(238, 238, 238)'"
+            },
+            {
+              "label": "The first and third rows are not shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('tr')[0]).backgroundColor === 'rgba(0, 0, 0, 0)' && getComputedStyle(document.querySelectorAll('tr')[2]).backgroundColor === 'rgba(0, 0, 0, 0)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

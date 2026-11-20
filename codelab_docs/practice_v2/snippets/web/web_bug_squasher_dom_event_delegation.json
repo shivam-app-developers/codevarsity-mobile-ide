@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Tasks added later do not respond",
+    "language": "html",
+    "problemDescription": "Items that the script adds later do not react to clicks, only the ones that were in the page at the start do. Each item gets its own listener when it is first found.",
+    "buggyCode": "<ul id=\"list\"><li>First</li></ul>\n<button id=\"add\">Add</button>\n<script>\n  var list = document.getElementById('list');\n  list.querySelectorAll('li').forEach(function (item) {\n    item.addEventListener('click', function () {\n      item.classList.toggle('done');\n    });\n  });\n  document.getElementById('add').addEventListener('click', function () {\n    var li = document.createElement('li');\n    li.textContent = 'New';\n    list.appendChild(li);\n  });\n</script>",
+    "solution": {
+      "code": "<ul id=\"list\"><li>First</li></ul>\n<button id=\"add\">Add</button>\n<script>\n  var list = document.getElementById('list');\n  list.addEventListener('click', function (e) {\n    e.target.classList.toggle('done');\n  });\n  document.getElementById('add').addEventListener('click', function () {\n    var li = document.createElement('li');\n    li.textContent = 'New';\n    list.appendChild(li);\n  });\n</script>",
+      "explanation": "Listeners attached to the items at the start only exist for those items. One listener on the list gets clicks from items added later too, because the click bubbles up to the list."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "An item added later reacts to a click",
+              "expr": "click('#add') && document.querySelectorAll('#list li')[1].click() || document.querySelectorAll('#list li')[1].classList.contains('done')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Greeting says Hi with no name",
+    "language": "html",
+    "problemDescription": "The method works when called as person.greet(), but when it is given to the button the name is missing. Inside the callback, this is no longer the object.",
+    "buggyCode": "<button id=\"b\">Say</button>\n<p id=\"out\"></p>\n<script>\n  var user = {\n    name: 'Ben',\n    say: function () {\n      document.getElementById('out').textContent = 'I am ' + this.name;\n    }\n  };\n  var b = document.getElementById('b');\n  b.addEventListener('click', user.say);\n</script>",
+    "solution": {
+      "code": "<button id=\"b\">Say</button>\n<p id=\"out\"></p>\n<script>\n  var user = {\n    name: 'Ben',\n    say: function () {\n      document.getElementById('out').textContent = 'I am ' + this.name;\n    }\n  };\n  var b = document.getElementById('b');\n  b.addEventListener('click', user.say.bind(user));\n</script>",
+      "explanation": "When a method is passed as a callback, the browser calls it with this set to the element that got the event (the button), which has no name. bind(user) makes a copy of the function with this fixed to user."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking shows the name",
+              "expr": "click('#b') && text('#out') === 'I am Ben'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

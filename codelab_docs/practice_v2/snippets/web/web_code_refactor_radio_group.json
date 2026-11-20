@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Radio group in a fieldset",
+    "language": "html",
+    "problemDescription": "These radio buttons float without a heading. Group them in a fieldset with a legend. Same buttons, same names.",
+    "initialCode": "<p>Pick a colour</p>\n<label><input type=\"radio\" name=\"c\" id=\"r\" checked> Red</label>\n<label><input type=\"radio\" name=\"c\" id=\"g\"> Green</label>",
+    "solution": {
+      "code": "<fieldset>\n  <legend>Pick a colour</legend>\n  <label><input type=\"radio\" name=\"c\" id=\"r\" checked> Red</label>\n  <label><input type=\"radio\" name=\"c\" id=\"g\"> Green</label>\n</fieldset>",
+      "explanation": "A fieldset with a legend names a group of controls. A screen reader says \"Pick a colour, group\" before each radio button, so the buttons make sense without seeing the page."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Red starts chosen",
+              "expr": "el('#r').checked"
+            },
+            {
+              "label": "Green clears red",
+              "expr": "click('#g') && !el('#r').checked && el('#g').checked"
+            },
+            {
+              "label": "The question text is kept",
+              "expr": "text('body').indexOf('Pick a colour') === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

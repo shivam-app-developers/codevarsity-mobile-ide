@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Gradient Backgrounds",
+    "language": "html",
+    "description": "Type a banner with a gradient from blue to purple. A gradient is an image made by CSS, so it goes in background, not in background-color.",
+    "ghostCode": "<style>\n  .banner {\n    padding: 24px;\n    color: white;\n    background: linear-gradient(to right, blue, purple);\n  }\n</style>\n<div class=\"banner\">Welcome</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The background is a gradient",
+              "expr": "style('.banner', 'backgroundImage').indexOf('linear-gradient') === 0"
+            },
+            {
+              "label": "The text is white",
+              "expr": "style('.banner', 'color') === 'rgb(255, 255, 255)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

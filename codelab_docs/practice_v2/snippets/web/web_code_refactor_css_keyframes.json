@@ -1,0 +1,40 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Animation shorthand",
+    "language": "html",
+    "problemDescription": "The animation is set with four properties. Use the animation shorthand. The same animation must run.",
+    "initialCode": "<style>\n  @keyframes fade {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n  .msg {\n    animation-name: fade;\n    animation-duration: 1.5s;\n    animation-iteration-count: 3;\n    animation-timing-function: ease-in-out;\n  }\n</style>\n<p class=\"msg\">Welcome</p>",
+    "solution": {
+      "code": "<style>\n  @keyframes fade {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n  .msg { animation: fade 1.5s ease-in-out 3; }\n</style>\n<p class=\"msg\">Welcome</p>",
+      "explanation": "The animation shorthand holds the name, duration, easing and count in one line. The order of the time and the easing does not matter, but the first time is the duration."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The animation is fade",
+              "expr": "style('.msg', 'animationName') === 'fade'"
+            },
+            {
+              "label": "It lasts 1.5 seconds",
+              "expr": "style('.msg', 'animationDuration') === '1.5s'"
+            },
+            {
+              "label": "It repeats three times",
+              "expr": "style('.msg', 'animationIterationCount') === '3'"
+            },
+            {
+              "label": "It uses ease-in-out",
+              "expr": "style('.msg', 'animationTimingFunction') === 'ease-in-out'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Visible Keyboard Focus",
+    "language": "html",
+    "description": "Type a style for the focused input so keyboard users can see where they are. The :focus rule gives the field a coloured outline.",
+    "ghostCode": "<style>\n  input { outline: none; border: 2px solid gray; }\n  input:focus { border-color: blue; }\n</style>\n<input id=\"name\" placeholder=\"Your name\">",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The field has a gray border at rest",
+              "expr": "style('#name', 'borderTopColor') === 'rgb(128, 128, 128)'"
+            },
+            {
+              "label": "When focused the border turns blue",
+              "expr": "(() => { el('#name').focus(); return style('#name', 'borderTopColor') === 'rgb(0, 0, 255)'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

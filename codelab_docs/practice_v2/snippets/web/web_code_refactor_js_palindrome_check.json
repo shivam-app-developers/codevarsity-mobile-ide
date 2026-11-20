@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Compare from both ends",
+    "language": "html",
+    "problemDescription": "The check reverses the whole word into a new string. Replace it with a loop that compares letters from both ends. The answers must stay the same.",
+    "initialCode": "<input id=\"w\" value=\"noon\">\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var s = document.getElementById('w').value.toLowerCase();\n    var rev = s.split('').reverse().join('');\n    document.getElementById('r').textContent = s === rev ? 'Yes' : 'No';\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"w\" value=\"noon\">\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var s = document.getElementById('w').value.toLowerCase();\n    var ok = true;\n    for (var i = 0; i < s.length / 2; i++) {\n      if (s[i] !== s[s.length - 1 - i]) { ok = false; }\n    }\n    document.getElementById('r').textContent = ok ? 'Yes' : 'No';\n  });\n</script>",
+      "explanation": "Comparing from both ends needs no second string and can stop at the middle. The reverse version is shorter to write, the loop is what interviewers often ask for next."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Noon is a palindrome",
+              "expr": "click('#b') && text('#r') === 'Yes'"
+            },
+            {
+              "label": "Hello is not",
+              "expr": "type('#w', 'hello') && click('#b') && text('#r') === 'No'"
+            },
+            {
+              "label": "An odd length word works",
+              "expr": "type('#w', 'Radar') && click('#b') && text('#r') === 'Yes'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

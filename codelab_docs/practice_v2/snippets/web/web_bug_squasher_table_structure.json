@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Headings written as data cells",
+    "language": "html",
+    "problemDescription": "A screen reader reads this table's column names like ordinary data, so nobody can tell which number is the price. The first row must use heading cells.",
+    "buggyCode": "<table>\n  <tr><td>Item</td><td>Price</td></tr>\n  <tr><td>Pen</td><td>5</td></tr>\n  <tr><td>Book</td><td>20</td></tr>\n</table>",
+    "solution": {
+      "code": "<table>\n  <tr><th>Item</th><th>Price</th></tr>\n  <tr><td>Pen</td><td>5</td></tr>\n  <tr><td>Book</td><td>20</td></tr>\n</table>",
+      "explanation": "th marks a cell as a heading for its column or row. Browsers make it bold and centred, and screen readers announce it with every value below it. A td is plain data."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first row has heading cells",
+              "expr": "count('tr:first-child th') === 2"
+            },
+            {
+              "label": "Data cells stay td",
+              "expr": "count('td') === 4"
+            },
+            {
+              "label": "Item and Price are the headings",
+              "expr": "text('th') === 'Item' && document.querySelectorAll('th')[1].textContent === 'Price'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

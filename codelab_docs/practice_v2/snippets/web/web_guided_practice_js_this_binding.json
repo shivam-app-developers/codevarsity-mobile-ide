@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Keeping this in a Callback",
+    "language": "html",
+    "description": "Type an object with a method that uses this, and give it to a button with bind. A method passed as a callback loses its object, and bind fixes it.",
+    "ghostCode": "<button id=\"btn\">Greet</button>\n<p id=\"out\"></p>\n<script>\n  var person = {\n    name: 'Asha',\n    greet: function () {\n      document.getElementById('out').textContent = 'Hi, ' + this.name;\n    }\n  };\n  var btn = document.getElementById('btn');\n  btn.addEventListener('click', person.greet.bind(person));\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking shows the name of the person",
+              "expr": "click('#btn') && text('#out') === 'Hi, Asha'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

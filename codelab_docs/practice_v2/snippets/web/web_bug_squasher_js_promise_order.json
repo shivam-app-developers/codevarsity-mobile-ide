@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Page shows the log too early",
+    "language": "html",
+    "problemDescription": "The page should show the three log entries, but it only shows the first one. The text is written right away, before the promise and the timer have run.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var log = [];\n  setTimeout(function () { log.push('timer'); }, 0);\n  Promise.resolve().then(function () { log.push('promise'); });\n  log.push('now');\n  document.getElementById('out').textContent = log.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var log = [];\n  setTimeout(function () { log.push('timer'); }, 0);\n  Promise.resolve().then(function () { log.push('promise'); });\n  log.push('now');\n  setTimeout(function () {\n    document.getElementById('out').textContent = log.join(',');\n  }, 20);\n</script>",
+      "explanation": "The line that writes the text runs immediately, when the log only has now. Promises and timers finish later, so the text must be written after them, for example in a later timer or at the end of a promise chain."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "All three entries are shown",
+              "expr": "wait(250).then(function () { return text('#out') === 'now,promise,timer'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

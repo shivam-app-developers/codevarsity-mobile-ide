@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Flex column instead of block with margins",
+    "language": "html",
+    "problemDescription": "Each item is separated by a bottom margin written on every element. Use a flex column with gap for the spacing. The items must keep their order.",
+    "initialCode": "<style>\n  .list p { margin: 0 0 10px 0; }\n</style>\n<div class=\"list\">\n  <p>First</p>\n  <p>Second</p>\n  <p>Third</p>\n</div>",
+    "solution": {
+      "code": "<style>\n  .list { display: flex; flex-direction: column; gap: 10px; }\n  .list p { margin: 0; }\n</style>\n<div class=\"list\">\n  <p>First</p>\n  <p>Second</p>\n  <p>Third</p>\n</div>",
+      "explanation": "gap puts space between items only, not after the last one, and it is written once on the container. Margins on each child need to be repeated and removed for the last item."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The items read First, Second, Third",
+              "expr": "text('.list') === 'First Second Third'"
+            },
+            {
+              "label": "The items are stacked",
+              "expr": "(() => { var p = document.querySelectorAll('.list p'); return p[0].offsetTop < p[1].offsetTop && p[1].offsetTop < p[2].offsetTop; })()"
+            },
+            {
+              "label": "The gap between items is 10px",
+              "expr": "(() => { var p = document.querySelectorAll('.list p'); return p[1].offsetTop - (p[0].offsetTop + p[0].offsetHeight) === 10; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

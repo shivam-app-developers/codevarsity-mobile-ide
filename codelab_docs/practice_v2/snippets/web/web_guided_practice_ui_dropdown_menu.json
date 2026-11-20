@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Dropdown That Closes on Outside Click",
+    "language": "html",
+    "description": "Type a menu button that opens a list, and closes it when anything else on the page is clicked. The click on the button must not reach the document, or it would close the menu at once.",
+    "ghostCode": "<button id=\"btn\">Menu</button>\n<ul id=\"menu\" hidden><li>Profile</li><li>Logout</li></ul>\n<script>\n  var menu = document.getElementById('menu');\n  document.getElementById('btn').addEventListener('click', function (e) {\n    e.stopPropagation();\n    menu.hidden = !menu.hidden;\n  });\n  document.addEventListener('click', function () {\n    menu.hidden = true;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu starts closed",
+              "expr": "!visible('#menu')"
+            },
+            {
+              "label": "Clicking the button opens it",
+              "expr": "click('#btn') && visible('#menu')"
+            },
+            {
+              "label": "Clicking elsewhere closes it",
+              "expr": "document.body.click() || !visible('#menu')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

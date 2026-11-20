@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Labels for Inputs",
+    "language": "html",
+    "description": "Type a small sign-up form where every input has a label tied to it with for and id. Tapping the label then focuses the input, and screen readers read the label.",
+    "ghostCode": "<form>\n  <label for=\"name\">Name</label>\n  <input id=\"name\" type=\"text\">\n  <label for=\"mail\">Email</label>\n  <input id=\"mail\" type=\"email\">\n  <button>Join</button>\n</form>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The name input has a label",
+              "expr": "labelled('#name')"
+            },
+            {
+              "label": "The email input has a label",
+              "expr": "labelled('#mail')"
+            },
+            {
+              "label": "The email input is of type email",
+              "expr": "attr('#mail', 'type') === 'email'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

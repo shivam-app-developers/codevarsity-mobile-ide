@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use rem for sizes",
+    "language": "html",
+    "problemDescription": "These font sizes are fixed in pixels, so they ignore a user's chosen text size. Use rem units with the same sizes (the root size is 16px).",
+    "initialCode": "<style>\n  h1 { font-size: 32px; }\n  p { font-size: 16px; margin: 8px 0; }\n  small { font-size: 12px; }\n</style>\n<h1>Title</h1>\n<p>Text</p>\n<small>Note</small>",
+    "solution": {
+      "code": "<style>\n  h1 { font-size: 2rem; }\n  p { font-size: 1rem; margin: 8px 0; }\n  small { font-size: 0.75rem; }\n</style>\n<h1>Title</h1>\n<p>Text</p>\n<small>Note</small>",
+      "explanation": "rem is relative to the root font size, so the whole page grows when a user sets a larger text size in the browser. Pixels stay fixed and can make the page hard to read for them."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The title is 32px",
+              "expr": "px('h1', 'fontSize') === 32"
+            },
+            {
+              "label": "The paragraph is 16px",
+              "expr": "px('p', 'fontSize') === 16"
+            },
+            {
+              "label": "The note is 12px",
+              "expr": "px('small', 'fontSize') === 12"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

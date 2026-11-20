@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Shallow and Deep Copies",
+    "language": "html",
+    "description": "Type a copy of an object that does not share its inner objects with the original. JSON.parse(JSON.stringify(x)) makes a deep copy, so changing the copy leaves the original alone.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var user = { name: 'Asha', address: { city: 'Pune' } };\n  var copy = JSON.parse(JSON.stringify(user));\n  copy.address.city = 'Delhi';\n  document.getElementById('out').textContent =\n    user.address.city + ',' + copy.address.city;\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The original stays in Pune and the copy is in Delhi",
+              "expr": "text('#out') === 'Pune,Delhi'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

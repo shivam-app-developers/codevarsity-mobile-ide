@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Radio Buttons Share a Name",
+    "language": "html",
+    "description": "Type three radio buttons that share one name. Radio buttons with the same name are a group, and only one of them can be chosen at a time.",
+    "ghostCode": "<form>\n  <label><input type=\"radio\" name=\"size\" id=\"s\"> Small</label>\n  <label><input type=\"radio\" name=\"size\" id=\"m\"> Medium</label>\n  <label><input type=\"radio\" name=\"size\" id=\"l\"> Large</label>\n</form>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three radio buttons",
+              "expr": "count('input[type=radio]') === 3"
+            },
+            {
+              "label": "Choosing Medium clears Small",
+              "expr": "click('#s') && click('#m') && !el('#s').checked && el('#m').checked"
+            },
+            {
+              "label": "Only one button is chosen at the end",
+              "expr": "count('input[type=radio]:checked') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

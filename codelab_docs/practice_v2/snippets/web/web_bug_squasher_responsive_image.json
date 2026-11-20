@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Picture makes the page scroll sideways",
+    "language": "html",
+    "problemDescription": "On a phone this wide picture runs past the edge of the screen and the whole page scrolls sideways. The picture has no limit on its width.",
+    "buggyCode": "<style>\n  svg { height: auto; }\n</style>\n<svg viewBox=\"0 0 900 300\" width=\"900\" height=\"300\">\n  <rect width=\"900\" height=\"300\" fill=\"orange\"/>\n</svg>",
+    "solution": {
+      "code": "<style>\n  svg { max-width: 100%; height: auto; }\n</style>\n<svg viewBox=\"0 0 900 300\" width=\"900\" height=\"300\">\n  <rect width=\"900\" height=\"300\" fill=\"orange\"/>\n</svg>",
+      "explanation": "The picture has its own width (900px here). max-width: 100% limits it to the width of its container, and height: auto then scales the height so the picture is not stretched."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page does not scroll sideways",
+              "expr": "noSidewaysScroll()"
+            },
+            {
+              "label": "The picture fits the screen",
+              "expr": "el('svg').getBoundingClientRect().width <= document.documentElement.clientWidth"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

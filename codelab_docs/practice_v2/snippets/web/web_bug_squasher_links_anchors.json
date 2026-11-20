@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Anchor link that goes nowhere",
+    "language": "html",
+    "problemDescription": "Tapping \"Jump to prices\" does nothing, because the link points to an id that does not exist on the page. Make the link and the section agree.",
+    "buggyCode": "<a href=\"#prices\">Jump to prices</a>\n<p>Lots of text.</p>\n<h2 id=\"price\">Prices</h2>\n<p>Tea costs 5.</p>",
+    "solution": {
+      "code": "<a href=\"#prices\">Jump to prices</a>\n<p>Lots of text.</p>\n<h2 id=\"prices\">Prices</h2>\n<p>Tea costs 5.</p>",
+      "explanation": "The part after # in a link must match the id of an element exactly, including the letters. A small difference like price and prices makes the link silently do nothing."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link target exists on the page",
+              "expr": "exists(attr('a', 'href'))"
+            },
+            {
+              "label": "The target is the Prices heading",
+              "expr": "text(attr('a', 'href')) === 'Prices'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

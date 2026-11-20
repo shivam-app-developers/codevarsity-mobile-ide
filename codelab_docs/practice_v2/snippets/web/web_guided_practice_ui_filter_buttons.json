@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Filter a List With Buttons",
+    "language": "html",
+    "description": "Type buttons that show only the items of one category. Each item has a data-type attribute, and the hidden property removes it from view.",
+    "ghostCode": "<button data-show=\"fruit\">Fruit</button>\n<button data-show=\"all\">All</button>\n<ul>\n  <li data-type=\"fruit\">Apple</li>\n  <li data-type=\"veg\">Carrot</li>\n  <li data-type=\"fruit\">Mango</li>\n</ul>\n<script>\n  document.querySelectorAll('button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      var want = b.dataset.show;\n      document.querySelectorAll('li').forEach(function (li) {\n        li.hidden = want !== 'all' && li.dataset.type !== want;\n      });\n    });\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "All three items show at the start",
+              "expr": "document.querySelectorAll('li:not([hidden])').length === 3"
+            },
+            {
+              "label": "Fruit shows two items",
+              "expr": "document.querySelectorAll('button')[0].click() || document.querySelectorAll('li:not([hidden])').length === 2"
+            },
+            {
+              "label": "The carrot is hidden",
+              "expr": "!visible('li[data-type=veg]')"
+            },
+            {
+              "label": "All shows everything again",
+              "expr": "document.querySelectorAll('button')[1].click() || document.querySelectorAll('li:not([hidden])').length === 3"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Copy with a method instead of by hand",
+    "language": "html",
+    "problemDescription": "Each field of the object is copied one by one, including the inner one. Use JSON.parse(JSON.stringify(...)) for the copy. The result shown must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var a = { n: 1, tags: { first: 'x' } };\n  var b = { n: a.n, tags: { first: a.tags.first } };\n  b.tags.first = 'y';\n  document.getElementById('out').textContent = a.tags.first + b.tags.first;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var a = { n: 1, tags: { first: 'x' } };\n  var b = JSON.parse(JSON.stringify(a));\n  b.tags.first = 'y';\n  document.getElementById('out').textContent = a.tags.first + b.tags.first;\n</script>",
+      "explanation": "The by-hand copy must be edited whenever a field is added, and it is easy to forget one. A JSON round trip copies whatever the object holds, as long as it is plain data."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The original keeps x and the copy has y",
+              "expr": "text('#out') === 'xy'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

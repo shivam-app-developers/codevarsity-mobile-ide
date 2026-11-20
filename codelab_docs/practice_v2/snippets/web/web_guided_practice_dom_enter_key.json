@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Add an Item With the Enter Key",
+    "language": "html",
+    "description": "Type an input that adds its text to a list when Enter is pressed. A keydown event carries the name of the key in event.key.",
+    "ghostCode": "<input id=\"item\" placeholder=\"Add and press Enter\">\n<ul id=\"list\"></ul>\n<script>\n  var input = document.getElementById('item');\n  input.addEventListener('keydown', function (e) {\n    if (e.key === 'Enter' && input.value.trim() !== '') {\n      var li = document.createElement('li');\n      li.textContent = input.value.trim();\n      document.getElementById('list').appendChild(li);\n      input.value = '';\n    }\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list starts empty",
+              "expr": "count('#list li') === 0"
+            },
+            {
+              "label": "Enter adds the typed text",
+              "expr": "type('#item', 'Milk') && el('#item').dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter'})) !== null && text('#list') === 'Milk'"
+            },
+            {
+              "label": "The input is cleared after adding",
+              "expr": "el('#item').value === ''"
+            },
+            {
+              "label": "Enter on an empty box adds nothing",
+              "expr": "el('#item').dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter'})) !== null && count('#list li') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Link stuck next to the logo",
+    "language": "html",
+    "problemDescription": "The Login link should touch the right end of the bar and the logo the left end, but both float in from the edges. The bar spreads its items with the wrong value.",
+    "buggyCode": "<style>\n  nav { display: flex; justify-content: space-around; }\n</style>\n<nav>\n  <span class=\"a\">Brand</span>\n  <span class=\"b\">Sign in</span>\n</nav>",
+    "solution": {
+      "code": "<style>\n  nav { display: flex; justify-content: space-between; }\n</style>\n<nav>\n  <span class=\"a\">Brand</span>\n  <span class=\"b\">Sign in</span>\n</nav>",
+      "explanation": "space-between puts the first item at the start and the last at the end, with the free space between them. space-around also leaves space at both ends, so the items do not touch the edges."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first item starts at the left edge",
+              "expr": "el('.a').getBoundingClientRect().left === el('nav').getBoundingClientRect().left"
+            },
+            {
+              "label": "The last item ends at the right edge",
+              "expr": "Math.abs(el('.b').getBoundingClientRect().right - el('nav').getBoundingClientRect().right) < 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Live Preview While Typing",
+    "language": "html",
+    "description": "Type an input that copies what is typed into a heading. The input event fires on every change, so the heading follows the typing.",
+    "ghostCode": "<input id=\"name\" placeholder=\"Your name\">\n<h2 id=\"hello\">Hello, stranger</h2>\n<script>\n  var who = document.getElementById('name');\n  var hello = document.getElementById('hello');\n  who.addEventListener('input', function () {\n    hello.textContent = 'Hello, ' + (who.value || 'stranger');\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading starts with stranger",
+              "expr": "text('#hello') === 'Hello, stranger'"
+            },
+            {
+              "label": "Typing a name changes the heading",
+              "expr": "type('#name', 'Ravi') && text('#hello') === 'Hello, Ravi'"
+            },
+            {
+              "label": "Clearing the input brings stranger back",
+              "expr": "type('#name', '') && text('#hello') === 'Hello, stranger'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

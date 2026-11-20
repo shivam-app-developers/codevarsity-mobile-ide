@@ -1,0 +1,37 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Fluid width instead of a fixed one",
+    "language": "html",
+    "problemDescription": "The image has a fixed width of 600px, which is wider than a phone. Make it fluid with width 100% and a max-width of 600px. It must never be wider than 600px.",
+    "initialCode": "<style>\n  .hero { width: 600px; height: 200px; background: steelblue; }\n</style>\n<div class=\"hero\"></div>",
+    "solution": {
+      "code": "<style>\n  .hero {\n    width: 100%;\n    max-width: 600px;\n    height: 200px;\n    background: steelblue;\n  }\n</style>\n<div class=\"hero\"></div>",
+      "explanation": "A fixed 600px width overflows a 320px screen. width: 100% with max-width: 600px shrinks on small screens and stops growing at 600px."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The hero is never wider than 600px",
+              "expr": "el('.hero').offsetWidth <= 600"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen the hero is 600px",
+              "expr": "el('.hero').offsetWidth === 600"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace row classes with nth-child",
+    "language": "html",
+    "problemDescription": "Every second row has a class named alt in the HTML. Remove the classes and use :nth-child(even). The same rows must be shaded.",
+    "initialCode": "<style>\n  .alt { background: #fee; }\n</style>\n<ul>\n  <li>One</li>\n  <li class=\"alt\">Two</li>\n  <li>Three</li>\n  <li class=\"alt\">Four</li>\n</ul>",
+    "solution": {
+      "code": "<style>\n  li:nth-child(even) { background: #fee; }\n</style>\n<ul>\n  <li>One</li>\n  <li>Two</li>\n  <li>Three</li>\n  <li>Four</li>\n</ul>",
+      "explanation": "The position of an item in a list is something the browser already knows. Selecting by position keeps the HTML clean and keeps working when rows are added or removed."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The second item is shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('li')[1]).backgroundColor === 'rgb(255, 238, 238)'"
+            },
+            {
+              "label": "The fourth item is shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('li')[3]).backgroundColor === 'rgb(255, 238, 238)'"
+            },
+            {
+              "label": "The first item is not shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('li')[0]).backgroundColor === 'rgba(0, 0, 0, 0)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

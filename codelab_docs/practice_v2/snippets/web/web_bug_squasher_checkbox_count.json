@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Count that never changes",
+    "language": "html",
+    "problemDescription": "The counter under the checkboxes stays at 0 however many boxes are ticked. The page listens for the wrong event.",
+    "buggyCode": "<label><input type=\"checkbox\"> Tea</label>\n<label><input type=\"checkbox\"> Milk</label>\n<p id=\"out\">0</p>\n<script>\n  var boxes = document.querySelectorAll('input');\n  boxes.forEach(function (b) {\n    b.addEventListener('changed', function () {\n      var n = document.querySelectorAll('input:checked').length;\n      document.getElementById('out').textContent = n;\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<label><input type=\"checkbox\"> Tea</label>\n<label><input type=\"checkbox\"> Milk</label>\n<p id=\"out\">0</p>\n<script>\n  var boxes = document.querySelectorAll('input');\n  boxes.forEach(function (b) {\n    b.addEventListener('change', function () {\n      var n = document.querySelectorAll('input:checked').length;\n      document.getElementById('out').textContent = n;\n    });\n  });\n</script>",
+      "explanation": "Event names must be spelled exactly. There is no event called changed, so the listener never runs and no error is shown. The real event is change."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The count starts at 0",
+              "expr": "text('#out') === '0'"
+            },
+            {
+              "label": "Ticking both boxes shows 2",
+              "expr": "(() => { var b = document.querySelectorAll('input'); b[0].click(); b[1].click(); return text('#out') === '2'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

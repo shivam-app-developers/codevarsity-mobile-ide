@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Back to top without JavaScript",
+    "language": "html",
+    "problemDescription": "This page uses an onclick handler to scroll to the top. A plain link to an id does the same with no script. Replace the script, keeping the link text and a heading with the id top.",
+    "initialCode": "<h1 id=\"top\">Long page</h1>\n<p>Lots of text here.</p>\n<button onclick=\"location.hash='top'\">Back to top</button>",
+    "solution": {
+      "code": "<h1 id=\"top\">Long page</h1>\n<p>Lots of text here.</p>\n<a href=\"#top\">Back to top</a>",
+      "explanation": "A link to an id is built into the browser: it works without JavaScript, can be opened with the keyboard and is announced as a link. A button with a script needs code that can break."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading with the id top exists",
+              "expr": "text('#top') === 'Long page'"
+            },
+            {
+              "label": "There is a Back to top control",
+              "expr": "text('body').indexOf('Back to top') > 0"
+            },
+            {
+              "label": "The page has no script errors",
+              "expr": "errors().length === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

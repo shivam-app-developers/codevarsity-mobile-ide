@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Shopping Cart Total",
+    "language": "html",
+    "description": "Type a cart that adds up the price times the quantity of every row. Each row has its price in a data attribute and its quantity in an input.",
+    "ghostCode": "<div class=\"row\" data-price=\"30\"><input class=\"q\" value=\"2\"></div>\n<div class=\"row\" data-price=\"15\"><input class=\"q\" value=\"1\"></div>\n<button id=\"sum\">Total</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('sum').addEventListener('click', function () {\n    var total = 0;\n    document.querySelectorAll('.row').forEach(function (row) {\n      var qty = Number(row.querySelector('.q').value);\n      total = total + Number(row.dataset.price) * qty;\n    });\n    document.getElementById('out').textContent = total;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "2 x 30 plus 1 x 15 is 75",
+              "expr": "click('#sum') && text('#out') === '75'"
+            },
+            {
+              "label": "Changing the second quantity to 3 gives 105",
+              "expr": "(document.querySelectorAll('.q')[1].value = '3') && click('#sum') && text('#out') === '105'"
+            },
+            {
+              "label": "A quantity of 0 adds nothing",
+              "expr": "(document.querySelectorAll('.q')[0].value = '0') && click('#sum') && text('#out') === '45'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

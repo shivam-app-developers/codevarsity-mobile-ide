@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Three Columns With Grid",
+    "language": "html",
+    "description": "Type a grid with three equal columns. repeat(3, 1fr) is short for three columns that each take one fraction of the width.",
+    "ghostCode": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 8px;\n  }\n  .grid div { height: 30px; background: orchid; }\n</style>\n<div class=\"grid\">\n  <div></div><div></div><div></div>\n  <div></div><div></div><div></div>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The container is a grid",
+              "expr": "style('.grid', 'display') === 'grid'"
+            },
+            {
+              "label": "It has three columns",
+              "expr": "style('.grid', 'gridTemplateColumns').split(' ').length === 3"
+            },
+            {
+              "label": "The fourth item starts a new row",
+              "expr": "document.querySelectorAll('.grid div')[3].offsetTop > document.querySelectorAll('.grid div')[0].offsetTop"
+            },
+            {
+              "label": "The first three items share a row",
+              "expr": "document.querySelectorAll('.grid div')[2].offsetTop === document.querySelectorAll('.grid div')[0].offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Equal Columns With flex: 1",
+    "language": "html",
+    "description": "Type three columns that share the row equally. flex: 1 tells every item to grow and take the same share of the free space.",
+    "ghostCode": "<style>\n  .row { display: flex; }\n  .col { flex: 1; height: 40px; }\n</style>\n<div class=\"row\">\n  <div class=\"col\" style=\"background: tomato\"></div>\n  <div class=\"col\" style=\"background: gold\"></div>\n  <div class=\"col\" style=\"background: skyblue\"></div>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The columns share the row equally",
+              "expr": "(() => { var c = document.querySelectorAll('.col'); return c[0].offsetWidth === c[1].offsetWidth && c[1].offsetWidth === c[2].offsetWidth; })()"
+            },
+            {
+              "label": "The columns fill the whole row",
+              "expr": "(() => { var c = document.querySelectorAll('.col'); return Math.abs(c[0].offsetWidth * 3 - el('.row').offsetWidth) <= 2; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

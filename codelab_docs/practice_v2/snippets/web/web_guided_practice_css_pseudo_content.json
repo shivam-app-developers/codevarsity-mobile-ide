@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Add Text With ::before",
+    "language": "html",
+    "description": "Type a rule that adds a marker before every item without changing the HTML. The ::before pseudo-element needs a content property, or nothing is drawn.",
+    "ghostCode": "<style>\n  .todo::before {\n    content: \"> \";\n    color: green;\n  }\n</style>\n<p class=\"todo\">Buy milk</p>\n<p class=\"todo\">Call Sam</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The marker is added before the text",
+              "expr": "getComputedStyle(el('.todo'), '::before').content === '\"> \"'"
+            },
+            {
+              "label": "The marker is green",
+              "expr": "getComputedStyle(el('.todo'), '::before').color === 'rgb(0, 128, 0)'"
+            },
+            {
+              "label": "The HTML text itself is unchanged",
+              "expr": "text('.todo') === 'Buy milk'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

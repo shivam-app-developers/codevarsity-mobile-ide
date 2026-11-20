@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Total joins the prices as text",
+    "language": "html",
+    "problemDescription": "Pressing the 5 and 8 buttons shows 058 instead of 13. The price from data-price is text, and the plus sign joins text.",
+    "buggyCode": "<button data-price=\"5\">A</button>\n<button data-price=\"8\">B</button>\n<p id=\"t\">0</p>\n<script>\n  var sum = 0;\n  document.querySelectorAll('button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      sum = sum + b.dataset.price;\n      document.getElementById('t').textContent = sum;\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<button data-price=\"5\">A</button>\n<button data-price=\"8\">B</button>\n<p id=\"t\">0</p>\n<script>\n  var sum = 0;\n  document.querySelectorAll('button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      sum = sum + Number(b.dataset.price);\n      document.getElementById('t').textContent = sum;\n    });\n  });\n</script>",
+      "explanation": "Everything read from the HTML is text. 0 + \"5\" joins into \"05\" and \"05\" + \"8\" into \"058\". Convert with Number() before adding."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking both buttons gives 13",
+              "expr": "document.querySelectorAll('button')[0].click() || document.querySelectorAll('button')[1].click() || text('#t') === '13'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

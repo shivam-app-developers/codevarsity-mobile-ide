@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Transform written with the wrong function",
+    "language": "html",
+    "problemDescription": "The box should be flipped upside down, but nothing happens. The transform uses a function name that does not exist.",
+    "buggyCode": "<style>\n  .box {\n    width: 50px;\n    height: 50px;\n    background: teal;\n    transform: rotates(180deg);\n  }\n</style>\n<div class=\"box\">Up</div>",
+    "solution": {
+      "code": "<style>\n  .box {\n    width: 50px;\n    height: 50px;\n    background: teal;\n    transform: rotate(180deg);\n  }\n</style>\n<div class=\"box\">Up</div>",
+      "explanation": "CSS ignores a declaration with an unknown function, so the box is not transformed and there is no error. The function for turning is rotate."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box is transformed",
+              "expr": "style('.box', 'transform') !== 'none'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

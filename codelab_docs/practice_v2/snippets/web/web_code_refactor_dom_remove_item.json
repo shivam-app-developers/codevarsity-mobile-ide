@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One listener on the list",
+    "language": "html",
+    "problemDescription": "Every button gets its own listener in a loop. Use one listener on the ul and find the button with event.target. Deleting must still work.",
+    "initialCode": "<ul id=\"l\">\n  <li>One <button>x</button></li>\n  <li>Two <button>x</button></li>\n  <li>Three <button>x</button></li>\n</ul>\n<script>\n  document.querySelectorAll('#l button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      b.parentElement.remove();\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<ul id=\"l\">\n  <li>One <button>x</button></li>\n  <li>Two <button>x</button></li>\n  <li>Three <button>x</button></li>\n</ul>\n<script>\n  document.getElementById('l').addEventListener('click', function (e) {\n    if (e.target.tagName === 'BUTTON') {\n      e.target.parentElement.remove();\n    }\n  });\n</script>",
+      "explanation": "Events bubble up, so one listener on the list sees every click inside it, including on items added later. It also uses one function instead of one per button."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three items to start",
+              "expr": "count('#l li') === 3"
+            },
+            {
+              "label": "Deleting the second item removes Two",
+              "expr": "document.querySelectorAll('#l button')[1].click() || text('#l').indexOf('Two') < 0"
+            },
+            {
+              "label": "Two items are left",
+              "expr": "count('#l li') === 2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

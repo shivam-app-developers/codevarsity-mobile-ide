@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Capital letters break the check",
+    "language": "html",
+    "problemDescription": "The word \"Madam\" is a palindrome but the checker says No. The first letter is a capital, so the two directions do not match exactly.",
+    "buggyCode": "<input id=\"w\" value=\"Madam\">\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var s = document.getElementById('w').value;\n    var rev = s.split('').reverse().join('');\n    document.getElementById('r').textContent = s === rev ? 'Yes' : 'No';\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"w\" value=\"Madam\">\n<button id=\"b\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var s = document.getElementById('w').value.toLowerCase();\n    var rev = s.split('').reverse().join('');\n    document.getElementById('r').textContent = s === rev ? 'Yes' : 'No';\n  });\n</script>",
+      "explanation": "M and m are different characters, so \"Madam\" reversed is \"madaM\". Make both lower case before comparing."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Madam is a palindrome",
+              "expr": "click('#b') && text('#r') === 'Yes'"
+            },
+            {
+              "label": "Hello is not",
+              "expr": "type('#w', 'hello') && click('#b') && text('#r') === 'No'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

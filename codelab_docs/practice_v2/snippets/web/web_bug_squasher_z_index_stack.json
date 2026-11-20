@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Dropdown hidden behind the content",
+    "language": "html",
+    "problemDescription": "The menu is meant to open on top of the text but it is drawn behind it. The text paragraph has a higher stacking order than the menu.",
+    "buggyCode": "<style>\n  .menu {\n    position: absolute;\n    left: 10px;\n    top: 10px;\n    width: 80px;\n    height: 50px;\n    background: gold;\n    z-index: 0;\n  }\n  .text { position: relative; z-index: 1; margin-top: 20px; }\n</style>\n<div class=\"menu\"></div>\n<p class=\"text\">Text under the menu, long enough to overlap it.</p>",
+    "solution": {
+      "code": "<style>\n  .menu {\n    position: absolute;\n    left: 10px;\n    top: 10px;\n    width: 80px;\n    height: 50px;\n    background: gold;\n    z-index: 5;\n  }\n  .text { position: relative; z-index: 1; margin-top: 20px; }\n</style>\n<div class=\"menu\"></div>\n<p class=\"text\">Text under the menu, long enough to overlap it.</p>",
+      "explanation": "Positioned elements are drawn in the order of their z-index, so the larger number is in front. The menu needs a larger value than the text it should cover."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu is drawn in front of the text",
+              "expr": "(() => { var m = el('.menu').getBoundingClientRect(); return document.elementFromPoint(m.left + 20, m.top + 40) === el('.menu'); })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Group options with optgroup",
+    "language": "html",
+    "problemDescription": "A long list of countries mixes two continents. Group the options with optgroup and a label for each continent. The options and their values must stay the same.",
+    "initialCode": "<select id=\"c\">\n  <option value=\"fr\">France</option>\n  <option value=\"de\">Germany</option>\n  <option value=\"jp\">Japan</option>\n  <option value=\"in\">India</option>\n</select>",
+    "solution": {
+      "code": "<select id=\"c\">\n  <optgroup label=\"Europe\">\n    <option value=\"fr\">France</option>\n    <option value=\"de\">Germany</option>\n  </optgroup>\n  <optgroup label=\"Asia\">\n    <option value=\"jp\">Japan</option>\n    <option value=\"in\">India</option>\n  </optgroup>\n</select>",
+      "explanation": "optgroup shows headings inside the list without changing the options. Users scan a grouped list faster, and the values that the form sends are the same."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are four options",
+              "expr": "count('#c option') === 4"
+            },
+            {
+              "label": "The values are fr, de, jp and in",
+              "expr": "[].map.call(document.querySelectorAll('#c option'), function (o) { return o.value; }).join() === 'fr,de,jp,in'"
+            },
+            {
+              "label": "The first value is fr",
+              "expr": "el('#c').value === 'fr'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

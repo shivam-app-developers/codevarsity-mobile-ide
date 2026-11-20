@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Arrow function instead of self",
+    "language": "html",
+    "problemDescription": "The method stores this in a variable called self so an inner function can use it. Use an arrow function, which keeps this by itself. The result must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var cart = {\n    items: ['pen', 'book'],\n    show: function () {\n      var self = this;\n      var upper = this.items.map(function (i) {\n        return i.toUpperCase() + self.items.length;\n      });\n      document.getElementById('out').textContent = upper.join(',');\n    }\n  };\n  cart.show();\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var cart = {\n    items: ['pen', 'book'],\n    show: function () {\n      var upper = this.items.map((i) => {\n        return i.toUpperCase() + this.items.length;\n      });\n      document.getElementById('out').textContent = upper.join(',');\n    }\n  };\n  cart.show();\n</script>",
+      "explanation": "An arrow function has no this of its own, so it uses the this of the code around it. The helper variable self was a workaround for ordinary functions, which get their own this."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page shows PEN2,BOOK2",
+              "expr": "text('#out') === 'PEN2,BOOK2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

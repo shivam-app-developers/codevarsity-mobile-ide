@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Page number goes past the last page",
+    "language": "html",
+    "problemDescription": "After the last page (page 3) the page number keeps going up to 4, 5 and more. The Next button is never disabled.",
+    "buggyCode": "<span id=\"p\">1</span>\n<button id=\"n\">Next</button>\n<script>\n  var p = 1;\n  var n = document.getElementById('n');\n  n.addEventListener('click', function () {\n    p = p + 1;\n    document.getElementById('p').textContent = p;\n    n.disabled = p === 30;\n  });\n</script>",
+    "solution": {
+      "code": "<span id=\"p\">1</span>\n<button id=\"n\">Next</button>\n<script>\n  var p = 1;\n  var n = document.getElementById('n');\n  n.addEventListener('click', function () {\n    p = p + 1;\n    document.getElementById('p').textContent = p;\n    n.disabled = p === 3;\n  });\n</script>",
+      "explanation": "The disabled state must be set when the last page is reached. The test compared with the wrong number, so the button was never disabled, and a disabled button cannot be clicked."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Two clicks reach page 3",
+              "expr": "click('#n') && click('#n') && text('#p') === '3'"
+            },
+            {
+              "label": "Next is disabled on page 3",
+              "expr": "el('#n').disabled === true"
+            },
+            {
+              "label": "Extra clicks cannot pass page 3",
+              "expr": "el('#n').click() || text('#p') === '3'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

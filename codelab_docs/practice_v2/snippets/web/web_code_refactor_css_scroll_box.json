@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: max-height instead of a fixed height",
+    "language": "html",
+    "problemDescription": "The box has a fixed height, so it leaves empty space when it has little content. Use max-height so it only grows as far as needed. With long content it must still stop at 80px.",
+    "initialCode": "<style>\n  .box { height: 80px; overflow: auto; border: 1px solid gray; }\n</style>\n<div class=\"box\">\n  <p>One</p><p>Two</p><p>Three</p><p>Four</p><p>Five</p><p>Six</p>\n</div>",
+    "solution": {
+      "code": "<style>\n  .box { max-height: 80px; overflow: auto; border: 1px solid gray; }\n</style>\n<div class=\"box\">\n  <p>One</p><p>Two</p><p>Three</p><p>Four</p><p>Five</p><p>Six</p>\n</div>",
+      "explanation": "max-height lets the box be as small as its content and stops it at the limit. A fixed height wastes space for short content and still needs overflow for long content."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box stops at 80px",
+              "expr": "el('.box').clientHeight === 80"
+            },
+            {
+              "label": "The content scrolls",
+              "expr": "el('.box').scrollHeight > el('.box').clientHeight"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

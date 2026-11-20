@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Hide Without Losing the Space",
+    "language": "html",
+    "description": "Type three ways to hide a box: display none removes it from the layout, visibility hidden keeps its space, and opacity 0 keeps both its space and its clicks.",
+    "ghostCode": "<style>\n  .a { display: none; }\n  .b { visibility: hidden; }\n  .c { opacity: 0; }\n  div { height: 20px; }\n</style>\n<div class=\"a\">A</div>\n<div class=\"b\">B</div>\n<div class=\"c\">C</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "A is gone and takes no space",
+              "expr": "!visible('.a') && el('.a').offsetHeight === 0"
+            },
+            {
+              "label": "B is hidden but keeps its space",
+              "expr": "!visible('.b') && el('.b').offsetHeight === 20"
+            },
+            {
+              "label": "C is hidden but keeps its space",
+              "expr": "!visible('.c') && el('.c').offsetHeight === 20"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

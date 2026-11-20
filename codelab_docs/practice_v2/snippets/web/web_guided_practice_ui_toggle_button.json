@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: On and Off Toggle Button",
+    "language": "html",
+    "description": "Type a button that switches between On and Off and tells assistive technology its state with aria-pressed. The attribute must always match what the button shows.",
+    "ghostCode": "<button id=\"sw\" aria-pressed=\"false\">Off</button>\n<script>\n  var sw = document.getElementById('sw');\n  sw.addEventListener('click', function () {\n    var on = sw.getAttribute('aria-pressed') !== 'true';\n    sw.setAttribute('aria-pressed', on);\n    sw.textContent = on ? 'On' : 'Off';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button starts Off",
+              "expr": "text('#sw') === 'Off' && attr('#sw', 'aria-pressed') === 'false'"
+            },
+            {
+              "label": "One click turns it On",
+              "expr": "click('#sw') && text('#sw') === 'On' && attr('#sw', 'aria-pressed') === 'true'"
+            },
+            {
+              "label": "A second click turns it Off",
+              "expr": "click('#sw') && text('#sw') === 'Off' && attr('#sw', 'aria-pressed') === 'false'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

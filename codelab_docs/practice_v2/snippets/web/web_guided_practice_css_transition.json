@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Smooth Colour Change With transition",
+    "language": "html",
+    "description": "Type a button that changes colour when pressed, and fades between the colours over a third of a second. The transition goes on the normal state, so it works in both directions.",
+    "ghostCode": "<style>\n  .btn {\n    background: steelblue;\n    color: white;\n    transition: background-color 0.3s;\n  }\n  .btn:active { background: navy; }\n</style>\n<button class=\"btn\">Press me</button>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button fades its background colour",
+              "expr": "style('.btn', 'transitionProperty') === 'background-color'"
+            },
+            {
+              "label": "The fade takes 0.3 seconds",
+              "expr": "style('.btn', 'transitionDuration') === '0.3s'"
+            },
+            {
+              "label": "The button starts steel blue",
+              "expr": "style('.btn', 'backgroundColor') === 'rgb(70, 130, 180)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

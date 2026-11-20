@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Width does not change",
+    "language": "html",
+    "problemDescription": "The progress bar should grow to 80 percent when the button is pressed, but it does not change. The number is set without a unit.",
+    "buggyCode": "<div id=\"fill\" style=\"height: 12px; width: 0; background: green\"></div>\n<button id=\"go\">Go</button>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    document.getElementById('fill').style.width = 80;\n  });\n</script>",
+    "solution": {
+      "code": "<div id=\"fill\" style=\"height: 12px; width: 0; background: green\"></div>\n<button id=\"go\">Go</button>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    document.getElementById('fill').style.width = '80%';\n  });\n</script>",
+      "explanation": "The style property needs a CSS value with a unit, such as '80%' or '80px'. A plain number is not valid there, so the browser ignores it."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "After a click the fill takes up most of the line",
+              "expr": "click('#go') && el('#fill').offsetWidth > 100"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

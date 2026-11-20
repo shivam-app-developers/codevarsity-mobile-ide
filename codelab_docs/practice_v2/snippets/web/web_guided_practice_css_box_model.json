@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Padding, Border and Margin",
+    "language": "html",
+    "description": "Type a box with 10px padding, a 2px border and a 20px margin. Padding is inside the border, margin is outside.",
+    "ghostCode": "<style>\n  .box {\n    padding: 10px;\n    border: 2px solid black;\n    margin: 20px;\n  }\n</style>\n<div class=\"box\">Box</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Padding is 10px",
+              "expr": "px('.box', 'paddingTop') === 10"
+            },
+            {
+              "label": "Border is 2px",
+              "expr": "px('.box', 'borderTopWidth') === 2"
+            },
+            {
+              "label": "Margin is 20px",
+              "expr": "px('.box', 'marginTop') === 20"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

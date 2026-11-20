@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Closure Counter",
+    "language": "html",
+    "description": "Type a function that returns another function. The inner function remembers the variable count of its parent, so each counter has its own private number. This is a closure, a favourite interview question.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  function makeCounter() {\n    var count = 0;\n    return function () {\n      count = count + 1;\n      return count;\n    };\n  }\n  var a = makeCounter();\n  var b = makeCounter();\n  a(); a();\n  document.getElementById('out').textContent = a() + ',' + b();\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first counter is at 3 and the second at 1",
+              "expr": "text('#out') === '3,1'"
+            },
+            {
+              "label": "No script errors happen",
+              "expr": "errors().length === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

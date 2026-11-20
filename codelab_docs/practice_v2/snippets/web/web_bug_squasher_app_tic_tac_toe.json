@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Empty cells count as a win",
+    "language": "html",
+    "problemDescription": "On an empty board the function answers with an empty mark instead of none, because three empty cells are equal to each other.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var lines = [\n    [0,1,2], [3,4,5], [6,7,8], [0,3,6],\n    [1,4,7], [2,5,8], [0,4,8], [2,4,6]\n  ];\n  function winner(b) {\n    for (var i = 0; i < lines.length; i++) {\n      var x = lines[i];\n      var m = b[x[0]];\n      if (m === b[x[1]] && m === b[x[2]]) return m;\n    }\n    return 'none';\n  }\n  var empty = ['', '', '', '', '', '', '', '', ''];\n  document.getElementById('out').textContent = winner(empty);\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var lines = [\n    [0,1,2], [3,4,5], [6,7,8], [0,3,6],\n    [1,4,7], [2,5,8], [0,4,8], [2,4,6]\n  ];\n  function winner(b) {\n    for (var i = 0; i < lines.length; i++) {\n      var x = lines[i];\n      var m = b[x[0]];\n      if (m && m === b[x[1]] && m === b[x[2]]) return m;\n    }\n    return 'none';\n  }\n  var empty = ['', '', '', '', '', '', '', '', ''];\n  document.getElementById('out').textContent = winner(empty);\n</script>",
+      "explanation": "Three empty strings are equal to each other, so the first line looks like a win. The test must also check that the first cell is not empty. An empty string counts as false, so m && ... skips it."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "An empty board has no winner",
+              "expr": "text('#out') === 'none'"
+            },
+            {
+              "label": "A column of O still wins",
+              "expr": "winner(['O', 'X', '', 'O', 'X', '', 'O', '', '']) === 'O'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

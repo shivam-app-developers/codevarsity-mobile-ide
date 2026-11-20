@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a list for a row of links",
+    "language": "html",
+    "problemDescription": "These links are separated by line breaks. Put them in a ul, one li per link. The links and their text must stay the same.",
+    "initialCode": "<a href=\"#a\">Home</a><br>\n<a href=\"#b\">Shop</a><br>\n<a href=\"#c\">Contact</a>",
+    "solution": {
+      "code": "<ul>\n  <li><a href=\"#a\">Home</a></li>\n  <li><a href=\"#b\">Shop</a></li>\n  <li><a href=\"#c\">Contact</a></li>\n</ul>",
+      "explanation": "Links that belong together are a list of links. A ul tells assistive technology \"list of 3 items\", and CSS can lay the items out in a row without any br tags."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three links",
+              "expr": "count('a') === 3"
+            },
+            {
+              "label": "The links go to #a, #b and #c",
+              "expr": "[].map.call(document.querySelectorAll('a'), function (a) { return a.getAttribute('href'); }).join() === '#a,#b,#c'"
+            },
+            {
+              "label": "The link texts are kept",
+              "expr": "text('body') === 'Home Shop Contact'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

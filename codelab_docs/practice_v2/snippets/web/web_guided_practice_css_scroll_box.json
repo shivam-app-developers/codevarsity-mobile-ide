@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: A Scrollable Box",
+    "language": "html",
+    "description": "Type a box with a fixed height that scrolls when its content is too long. overflow auto shows scroll bars only when they are needed.",
+    "ghostCode": "<style>\n  .log {\n    height: 60px;\n    overflow: auto;\n    border: 1px solid gray;\n  }\n</style>\n<div class=\"log\">\n  <p>Line 1</p><p>Line 2</p><p>Line 3</p>\n  <p>Line 4</p><p>Line 5</p><p>Line 6</p>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box keeps its height",
+              "expr": "el('.log').clientHeight === 60"
+            },
+            {
+              "label": "The content is taller than the box",
+              "expr": "el('.log').scrollHeight > el('.log').clientHeight"
+            },
+            {
+              "label": "The box can scroll",
+              "expr": "style('.log', 'overflowY') === 'auto'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

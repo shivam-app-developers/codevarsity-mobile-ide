@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move decoration from HTML to CSS",
+    "language": "html",
+    "problemDescription": "Each item starts with a typed arrow in the HTML. Move the arrow to a ::before rule so the text only has the words. The visible line must read the same.",
+    "initialCode": "<p class=\"step\">-&gt; Open the box</p>\n<p class=\"step\">-&gt; Read the guide</p>",
+    "solution": {
+      "code": "<style>\n  .step::before { content: \"-> \"; }\n</style>\n<p class=\"step\">Open the box</p>\n<p class=\"step\">Read the guide</p>",
+      "explanation": "A marker that is only decoration does not belong in the content. In CSS it can be changed in one place, and it is not read out as text by a screen reader."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are two steps",
+              "expr": "count('.step') === 2"
+            },
+            {
+              "label": "Each step reads with an arrow in front",
+              "expr": "[].every.call(document.querySelectorAll('.step'), function (p) { return (getComputedStyle(p, '::before').content.replace(/\"/g, '') + p.textContent).indexOf('-> ') === 0 || p.textContent.indexOf('-> ') === 0; })"
+            },
+            {
+              "label": "The step words are there",
+              "expr": "text('body').indexOf('Open the box') >= 0 && text('body').indexOf('Read the guide') >= 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

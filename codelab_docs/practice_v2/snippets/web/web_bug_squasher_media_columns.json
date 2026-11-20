@@ -1,0 +1,37 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Layout never changes on a wide screen",
+    "language": "html",
+    "problemDescription": "On a wide screen the sidebar and content should sit side by side, but they stay stacked. The media query asks for a width that is never reached.",
+    "buggyCode": "<style>\n  .side, .main { height: 30px; }\n  .side { background: silver; }\n  .main { background: wheat; }\n  @media (min-width: 6000px) {\n    .page { display: flex; }\n    .side { width: 120px; }\n    .main { flex: 1; }\n  }\n</style>\n<div class=\"page\">\n  <div class=\"side\"></div>\n  <div class=\"main\"></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .side, .main { height: 30px; }\n  .side { background: silver; }\n  .main { background: wheat; }\n  @media (min-width: 600px) {\n    .page { display: flex; }\n    .side { width: 120px; }\n    .main { flex: 1; }\n  }\n</style>\n<div class=\"page\">\n  <div class=\"side\"></div>\n  <div class=\"main\"></div>\n</div>",
+      "explanation": "min-width: 6000px matches only screens at least 6000px wide, which does not exist. Typical breakpoints are 600px or 768px, a size where the layout starts to have enough room for columns."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "On a phone the blocks are stacked",
+              "expr": "el('.main').offsetTop > el('.side').offsetTop"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen the blocks share a row",
+              "expr": "el('.main').offsetTop === el('.side').offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

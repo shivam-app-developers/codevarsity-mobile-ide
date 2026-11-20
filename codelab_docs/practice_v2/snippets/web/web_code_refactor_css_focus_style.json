@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Style the focus ring with outline",
+    "language": "html",
+    "problemDescription": "The focused field gets a wider border, which makes the layout jump by a few pixels. Use an outline, which takes no space, with the same colour. The field must not change size when focused.",
+    "initialCode": "<style>\n  input { border: 1px solid gray; outline: none; }\n  input:focus { border: 3px solid green; }\n</style>\n<input id=\"q\" placeholder=\"Search\">",
+    "solution": {
+      "code": "<style>\n  input { border: 1px solid gray; }\n  input:focus { outline: 2px solid green; }\n</style>\n<input id=\"q\" placeholder=\"Search\">",
+      "explanation": "A border changes the size of the box, so the layout around it shifts when focus moves. An outline is drawn outside the box and takes no space, so nothing jumps."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The field looks different when focused",
+              "expr": "(() => { var before = style('#q', 'borderTopColor') + style('#q', 'outlineStyle') + style('#q', 'outlineColor'); el('#q').focus(); return before !== style('#q', 'borderTopColor') + style('#q', 'outlineStyle') + style('#q', 'outlineColor'); })()"
+            },
+            {
+              "label": "The field is the same height before and after focus",
+              "expr": "(() => { var h = el('#q').offsetHeight; el('#q').focus(); return h === el('#q').offsetHeight; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

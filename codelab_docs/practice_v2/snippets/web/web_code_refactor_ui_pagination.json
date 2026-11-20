@@ -1,0 +1,40 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One function that clamps the page",
+    "language": "html",
+    "problemDescription": "Both buttons repeat checks for the first and last page. Move the limit into one function named go that keeps the page between 1 and 3. The numbers shown must stay the same.",
+    "initialCode": "<button id=\"a\">Prev</button>\n<span id=\"n\">1</span>\n<button id=\"b\">Next</button>\n<script>\n  var page = 1;\n  function show() { document.getElementById('n').textContent = page; }\n  document.getElementById('a').addEventListener('click', function () {\n    if (page > 1) page = page - 1;\n    show();\n  });\n  document.getElementById('b').addEventListener('click', function () {\n    if (page < 3) page = page + 1;\n    show();\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"a\">Prev</button>\n<span id=\"n\">1</span>\n<button id=\"b\">Next</button>\n<script>\n  var page = 1;\n  function go(step) {\n    page = Math.min(3, Math.max(1, page + step));\n    document.getElementById('n').textContent = page;\n  }\n  document.getElementById('a').onclick = function () { go(-1); };\n  document.getElementById('b').onclick = function () { go(1); };\n</script>",
+      "explanation": "The limits are written once in go, and the buttons only say which way to step. A new button, such as Last, would call the same function."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page starts at 1",
+              "expr": "text('#n') === '1'"
+            },
+            {
+              "label": "Next twice gives 3",
+              "expr": "click('#b') && click('#b') && text('#n') === '3'"
+            },
+            {
+              "label": "Another Next stays at 3",
+              "expr": "click('#b') && text('#n') === '3'"
+            },
+            {
+              "label": "Prev three times stays at 1",
+              "expr": "click('#a') && click('#a') && click('#a') && text('#n') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

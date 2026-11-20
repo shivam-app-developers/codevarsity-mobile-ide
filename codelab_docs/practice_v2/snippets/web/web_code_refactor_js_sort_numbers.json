@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Sort from high to low with a compare function",
+    "language": "html",
+    "problemDescription": "The numbers are sorted low to high and then reversed in a second step. Swap the compare function so one sort puts them high to low. The result must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var points = [30, 5, 120, 45];\n  points.sort(function (a, b) { return a - b; });\n  points.reverse();\n  document.getElementById('out').textContent = points.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var points = [30, 5, 120, 45];\n  points.sort(function (a, b) { return b - a; });\n  document.getElementById('out').textContent = points.join(',');\n</script>",
+      "explanation": "Returning b - a instead of a - b reverses the order in the same pass. Two steps become one, and the intent is in the compare function."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The points run from high to low",
+              "expr": "text('#out') === '120,45,30,5'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

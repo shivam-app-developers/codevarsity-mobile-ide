@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Form reloads the page",
+    "language": "html",
+    "problemDescription": "Pressing Save makes the page reload and the thank-you message vanishes at once. The handler shows the message, but the browser's own submit still goes ahead.",
+    "buggyCode": "<form id=\"f\">\n  <input id=\"mail\" value=\"a@b.c\">\n  <button>Save</button>\n</form>\n<p id=\"msg\"></p>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    document.getElementById('msg').textContent = 'Thanks!';\n  });\n</script>",
+    "solution": {
+      "code": "<form id=\"f\">\n  <input id=\"mail\" value=\"a@b.c\">\n  <button>Save</button>\n</form>\n<p id=\"msg\"></p>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    e.preventDefault();\n    document.getElementById('msg').textContent = 'Thanks!';\n  });\n</script>",
+      "explanation": "Submitting a form sends it to a new address and reloads the page. Calling preventDefault in the submit handler cancels that, so the page stays and the message remains visible."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The browser's own submit is stopped",
+              "expr": "submit('#f') === true"
+            },
+            {
+              "label": "The thank-you message shows",
+              "expr": "submit('#f') && text('#msg') === 'Thanks!'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Count right answers with an array",
+    "language": "html",
+    "problemDescription": "Each question has its own if line that adds one to the score. Keep the right answers in an object and loop over the questions. The score must stay the same.",
+    "initialCode": "<label><input type=\"radio\" name=\"x\" value=\"a\"> A</label>\n<label><input type=\"radio\" name=\"x\" value=\"b\"> B</label>\n<label><input type=\"radio\" name=\"y\" value=\"a\"> A</label>\n<label><input type=\"radio\" name=\"y\" value=\"b\"> B</label>\n<button id=\"go\">Score</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    var score = 0;\n    var x = document.querySelector('[name=x]:checked');\n    var y = document.querySelector('[name=y]:checked');\n    if (x && x.value === 'a') score++;\n    if (y && y.value === 'b') score++;\n    document.getElementById('out').textContent = score;\n  });\n</script>",
+    "solution": {
+      "code": "<label><input type=\"radio\" name=\"x\" value=\"a\"> A</label>\n<label><input type=\"radio\" name=\"x\" value=\"b\"> B</label>\n<label><input type=\"radio\" name=\"y\" value=\"a\"> A</label>\n<label><input type=\"radio\" name=\"y\" value=\"b\"> B</label>\n<button id=\"go\">Score</button>\n<p id=\"out\"></p>\n<script>\n  var answers = { x: 'a', y: 'b' };\n  document.getElementById('go').addEventListener('click', function () {\n    var score = 0;\n    Object.keys(answers).forEach(function (q) {\n      var pick = document.querySelector('[name=' + q + ']:checked');\n      if (pick && pick.value === answers[q]) score++;\n    });\n    document.getElementById('out').textContent = score;\n  });\n</script>",
+      "explanation": "The right answers are data and the loop is code. A third question is one more entry in the object, and the repeated if lines disappear."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Nothing chosen scores 0",
+              "expr": "click('#go') && text('#out') === '0'"
+            },
+            {
+              "label": "Both right scores 2",
+              "expr": "document.querySelector('[name=x][value=a]').click() || document.querySelector('[name=y][value=b]').click() || click('#go') && text('#out') === '2'"
+            },
+            {
+              "label": "One right scores 1",
+              "expr": "document.querySelector('[name=y][value=a]').click() || click('#go') && text('#out') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

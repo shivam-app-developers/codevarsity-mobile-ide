@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Toggle hidden with a boolean",
+    "language": "html",
+    "problemDescription": "The loop uses an if and else to hide or show each item. Assign the condition to the hidden property in one line. The filter must work the same.",
+    "initialCode": "<button id=\"b\">Only red</button>\n<ul>\n  <li data-c=\"red\">Rose</li>\n  <li data-c=\"blue\">Sky</li>\n</ul>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    document.querySelectorAll('li').forEach(function (li) {\n      if (li.dataset.c === 'red') {\n        li.hidden = false;\n      } else {\n        li.hidden = true;\n      }\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"b\">Only red</button>\n<ul>\n  <li data-c=\"red\">Rose</li>\n  <li data-c=\"blue\">Sky</li>\n</ul>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    document.querySelectorAll('li').forEach(function (li) {\n      li.hidden = li.dataset.c !== 'red';\n    });\n  });\n</script>",
+      "explanation": "A comparison gives true or false, which is what the hidden property wants. The five lines of if and else become one line with the same meaning."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Both items are visible at the start",
+              "expr": "document.querySelectorAll('li:not([hidden])').length === 2"
+            },
+            {
+              "label": "After the click only Rose is visible",
+              "expr": "click('#b') && document.querySelectorAll('li:not([hidden])').length === 1 && visible('li[data-c=red]')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

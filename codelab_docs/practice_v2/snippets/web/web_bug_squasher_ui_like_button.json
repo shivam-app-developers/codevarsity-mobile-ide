@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every press adds a like",
+    "language": "html",
+    "problemDescription": "Pressing the heart again should take the like back, but the count keeps going up. The page does not remember that it was already liked.",
+    "buggyCode": "<button id=\"heart\">Heart</button>\n<b id=\"total\">5</b>\n<script>\n  var liked = false;\n  var total = 5;\n  document.getElementById('heart').addEventListener('click', function () {\n    total = total + 1;\n    document.getElementById('total').textContent = total;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"heart\">Heart</button>\n<b id=\"total\">5</b>\n<script>\n  var liked = false;\n  var total = 5;\n  document.getElementById('heart').addEventListener('click', function () {\n    liked = !liked;\n    total = liked ? total + 1 : total - 1;\n    document.getElementById('total').textContent = total;\n  });\n</script>",
+      "explanation": "A toggle needs to remember its current state. A boolean tells whether the next press adds or removes a like, and each press flips it."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "One press makes it 6",
+              "expr": "click('#heart') && text('#total') === '6'"
+            },
+            {
+              "label": "A second press takes it back to 5",
+              "expr": "click('#heart') && text('#total') === '5'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

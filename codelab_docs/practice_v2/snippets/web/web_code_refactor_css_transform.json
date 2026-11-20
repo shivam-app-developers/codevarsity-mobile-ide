@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Centre with translate",
+    "language": "html",
+    "problemDescription": "The box is centred inside its parent by two negative margins. Use position absolute with top and left of 50% and transform translate(-50%, -50%). It must stay centred.",
+    "initialCode": "<style>\n  .stage {\n    position: relative;\n    width: 200px;\n    height: 100px;\n    background: #eee;\n  }\n  .pin {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 40px;\n    height: 40px;\n    margin: -20px 0 0 -20px;\n    background: crimson;\n  }\n</style>\n<div class=\"stage\"><div class=\"pin\"></div></div>",
+    "solution": {
+      "code": "<style>\n  .stage {\n    position: relative;\n    width: 200px;\n    height: 100px;\n    background: #eee;\n  }\n  .pin {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 40px;\n    height: 40px;\n    transform: translate(-50%, -50%);\n    background: crimson;\n  }\n</style>\n<div class=\"stage\"><div class=\"pin\"></div></div>",
+      "explanation": "translate(-50%, -50%) moves the element back by half of its own size, so no number depends on the size. With margins, changing the size of the pin means changing the margins too."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The pin is centred sideways",
+              "expr": "(() => { var s = el('.stage').getBoundingClientRect(), d = el('.pin').getBoundingClientRect(); return Math.abs((s.left + s.width / 2) - (d.left + d.width / 2)) < 1; })()"
+            },
+            {
+              "label": "The pin is centred up and down",
+              "expr": "(() => { var s = el('.stage').getBoundingClientRect(), d = el('.pin').getBoundingClientRect(); return Math.abs((s.top + s.height / 2) - (d.top + d.height / 2)) < 1; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

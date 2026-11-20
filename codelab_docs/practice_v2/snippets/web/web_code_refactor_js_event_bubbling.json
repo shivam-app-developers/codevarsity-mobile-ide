@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One handler with currentTarget",
+    "language": "html",
+    "problemDescription": "Two handlers do the same thing with a different word. Use one function that reads the name from event.currentTarget. The log must stay the same.",
+    "initialCode": "<div id=\"outer\"><button id=\"inner\">Go</button></div>\n<p id=\"log\"></p>\n<script>\n  var log = document.getElementById('log');\n  document.getElementById('outer').addEventListener('click', function () {\n    log.textContent += 'outer ';\n  });\n  document.getElementById('inner').addEventListener('click', function () {\n    log.textContent += 'inner ';\n  });\n</script>",
+    "solution": {
+      "code": "<div id=\"outer\"><button id=\"inner\">Go</button></div>\n<p id=\"log\"></p>\n<script>\n  var log = document.getElementById('log');\n  function report(e) {\n    log.textContent += e.currentTarget.id + ' ';\n  }\n  document.getElementById('outer').addEventListener('click', report);\n  document.getElementById('inner').addEventListener('click', report);\n</script>",
+      "explanation": "currentTarget is the element the listener is attached to, while target is the element that was actually clicked. One function can serve many elements by asking which one it is running for."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "A click on the button logs inner then outer",
+              "expr": "click('#inner') && text('#log') === 'inner outer'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

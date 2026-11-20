@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Later rule does not apply",
+    "language": "html",
+    "problemDescription": "The button should turn red, but it stays blue. A second rule comes later in the file, yet an id rule above is more specific and keeps winning.",
+    "buggyCode": "<style>\n  #go { background: blue; color: white; }\n  .danger { background: red; }\n</style>\n<button id=\"go\" class=\"danger\">Delete</button>",
+    "solution": {
+      "code": "<style>\n  button { background: blue; color: white; }\n  .danger { background: red; }\n</style>\n<button id=\"go\" class=\"danger\">Delete</button>",
+      "explanation": "The selector #go has more weight than .danger, so it wins even though it comes first. Keep selectors short and similar in weight, so the later rule can win without needing a stronger selector."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button is red",
+              "expr": "style('button', 'backgroundColor') === 'rgb(255, 0, 0)'"
+            },
+            {
+              "label": "The text is still white",
+              "expr": "style('button', 'color') === 'rgb(255, 255, 255)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

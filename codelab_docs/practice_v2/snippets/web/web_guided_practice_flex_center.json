@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Centre With Flexbox",
+    "language": "html",
+    "description": "Type a stage that centres its child both ways. With display flex, justify-content centres along the row and align-items centres across it.",
+    "ghostCode": "<style>\n  .stage {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 120px;\n    background: lightgray;\n  }\n  .dot { width: 40px; height: 40px; background: tomato; }\n</style>\n<div class=\"stage\"><div class=\"dot\"></div></div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The stage is a flex container",
+              "expr": "style('.stage', 'display') === 'flex'"
+            },
+            {
+              "label": "The dot is centred sideways",
+              "expr": "(() => { var s = el('.stage').getBoundingClientRect(), d = el('.dot').getBoundingClientRect(); return Math.abs((s.left + s.width / 2) - (d.left + d.width / 2)) < 1; })()"
+            },
+            {
+              "label": "The dot is centred up and down",
+              "expr": "(() => { var s = el('.stage').getBoundingClientRect(), d = el('.dot').getBoundingClientRect(); return Math.abs((s.top + s.height / 2) - (d.top + d.height / 2)) < 1; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

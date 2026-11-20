@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use Math.max for the lower limit",
+    "language": "html",
+    "problemDescription": "The handler uses an if to stop at 1. Replace it with Math.max so the result is never below 1. The button must behave the same.",
+    "initialCode": "<button id=\"d\">-</button>\n<span id=\"v\">3</span>\n<script>\n  var v = 3;\n  document.getElementById('d').addEventListener('click', function () {\n    if (v > 1) {\n      v = v - 1;\n    }\n    document.getElementById('v').textContent = v;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"d\">-</button>\n<span id=\"v\">3</span>\n<script>\n  var v = 3;\n  document.getElementById('d').addEventListener('click', function () {\n    v = Math.max(1, v - 1);\n    document.getElementById('v').textContent = v;\n  });\n</script>",
+      "explanation": "Math.max(1, x) means \"x, but at least 1\". The limit is in one expression instead of a branch, and a maximum works the same way with Math.min."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The value starts at 3",
+              "expr": "text('#v') === '3'"
+            },
+            {
+              "label": "Two clicks make it 1",
+              "expr": "click('#d') && click('#d') && text('#v') === '1'"
+            },
+            {
+              "label": "More clicks stay at 1",
+              "expr": "click('#d') && click('#d') && text('#v') === '1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

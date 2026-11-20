@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use the sibling selector for the label",
+    "language": "html",
+    "problemDescription": "The page shows a hint with JavaScript when the box is ticked. Replace the script with CSS using :checked and the ~ selector. The hint must still appear when the box is ticked.",
+    "initialCode": "<input type=\"checkbox\" id=\"agree\">\n<label for=\"agree\">I agree</label>\n<p id=\"hint\" style=\"display: none\">Thank you</p>\n<script>\n  var hint = document.getElementById('hint');\n  var box = document.getElementById('agree');\n  box.addEventListener('change', function () {\n    hint.style.display = box.checked ? 'block' : 'none';\n  });\n</script>",
+    "solution": {
+      "code": "<style>\n  .hint { display: none; }\n  #agree:checked ~ .hint { display: block; }\n</style>\n<input type=\"checkbox\" id=\"agree\">\n<label for=\"agree\">I agree</label>\n<p class=\"hint\">Thank you</p>",
+      "explanation": "The checked state is already known to the browser, so CSS can react to it without any script. That is shorter, cannot throw errors and works even if the JavaScript fails to load."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The hint starts hidden",
+              "expr": "!visible('p')"
+            },
+            {
+              "label": "Ticking the box shows the hint",
+              "expr": "click('#agree') && visible('p')"
+            },
+            {
+              "label": "Clearing the box hides it",
+              "expr": "click('#agree') && !visible('p')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move a table caption into caption",
+    "language": "html",
+    "problemDescription": "The title of this table is a paragraph above it. Use a caption element inside the table, so the title belongs to the table. The numbers must stay the same.",
+    "initialCode": "<p>Weekly steps</p>\n<table border=\"1\">\n  <tr><th>Day</th><th>Steps</th></tr>\n  <tr><td>Mon</td><td>4000</td></tr>\n  <tr><td>Tue</td><td>5200</td></tr>\n</table>",
+    "solution": {
+      "code": "<table border=\"1\">\n  <caption>Weekly steps</caption>\n  <tr><th>Day</th><th>Steps</th></tr>\n  <tr><td>Mon</td><td>4000</td></tr>\n  <tr><td>Tue</td><td>5200</td></tr>\n</table>",
+      "explanation": "A caption is part of the table, so screen readers announce it when the table is reached and it moves with the table. A separate paragraph is only close to the table by position."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The title Weekly steps is on the page",
+              "expr": "text('body').indexOf('Weekly steps') >= 0"
+            },
+            {
+              "label": "The table has three rows",
+              "expr": "count('tr') === 3"
+            },
+            {
+              "label": "The step counts are kept",
+              "expr": "text('td') === 'Mon' && text('body').indexOf('4000') > 0 && text('body').indexOf('5200') > 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

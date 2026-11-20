@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Remove the id from the style rule",
+    "language": "html",
+    "problemDescription": "The style is attached to an id, which makes it hard to override. Move it to a class and keep the same look.",
+    "initialCode": "<style>\n  #card { border: 2px solid navy; padding: 8px; }\n</style>\n<div id=\"card\">Hello</div>",
+    "solution": {
+      "code": "<style>\n  .card { border: 2px solid navy; padding: 8px; }\n</style>\n<div class=\"card\">Hello</div>",
+      "explanation": "A class can be reused and overridden, while an id rule is very strong and only fits one element. Styling with classes keeps the specificity low and the CSS easy to change."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box has a navy border",
+              "expr": "style('div', 'borderTopColor') === 'rgb(0, 0, 128)'"
+            },
+            {
+              "label": "The border is 2px wide",
+              "expr": "px('div', 'borderTopWidth') === 2"
+            },
+            {
+              "label": "The padding is 8px",
+              "expr": "px('div', 'paddingLeft') === 8"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

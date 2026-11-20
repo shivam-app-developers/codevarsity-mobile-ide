@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Enable a Button When Ready",
+    "language": "html",
+    "description": "Type a form where the Send button is disabled until something is typed. The input event runs on every key, and the disabled property turns the button on and off.",
+    "ghostCode": "<input id=\"msg\" placeholder=\"Message\">\n<button id=\"send\" disabled>Send</button>\n<script>\n  var msg = document.getElementById('msg');\n  var send = document.getElementById('send');\n  msg.addEventListener('input', function () {\n    send.disabled = msg.value.trim() === '';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button starts disabled",
+              "expr": "el('#send').disabled === true"
+            },
+            {
+              "label": "Typing a message enables it",
+              "expr": "type('#msg', 'Hello') && el('#send').disabled === false"
+            },
+            {
+              "label": "Clearing the message disables it again",
+              "expr": "type('#msg', '') && el('#send').disabled === true"
+            },
+            {
+              "label": "Spaces alone keep it disabled",
+              "expr": "type('#msg', '   ') && el('#send').disabled === true"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

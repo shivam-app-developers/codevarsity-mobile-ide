@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Sticky Header",
+    "language": "html",
+    "description": "Type a header that stays at the top while the page scrolls. position sticky with top 0 behaves normally until it would leave the screen, then it sticks.",
+    "ghostCode": "<style>\n  header {\n    position: sticky;\n    top: 0;\n    background: navy;\n    color: white;\n  }\n  .tall { height: 1000px; }\n</style>\n<header>My site</header>\n<div class=\"tall\">Scroll down</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The header is sticky",
+              "expr": "style('header', 'position') === 'sticky'"
+            },
+            {
+              "label": "The header sticks at the top",
+              "expr": "style('header', 'top') === '0px'"
+            },
+            {
+              "label": "After scrolling the header is still at the top",
+              "expr": "(() => { window.scrollTo(0, 400); return Math.abs(el('header').getBoundingClientRect().top) < 1; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

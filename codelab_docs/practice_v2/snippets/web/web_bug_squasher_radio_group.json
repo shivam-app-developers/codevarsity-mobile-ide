@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Two radio buttons can be chosen together",
+    "language": "html",
+    "problemDescription": "The user can choose both \"Card\" and \"Cash\" at the same time. Radio buttons should work as a group where choosing one clears the other.",
+    "buggyCode": "<form>\n  <label><input type=\"radio\" name=\"pay\" id=\"card\"> Card</label>\n  <label><input type=\"radio\" name=\"payment\" id=\"cash\"> Cash</label>\n</form>",
+    "solution": {
+      "code": "<form>\n  <label><input type=\"radio\" name=\"pay\" id=\"card\"> Card</label>\n  <label><input type=\"radio\" name=\"pay\" id=\"cash\"> Cash</label>\n</form>",
+      "explanation": "The browser groups radio buttons by the name attribute. Different names mean different groups, so each group has its own chosen button. Give every button of one question the same name."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Choosing Cash clears Card",
+              "expr": "click('#card') && click('#cash') && !el('#card').checked && el('#cash').checked"
+            },
+            {
+              "label": "Only one button is chosen",
+              "expr": "count('input[type=radio]:checked') === 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

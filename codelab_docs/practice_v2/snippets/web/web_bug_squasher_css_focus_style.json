@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Focus is invisible",
+    "language": "html",
+    "problemDescription": "Keyboard users cannot see which field is active. The page removes the focus outline and has no other style for the focused field.",
+    "buggyCode": "<style>\n  input { border: 2px solid silver; }\n  input:focus { outline: none; }\n</style>\n<input id=\"mail\" placeholder=\"Email\">",
+    "solution": {
+      "code": "<style>\n  input { border: 2px solid silver; }\n  input:focus { border-color: orange; outline: 2px solid orange; }\n</style>\n<input id=\"mail\" placeholder=\"Email\">",
+      "explanation": "A focus outline is the only sign for keyboard and screen magnifier users of where they are. If you remove it, you must replace it with another clear style on :focus."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Focusing the field changes how it looks",
+              "expr": "(() => { var before = style('#mail', 'borderTopColor') + style('#mail', 'outlineStyle'); el('#mail').focus(); return before !== style('#mail', 'borderTopColor') + style('#mail', 'outlineStyle'); })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace a table layout with grid",
+    "language": "html",
+    "problemDescription": "A table is used to place the label and the value side by side. Use a grid with two columns. The text must stay in the same order.",
+    "initialCode": "<table>\n  <tr><td>Name</td><td>Asha</td></tr>\n  <tr><td>City</td><td>Pune</td></tr>\n</table>",
+    "solution": {
+      "code": "<style>\n  .info { display: grid; grid-template-columns: 80px 1fr; }\n</style>\n<div class=\"info\">\n  <span>Name</span><span>Asha</span>\n  <span>City</span><span>Pune</span>\n</div>",
+      "explanation": "A table is for data that has rows and columns by meaning. Label and value pairs are layout, and a grid does that without table markup, and it can change shape for different screens."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The text reads in order",
+              "expr": "document.body.innerText.replace(/\\s/g, '') === 'NameAshaCityPune'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

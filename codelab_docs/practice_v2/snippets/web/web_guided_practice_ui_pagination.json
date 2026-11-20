@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Page Buttons With Limits",
+    "language": "html",
+    "description": "Type Previous and Next buttons for pages 1 to 5. Each button is disabled at its end, so the page number never leaves the range.",
+    "ghostCode": "<button id=\"prev\" disabled>Prev</button>\n<span id=\"page\">1</span>\n<button id=\"next\">Next</button>\n<script>\n  var page = 1;\n  var prev = document.getElementById('prev');\n  var next = document.getElementById('next');\n  function update() {\n    document.getElementById('page').textContent = page;\n    prev.disabled = page === 1;\n    next.disabled = page === 5;\n  }\n  prev.onclick = function () { page = page - 1; update(); };\n  next.onclick = function () { page = page + 1; update(); };\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page starts at 1 with Prev disabled",
+              "expr": "text('#page') === '1' && el('#prev').disabled === true"
+            },
+            {
+              "label": "Next twice gives 3",
+              "expr": "click('#next') && click('#next') && text('#page') === '3'"
+            },
+            {
+              "label": "Four more steps stop at 5",
+              "expr": "(() => { for (var i = 0; i < 4; i++) el('#next').click(); return text('#page') === '5'; })()"
+            },
+            {
+              "label": "Next is disabled on the last page",
+              "expr": "el('#next').disabled === true"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

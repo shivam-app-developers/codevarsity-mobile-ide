@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Text too small to read",
+    "language": "html",
+    "problemDescription": "The body text is meant to be 18px but it renders at the default size. The size is written as a bare number, which CSS ignores.",
+    "buggyCode": "<style>\n  p { font-size: 18; }\n</style>\n<p>Readable text</p>",
+    "solution": {
+      "code": "<style>\n  p { font-size: 18px; }\n</style>\n<p>Readable text</p>",
+      "explanation": "A length in CSS needs a unit, such as px, rem or %. Only the number 0 may be written without one. A rule with an invalid value is ignored, so the browser uses the default size."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The text is 18px",
+              "expr": "px('p', 'fontSize') === 18"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

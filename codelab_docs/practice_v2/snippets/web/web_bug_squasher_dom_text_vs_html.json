@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Typed tags become real elements",
+    "language": "html",
+    "problemDescription": "When someone types a tag such as a bold tag, the page turns it into a real element instead of showing the text. A user could even inject a script this way.",
+    "buggyCode": "<input id=\"name\" value=\"<i>Bob</i>\">\n<button id=\"go\">Greet</button>\n<p id=\"hello\"></p>\n<script>\n  var who = document.getElementById('name');\n  document.getElementById('go').addEventListener('click', function () {\n    document.getElementById('hello').innerHTML = 'Hi ' + who.value;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"name\" value=\"<i>Bob</i>\">\n<button id=\"go\">Greet</button>\n<p id=\"hello\"></p>\n<script>\n  var who = document.getElementById('name');\n  document.getElementById('go').addEventListener('click', function () {\n    document.getElementById('hello').textContent = 'Hi ' + who.value;\n  });\n</script>",
+      "explanation": "innerHTML parses its text as HTML, so typed tags become real elements, which is how script injection happens. textContent never parses, so it is the safe choice for text that came from a user."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The greeting shows the typed text",
+              "expr": "click('#go') && text('#hello') === 'Hi <i>Bob</i>'"
+            },
+            {
+              "label": "No italic element is created",
+              "expr": "count('#hello i') === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

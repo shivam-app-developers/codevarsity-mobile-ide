@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Buttons on one line instead of stacked",
+    "language": "html",
+    "problemDescription": "The three buttons should be stacked in a column on the phone, but they sit side by side in one row. The direction is not set.",
+    "buggyCode": "<style>\n  .bar { display: flex; gap: 4px; }\n</style>\n<div class=\"bar\">\n  <button>One</button>\n  <button>Two</button>\n  <button>Three</button>\n</div>",
+    "solution": {
+      "code": "<style>\n  .bar { display: flex; flex-direction: column; gap: 4px; }\n</style>\n<div class=\"bar\">\n  <button>One</button>\n  <button>Two</button>\n  <button>Three</button>\n</div>",
+      "explanation": "A flex container lays its children out in a row unless flex-direction says otherwise. Add flex-direction: column to stack them."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The buttons are stacked",
+              "expr": "(() => { var b = document.querySelectorAll('.bar button'); return b[0].offsetTop < b[1].offsetTop && b[1].offsetTop < b[2].offsetTop; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

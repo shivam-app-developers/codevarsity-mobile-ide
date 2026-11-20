@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Caption inside a figure",
+    "language": "html",
+    "problemDescription": "The caption sits in a paragraph under the image. Group them with figure and figcaption. The text and the image must stay.",
+    "initialCode": "<img src=\"sea.jpg\" alt=\"Sea sunset\" width=\"40\" height=\"40\">\n<p>Sunset at the beach</p>",
+    "solution": {
+      "code": "<figure>\n  <img src=\"sea.jpg\" alt=\"Sea sunset\" width=\"40\" height=\"40\">\n  <figcaption>Sunset at the beach</figcaption>\n</figure>",
+      "explanation": "figure and figcaption tell the browser that the caption belongs to the image. Both can move together and a screen reader announces them as one unit."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The image keeps its alt text",
+              "expr": "attr('img', 'alt') === 'Sea sunset'"
+            },
+            {
+              "label": "The caption text is on the page",
+              "expr": "text('body') === 'Sunset at the beach'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

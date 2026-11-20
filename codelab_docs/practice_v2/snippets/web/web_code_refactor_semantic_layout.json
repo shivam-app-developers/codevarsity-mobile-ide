@@ -1,0 +1,40 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace generic wrappers with semantic tags",
+    "language": "html",
+    "problemDescription": "The page works, but it is built from divs with class names. Rewrite it with header, main, section and footer so the structure is in the tags. The content must stay the same.",
+    "initialCode": "<div class=\"top\"><h1>Recipes</h1></div>\n<div class=\"content\">\n  <div class=\"block\"><h2>Soup</h2><p>Boil water.</p></div>\n  <div class=\"block\"><h2>Salad</h2><p>Chop leaves.</p></div>\n</div>\n<div class=\"bottom\"><p>Cook well.</p></div>",
+    "solution": {
+      "code": "<header><h1>Recipes</h1></header>\n<main>\n  <section><h2>Soup</h2><p>Boil water.</p></section>\n  <section><h2>Salad</h2><p>Chop leaves.</p></section>\n</main>\n<footer><p>Cook well.</p></footer>",
+      "explanation": "Class names like \"top\" and \"block\" only mean something to the person who wrote them. The tags header, main, section and footer carry the same meaning for every browser and screen reader, and the CSS needs fewer hooks."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The page title is Recipes",
+              "expr": "text('h1') === 'Recipes'"
+            },
+            {
+              "label": "There are two recipe headings",
+              "expr": "count('h2') === 2"
+            },
+            {
+              "label": "The recipes are Soup and Salad",
+              "expr": "text('h2') === 'Soup' && document.querySelectorAll('h2')[1].textContent === 'Salad'"
+            },
+            {
+              "label": "The footer text is kept",
+              "expr": "text('body') .indexOf('Cook well.') >= 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Set a class instead of many styles",
+    "language": "html",
+    "problemDescription": "The script sets three style properties one by one. Define a class with those styles and add it with classList. The box must look the same after the click.",
+    "initialCode": "<div id=\"box\">Box</div>\n<button id=\"b\">Alert</button>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var box = document.getElementById('box');\n    box.style.background = 'tomato';\n    box.style.color = 'white';\n    box.style.padding = '10px';\n  });\n</script>",
+    "solution": {
+      "code": "<style>\n  .alert { background: tomato; color: white; padding: 10px; }\n</style>\n<div id=\"box\">Box</div>\n<button id=\"b\">Alert</button>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    document.getElementById('box').classList.add('alert');\n  });\n</script>",
+      "explanation": "Styles belong in CSS, and the script only decides when to apply them. A class can be changed by a designer without touching the JavaScript."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "After a click the box is tomato",
+              "expr": "click('#b') && style('#box', 'backgroundColor') === 'rgb(255, 99, 71)'"
+            },
+            {
+              "label": "After a click the text is white",
+              "expr": "style('#box', 'color') === 'rgb(255, 255, 255)'"
+            },
+            {
+              "label": "After a click the padding is 10px",
+              "expr": "px('#box', 'paddingTop') === 10"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

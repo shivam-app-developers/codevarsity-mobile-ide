@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Gallery shows one picture per row",
+    "language": "html",
+    "problemDescription": "This gallery should show two squares per row, but every square is on its own row. The grid has no columns defined.",
+    "buggyCode": "<style>\n  .gallery { display: grid; gap: 6px; }\n  .gallery div { height: 40px; background: seagreen; }\n</style>\n<div class=\"gallery\">\n  <div></div><div></div><div></div><div></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }\n  .gallery div { height: 40px; background: seagreen; }\n</style>\n<div class=\"gallery\">\n  <div></div><div></div><div></div><div></div>\n</div>",
+      "explanation": "Without grid-template-columns a grid has a single column, so the items stack. Define the columns, for example 1fr 1fr, and the items fill each row from left to right."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first two squares share a row",
+              "expr": "document.querySelectorAll('.gallery div')[1].offsetTop === document.querySelectorAll('.gallery div')[0].offsetTop"
+            },
+            {
+              "label": "The third square starts a new row",
+              "expr": "document.querySelectorAll('.gallery div')[2].offsetTop > document.querySelectorAll('.gallery div')[0].offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Badge in the Corner",
+    "language": "html",
+    "description": "Type a card with a badge in its top right corner. The card is position relative, so the badge is position absolute inside it with top and right offsets.",
+    "ghostCode": "<style>\n  .card {\n    position: relative;\n    width: 120px;\n    height: 80px;\n    background: #eee;\n  }\n  .badge {\n    position: absolute;\n    top: 0;\n    right: 0;\n    background: red;\n    color: white;\n  }\n</style>\n<div class=\"card\"><span class=\"badge\">3</span></div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The badge is positioned absolutely",
+              "expr": "style('.badge', 'position') === 'absolute'"
+            },
+            {
+              "label": "The badge touches the top edge",
+              "expr": "el('.badge').getBoundingClientRect().top === el('.card').getBoundingClientRect().top"
+            },
+            {
+              "label": "The badge touches the right edge",
+              "expr": "Math.abs(el('.badge').getBoundingClientRect().right - el('.card').getBoundingClientRect().right) < 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

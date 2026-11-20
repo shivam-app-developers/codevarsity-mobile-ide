@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Block, Inline and None",
+    "language": "html",
+    "description": "Type rules that show an inline-block badge with a width and hide an element with display none. Block elements take a full line, inline elements flow in the text.",
+    "ghostCode": "<style>\n  .badge {\n    display: inline-block;\n    width: 60px;\n    background: gold;\n  }\n  .hidden { display: none; }\n</style>\n<span class=\"badge\">New</span>\n<span class=\"badge\">Hot</span>\n<p class=\"hidden\">Secret</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The badges are inline-block",
+              "expr": "style('.badge', 'display') === 'inline-block'"
+            },
+            {
+              "label": "A badge is 60px wide",
+              "expr": "el('.badge').offsetWidth === 60"
+            },
+            {
+              "label": "Two badges share one line",
+              "expr": "el('.badge').offsetTop === document.querySelectorAll('.badge')[1].offsetTop"
+            },
+            {
+              "label": "The secret is hidden",
+              "expr": "!visible('.hidden')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

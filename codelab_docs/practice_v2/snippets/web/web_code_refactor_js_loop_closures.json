@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: let instead of a wrapper function",
+    "language": "html",
+    "problemDescription": "The loop uses an immediately called function to give each pass its own copy of the number. Use let and remove the wrapper. The result must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var fns = [];\n  for (var i = 0; i < 3; i++) {\n    (function (j) {\n      fns.push(function () { return j + 1; });\n    })(i);\n  }\n  var r = fns.map(function (f) { return f(); });\n  document.getElementById('out').textContent = r.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var fns = [];\n  for (let i = 0; i < 3; i++) {\n    fns.push(function () { return i + 1; });\n  }\n  var r = fns.map(function (f) { return f(); });\n  document.getElementById('out').textContent = r.join(',');\n</script>",
+      "explanation": "Before let existed, a wrapper function was the way to give each pass its own variable. Now let does the same thing with no extra function, so the code is shorter and easier to read."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The functions return 1, 2 and 3",
+              "expr": "text('#out') === '1,2,3'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Animation does not start",
+    "language": "html",
+    "problemDescription": "The dot should pulse, but it just sits there. The animation property names a keyframes rule that does not exist.",
+    "buggyCode": "<style>\n  @keyframes pulse {\n    0% { opacity: 1; }\n    50% { opacity: 0.3; }\n    100% { opacity: 1; }\n  }\n  .dot {\n    width: 20px;\n    height: 20px;\n    background: green;\n    animation: pulsing 2s infinite;\n  }\n</style>\n<div class=\"dot\"></div>",
+    "solution": {
+      "code": "<style>\n  @keyframes pulse {\n    0% { opacity: 1; }\n    50% { opacity: 0.3; }\n    100% { opacity: 1; }\n  }\n  .dot {\n    width: 20px;\n    height: 20px;\n    background: green;\n    animation: pulse 2s infinite;\n  }\n</style>\n<div class=\"dot\"></div>",
+      "explanation": "The name after animation must be the same as the name after @keyframes. When no keyframes rule has that name, nothing happens and the browser shows no error."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The animation name matches a keyframes rule",
+              "expr": "[].some.call(document.styleSheets[0].cssRules, function (r) { return r.type === 7 && r.name === style('.dot', 'animationName'); })"
+            },
+            {
+              "label": "The animation lasts 2 seconds",
+              "expr": "style('.dot', 'animationDuration') === '2s'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

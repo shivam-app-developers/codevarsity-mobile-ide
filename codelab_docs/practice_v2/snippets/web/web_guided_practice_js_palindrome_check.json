@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Palindrome Checker",
+    "language": "html",
+    "description": "Type a checker that tells whether a word reads the same backwards. Split the letters, reverse them and join them back, then compare with the original.",
+    "ghostCode": "<input id=\"word\" value=\"level\">\n<button id=\"go\">Check</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    var w = document.getElementById('word').value.toLowerCase();\n    var back = w.split('').reverse().join('');\n    document.getElementById('out').textContent = w === back ? 'Yes' : 'No';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Level is a palindrome",
+              "expr": "click('#go') && text('#out') === 'Yes'"
+            },
+            {
+              "label": "Hello is not",
+              "expr": "type('#word', 'hello') && click('#go') && text('#out') === 'No'"
+            },
+            {
+              "label": "Capital letters do not matter",
+              "expr": "type('#word', 'Radar') && click('#go') && text('#out') === 'Yes'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

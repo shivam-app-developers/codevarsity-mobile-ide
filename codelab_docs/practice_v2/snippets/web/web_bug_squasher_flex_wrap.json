@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Tags run off the screen",
+    "language": "html",
+    "problemDescription": "On a phone these 120px chips do not wrap onto a second line. They run past the edge of the screen and the page scrolls sideways.",
+    "buggyCode": "<style>\n  .chips { display: flex; flex-wrap: nowrap; }\n  .chip {\n    width: 120px;\n    flex-shrink: 0;\n    height: 24px;\n    background: teal;\n  }\n</style>\n<div class=\"chips\">\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .chips { display: flex; flex-wrap: wrap; }\n  .chip {\n    width: 120px;\n    flex-shrink: 0;\n    height: 24px;\n    background: teal;\n  }\n</style>\n<div class=\"chips\">\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n  <div class=\"chip\"></div>\n</div>",
+      "explanation": "With flex-wrap: nowrap all the items stay in one line and cannot shrink below their size, so the line is wider than the screen. flex-wrap: wrap lets the extra items continue on a new line."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The chips wrap onto a second line",
+              "expr": "el('.chip:last-child').offsetTop > el('.chip').offsetTop"
+            },
+            {
+              "label": "The page does not scroll sideways",
+              "expr": "noSidewaysScroll()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

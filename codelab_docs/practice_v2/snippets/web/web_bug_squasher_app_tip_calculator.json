@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Total is the bill and tip joined",
+    "language": "html",
+    "problemDescription": "A bill of 200 with a tip of 20 shows a total of 20020 instead of 220. The numbers are joined as text instead of added.",
+    "buggyCode": "<input id=\"b\" value=\"200\">\n<button id=\"c\">Total</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var bill = document.getElementById('b').value;\n    var tip = bill * 0.1;\n    document.getElementById('out').textContent = bill + tip;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"b\" value=\"200\">\n<button id=\"c\">Total</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var bill = Number(document.getElementById('b').value);\n    var tip = bill * 0.1;\n    document.getElementById('out').textContent = bill + tip;\n  });\n</script>",
+      "explanation": "The value of an input is text, so \"200\" + 20 joins into \"20020\". Number(\"200\") makes a real number first, and then the plus sign adds."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "A bill of 200 gives a total of 220",
+              "expr": "click('#c') && text('#out') === '220'"
+            },
+            {
+              "label": "A bill of 50 gives a total of 55",
+              "expr": "type('#b', '50') && click('#c') && text('#out') === '55'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

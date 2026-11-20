@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Gradient does not show",
+    "language": "html",
+    "problemDescription": "The header should fade from orange to red but it is plain white. The gradient was put in background-color, which only takes a plain colour.",
+    "buggyCode": "<style>\n  header {\n    padding: 20px;\n    background-color: linear-gradient(orange, red);\n  }\n</style>\n<header>Sale</header>",
+    "solution": {
+      "code": "<style>\n  header {\n    padding: 20px;\n    background: linear-gradient(orange, red);\n  }\n</style>\n<header>Sale</header>",
+      "explanation": "background-color accepts only colours. A gradient counts as an image, so it belongs in background-image or in the background shorthand, which accepts both."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The header has a gradient",
+              "expr": "style('header', 'backgroundImage').indexOf('linear-gradient') === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

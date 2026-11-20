@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use the shorthand",
+    "language": "html",
+    "problemDescription": "The margin and padding are written side by side with four rules each. Use the shorthand properties. The sizes must stay the same.",
+    "initialCode": "<style>\n  .b {\n    margin-top: 8px;\n    margin-right: 16px;\n    margin-bottom: 8px;\n    margin-left: 16px;\n    padding-top: 4px;\n    padding-right: 4px;\n    padding-bottom: 4px;\n    padding-left: 4px;\n  }\n</style>\n<div class=\"b\">Box</div>",
+    "solution": {
+      "code": "<style>\n  .b {\n    margin: 8px 16px;\n    padding: 4px;\n  }\n</style>\n<div class=\"b\">Box</div>",
+      "explanation": "margin: 8px 16px means top and bottom 8px, left and right 16px. One short line replaces four, and it is much easier to see the intended spacing."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The vertical margin is 8px",
+              "expr": "px('.b', 'marginTop') === 8 && px('.b', 'marginBottom') === 8"
+            },
+            {
+              "label": "The horizontal margin is 16px",
+              "expr": "px('.b', 'marginLeft') === 16 && px('.b', 'marginRight') === 16"
+            },
+            {
+              "label": "The padding is 4px on every side",
+              "expr": "['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'].every(function (p) { return px('.b', p) === 4; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

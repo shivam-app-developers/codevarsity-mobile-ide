@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Hide with a class and a script",
+    "language": "html",
+    "problemDescription": "The panel is hidden with a style attribute and a script that sets it. Use a class named hidden and classList in the script. The button must still show and hide the panel.",
+    "initialCode": "<button id=\"t\">Toggle</button>\n<div id=\"p\" style=\"display: none\">Panel</div>\n<script>\n  document.getElementById('t').addEventListener('click', function () {\n    var p = document.getElementById('p');\n    p.style.display = p.style.display === 'none' ? 'block' : 'none';\n  });\n</script>",
+    "solution": {
+      "code": "<style>\n  .hidden { display: none; }\n</style>\n<button id=\"t\">Toggle</button>\n<div id=\"p\" class=\"hidden\">Panel</div>\n<script>\n  document.getElementById('t').addEventListener('click', function () {\n    document.getElementById('p').classList.toggle('hidden');\n  });\n</script>",
+      "explanation": "A class describes a state, and classList.toggle switches it with one call. The look is in the CSS, and the script no longer needs to know what the hidden style is."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The panel starts hidden",
+              "expr": "!visible('#p')"
+            },
+            {
+              "label": "One click shows it",
+              "expr": "click('#t') && visible('#p')"
+            },
+            {
+              "label": "A second click hides it",
+              "expr": "click('#t') && !visible('#p')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

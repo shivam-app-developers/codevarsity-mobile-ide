@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One rule for the corners",
+    "language": "html",
+    "problemDescription": "Each corner has its own rule. Use the border-radius shorthand. The shape must stay the same.",
+    "initialCode": "<style>\n  .pill {\n    padding: 6px 14px;\n    background: lavender;\n    border-top-left-radius: 20px;\n    border-top-right-radius: 20px;\n    border-bottom-right-radius: 20px;\n    border-bottom-left-radius: 20px;\n  }\n</style>\n<span class=\"pill\">Pill</span>",
+    "solution": {
+      "code": "<style>\n  .pill {\n    padding: 6px 14px;\n    background: lavender;\n    border-radius: 20px;\n  }\n</style>\n<span class=\"pill\">Pill</span>",
+      "explanation": "border-radius with one value rounds all four corners. The long form is only needed when the corners differ, and the short form is easier to read and to change."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "All four corners are 20px",
+              "expr": "['borderTopLeftRadius', 'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius'].every(function (p) { return px('.pill', p) === 20; })"
+            },
+            {
+              "label": "The background is lavender",
+              "expr": "style('.pill', 'backgroundColor') === 'rgb(230, 230, 250)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

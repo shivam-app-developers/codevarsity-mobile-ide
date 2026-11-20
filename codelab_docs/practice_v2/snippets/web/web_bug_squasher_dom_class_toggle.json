@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Highlight can be turned on but not off",
+    "language": "html",
+    "problemDescription": "The menu opens on the first tap, but a second tap never closes it again. The script only ever adds the class.",
+    "buggyCode": "<style>\n  #menu { display: none; }\n  #menu.open { display: block; }\n</style>\n<button id=\"btn\">Menu</button>\n<div id=\"menu\">Home | Shop</div>\n<script>\n  var menu = document.getElementById('menu');\n  document.getElementById('btn').addEventListener('click', function () {\n    menu.classList.add('open');\n  });\n</script>",
+    "solution": {
+      "code": "<style>\n  #menu { display: none; }\n  #menu.open { display: block; }\n</style>\n<button id=\"btn\">Menu</button>\n<div id=\"menu\">Home | Shop</div>\n<script>\n  var menu = document.getElementById('menu');\n  document.getElementById('btn').addEventListener('click', function () {\n    menu.classList.toggle('open');\n  });\n</script>",
+      "explanation": "classList.add only adds. classList.toggle switches between adding and removing, which is what an open and close button needs."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu starts closed",
+              "expr": "!visible('#menu')"
+            },
+            {
+              "label": "One tap opens it",
+              "expr": "click('#btn') && visible('#menu')"
+            },
+            {
+              "label": "A second tap closes it",
+              "expr": "click('#btn') && !visible('#menu')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

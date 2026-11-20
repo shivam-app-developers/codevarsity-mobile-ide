@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Build the word instead of testing three cases",
+    "language": "html",
+    "problemDescription": "The loop has a separate branch for the combined case. Build the text with Fizz and Buzz joined, and use the number when the text is empty. The list must stay the same.",
+    "initialCode": "<p id=\"out\"></p>\n<script>\n  var words = [];\n  for (var i = 1; i <= 15; i++) {\n    if (i % 15 === 0) words.push('FizzBuzz');\n    else if (i % 3 === 0) words.push('Fizz');\n    else if (i % 5 === 0) words.push('Buzz');\n    else words.push(i);\n  }\n  document.getElementById('out').textContent = words.join(' ');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var words = [];\n  for (var i = 1; i <= 15; i++) {\n    var word = '';\n    if (i % 3 === 0) word += 'Fizz';\n    if (i % 5 === 0) word += 'Buzz';\n    words.push(word || i);\n  }\n  document.getElementById('out').textContent = words.join(' ');\n</script>",
+      "explanation": "Joining Fizz and Buzz means FizzBuzz appears by itself, and a new rule (say, 7 gives Pop) is one more line instead of a new combination of cases."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list is right",
+              "expr": "text('#out') === '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

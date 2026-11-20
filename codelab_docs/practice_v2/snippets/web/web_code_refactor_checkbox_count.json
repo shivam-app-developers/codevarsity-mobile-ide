@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: One handler for every box",
+    "language": "html",
+    "problemDescription": "Each checkbox has its own inline onchange attribute that calls the same function. Remove the attributes and attach a single listener to the form instead. The count must still update.",
+    "initialCode": "<form id=\"f\">\n  <input type=\"checkbox\" onchange=\"show()\">\n  <input type=\"checkbox\" onchange=\"show()\">\n  <input type=\"checkbox\" onchange=\"show()\">\n</form>\n<p id=\"n\">0</p>\n<script>\n  function show() {\n    var all = document.querySelectorAll('input:checked');\n    document.getElementById('n').textContent = all.length;\n  }\n</script>",
+    "solution": {
+      "code": "<form id=\"f\">\n  <input type=\"checkbox\">\n  <input type=\"checkbox\">\n  <input type=\"checkbox\">\n</form>\n<p id=\"n\">0</p>\n<script>\n  document.getElementById('f').addEventListener('change', function () {\n    var all = document.querySelectorAll('input:checked');\n    document.getElementById('n').textContent = all.length;\n  });\n</script>",
+      "explanation": "The change event bubbles up from each checkbox to the form, so one listener on the form serves every box, including boxes added later. The markup also loses its repeated onchange attributes."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The count starts at 0",
+              "expr": "text('#n') === '0'"
+            },
+            {
+              "label": "Ticking three boxes shows 3",
+              "expr": "(() => { document.querySelectorAll('input').forEach(function (b) { b.click(); }); return text('#n') === '3'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

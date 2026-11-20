@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Handle a Form Submit",
+    "language": "html",
+    "description": "Type a form whose submit handler stops the page from reloading and shows a message instead. preventDefault cancels the browser's own submit.",
+    "ghostCode": "<form id=\"f\">\n  <input id=\"who\" value=\"Asha\">\n  <button>Greet</button>\n</form>\n<p id=\"msg\"></p>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    e.preventDefault();\n    var name = document.getElementById('who').value;\n    document.getElementById('msg').textContent = 'Hello, ' + name + '!';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The browser's own submit is stopped",
+              "expr": "submit('#f') === true"
+            },
+            {
+              "label": "The message uses the typed name",
+              "expr": "type('#who', 'Ben') && submit('#f') && text('#msg') === 'Hello, Ben!'"
+            },
+            {
+              "label": "No script errors happen",
+              "expr": "errors().length === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

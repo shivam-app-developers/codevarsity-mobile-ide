@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Every function returns 3",
+    "language": "html",
+    "problemDescription": "The three functions were meant to return 0, 10 and 20, but all three return 30. The loop variable is shared by all the functions.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var tasks = [];\n  for (var n = 0; n < 3; n++) {\n    tasks.push(function () { return n * 10; });\n  }\n  var out = tasks.map(function (t) { return t(); });\n  document.getElementById('out').textContent = out.join(',');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var tasks = [];\n  for (let n = 0; n < 3; n++) {\n    tasks.push(function () { return n * 10; });\n  }\n  var out = tasks.map(function (t) { return t(); });\n  document.getElementById('out').textContent = out.join(',');\n</script>",
+      "explanation": "var has one variable for the whole function, so by the time the functions run the loop has ended and n is 3. let makes a new variable for each pass, and every function keeps its own."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The functions return 0, 10 and 20",
+              "expr": "text('#out') === '0,10,20'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

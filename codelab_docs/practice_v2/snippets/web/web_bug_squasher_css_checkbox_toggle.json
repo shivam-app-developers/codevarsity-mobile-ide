@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Panel never opens",
+    "language": "html",
+    "problemDescription": "The menu should open when the checkbox is ticked, but it stays hidden. The panel is not the next element after the checkbox, so the selector cannot reach it.",
+    "buggyCode": "<style>\n  .menu { display: none; }\n  #open:checked + .menu { display: block; }\n</style>\n<input type=\"checkbox\" id=\"open\">\n<label for=\"open\">Menu</label>\n<div class=\"menu\">Home | About</div>",
+    "solution": {
+      "code": "<style>\n  .menu { display: none; }\n  #open:checked + .menu { display: block; }\n</style>\n<input type=\"checkbox\" id=\"open\">\n<div class=\"menu\">Home | About</div>\n<label for=\"open\">Menu</label>",
+      "explanation": "The + selector matches only the element that comes straight after. With a label between the checkbox and the menu, #open:checked + .menu matches nothing. Move the menu right after the checkbox, or use the ~ selector for any later sibling."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu starts hidden",
+              "expr": "!visible('.menu')"
+            },
+            {
+              "label": "Ticking the box shows the menu",
+              "expr": "click('#open') && visible('.menu')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

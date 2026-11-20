@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Total is NaN",
+    "language": "html",
+    "problemDescription": "The page should show the sum of the doubled numbers, but it shows NaN. The map function does not return anything.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var prices = [5, 10, 15];\n  var withTax = prices.map(function (p) { p * 2; });\n  var sum = withTax.reduce(function (a, b) { return a + b; }, 0);\n  document.getElementById('out').textContent = sum;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var prices = [5, 10, 15];\n  var withTax = prices.map(function (p) { return p * 2; });\n  var sum = withTax.reduce(function (a, b) { return a + b; }, 0);\n  document.getElementById('out').textContent = sum;\n</script>",
+      "explanation": "A function with curly braces returns undefined unless it has a return statement. map then builds an array of undefined, and adding undefined gives NaN."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The sum is 60",
+              "expr": "text('#out') === '60'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Hide with a class",
+    "language": "html",
+    "problemDescription": "The element is hidden with an inline style. Use a class named hidden defined in a style tag. The paragraph must stay hidden.",
+    "initialCode": "<p style=\"display: none;\">Draft notes</p>\n<p>Published text</p>",
+    "solution": {
+      "code": "<style>\n  .hidden { display: none; }\n</style>\n<p class=\"hidden\">Draft notes</p>\n<p>Published text</p>",
+      "explanation": "A class named for its purpose can be switched on and off by a script with classList, and the rule is written once for any element. An inline style is harder to find and to undo."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The draft is hidden",
+              "expr": "!visible('p')"
+            },
+            {
+              "label": "The published text is shown",
+              "expr": "visible('p:last-of-type')"
+            },
+            {
+              "label": "There are two paragraphs",
+              "expr": "count('p') === 2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

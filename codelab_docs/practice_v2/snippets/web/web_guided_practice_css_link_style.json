@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Styling Links",
+    "language": "html",
+    "description": "Type rules for links: a colour, no underline and a bold style when the pointer is over them. The pseudo-class :hover applies only while the pointer is on the link.",
+    "ghostCode": "<style>\n  a { color: crimson; text-decoration: none; }\n  a:hover { font-weight: bold; }\n</style>\n<a href=\"#one\">Read more</a>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link is crimson",
+              "expr": "style('a', 'color') === 'rgb(220, 20, 60)'"
+            },
+            {
+              "label": "The link has no underline",
+              "expr": "style('a', 'textDecorationLine') === 'none'"
+            },
+            {
+              "label": "A hover rule exists",
+              "expr": "[].some.call(document.styleSheets[0].cssRules, function (r) { return r.selectorText === 'a:hover'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

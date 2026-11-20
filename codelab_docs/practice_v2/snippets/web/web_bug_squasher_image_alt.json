@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Picture with no alt text",
+    "language": "html",
+    "problemDescription": "Screen reader users hear only \"image\" for this picture of a cat. The alt text is missing. Add it so the picture has a description.",
+    "buggyCode": "<h2>Our cat</h2>\n<img src=\"cat.jpg\" width=\"50\" height=\"50\">",
+    "solution": {
+      "code": "<h2>Our cat</h2>\n<img src=\"cat.jpg\" alt=\"Grey cat\" width=\"50\" height=\"50\">",
+      "explanation": "The alt attribute is the text version of the picture. Without it, screen readers read the file name or just say \"image\", and nothing shows if the file fails to load. Describe what the picture shows."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The image has a non-empty alt text",
+              "expr": "(attr('img', 'alt') || '').trim().length > 3"
+            },
+            {
+              "label": "The heading is kept",
+              "expr": "text('h2') === 'Our cat'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

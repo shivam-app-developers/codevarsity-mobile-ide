@@ -1,0 +1,36 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Quantity field takes any text",
+    "language": "html",
+    "problemDescription": "Phones show a letter keyboard for this quantity field, and the browser accepts the word \"many\". The field should be a number field that also stops at 10.",
+    "buggyCode": "<form>\n  <input id=\"qty\" type=\"text\" max=\"10\" value=\"1\">\n</form>",
+    "solution": {
+      "code": "<form>\n  <input id=\"qty\" type=\"number\" min=\"1\" max=\"10\" value=\"1\">\n</form>",
+      "explanation": "type=\"number\" restricts the value to numbers, shows a numeric keypad and makes min and max work. A text input ignores min and max, so any word is accepted."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The quantity is a number input",
+              "expr": "attr('#qty', 'type') === 'number'"
+            },
+            {
+              "label": "A value above 10 is not valid",
+              "expr": "type('#qty', '11') && !el('#qty').validity.valid"
+            },
+            {
+              "label": "A value of 5 is valid",
+              "expr": "type('#qty', '5') && el('#qty').validity.valid"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Build a list from an array",
+    "language": "html",
+    "problemDescription": "Three list items are created by repeating the same four lines. Use an array and a loop. The page must show the same three items.",
+    "initialCode": "<ul id=\"fruit\"></ul>\n<script>\n  var list = document.getElementById('fruit');\n  var a = document.createElement('li');\n  a.textContent = 'Apple';\n  list.appendChild(a);\n  var b = document.createElement('li');\n  b.textContent = 'Banana';\n  list.appendChild(b);\n  var c = document.createElement('li');\n  c.textContent = 'Cherry';\n  list.appendChild(c);\n</script>",
+    "solution": {
+      "code": "<ul id=\"fruit\"></ul>\n<script>\n  var list = document.getElementById('fruit');\n  ['Apple', 'Banana', 'Cherry'].forEach(function (name) {\n    var li = document.createElement('li');\n    li.textContent = name;\n    list.appendChild(li);\n  });\n</script>",
+      "explanation": "A loop over an array writes the repeated code once. Adding a fourth fruit then takes one word in the array instead of four more lines."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three items",
+              "expr": "count('#fruit li') === 3"
+            },
+            {
+              "label": "The items are in order",
+              "expr": "[].map.call(document.querySelectorAll('#fruit li'), function (l) { return l.textContent; }).join() === 'Apple,Banana,Cherry'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Spread Items With space-between",
+    "language": "html",
+    "description": "Type a header with a logo on the left and a link on the right. justify-content space-between pushes the first item to the start and the last to the end.",
+    "ghostCode": "<style>\n  .top {\n    display: flex;\n    justify-content: space-between;\n    padding: 8px;\n  }\n</style>\n<div class=\"top\">\n  <b class=\"logo\">Logo</b>\n  <a class=\"link\" href=\"#x\">Login</a>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The logo is at the left edge of the bar",
+              "expr": "Math.abs(el('.logo').getBoundingClientRect().left - (el('.top').getBoundingClientRect().left + 8)) < 1"
+            },
+            {
+              "label": "The link is at the right edge of the bar",
+              "expr": "Math.abs(el('.top').getBoundingClientRect().right - 8 - el('.link').getBoundingClientRect().right) < 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

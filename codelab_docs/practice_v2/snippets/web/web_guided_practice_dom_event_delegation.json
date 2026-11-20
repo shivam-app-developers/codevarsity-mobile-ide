@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Event Delegation",
+    "language": "html",
+    "description": "Type a list with a single click listener on the ul. The listener checks which li was clicked using event.target, and marks it as done.",
+    "ghostCode": "<style>\n  .done { text-decoration: line-through; }\n</style>\n<ul id=\"tasks\">\n  <li>Wash</li>\n  <li>Cook</li>\n  <li>Study</li>\n</ul>\n<script>\n  document.getElementById('tasks').addEventListener('click', function (e) {\n    if (e.target.tagName === 'LI') {\n      e.target.classList.toggle('done');\n    }\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking the second task marks it done",
+              "expr": "document.querySelectorAll('#tasks li')[1].click() || el('#tasks li:nth-child(2)').classList.contains('done')"
+            },
+            {
+              "label": "The other tasks are not marked",
+              "expr": "count('#tasks li.done') === 1"
+            },
+            {
+              "label": "A done task has a line through it",
+              "expr": "style('#tasks li.done', 'textDecorationLine') === 'line-through'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

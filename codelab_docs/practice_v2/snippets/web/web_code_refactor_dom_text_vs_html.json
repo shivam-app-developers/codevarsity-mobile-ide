@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use textContent for plain text",
+    "language": "html",
+    "problemDescription": "The script uses innerHTML to show a number and plain words, which need no HTML. Use textContent. The page must show the same text.",
+    "initialCode": "<p id=\"t\"></p>\n<p id=\"n\"></p>\n<script>\n  document.getElementById('t').innerHTML = 'Total items';\n  document.getElementById('n').innerHTML = 3 * 4;\n</script>",
+    "solution": {
+      "code": "<p id=\"t\"></p>\n<p id=\"n\"></p>\n<script>\n  document.getElementById('t').textContent = 'Total items';\n  document.getElementById('n').textContent = 3 * 4;\n</script>",
+      "explanation": "When the text has no markup, textContent is faster and safer, and it says what the code means: this is text, not HTML."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first paragraph reads Total items",
+              "expr": "text('#t') === 'Total items'"
+            },
+            {
+              "label": "The second paragraph reads 12",
+              "expr": "text('#n') === '12'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Heading Levels",
+    "language": "html",
+    "description": "Type an article outline with one h1 and h2 headings under it. Headings are an outline of the page, not a way to make text big.",
+    "ghostCode": "<h1>Learning HTML</h1>\n<h2>Tags</h2>\n<p>Tags wrap content.</p>\n<h2>Attributes</h2>\n<p>Attributes add details.</p>\n<h3>Common attributes</h3>\n<p>href, src and alt.</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There is exactly one h1",
+              "expr": "count('h1') === 1"
+            },
+            {
+              "label": "There are two h2 headings",
+              "expr": "count('h2') === 2"
+            },
+            {
+              "label": "The h3 comes after the second h2",
+              "expr": "(() => { var hs = [].map.call(document.querySelectorAll('h1,h2,h3'), function (h) { return h.tagName; }); return hs.join() === 'H1,H2,H2,H3'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

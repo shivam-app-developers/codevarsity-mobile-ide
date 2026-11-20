@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Strict equality instead of loose",
+    "language": "html",
+    "problemDescription": "The check uses == and lets the browser convert the types in secret. Convert with Number() yourself and use ===. The answers must not change.",
+    "initialCode": "<input id=\"a\" placeholder=\"Age\">\n<button id=\"c\">Adult?</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var age = document.getElementById('a').value;\n    var r = document.getElementById('r');\n    r.textContent = age == 18 ? 'Just 18' : 'Other';\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"a\" placeholder=\"Age\">\n<button id=\"c\">Adult?</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var age = Number(document.getElementById('a').value);\n    var r = document.getElementById('r');\n    r.textContent = age === 18 ? 'Just 18' : 'Other';\n  });\n</script>",
+      "explanation": "== converts the types by rules that are hard to remember (0 == '' is true, null == undefined too). === never converts, so the types you see are the types that are compared."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "18 gives Just 18",
+              "expr": "type('#a', '18') && click('#c') && text('#r') === 'Just 18'"
+            },
+            {
+              "label": "20 gives Other",
+              "expr": "type('#a', '20') && click('#c') && text('#r') === 'Other'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

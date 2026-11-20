@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Check where the click happened",
+    "language": "html",
+    "problemDescription": "The button stops the click from bubbling so the outside handler does not close the menu. Remove stopPropagation and make the document handler ignore clicks inside the menu area instead. The behaviour must stay the same.",
+    "initialCode": "<div id=\"wrap\">\n  <button id=\"b\">Open</button>\n  <p id=\"panel\" hidden>Panel</p>\n</div>\n<script>\n  var panel = document.getElementById('panel');\n  document.getElementById('b').addEventListener('click', function (e) {\n    e.stopPropagation();\n    panel.hidden = !panel.hidden;\n  });\n  document.addEventListener('click', function () {\n    panel.hidden = true;\n  });\n</script>",
+    "solution": {
+      "code": "<div id=\"wrap\">\n  <button id=\"b\">Open</button>\n  <p id=\"panel\" hidden>Panel</p>\n</div>\n<script>\n  var panel = document.getElementById('panel');\n  var wrap = document.getElementById('wrap');\n  document.getElementById('b').addEventListener('click', function () {\n    panel.hidden = !panel.hidden;\n  });\n  document.addEventListener('click', function (e) {\n    if (!wrap.contains(e.target)) {\n      panel.hidden = true;\n    }\n  });\n</script>",
+      "explanation": "stopPropagation hides the click from every other listener, which can break analytics or other widgets. Checking with contains whether the click was inside the component leaves the event alone."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The panel starts closed",
+              "expr": "!visible('#panel')"
+            },
+            {
+              "label": "The button opens it",
+              "expr": "click('#b') && visible('#panel')"
+            },
+            {
+              "label": "A click outside closes it",
+              "expr": "document.body.click() || !visible('#panel')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

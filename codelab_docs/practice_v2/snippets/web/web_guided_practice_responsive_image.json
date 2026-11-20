@@ -1,0 +1,41 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Pictures That Fit the Screen",
+    "language": "html",
+    "description": "Type a picture that never grows wider than the screen. The picture is an inline SVG, which is sized like an image. max-width 100% caps the width to the container and height auto keeps the proportions.",
+    "ghostCode": "<style>\n  svg { max-width: 100%; height: auto; }\n</style>\n<svg viewBox=\"0 0 800 400\" width=\"800\" height=\"400\">\n  <rect width=\"800\" height=\"400\" fill=\"teal\"/>\n</svg>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The picture fits the screen",
+              "expr": "el('svg').getBoundingClientRect().width <= document.documentElement.clientWidth"
+            },
+            {
+              "label": "The picture keeps its 2 to 1 shape",
+              "expr": "Math.abs(el('svg').getBoundingClientRect().width / el('svg').getBoundingClientRect().height - 2) < 0.02"
+            },
+            {
+              "label": "The page does not scroll sideways",
+              "expr": "noSidewaysScroll()"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen the picture is at most 800px wide",
+              "expr": "el('svg').getBoundingClientRect().width <= 800"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

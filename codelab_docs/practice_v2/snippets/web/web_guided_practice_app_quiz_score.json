@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Quiz Score",
+    "language": "html",
+    "description": "Type a small quiz with two radio questions and a button that adds up the score. A radio button has a checked property, and the script counts the right answers.",
+    "ghostCode": "<label><input type=\"radio\" name=\"q1\" value=\"4\"> 2 + 2 = 4</label>\n<label><input type=\"radio\" name=\"q1\" value=\"5\"> 2 + 2 = 5</label>\n<label><input type=\"radio\" name=\"q2\" value=\"9\"> 3 x 3 = 9</label>\n<label><input type=\"radio\" name=\"q2\" value=\"6\"> 3 x 3 = 6</label>\n<button id=\"done\">Score</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('done').addEventListener('click', function () {\n    var score = 0;\n    if (document.querySelector('[name=q1]:checked').value === '4') score++;\n    if (document.querySelector('[name=q2]:checked').value === '9') score++;\n    document.getElementById('out').textContent = score + ' of 2';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Both answers right gives 2 of 2",
+              "expr": "document.querySelector('[name=q1][value=\"4\"]').click() || document.querySelector('[name=q2][value=\"9\"]').click() || click('#done') && text('#out') === '2 of 2'"
+            },
+            {
+              "label": "One wrong answer gives 1 of 2",
+              "expr": "document.querySelector('[name=q2][value=\"6\"]').click() || click('#done') && text('#out') === '1 of 2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Rounded Corners and Shadow",
+    "language": "html",
+    "description": "Type a card with rounded corners and a soft shadow. border-radius rounds the corners and box-shadow draws a shadow around the box.",
+    "ghostCode": "<style>\n  .card {\n    padding: 16px;\n    border-radius: 12px;\n    box-shadow: 0 2px 8px gray;\n  }\n</style>\n<div class=\"card\">A soft card</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The corners are 12px",
+              "expr": "px('.card', 'borderTopLeftRadius') === 12"
+            },
+            {
+              "label": "The card has a shadow",
+              "expr": "style('.card', 'boxShadow') !== 'none'"
+            },
+            {
+              "label": "The padding is 16px",
+              "expr": "px('.card', 'paddingLeft') === 16"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

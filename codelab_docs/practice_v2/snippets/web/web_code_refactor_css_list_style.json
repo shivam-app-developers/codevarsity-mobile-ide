@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace br tags with list styling",
+    "language": "html",
+    "problemDescription": "This menu is made of links separated by line breaks. Use a ul with li items. The text of the links must stay.",
+    "initialCode": "<a href=\"#a\">One</a><br>\n<a href=\"#b\">Two</a><br>\n<a href=\"#c\">Three</a>",
+    "solution": {
+      "code": "<ul>\n  <li><a href=\"#a\">One</a></li>\n  <li><a href=\"#b\">Two</a></li>\n  <li><a href=\"#c\">Three</a></li>\n</ul>",
+      "explanation": "Items that belong together are a list. The markup then says so, and CSS can lay out the items however you like, instead of using br tags only to push things down."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are three links",
+              "expr": "count('a') === 3"
+            },
+            {
+              "label": "The links read One, Two, Three",
+              "expr": "text('body') === 'One Two Three'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use repeat()",
+    "language": "html",
+    "problemDescription": "The column list repeats the same size six times. Use repeat. The layout must stay the same.",
+    "initialCode": "<style>\n  .g {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n  }\n  .g div { height: 20px; background: coral; }\n</style>\n<div class=\"g\">\n  <div></div><div></div><div></div><div></div>\n  <div></div><div></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .g {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n  }\n  .g div { height: 20px; background: coral; }\n</style>\n<div class=\"g\">\n  <div></div><div></div><div></div><div></div>\n  <div></div><div></div>\n</div>",
+      "explanation": "repeat(4, 1fr) says \"four columns of one fraction\" in a single expression. Changing the number of columns is a one-character edit."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The grid has four columns",
+              "expr": "style('.g', 'gridTemplateColumns').split(' ').length === 4"
+            },
+            {
+              "label": "The fifth item starts the second row",
+              "expr": "document.querySelectorAll('.g div')[4].offsetTop > document.querySelectorAll('.g div')[0].offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

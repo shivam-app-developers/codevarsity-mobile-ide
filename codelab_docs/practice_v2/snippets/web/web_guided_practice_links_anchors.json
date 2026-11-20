@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Links and Page Anchors",
+    "language": "html",
+    "description": "Type a link that jumps to a section further down the same page. The link points to an id with a hash, and the target element has that id.",
+    "ghostCode": "<a href=\"#contact\">Go to contact</a>\n<h2 id=\"top\">Welcome</h2>\n<p>Some text about us.</p>\n<h2 id=\"contact\">Contact</h2>\n<p>Write to hello@example.com</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link points to #contact",
+              "expr": "attr('a', 'href') === '#contact'"
+            },
+            {
+              "label": "An element with the id contact exists",
+              "expr": "exists('#contact')"
+            },
+            {
+              "label": "The link target is the Contact heading",
+              "expr": "text('#contact') === 'Contact'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

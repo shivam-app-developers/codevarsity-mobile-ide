@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Data Attributes",
+    "language": "html",
+    "description": "Type buttons that carry a price in a data-price attribute, and a script that reads it with dataset. Data attributes keep extra information in the HTML for the script.",
+    "ghostCode": "<button data-price=\"5\">Tea</button>\n<button data-price=\"8\">Coffee</button>\n<p>Total: <span id=\"sum\">0</span></p>\n<script>\n  var total = 0;\n  document.querySelectorAll('button').forEach(function (b) {\n    b.addEventListener('click', function () {\n      total = total + Number(b.dataset.price);\n      document.getElementById('sum').textContent = total;\n    });\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The total starts at 0",
+              "expr": "text('#sum') === '0'"
+            },
+            {
+              "label": "Adding tea and coffee gives 13",
+              "expr": "document.querySelectorAll('button')[0].click() || document.querySelectorAll('button')[1].click() || text('#sum') === '13'"
+            },
+            {
+              "label": "Tea has a price of 5",
+              "expr": "attr('button', 'data-price') === '5'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

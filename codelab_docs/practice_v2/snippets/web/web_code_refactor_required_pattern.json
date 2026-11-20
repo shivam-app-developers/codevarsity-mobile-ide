@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace a script with attributes",
+    "language": "html",
+    "problemDescription": "A script checks the length of the name when the form is submitted. The browser can do this with the required and pattern attributes. Remove the script, keeping the same rule: at least 3 characters.",
+    "initialCode": "<form id=\"f\">\n  <input id=\"nick\">\n  <button>Go</button>\n</form>\n<script>\n  document.getElementById('f').addEventListener('submit', function (e) {\n    if (document.getElementById('nick').value.length < 3) {\n      e.preventDefault();\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<form id=\"f\">\n  <input id=\"nick\" required pattern=\".{3,}\">\n  <button>Go</button>\n</form>",
+      "explanation": "The browser already knows how to block a form that has a wrong value and to show a message for it. required and pattern do this without code, work before the script has loaded and are easier to read."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "A two-letter nick is not accepted",
+              "expr": "(() => { type('#nick', 'ab'); var blocked = !el('#f').checkValidity() || submit('#f'); return blocked; })()"
+            },
+            {
+              "label": "A three-letter nick is accepted",
+              "expr": "(() => { type('#nick', 'abc'); return el('#f').checkValidity() && !submit('#f'); })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

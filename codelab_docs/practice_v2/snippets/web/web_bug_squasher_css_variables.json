@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Variable name does not match",
+    "language": "html",
+    "problemDescription": "The heading should be purple, but it is black. The variable is read with a name that was never defined.",
+    "buggyCode": "<style>\n  :root { --accent: purple; }\n  h2 { color: var(--acent); }\n</style>\n<h2>Sale</h2>",
+    "solution": {
+      "code": "<style>\n  :root { --accent: purple; }\n  h2 { color: var(--accent); }\n</style>\n<h2>Sale</h2>",
+      "explanation": "A variable name must match exactly. When var() uses a name that is not defined and has no fallback, the declaration is invalid at computed time, and the colour falls back to the inherited black."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading is purple",
+              "expr": "style('h2', 'color') === 'rgb(128, 0, 128)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Row and Column Direction",
+    "language": "html",
+    "description": "Type a flex container that stacks its items in a column. flex-direction column puts the items one under the other, the default row puts them side by side.",
+    "ghostCode": "<style>\n  .menu { display: flex; flex-direction: column; }\n  .menu a { padding: 6px; }\n</style>\n<div class=\"menu\">\n  <a href=\"#a\">Home</a>\n  <a href=\"#b\">Shop</a>\n  <a href=\"#c\">Help</a>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu is a column",
+              "expr": "style('.menu', 'flexDirection') === 'column'"
+            },
+            {
+              "label": "The links are stacked",
+              "expr": "(() => { var a = document.querySelectorAll('.menu a'); return a[0].offsetTop < a[1].offsetTop && a[1].offsetTop < a[2].offsetTop; })()"
+            },
+            {
+              "label": "The links have the same left edge",
+              "expr": "(() => { var a = document.querySelectorAll('.menu a'); return a[0].offsetLeft === a[2].offsetLeft; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

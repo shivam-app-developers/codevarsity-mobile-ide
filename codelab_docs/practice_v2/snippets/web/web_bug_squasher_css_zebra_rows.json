@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong rows are striped",
+    "language": "html",
+    "problemDescription": "The list should shade the second and fourth items, but it shades the first and third. The selector picks the wrong half.",
+    "buggyCode": "<style>\n  li:nth-child(odd) { background: #ddf; }\n</style>\n<ul>\n  <li>A</li><li>B</li><li>C</li><li>D</li>\n</ul>",
+    "solution": {
+      "code": "<style>\n  li:nth-child(even) { background: #ddf; }\n</style>\n<ul>\n  <li>A</li><li>B</li><li>C</li><li>D</li>\n</ul>",
+      "explanation": ":nth-child counts from 1, so odd means the 1st, 3rd, 5th and even means the 2nd, 4th, 6th. Pick the one that matches the rows you want."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The second item is shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('li')[1]).backgroundColor === 'rgb(221, 221, 255)'"
+            },
+            {
+              "label": "The first item is not shaded",
+              "expr": "getComputedStyle(document.querySelectorAll('li')[0]).backgroundColor === 'rgba(0, 0, 0, 0)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

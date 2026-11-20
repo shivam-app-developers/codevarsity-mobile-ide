@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Header scrolls away",
+    "language": "html",
+    "problemDescription": "The header should stay visible while the page scrolls, but it scrolls out of sight. The sticky rule has no offset to stick to.",
+    "buggyCode": "<style>\n  nav { position: sticky; background: black; color: white; }\n  .page { height: 900px; }\n</style>\n<nav>Menu</nav>\n<div class=\"page\">Long page</div>",
+    "solution": {
+      "code": "<style>\n  nav { position: sticky; top: 0; background: black; color: white; }\n  .page { height: 900px; }\n</style>\n<nav>Menu</nav>\n<div class=\"page\">Long page</div>",
+      "explanation": "position: sticky needs an offset such as top: 0 to know where to stick. Without it the element is positioned as usual and scrolls away with the page."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "After scrolling the menu is still at the top",
+              "expr": "(() => { window.scrollTo(0, 400); return Math.abs(el('nav').getBoundingClientRect().top) < 1; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

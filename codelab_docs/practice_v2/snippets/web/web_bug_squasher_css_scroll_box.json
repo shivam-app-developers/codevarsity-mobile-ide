@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Long text spills out of its box",
+    "language": "html",
+    "problemDescription": "The list is meant to stay in a 50px high box and scroll, but the text spills out below the box instead.",
+    "buggyCode": "<style>\n  .list { height: 50px; overflow: visible; background: #def; }\n</style>\n<div class=\"list\">\n  <p>One</p><p>Two</p><p>Three</p><p>Four</p><p>Five</p>\n</div>",
+    "solution": {
+      "code": "<style>\n  .list { height: 50px; overflow: auto; background: #def; }\n</style>\n<div class=\"list\">\n  <p>One</p><p>Two</p><p>Three</p><p>Four</p><p>Five</p>\n</div>",
+      "explanation": "The default overflow is visible, so content that does not fit is drawn outside the box. overflow: auto keeps it inside and adds scrolling when needed."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The box scrolls its content",
+              "expr": "style('.list', 'overflowY') === 'auto' || style('.list', 'overflowY') === 'scroll'"
+            },
+            {
+              "label": "The content is taller than the box",
+              "expr": "el('.list').scrollHeight > el('.list').clientHeight"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

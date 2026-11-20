@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Share one rule between elements",
+    "language": "html",
+    "problemDescription": "Three rules repeat the same declaration. Group the selectors in one rule with commas. The page must look the same.",
+    "initialCode": "<style>\n  h1 { color: teal; }\n  h2 { color: teal; }\n  .tag { color: teal; }\n</style>\n<h1>Title</h1>\n<h2>Subtitle</h2>\n<span class=\"tag\">tag</span>",
+    "solution": {
+      "code": "<style>\n  h1, h2, .tag { color: teal; }\n</style>\n<h1>Title</h1>\n<h2>Subtitle</h2>\n<span class=\"tag\">tag</span>",
+      "explanation": "A comma lists several selectors for one set of declarations. Changing the colour later takes one edit instead of three, and the rules cannot drift apart."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The h1 is teal",
+              "expr": "style('h1', 'color') === 'rgb(0, 128, 128)'"
+            },
+            {
+              "label": "The h2 is teal",
+              "expr": "style('h2', 'color') === 'rgb(0, 128, 128)'"
+            },
+            {
+              "label": "The tag is teal",
+              "expr": "style('.tag', 'color') === 'rgb(0, 128, 128)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

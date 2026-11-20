@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Ordered and Unordered Lists",
+    "language": "html",
+    "description": "Type one list where order matters (ol) and one where it does not (ul). Every item goes in an li.",
+    "ghostCode": "<h2>Make tea</h2>\n<ol>\n  <li>Boil water</li>\n  <li>Add a tea bag</li>\n  <li>Wait three minutes</li>\n</ol>\n<h2>Shopping</h2>\n<ul>\n  <li>Milk</li>\n  <li>Sugar</li>\n</ul>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The steps are an ordered list of 3 items",
+              "expr": "count('ol > li') === 3"
+            },
+            {
+              "label": "The shopping list has 2 items",
+              "expr": "count('ul > li') === 2"
+            },
+            {
+              "label": "The first step is Boil water",
+              "expr": "text('ol li') === 'Boil water'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

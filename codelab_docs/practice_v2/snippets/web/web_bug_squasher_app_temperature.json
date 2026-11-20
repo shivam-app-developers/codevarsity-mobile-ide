@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Wrong answer for every temperature",
+    "language": "html",
+    "problemDescription": "Boiling water at 100 C should give 212 F, but the page shows 148. The formula takes 32 away instead of adding it.",
+    "buggyCode": "<input id=\"t\" value=\"100\">\n<button id=\"b\">Convert</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var c = Number(document.getElementById('t').value);\n    document.getElementById('r').textContent = c * 9 / 5 - 32;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"t\" value=\"100\">\n<button id=\"b\">Convert</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var c = Number(document.getElementById('t').value);\n    document.getElementById('r').textContent = c * 9 / 5 + 32;\n  });\n</script>",
+      "explanation": "The formula for Fahrenheit adds 32 after scaling the degrees. A minus sign gives 100 x 9 / 5 - 32 = 148, which is wrong. Check a known value, such as 100 C = 212 F, after writing a formula."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "100 C is 212",
+              "expr": "click('#b') && text('#r') === '212'"
+            },
+            {
+              "label": "0 C is 32",
+              "expr": "type('#t', '0') && click('#b') && text('#r') === '32'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

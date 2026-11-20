@@ -1,0 +1,28 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Explicit stacking instead of source order",
+    "language": "html",
+    "problemDescription": "The overlay is in front only because it comes last in the HTML. Give it a z-index so it stays in front wherever it is written. The overlay must still cover the box.",
+    "initialCode": "<style>\n  .box, .overlay {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 80px;\n    height: 80px;\n  }\n  .box { background: teal; }\n  .overlay { background: black; }\n</style>\n<div class=\"box\"></div>\n<div class=\"overlay\"></div>",
+    "solution": {
+      "code": "<style>\n  .box, .overlay {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 80px;\n    height: 80px;\n  }\n  .box { background: teal; }\n  .overlay { background: black; z-index: 10; }\n</style>\n<div class=\"overlay\"></div>\n<div class=\"box\"></div>",
+      "explanation": "z-index makes the order explicit, so moving elements in the HTML does not change what is in front. Relying on source order is easy to break when the markup is rearranged."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The overlay covers the box",
+              "expr": "document.elementFromPoint(20, 20) === el('.overlay')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

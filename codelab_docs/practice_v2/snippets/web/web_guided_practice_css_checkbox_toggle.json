@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Toggle With :checked",
+    "language": "html",
+    "description": "Type a panel that opens when a checkbox is ticked, with no JavaScript. The selector #more:checked ~ .panel picks a panel that comes later next to a ticked checkbox.",
+    "ghostCode": "<style>\n  .panel { display: none; }\n  #more:checked ~ .panel { display: block; }\n</style>\n<input type=\"checkbox\" id=\"more\">\n<label for=\"more\">Show more</label>\n<div class=\"panel\">Extra details</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The panel starts hidden",
+              "expr": "!visible('.panel')"
+            },
+            {
+              "label": "Ticking the box shows the panel",
+              "expr": "click('#more') && visible('.panel')"
+            },
+            {
+              "label": "Clearing the box hides it again",
+              "expr": "click('#more') && !visible('.panel')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

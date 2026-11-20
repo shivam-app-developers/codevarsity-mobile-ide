@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: One star too few",
+    "language": "html",
+    "problemDescription": "Clicking the third star fills only two stars, and clicking the first one fills none. The loop stops one star early.",
+    "buggyCode": "<div id=\"r\">\n  <i>o</i><i>o</i><i>o</i><i>o</i>\n</div>\n<script>\n  var items = document.querySelectorAll('#r i');\n  items.forEach(function (item, index) {\n    item.addEventListener('click', function () {\n      items.forEach(function (x, i) {\n        x.textContent = i < index ? '*' : 'o';\n      });\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<div id=\"r\">\n  <i>o</i><i>o</i><i>o</i><i>o</i>\n</div>\n<script>\n  var items = document.querySelectorAll('#r i');\n  items.forEach(function (item, index) {\n    item.addEventListener('click', function () {\n      items.forEach(function (x, i) {\n        x.textContent = i <= index ? '*' : 'o';\n      });\n    });\n  });\n</script>",
+      "explanation": "Positions start at 0, so the third star has index 2. Filling the stars with i < index leaves out the clicked one, and i <= index includes it."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking the third star fills three",
+              "expr": "document.querySelectorAll('#r i')[2].click() || text('#r') === '***o'"
+            },
+            {
+              "label": "Clicking the first star fills one",
+              "expr": "document.querySelectorAll('#r i')[0].click() || text('#r') === '*ooo'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

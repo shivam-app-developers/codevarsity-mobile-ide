@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Order of Async Code",
+    "language": "html",
+    "description": "Type code that logs from three places: straight away, in a promise and in a timer. Code that runs now goes first, then promises, then timers, even with a delay of 0.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var log = [];\n  setTimeout(function () { log.push('timer'); }, 0);\n  Promise.resolve().then(function () { log.push('promise'); });\n  log.push('now');\n  setTimeout(function () {\n    document.getElementById('out').textContent = log.join(',');\n  }, 20);\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The order is now, promise, timer",
+              "expr": "wait(250).then(function () { return text('#out') === 'now,promise,timer'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

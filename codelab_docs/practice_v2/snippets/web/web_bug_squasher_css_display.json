@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Width has no effect on a span",
+    "language": "html",
+    "problemDescription": "This label is given a width of 100px, but it stays as wide as its text. A width does not apply to an inline element.",
+    "buggyCode": "<style>\n  .tag { width: 100px; background: pink; }\n</style>\n<span class=\"tag\">Tag</span>",
+    "solution": {
+      "code": "<style>\n  .tag { display: inline-block; width: 100px; background: pink; }\n</style>\n<span class=\"tag\">Tag</span>",
+      "explanation": "A span is inline by default, and inline elements ignore width and height. display: inline-block keeps the element in the line of text but lets it have a size."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The tag is 100px wide",
+              "expr": "el('.tag').offsetWidth === 100"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

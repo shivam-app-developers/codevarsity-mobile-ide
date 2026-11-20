@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Footer sits beside the content",
+    "language": "html",
+    "problemDescription": "The footer should span the bottom of the page, but it only fills the right column and the menu runs down beside it. A name in the last row of the area map is wrong.",
+    "buggyCode": "<style>\n  .page {\n    display: grid;\n    grid-template-columns: 60px 1fr;\n    grid-template-areas:\n      \"side main\"\n      \"side foot\";\n  }\n  aside { grid-area: side; }\n  main { grid-area: main; }\n  footer { grid-area: foot; }\n</style>\n<div class=\"page\">\n  <aside>Menu</aside><main>Text</main><footer>End</footer>\n</div>",
+    "solution": {
+      "code": "<style>\n  .page {\n    display: grid;\n    grid-template-columns: 60px 1fr;\n    grid-template-areas:\n      \"side main\"\n      \"foot foot\";\n  }\n  aside { grid-area: side; }\n  main { grid-area: main; }\n  footer { grid-area: foot; }\n</style>\n<div class=\"page\">\n  <aside>Menu</aside><main>Text</main><footer>End</footer>\n</div>",
+      "explanation": "Each quoted string is a row and each word a cell. Writing side in both rows makes the sidebar span two rows, so the footer is left with only the second column. Writing foot twice makes the footer span both columns."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The footer spans the whole width",
+              "expr": "el('footer').offsetWidth === el('.page').offsetWidth"
+            },
+            {
+              "label": "The footer is below main",
+              "expr": "el('footer').offsetTop >= el('main').offsetTop + el('main').offsetHeight"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

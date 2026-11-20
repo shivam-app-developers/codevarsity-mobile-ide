@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Total only counts the last row",
+    "language": "html",
+    "problemDescription": "With two rows the total shows only the second row, not the sum of both. The loop sets the total instead of adding to it.",
+    "buggyCode": "<div class=\"r\" data-p=\"10\"><input class=\"n\" value=\"2\"></div>\n<div class=\"r\" data-p=\"5\"><input class=\"n\" value=\"4\"></div>\n<button id=\"b\">Total</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var sum = 0;\n    document.querySelectorAll('.r').forEach(function (r) {\n      sum = Number(r.dataset.p) * Number(r.querySelector('.n').value);\n    });\n    document.getElementById('out').textContent = sum;\n  });\n</script>",
+    "solution": {
+      "code": "<div class=\"r\" data-p=\"10\"><input class=\"n\" value=\"2\"></div>\n<div class=\"r\" data-p=\"5\"><input class=\"n\" value=\"4\"></div>\n<button id=\"b\">Total</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('b').addEventListener('click', function () {\n    var sum = 0;\n    document.querySelectorAll('.r').forEach(function (r) {\n      sum = sum + Number(r.dataset.p) * Number(r.querySelector('.n').value);\n    });\n    document.getElementById('out').textContent = sum;\n  });\n</script>",
+      "explanation": "sum = x replaces the running total on every pass, so only the last row is left. sum = sum + x (or sum += x) keeps adding to what is already there."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "2 x 10 plus 4 x 5 is 40",
+              "expr": "click('#b') && text('#out') === '40'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

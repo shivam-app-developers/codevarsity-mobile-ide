@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Move the calculation into a function",
+    "language": "html",
+    "problemDescription": "The click handler mixes reading, calculating and showing. Move the calculation into a function named tipFor(bill, pct). The page must show the same numbers.",
+    "initialCode": "<input id=\"bill\" value=\"80\">\n<input id=\"pct\" value=\"25\">\n<button id=\"go\">Tip</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('go').addEventListener('click', function () {\n    var bill = Number(document.getElementById('bill').value);\n    var pct = Number(document.getElementById('pct').value);\n    document.getElementById('out').textContent = bill * pct / 100;\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"bill\" value=\"80\">\n<input id=\"pct\" value=\"25\">\n<button id=\"go\">Tip</button>\n<p id=\"out\"></p>\n<script>\n  function tipFor(bill, pct) {\n    return bill * pct / 100;\n  }\n  document.getElementById('go').addEventListener('click', function () {\n    var bill = Number(document.getElementById('bill').value);\n    var pct = Number(document.getElementById('pct').value);\n    document.getElementById('out').textContent = tipFor(bill, pct);\n  });\n</script>",
+      "explanation": "A function with a name says what the calculation is, and it can be tested or reused without any page. The handler is left with only the page work: reading inputs and showing the result."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "25 percent of 80 is 20",
+              "expr": "click('#go') && text('#out') === '20'"
+            },
+            {
+              "label": "10 percent of 50 is 5",
+              "expr": "type('#bill', '50') && type('#pct', '10') && click('#go') && text('#out') === '5'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

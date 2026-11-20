@@ -1,0 +1,37 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Mobile first",
+    "language": "html",
+    "problemDescription": "The CSS sets the wide layout first and undoes it for small screens with max-width. Rewrite it mobile first: the stacked layout as the base and a min-width rule for the row. Both sizes must look the same.",
+    "initialCode": "<style>\n  .wrap { display: flex; }\n  .item { flex: 1; height: 30px; background: peru; }\n  @media (max-width: 599px) {\n    .wrap { display: block; }\n  }\n</style>\n<div class=\"wrap\">\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .item { height: 30px; background: peru; }\n  @media (min-width: 600px) {\n    .wrap { display: flex; }\n    .item { flex: 1; }\n  }\n</style>\n<div class=\"wrap\">\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n</div>",
+      "explanation": "Mobile first means the base styles are for the smallest screen, and bigger screens add rules. Phones then load the simple styles with nothing to undo, and the code is shorter."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "On a phone the items are stacked",
+              "expr": "document.querySelectorAll('.item')[1].offsetTop > document.querySelectorAll('.item')[0].offsetTop"
+            }
+          ]
+        },
+        {
+          "width": 800,
+          "checks": [
+            {
+              "label": "On a wide screen the items share a row",
+              "expr": "document.querySelectorAll('.item')[1].offsetTop === document.querySelectorAll('.item')[0].offsetTop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

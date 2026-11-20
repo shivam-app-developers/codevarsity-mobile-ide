@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use the event target",
+    "language": "html",
+    "problemDescription": "The handler looks the input up again with getElementById, although the event already knows it. Use event.target. The preview must work the same.",
+    "initialCode": "<input id=\"box\" placeholder=\"Type\">\n<p id=\"echo\"></p>\n<script>\n  document.getElementById('box').addEventListener('input', function () {\n    var text = document.getElementById('box').value;\n    document.getElementById('echo').textContent = text.toUpperCase();\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"box\" placeholder=\"Type\">\n<p id=\"echo\"></p>\n<script>\n  document.getElementById('box').addEventListener('input', function (e) {\n    var text = e.target.value;\n    document.getElementById('echo').textContent = text.toUpperCase();\n  });\n</script>",
+      "explanation": "event.target is the element the event happened on, so the handler does not need to know its id. The same function could then serve many inputs."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Typing abc shows ABC",
+              "expr": "type('#box', 'abc') && text('#echo') === 'ABC'"
+            },
+            {
+              "label": "Typing hello shows HELLO",
+              "expr": "type('#box', 'hello') && text('#echo') === 'HELLO'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Read the number from one place",
+    "language": "html",
+    "problemDescription": "The script writes the count into the page and also keeps a copy in a variable. Remove the variable and read the number back from the page instead. It must still count correctly.",
+    "initialCode": "<button id=\"b\">+1</button>\n<span id=\"v\">0</span>\n<script>\n  var n = 0;\n  document.getElementById('b').addEventListener('click', function () {\n    n = n + 1;\n    document.getElementById('v').textContent = n;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"b\">+1</button>\n<span id=\"v\">0</span>\n<script>\n  var out = document.getElementById('v');\n  document.getElementById('b').addEventListener('click', function () {\n    out.textContent = Number(out.textContent) + 1;\n  });\n</script>",
+      "explanation": "Here the page is the single source of the number, so there is nothing to keep in step. For a bigger program a variable is usually the better home for state, and the page only displays it; both ways are good when used on purpose."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "It starts at 0",
+              "expr": "text('#v') === '0'"
+            },
+            {
+              "label": "Three clicks show 3",
+              "expr": "click('#b') && click('#b') && click('#b') && text('#v') === '3'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Built-in Form Validation",
+    "language": "html",
+    "description": "Type a postcode field that is required and must be exactly five digits. The browser checks this for you with the required and pattern attributes, with no JavaScript.",
+    "ghostCode": "<form id=\"f\">\n  <input id=\"zip\" required pattern=\"[0-9]{5}\">\n  <button>Save</button>\n</form>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "An empty postcode is not valid",
+              "expr": "type('#zip', '') && !el('#zip').validity.valid"
+            },
+            {
+              "label": "Four digits are not valid",
+              "expr": "type('#zip', '1234') && !el('#zip').validity.valid"
+            },
+            {
+              "label": "Five digits are valid",
+              "expr": "type('#zip', '12345') && el('#zip').validity.valid"
+            },
+            {
+              "label": "Letters are not valid",
+              "expr": "type('#zip', 'abcde') && !el('#zip').validity.valid"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

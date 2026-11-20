@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Replace repeated colours with a variable",
+    "language": "html",
+    "problemDescription": "The same colour is written in three rules. Put it in a variable and use var() in the rules. The colours must stay the same.",
+    "initialCode": "<style>\n  h1 { color: #b8860b; }\n  a { color: #b8860b; }\n  .box { border: 2px solid #b8860b; }\n</style>\n<h1>Gold</h1>\n<a href=\"#x\">Link</a>\n<div class=\"box\">Box</div>",
+    "solution": {
+      "code": "<style>\n  :root { --gold: #b8860b; }\n  h1 { color: var(--gold); }\n  a { color: var(--gold); }\n  .box { border: 2px solid var(--gold); }\n</style>\n<h1>Gold</h1>\n<a href=\"#x\">Link</a>\n<div class=\"box\">Box</div>",
+      "explanation": "A colour used in many places is a design decision, so it should live in one place. With a variable, changing the colour is a one-line edit and all three rules stay in step."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The heading is gold",
+              "expr": "style('h1', 'color') === 'rgb(184, 134, 11)'"
+            },
+            {
+              "label": "The link is gold",
+              "expr": "style('a', 'color') === 'rgb(184, 134, 11)'"
+            },
+            {
+              "label": "The box border is gold",
+              "expr": "style('.box', 'borderTopColor') === 'rgb(184, 134, 11)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

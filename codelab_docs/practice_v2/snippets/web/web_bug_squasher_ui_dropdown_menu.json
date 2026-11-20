@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Menu opens and closes at once",
+    "language": "html",
+    "problemDescription": "Tapping the button seems to do nothing: the menu opens and closes again within the same tap. The click on the button also reaches the handler that closes the menu.",
+    "buggyCode": "<button id=\"b\">More</button>\n<div id=\"box\" hidden>Settings | Help</div>\n<script>\n  var box = document.getElementById('box');\n  document.getElementById('b').addEventListener('click', function (e) {\n    box.hidden = !box.hidden;\n  });\n  document.addEventListener('click', function () {\n    box.hidden = true;\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"b\">More</button>\n<div id=\"box\" hidden>Settings | Help</div>\n<script>\n  var box = document.getElementById('box');\n  document.getElementById('b').addEventListener('click', function (e) {\n    e.stopPropagation();\n    box.hidden = !box.hidden;\n  });\n  document.addEventListener('click', function () {\n    box.hidden = true;\n  });\n</script>",
+      "explanation": "The click bubbles from the button up to the document, where the other listener closes the menu again. stopPropagation on the button's own click keeps the click from reaching the document."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The menu starts closed",
+              "expr": "!visible('#box')"
+            },
+            {
+              "label": "Clicking the button opens it",
+              "expr": "click('#b') && visible('#box')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

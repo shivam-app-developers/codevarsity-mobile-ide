@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: New items replace the old ones",
+    "language": "html",
+    "problemDescription": "Each click on Add is supposed to add one more line, but the list only ever shows the last one. The code writes over the list content.",
+    "buggyCode": "<button id=\"go\">Add</button>\n<ol id=\"steps\"></ol>\n<script>\n  var steps = document.getElementById('steps');\n  document.getElementById('go').addEventListener('click', function () {\n    var li = document.createElement('li');\n    li.textContent = 'Step';\n    steps.innerHTML = '';\n    steps.appendChild(li);\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"go\">Add</button>\n<ol id=\"steps\"></ol>\n<script>\n  var steps = document.getElementById('steps');\n  document.getElementById('go').addEventListener('click', function () {\n    var li = document.createElement('li');\n    li.textContent = 'Step';\n    steps.appendChild(li);\n  });\n</script>",
+      "explanation": "Setting innerHTML to an empty string removes every child before the new one is added. appendChild only adds, so leave out the line that clears the list."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Three clicks add three steps",
+              "expr": "click('#go') && click('#go') && click('#go') && count('#steps li') === 3"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: textContent or innerHTML",
+    "language": "html",
+    "description": "Type a box that shows what the user typed. textContent treats the text as plain words, so a typed tag is shown as text and cannot run.",
+    "ghostCode": "<input id=\"msg\" value=\"<b>hi</b>\">\n<button id=\"show\">Show</button>\n<div id=\"out\"></div>\n<script>\n  var msg = document.getElementById('msg');\n  document.getElementById('show').addEventListener('click', function () {\n    document.getElementById('out').textContent = msg.value;\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Clicking Show writes the typed text",
+              "expr": "click('#show') && text('#out') === '<b>hi</b>'"
+            },
+            {
+              "label": "No bold element is created from the text",
+              "expr": "count('#out b') === 0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

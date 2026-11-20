@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Changing the copy changes the original",
+    "language": "html",
+    "problemDescription": "Editing the copy of a settings object also changes the original, so the page shows dark for both. The copy only duplicates the top level.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var base = { id: 1, theme: { mode: 'light' } };\n  var mine = Object.assign({}, base);\n  mine.theme.mode = 'dark';\n  document.getElementById('out').textContent =\n    base.theme.mode + ',' + mine.theme.mode;\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var base = { id: 1, theme: { mode: 'light' } };\n  var mine = JSON.parse(JSON.stringify(base));\n  mine.theme.mode = 'dark';\n  document.getElementById('out').textContent =\n    base.theme.mode + ',' + mine.theme.mode;\n</script>",
+      "explanation": "Object.assign copies the top level only, so the inner theme object is shared by both. A change through one is seen through the other. A deep copy duplicates every level."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The original stays light and the copy is dark",
+              "expr": "text('#out') === 'light,dark'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Strict Equality and Typed Text",
+    "language": "html",
+    "description": "Type a quiz answer check. Text typed into an input is always a string, so compare it with Number() before using strict equality. A string never equals a number with ===.",
+    "ghostCode": "<input id=\"answer\" placeholder=\"2 + 2 = ?\">\n<button id=\"check\">Check</button>\n<p id=\"out\"></p>\n<script>\n  document.getElementById('check').addEventListener('click', function () {\n    var n = Number(document.getElementById('answer').value);\n    var out = document.getElementById('out');\n    out.textContent = n === 4 ? 'Right' : 'Wrong';\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Four is right",
+              "expr": "type('#answer', '4') && click('#check') && text('#out') === 'Right'"
+            },
+            {
+              "label": "Five is wrong",
+              "expr": "type('#answer', '5') && click('#check') && text('#out') === 'Wrong'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

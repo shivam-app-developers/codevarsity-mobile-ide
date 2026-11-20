@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: 15 says Fizz",
+    "language": "html",
+    "problemDescription": "In the list the number 15 shows Fizz and never FizzBuzz. The test for the multiples of 3 comes before the test for both.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var words = [];\n  for (var i = 1; i <= 15; i++) {\n    if (i % 3 === 0) words.push('Fizz');\n    else if (i % 15 === 0) words.push('FizzBuzz');\n    else if (i % 5 === 0) words.push('Buzz');\n    else words.push(i);\n  }\n  document.getElementById('out').textContent = words.join(' ');\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  var words = [];\n  for (var i = 1; i <= 15; i++) {\n    if (i % 15 === 0) words.push('FizzBuzz');\n    else if (i % 3 === 0) words.push('Fizz');\n    else if (i % 5 === 0) words.push('Buzz');\n    else words.push(i);\n  }\n  document.getElementById('out').textContent = words.join(' ');\n</script>",
+      "explanation": "The tests run from top to bottom and stop at the first match. 15 is a multiple of 3, so it matched Fizz and never reached the FizzBuzz test. The most specific test goes first."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list is right",
+              "expr": "text('#out') === '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

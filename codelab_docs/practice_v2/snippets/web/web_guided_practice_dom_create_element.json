@@ -1,0 +1,32 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Create and Append Elements",
+    "language": "html",
+    "description": "Type a button that adds a new list item each time it is pressed. createElement makes the element, textContent sets its words and appendChild puts it in the list.",
+    "ghostCode": "<button id=\"add\">Add item</button>\n<ul id=\"list\"></ul>\n<script>\n  var list = document.getElementById('list');\n  var number = 0;\n  document.getElementById('add').addEventListener('click', function () {\n    number = number + 1;\n    var li = document.createElement('li');\n    li.textContent = 'Item ' + number;\n    list.appendChild(li);\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The list starts empty",
+              "expr": "count('#list li') === 0"
+            },
+            {
+              "label": "Two clicks add two items",
+              "expr": "click('#add') && click('#add') && count('#list li') === 2"
+            },
+            {
+              "label": "The items are numbered",
+              "expr": "document.querySelectorAll('#list li')[1].textContent === 'Item 2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

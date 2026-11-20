@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: The right answer is marked wrong",
+    "language": "html",
+    "problemDescription": "Typing 9 gives Wrong although 3 times 3 is 9. The typed value is compared with a number using strict equality.",
+    "buggyCode": "<input id=\"a\" placeholder=\"3 x 3 = ?\">\n<button id=\"c\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var v = document.getElementById('a').value;\n    document.getElementById('r').textContent = v === 9 ? 'Right' : 'Wrong';\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"a\" placeholder=\"3 x 3 = ?\">\n<button id=\"c\">Check</button>\n<p id=\"r\"></p>\n<script>\n  document.getElementById('c').addEventListener('click', function () {\n    var v = Number(document.getElementById('a').value);\n    document.getElementById('r').textContent = v === 9 ? 'Right' : 'Wrong';\n  });\n</script>",
+      "explanation": "The value of an input is a string, and \"9\" === 9 is false because === also compares the types. Convert the text with Number() first."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Nine is right",
+              "expr": "type('#a', '9') && click('#c') && text('#r') === 'Right'"
+            },
+            {
+              "label": "Eight is wrong",
+              "expr": "type('#a', '8') && click('#c') && text('#r') === 'Wrong'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

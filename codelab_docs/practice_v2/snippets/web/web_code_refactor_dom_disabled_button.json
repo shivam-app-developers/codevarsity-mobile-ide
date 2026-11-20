@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Use a boolean directly",
+    "language": "html",
+    "problemDescription": "The handler uses if and else to set the property to true or false. Assign the comparison directly. It must behave the same.",
+    "initialCode": "<input id=\"pw\" placeholder=\"Password\">\n<button id=\"go\" disabled>Log in</button>\n<script>\n  var pw = document.getElementById('pw');\n  pw.addEventListener('input', function () {\n    if (pw.value.length >= 6) {\n      document.getElementById('go').disabled = false;\n    } else {\n      document.getElementById('go').disabled = true;\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<input id=\"pw\" placeholder=\"Password\">\n<button id=\"go\" disabled>Log in</button>\n<script>\n  var pw = document.getElementById('pw');\n  pw.addEventListener('input', function () {\n    document.getElementById('go').disabled = pw.value.length < 6;\n  });\n</script>",
+      "explanation": "A comparison is already true or false, so it can be assigned straight to the property. An if that sets true in one branch and false in the other is a long way to write the same thing."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button starts disabled",
+              "expr": "el('#go').disabled === true"
+            },
+            {
+              "label": "Six characters enable it",
+              "expr": "type('#pw', 'abcdef') && el('#go').disabled === false"
+            },
+            {
+              "label": "Five characters disable it",
+              "expr": "type('#pw', 'abcde') && el('#go').disabled === true"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Both counters share one number",
+    "language": "html",
+    "problemDescription": "Two counters should count on their own, but when the first is at 3 the second also starts at 4. The count variable lives outside the function that makes the counters.",
+    "buggyCode": "<p id=\"out\"></p>\n<script>\n  var count = 0;\n  function makeCounter() {\n    return function () {\n      count = count + 1;\n      return count;\n    };\n  }\n  var x = makeCounter();\n  var y = makeCounter();\n  x(); x();\n  document.getElementById('out').textContent = x() + ',' + y();\n</script>",
+    "solution": {
+      "code": "<p id=\"out\"></p>\n<script>\n  function makeCounter() {\n    var count = 0;\n    return function () {\n      count = count + 1;\n      return count;\n    };\n  }\n  var x = makeCounter();\n  var y = makeCounter();\n  x(); x();\n  document.getElementById('out').textContent = x() + ',' + y();\n</script>",
+      "explanation": "A variable declared inside makeCounter is created again for each call, so every counter gets its own. A variable declared outside is created once, and every counter shares it."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The first counter is at 3 and the second at 1",
+              "expr": "text('#out') === '3,1'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

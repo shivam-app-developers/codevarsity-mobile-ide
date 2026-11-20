@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Group the three rules in a class",
+    "language": "html",
+    "problemDescription": "The same three ellipsis rules are copied into two selectors. Write them once in a class named clip and use it. Both lines must still be cut with dots.",
+    "initialCode": "<style>\n  .one {\n    width: 100px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  .two {\n    width: 100px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n</style>\n<div class=\"one\">First long line of text</div>\n<div class=\"two\">Second long line of text</div>",
+    "solution": {
+      "code": "<style>\n  .clip {\n    width: 100px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n</style>\n<div class=\"clip\">First long line of text</div>\n<div class=\"clip\">Second long line of text</div>",
+      "explanation": "One class holds the rule and any element can use it. Changing the width or the style later is one edit in one place, instead of a copy in each selector."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "There are two lines",
+              "expr": "count('div') === 2"
+            },
+            {
+              "label": "Both lines are cut",
+              "expr": "[].every.call(document.querySelectorAll('div'), function (d) { return d.scrollWidth > d.clientWidth; })"
+            },
+            {
+              "label": "Both lines end with an ellipsis",
+              "expr": "[].every.call(document.querySelectorAll('div'), function (d) { return getComputedStyle(d).textOverflow === 'ellipsis'; })"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

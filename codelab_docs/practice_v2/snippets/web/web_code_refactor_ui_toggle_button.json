@@ -1,0 +1,36 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Keep the state in one variable",
+    "language": "html",
+    "problemDescription": "The script reads the state back from the attribute each time. Keep it in a boolean variable and write the attribute and text from it. The button must behave the same.",
+    "initialCode": "<button id=\"f\" aria-pressed=\"false\">Follow</button>\n<script>\n  var f = document.getElementById('f');\n  f.addEventListener('click', function () {\n    if (f.getAttribute('aria-pressed') === 'true') {\n      f.setAttribute('aria-pressed', 'false');\n      f.textContent = 'Follow';\n    } else {\n      f.setAttribute('aria-pressed', 'true');\n      f.textContent = 'Following';\n    }\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"f\" aria-pressed=\"false\">Follow</button>\n<script>\n  var f = document.getElementById('f');\n  var following = false;\n  f.addEventListener('click', function () {\n    following = !following;\n    f.setAttribute('aria-pressed', following);\n    f.textContent = following ? 'Following' : 'Follow';\n  });\n</script>",
+      "explanation": "A boolean variable is the single truth about the state, and the page is written from it. Flipping it with ! is one line, and the two branches that repeated the same work disappear."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The button starts as Follow",
+              "expr": "text('#f') === 'Follow' && attr('#f', 'aria-pressed') === 'false'"
+            },
+            {
+              "label": "One click gives Following and pressed",
+              "expr": "click('#f') && text('#f') === 'Following' && attr('#f', 'aria-pressed') === 'true'"
+            },
+            {
+              "label": "A second click goes back",
+              "expr": "click('#f') && text('#f') === 'Follow' && attr('#f', 'aria-pressed') === 'false'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

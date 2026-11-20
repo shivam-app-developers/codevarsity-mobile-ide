@@ -1,0 +1,28 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Which Rule Wins",
+    "language": "html",
+    "description": "Type rules that all style the same paragraph and see which wins. An id beats a class, a class beats an element, and when two rules are equal the later one wins.",
+    "ghostCode": "<style>\n  p { color: gray; }\n  .info { color: green; }\n  #main { color: purple; }\n  .info { color: orange; }\n</style>\n<p id=\"main\" class=\"info\">Who wins?</p>\n<p class=\"info\">And here?</p>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The paragraph with an id is purple",
+              "expr": "style('#main', 'color') === 'rgb(128, 0, 128)'"
+            },
+            {
+              "label": "The paragraph with only a class is orange",
+              "expr": "style('p.info:not(#main)', 'color') === 'rgb(255, 165, 0)'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

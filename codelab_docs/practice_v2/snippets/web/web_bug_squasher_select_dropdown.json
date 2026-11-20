@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Dropdown that sends the wrong value",
+    "language": "html",
+    "problemDescription": "The user picks Team, but the form would send pro, the value of the Pro option. Two options have the same value, so the page cannot tell them apart.",
+    "buggyCode": "<select id=\"plan\">\n  <option value=\"free\">Free</option>\n  <option value=\"pro\">Pro</option>\n  <option value=\"pro\">Team</option>\n</select>",
+    "solution": {
+      "code": "<select id=\"plan\">\n  <option value=\"free\">Free</option>\n  <option value=\"pro\">Pro</option>\n  <option value=\"team\">Team</option>\n</select>",
+      "explanation": "The value attribute is what the form sends. Every option needs its own value, or choosing one looks the same as choosing another."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The options have different values",
+              "expr": "(() => { var v = [].map.call(document.querySelectorAll('#plan option'), function (o) { return o.value; }); return new Set(v).size === v.length; })()"
+            },
+            {
+              "label": "Choosing Team gives its own value",
+              "expr": "(() => { var s = document.querySelector('#plan'); s.selectedIndex = 2; return s.value === 'team'; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

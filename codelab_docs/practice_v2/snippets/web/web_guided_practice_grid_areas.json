@@ -1,0 +1,36 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Page Layout With Grid Areas",
+    "language": "html",
+    "description": "Type a page layout with named areas: a header on top, a sidebar and main side by side, and a footer below. grid-template-areas draws the layout as text.",
+    "ghostCode": "<style>\n  .page {\n    display: grid;\n    grid-template-columns: 80px 1fr;\n    grid-template-areas:\n      \"head head\"\n      \"side main\"\n      \"foot foot\";\n  }\n  header { grid-area: head; }\n  aside { grid-area: side; }\n  main { grid-area: main; }\n  footer { grid-area: foot; }\n</style>\n<div class=\"page\">\n  <header>Top</header><aside>Menu</aside>\n  <main>Content</main><footer>End</footer>\n</div>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The header spans the whole width",
+              "expr": "el('header').offsetWidth === el('.page').offsetWidth"
+            },
+            {
+              "label": "The sidebar is 80px wide",
+              "expr": "el('aside').offsetWidth === 80"
+            },
+            {
+              "label": "The sidebar and main share a row",
+              "expr": "el('aside').offsetTop === el('main').offsetTop"
+            },
+            {
+              "label": "The footer is below main",
+              "expr": "el('footer').offsetTop >= el('main').offsetTop + el('main').offsetHeight"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

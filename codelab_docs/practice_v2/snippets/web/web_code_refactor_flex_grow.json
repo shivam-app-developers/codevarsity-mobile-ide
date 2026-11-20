@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Shorthand for flex",
+    "language": "html",
+    "problemDescription": "The columns set grow, shrink and basis in three separate properties. Use the flex shorthand. They must share the row the same way.",
+    "initialCode": "<style>\n  .row { display: flex; }\n  .col {\n    flex-grow: 1;\n    flex-shrink: 1;\n    flex-basis: 0;\n    height: 30px;\n  }\n</style>\n<div class=\"row\">\n  <div class=\"col\" style=\"background: pink\"></div>\n  <div class=\"col\" style=\"background: wheat\"></div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .row { display: flex; }\n  .col { flex: 1; height: 30px; }\n</style>\n<div class=\"row\">\n  <div class=\"col\" style=\"background: pink\"></div>\n  <div class=\"col\" style=\"background: wheat\"></div>\n</div>",
+      "explanation": "flex: 1 means flex-grow 1, flex-shrink 1 and flex-basis 0. The short form is what most developers write and read."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Both columns have the same width",
+              "expr": "(() => { var c = document.querySelectorAll('.col'); return c[0].offsetWidth === c[1].offsetWidth; })()"
+            },
+            {
+              "label": "The columns fill the row",
+              "expr": "(() => { var c = document.querySelectorAll('.col'); return Math.abs(c[0].offsetWidth * 2 - el('.row').offsetWidth) <= 1; })()"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

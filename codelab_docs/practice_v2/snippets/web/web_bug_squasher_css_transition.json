@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Colour jumps instead of fading",
+    "language": "html",
+    "problemDescription": "This link is meant to fade to orange over half a second, but the colour changes instantly. The transition has no duration, so it takes no time.",
+    "buggyCode": "<style>\n  a { color: gray; transition: color; }\n  a:hover { color: orange; }\n</style>\n<a href=\"#x\">Hover me</a>",
+    "solution": {
+      "code": "<style>\n  a { color: gray; transition: color 0.5s; }\n  a:hover { color: orange; }\n</style>\n<a href=\"#x\">Hover me</a>",
+      "explanation": "A transition needs a duration. Without one the duration is 0s and the change is immediate. Write the property and the time together: transition: color 0.5s."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The link fades its colour",
+              "expr": "style('a', 'transitionProperty') === 'color'"
+            },
+            {
+              "label": "The fade takes half a second",
+              "expr": "style('a', 'transitionDuration') === '0.5s'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

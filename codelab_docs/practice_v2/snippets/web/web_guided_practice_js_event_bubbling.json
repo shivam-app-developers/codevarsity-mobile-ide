@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Event Bubbling Order",
+    "language": "html",
+    "description": "Type two nested elements that both listen for a click. The click starts on the inner element and bubbles up to the outer one, so the inner handler runs first.",
+    "ghostCode": "<div id=\"outer\"><button id=\"inner\">Go</button></div>\n<p id=\"log\"></p>\n<script>\n  var log = document.getElementById('log');\n  function add(name) { log.textContent += name + ' '; }\n  document.getElementById('outer').addEventListener('click', function () {\n    add('outer');\n  });\n  document.getElementById('inner').addEventListener('click', function () {\n    add('inner');\n  });\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "A click on the button runs inner first",
+              "expr": "click('#inner') && text('#log') === 'inner outer'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

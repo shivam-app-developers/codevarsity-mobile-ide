@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Sidebar has no room",
+    "language": "html",
+    "problemDescription": "The page should have a narrow sidebar of 80px and a content area that fills all the rest of the row. The content only takes the width of its text.",
+    "buggyCode": "<style>\n  .page { display: flex; }\n  .side { width: 80px; background: silver; }\n  .main { background: whitesmoke; }\n</style>\n<div class=\"page\">\n  <div class=\"side\">Menu</div>\n  <div class=\"main\">Content</div>\n</div>",
+    "solution": {
+      "code": "<style>\n  .page { display: flex; }\n  .side { width: 80px; background: silver; }\n  .main { flex: 1; background: whitesmoke; }\n</style>\n<div class=\"page\">\n  <div class=\"side\">Menu</div>\n  <div class=\"main\">Content</div>\n</div>",
+      "explanation": "A flex item keeps its content size unless it is allowed to grow. flex: 1 makes the content area take all the free space that the fixed sidebar leaves."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The sidebar is 80px wide",
+              "expr": "el('.side').offsetWidth === 80"
+            },
+            {
+              "label": "The content fills the rest of the row",
+              "expr": "Math.abs(el('.side').offsetWidth + el('.main').offsetWidth - el('.page').offsetWidth) <= 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

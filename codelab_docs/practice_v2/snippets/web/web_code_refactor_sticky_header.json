@@ -1,0 +1,32 @@
+{
+  "visualizerType": "CodeRefactorChallenge",
+  "visualizerParams": {
+    "title": "Code Refactor: Sticky instead of fixed",
+    "language": "html",
+    "problemDescription": "The bar is fixed, so it covers the content under it and the content has a padding to make room. Use sticky, which keeps the bar in the page flow. It must stay at the top while scrolling.",
+    "initialCode": "<style>\n  body { padding-top: 30px; }\n  .bar {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 30px;\n    background: #333;\n  }\n  .long { height: 900px; }\n</style>\n<div class=\"bar\"></div>\n<div class=\"long\">Content</div>",
+    "solution": {
+      "code": "<style>\n  .bar { position: sticky; top: 0; height: 30px; background: #333; }\n  .long { height: 900px; }\n</style>\n<div class=\"bar\"></div>\n<div class=\"long\">Content</div>",
+      "explanation": "A fixed bar is taken out of the page, so you must reserve room for it by hand. A sticky bar stays in the flow, takes its own space and sticks only when needed."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The bar stays at the top while scrolling",
+              "expr": "(() => { window.scrollTo(0, 400); return Math.abs(el('.bar').getBoundingClientRect().top) < 1; })()"
+            },
+            {
+              "label": "The bar is 30px high",
+              "expr": "el('.bar').offsetHeight === 30"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

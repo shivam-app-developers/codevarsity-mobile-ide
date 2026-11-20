@@ -1,0 +1,32 @@
+{
+  "visualizerType": "BugSquasherScenario",
+  "visualizerParams": {
+    "title": "Bug Squasher: Filter hides the wrong items",
+    "language": "html",
+    "problemDescription": "Pressing the Cats button shows only the dogs. The test that decides whether to hide an item is the wrong way round.",
+    "buggyCode": "<button id=\"cats\">Cats</button>\n<ul>\n  <li data-kind=\"cat\">Tom</li>\n  <li data-kind=\"dog\">Rex</li>\n  <li data-kind=\"cat\">Kit</li>\n</ul>\n<script>\n  document.getElementById('cats').addEventListener('click', function () {\n    document.querySelectorAll('li').forEach(function (li) {\n      li.hidden = li.dataset.kind === 'cat';\n    });\n  });\n</script>",
+    "solution": {
+      "code": "<button id=\"cats\">Cats</button>\n<ul>\n  <li data-kind=\"cat\">Tom</li>\n  <li data-kind=\"dog\">Rex</li>\n  <li data-kind=\"cat\">Kit</li>\n</ul>\n<script>\n  document.getElementById('cats').addEventListener('click', function () {\n    document.querySelectorAll('li').forEach(function (li) {\n      li.hidden = li.dataset.kind !== 'cat';\n    });\n  });\n</script>",
+      "explanation": "An item must be hidden when it is not the wanted kind. Using === hides the wanted kind and keeps the others. Say the rule out loud first: hide it when it is not a cat."
+    },
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "Two cats are visible after pressing Cats",
+              "expr": "click('#cats') && document.querySelectorAll('li:not([hidden])').length === 2"
+            },
+            {
+              "label": "The dog is hidden",
+              "expr": "!visible('li[data-kind=dog]')"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

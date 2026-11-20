@@ -1,0 +1,24 @@
+{
+  "visualizerType": "GuidedPractice",
+  "visualizerParams": {
+    "title": "Guided Practice: Functions Made in a Loop",
+    "language": "html",
+    "description": "Type a loop that makes three functions, each returning its own number. With let, every pass of the loop has its own i. This is the classic var and let interview question.",
+    "ghostCode": "<p id=\"out\"></p>\n<script>\n  var fns = [];\n  for (let i = 0; i < 3; i++) {\n    fns.push(function () { return i; });\n  }\n  var results = fns.map(function (f) { return f(); });\n  document.getElementById('out').textContent = results.join(',');\n</script>",
+    "validation": {
+      "type": "run_output",
+      "engine": "web",
+      "tests": [
+        {
+          "width": 320,
+          "checks": [
+            {
+              "label": "The functions return 0, 1 and 2",
+              "expr": "text('#out') === '0,1,2'"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
